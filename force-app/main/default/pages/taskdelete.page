@@ -1,0 +1,4 @@
+<apex:page sidebar="false" standardController="task" lightningStylesheets="true">
+  
+  <div style="font-size:28px;color:red;"><center><b>Sorry you cannot delete the activities!!!!!!!!!!!!!!!!</b></center></div>
+</apex:page>

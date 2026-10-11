@@ -1,0 +1,40 @@
+<apex:page standardController="Proposal_Line_Item__c" lightningStylesheets="true">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<style>
+.alert {
+    padding: 20px;
+    background-color: #f44336;
+    color: white;
+}
+
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.closebtn:hover {
+    color: black;
+}
+</style>
+</head>
+<body>
+
+
+<div class="alert">
+  <strong>Danger!</strong> <h1>Use EditAll Button.</h1>
+  <br/>
+  Your admin had been notified.
+</div>
+
+</body>
+</html>
+
+</apex:page>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Priority</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>OrderNumber__c</columns>
+    <columns>Order_Priority__c</columns>
+    <columns>Total_Time_Taken_To_Create_Order_Hour__c</columns>
+    <columns>Time_Taken_To_Create_Order_Min__c</columns>
+    <columns>Total_Time_Taken_To_Verify_Order_Hours__c</columns>
+    <columns>Total_Time_Taken_To_Verify_Order__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Order_Priority__c</field>
+        <operation>equals</operation>
+        <value>Priority-High,Priority - 1,Priority - 2,Priority - 3,Priority--Normal</value>
+    </filters>
+    <label>Order-Priority</label>
+    <sharedTo>
+        <group>Finance_Team</group>
+    </sharedTo>
+</ListView>

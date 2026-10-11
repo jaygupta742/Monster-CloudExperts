@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InternetType__c</fullName>
+    <label>Internet Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Billing/Finance</fullName>
+                <default>false</default>
+                <label>Billing/Finance</label>
+            </value>
+            <value>
+                <fullName>Internet Training</fullName>
+                <default>false</default>
+                <label>Internet Training</label>
+            </value>
+            <value>
+                <fullName>Internet User</fullName>
+                <default>false</default>
+                <label>Internet User</label>
+            </value>
+            <value>
+                <fullName>Primary Customer</fullName>
+                <default>false</default>
+                <label>Primary Customer</label>
+            </value>
+            <value>
+                <fullName>Internet Billing</fullName>
+                <default>false</default>
+                <label>Internet Billing</label>
+            </value>
+            <value>
+                <fullName>Internet Posting</fullName>
+                <default>false</default>
+                <label>Internet Posting</label>
+            </value>
+            <value>
+                <fullName>Internet Primary</fullName>
+                <default>false</default>
+                <label>Internet Primary</label>
+            </value>
+            <value>
+                <fullName>Internet Purchaser</fullName>
+                <default>false</default>
+                <label>Internet Purchaser</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

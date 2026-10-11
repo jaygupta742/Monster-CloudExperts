@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>XcodeAccount__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Xcode Account</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>Xcode_Account__c.Account__c</field>
+            <operation>equals</operation>
+            <value>Quote/Proposal: Account</value>
+        </filterItems>
+        <isOptional>true</isOptional>
+    </lookupFilter>
+    <referenceTo>Xcode_Account__c</referenceTo>
+    <relationshipName>Quotes_Proposals</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

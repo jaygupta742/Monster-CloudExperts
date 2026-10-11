@@ -1,0 +1,130 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-modal__header">
+        <h1 class="slds-modal__title slds-hyphenate">Add Products</h1>
+    </div>
+    <div class="slds-modal__content slds-var-p-around_medium slds-scrollable_y" style="max-height: 450px;">
+        <div class="slds-p-around_xx-small">
+            <div class="slds-text-align_right">
+                <span class="slds-text-color_destructive">*</span> = Required Information
+            </div>
+        </div>
+
+        <!-- Product Data table -->
+        <div class="slds-scrollable_x " style="width: 100%;">
+            <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered slds-table_striped" style="width: 180%;">
+                <thead>
+                    <tr class="slds-line-height_reset" style="width: 100%;">
+                        <th style="background-color: #8367d7; color: white; width: 3%;" scope="col">
+                            <div class="slds-truncate" title="Serial No">#</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 10%;" scope="col">
+                            <div class="slds-truncate" title="University Name">University Name</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 5%;" scope="col">
+                            <div class="slds-truncate" title="Course Name">Course Name</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 15%;" scope="col">
+                            <div class="slds-line-clamp" title="Description">Description</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 5%;" scope="col">
+                            <div class="slds-truncate" title="Tenure">Tenure</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="Start Date">
+                                <span class="slds-text-color_destructive slds-m-horizontal_x-small">*</span>
+                                Start Date
+                            </div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="End Date">End Date</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="Unit Price">Unit Price</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="Discount">Discount</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="Subvention Cost">Subvention Cost</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="Selling Price">Selling Price</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="Commission">Commission</div>
+                        </th>
+                        <th style="background-color: #8367d7; color: white; width: 8%;" scope="col">
+                            <div class="slds-truncate" title="Gross Total">Gross Total</div>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each={SelectedProducts} for:item="item" for:index="index">
+                        <tr key={item.Id} class="slds-hint-parent">
+                            <td data-label="Serial No">
+                                <div class="slds-truncate" title="Serial No">{item.SlNo}</div>
+                            </td>
+                            <td data-label="University Name">
+                                <div class="slds-truncate" title={item.Product_Name__c}>{item.Product_Name__c}</div>
+                            </td>
+                            <td data-label="Course Name">
+                                <div class="slds-truncate" title={item.SKU_Type__c}>{item.SKU_Type__c}</div>
+                            </td>
+                            <td data-label="Description" class="slds-cell-wrap">
+                                <div class="slds-line-clamp" title={item.Product_Description__c}>{item.Product_Description__c}</div>
+                            </td>
+                            <td data-label="Tenure">
+                                <div class="slds-truncate" title={item.Tenure_Months__c}>{item.Tenure_Months__c}</div>
+                            </td>
+                            <td data-label="Start Date">
+                                <div class="slds-truncate" title={item.Start_Date__c}>
+                                    <lightning-input type="date" name="Start_Date__c" label="Start Date" variant="label-hidden" value={item.Start_Date__c} data-index={index} onchange={HandleInputsChange}></lightning-input>
+                                </div>
+                            </td>
+                            <td data-label="End Date">
+                                <div class="slds-truncate" title={item.End_Date__c}>
+                                    <lightning-input type="date" label="End Date" variant="label-hidden" value={item.End_Date__c} disabled="true"></lightning-input>
+                                </div>
+                            </td>
+                            <td data-label="Unit Price">
+                                <div class="slds-truncate" title={item.Unit_List_Price_Value__c}>
+                                    <lightning-formatted-number value={item.Unit_List_Price_Value__c} format-style="currency" currency-code={item.CurrencyIsoCode}></lightning-formatted-number>
+                                </div>
+                            </td>
+                            <td data-label="Discount Amount">
+                                <div class="slds-truncate" title={item.Discount__c}>
+                                    <lightning-input type="number" formatter="currency" step="0.01" label="Discount" variant="label-hidden" name="Discount__c" data-index={index} value={item.Discount__c} onchange={HandleInputsChange}></lightning-input>
+                                </div>
+                            </td>
+                            <td data-label="Subvention Cost">
+                                <div class="slds-truncate" title={item.Subvention_Cost__c}>
+                                    <lightning-input type="number" formatter="currency" step="0.01" label="Subvention Cost" variant="label-hidden" name="Subvention_Cost__c" data-index={index} value={item.Subvention_Cost__c} onchange={HandleInputsChange}></lightning-input>
+                                </div>
+                            </td>
+                            <td data-label="Selling Price">
+                                <div class="slds-truncate" title={item.Selling_Fee__c}>
+                                    <lightning-formatted-number value={item.Selling_Fee__c} format-style="currency" currency-code={item.CurrencyIsoCode}></lightning-formatted-number>
+                                </div>
+                            </td>
+                            <td data-label="Commision">
+                                <div class="slds-truncate" title={item.Commission__c}>
+                                    <lightning-formatted-number value={item.Commission__c} format-style="percent"></lightning-formatted-number>
+                                </div>
+                            </td>
+                            <td data-label="Gross Total">
+                                <div class="slds-truncate" title={item.Gross_Total__c}>
+                                    <lightning-formatted-number value={item.Gross_Total__c} format-style="currency" currency-code={item.CurrencyIsoCode}></lightning-formatted-number>
+                                </div>
+                            </td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="slds-modal__footer">
+        <lightning-button label="Cancel" class="slds-m-right_small" onclick={HandleCancel}></lightning-button>
+        <lightning-button label="Save" variant="brand" onclick={HandleSaveClick}></lightning-button>
+    </div>
+</template>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products_Interested__c</fullName>
+    <label>Products Interested</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Branding</fullName>
+                <default>false</default>
+                <label>Branding</label>
+            </value>
+            <value>
+                <fullName>Custom International Sponsorship</fullName>
+                <default>false</default>
+                <label>Custom International Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Custom Job Template</fullName>
+                <default>false</default>
+                <label>Custom Job Template</label>
+            </value>
+            <value>
+                <fullName>Custom Sponsorship</fullName>
+                <default>false</default>
+                <label>Custom Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Job Postings</fullName>
+                <default>false</default>
+                <label>Job Postings</label>
+            </value>
+            <value>
+                <fullName>Logo on Job Postings</fullName>
+                <default>false</default>
+                <label>Logo on Job Postings</label>
+            </value>
+            <value>
+                <fullName>Monster Mirror</fullName>
+                <default>false</default>
+                <label>Monster Mirror</label>
+            </value>
+            <value>
+                <fullName>Monster Widget</fullName>
+                <default>false</default>
+                <label>Monster Widget</label>
+            </value>
+            <value>
+                <fullName>Premium Resume Search</fullName>
+                <default>false</default>
+                <label>Premium Resume Search</label>
+            </value>
+            <value>
+                <fullName>Promotional Offer</fullName>
+                <default>false</default>
+                <label>Promotional Offer</label>
+            </value>
+            <value>
+                <fullName>Short Message Service</fullName>
+                <default>false</default>
+                <label>Short Message Service</label>
+            </value>
+            <value>
+                <fullName>Social Job Ads</fullName>
+                <default>false</default>
+                <label>Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>TalentBin by Monster</fullName>
+                <default>false</default>
+                <label>TalentBin by Monster</label>
+            </value>
+            <value>
+                <fullName>Target Mailers</fullName>
+                <default>false</default>
+                <label>Target Mailers</label>
+            </value>
+            <value>
+                <fullName>Trial-Job-Postings</fullName>
+                <default>false</default>
+                <label>Trial-Job-Postings</label>
+            </value>
+            <value>
+                <fullName>Trial-Resume Search</fullName>
+                <default>false</default>
+                <label>Trial-Resume Search</label>
+            </value>
+            <value>
+                <fullName>Walk-in-Pro Event</fullName>
+                <default>false</default>
+                <label>Walk-in-Pro Event</label>
+            </value>
+            <value>
+                <fullName>Monster Assessments</fullName>
+                <default>false</default>
+                <label>Monster Assessments</label>
+            </value>
+            <value>
+                <fullName>QHire</fullName>
+                <default>false</default>
+                <label>QHire</label>
+            </value>
+            <value>
+                <fullName>Quinton</fullName>
+                <default>false</default>
+                <label>Quinton</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

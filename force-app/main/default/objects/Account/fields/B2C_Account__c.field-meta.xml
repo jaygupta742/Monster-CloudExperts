@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>B2C_Account__c</fullName>
+    <defaultValue>false</defaultValue>
+    <inlineHelpText>To be used for Seeker Order Booking</inlineHelpText>
+    <label>B2C Account</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

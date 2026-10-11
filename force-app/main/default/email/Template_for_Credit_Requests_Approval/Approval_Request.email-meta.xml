@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Approval Request</name>
+    <style>none</style>
+    <subject>Hi,</subject>
+    <textOnly>{!Credit_Request__c.OwnerFullName} has requested your approval for the following item:
+
+Credit Request Owner : {!Credit_Request__c.OwnerFullName}
+Credit Request Name : {!Credit_Request__c.Name}
+Account : {!Credit_Request__c.Account__c}
+Order : {!Credit_Request__c.Order_CustomId__c}
+Reversal/Bad Debt Reason : {!Credit_Request__c.Order_CustomId__c}
+
+
+Thanks &amp; Regards
+{!Credit_Request__c.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

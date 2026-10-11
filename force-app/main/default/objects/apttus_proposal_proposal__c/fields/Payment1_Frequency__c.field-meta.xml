@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment1_Frequency__c</fullName>
+    <label>Payment Frequency</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Single Payment</fullName>
+                <default>false</default>
+                <label>Single Payment</label>
+            </value>
+            <value>
+                <fullName>Monthly</fullName>
+                <default>false</default>
+                <label>Monthly</label>
+            </value>
+            <value>
+                <fullName>Quarterly</fullName>
+                <default>false</default>
+                <label>Quarterly</label>
+            </value>
+            <value>
+                <fullName>Semi-Annual (Non-Standard)</fullName>
+                <default>false</default>
+                <label>Semi-Annual (Non-Standard)</label>
+            </value>
+            <value>
+                <fullName>Annual (Non-Standard)</fullName>
+                <default>false</default>
+                <label>Annual (Non-Standard)</label>
+            </value>
+            <value>
+                <fullName>Single Invoice</fullName>
+                <default>false</default>
+                <label>Single Invoice</label>
+            </value>
+            <value>
+                <fullName>Triannual</fullName>
+                <default>false</default>
+                <label>Triannual</label>
+            </value>
+            <value>
+                <fullName>Semi-Annual</fullName>
+                <default>false</default>
+                <label>Semi-Annual</label>
+            </value>
+            <value>
+                <fullName>Annual</fullName>
+                <default>false</default>
+                <label>Annual</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-2</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-2</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-6</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-6</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-7</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-7</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-8</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-8</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-9</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-9</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-10</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-10</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-11</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-11</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 2-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 2-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 3-3</fullName>
+                <default>false</default>
+                <label>Pay Schedule 3-3</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 3-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 3-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 4-4</fullName>
+                <default>false</default>
+                <label>Pay Schedule 4-4</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 4-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 4-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 4-18</fullName>
+                <default>false</default>
+                <label>Pay Schedule 4-18</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 5-5</fullName>
+                <default>false</default>
+                <label>Pay Schedule 5-5</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 5-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 5-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 6-6</fullName>
+                <default>false</default>
+                <label>Pay Schedule 6-6</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 6-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 6-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 6-18</fullName>
+                <default>false</default>
+                <label>Pay Schedule 6-18</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 7-7</fullName>
+                <default>false</default>
+                <label>Pay Schedule 7-7</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 7-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 7-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 8-8</fullName>
+                <default>false</default>
+                <label>Pay Schedule 8-8</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 8-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 8-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 9-9</fullName>
+                <default>false</default>
+                <label>Pay Schedule 9-9</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 9-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 9-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 10-10</fullName>
+                <default>false</default>
+                <label>Pay Schedule 10-10</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 10-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 10-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 11-11</fullName>
+                <default>false</default>
+                <label>Pay Schedule 11-11</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 11-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 11-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 12-12</fullName>
+                <default>false</default>
+                <label>Pay Schedule 12-12</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 13-13</fullName>
+                <default>false</default>
+                <label>Pay Schedule 13-13</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 14-14</fullName>
+                <default>false</default>
+                <label>Pay Schedule 14-14</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 15-15</fullName>
+                <default>false</default>
+                <label>Pay Schedule 15-15</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 16-16</fullName>
+                <default>false</default>
+                <label>Pay Schedule 16-16</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 17-17</fullName>
+                <default>false</default>
+                <label>Pay Schedule 17-17</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 18-18</fullName>
+                <default>false</default>
+                <label>Pay Schedule 18-18</label>
+            </value>
+            <value>
+                <fullName>Pay Schedule 24-24</fullName>
+                <default>false</default>
+                <label>Pay Schedule 24-24</label>
+            </value>
+            <value>
+                <fullName>Contingent W/ Contract</fullName>
+                <default>false</default>
+                <label>Contingent W/ Contract</label>
+            </value>
+            <value>
+                <fullName>Contingent N/ Contract</fullName>
+                <default>false</default>
+                <label>Contingent N/ Contract</label>
+            </value>
+            <value>
+                <fullName>Contingent Upsell N/ Contract</fullName>
+                <default>false</default>
+                <label>Contingent Upsell N/ Contract</label>
+            </value>
+            <value>
+                <fullName>Usage W/ Contract</fullName>
+                <default>false</default>
+                <label>Usage W/ Contract</label>
+            </value>
+            <value>
+                <fullName>Usage N/ Contract</fullName>
+                <default>false</default>
+                <label>Usage N/ Contract</label>
+            </value>
+            <value>
+                <fullName>EU Partner</fullName>
+                <default>false</default>
+                <label>EU Partner</label>
+            </value>
+            <value>
+                <fullName>Pre-Paid</fullName>
+                <default>false</default>
+                <label>Pre-Paid</label>
+            </value>
+            <value>
+                <fullName>Credit</fullName>
+                <default>false</default>
+                <label>Credit</label>
+            </value>
+            <value>
+                <fullName>Non-Standard</fullName>
+                <default>false</default>
+                <label>Non-Standard</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>25/25/25/25 Monthly Invoice</fullName>
+                <default>false</default>
+                <label>25/25/25/25 Monthly Invoice</label>
+            </value>
+            <value>
+                <fullName>25/25/25/25 Quarterly Invoice</fullName>
+                <default>false</default>
+                <label>25/25/25/25 Quarterly Invoice</label>
+            </value>
+            <value>
+                <fullName>33/33/33 Monthly Invoice</fullName>
+                <default>false</default>
+                <label>33/33/33 Monthly Invoice</label>
+            </value>
+            <value>
+                <fullName>33/33/33 Quarterly Invoice</fullName>
+                <default>false</default>
+                <label>33/33/33 Quarterly Invoice</label>
+            </value>
+            <value>
+                <fullName>40/30/30 Monthly Invoice</fullName>
+                <default>false</default>
+                <label>40/30/30 Monthly Invoice</label>
+            </value>
+            <value>
+                <fullName>40/30/30 Quarterly Invoice</fullName>
+                <default>false</default>
+                <label>40/30/30 Quarterly Invoice</label>
+            </value>
+            <value>
+                <fullName>50/25/25 Monthly Invoice</fullName>
+                <default>false</default>
+                <label>50/25/25 Monthly Invoice</label>
+            </value>
+            <value>
+                <fullName>50/25/25 Quarterly Invoice</fullName>
+                <default>false</default>
+                <label>50/25/25 Quarterly Invoice</label>
+            </value>
+            <value>
+                <fullName>50/50 Monthly Invoice</fullName>
+                <default>false</default>
+                <label>50/50 Monthly Invoice</label>
+            </value>
+            <value>
+                <fullName>Bi Mon - 12 Months Invoice</fullName>
+                <default>false</default>
+                <label>Bi Mon - 12 Months Invoice</label>
+            </value>
+            <value>
+                <fullName>Bi Mon - 6 Months Invoice</fullName>
+                <default>false</default>
+                <label>Bi Mon - 6 Months Invoice</label>
+            </value>
+            <value>
+                <fullName>Monthly - 6 Months Invoice</fullName>
+                <default>false</default>
+                <label>Monthly - 6 Months Invoice</label>
+            </value>
+            <value>
+                <fullName>Monthly - 9 Months Invoice</fullName>
+                <default>false</default>
+                <label>Monthly - 9 Months Invoice</label>
+            </value>
+            <value>
+                <fullName>Monthly Billing - 12 Months</fullName>
+                <default>false</default>
+                <label>Monthly Billing - 12 Months</label>
+            </value>
+            <value>
+                <fullName>Bi-Monthly</fullName>
+                <default>false</default>
+                <label>Bi-Monthly</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RejectedReason__c</fullName>
+    <label>Rejected Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>PO Box Issue</fullName>
+                <default>false</default>
+                <label>PO Box Issue</label>
+            </value>
+            <value>
+                <fullName>Philly Correction</fullName>
+                <default>false</default>
+                <label>Philly Correction</label>
+            </value>
+            <value>
+                <fullName>Unable to View Attachment</fullName>
+                <default>false</default>
+                <label>Unable to View Attachment</label>
+            </value>
+            <value>
+                <fullName>Upfront payment not received</fullName>
+                <default>false</default>
+                <label>Upfront payment not received</label>
+            </value>
+            <value>
+                <fullName>Agency Commission Error</fullName>
+                <default>false</default>
+                <label>Agency Commission Error</label>
+            </value>
+            <value>
+                <fullName>Customer Relations Request</fullName>
+                <default>false</default>
+                <label>Customer Relations Request</label>
+            </value>
+            <value>
+                <fullName>Member Service Request</fullName>
+                <default>false</default>
+                <label>Member Service Request</label>
+            </value>
+            <value>
+                <fullName>Missing/Inc Bill addr/contact</fullName>
+                <default>false</default>
+                <label>Missing/Inc Bill addr/contact</label>
+            </value>
+            <value>
+                <fullName>Missing/Inc Post addr/contact</fullName>
+                <default>false</default>
+                <label>Missing/Inc Post addr/contact</label>
+            </value>
+            <value>
+                <fullName>Related to CR</fullName>
+                <default>false</default>
+                <label>Related to CR</label>
+            </value>
+            <value>
+                <fullName>Attachment missing</fullName>
+                <default>false</default>
+                <label>Attachment missing</label>
+            </value>
+            <value>
+                <fullName>Attachment Missing/Incomplete</fullName>
+                <default>false</default>
+                <label>Attachment Missing/Incomplete</label>
+            </value>
+            <value>
+                <fullName>Incorrect rate</fullName>
+                <default>false</default>
+                <label>Incorrect rate</label>
+            </value>
+            <value>
+                <fullName>Incorrect Credit Card info</fullName>
+                <default>false</default>
+                <label>Incorrect Credit Card info</label>
+            </value>
+            <value>
+                <fullName>Agency Discount Error</fullName>
+                <default>false</default>
+                <label>Agency Discount Error</label>
+            </value>
+            <value>
+                <fullName>Agency/TMP issue</fullName>
+                <default>false</default>
+                <label>Agency/TMP issue</label>
+            </value>
+            <value>
+                <fullName>By Creator</fullName>
+                <default>false</default>
+                <label>By Creator</label>
+            </value>
+            <value>
+                <fullName>Bundling issue</fullName>
+                <default>false</default>
+                <label>Bundling issue</label>
+            </value>
+            <value>
+                <fullName>Order Date Incorrect</fullName>
+                <default>false</default>
+                <label>Order Date Incorrect</label>
+            </value>
+            <value>
+                <fullName>Signature Missing 7/24</fullName>
+                <default>false</default>
+                <label>Signature Missing 7/24</label>
+            </value>
+            <value>
+                <fullName>Signatures Missing</fullName>
+                <default>false</default>
+                <label>Signatures Missing</label>
+            </value>
+            <value>
+                <fullName>Addendum Issue</fullName>
+                <default>false</default>
+                <label>Addendum Issue</label>
+            </value>
+            <value>
+                <fullName>Credit Memo Error</fullName>
+                <default>false</default>
+                <label>Credit Memo Error</label>
+            </value>
+            <value>
+                <fullName>Credit Order Error</fullName>
+                <default>false</default>
+                <label>Credit Order Error</label>
+            </value>
+            <value>
+                <fullName>Closed Opportunity</fullName>
+                <default>false</default>
+                <label>Closed Opportunity</label>
+            </value>
+            <value>
+                <fullName>Attachment missing:DD Mandate</fullName>
+                <default>false</default>
+                <label>Attachment missing:DD Mandate</label>
+            </value>
+            <value>
+                <fullName>Duplicate order</fullName>
+                <default>false</default>
+                <label>Duplicate order</label>
+            </value>
+            <value>
+                <fullName>System Error</fullName>
+                <default>false</default>
+                <label>System Error</label>
+            </value>
+            <value>
+                <fullName>Attachment missing:agencyorder</fullName>
+                <default>false</default>
+                <label>Attachment missing:agencyorder</label>
+            </value>
+            <value>
+                <fullName>Incorrect Agreement start/end</fullName>
+                <default>false</default>
+                <label>Incorrect Agreement start/end</label>
+            </value>
+            <value>
+                <fullName>Attachment missing:contract</fullName>
+                <default>false</default>
+                <label>Attachment missing:contract</label>
+            </value>
+            <value>
+                <fullName>Incorrect Channel</fullName>
+                <default>false</default>
+                <label>Incorrect Channel</label>
+            </value>
+            <value>
+                <fullName>Attachment missing:signed cont</fullName>
+                <default>false</default>
+                <label>Attachment missing:signed cont</label>
+            </value>
+            <value>
+                <fullName>Incorrect Gross Total</fullName>
+                <default>false</default>
+                <label>Incorrect Gross Total</label>
+            </value>
+            <value>
+                <fullName>Incorrect Payment type</fullName>
+                <default>false</default>
+                <label>Incorrect Payment type</label>
+            </value>
+            <value>
+                <fullName>Cannot read contract</fullName>
+                <default>false</default>
+                <label>Cannot read contract</label>
+            </value>
+            <value>
+                <fullName>Missing/Incorrect Posting Info</fullName>
+                <default>false</default>
+                <label>Missing/Incorrect Posting Info</label>
+            </value>
+            <value>
+                <fullName>Missing/Incorrect Bill to Info</fullName>
+                <default>false</default>
+                <label>Missing/Incorrect Bill to Info</label>
+            </value>
+            <value>
+                <fullName>Missing/incorrect product info</fullName>
+                <default>false</default>
+                <label>Missing/incorrect product info</label>
+            </value>
+            <value>
+                <fullName>PO # missing</fullName>
+                <default>false</default>
+                <label>PO # missing</label>
+            </value>
+            <value>
+                <fullName>Rejected in Error</fullName>
+                <default>false</default>
+                <label>Rejected in Error</label>
+            </value>
+            <value>
+                <fullName>Sales Request</fullName>
+                <default>false</default>
+                <label>Sales Request</label>
+            </value>
+            <value>
+                <fullName>Tax Issues</fullName>
+                <default>false</default>
+                <label>Tax Issues</label>
+            </value>
+            <value>
+                <fullName>Incorrect amount Karma/Contrac</fullName>
+                <default>false</default>
+                <label>Incorrect amount Karma/Contrac</label>
+            </value>
+            <value>
+                <fullName>Technical Issue</fullName>
+                <default>false</default>
+                <label>Technical Issue</label>
+            </value>
+            <value>
+                <fullName>EU-Credit Check</fullName>
+                <default>false</default>
+                <label>EU-Credit Check</label>
+            </value>
+            <value>
+                <fullName>Incorrect contract attached</fullName>
+                <default>false</default>
+                <label>Incorrect contract attached</label>
+            </value>
+            <value>
+                <fullName>EU-VAT Reg# Missing/Incorrect</fullName>
+                <default>false</default>
+                <label>EU-VAT Reg# Missing/Incorrect</label>
+            </value>
+            <value>
+                <fullName>EU-Direct Debit</fullName>
+                <default>false</default>
+                <label>EU-Direct Debit</label>
+            </value>
+            <value>
+                <fullName>EU-Fraud</fullName>
+                <default>false</default>
+                <label>EU-Fraud</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Missing All Required Approvals</fullName>
+                <default>false</default>
+                <label>Missing All Required Approvals</label>
+            </value>
+            <value>
+                <fullName>Minimum threshold not met</fullName>
+                <default>false</default>
+                <label>Minimum threshold not met</label>
+            </value>
+            <value>
+                <fullName>Fraud/Compliance Cancelled</fullName>
+                <default>false</default>
+                <label>Fraud/Compliance Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

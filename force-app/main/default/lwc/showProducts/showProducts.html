@@ -1,0 +1,148 @@
+<!--  Created BY : Suraj , Created Date : 20/10/2023, created need to show All Products -->
+<template>
+    <lightning-card variant="narrow" icon-name="standard:product" title="All Products">
+        <div slot="footer" style="background-color: #ffffff; min-height: 400px;">
+            <template if:true={isLoading}>
+                <div class="exampleHolder">
+                    <lightning-spinner alternative-text="Loading" size="large"></lightning-spinner>
+                </div>
+            </template>
+
+            <div class="slds-var-m-around_medium slds-text-align_left" >
+                <!-- Filter section -->
+                <lightning-record-edit-form object-api-name="ProductC__c" density="Comfy">
+                    <div class="slds-grid slds-gutters">
+                        <div class="slds-col">
+
+                        </div>
+                        <div class="slds-col">
+                            <lightning-combobox label="Product Type" name="Product_Type__c" value={pmaintype}
+                                options={filter1Options} onchange={setValues}></lightning-combobox>
+                        </div>
+
+                        <div class="slds-col">
+                            <lightning-combobox label="Product Names" name="Product_Name__c" value={pname}
+                                options={filter2Options} onchange={setValues}></lightning-combobox>
+                        </div>
+                        <div class="slds-col">
+                            <lightning-combobox label="Product Country" name="Product_Country__c" value={selcontry}
+                                options={filter4Options} onchange={setValues}></lightning-combobox>
+
+                        </div>
+                        <div class="slds-col">
+                            <lightning-combobox label="Currency" name="CurrencyIsoCode" value={currency}
+                                options={filter3Options} onchange={setValues}></lightning-combobox>
+                        </div>
+                        <div class="slds-col">
+                        </div>
+
+                    </div>
+                </lightning-record-edit-form>
+                <!-- Spinner -->
+
+                <div style="font-size: 16px; font-weight: bold; text-decoration: underline;" class="slds-var-m-around_small slds-align_absolute-center">
+                    {totalrecord} Products Showing
+                </div>
+                <!-- Record list section -->
+                <template if:true={alldata}>
+                    <br />
+                    <div if:true={showlist} style="overflow-y: auto;max-height: 400px;">
+                        <table
+                            style="width:100%; font-size:12px; overflow:scroll; word-wrap: break-word; word-break: break-all;"
+                            cellpadding="0">
+                            <thead>
+                                <tr>
+                                    <th class="tableheader" style="width:10%">
+                                        <div title="Name">Product Code</div>
+                                    </th>
+                                    <th class="tableheader" style="width:10%">
+                                        <div title="Name">Product Type</div>
+                                    </th>
+                                    <th class="tableheader" style="width:10%">
+                                        <div title="Name">Product Name</div>
+                                    </th>
+                                    <th class="tableheader" style="width:10%">
+                                        <div title="Name">SKU Type</div>
+                                    </th>
+                                    <th class="tableheader" style="width:20%">
+                                        <div title="Name">Description</div>
+                                    </th>
+                                    <th class="tableheader" style="width:10%">
+                                        <div title="Name">Selling Country</div>
+                                    </th>
+                                    <th class="tableheader" style="width:6%">
+                                        <div title="Name">Currency</div>
+                                    </th>
+                                    <th class="tableheader" style="width:8%">
+                                        <div title="Name">Unit List Price</div>
+                                    </th>
+                                    <th class="tableheader" style="width:10%">
+                                        <div title="Name">Tenure (Months)</div>
+                                    </th>
+                                    <th class="tableheader" style="width:6%">
+                                        <div title="Name">Bin</div>
+                                    </th>
+                                    <!-- Add more headers based on your data -->
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <template for:each={alldata} for:item="record">
+                                    <tr key={record.Id} class="slds-text-title_caps"
+                                        style="height:10px;width:100%;font-size:12px;text-align:center;">
+                                        <td class="tabledata">
+                                            <div title={record.Name}>{record.Name}</div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>{record.Product_Type__c}
+                                            </div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>{record.Product_Name__c}
+                                            </div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>{record.SKU_Type__c}</div>
+                                        </td>
+                                        <td class="tabledata" style=" word-wrap: break-word; word-break: break-all;">
+                                            <div title={record.Name}
+                                                style=" word-wrap: break-word;  word-break: break-all;">
+                                                {record.Product_Description__c}</div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>{record.Product_Country__c}
+                                            </div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>{record.CurrencyIsoCode}
+                                            </div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>
+                                                {record.Unit_List_Price_Value__c}</div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>
+                                                {record.Tenure_Months__c}</div>
+                                        </td>
+                                        <td class="tabledata">
+                                            <div title={record.Name}>
+                                                {record.Bin__c}</div>
+                                        </td>
+                                        <!-- Add more columns based on your data -->
+                                    </tr>
+                                </template>
+                            </tbody>
+                        </table>
+                        <br />
+                        <br />
+                    </div>
+                    <div if:false={showlist} style="text-align: center;">
+                        <b style="color: red;">*</b> 
+                            There Is No Found Product List from above filter 
+                        <b style="color: red;">*</b>
+                    </div>
+                </template>
+            </div>
+        </div>
+    </lightning-card>
+</template>

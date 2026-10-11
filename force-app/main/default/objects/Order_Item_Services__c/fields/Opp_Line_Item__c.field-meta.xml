@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Line_Item__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Opp Line Item</label>
+    <referenceTo>Opp_Line_Item__c</referenceTo>
+    <relationshipName>Order_Item_Services</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

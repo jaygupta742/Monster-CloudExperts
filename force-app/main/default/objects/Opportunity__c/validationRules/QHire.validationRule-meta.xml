@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>QHire</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( ISBLANK(QHire_Revenue__c ) ,
+				INCLUDES(Products_Interested__c , &apos;QHire&apos;))</errorConditionFormula>
+    <errorDisplayField>QHire_Revenue__c</errorDisplayField>
+    <errorMessage>Please Enter Value</errorMessage>
+</ValidationRule>

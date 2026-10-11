@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Status__c</fullName>
+    <label>Sub Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alerted</fullName>
+                <default>false</default>
+                <label>Alerted</label>
+            </value>
+            <value>
+                <fullName>Auto-Implemented</fullName>
+                <default>false</default>
+                <label>Auto-Implemented</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Closed Not Verified</fullName>
+                <default>false</default>
+                <label>Closed Not Verified</label>
+            </value>
+            <value>
+                <fullName>Cust Decline</fullName>
+                <default>false</default>
+                <label>Cust Decline</label>
+            </value>
+            <value>
+                <fullName>Dev Pending</fullName>
+                <default>false</default>
+                <label>Dev Pending</label>
+            </value>
+            <value>
+                <fullName>Dispatched</fullName>
+                <default>false</default>
+                <label>Dispatched</label>
+            </value>
+            <value>
+                <fullName>Dispatched-Ext</fullName>
+                <default>false</default>
+                <label>Dispatched-Ext</label>
+            </value>
+            <value>
+                <fullName>Duplicate SR</fullName>
+                <default>false</default>
+                <label>Duplicate SR</label>
+            </value>
+            <value>
+                <fullName>Enhancement Request</fullName>
+                <default>false</default>
+                <label>Enhancement Request</label>
+            </value>
+            <value>
+                <fullName>Escalate to Tier 1</fullName>
+                <default>false</default>
+                <label>Escalate to Tier 1</label>
+            </value>
+            <value>
+                <fullName>Escalate to Tier 2</fullName>
+                <default>false</default>
+                <label>Escalate to Tier 2</label>
+            </value>
+            <value>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+                <label>Escalation</label>
+            </value>
+            <value>
+                <fullName>Escalation - ASTECH</fullName>
+                <default>false</default>
+                <label>Escalation - ASTECH</label>
+            </value>
+            <value>
+                <fullName>Escalation - Gatekeeper</fullName>
+                <default>false</default>
+                <label>Escalation - Gatekeeper</label>
+            </value>
+            <value>
+                <fullName>Escalation - Product Helpdesk</fullName>
+                <default>false</default>
+                <label>Escalation - Product Helpdesk</label>
+            </value>
+            <value>
+                <fullName>Escalation - Tech Escalate</fullName>
+                <default>false</default>
+                <label>Escalation - Tech Escalate</label>
+            </value>
+            <value>
+                <fullName>Expired Non Imp</fullName>
+                <default>false</default>
+                <label>Expired Non Imp</label>
+            </value>
+            <value>
+                <fullName>Future Start Date</fullName>
+                <default>false</default>
+                <label>Future Start Date</label>
+            </value>
+            <value>
+                <fullName>Implemented</fullName>
+                <default>false</default>
+                <label>Implemented</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Junk/SPAM/OOF</fullName>
+                <default>false</default>
+                <label>Junk/SPAM/OOF</label>
+            </value>
+            <value>
+                <fullName>No Response from Customer</fullName>
+                <default>false</default>
+                <label>No Response from Customer</label>
+            </value>
+            <value>
+                <fullName>No Sub-Status</fullName>
+                <default>false</default>
+                <label>No Sub-Status</label>
+            </value>
+            <value>
+                <fullName>Not Acknowledged</fullName>
+                <default>false</default>
+                <label>Not Acknowledged</label>
+            </value>
+            <value>
+                <fullName>Not Acknowledged-Cust</fullName>
+                <default>false</default>
+                <label>Not Acknowledged-Cust</label>
+            </value>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>false</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>On Hold</fullName>
+                <default>false</default>
+                <label>On Hold</label>
+            </value>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Pending Development</fullName>
+                <default>false</default>
+                <label>Pending Development</label>
+            </value>
+            <value>
+                <fullName>Queued</fullName>
+                <default>false</default>
+                <label>Queued</label>
+            </value>
+            <value>
+                <fullName>Rejected</fullName>
+                <default>false</default>
+                <label>Rejected</label>
+            </value>
+            <value>
+                <fullName>Requested</fullName>
+                <default>false</default>
+                <label>Requested</label>
+            </value>
+            <value>
+                <fullName>Requested-Cust</fullName>
+                <default>false</default>
+                <label>Requested-Cust</label>
+            </value>
+            <value>
+                <fullName>Resolved</fullName>
+                <default>false</default>
+                <label>Resolved</label>
+            </value>
+            <value>
+                <fullName>Resolved by 3rd Party</fullName>
+                <default>false</default>
+                <label>Resolved by 3rd Party</label>
+            </value>
+            <value>
+                <fullName>Resolved by GCS</fullName>
+                <default>false</default>
+                <label>Resolved by GCS</label>
+            </value>
+            <value>
+                <fullName>Resolved by Network Operations</fullName>
+                <default>false</default>
+                <label>Resolved by Network Operations</label>
+            </value>
+            <value>
+                <fullName>Resolved by Product Helpdesk</fullName>
+                <default>false</default>
+                <label>Resolved by Product Helpdesk</label>
+            </value>
+            <value>
+                <fullName>Resolved by Product Release</fullName>
+                <default>false</default>
+                <label>Resolved by Product Release</label>
+            </value>
+            <value>
+                <fullName>Resolved by Web Services</fullName>
+                <default>false</default>
+                <label>Resolved by Web Services</label>
+            </value>
+            <value>
+                <fullName>Routed/Transferred</fullName>
+                <default>false</default>
+                <label>Routed/Transferred</label>
+            </value>
+            <value>
+                <fullName>Scheduled</fullName>
+                <default>false</default>
+                <label>Scheduled</label>
+            </value>
+            <value>
+                <fullName>Seeker Auto Closed Not Verified</fullName>
+                <default>false</default>
+                <label>Seeker Auto Closed Not Verified</label>
+            </value>
+            <value>
+                <fullName>Test / Mistake / Dropped Call</fullName>
+                <default>false</default>
+                <label>Test / Mistake / Dropped Call</label>
+            </value>
+            <value>
+                <fullName>Transferred External</fullName>
+                <default>false</default>
+                <label>Transferred External</label>
+            </value>
+            <value>
+                <fullName>Transferred Internal</fullName>
+                <default>false</default>
+                <label>Transferred Internal</label>
+            </value>
+            <value>
+                <fullName>Transferred to Internal</fullName>
+                <default>false</default>
+                <label>Transferred to Internal</label>
+            </value>
+            <value>
+                <fullName>Transferred to Sales</fullName>
+                <default>false</default>
+                <label>Transferred to Sales</label>
+            </value>
+            <value>
+                <fullName>Unable to Recreate Problem</fullName>
+                <default>false</default>
+                <label>Unable to Recreate Problem</label>
+            </value>
+            <value>
+                <fullName>Unresolved</fullName>
+                <default>false</default>
+                <label>Unresolved</label>
+            </value>
+            <value>
+                <fullName>Updated by Chatter</fullName>
+                <default>false</default>
+                <label>Updated by Chatter</label>
+            </value>
+            <value>
+                <fullName>Updated by Customer</fullName>
+                <default>false</default>
+                <label>Updated by Customer</label>
+            </value>
+            <value>
+                <fullName>User Info Missing</fullName>
+                <default>false</default>
+                <label>User Info Missing</label>
+            </value>
+            <value>
+                <fullName>User Info Required</fullName>
+                <default>false</default>
+                <label>User Info Required</label>
+            </value>
+            <value>
+                <fullName>Waiting Internal – Order Verified</fullName>
+                <default>false</default>
+                <label>Waiting Internal – Order Verified</label>
+            </value>
+            <value>
+                <fullName>Waiting on 3rd Party</fullName>
+                <default>false</default>
+                <label>Waiting on 3rd Party</label>
+            </value>
+            <value>
+                <fullName>Waiting on Customer</fullName>
+                <default>false</default>
+                <label>Waiting on Customer</label>
+            </value>
+            <value>
+                <fullName>Waiting on Internal</fullName>
+                <default>false</default>
+                <label>Waiting on Internal</label>
+            </value>
+            <value>
+                <fullName>Waiting on Sales</fullName>
+                <default>false</default>
+                <label>Waiting on Sales</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

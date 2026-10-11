@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Start_Date_RollUp__c</fullName>
+    <description>Contract Start Date = RollUp summary field, Roll up the minimum service start date from order item.</description>
+    <inlineHelpText>Contract Start Date = RollUp summary field, Roll up the minimum service start date from order item.</inlineHelpText>
+    <label>Contract Start Date RollUp</label>
+    <summarizedField>Order_Item__c.Start_Date__c</summarizedField>
+    <summaryForeignKey>Order_Item__c.Order__c</summaryForeignKey>
+    <summaryOperation>min</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

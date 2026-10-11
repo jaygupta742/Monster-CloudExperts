@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Banner_Size__c</fullName>
+    <label>Banner Size</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>000x000</fullName>
+                <default>false</default>
+                <label>000x000</label>
+            </value>
+            <value>
+                <fullName>1/1 Page</fullName>
+                <default>false</default>
+                <label>1/1 Page</label>
+            </value>
+            <value>
+                <fullName>1/2 Page</fullName>
+                <default>false</default>
+                <label>1/2 Page</label>
+            </value>
+            <value>
+                <fullName>1/4 Page</fullName>
+                <default>false</default>
+                <label>1/4 Page</label>
+            </value>
+            <value>
+                <fullName>1/8 Page</fullName>
+                <default>false</default>
+                <label>1/8 Page</label>
+            </value>
+            <value>
+                <fullName>1170x100</fullName>
+                <default>false</default>
+                <label>1170x100</label>
+            </value>
+            <value>
+                <fullName>120x090</fullName>
+                <default>false</default>
+                <label>120x090</label>
+            </value>
+            <value>
+                <fullName>120x240</fullName>
+                <default>false</default>
+                <label>120x240</label>
+            </value>
+            <value>
+                <fullName>120x60</fullName>
+                <default>false</default>
+                <label>120x60</label>
+            </value>
+            <value>
+                <fullName>120x600</fullName>
+                <default>false</default>
+                <label>120x600</label>
+            </value>
+            <value>
+                <fullName>120x90</fullName>
+                <default>false</default>
+                <label>120x90</label>
+            </value>
+            <value>
+                <fullName>150x60</fullName>
+                <default>false</default>
+                <label>150x60</label>
+            </value>
+            <value>
+                <fullName>160x160</fullName>
+                <default>false</default>
+                <label>160x160</label>
+            </value>
+            <value>
+                <fullName>160x300</fullName>
+                <default>false</default>
+                <label>160x300</label>
+            </value>
+            <value>
+                <fullName>160x600</fullName>
+                <default>false</default>
+                <label>160x600</label>
+            </value>
+            <value>
+                <fullName>167x167</fullName>
+                <default>false</default>
+                <label>167x167</label>
+            </value>
+            <value>
+                <fullName>195x35</fullName>
+                <default>false</default>
+                <label>195x35</label>
+            </value>
+            <value>
+                <fullName>205x155</fullName>
+                <default>false</default>
+                <label>205x155</label>
+            </value>
+            <value>
+                <fullName>225x50</fullName>
+                <default>false</default>
+                <label>225x50</label>
+            </value>
+            <value>
+                <fullName>234x60</fullName>
+                <default>false</default>
+                <label>234x60</label>
+            </value>
+            <value>
+                <fullName>256x130</fullName>
+                <default>false</default>
+                <label>256x130</label>
+            </value>
+            <value>
+                <fullName>269x269</fullName>
+                <default>false</default>
+                <label>269x269</label>
+            </value>
+            <value>
+                <fullName>300x100</fullName>
+                <default>false</default>
+                <label>300x100</label>
+            </value>
+            <value>
+                <fullName>300x250</fullName>
+                <default>false</default>
+                <label>300x250</label>
+            </value>
+            <value>
+                <fullName>300x50</fullName>
+                <default>false</default>
+                <label>300x50</label>
+            </value>
+            <value>
+                <fullName>300x50 (Expandable)</fullName>
+                <default>false</default>
+                <label>300x50 (Expandable)</label>
+            </value>
+            <value>
+                <fullName>300X600</fullName>
+                <default>false</default>
+                <label>300X600</label>
+            </value>
+            <value>
+                <fullName>320x50</fullName>
+                <default>false</default>
+                <label>320x50</label>
+            </value>
+            <value>
+                <fullName>320x50 - Expandable</fullName>
+                <default>false</default>
+                <label>320x50 - Expandable</label>
+            </value>
+            <value>
+                <fullName>468x060</fullName>
+                <default>false</default>
+                <label>468x060</label>
+            </value>
+            <value>
+                <fullName>468x60</fullName>
+                <default>false</default>
+                <label>468x60</label>
+            </value>
+            <value>
+                <fullName>480x80</fullName>
+                <default>false</default>
+                <label>480x80</label>
+            </value>
+            <value>
+                <fullName>616x112</fullName>
+                <default>false</default>
+                <label>616x112</label>
+            </value>
+            <value>
+                <fullName>680x80</fullName>
+                <default>false</default>
+                <label>680x80</label>
+            </value>
+            <value>
+                <fullName>728x090</fullName>
+                <default>false</default>
+                <label>728x090</label>
+            </value>
+            <value>
+                <fullName>728x90</fullName>
+                <default>false</default>
+                <label>728x90</label>
+            </value>
+            <value>
+                <fullName>All Sizes</fullName>
+                <default>false</default>
+                <label>All Sizes</label>
+            </value>
+            <value>
+                <fullName>Featured Job or Employer</fullName>
+                <default>false</default>
+                <label>Featured Job or Employer</label>
+            </value>
+            <value>
+                <fullName>Fly-Over</fullName>
+                <default>false</default>
+                <label>Fly-Over</label>
+            </value>
+            <value>
+                <fullName>Job Search</fullName>
+                <default>false</default>
+                <label>Job Search</label>
+            </value>
+            <value>
+                <fullName>Mobile: 300x250</fullName>
+                <default>false</default>
+                <label>Mobile: 300x250</label>
+            </value>
+            <value>
+                <fullName>Mobile Anchor</fullName>
+                <default>false</default>
+                <label>Mobile Anchor</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Select One</fullName>
+                <default>false</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>Text&amp;Logo</fullName>
+                <default>false</default>
+                <label>Text&amp;Logo</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

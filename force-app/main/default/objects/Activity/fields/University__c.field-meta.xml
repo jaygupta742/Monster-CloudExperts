@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>University__c</fullName>
+    <label>University</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Kurukshetra</fullName>
+                <default>false</default>
+                <label>Kurukshetra</label>
+            </value>
+            <value>
+                <fullName>Upgrad Certification LJMU</fullName>
+                <default>false</default>
+                <label>Upgrad Certification LJMU</label>
+            </value>
+            <value>
+                <fullName>MAHE University</fullName>
+                <default>false</default>
+                <label>MAHE University</label>
+            </value>
+            <value>
+                <fullName>Amity New Fee</fullName>
+                <default>false</default>
+                <label>Amity New Fee</label>
+            </value>
+            <value>
+                <fullName>Upgrad Certification</fullName>
+                <default>false</default>
+                <label>Upgrad Certification</label>
+            </value>
+            <value>
+                <fullName>Sharda University</fullName>
+                <default>false</default>
+                <label>Sharda University</label>
+            </value>
+            <value>
+                <fullName>Amrita University</fullName>
+                <default>false</default>
+                <label>Amrita University</label>
+            </value>
+            <value>
+                <fullName>Shoolini</fullName>
+                <default>false</default>
+                <label>Shoolini</label>
+            </value>
+            <value>
+                <fullName>Jain University</fullName>
+                <default>false</default>
+                <label>Jain University</label>
+            </value>
+            <value>
+                <fullName>OP JINDAL</fullName>
+                <default>false</default>
+                <label>OP JINDAL</label>
+            </value>
+            <value>
+                <fullName>Chandigarh University</fullName>
+                <default>false</default>
+                <label>Chandigarh University</label>
+            </value>
+            <value>
+                <fullName>Upgrad Certification DUKE CE</fullName>
+                <default>false</default>
+                <label>Upgrad Certification DUKE CE</label>
+            </value>
+            <value>
+                <fullName>Manipal University Jaipur</fullName>
+                <default>false</default>
+                <label>Manipal University Jaipur</label>
+            </value>
+            <value>
+                <fullName>DY patil</fullName>
+                <default>false</default>
+                <label>DY patil</label>
+            </value>
+            <value>
+                <fullName>Upgrad Certification MICA</fullName>
+                <default>false</default>
+                <label>Upgrad Certification MICA</label>
+            </value>
+            <value>
+                <fullName>Upgrad Certification IIMKZ</fullName>
+                <default>false</default>
+                <label>Upgrad Certification IIMKZ</label>
+            </value>
+            <value>
+                <fullName>Upgrad Certification IMT Ghaziabad</fullName>
+                <default>false</default>
+                <label>Upgrad Certification IMT Ghaziabad</label>
+            </value>
+            <value>
+                <fullName>VivekanaNda Global University</fullName>
+                <default>false</default>
+                <label>VivekanaNda Global University</label>
+            </value>
+            <value>
+                <fullName>Manipal University Sikkim</fullName>
+                <default>false</default>
+                <label>Manipal University Sikkim</label>
+            </value>
+            <value>
+                <fullName>Vignan University</fullName>
+                <default>false</default>
+                <label>Vignan University</label>
+            </value>
+            <value>
+                <fullName>Arka Jain University</fullName>
+                <default>false</default>
+                <label>Arka Jain University</label>
+            </value>
+            <value>
+                <fullName>Vels</fullName>
+                <default>false</default>
+                <label>Vels</label>
+            </value>
+            <value>
+                <fullName>Yonopoya University</fullName>
+                <default>false</default>
+                <label>Yonopoya University</label>
+            </value>
+            <value>
+                <fullName>Yenepoya University</fullName>
+                <default>false</default>
+                <label>Yenepoya University</label>
+            </value>
+            <value>
+                <fullName>Andhra University</fullName>
+                <default>false</default>
+                <label>Andhra University</label>
+            </value>
+            <value>
+                <fullName>IMT Ghaiziabad</fullName>
+                <default>false</default>
+                <label>IMT Ghaiziabad</label>
+            </value>
+            <value>
+                <fullName>IMI Kolakata</fullName>
+                <default>false</default>
+                <label>IMI Kolakata</label>
+            </value>
+            <value>
+                <fullName>Alliance university</fullName>
+                <default>false</default>
+                <label>Alliance university</label>
+            </value>
+            <value>
+                <fullName>K. J. Somaiya Institute of Management</fullName>
+                <default>false</default>
+                <label>K. J. Somaiya Institute of Management</label>
+            </value>
+            <value>
+                <fullName>MDI Musrshidabad</fullName>
+                <default>false</default>
+                <label>MDI Musrshidabad</label>
+            </value>
+            <value>
+                <fullName>Shobit University</fullName>
+                <default>false</default>
+                <label>Shobit University</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

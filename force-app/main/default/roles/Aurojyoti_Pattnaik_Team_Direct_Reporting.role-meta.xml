@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Aurojyoti Pattnaik (Team Direct Reporting)</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Aurojyoti_Pattnaik_Under_Arun_Karra</parentRole>
+</Role>

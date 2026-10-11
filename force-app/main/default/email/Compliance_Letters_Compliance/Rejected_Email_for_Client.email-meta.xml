@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>If record will rejected by owner for client validation object</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Rejected Email for Client</name>
+    <style>none</style>
+    <subject>Please check the record</subject>
+    <textOnly>Dear {!Client_Validation_Request__c.OwnerFullName}
+
+Your Request {!Client_Validation_Request__c.Name} is rejected. Correct the record and submit it again for approval .
+
+Thanks,
+{!User.FirstName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

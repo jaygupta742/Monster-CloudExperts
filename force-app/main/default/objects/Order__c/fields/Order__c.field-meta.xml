@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order__c</fullName>
+    <label>Order Comments</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sales Credit Full | Finance Credit Full | Activation</fullName>
+                <default>false</default>
+                <label>Sales Credit Full | Finance Credit Full | Activation</label>
+            </value>
+            <value>
+                <fullName>Sales Credit Full | No Finance Credit | Activation</fullName>
+                <default>false</default>
+                <label>Sales Credit Full | No Finance Credit | Activation</label>
+            </value>
+            <value>
+                <fullName>No Sales Credit | No Finance Credit | Activation</fullName>
+                <default>false</default>
+                <label>No Sales Credit | No Finance Credit | Activation</label>
+            </value>
+            <value>
+                <fullName>Sales Credit Full | Finance Credit Part | Activation</fullName>
+                <default>false</default>
+                <label>Sales Credit Full | Finance Credit Part | Activation</label>
+            </value>
+            <value>
+                <fullName>No Sales Credit | Finance Credit Full | Activation</fullName>
+                <default>false</default>
+                <label>No Sales Credit | Finance Credit Full | Activation</label>
+            </value>
+            <value>
+                <fullName>Sales Credit Part | Finance Credit Part | Activation Part</fullName>
+                <default>false</default>
+                <label>Sales Credit Part | Finance Credit Part | Activation Part</label>
+            </value>
+            <value>
+                <fullName>others</fullName>
+                <default>false</default>
+                <label>others</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

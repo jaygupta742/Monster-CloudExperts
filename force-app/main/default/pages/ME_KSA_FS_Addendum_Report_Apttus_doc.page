@@ -1,0 +1,428 @@
+<apex:page StandardController="apttus_proposal_proposal__c" extensions="ME_KSA_FS_Addendum_Report_Apttus_doc" applyHtmlTag="false" lightningStylesheets="true" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false" contentType="application/msword#{!apttus_proposal_proposal__c.Account__r.name}-{!apttus_proposal_proposal__c.name}-ME_KSA_FS_Addendum_Report_Apttus_doc-{!today()}.doc">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+   <apex:form >
+<c:PDFHeaderFooter type="header" > 
+
+
+ <apex:image value="{!imgsrc}" width="170" height="30"/>
+
+
+<apex:stylesheet value="{!$Resource.Repeat}"/> 
+</c:PDFHeaderFooter>
+<c:PDFHeaderFooter type="footer" > 
+<p style="text-align:right">{!qp.name}</p>
+<apex:stylesheet value="{!$Resource.Repeat}"/> 
+
+</c:PDFHeaderFooter> 
+
+<p style="font-size:15px;text-align:center;font-family:verdana">
+<b>ADDENDUM AGREEMENT TO THE SERVICE AGREEMENT </b>
+</p>
+
+<table style="border:1px solid black">
+<tr>
+<td>
+<p style="font-size:14px;text-align:justify;font-family:verdana;margin-top:-4px">
+This ADDENDUM AGREEMENT ("Addendum Agreement") is made and entered into between Monster.com (India) Private Limited, a company incorporated [in India] under the 
+[Indian] Companies Act, 1956, having its branch licensed to transact business in the Kingdom of Saudi Arabia as by the SAGIA License No. 102032019235, dated (14/02/1432H) 
+and Certificate of Registration of a Foreign Company Branch No. 1010312352, dated (09/08/1432H) issued by Ministry of Commerce and Industry, having its Branch office in 
+Kingdom of Saudi Arabia at  Office No. 18, 3669 Imam Abdullah Ibn Saudi ibn Abdulaziz Rd, Ishbiliyah, Riyadh. Kingdom of Saudi Arabia, (herein after referred to as 'Monster',
+ which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns) AND 
+   AND <b>{!apttus_proposal_proposal__c.Account__r.Name}</b> 
+   (hereinafter referred to as 'Purchaser', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and permitted assigns).
+ </p>
+ <p style="font-size:14px;text-align:justify;font-family:verdana;margin-top:-12px">
+ (Monster and Purchaser are hereinafter collectively referred to as "the Parties" and severally as "Party")
+ </p>
+ <p style="font-size:14px;text-align:justify;font-family:verdana;margin-top:-12px">
+The Parties had executed  the aforesaid Service  Agreement  dated...........................(“Agreement”) where-under the Purchaser has agreed to subscribe the services of Monster on the terms and conditions as stated in the said Agreement. Purchaser is now desirous to subscribe some additional services from Monster under the said Agreement for consideration as agreed between the Parties as under :
+</p>
+ 
+ </td>
+
+</tr>
+</table><br/>
+<table style="   align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+<tr  >
+<td style="border-bottom: 1px solid black;border-top: 1px solid black;border-right: 1px solid black; width:50%">Date:<apex:outputText value="{0,date, dd'/'MM'/'yyyy}">
+<apex:param value="{!apttus_proposal_proposal__c.createddate}"/></apex:outputText> <br/>
+<b>Quote #:</b>{!apttus_proposal_proposal__c.name} <br/>
+<b>Quote Valid From:</b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.Start_Date__c}"/></apex:outputText> 
+                                            <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.End_Date__c}"/></apex:outputText><br/>
+
+</td>
+<td style="text-align:left;border-bottom: 1px solid black;border-top: 1px solid black;width:50% ">
+<b>Sales Rep</b>: {!userdetail.Name}<br/>
+<b>Email</b>: {!userdetail.Email} <br/>
+<b>Tel</b>: {!userdetail.Phone} <br/>
+<b>Fax</b>: {!userdetail.Fax} <br/>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid black; border-right: 1px solid black;width:50%"><b>Purchaser:</b><br/>
+
+<b>Name</b>  : {!apttus_proposal_proposal__c.PostingContact__r.Name }<br/>
+<b>Account</b> : {!apttus_proposal_proposal__c.Account__r.name}<br/>
+<b>Email</b> : {!apttus_proposal_proposal__c.PostingContact__r.Email}<br/>
+<b>Phone</b> : {!apttus_proposal_proposal__c.PostingContact__r.Phone}<br/>
+<b>Fax</b> : {!apttus_proposal_proposal__c.PostingContact__r.Fax}<br/>
+<b>Address</b> : {!apttus_proposal_proposal__c.Posting_Street__c}<br/>
+{!apttus_proposal_proposal__c.Posting_City__c}<br/>
+{!apttus_proposal_proposal__c.Posting_State__c}
+{!apttus_proposal_proposal__c.Posting_Country__c}
+{!apttus_proposal_proposal__c.Posting_Pin_Code__c}<br/>
+ <!---<b>Account Registration Number</b> : {!apttus_proposal_proposal__c.Account__r.RegistrationNumber__c}<br/>--->
+ 
+</td>
+
+<td style="text-align:left;border-bottom: 1px solid black;width:50%;margin-top:-9px">
+<b>Bill To :</b><br/>
+<b>Name</b>  : {!apttus_proposal_proposal__c.BillContact__r.Name}<br/>
+<b>Account</b> : {!apttus_proposal_proposal__c.Account__r.name}<br/>
+<b>Email</b> : {!apttus_proposal_proposal__c.BillContact__r.Email}<br/>
+<b>Phone</b> : {!apttus_proposal_proposal__c.BillContact__r.Phone}<br/>
+<b>Fax</b> : {!apttus_proposal_proposal__c.BillContact__r.Fax}<br/>
+
+ <b>Address</b> : {!apttus_proposal_proposal__c.Billing_Street__c}<br/>
+{!apttus_proposal_proposal__c.Billing_City__c}<br/>
+{!apttus_proposal_proposal__c.Billing_State__c}
+{!apttus_proposal_proposal__c.Billing_Country__c}
+{!apttus_proposal_proposal__c.Billing_Pin_code__c}<br/>
+
+ </td>
+
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black; text-align:center; font-size:14px; "><i>
+If any of the above information is incorrect please advise in the correction section on the next page.</i>
+</td>
+</tr>
+
+</table>
+
+
+<br/>
+
+<p style="font-size:13px;font-family:Verdana;"><b>SERVICE DETAILS:</b> The details of service that Purchaser has agreed to take from Monster are as follows (Service): </p>
+<br/>
+<table style="border:1px solid black;border-collapse: collapse;" width="100%">
+
+<tr style="border:1px solid black;background-color:#800080; ">
+<td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Items<br/>#</td>
+<td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Product</td>
+<td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:13px">Qty</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product End Date</td>
+
+</tr>
+
+<apex:variable value="{!1}" var="rowNum"/>
+<apex:repeat value="{!pli}" var="p">
+
+             
+<tr >
+<td style="border:1px solid black;">
+            
+            <apex:outputLabel value="{!rowNum }"/>  
+        <apex:variable var="rowNum" value="{!rowNum + 1}"/>   
+          
+            <br/></td>
+<td style="border:1px solid black;text-align:center;">{!p.Product__r.name}<br/>{!p.APTS_Attribute_Display__c}<br/></td>
+<td style="border:1px solid black;text-align:center;">{!p.Quantity__c}</td>
+<td style="border:1px solid black;text-align:center;">{!DAY(p.Product_Start_Date__c)}/{!MONTH(p.Product_Start_Date__c)}/{!YEAR(p.Product_Start_Date__c)}</td>
+<td style="border:1px solid black;text-align:center;">{!DAY(p.Product_End_Date__c)}/{!MONTH(p.Product_End_Date__c)}/{!YEAR(p.Product_End_Date__c)}</td>
+</tr>
+<tr><td style="border:1px solid black;" colspan="5"><b>Comments:</b></td>   {!p.Comment__c}</tr>
+</apex:repeat>
+</table><br/>
+
+<div align="center">
+<table width="100%">
+<tr >
+<td align="right">Value of Services:</td><td>
+{!apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode } 
+  <apex:outputText value="{0, number, ###,###,###,###.00}">
+  <apex:param value="{!apttus_proposal_proposal__c.Gross_Total__c}" />
+  </apex:outputText>
+  </td>
+
+</tr>
+<tr >
+<td align="right">Add:{!apttus_proposal_proposal__c.Tax_Name__c}@{!apttus_proposal_proposal__c.Tax_Percentage__c}:
+{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode }  
+<apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!apttus_proposal_proposal__c.Tax_Amount__c}"/> 
+</apex:outputText>
+
+</td><!---<td>{!apttus_proposal_proposal__c.Tax_Amount__c}</td>--->
+
+</tr>
+<tr >
+<td align="right">Total Invoice value (including Tax):</td><td>
+ <apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!apttus_proposal_proposal__c.Net_Total__c}"/>
+</apex:outputText>
+</td>
+
+</tr>
+
+</table>
+</div>
+<hr></hr>
+<p style="font-size:14px"><b>PAYMENT TERMS AND INVOICE DELIVERY
+</b></p>
+<!--<p style="font-size:14px;font-family:Verdana;">Purchaser has agreed to pay the total invoice value to Monster as per the following payment term (s):
+</p>--->
+
+<apex:outputPanel rendered="{!if(ap.size>0,true,false)}">
+
+<table width="100%">
+<th>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:33%">Payment Due Date </td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:33%">Payment Amount </td>
+<!---<td style="border:1px solid black; text-align:center;font-size:13px;width:33%">TDS Amount</td>---->
+</tr></th>
+<apex:repeat value="{!ap}" var="ab">
+
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:25%">{!DAY(ab.Due_Date__c)}/{!Month(ab.Due_Date__c)}/{!Year(ab.Due_Date__c)} </td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:40%">{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode } 
+ <apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!ab.Payment_Amount__c}"/>
+</apex:outputText>
+
+</td>
+<!---<td style="border:1px solid black; text-align:center; font-size:13px;width:35%">{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode } {!ab.TDS_Amount_c__c} </td>-->
+</tr>
+</apex:repeat>
+
+</table><br/>
+</apex:outputPanel>
+<p style="font-size:14px;font-family:Verdana;text-align:justify;">
+(All payments to be made in favour of <b><u>“Monster.com India Private Limited, Bank Account No. 1003664001, Deutsche Bank AG, Riyadh Branch,  
+Swift Code : DEUTSARI; IBAN : SA43 8100 0000 0010 03664001”</U></b>
+</p>
+<p style="font-size:14px;font-family:verdana">
+Please circle your preferred method of invoice delivery:      EMAIL  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   POST   <br/>
+Please note that if you choose email, the invoice will be delivered to: <b>{!apttus_proposal_proposal__c.Primary_Contact__r.Email}</b>
+<b>If you opt for email and you wish to receive the invoice to a different email address please provide it in the change section further down this Agreement.</b>
+ </p>
+ 
+ <p style="font-size:14px;font-family:Verdana;text-align:justify;">
+ <b>*Terms for Replication of Purchaser’s Job Postings:</b>
+ </p>
+ 
+<p style="font-size:14px;font-family:Verdana;text-align:justify;">
+Purchaser consents to Monster for replicating its job postings into its Monster Account in Monster website Purchaser agrees and accepts that job posting to be replicated on Monster website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Purchaser agrees to use only its names, logos or trademarks. 
+</p>
+
+<p style="font-size:14px;font-family:Verdana;text-align:justify;">
+Monster may not replicate any job posting of Purchaser and/or delete the job postings from Monster site which  does not comply with applicable local, national and international laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property. 
+</p>
+
+<p style="font-size:14px;font-family:Verdana;text-align:justify;">
+The advertisements for competitors of Monster or post jobs or other content that contains links to any site competitive with Monster shall not qualify for replication. 
+Any such replicated postings will be immediately deleted / removed without notice. Monster reserves the right to remove any job posting or content from any Monster Site, 
+which in the reasonable exercise of Monster’s discretion, does not comply with the above Terms, or if any content is posted that Monster believes is not in accordance with 
+the Terms of Use &amp; Privacy of Monster website and/or applicable laws and regulations. Monster shall not be liable for any conflict, in the event of replication of the Job Postings of Purchaser’s competitor on Monster site or vice versa or any disagreement between them in this connection. The replication of Purchaser’s job posting will be only during the continuance of Service Agreement with Monster.  Purchaser does not have any right to get its job Postings replicated on Monster site. Monster shall in its sole discretion may decide whether to assist the Purchaser in replication or not without giving any reason thereof.
+</p>
+
+<p style="font-size:14px;font-family:Verdana;text-align:justify;"><i>
+*Note: If not covered in the main Agreement</i>
+</p>
+
+ 
+
+<div style="page-break-before:always">
+
+<hr> </hr>
+<p style="font-size:12px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR</b>
+</p>
+<br/>
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black;">
+
+<sup>1</sup>Authorised Signature: _________________________________________________
+<div align="right" style="margin:-15px 0px 0px 0px  "><sup>2</sup>Signing Date: ___/___/____<br/></div>
+    <div align="right" style = "margin:0px 0px 0px 0px">
+
+  (dd/mm/yyyy) </div>
+  
+   <div align="right" style = "margin:10px 0px 0px 0px ">Total Price:     <b> {!apttus_proposal_proposal__c.PriceList__r.name}
+    <apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!apttus_proposal_proposal__c.Net_Total__c}"/>
+</apex:outputText> 
+  </b>     </div>
+ 
+   
+
+   <div align="left" style = "margin:    -20px 0px 0px 0px "><sup>3</sup>Printed Name:{!apttus_proposal_proposal__c.Primary_Contact__r.FirstName}
+    {!apttus_proposal_proposal__c.Primary_Contact__r.LastName} <br/></div><br/>
+
+   
+
+   <sup>4</sup>Job Title: {!apttus_proposal_proposal__c.Primary_Contact__r.Title}      <br/><br/>
+
+   
+
+   <sup>5</sup>Company Name (as registered, if applicable): {!apttus_proposal_proposal__c.Account__r.Name}<br/><br/>  
+
+   
+
+   <sup>6</sup> Registration Number (if applicable):  {!apttus_proposal_proposal__c.Account__r.RegistrationNumber__c}   <br/>  <br/> 
+
+  
+
+    <sup>7</sup>Agreement Start Date:  <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate}"/></apex:outputText>
+                        
+  <div align="Right" style="margin: -14px 0px 0px 0px" > <i>The Agreement Start Date will be the date nominated by the Purchaser.</i> </div><br/>
+
+      <div align="Right" style="margin: -14px 0px 0px 0px" > <i>If left blank, the earliest product start date will be the nominated date.</i></div>  <br/>                              
+
+<sup>8</sup>Purchase Order Number:______________________ <div align ="right" style= "Margin:-12px 0px 0px 0px "><i>If this field is left blank the invoice will be issued without a PO number.</i></div>
+
+    
+    </div>
+<b><hr color="black"> </hr></b>
+<br/>
+<b><hr color="black"> </hr></b>
+<!---<p style="font-size:11px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>
+PLEASE FILL THIS IN ONLY IF ONE OR MORE OF THE PURCHASER COMPANY, ADDRESS, OR CONTACT DETAILS HAVE CHANGED</b>
+</p>
+<table>
+<tr>
+<td style="font-size:13px">Name:</td>
+</tr>
+
+<tr>
+<td style="font-size:13px">Company Registration No.: </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 1:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 2: </td>
+</tr>
+<tr >
+<td style="font-size:13px;align:left">City:</td><td style="font-size:13px" align="center">Country:------ </td><td style="font-size:13px;align:right">PO Box No.:-------------  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Purchaser Contact Name:  </td> <td style="font-size:13px" align="center">Telephone No.:</td> 
+</tr>
+<tr>
+<td style="font-size:13px">Purchaser Email:   </td>
+
+</tr>
+</table>
+<b><hr color="black"> </hr></b>
+<b><hr color="black"> </hr></b>
+<p style="font-size:11px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>
+PLEASE FILL THIS IN IF BILL TO COMPANY, ADDRESS, OR CONTACT DETAILS HAVE CHANGED</b>
+</p>
+
+
+<table>
+<tr>
+<td style="font-size:13px">Company Name:</td>
+</tr>
+
+
+<tr>
+<td style="font-size:13px">Address Line 1:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 2: </td>
+</tr>
+<tr >
+<td style="font-size:13px;align:left">City: </td><td style="font-size:13px" align="center">Country:------</td><td style="font-size:13px;align:right">PO Box No.:-------------  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Bill To Contact Name: </td> <td style="font-size:13px" align="center">Telephone No.:</td> 
+</tr>
+<tr>
+<td style="font-size:13px"> Bill To Contact Email:   </td><td style="font-size:13px"> </td> <td style="font-size:13px" align="center">Fax No.:</td>
+
+</tr>
+</table>--->
+
+
+<p align="center" style="font-size:13px;margin-top:-8px"><b>Reserved for Monster</b> </p>
+
+<table style="margin-left:40px"  width="100%" >
+<tr>
+<!--<td align="left" width="50%">-->
+Name: <!----- {!userdetail.Name}---->{!apttus_proposal_proposal__c.Account__r.PrimarySalesManager__c}  
+<!--</td>-->
+<td width="50%">
+Designation:<!-------{!userdetail.Title}---->{!apttus_proposal_proposal__c.Sales_Manager_Designation__c}
+</td>
+</tr>
+
+<tr>
+<td>
+Regd. Office : Office No. 18, 3669 Imam Abdullah Ibn Saudi ibn Abdulaziz Rd, Ishbiliyah, Riyadh. Kingdom of Saudi Arabia,
+</td>
+</tr>
+
+<tr>
+<td>
+City : Riyadh
+</td>
+
+<td>
+Country : Kingdom of Saudi Arabia
+</td>
+
+</tr>
+<tr >
+<td  >
+Email : <!----{!userdetail.Email} -->{!apttus_proposal_proposal__c.Sales_Manager_Email__c}
+</td>
+
+
+<td  >
+Phone: <!----{!userdetail.Phone}--->{!apttus_proposal_proposal__c.Sales_Manager_Phone__c}
+</td>
+
+</tr>
+
+<tr >
+<td  >
+Signature:
+</td>
+
+
+<td  >
+Signing Date:___/___/_____
+<div style="margin:0px 0px 0px 90px;">(DD/MM/YYYY)</div>
+</td>
+</tr>
+</table>
+<b><hr color="black"> </hr></b>
+
+<p style="font-size:14px;font-family:Verdana;text-align:justify">
+<center><b>
+<!----------Sales Rep :{!userdetail.Name}   Email : {!userdetail.Email}     Phone:{!userdetail.Phone} ------->
+Sales Manager :{!apttus_proposal_proposal__c.Account__r.PrimarySalesManager__c} &nbsp;&nbsp;&nbsp;&nbsp;     Email :{!apttus_proposal_proposal__c.Sales_Manager_Email__c}   &nbsp;&nbsp;&nbsp;&nbsp;  Phone:{!apttus_proposal_proposal__c.Sales_Manager_Phone__c}
+</b></center>
+</p>
+<p style="font-size:13px;font-family:Verdana;text-align:justify">
+
+By signing this Addendum Agreement Purchaser agrees to purchase the products and services listed above.  Except amended herein Parties hereby agree that all the other terms and conditions of the Agreement shall remain in full force and effect. This Addendum Agreement shall be effective as of the date of execution by the Parties hereto. 
+                       
+</p>
+<p style="font-size:13px;font-family:Verdana;text-align:justify">
+Purchaser can write to Monster at the email<b> cr@monstergulf.com</b> for any information, support and concerns.
+</p>
+
+</div>
+
+
+
+ </apex:form> 
+</apex:page>

@@ -1,0 +1,7 @@
+Account Lead Status has been set to {!Account.Lead_Account_Status__c} for this account.
+
+Account Name:  {!Account.Name}
+Link to Account:  {!Account.Link}
+Account Sales Channel -  {!Account.SalesChannel__c}
+
+{!RelatedPartner__c.Name}

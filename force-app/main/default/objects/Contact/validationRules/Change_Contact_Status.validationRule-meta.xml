@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Change_Contact_Status</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+    ISCHANGED(ContactStatus__c),
+    ISPICKVAL(PRIORVALUE(ContactStatus__c), &quot;Inactive&quot;),
+    ISPICKVAL(ContactStatus__c, &quot;Active&quot;),
+    $Profile.Name = &quot;Monster - Sales&quot;
+)</errorConditionFormula>
+    <errorMessage>Sales users are not permitted to reactivate a contact from &apos;Inactive&apos; status to &apos;Active&apos;. Please contact your administrator if you believe this change is necessary.</errorMessage>
+</ValidationRule>

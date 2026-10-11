@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternative_Price_List__c</fullName>
+    <label>Alternative Price List</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AED Price List</fullName>
+                <default>false</default>
+                <label>AED Price List</label>
+            </value>
+            <value>
+                <fullName>CAD Price List</fullName>
+                <default>false</default>
+                <label>CAD Price List</label>
+            </value>
+            <value>
+                <fullName>CHF Price List</fullName>
+                <default>false</default>
+                <label>CHF Price List</label>
+            </value>
+            <value>
+                <fullName>CZK Price List</fullName>
+                <default>false</default>
+                <label>CZK Price List</label>
+            </value>
+            <value>
+                <fullName>DKK Price List</fullName>
+                <default>false</default>
+                <label>DKK Price List</label>
+            </value>
+            <value>
+                <fullName>EUR Price List</fullName>
+                <default>false</default>
+                <label>EUR Price List</label>
+            </value>
+            <value>
+                <fullName>GBP Price List</fullName>
+                <default>false</default>
+                <label>GBP Price List</label>
+            </value>
+            <value>
+                <fullName>HKD Price List</fullName>
+                <default>false</default>
+                <label>HKD Price List</label>
+            </value>
+            <value>
+                <fullName>INR Price List</fullName>
+                <default>false</default>
+                <label>INR Price List</label>
+            </value>
+            <value>
+                <fullName>MYR Price List</fullName>
+                <default>false</default>
+                <label>MYR Price List</label>
+            </value>
+            <value>
+                <fullName>NOK Price List</fullName>
+                <default>false</default>
+                <label>NOK Price List</label>
+            </value>
+            <value>
+                <fullName>PHP Price List</fullName>
+                <default>false</default>
+                <label>PHP Price List</label>
+            </value>
+            <value>
+                <fullName>RUB Price List</fullName>
+                <default>false</default>
+                <label>RUB Price List</label>
+            </value>
+            <value>
+                <fullName>SAR Price List</fullName>
+                <default>false</default>
+                <label>SAR Price List</label>
+            </value>
+            <value>
+                <fullName>SEK Price List</fullName>
+                <default>false</default>
+                <label>SEK Price List</label>
+            </value>
+            <value>
+                <fullName>SGD Price List</fullName>
+                <default>false</default>
+                <label>SGD Price List</label>
+            </value>
+            <value>
+                <fullName>THB Price List</fullName>
+                <default>false</default>
+                <label>THB Price List</label>
+            </value>
+            <value>
+                <fullName>USD Price List</fullName>
+                <default>false</default>
+                <label>USD Price List</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

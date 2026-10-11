@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Kind_Of_Product_Issue_Picklist__c</fullName>
+    <label>Sub Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Reasons_Picklist__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resume Database performance</fullName>
+                <default>false</default>
+                <label>Resume Database performance</label>
+            </value>
+            <value>
+                <fullName>Job Posting performance</fullName>
+                <default>false</default>
+                <label>Job Posting performance</label>
+            </value>
+            <value>
+                <fullName>Jobs + Resume Database performance</fullName>
+                <default>false</default>
+                <label>Jobs + Resume Database performance</label>
+            </value>
+            <value>
+                <fullName>Poor/No After Sales Service by Sales or Customer Service teams</fullName>
+                <default>false</default>
+                <label>Poor/No After Sales Service by Sales or Customer Service teams</label>
+            </value>
+            <value>
+                <fullName>No backend Support</fullName>
+                <default>false</default>
+                <label>No backend Support</label>
+            </value>
+            <value>
+                <fullName>No Training</fullName>
+                <default>false</default>
+                <label>No Training</label>
+            </value>
+            <value>
+                <fullName>Financial Crisis/Budget</fullName>
+                <default>false</default>
+                <label>Financial Crisis/Budget</label>
+            </value>
+            <value>
+                <fullName>Business Losses</fullName>
+                <default>false</default>
+                <label>Business Losses</label>
+            </value>
+            <value>
+                <fullName>Delay from payments from Clients</fullName>
+                <default>false</default>
+                <label>Delay from payments from Clients</label>
+            </value>
+            <value>
+                <fullName>Closure of Business</fullName>
+                <default>false</default>
+                <label>Closure of Business</label>
+            </value>
+            <value>
+                <fullName>Partnership Disintegrated</fullName>
+                <default>false</default>
+                <label>Partnership Disintegrated</label>
+            </value>
+            <value>
+                <fullName>Change in Key Staff</fullName>
+                <default>false</default>
+                <label>Change in Key Staff</label>
+            </value>
+            <value>
+                <fullName>No Business</fullName>
+                <default>false</default>
+                <label>No Business</label>
+            </value>
+            <value>
+                <fullName>Better Deal from Competition</fullName>
+                <default>false</default>
+                <label>Better Deal from Competition</label>
+            </value>
+            <value>
+                <fullName>Fraud employer</fullName>
+                <default>false</default>
+                <label>Fraud employer</label>
+            </value>
+            <value>
+                <fullName>Promoting services</fullName>
+                <default>false</default>
+                <label>Promoting services</label>
+            </value>
+            <value>
+                <fullName>Sharing access</fullName>
+                <default>false</default>
+                <label>Sharing access</label>
+            </value>
+            <value>
+                <fullName>Others(TAFEP (discrimination Gender,Race) or any other Reason)</fullName>
+                <default>false</default>
+                <label>Others(TAFEP (discrimination Gender,Race) or any other Reason)</label>
+            </value>
+            <value>
+                <fullName>Non-Submission-KYC</fullName>
+                <default>false</default>
+                <label>Non-Submission-KYC</label>
+            </value>
+            <value>
+                <fullName>Non-Submission-Cheques</fullName>
+                <default>false</default>
+                <label>Non-Submission-Cheques</label>
+            </value>
+            <value>
+                <fullName>Contact numbers Ringing but not being received/No Response to Emails</fullName>
+                <default>false</default>
+                <label>Contact numbers Ringing but not being received/No Response to Emails</label>
+            </value>
+            <value>
+                <fullName>Client always disconnects</fullName>
+                <default>false</default>
+                <label>Client always disconnects</label>
+            </value>
+            <value>
+                <fullName>Phone numbers switched off</fullName>
+                <default>false</default>
+                <label>Phone numbers switched off</label>
+            </value>
+            <value>
+                <fullName>No Response to Emails</fullName>
+                <default>false</default>
+                <label>No Response to Emails</label>
+            </value>
+            <value>
+                <fullName>Not in Contact with Sales</fullName>
+                <default>false</default>
+                <label>Not in Contact with Sales</label>
+            </value>
+            <value>
+                <fullName>Purchase Order Not In Place</fullName>
+                <default>false</default>
+                <label>Purchase Order Not In Place</label>
+            </value>
+            <value>
+                <fullName>Client disputing Service Tax ( SEZ etc.)</fullName>
+                <default>false</default>
+                <label>Client disputing Service Tax ( SEZ etc.)</label>
+            </value>
+            <value>
+                <fullName>Client disputing Invoice ( Name of Client)</fullName>
+                <default>false</default>
+                <label>Client disputing Invoice ( Name of Client)</label>
+            </value>
+            <value>
+                <fullName>Client Disputing Invoices ( Date of Invoice)</fullName>
+                <default>false</default>
+                <label>Client Disputing Invoices ( Date of Invoice)</label>
+            </value>
+            <value>
+                <fullName>Client Disputing Invoice (Separate Invoice for each installment )</fullName>
+                <default>false</default>
+                <label>Client Disputing Invoice (Separate Invoice for each installment )</label>
+            </value>
+            <value>
+                <fullName>Linked</fullName>
+                <default>false</default>
+                <label>Linked</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Product Issue</controllingFieldValue>
+            <valueName>Resume Database performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Issue</controllingFieldValue>
+            <valueName>Job Posting performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Product Issue</controllingFieldValue>
+            <valueName>Jobs + Resume Database performance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>Poor/No After Sales Service by Sales or Customer Service teams</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>No backend Support</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service Issue</controllingFieldValue>
+            <valueName>No Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Issue</controllingFieldValue>
+            <valueName>Fraud employer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Issue</controllingFieldValue>
+            <valueName>Promoting services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Issue</controllingFieldValue>
+            <valueName>Sharing access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Issue</controllingFieldValue>
+            <valueName>Others(TAFEP (discrimination Gender,Race) or any other Reason)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Issue</controllingFieldValue>
+            <valueName>Financial Crisis/Budget</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Issue</controllingFieldValue>
+            <valueName>Business Losses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Financial Issue</controllingFieldValue>
+            <valueName>Delay from payments from Clients</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Decision</controllingFieldValue>
+            <valueName>Closure of Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Decision</controllingFieldValue>
+            <valueName>Partnership Disintegrated</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Decision</controllingFieldValue>
+            <valueName>Change in Key Staff</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Decision</controllingFieldValue>
+            <valueName>No Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Business Decision</controllingFieldValue>
+            <valueName>Better Deal from Competition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documents Submission</controllingFieldValue>
+            <valueName>Non-Submission-KYC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Documents Submission</controllingFieldValue>
+            <valueName>Non-Submission-Cheques</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Contactable Client</controllingFieldValue>
+            <valueName>Phone numbers switched off</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Contactable Client</controllingFieldValue>
+            <valueName>No Response to Emails</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non-Contactable Client</controllingFieldValue>
+            <valueName>Not in Contact with Sales</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non- Responsive Client</controllingFieldValue>
+            <valueName>Contact numbers Ringing but not being received/No Response to Emails</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Non- Responsive Client</controllingFieldValue>
+            <valueName>Client always disconnects</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issue</controllingFieldValue>
+            <valueName>Purchase Order Not In Place</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issue</controllingFieldValue>
+            <valueName>Client disputing Service Tax ( SEZ etc.)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issue</controllingFieldValue>
+            <valueName>Client disputing Invoice ( Name of Client)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issue</controllingFieldValue>
+            <valueName>Client Disputing Invoices ( Date of Invoice)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issue</controllingFieldValue>
+            <valueName>Client Disputing Invoice (Separate Invoice for each installment )</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Other Issue</controllingFieldValue>
+            <valueName>Linked</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

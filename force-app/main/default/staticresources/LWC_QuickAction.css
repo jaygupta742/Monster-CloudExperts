@@ -1,0 +1,9 @@
+.slds-modal__container{
+    width: 90% !important;
+    max-width: 90% !important;
+}
+
+.ProductDataTable table>thead .slds-cell-fixed.slds-has-button-menu, .ProductDataTable table>thead .slds-cell-fixed.slds-has-button-menu:hover, .ProductDataTable table>thead .slds-th__action {
+  background: #8367d7;
+  color: #ffffff;
+}

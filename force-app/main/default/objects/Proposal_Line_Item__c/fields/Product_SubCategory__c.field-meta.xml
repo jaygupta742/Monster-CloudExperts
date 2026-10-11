@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_SubCategory__c</fullName>
+    <label>Product SubCategory</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Custom Apply Online</fullName>
+                <default>false</default>
+                <label>Custom Apply Online</label>
+            </value>
+            <value>
+                <fullName>Enhanced Job Branding</fullName>
+                <default>false</default>
+                <label>Enhanced Job Branding</label>
+            </value>
+            <value>
+                <fullName>Job Logo</fullName>
+                <default>false</default>
+                <label>Job Logo</label>
+            </value>
+            <value>
+                <fullName>Job Post Std - Any Location</fullName>
+                <default>false</default>
+                <label>Job Post Std - Any Location</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>eMail</fullName>
+                <default>false</default>
+                <label>eMail</label>
+            </value>
+            <value>
+                <fullName>Job Refresh</fullName>
+                <default>false</default>
+                <label>Job Refresh</label>
+            </value>
+            <value>
+                <fullName>Job Bolding</fullName>
+                <default>false</default>
+                <label>Job Bolding</label>
+            </value>
+            <value>
+                <fullName>Other Professional Services</fullName>
+                <default>false</default>
+                <label>Other Professional Services</label>
+            </value>
+            <value>
+                <fullName>Job Wrapping</fullName>
+                <default>false</default>
+                <label>Job Wrapping</label>
+            </value>
+            <value>
+                <fullName>Monster Consultancy Services</fullName>
+                <default>false</default>
+                <label>Monster Consultancy Services</label>
+            </value>
+            <value>
+                <fullName>Cust Srvcs/Dev Various</fullName>
+                <default>false</default>
+                <label>Cust Srvcs/Dev Various</label>
+            </value>
+            <value>
+                <fullName>Click to Print</fullName>
+                <default>false</default>
+                <label>Click to Print</label>
+            </value>
+            <value>
+                <fullName>Job Post Add-On Various</fullName>
+                <default>false</default>
+                <label>Job Post Add-On Various</label>
+            </value>
+            <value>
+                <fullName>Batch Uploading</fullName>
+                <default>false</default>
+                <label>Batch Uploading</label>
+            </value>
+            <value>
+                <fullName>Branding Solutions</fullName>
+                <default>false</default>
+                <label>Branding Solutions</label>
+            </value>
+            <value>
+                <fullName>Candidate Spotlight</fullName>
+                <default>false</default>
+                <label>Candidate Spotlight</label>
+            </value>
+            <value>
+                <fullName>Additional Resume Views/Users</fullName>
+                <default>false</default>
+                <label>Additional Resume Views/Users</label>
+            </value>
+            <value>
+                <fullName>Media Product Various</fullName>
+                <default>false</default>
+                <label>Media Product Various</label>
+            </value>
+            <value>
+                <fullName>Employer Profile</fullName>
+                <default>false</default>
+                <label>Employer Profile</label>
+            </value>
+            <value>
+                <fullName>Company Profile</fullName>
+                <default>false</default>
+                <label>Company Profile</label>
+            </value>
+            <value>
+                <fullName>Display Ad</fullName>
+                <default>false</default>
+                <label>Display Ad</label>
+            </value>
+            <value>
+                <fullName>Jobs2Web</fullName>
+                <default>false</default>
+                <label>Jobs2Web</label>
+            </value>
+            <value>
+                <fullName>CAN - Standard</fullName>
+                <default>false</default>
+                <label>CAN - Standard</label>
+            </value>
+            <value>
+                <fullName>CAN - Military</fullName>
+                <default>false</default>
+                <label>CAN - Military</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Featured Employer</fullName>
+                <default>false</default>
+                <label>Featured Employer</label>
+            </value>
+            <value>
+                <fullName>Social Recruiting Solution</fullName>
+                <default>false</default>
+                <label>Social Recruiting Solution</label>
+            </value>
+            <value>
+                <fullName>TargetMail</fullName>
+                <default>false</default>
+                <label>TargetMail</label>
+            </value>
+            <value>
+                <fullName>Virtual Career Fair</fullName>
+                <default>false</default>
+                <label>Virtual Career Fair</label>
+            </value>
+            <value>
+                <fullName>Custom International Sponsorsh</fullName>
+                <default>false</default>
+                <label>Custom International Sponsorsh</label>
+            </value>
+            <value>
+                <fullName>Newsletter</fullName>
+                <default>false</default>
+                <label>Newsletter</label>
+            </value>
+            <value>
+                <fullName>Talent Gateway</fullName>
+                <default>false</default>
+                <label>Talent Gateway</label>
+            </value>
+            <value>
+                <fullName>Job Post Std - Area Wide</fullName>
+                <default>false</default>
+                <label>Job Post Std - Area Wide</label>
+            </value>
+            <value>
+                <fullName>Job Post Slot - Standard</fullName>
+                <default>false</default>
+                <label>Job Post Slot - Standard</label>
+            </value>
+            <value>
+                <fullName>Job Post Std - Fixed Location</fullName>
+                <default>false</default>
+                <label>Job Post Std - Fixed Location</label>
+            </value>
+            <value>
+                <fullName>Job Post Std - Bill in Arrear</fullName>
+                <default>false</default>
+                <label>Job Post Std - Bill in Arrear</label>
+            </value>
+            <value>
+                <fullName>Job Post Std - Pay for Perform</fullName>
+                <default>false</default>
+                <label>Job Post Std - Pay for Perform</label>
+            </value>
+            <value>
+                <fullName>Job Post Std - Mixed Bundle</fullName>
+                <default>false</default>
+                <label>Job Post Std - Mixed Bundle</label>
+            </value>
+            <value>
+                <fullName>Twitter Cards</fullName>
+                <default>false</default>
+                <label>Twitter Cards</label>
+            </value>
+            <value>
+                <fullName>Job Post Slot - Area Wide</fullName>
+                <default>false</default>
+                <label>Job Post Slot - Area Wide</label>
+            </value>
+            <value>
+                <fullName>Job Post Slot - Custom Target</fullName>
+                <default>false</default>
+                <label>Job Post Slot - Custom Target</label>
+            </value>
+            <value>
+                <fullName>Job Post Slot - Target</fullName>
+                <default>false</default>
+                <label>Job Post Slot - Target</label>
+            </value>
+            <value>
+                <fullName>Talent Fusion</fullName>
+                <default>false</default>
+                <label>Talent Fusion</label>
+            </value>
+            <value>
+                <fullName>Media Product Bundle</fullName>
+                <default>false</default>
+                <label>Media Product Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Video</fullName>
+                <default>false</default>
+                <label>Monster Video</label>
+            </value>
+            <value>
+                <fullName>Shoot</fullName>
+                <default>false</default>
+                <label>Shoot</label>
+            </value>
+            <value>
+                <fullName>Resume License</fullName>
+                <default>false</default>
+                <label>Resume License</label>
+            </value>
+            <value>
+                <fullName>Cloud Search</fullName>
+                <default>false</default>
+                <label>Cloud Search</label>
+            </value>
+            <value>
+                <fullName>Talent CRM</fullName>
+                <default>false</default>
+                <label>Talent CRM</label>
+            </value>
+            <value>
+                <fullName>Talent Management Suite</fullName>
+                <default>false</default>
+                <label>Talent Management Suite</label>
+            </value>
+            <value>
+                <fullName>Pay Per View</fullName>
+                <default>false</default>
+                <label>Pay Per View</label>
+            </value>
+            <value>
+                <fullName>Client Training</fullName>
+                <default>false</default>
+                <label>Client Training</label>
+            </value>
+            <value>
+                <fullName>Job Post Slot - Bill in Arrear</fullName>
+                <default>false</default>
+                <label>Job Post Slot - Bill in Arrear</label>
+            </value>
+            <value>
+                <fullName>Job Posting Standard</fullName>
+                <default>false</default>
+                <label>Job Posting Standard</label>
+            </value>
+            <value>
+                <fullName>TalentBin</fullName>
+                <default>false</default>
+                <label>TalentBin</label>
+            </value>
+            <value>
+                <fullName>CAN - Direct</fullName>
+                <default>false</default>
+                <label>CAN - Direct</label>
+            </value>
+            <value>
+                <fullName>Social Job Ads</fullName>
+                <default>false</default>
+                <label>Social Job Ads</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

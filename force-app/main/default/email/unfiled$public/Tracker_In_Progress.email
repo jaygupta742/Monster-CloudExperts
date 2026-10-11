@@ -1,0 +1,22 @@
+Dear {!Tracker__c.OwnerFullName}, 
+
+Greetings from Cloud Experts Service team. 
+
+Your Tracker {!Tracker__c.Name}  has been taken up by Developer  {!Tracker__c.Developer_Name__c} ({!Tracker__c.Developer_Mobile__c}) & will be resolved ASAP.
+
+Please find Your Tracker details as below: 
+
+Tracker No: {!Tracker__c.Name} 
+Department: {!Tracker__c.Department__c} 
+Email: {!Tracker__c.Email__c} 
+Phone: {!Tracker__c.Phone__c} 
+Remarks: {!Tracker__c.Remarks__c} 
+Related Object: {!Tracker__c.Related_Object__c} 
+Status: {!Tracker__c.Status__c} 
+Resolution: {!Tracker__c.Resolution__c}
+
+Thank you for your patience.
+
+Best Regards, 
+Cloud Experts Team
+Email:crm@cloudexpertsindia.com

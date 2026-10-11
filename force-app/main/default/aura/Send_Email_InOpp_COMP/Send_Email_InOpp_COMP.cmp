@@ -1,0 +1,118 @@
+<aura:component controller="Send_Email_InOpp_CLass" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="toadd" type="String"/>
+    <aura:attribute name="ccadd" type="String"/>
+    <aura:attribute name="opp" type="OpportunityN__c"/>
+    <aura:attribute name="budget" type="String"/>
+     <aura:attribute name="authority" type="String"/>
+     <aura:attribute name="need" type="String"/>
+     <aura:attribute name="timing" type="String"/>
+     <aura:attribute name="potential" type="String"/>
+    <aura:attribute name="comp" type="String"/>
+     <aura:attribute name="mailStatus" type="boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    
+     <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 50rem;
+        }
+         .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+background-color: white;
+
+}
+    </aura:html>
+    
+    <div class="slds-page-header" role="banner" style="background-color: #1798c1;">
+      <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match" >
+       <lightning:icon iconName="standard:email" alternativeText="Email" title="Email" />&nbsp;&nbsp;&nbsp; Send Email
+      </h1>
+      <div class="slds-text-color--weak">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Quick Send Email</div>
+   </div>
+    
+    
+     <aura:if isTrue="{!v.mailStatus}">
+      <div role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal--prompt">
+         <div class="slds-modal__container">
+            <div class="slds-modal__header slds-theme--error slds-theme--alert-texture" style="background-color:#006400;">
+               <h2 class="slds-text-heading--medium" id="prompt-heading-id">Mail Status</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium">
+               <div style="text-align:center;size:20px;">
+                   <p><b><h1>Email Sent successfully !!</h1></b></p>
+                  
+                   <lightning:icon iconName='action:approval' alternativeText='approval' size='x-small' title='approval'></lightning:icon>
+               </div>
+            </div>
+            <div class="slds-modal__footer slds-theme--default">
+               <button class="slds-button slds-button--brand" onclick="{!c.closeMessage}">Close</button>
+            </div>
+         </div>
+      </div>
+      <div class="slds-backdrop slds-backdrop--open"></div>
+   </aura:if>
+    
+     <div class="slds-m-around--medium" style="margin-left:80px;margin-right:80px;">
+      <div class="slds-container--medium">
+         <div class="slds-form--stacked">
+            <div class="slds-form-element">
+                <label class="slds-form-element__label" for="CC"><b><h1>To</h1></b></label>
+               <div class="slds-form-element__control">
+                  <ui:inputEmail class="slds-input" aura:id="email"  value="{!v.toadd}" required="true" disabled="false"/>
+               </div>
+            </div>
+              
+           <div class="slds-form-element">
+                <label class="slds-form-element__label" for="CC"><b><h1>CC</h1></b></label>
+               <div class="slds-form-element__control">
+                  <ui:inputEmail class="slds-input" aura:id="email"  value="{!v.ccadd}" required="true" placeholder="abc@email.com,cde@gmail.com"/>
+               </div>
+            </div>
+             <div class="slds-form-element">
+                <label class="slds-form-element__label" for="CC"><b><h1>Other Details</h1></b></label>
+               <div class="slds-form-element__control">
+                  <ui:inputText class="slds-input" aura:id="budget"  value="{!v.budget}" required="true" placeholder="Write Budget"/>
+                   <br/>
+                  <ui:inputText class="slds-input" aura:id="need"  value="{!v.need}" required="true" placeholder="Write Need"/><br/>
+                   <ui:inputText class="slds-input" aura:id="authority"  value="{!v.authority}" required="true" placeholder="Write Authority"/><br/>
+                   <ui:inputText class="slds-input" aura:id="timing"  value="{!v.timing}" required="true" placeholder="Write Timing"/><br/>
+                   <ui:inputText class="slds-input" aura:id="potential"  value="{!v.potential}" required="true" placeholder="Write Potential"/><br/>
+                  <ui:inputText class="slds-input" aura:id="comp"  value="{!v.comp}" required="true" placeholder="Write Competitor"/><br/>
+
+                 </div>
+            </div>
+            
+             <br/>
+    
+             
+             <div style="text-align:center;">
+              <lightning:button variant="label-hidden" class="button" aura:id="button" onclick="{!c.sendMail}"  >
+                          
+                  <lightning:icon iconName='action:email' alternativeText='email' size='large' title='email'/>
+                              <span class="slds-assistive-text">Email Icon</span>
+                           </lightning:button>
+             </div>
+             
+             
+         </div>
+      </div>
+   </div>
+    
+</aura:component>

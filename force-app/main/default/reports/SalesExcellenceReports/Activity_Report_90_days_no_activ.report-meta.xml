@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.AccountID__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Account.CreditStatus__c</field>
+    </columns>
+    <columns>
+        <field>ACCTDUE_DATE</field>
+    </columns>
+    <columns>
+        <field>Activity.Email_Task_sales__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Activities done on Accounts</description>
+    <filter>
+        <criteriaItems>
+            <column>ACCOUNT_OWNER_NAME</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>alok kumar,kamal aasal,ankit tyagi,yash kumar singh,gaurav kumar,nishi singh</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Activity Report_90 days no activ</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>ACCTDUE_DATE</dateColumn>
+        <endDate>2025-09-17</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

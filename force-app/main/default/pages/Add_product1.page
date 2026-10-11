@@ -1,0 +1,158 @@
+<apex:page controller="Add_product1" sidebar="false" docType="html-5.0" action="{!abc}" lightningStylesheets="true">
+<apex:pageMessages ></apex:pageMessages>
+  <apex:stylesheet value="//cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css"/>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="//cdn.datatables.net/1.10.13/js/jquery.dataTables.min.js"></script>
+        <script src="//cdn.datatables.net/select/1.2.1/js/dataTables.select.min.js"></script>
+
+
+ <!-- <script>
+  
+  
+    function abc()
+    {
+    
+    window.alert('please wait');
+    }
+    
+    
+     $(document).ready(function() {
+    $('#example').DataTable( {
+        columnDefs:[ {
+            orderable: false,
+            className: 'select-checkbox',
+            targets:   0
+        } ],
+        select:{
+            style:    'os',
+            selector: 'td:first-child'
+        },
+        order: [[ 1, 'asc' ]]
+        
+    } );
+} );
+function filterGlobal () {
+    $('#example').DataTable().search(
+        $('#global_filter').val(),
+        $('#global_regex').prop('checked'),
+        $('#global_smart').prop('checked')
+    ).draw();
+}
+ 
+function filterColumn ( i ) {
+    $('#example').DataTable().column( i ).search(
+        $('#col'+i+'_filter').val(),
+        $('#col'+i+'_regex').prop('checked'),
+        $('#col'+i+'_smart').prop('checked')
+    ).draw();
+}
+ 
+$(document).ready(function() {
+    $('#example').DataTable();
+ 
+    $('input.global_filter').on( 'keyup click', function () {
+        filterGlobal();
+    } );
+ 
+    $('input.column_filter').on( 'keyup click', function () {
+        filterColumn( $(this).parents('tr').attr('data-column') );
+    } );
+} );       
+      
+     function renly(){
+   //alert('you are now redirecting to product creation page.... after creating product pls do search again....');
+   window.open('/apex/New_product', '_blank');
+   
+   }
+   
+   
+   
+  
+            </script>-->
+            
+            
+            <script src="//code.jquery.com/jquery-1.12.4.js"></script>
+<script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+
+<script>
+   
+   
+   $(document).ready(function() {
+    var table = $('#example').DataTable( {
+        "scrollY": "300px",
+        "paging": false
+    } );
+ 
+    $('a.toggle-vis').on( 'click', function (e) {
+        e.preventDefault();
+ 
+        // Get the column API object
+        var column = table.column( $(this).attr('data-column') );
+ 
+        // Toggle the visibility
+        column.visible( ! column.visible() );
+        
+        
+    } );
+} );
+  
+   
+
+     
+    </script>
+ 
+ 
+ 
+ 
+  <apex:form id="abc">
+  
+   
+<center><apex:commandButton value="Configure" action="{!configure}" / >
+
+<apex:commandButton value="GO To Quote" action="{!to_quote}" / >
+</center>
+
+
+   <table id="example" class="display" cellspacing="0" width="100%">
+        <thead>
+               <tr>
+          
+               <th>Select</th>
+                <th>Name</th>
+               <!--  <th>Quantity</th>-->
+             
+               
+             
+            </tr>
+
+        </thead>
+        <tfoot>
+            <tr>
+          
+                <th>Select</th>
+                <th>Name</th>
+               <!--  <th>Quantity</th>-->
+               
+                
+            </tr>
+        </tfoot>
+        <tbody>
+            
+           
+       <apex:repeat value="{!ww}" var="Con" id="TestList1"> 
+                    <tr>
+                        <td style="width:50px;"><apex:inputCheckbox value="{!Con.b}"/></td>
+                        <td>{!Con.p.Name}</td>
+                        <!-- <td><apex:inputfield value="{!Con.p.Quantity__c}" />   </td>-->
+                      
+                    </tr>
+                
+            </apex:repeat>
+        </tbody>
+    </table>
+  
+    </apex:form>
+ 
+</apex:page>

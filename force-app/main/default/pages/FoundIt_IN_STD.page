@@ -1,0 +1,1371 @@
+<!--Last Modified By : Abdul Aziz , 12/08/2023, Description : Displayed Guidelines in PDF
+Last Modified By : Abdul Aziz , 31/01.2023 , Description : Updated Sales Reps Manager Details
+Last Modified By : Abdul Aziz , Date : 06/02/2024 , Description : Updated Sales Manager Details
+Last Modified By : Abdul Aziz , Date : 04/03/2024 , Description : Added Terms and Condtions
+-->
+<apex:page renderAs="pdf" showHeader="false" standardController="QuotesN__c" extensions="FoundIt_IN_STD"  applyHtmlTag="false" applyBodyTag="false" >  
+    <head>
+        <style type="text/css" media="print">
+            @page {
+            size:100%;
+            @bottom-right {
+            
+            }
+            }
+            div.footer {
+            display:block;
+            padding: 5px;
+            position: running(footer);
+            vertical-align:bottom;
+            }
+            
+            .pagenumber:before {
+            content: counter(page);
+            }
+            .pagecount:before {
+            content: counter(pages);
+            }
+            
+        </style>
+    </head>
+    
+    <c:PDFHeaderFooterRunning value="header">
+        <div style="margin-left:-20px;">
+            <apex:image url="{!URLFOR($Resource.FoundIt_Logo)}" width="150px" />
+        </div>
+    </c:PDFHeaderFooterRunning>
+    
+    <!-- <div class ="footer"> -->
+    <div class ="footer" style="text-align:right;margin-right:55px;"> <span class="pagenumber"/></div>
+    <div style="text-align : right;margin-right:40px;font-size:13px;"> 
+        <br/>{!QuotesN.name}
+        {!YEAR(TODAY())}{!MONTH(TODAY())}{!DAY(TODAY())}
+    </div> 
+    
+    <!--</div> -->
+    
+    
+    
+    <!---------------------------------Old pdf----------------------------------------------------------------------------------------------------------------------------------->
+    <!-------------------------- content section ---------------------->
+    <!--------------------------------------------------------------------1st section----------------------------------------------->
+    <h1><center><b><div style="font-size:14px;margin-top:-20px;">SERVICE AGREEMENT</div> </b></center></h1>
+    <br/> 
+    <table border="0.8" cellspacing = "0" width = "90%" style="margin-right:30px;margin-left:35px;font-size:13px;margin-top:-20px;">
+        <tr>
+            <td style="padding:5px;">This SERVICE AGREEMENT ("Agreement") is made at <b>{!u.Location1__c}</b> on this <b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!dateto}"/></apex:outputText></b> and entered into by and between: 
+                <p align="justify">Monster.com (India) Private Limited, a company duly incorporated and registered under the Companies Act, 1956 and deemed to be existing under the Companies Act, 2013 having
+                    PAN-AACCM3695G bearing Corporate Identification Number (CIN)- U72200TG2000PTC035617 having its registered office at Block 3, 5th Floor, DLF CyberCity, Smartworks,
+                    Plot No. 129-132, APHB Colony, Gachibowli, Hyderabad, Telangana 500032, India (herein after referred to as 'Company', which expression shall, unless repugnant to the context or
+                    meaning thereof, shall mean and include its successors-in-title and legal representatives) of the First Part;  </p>
+                <p style="margin-top:-7px;"><center>AND</center></p>
+                <p align="justify" style="margin-top:1px;">
+                    
+                    {!QuotesN.Account__r.Name} organized under the Indian Laws under the provisions of_____________________
+                    (Relevant Legislation/Act/Law) bearing registration number-&nbsp;<apex:outputText value="{!IF((QuotesN.Account__r.RegistrationNumber__c==null),'__________',QuotesN.Account__r.RegistrationNumber__c)}"/> having 
+                    PAN-<apex:outputText value="{!IF((QuotesN.Account__r.PAN__c==null), '___________', QuotesN.Account__r.PAN__c)}"/> and having its registered office / principal place of business at 
+                    {!QuotesN.Posting_Street__c}, {!QuotesN.Posting_City__c}, 
+                    {!QuotesN.Posting_State__c}, {!QuotesN.Posting_Country__c}, {!QuotesN.Posting_Pin_Code__c}
+                    (hereinafter referred to as 'Client', which expression shall, unless repugnant to the context or meaning thereof, mean and include its authorized representatives , successors, transferees
+                    and permitted assigns) of the Second Part. </p>
+                
+                
+                <p style="margin-bottom:-3px;">(Company and Client are hereinafter collectively referred to as "the Parties" and severally as "Party")</p>
+                
+            </td>
+        </tr>
+    </table>
+    
+    
+    <!-------------------------------------------------------------------DETAILS OF PARTIES------------------------------------------------------------------------------------->
+    <p style="font-size:13px;margin-right:30px;margin-left:35px;margin-top:20px;margin-bottom:-0px;"><b>1. DETAILS OF PARTIES</b></p>
+    <table cellspacing = "0" width = "90%" style="margin-right:30px;margin-left:35px;font-size:14px;"> 
+        <tr>
+            <td width="50%" style="border-top:1px solid;border-bottom:1px solid;border-right:1px solid;"> 
+                <b>Date :</b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate}"/></apex:outputText> <br/><br/>
+                <b>Quote #:</b>{!QuotesN.name} <br/><br/>
+                <b>Quote Valid From </b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate}"/></apex:outputText> 
+                <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate+30}"/></apex:outputText>
+                <br/>  
+            </td>
+            
+            <td width="50%" style="border-top:1px solid;border-bottom:1px solid;">
+                <br/>
+                &nbsp;<b>Sales Manager : </b> {!u.Manager.name} <br/><br/>
+                &nbsp;<b>Email : </b> {!u.Manager.email} <br/><br/>
+                &nbsp;<b>Tel : </b>{!u.Manager.phone}<br/><br/>
+                &nbsp;<b>Fax : </b>{!u.Manager.Fax} <br/><br/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="border-top:0px solid;border-bottom:0px solid;border-right:1px solid;">
+                <b>Client:<br/></b>
+                {!QuotesN.Posting_Contact__r.name} <br/>
+                {!QuotesN.Account__r.Name}<br/>
+                {!QuotesN.Posting_Street__c}<br/>
+                {!QuotesN.Posting_City__c}   {!QuotesN.Posting_State__c}    {!QuotesN.Posting_Pin_Code__c} {!QuotesN.Posting_Country__c}<br/> 
+                <b>Email    &nbsp;: </b>{!QuotesN.Posting_Contact__r.email} <br/>
+                <b>Phone No : </b>{!QuotesN.Posting_Contact__r.Phone} <br/> 
+                <b>GST ID : </b>{!QuotesN.Account__r.GST_ID__c} <br/>  
+            </td>
+            
+            <td style="border-top:0px solid;border-bottom:0px solid;">
+                &nbsp;<b>Bill To :<br/></b>
+                &nbsp;{!QuotesN.Bill_Contact__r.name}<br/>
+                &nbsp;{!QuotesN.Bill_Contact__r.Account.Name}<br/> 
+                &nbsp;{!QuotesN.Billing_Street__c}<br/>
+                &nbsp;{!QuotesN.Billing_City__c}  
+                &nbsp;{!QuotesN.Billing_State__c} 
+                &nbsp;{!QuotesN.Billing_Pin_code__c}
+                &nbsp;{!QuotesN.Billing_Country__c} <br/> 
+                <br/> 
+                <br/> 
+                <br/> 
+            </td>
+            
+        </tr>
+        <tr>  
+            <td colspan="2" style="border-top:1px solid;border-bottom:1px solid;"></td>
+        </tr>
+    </table>  
+    
+    <!--------------------------------------------------------------SERVICE DETAILS-------------------------------------------------------------------------------------------->
+    
+    <br/> 
+    <apex:outputPanel rendered="{!if(pli.size>0,true,false)}">
+        <div style="page-break-inside:avoid;">
+            <div style="font-size:13px; margin-left:10px; margin-right:40px;margin:bottom:-10px;page-break-inside:avoid;">
+                <center>
+                    <b>2. SERVICE DETAILS :</b> The details of service that Client has agreed to take from Company are as follows (“Service”): 
+                </center>
+            </div>
+            
+            <br/>
+            <table border="1 solid" cellspacing ="0" cellpadding="3" width="90%" style="font-size:13px; margin-left:35px; margin-right:35px; page-break-inside:avoid; ">
+                <tr style="font-size:14px; color:#FFFFFF; page-break-inside:avoid;">
+                    <th bgcolor="#800080" width="6%" style="text-align:center">Item #</th>
+                    <th bgcolor="#800080" width="25%" style="text-align:left"> Product</th>
+                    <th bgcolor="#800080" width="8%" style="text-align:center">QTY</th>
+                    <th bgcolor="#800080" width="16%" style="text-align:center">Product start date</th>
+                    <th bgcolor="#800080" width="16%" style="text-align:center">Product end date</th>          
+                </tr>
+                
+                <apex:variable value="{!1}" var="Slno"/>
+                
+                <apex:repeat value="{!pli}" var="r">
+                    <tr style="font-size:14px; color:black; margin-top:25px;" width="90%">
+                        <td style="text-align:center">
+                            <div style="margin-top:1px;">
+                                <apex:outputText value="{!Floor(Slno)}"/> 
+                                <apex:variable var="Slno" value="{!Slno + 1}"/> 
+                            </div>  
+                        </td>
+                        
+                        <td style="text-align:left">
+                            <div style="margin-top:10px;">
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '1'}">
+                                    {!r.Product_Name__c}<br/>
+                                    {!r.Product__r.Product_SKU_Code__c}<br/>
+                                    Country:  {!r.Product_Country__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    Scope: {!r.Product_Geo_Scope__c }<br/>
+                                    {!r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>                           
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '2'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Country:  {!r.Product_Country__c}<br/>
+                                    {!r.Tenure_Months__c}<br/>
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '3'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    {!r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>                           
+                                    
+                                    {!r.Product__r.Name}<br/>
+                                    Add Desc: {!r.Comment__c}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '4'}">
+                                    {!r.Product_Name__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText> 
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '5'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Country: {!r.Product_Country__c}<br/>
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '6'}">
+                                    {!r.Product_Name__c}<br/>
+                                    {!r.Product__r.Product_SKU_Code__c}<br/>
+                                    Country: {!r.Product_Country__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    {!r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>                           
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '7'}">
+                                    {!r.Product_Name__c}<br/>
+                                    {!r.Product__r.Product_SKU_Code__c}<br/>
+                                    {!r.Product__r.Name}<br/>
+                                    Add Desc: {!r.Comment__c}
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '8'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c!= 'S1' && r.Product_Geo_Scope__c!= 'S2')}">
+                                        Scope: {!r.Product_Geo_Scope__c}<br/>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c== 'S1' || r.Product_Geo_Scope__c== 'S2')}">
+                                        Scope:   {!r.Product__r.Location__c}<br/>
+                                    </apex:outputPanel>
+                                    {!r.Product__r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>                           
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                
+                            </div>
+                            <br/>
+                        </td>
+                        <td style="text-align:center">
+                            {!r.Quantity_Unit__c}
+                            
+                        </td>
+                        <td style="text-align:center">
+                            {!DAY(r.Start_Date__c)}/{!MONTH(r.Start_Date__c)}/{!YEAR(r.Start_Date__c)}
+                        </td>
+                        
+                        <td style="text-align:center">
+                            {!DAY(r.End_Date__c)}/{!MONTH(r.End_Date__c)}/{!YEAR(r.End_Date__c)}
+                        </td>
+                        
+                    </tr>
+                </apex:repeat> 
+                
+            </table>
+        </div>
+    </apex:outputPanel>
+    
+    <apex:outputPanel rendered="{!showAccessories == 'true'}">
+        <div style="page-break-inside:avoid;">
+            <div style="font-size:13px; page-break-inside:avoid; padding: 10px 35px;">
+                <b>SERVICES</b> 
+                
+                <table border="1 solid" cellspacing ="0" cellpadding="3" width="100%" style="page-break-inside:avoid; padding-top: 10px;">
+                    <thead>
+                        <tr style="font-size:14px; color:#FFFFFF;page-break-inside:avoid;">
+                            <th bgcolor="#800080" width="8%" style="text-align:center">Item #</th>
+                            <th bgcolor="#800080" width="26%" style="text-align:left">Services</th>
+                            <th bgcolor="#800080" width="15%" style="text-align:center">Country</th>
+                            <th bgcolor="#800080" width="12%" style="text-align:center">Quantity</th>
+                            <th bgcolor="#800080" width="15%" style="text-align:center">Quota</th>
+                            <th bgcolor="#800080" width="12%" style="text-align:center">Start Date</th>
+                            <th bgcolor="#800080" width="12%" style="text-align:center">End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:variable value="{!1}" var="slno"></apex:variable>
+                        <apex:repeat value="{!wraplist}" var="item">
+                            <tr>
+                                <td style="text-align:center">
+                                    <div style="margin-top:1px;">
+                                        {!item.srno}
+                                    </div>  
+                                    
+                                </td>
+                                
+                                <td style="text-align:left">{!item.service.Top_Ups__r.name}</td>
+                                <td style="text-align:center">{!item.service.Product_Country__c}</td>
+                                <td style="text-align:center">{!item.service.Quantity_Unit__c}</td>
+                                <td style="text-align:center">{!item.service.Top_Ups__r.Inventory_Quota_Tenure__c}</td>
+                                <td style="text-align:center">
+                                    <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                        <apex:param value="{!item.service.Start_Date__c}" /> 
+                                    </apex:outputText>
+                                </td>
+                                <td style="text-align:center">
+                                    <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                        <apex:param value="{!item.service.End_Date__c}" /> 
+                                    </apex:outputText>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </apex:outputPanel>
+    
+    <div align="right" style ="page-break-inside:avoid; font-size:13px; margin-right:-37px; margin-left:35px;" >
+        <table width="90%" >
+            <tr >
+                <td align="right">Value of Services : </td>
+                <td>
+                    {!QuotesN.CurrencyISOCode} {!Quote_Value}
+                </td>
+            </tr>
+            <tr >
+                <td align="right">
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'United Arab Emirates' ||QuotesN.Selling_Country__c=='Philippines'}"
+                                     value="Add : VAT@{!QuotesN.Tax__c} :"
+                                     />
+                    
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Singapore' || QuotesN.Selling_Country__c == 'India' }"
+                                     value="Add : GST Levy@{!QuotesN.Tax__c}% :"
+                                     />
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}"
+                                     value="Add : SST Levy@{!QuotesN.Tax__c}% :"
+                                     /> 
+                </td>
+                
+                <td >
+                    <!--<apex:outputField value="{!QuotesN.Tax_Amount__c}"/>-->
+                    {!QuotesN.CurrencyISOCode} {!Tax_Amount}
+                </td>
+                
+                
+            </tr>
+            <tr >
+                <td align="right" style="text-align:right;">Total Invoice value (including Tax) : </td>
+                <td>
+                   <!-- <apex:outputField value="{!QuotesN.Net_Total__c}"/> -->
+                     {!QuotesN.CurrencyISOCode} {!Net_Total}
+                </td>
+                
+            </tr> 
+        </table>
+    </div>
+    
+    
+    <p  style="margin-right:30px;margin-left:35px;font-size:13px;">
+        It is the responsibility of the Client to provide valid TAX ID relevant for credit of Goods &amp; Services Tax under applicable acts and rules thereof.</p> 
+    
+    <!------------------------------3rd item------------------------------------------------------------------------------------------------------> 
+    
+    <apex:outputPanel rendered="{!if(aap.size>0,true,false)}"> 
+        <div style="page-break-inside:avoid;">
+            <div style="margin-right:30px;margin-left:35px;font-size:13px;"><p>
+                
+                <b>3. PAYMENT TERMS &amp; INVOICE DELIVERY</b>
+                
+                </p>
+                <P>
+                    Client has agreed to pay the total invoice value to the Company as per the following payment term (s) :
+                </P>
+            </div> 
+            <table border="0.8px" cellspacing="0" style="margin-right:30px;margin-left:35px;font-size:14px;page-break-inside:avoid;" width="70%">
+                <tr>
+                    <td style="text-align:center">Payment Due Date </td>
+                    <td style="text-align:center">Payment Amount </td>
+                    <td style="text-align:center">TDS Amount </td>
+                </tr>
+                <apex:repeat value="{!aap}" var="ab">
+                    <tr>
+                        <td style="text-align:center"> {!DAY(ab.Due_Date__c)}/{!Month(ab.Due_Date__c)}/{!Year(ab.Due_Date__c)}   </td>
+                        <td style="text-align:center">
+                            <apex:outputField value="{!ab.Payment_Amount__c}"/>
+                        </td>
+                        <td style="text-align:center"> 
+                            <apex:outputField value="{!ab.TDS_Payment_Amount__c}"/>
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </table>
+        </div>
+    </apex:outputPanel> 
+    
+    <div style=" font-size:14px;margin-left:35px;margin-right:30px;"><p>(All payments to be made in favour of <b>“Monster.com India Private Limited”</b>)</p></div>
+    
+    
+    <p align="justify"  style="font-size:13px;margin-right:30px;margin-left:35px;">
+        The Company will raise the invoice upon execution of the Agreement by Client. Client shall pay the total invoice value to the Company on or before the payment due date as per the agreed
+        payment term(s). In the event any payment is not made within the due date, the Company may, without prejudice to its other rights under this Agreement or in law, have the right to
+        deactivate Client's account and / or terminate this Agreement without any liability to Client. Client is bound to make the full payment for the Term, irrespective of whether they use the
+        service(s) or not. Client shall also be liable to pay the legal costs which may be incurred by the Company towards recovery of any of the dues from Client.
+        
+    </p>
+    
+    <p align="justify"  style="font-size:13px;margin-right:30px;margin-left:35px;">
+        In general, the Company will generate and raise the invoice for full value of the Agreement. Unless the Client credit status is maintained as “Prepaid”, the invoices will be generated for partial
+        value as per the agreed payment terms or on the basis of realization of payment and services will be provided proportionately. In case there is a specific request from the Client to raise
+        invoice for partial value to meet the requirement of taxation laws, the invoices will be raised accordingly. Payment shall be subject to deduction of tax at source. Client shall provide a tax
+        deduction certificate to the Company.
+    </p>
+    
+    <!------------------------------------------------------5 th item--------------------------------------------<p style="font-size:13px;margin-right:30px;margin-left:30px;"------>
+    <p align="justify" style="font-size:13px;margin-right:30px;margin-left:50px;"><b>4.&nbsp;&nbsp;&nbsp;DISPUTE RESOLUTION, ARBITRATION &amp; LAW</b></p>
+    <div style="margin-left: 1.5em;">
+        <p align="justify" style="font-size:13px;margin-right:40px;margin-left:45px;">
+            Any dispute or differences which may arise between the Parties concerning this Agreement shall be amicably tried to be settled between the Parties failing which the disputed
+            matter shall be referred to sole arbitrator appointed by the Company. Arbitration proceedings shall be held at Hyderabad, India. The proceedings of arbitration shall be in English
+            language. The arbitrator’s award shall be final and binding on the Parties. Indian law shall apply to this Agreement, and the Parties submit to the exclusive jurisdiction of Hyderabad
+            courts, India.
+            
+        </p>
+    </div>
+    <!-----------------------------------------16th item------------------------------------------>
+    <p style="font-size:13px;margin-right:10px;margin-left:50px;"><b>5.&nbsp;&nbsp;&nbsp;COMPLETE AGREEMENT </b></p>
+    
+    <p align="justify" style="font-size:13px;margin-right:30px;margin-left:70px;">
+        The Agreement including these terms constitutes the entire understanding between the Company &amp; Client with respect to the subject matter hereof and supersedes any previous
+        oral or written arrangements or understandings relating thereto and governs use of the Company website or websites in which services are subscribed under the Agreement and
+        may not be amended, terminated or waived unless agreed in writing by the Parties, and shall not be assigned, in whole or in part, directly or indirectly, by Client except by operation
+        law and only comes into existence when signed by the Parties. Any terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid
+        terms of the Agreement. The Agreement shall not be amended without the affirmative written consent of Parties in writing.    
+    </p>
+    <p style="font-size:12px;margin-right:30px;margin-left:35px;">IN WITNESS WHEREOF the Parties hereto have caused this Agreement to be executed by their authorized representatives on the day, date and year mentioned hereinabove.
+        
+    </p>
+    
+    <!-- --------------------------------------------- Guideline Start Here------------------------------------------------------------ -->    
+    <apex:outputPanel rendered="{!showGuideLine}">
+        <div style="margin-left:35px; margin-right:30px; font-color:black;"> 
+            <apex:outputField value="{!guidelines.GuideLine_Details__c}"/>
+        </div>
+    </apex:outputPanel>
+    
+    <apex:outputPanel rendered="{!showguidelinetick}">
+        <div style="margin-left:35px; margin-right:30px; font-color:black;"> 
+            <apex:outputField value="{!guidelinestick.GuideLine_Details__c}"/>
+        </div>
+    </apex:outputPanel>
+    <!-- ------------------------------------------------- Guideline End Here ----------------------------------------------------------------- -->
+    
+    <div style="page-break-inside:avoid">
+        <div style="font-size:10px; margin-left:35px; margin-right:30px; font-color:black;">    
+            <center>
+                <b>ALL FIELDS BELOW ARE REQUIRED TO BE COMPLETED BY CLIENT IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR</b>
+            </center>
+        </div>
+        <br/>
+        <div style=" font-size:11.5px;margin-left:35px;margin-right:30px;font-color:black;page">
+            1. Authorised Signature : 
+            <div style="margin:-15px 0px 0px 450px;">2. Signing Date : ___/___/_____ </div>
+            <div style="margin:-1px 0px 0px 530px;">  (dd/mm/yyyy) </div>
+            <br/>
+            <p align="right"> <div style="margin:-8px 0px 0px 450px;"> Total Price :     <b>{!QuotesN.currencyisocode} {!QuotesN.Net_Total__c} </b></div> </p> 
+        
+        <div style="margin:-10px 0px 0px 0px;">3. Printed Name : {!QuotesN.Contact__r.name}</div> <br/><br/>
+        
+        <div style="margin:-10px 0px 0px 0px;">4. Job Title : {!QuotesN.Contact__r.Title}  </div>    <br/><br/>
+        
+        <div style="margin:-10px 0px 0px 0px;">5. CLIENT Name (as registered, if applicable) : </div><br/><br/>  
+        
+        <div style="margin:-10px 0px 0px 0px;">6. Registration Number (if applicable) :  {!QuotesN.Account__r.RegistrationNumber__c}</div>
+        
+        <div style="margin:-10px 0px 0px 400px">7. TAN Number (if applicable) : {!QuotesN.Account__r.TAN__c} </div>   <br/><br/>
+        
+        <div style="margin:-10px 0px 0px 400px">8. PAN of the Client : {!QuotesN.Account__r.PAN__c}  </div> <br/> 
+        
+        <!--<div style="margin:-15px 0px 0px 420px">9. GST of the Purchaser : {!QuotesN.Account__r.GST_ID__c}  </div> <br/>-->
+        
+        <div style="margin:-20px 0px 0px 0px;">9. Name of the Client as per PAN : {!QuotesN.Account__r.Name_as_per_PAN__c}</div> <br/><br/>
+        <div style="margin:-10px 0px 0px 0px;">10. GST No. of Client : {!QuotesN.Account__r.GST_ID__c}</div> <br/><br/>
+        
+        <div style="margin:-10px 0px 0px 0px;">11. Agreement Start Date : <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate}"/></apex:outputText> </div>
+        
+        
+        <div style="margin:-13px 0px 0px 280px;"> The ‘Agreement Start Date’ will be the date nominated by the Client. If left blank,
+            the earliest product start date will be the nominated date.
+            
+        </div> <br/><Br/>
+        
+        12. Purchase Order Number : <div style="margin:-10px 0px 0px 250px;">If this field is left blank the invoice will be issued without a PO number.</div>
+    </div>
+</div>
+<!-------------------------------------------Reservered for the monster---------------------------------------------> 
+<br/>
+
+<div style="page-break-inside:avoid;"> 
+    <div style=" font-size:12px;margin-left:35px;margin-right:30px;margin: 15px 0px 5px 0px;border-top:2px solid black;border-bottom:2px solid black;background-color: #ebebeb;">
+        <div style="margin-top:5px;text-align:center;margin-bottom:5px;"><b> <center>Reserved for Monster.com (India) Private Limited</center> </b></div><br/>
+        
+        <div style="margin:-5px 0px 0px 35px;">Manager Name: <!--{!QuotesN.Account__r.PrimarySalesManager__c} -->{!u.Manager.name} </div>
+        
+        
+        <div style="margin:-10px 0px 0px 450px;">Manager Designation: {!u.Manager.Title}<!----{!apttus_proposal_proposal__c.Sales_Manager_Designation__c}--> </div><br/><br/>
+        <br/>
+        <div style="margin:-20px 0px 0px 35px;"> Company Name: Monster.com (India) Private Limited; PAN : AACCM3695G; CIN : U72200TG2000PTC035617<br/></div>
+        
+        <br/>
+        
+        <div style="margin:-5px 0px 0px 35px;"> Regd. Office :Block 3, 5th Floor, DLF CyberCity, Smartworks, Plot No. 129-132, APHB Colony, Gachibowli, Hyderabad, Telangana 500032, India</div> <br/><br/>
+        
+        
+        <div style="margin:-5px 0px 0px 35px;">City : Hyderabad </div>
+        
+        <div style="margin:-15px 0px 0px 300px;"> Country : India</div>
+        
+        <div style="margin:-16px 0px 0px 510px;"> PIN Code : 500081</div>
+        
+        <br/><br/>
+        
+        <div style="margin:-5px 0px 0px 35px;">Company Name: Monster.com India Private Limited</div><br/>
+        <!-- <apex:outputtext rendered="{!IF(QuotesN.Tax_Percentage__c != 0.00,true,false)}"> -->
+        <div style="margin:-5px 0px 0px 35px;">Manager Branch Address :  {!u.Manager.Street} {!u.Manager.City} {!u.Manager.State} {!u.Manager.Country} {!u.Manager.PostalCode}</div><br/><br/>
+        <div style="margin:-5px 0px 0px 35px;">Manager Email : {!u.Manager.email}<!----{!apttus_proposal_proposal__c.Sales_Manager_Email__c}------></div>
+        
+        
+        <div style="margin:-18px 0px 0px 510px;">Manager Phone : {!u.Manager.phone}<!-----{!apttus_proposal_proposal__c.Sales_Manager_Phone__c}----></div><br/><br/>
+        <div style="margin:-10px 0px 0px 510px;">Signing Date : _____/_____/________ </div> <br/>
+        
+        <div style="margin:-15px 0px 0px 600px;"> (dd/mm/yyyy) </div>
+        
+        <div style="margin:-25px 0px 25px 35px;"> Signature : _____________________________________________________</div>
+    </div> </div>
+<br/>
+
+<!-----------------------------------------------------sales rep------------------------------------------------------------------>
+
+
+<div style=" font-size:12px;margin-left:35px;margin-right:30px;font-color:black; margin: -10px 0px 0px 0px;">    
+    <center><b>
+        
+        <!-----Sales Rep :{!u.name}  Email:{!u.email}  Phone:{!u.Phone}---->
+        <i>
+            Sales Rep:{!u.name} &nbsp;&nbsp;&nbsp;&nbsp;     Email :{!u.email}   &nbsp;&nbsp;&nbsp;&nbsp;  Phone:{!u.Phone}
+            
+        </i>
+        </b></center></div> 
+
+<div style=" font-size:13px;margin-left:35px;margin-right:30px;font-color:black;">
+    <p align="Justify">
+        By signing this Agreement Client is agreeing to purchase the products and services listed above subject to the attached standard Services “TERMS AND CONDITIONS” and product terms, a
+        copy of which was sent to the Client with this Agreement. Please return this Agreement to the Company sales representative.  </p><br/><br/>
+    
+    
+    <div style=" font-size:13px;margin-left:35px;margin-right:30px;margin: -25px 0px 0px 0px;"> For and on behalf Company within named </div><br/>
+    
+    
+    <!--------------------------------------------------------------------------------extra info--------------------------------------------------------------->
+    
+    
+    <div style="margin:-25px 0px 0px 400px;">    For and on behalf of Client within named  </div><br/>
+    
+    <b>Monster.com (India) Private Limited.</b><br/> 
+    <div style="margin:-15px 0px 0px 400px;"> <b> {!QuotesN.Posting_Contact__r.Account.name} </b> </div><br/><br/> 
+    <!--- <div style="margin:-16px 0px 0px 600px;"> PIN Code: 189702</div>  ----> 
+    Authorised Signatory 
+    <div style="margin:-18px 0px 0px 400px;"> Authorised Signatory </div> <br/> 
+    <div style="margin:-16px 0px 0px 400px;">Name &amp;Designation  </div> <br/> 
+    <div style="margin:-16px 0px 0px 400px;">Company Seal  </div> <br/>  
+    
+    <!-------------------------------------------------------------------------------------------------terms and conditions -------------------------------------------------> 
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:35px; margin-right:30px;">
+        <center><b>TERMS AND CONDITIONS </b></center> 
+    </p> 
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;">
+        Training on the Company products and services, wherever applicable, will be scheduled by the Company's relationship contact. On receipt of Username and Password from the Company’s
+        Relationship Contact, Client can use the subscribed Service onto the concerned website of the Company to which the Service relates. 
+    </p> 
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        If Client (including any of Client employees) are found to share passwords with any third party, the Company may revoke all login &amp; passwords deactivate Client’s account and no refund will
+        be given. Client agrees not to resell any of the products and services subscribed by Client from the Company including but not limited to any job postings or any database access to any third
+        party. Amounts paid for Services are non-refundable. The services may be deactivated if the payment is not made by the due date(s) mentioned in the agreement / invoice. Client shall also
+        be liable to pay to the Company for dishonor of each payment instruments, which includes either by cheque, ECS electronic payment, or any other method of payment instructions by Client. 
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Client represents and warrants that Client use of foundit website (Site) data shall be lawful and shall comply with all the applicable laws, including but not limited to the laws relating to contracts,
+        labour and employment laws, data privacy laws, cyber laws and law relating to intellectual property. Client further represents and warrants that all and any materials or information provided to
+        the Company to be uploaded to any Site or otherwise used by the Company in the provision of the Service, complies with all applicable laws, and its use in connection with the Service does not
+        infringe the rights of any third parties. Client shall provide the relevant accurate documents for verification / validation at Company’s end.
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        The Company reserves the right to deactivate the Client’s account and / or initiate appropriate action under any applicable law including Information Technology Act, Data protection Act in the
+        event of any deficiency and/or any acts and omission with the intent to forgery or use of Company’s data other than recruitment purpose. 
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        The contents of each foundit website “Site” (including without limitation all job postings and all resumes), and all elements, which are a part of the foregoing, and all intellectual and other
+        proprietary rights therein, are the property of the Company. Notwithstanding the above, any job postings placed on any Site by the Client, and all elements which are a part of the foregoing,
+        and all intellectual and other proprietary rights therein, are and shall at all times remain Client’s property. 
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Client consents to the Company for replicating its job postings into Client’s Account in the foundit website. Client agrees and accepts that job posting to be replicated on foundit website(s) shall
+        be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading
+        and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Client agrees to use only its names,
+        logos or trademarks.
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        The Company may not replicate any job posting of Client and/or delete the job postings from the foundit website which does not comply with applicable laws, including but not limited to laws
+        relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property.
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        The advertisements for competitors of the Company or post jobs or other content that contains links to any site competitive with the Company shall not qualify for replication. Any such replicated
+        postings will be immediately deleted / removed without notice. The Company reserves the right to remove any job posting or content from foundit website, which in the reasonable exercise of
+        The Company’s discretion, does not comply with the above Terms, or if any content is posted that the Company believes is not in accordance with the Terms of Use &amp; Privacy of the foundit
+        website and/or applicable laws and regulations. The Company shall not be liable for any conflict, in the event of replication of the Job Postings of Client’s competitor on the foundit site or vice
+        versa or any disagreement between them in this connection. The replication of Client’s job posting will be only during the continuance of Service Agreement with The Company. Client does not
+        have any right to get its job Postings replicated on foundit website. The Company shall in its sole discretion may decide whether to assist the Client in replication or not without giving any reason
+        thereof.
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Each of the Parties shall at all times use its best endeavors to keep confidential (and to ensure that its officers, directors, employees or representatives shall keep confidential) each other’s
+        sensitive business or proprietary information, whether marked or otherwise indicated to be confidential or not, which it may acquire, have access to or obtain, whether directly or indirectly, in
+        relation to this Agreement or in relation to their respective business or affairs of the other Party (or any of its respective affiliates) and shall not use or disclose such information except with the
+        approval in writing of the other party or in accordance with the order of a court of competent jurisdiction or as contemplated under this Agreement.
+        
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Each Party agrees to comply all the applicable Data Protection and Privacy laws and shall adhere to general principles of Personal Data processing; ensure the processing, use, transfer of the
+        Personal Data in accordance with the applicable Data Protection and Privacy laws; adopt appropriate technical and security measures to protect the Personal Data from any potential misuse /
+        unauthorized disclosures and will indemnify and keep indemnified and defend at its own expense the other Party (Indemnified Party) against all costs, third party claims, direct damages, or
+        proceedings which other Party may incur as a result of a breach solely by the Indemnifying Party’s of its obligations within the ambit of this Agreement.
+        
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Client shall use the foundit website data only for the recruitment purposes and not otherwise. Client shall not use foundit website data for any other purpose except as permitted under this
+        Agreement. Client shall not use foundit website data for its storage purpose and shall not use it for making a database of its own by using it. Breach of this obligation will result in immediate
+        suspension of the Agreement by the Company without any liability towards Client besides availing appropriate remedy under the process of law including but not limited to injunctive relief.
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Each Party represents and warrants that it will not in connection with its obligations under this Agreement give, offer, promise to offer, or authorize the offer, directly or indirectly (proxy bribing),
+        anything of value (such as money, shares, goods or service, gifts or entertainment) to government officials, government customers, potential government customers or foreign government
+        officials including officials of any public international organizations or officials of any political party either in India or abroad (“Officials” ) with an intent to influence any act or decision in his or
+        her official capacity, induce the Official to do or omit to do any act in violation of his or her lawful duty to obtain any improper advantage, or induce to use such Official’s influence improperly to
+        affect or influence an act or decision. Each Party understands and acknowledges that any non-adherence to the warranty as stated hereinabove will violate the provisions of the U.S. Foreign
+        Corrupt Practices Act, 1977, U.K. Bribery Act 2010 and the India Prevention of Corruption Act, 1988 (“Anti- bribery Laws”). Each Party shall indemnify, save and hold harmless the other Party,
+        its subsidiaries and affiliates, officers, directors and employees, against any and all losses, penalties and expense including court costs and reasonable attorney fees resulting from any breach
+        of this warranty by it. The Company shall have the right to terminate this Agreement with immediate effect, without any liability whatsoever, if Client is in breach of this warranty.
+    </p>
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+         The Company's user's/job seeker's database, which also contains publicly available information of the users educational qualification, skills, employment history and relevant information. 
+        The Company provides to the Client the publicly available information of the users which is obtained from third-party data aggregators /service providers.
+        The Company has tech enabled unique search features on foundit website to search and find relevant candidates on foundit website as required by the Client.
+        Client may use these features to search the relevant candidates.
+    </p>
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        The Company services and all data and information obtained and provided the services are provided on an "as is," "as available" basis. To the fullest extent permissible under applicable law,
+        Company makes no warranty or guarantee, express or implied, relating to the services or Client's use of the services, or any data or information obtained via the services or provided under
+        this agreement and/or accuracy thereof, including but not limited to any implied warranties of merchantability, satisfactory quality, non-infringement, and/or fitness for a particular purpose.
+    </p>
+    <p style="font-size:13px;text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Company does not have any obligation to monitor the information included in the Product and it is not responsible for the availability,
+        accuracy, applicability, or legality of any information, data, or domain does not represent or warrant that the information provided under the Product shall be error-free or that
+        any errors will be corrected. Company shall not be liable for any damages or loss incurred to the Client, or any other third party as a result or in connection with the use of the Product
+        or in connection with use of or reliance on any information derived from the Product.
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Notwithstanding anything to the contrary contained herein, neither party will be liable to the other party (nor to any person claiming rights derived from the other party's rights) for incidental,
+        indirect, consequential, special, punitive or exemplary damages of any kind including lost revenues or profits, loss of business arising out of this agreement (including without limitation as a
+        result of any breach of any warranty, or other term of this agreement), regardless of whether the party liable or allegedly liable was advised, had other reason to know, or in fact knew of the
+        possibility thereof. In no event shall the Company’s liability under this Agreement exceed one (1) month Service Fee received by it from the Client for the immediately preceding month from
+        when such liability arose.
+        
+    </p> 
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        The defaulting Party agrees to keep the non-defaulting Party indemnified against all suits and proceedings filed against, and actual costs, charges, expenses, losses or damages including
+        reasonable attorney fees incurred, suffered or sustained by the non-defaulting Party by reason of breach of any third party intellectual property rights by the defaulting Party. 
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;">
+        In case of conflict of any term(s) of this Agreement with any subsequent Purchase Order / written document executed post the signing of this Agreement in relation to this Agreement, the
+        term(s) of this Agreement shall prevail. 
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        If Client breaches any provision of the Agreement, The Company may (i) discontinue the service and/or (ii) pursue all other available remedies to enforce the Agreement and obtain payment
+        due thereof. Notwithstanding anything to the contrary contained herein, Client’s use of the The Company website and Career Services is subject to the Terms of Use
+        <b style="color:blue;"> https://www.foundit.in/info/terms-of-use </b> &amp; Privacy Policy <b style="color:blue;">https://www.foundit.in/info/privacy</b> and/or available from such other applicable foundit website's homepage in which the Service
+        subscribed. By Client’s execution of the Agreement, the Client agree to abide by such Terms of Use &amp; Privacy Policy of applicable foundit website (s), as they may be amended from time to
+        time and these Terms and Conditions.
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        Any Extension/ Up-gradation / renewal of the Services of the Client after the date of expiry of the Agreement shall be given effect only after executing a fresh / renewal Agreement between
+        the Company and Client. The Company will accordingly raise a fresh Invoice for a price as agreed by the Company and Client for the aforesaid extension/up-gradation/renewal period. 
+    </p>
+    
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;page-break-inside:avoid;">
+        The Agreement including these terms constitutes the entire understanding between Company &amp; Client with respect to the subject matter hereof and supersedes any previous oral or written
+        arrangements or understandings relating thereto and governs use of the Company website or websites in which services are subscribed under the Agreement and may not be amended,
+        terminated or waived unless agreed in writing by the Parties, and shall not be assigned, in whole or in part, directly or indirectly, by Client except by operation law and only comes into
+        existence when signed by the Parties. Any terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid terms of the Agreement. The
+        Agreement shall not be amended without the affirmative written consent of Parties in writing.
+    </p>
+    <p style="font-size:13px; text-align:justify; font-family:Times New Roman; margin-left:0px; margin-right:0px;">
+        The Company has devised a dedicated nodal email ID i.e. <b style="color:blue">cr@foundit.in</b> for its Clients. Client can write to the Company at the said email for any information, support and concerns
+    </p> 
+</div> 
+<br/>
+
+    <!-- ========================= DATA SHARING AGREEMENT START ========================= -->
+    
+    <div style="page-break-before:always; font-size:13px;margin-left:30px;margin-right:30px;font-color:black;">
+        
+        <br/>
+        
+        <p style="font-size:13px;text-align:center;font-family:Times New Roman;">
+            <b>DATA SHARING AGREEMENT</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            This Independent Data Fiduciary Data Sharing Agreement (“Agreement”) is entered
+            into on this
+            <apex:outputText value="{0,date, dd'/'MM'/'yyyy}">
+                <apex:param value="{!TODAY()}"/>
+            </apex:outputText>
+            (“Effective Date”)
+        </p>
+        
+        <p style="font-size:13px;text-align:center;font-family:Times New Roman;">
+            <b>BY AND BETWEEN</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            Monster.com (India) Private Limited, a company duly incorporated under the
+            provisions of Companies Act, 1956 and having its registered office at Block 3,
+            5th Floor, DLF CyberCity, Smartworks, Plot No. 129-132, APHB Colony,
+            Gachibowli, Hyderabad, Telangana 500032, India (hereinafter referred to as
+            “Company”);
+        </p>
+        
+        <p style="font-size:13px;text-align:center;font-family:Times New Roman;">
+            <b>AND</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            {!QuotesN.Account__r.Name}, a company/LLP/partnership firm incorporated/organized
+            under the laws of India, bearing CIN/registration number
+            {!QuotesN.Account__r.RegistrationNumber__c}, and having its registered office at
+            {!QuotesN.Posting_Street__c}, {!QuotesN.Posting_City__c},
+            {!QuotesN.Posting_State__c}, {!QuotesN.Posting_Country__c},
+            {!QuotesN.Posting_Pin_Code__c}, acting through its authorized signatory who is
+            duly empowered to execute this Agreement on its behalf (hereinafter referred to
+            as “Client”).
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            Company and Client are individually referred to as “Party” and collectively as
+            the “Parties”.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            WHEREAS Company and Client each independently determine the purpose and means
+            of processing certain Personal Data in the course of their respective business
+            relationship, being the jobportal databases access provided by the Company to
+            the Client under a Service Agreement;
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            AND WHEREAS, in connection with such relationship, for the purpose(s) set out
+            in Clause 1.1, each Party has agreed to process such Personal Data as an
+            independent Data Fiduciary in its own right and not as a joint controller,
+            processor, or agent of the other Party;
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            AND WHEREAS, each Party has independently assessed its obligations under the
+            DPDP Act and the rules made thereunder in respect of the Personal Data it
+            processes, and the Parties wish to record their respective responsibilities
+            and safeguards in relation to such sharing by way of this Agreement;
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            NOW, THEREFORE, in consideration of the mutual covenants contained in this
+            Agreement, the Parties agree as follows:
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>1. PURPOSE</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>1.1</b> The Parties intend to share and process Personal Data for the
+            following purpose(s): the databases access service of the Company through its
+            foundit jobportal(s) to be provided to Client for recruitment and talent
+            solutions.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>1.2</b> The Parties acknowledge that each Party acts as an independent Data
+            Fiduciary under the Digital Personal Data Protection Act, 2023 (“DPDP Act”).
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>1.3</b> Each Party shall independently determine the purpose and means of
+            processing Personal Data.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>1.4</b> Each Party represents and warrants that it has the legal authority
+            under applicable law to disclose or receive the Personal Data contemplated
+            under this Agreement.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>2. DEFINITIONS</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            For the purpose of this Agreement:
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>2.1 “Personal Data”</b><br/>
+            Any data about an individual who is identifiable by or in relation to such data.
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>2.2 “Data Principal”</b><br/>
+            Means the individual to whom the Personal Data relates.
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>2.3 “Processing”</b><br/>
+            Means any operation performed on Personal Data including collection, storage,
+            use, sharing, disclosure, transfer, or erasure.
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>2.4 “Personal Data Breach”</b><br/>
+            Means any unauthorized processing, accidental disclosure, acquisition, sharing,
+            use, alteration, destruction, or loss of access to Personal Data.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>2.5 “Data Fiduciary/Data Provider”</b> means a person who alone or in
+            conjunction with other persons determines the purpose and means of processing
+            Personal Data, as defined under the applicable Data Protection Laws, including
+            the Digital Personal Data Protection Act, 2023. Each Party shall be an
+            independent Data Fiduciary with respect to the Personal Data it processes under
+            this Agreement and shall be solely responsible for its own compliance with the
+            applicable Data Protection Laws.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            Terms not defined in this Agreement shall have the meanings assigned to them
+            under the applicable data protection laws, including the DPDP Act, 2023.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>3. STATUS OF THE PARTIES</b>
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>3.1</b> The Parties acknowledge and agree that:
+        </p>
+        
+        <div style="font-size:13px;font-family:Times New Roman;margin-left:25px;">
+            a. Each Party acts as an independent Data Fiduciary;<br/>
+            b. Neither Party acts as a Data Processor for the other;<br/>
+            c. Each Party shall independently comply with its obligations under the applicable data protection laws, including the DPDP Act;<br/>
+            d. Each Party shall independently determine and document its grounds for processing Personal Data in accordance with applicable data protection law;<br/>
+            e. Nothing in this Agreement shall be construed to create a joint controllership, partnership, agency, or joint venture between the Parties, and neither Party shall hold itself out as having authority to bind the other Party save as expressly provided in this Agreement.
+        </div>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>4. PERSONAL DATA PROCESSING</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>4.1</b> The categories of Personal Data that may be processed include:
+        </p>
+        
+        <table border="0.8px" cellspacing="0" width="100%" style="font-size:13px;page-break-inside:avoid;">
+            <tr>
+                <td style="text-align:center;"><b>Party</b></td>
+                <td style="text-align:center;"><b>Categories of Personal Data Processed</b></td>
+            </tr>
+            <tr>
+                <td>Company</td>
+                <td>Candidates resume, employee’s details like email and business contacts</td>
+            </tr>
+            <tr>
+                <td>Client</td>
+                <td>Candidate details and other screening &amp; employment related details</td>
+            </tr>
+        </table>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>4.2</b> The categories of Data Principals include employees.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>4.3</b> Each Party shall ensure that Personal Data shared is adequate,
+            relevant, and limited to what is necessary for the specified purposes.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>4.4</b> Each Party shall take reasonable steps to ensure that the Personal
+            Data shared under this Agreement is accurate and where necessary kept up to date.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>5. PURPOSE LIMITATION</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>5.1</b> Each Party shall process Personal Data solely for the purpose
+            specified in this Agreement or as otherwise permitted under applicable law.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>5.2</b> Neither Party shall process Personal Data in a manner inconsistent
+            with the privacy notice provided to the Data Principal or applicable data
+            protection law.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>6. PRIVACY NOTICE AND LEGAL BASIS</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>6.1</b> Each Party shall independently comply with applicable transparency
+            and notice obligations, including maintaining an up-to-date privacy notice
+            describing its processing activities.
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>6.2</b> Where consent is required under the DPDP Act, the relevant Party shall:
+        </p>
+        
+        <div style="font-size:13px;font-family:Times New Roman;margin-left:25px;">
+            • Obtain valid consent from the Data Principal;<br/>
+            • Maintain records of consent;<br/>
+            • Provide a mechanism for withdrawal of consent;<br/>
+            • Ensure that withdrawal of consent does not affect the lawfulness of processing carried out prior to such withdrawal, and cease processing the relevant Personal Data for the withdrawn purpose within a reasonable time thereafter, except to the extent processing or retention is otherwise permitted or required by applicable law.
+        </div>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>6.3</b> Where processing is based on certain legitimate uses under the DPDP
+            Act, each Party shall ensure independent compliance with applicable legal
+            requirements.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>7. DATA SECURITY</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>7.1</b> Each Party shall implement appropriate technical and organizational
+            measures to safeguard Personal Data.
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>7.2</b> Such safeguards may include, at a minimum:
+        </p>
+        
+        <div style="font-size:13px;font-family:Times New Roman;margin-left:25px;">
+            (a) Access controls;<br/>
+            (b) Encryption (where appropriate);<br/>
+            (c) Authentication mechanisms;<br/>
+            (d) Monitoring and incident detection systems;<br/>
+            (e) Personnel confidentiality obligations;<br/>
+            (f) Periodic review and testing of security measures, where appropriate.
+        </div>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>7.3</b> Access to Personal Data shall be restricted to authorized personnel
+            on a need-to-know basis.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>7.4</b> Each Party shall comply with requirements of the DPDP Act and
+            applicable data protection laws and provide reasonable evidence of its compliance
+            with this Agreement, including self-certifications, policy summaries, or
+            third-party audit/certification reports and promptly notify the other Party
+            following any Personal Data Breach. Nothing in this clause shall require a Party
+            to disclose information that is itself confidential to a third party or that
+            would compromise its own security.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>8. PERSONAL DATA BREACH</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>8.1</b> In the event of a Personal Data Breach, the affected Party shall
+            notify the other Party immediately without undue delay. The Parties shall provide
+            all relevant information reasonably required to enable the other Party to assess
+            the impact of the Breach and comply with its applicable legal obligations. For
+            the avoidance of doubt, the affected Party’s notification obligation to the other
+            Party under this Clause 8.1 is independent of, and does not affect, either
+            Party’s own obligation to notify the Data Protection Board of India and the
+            affected Data Principals in accordance with applicable law.
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>8.2</b> The affected Party shall take reasonable steps to:
+        </p>
+        
+        <div style="font-size:13px;font-family:Times New Roman;margin-left:25px;">
+            • Investigate the breach;<br/>
+            • Mitigate risks arising from the breach;<br/>
+            • Comply with applicable breach notification obligations.
+        </div>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>8.3</b> The Parties shall reasonably cooperate with each other in relation
+            to any Personal Data Breach affecting the Personal Data shared under this
+            Agreement, to the extent necessary to enable each Party to comply with its
+            obligations under applicable data protection law.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>8.4</b> The affected Party shall keep the other Party informed of material
+            developments relating to the Personal Data Breach where such developments may
+            impact the shared Personal Data or the other Party's compliance obligations.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>9. DATA PRINCIPAL RIGHTS</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>9.1</b> Each Party shall independently establish mechanisms to address
+            requests from Data Principals.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>9.2</b> Where a request relates to processing carried out by the other Party,
+            the receiving Party may redirect the request to the appropriate Party.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>9.3</b> Each Party shall ensure that Data Principals are provided a readily
+            available means to submit grievances, and that such grievances are acknowledged
+            and addressed within the timelines prescribed under applicable data protection
+            laws.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>9.4</b> Each Party shall recognize and give effect to the right of a Data
+            Principal to nominate another individual to exercise their rights under the
+            DPDP Act, in accordance with Section 14 of the DPDP Act.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>10. RETENTION AND DELETION</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>10.1</b> Each Party shall retain Personal Data only for as long as necessary
+            for the specified purpose or as required by law.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>10.2</b> Upon expiry of the retention period, Personal Data shall be deleted
+            or anonymized in accordance with applicable legal requirements.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>11. PROCESSORS</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>11.1</b> Each Party shall ensure that any onward sharing of Personal Data
+            with a processor is undertaken in compliance with applicable law.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>11.2</b> The Party engaging any processor shall remain responsible for
+            ensuring appropriate data protection obligations are imposed on such processor.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>11.3</b> Each Party shall ensure that its contract with any processor is in
+            writing and imposes obligations on the processor that are no less protective of
+            the Personal Data than the obligations undertaken by such Party under this
+            Agreement, including obligations relating to confidentiality, security
+            safeguards, and assistance with Data Principal requests and Personal Data Breach
+            notifications.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>12. CROSS BORDER DATA TRANSFERS (IF APPLICABLE)</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>12.1</b> Each Party shall independently assess and ensure that any cross
+            border transfer undertaken by it complies with applicable legal requirements
+            governing such transfers.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>12.2</b> Without prejudice to the generality of Clause 12.1, no Party shall
+            transfer Personal Data to any country or territory outside India that has been
+            restricted by the Central Government by notification under Section 16 of the
+            DPDP Act.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>13. CONFIDENTIALITY</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>13.1</b> Each Party shall maintain confidentiality of Personal Data shared
+            under this Agreement.
+        </p>
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>13.2</b> Personal Data shall not be disclosed except:
+        </p>
+        
+        <div style="font-size:13px;font-family:Times New Roman;margin-left:25px;">
+            • For the agreed purpose;<br/>
+            • As required by applicable law, regulation, court order or regulatory authority;<br/>
+            • To authorized personnel and service providers under appropriate safeguards.
+        </div>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>14. LIABILITY AND INDEMNITY</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>14.1</b> Each Party shall be independently responsible for its own compliance
+            with applicable data protection laws and obligations under this Agreement.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>14.2</b> Each Party shall be responsible for and bear its own losses,
+            liabilities, costs, and expenses arising from its breach of this Agreement,
+            violation of applicable data protection laws, or failure to implement reasonable
+            and appropriate security safeguards.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>14.3</b> Each Party shall indemnify and hold harmless the other Party against
+            any losses, damages, liabilities, costs and expenses arising out of or relating
+            to its breach of this Agreement or violation of applicable data protection laws.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>14.4</b> A Party seeking indemnification under Clause 14.3 shall:
+            (a) promptly notify the other Party in writing of the relevant claim;
+            (b) not settle or compromise the claim without the other Party’s prior written
+            consent, which is not to be unreasonably withheld; and
+            (c) reasonably cooperate with the other Party, at that Party’s expense, in the
+            defense of the claim.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>15. SURVIVAL OF OBLIGATIONS UPON TERMINATION</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>15.1</b> Upon termination or expiry of the principal Agreement between the
+            Parties, each Party shall, save to the extent retention is required by applicable
+            law, delete or return the Personal Data received from the other Party under this
+            Agreement within a reasonable time and, on request, certify that it has done so.
+            Any obligations relating to confidentiality, security, liability and other
+            provisions intended to survive termination shall continue to remain applicable
+            as long as the shared Personal Data is retained.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>16. GOVERNING LAW</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>16.1</b> This Agreement shall be governed by and construed in accordance
+            with the laws of India, without giving effect to any conflict of laws principles.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>16.2</b> Any dispute, controversy, or claim arising out of or in connection
+            with this Agreement, including any question regarding its existence, validity,
+            interpretation, performance, breach, termination, or enforcement, shall be
+            subject to the exclusive jurisdiction of the competent courts at Hyderabad,
+            India.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>17. CONTACT DETAILS</b>
+        </p>
+        
+        <table border="0.8px" cellspacing="0" width="100%" style="font-size:13px;page-break-inside:avoid;">
+            <tr>
+                <td style="text-align:center;"><b>Company</b></td>
+                <td style="text-align:center;"><b>Client</b></td>
+            </tr>
+            <tr>
+                <td>
+                    Name: Monster.com (India) Private Limited<br/>
+                    Email: cr@foundit.in<br/>
+                    Contact Person:
+                </td>
+                <td>
+                    Name: {!QuotesN.Account__r.Name}<br/>
+                    Email: {!QuotesN.Posting_Contact__r.Email}<br/>
+                    Contact Person: {!QuotesN.Posting_Contact__r.Name}
+                </td>
+            </tr>
+        </table>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>18. NOTICES</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>18.1</b> Any notice or communication required or permitted under this
+            Agreement shall be in writing and shall be sent to the address, email address,
+            or contact person specified in Clause 17 (Contact Details), or such other
+            details as a Party may notify to the other Party in writing from time to time.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>18.2</b> A notice shall be deemed to have been duly given:
+            (a) when delivered by hand or courier, at the time of delivery;
+            (b) when sent by email, at the time of transmission, provided no delivery
+            failure notification is received by the sender; or
+            (c) when sent by registered post or speed post, five (5) days after the date
+            of posting.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>19. MISCELLANEOUS</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.1 Entire Agreement:</b> This Agreement along with the principal agreement
+            executed between the Parties constitutes the entire agreement between the Parties
+            in relation to its subject matter and supersedes all prior discussions,
+            understandings, and agreements, whether written or oral, relating to such
+            subject matter.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.2 Amendment:</b> No amendment or modification of this Agreement shall be
+            effective unless made in writing and signed by the authorized representatives of
+            both Parties.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.3 Assignment:</b> Neither Party shall assign, novate, or otherwise transfer
+            its rights or obligations under this Agreement without the prior written consent
+            of the other Party, save for an assignment to an affiliate or successor in
+            connection with a merger, acquisition, or sale of substantially all of its
+            business, subject to the assignee agreeing in writing to be bound by this
+            Agreement.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.4 Severability:</b> If any provision of this Agreement is held to be
+            invalid, illegal, or unenforceable, the remaining provisions shall continue in
+            full force and effect, and the Parties shall negotiate in good faith to replace
+            the invalid provision with a valid provision that most closely reflects the
+            original commercial intent.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.5 Waiver:</b> No failure or delay by either Party in exercising any right
+            under this Agreement shall operate as a waiver of that right, nor shall any
+            single or partial exercise of a right preclude any other or further exercise of
+            that right.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.6 Force Majeure:</b> Neither Party shall be liable for any failure or
+            delay in the performance of its obligations under this Agreement (other than
+            payment obligations) to the extent such failure or delay is caused by
+            circumstances beyond its reasonable control, provided that the affected Party
+            promptly notifies the other and uses reasonable efforts to mitigate the effect
+            of such circumstances. This Clause does not excuse either Party from its
+            obligations relating to the security and confidentiality of Personal Data or
+            from its obligations to notify a Personal Data Breach.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.7 Counterparts:</b> This Agreement may be executed in counterparts, each
+            of which shall be deemed an original, and all of which together shall constitute
+            one and the same instrument.
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            <b>19.8 Non-Derogation:</b> Nothing in this Agreement shall be construed to
+            limit, reduce, or derogate from either Party’s obligations, or a Data Principal’s
+            rights, under the DPDP Act or any other applicable law, and in the event of any
+            conflict between this Agreement and the DPDP Act, the DPDP Act shall prevail.
+        </p>
+        
+        
+        <p style="font-size:13px;font-family:Times New Roman;">
+            <b>EXECUTION</b>
+        </p>
+        
+        <p align="justify" style="font-size:13px;font-family:Times New Roman;">
+            IN WITNESS WHEREOF, the Parties have executed this Agreement through their
+            authorized representatives.
+        </p>
+        
+        <table width="100%" style="font-size:13px;margin-top:25px;">
+            <tr>
+                <td width="50%">
+                    <b>For Monster.com (India) Private Limited</b><br/><br/><br/>
+                    Signature: ___________________________<br/><br/>
+                    Name: ______________________________<br/><br/>
+                    Designation: _________________________<br/><br/>
+                    Date: _______________________________
+                </td>
+                
+                <td width="50%">
+                    <b>For {!QuotesN.Account__r.Name}</b><br/><br/><br/>
+                    Signature: ___________________________<br/><br/>
+                    Name: ______________________________<br/><br/>
+                    Designation: _________________________<br/><br/>
+                    Date: _______________________________
+                </td>
+            </tr>
+        </table>
+        
+    </div>
+    
+    <!-- ========================= DATA SHARING AGREEMENT END ========================= -->
+    
+    <br/><br/><br/>
+</apex:page>

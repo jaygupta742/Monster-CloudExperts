@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Issue_Others</fullName>
+    <active>true</active>
+    <description>If sub issue is others, If others is mandatory</description>
+    <errorConditionFormula>AND( ISPICKVAL( Sub_Issue__c , &quot;Others&quot;) ,  ISBLANK(If_Other__c ) )</errorConditionFormula>
+    <errorDisplayField>If_Other__c</errorDisplayField>
+    <errorMessage>Please fill</errorMessage>
+</ValidationRule>

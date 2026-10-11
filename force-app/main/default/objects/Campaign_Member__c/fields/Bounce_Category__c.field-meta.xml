@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Bounce_Category__c</fullName>
+    <label>Bounce Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hard Bounce</fullName>
+                <default>false</default>
+                <label>Hard Bounce</label>
+            </value>
+            <value>
+                <fullName>Soft Bounce</fullName>
+                <default>false</default>
+                <label>Soft Bounce</label>
+            </value>
+            <value>
+                <fullName>Block Bounce</fullName>
+                <default>false</default>
+                <label>Block Bounce</label>
+            </value>
+            <value>
+                <fullName>Technical Bounce</fullName>
+                <default>false</default>
+                <label>Technical Bounce</label>
+            </value>
+            <value>
+                <fullName>Unknown Bounce</fullName>
+                <default>false</default>
+                <label>Unknown Bounce</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

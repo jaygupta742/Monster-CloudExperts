@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>USEN: DataCleansing Out of Business</name>
+    <style>none</style>
+    <subject>Confirmation Receipt DataCleansing Out of Business {!Case.Thread_Id}</subject>
+    <textOnly>Your Out of Business request on this account has been received and is being reviewed.  If we have questions or issues validating this you will get a response within 3 days.  If there are no issues with validation your request will be processed in Karma within 3 days.
+Thank you,
+Data Governance Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

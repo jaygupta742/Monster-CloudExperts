@@ -1,0 +1,670 @@
+<apex:page controller="IN_Auto_Renewal_Controller" renderAs="pdf" cache="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false" >
+<apex:form >
+<c:PDFHeaderFooter type="header" > 
+
+<div style="width:50px height:100px">
+<apex:image url="{!URLFOR($Resource.Monster_Logo)}" width="200px" />
+
+</div>
+
+<apex:stylesheet value="{!$Resource.Repeat}"/> 
+</c:PDFHeaderFooter>
+<c:PDFHeaderFooter type="footer" > 
+<p style="text-align:right">Q-04897479</p>
+<apex:stylesheet value="{!$Resource.Repeat}"/> 
+
+</c:PDFHeaderFooter> 
+<br/>
+<apex:pageBlock >
+<h4 style="text-align:center">SERVICE AGREEMENT</h4>
+
+<table style=" border: 1px  solid;font-size:13px;  align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+ <tr>
+ <td >
+ <p style="font-size:13px" align="justify">
+ This SERVICE AGREEMENT ("Agreement") is made and entered into between Monster.com (India) Private Limited, having PAN-
+ 
+ AACCM3695G (herein after referred to as 'Monster', which expression shall, unless repugnant to the context or meaning thereof, mean
+ and include its successors and assigns) of the First Part; AND Globeop Financial Services Technologies India Private Limited
+ (hereinafter referred to as 'Purchaser', which expression shall, unless repugnant to the context or meaning thereof, mean and include
+ its successors and permitted assigns) of the Second Part. (Monster and Purchaser are hereinafter collectively referred to as "the
+ Parties" and severally as "Party")
+</p>
+ </td>
+ 
+ </tr>
+</table>
+<br/>
+<table style="   align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+<tr  >
+<td style="border-bottom: 1px solid black;border-top: 1px solid black;border-right: 1px solid black; width:50%"><b>Date:</b> <br/>
+<b>Quote #:</b> <br/>
+<b>Quote Valid From:</b><br/>
+
+</td>
+<td style="text-align:left;border-bottom: 1px solid black;border-top: 1px solid black;width:50% ">
+<b>Sales Rep:</b><br/>
+<b>Email:</b> <br/>
+<b>Tel:</b> <br/>
+<b>Fax:</b> <br/>
+</td>
+</tr>
+<tr>
+<td style="text-align:left;border-bottom: 1px solid black; border-right: 1px solid black;width:50%"><b>Purchaser:</b><br/>
+<b>GST ID:</b>
+</td>
+
+<td style="text-align:left;border-bottom: 1px solid black;width:50% "><b>Bill To:</b><br/></td>
+
+
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black; text-align:center; font-size:14px; "><i>
+If any of the above information is incorrect please advise in the correction section on the next page.</i>
+</td>
+</tr>
+
+</table>
+<br/>
+<p style="font-size:13px"><b>SERVICE DETAILS:</b> The details of service that Purchaser has agreed to take from Monster are as follows (“Service"): </p>
+<br/>
+
+
+<table style="border:1px solid black;border-collapse: collapse;">
+<th style="">
+<tr style="border:1px solid black;background-color:#800080; ">
+<td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Items<br/>#</td>
+<td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Product</td>
+<td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:13px">Qty</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product End Date</td>
+
+</tr>
+</th>
+<tr >
+<td style="border:1px solid black;">1</td>
+<td style="border:1px solid black;">TestWith Product</td>
+<td style="border:1px solid black;">11</td>
+<td style="border:1px solid black;">22-1-2018</td>
+<td style="border:1px solid black;">22-9-2019</td>
+</tr>
+<tr><td style="border:1px solid black;" colspan="5"><b>Comments:</b></td></tr>
+
+</table><br/>
+
+<div align="right">
+<table width="100%">
+<tr >
+<td align="right">Value of Services:</td><td>&nbsp;&nbsp;INR 222552254</td>
+
+</tr>
+<tr >
+<td align="right">Add: GST Levy @18%:</td><td>&nbsp;&nbsp;INR 222552254</td>
+
+</tr>
+<tr >
+<td align="right">Total Invoice value (including Tax):</td><td>&nbsp;&nbsp;INR 222552254</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+
+<div width="100" height="1%">
+<p style="text-align:left;font-size:13px;" align="justify"> It is the responsibility of the Purchaser to provide valid TAX ID relevant for credit of Goods &amp; Services Tax under applicable acts and
+rules thereof.</p>
+
+</div>
+<p style="font-size:12px"><b>PAYMENT TERMS &amp; INVOICE DELIVERY
+</b></p>
+<p style="font-size:13px">Purchaser has agreed to pay the total invoice value to Monster as per the following payment term (s):
+</p><br/>
+
+<table width="60%" >
+<th><tr>
+<td style="border:1px solid black; text-align:center; font-size:13px">Payment Due Date </td>
+<td style="border:1px solid black; text-align:center;font-size:13px">Payment Amount </td>
+<td style="border:1px solid black; text-align:center;font-size:13px">TDS Amount </td>
+</tr></th>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:33%">22-12-2018</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:33%">2555555555555555</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:33%">INR.</td>
+</tr>
+
+</table><br/>
+<p style="font-size:13px">(All payments to be made in favour of “Monster.com India Private Limited")
+</p><br/>
+<p style="font-size:13px" align="justify">The Agreement shall initially be valid and in force for the period of 3 months / 6 months from the Start Date till the End Date
+("Quarterly Term" / “Bi-yearly Term"), as mentioned above. 
+</p><br/>
+<p align="justify" width="100%" style="font-size:13px">
+On expiry of the ("Quarterly Term" / “Bi-yearly Term"), Purchaser hereby agrees for the auto renewal(s) of this Agreement for further
+("Quarterly Term" / “Bi-yearly Term") as stated herein below at the same price and payments terms as mentioned herein without 
+notice. In the event, the Purchaser does not want to continue the Agreement after ("Quarterly Term" / “Bi-yearly Term") the Purchaser
+shall by giving 7 days prior written Notice before the expiry of the relevant ("Quarterly Term" / “Bi-yearly Term"), intimate Monster of 
+its intention of non renewal after the relevant ("Quarterly Term" / “Bi-yearly Term").
+</p><br/><br/>
+
+
+
+
+<table width="100%">
+
+<th><tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">("QuarterlyTerm" / “BiyearlyTerm")</td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:14%">Product</td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:14%">QTY</td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:14%">Product Start Date</td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:14%">Product End Date</td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:14%">Price INR</td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:14%">Payment TERMS/DUE DATE</td>
+</tr></th>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">.</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">.</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">.</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">.</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">.</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">.</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%">.</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:14%"></td>
+</tr>
+</table>
+
+<p style="font-size:13px" align="justify">The validity of this Service Agreement (including the auto-renewals) shall be for a maximum period of 1 year. Any Extension/ Upgradation
+of the Services of the Purchaser after the validity period of 1 year of this Agreement shall be given effect only after executing
+a separate Agreement between the Parties as may be agreed.
+</p><br/>
+
+
+
+
+
+<hr style="height:3px;border:none;color:#333;background-color:#333;" width="90%" />
+
+
+
+<div style=" font-size:11px;margin-left:30px;margin-right:30px;font-color:black;"><p>    
+
+<center><b>
+
+ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR
+
+
+
+</b></center></p></div>
+
+
+
+<br/>
+
+<br/>
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black;">
+
+<sup>1</sup>Authorised Signature: _________________________________________________&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+<sup>2</sup>Signing Date: ______/_______/________ 
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(dd/mm/yyyy)  
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+   
+
+   Total Price:     <b>INR DYNAMIC VALUE</b>      <br/>
+
+   
+
+   <sup>3</sup>Printed Name: <br/><br/>
+
+   
+
+   <sup>4</sup>Job Title:      <br/><br/>
+
+   
+
+   <sup>5</sup>Company Name (as registered, if applicable) <br/><br/>  
+
+   
+
+   <sup>6</sup> Registration Number (if applicable):   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+  
+
+   <sup>7</sup> TAN Number (if applicable):   <br/><br/>
+
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+  
+
+   <sup>8</sup>  PAN of the Purchaser: <br/>
+
+   <sup>9</sup>Name of the Purchaser as per PAN: <br/><br/>
+
+    <sup>10</sup>Agreement Start Date:  
+
+    
+
+                              
+
+ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+   
+
+   The ‘Agreement Start Date’ will be the date nominated by the Purchaser. 
+
+   
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;                                   
+
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;                                   
+
+ If left blank,
+
+the earliest product start date will be the nominated date. <br/><Br/>
+
+
+
+<sup>11</sup>Purchase Order Number:_______________________________If this field is left blank the invoice will be issued without a PO number.
+
+
+</div>
+<hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" /><br/>
+<hr style="height:1px;border:none;color:#333;background-color:#333;" width="100%" />
+<p align="center" style="font-size:13px"><b>Reserved for Monster</b> </p>
+
+<table width="100%">
+<tr>
+
+<td  style="font-size:13px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Name:
+</td>
+<td  style="font-size:13px;">
+Designation:
+</td>
+</tr>
+
+<tr >
+<td  style="font-size:13px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Regd. Office :
+</td>
+
+</tr>
+
+
+<tr >
+<td  style="font-size:13px; align:left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;City :
+</td>
+
+<td  style="font-size:13px;align:center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Country :
+</td>
+
+<td  style="font-size:13px;align:right">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Pincode :
+</td>
+
+</tr>
+<tr >
+<td  style="font-size:13px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Company Name:
+</td>
+
+</tr>
+<tr>
+<td  style="font-size:13px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Branch Address:
+</td>
+
+</tr>
+
+<tr>
+<td  style="font-size:13px;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GST ID:
+</td>
+</tr>
+
+
+<tr >
+<td  style="font-size:13px; align:left;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email :
+</td>
+
+
+<td  style="font-size:13px;align:right;width:30%">
+&nbsp;&nbsp;Phone:
+</td>
+
+</tr>
+
+<tr >
+<td  style="font-size:13px; align:left;">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Signature:
+</td>
+
+
+<td  style="font-size:13px;align:right;width:30%">
+Signature Date:_____/_____/_________
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(DD/MM/YYYY)
+</td>
+
+</tr>
+</table>
+<hr style="height:3px;border:none;color:#333;background-color:#333;" width="90%" />
+<table>
+
+
+<tr >
+<td  style="font-size:13px; align:left">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sales Rep: Paras NAth
+</td>
+
+<td  style="font-size:13px;align:center">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Email:parasnatham@monsterindia.com
+</td>
+
+<td  style="font-size:13px;align:right">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Phone:9852255555
+</td>
+
+</tr>
+
+
+</table>
+<br/>
+<div style="width:100%;font-size:13px;" align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;By signing this Agreement Purchaser is agreeing to purchase the products and services listed above subject to the standard
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;terms and conditions and product terms, a copy of which was sent to the Purchaser with this Agreement. Please return this
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Agreement to the Monster sales representative. Please note Purchaser is not required to return to Monster the Terms and
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Conditions below, which is for purchaser’s information and record.
+</div> <br/>
+
+<div style="page-break-before:always;">
+<p style="font-size:13px;text-align:center"><b> TERMS AND CONDITIONS</b></p>
+
+<p style="font-size:13px;text-align:justify"> 
+Monster will raise the invoice upon execution of the Agreement by Purchaser. Purchaser shall pay the total invoice value to Monster on or before the
+payment due date as per the agreed payment term(s). In the event any payment is not made within the due date, Monster may, without prejudice to its
+other rights under this Agreement or in law, have the right to deactivate Purchaser's account and / or terminate this Agreement without any liability to
+Purchaser. Purchaser is bound to make the full payment for the Term, irrespective of whether they use the service(s) or not. Purchaser shall also be liable to
+pay the legal costs which may be incurred by Monster towards recovery of any of the dues from Purchaser.
+
+</p>
+
+
+<p style="font-size:13px;text-align:justify"> 
+Training on Monster products and services, wherever applicable, will be scheduled by Monster's Relationship Contact. The said training will take
+approximately 1-2 hours. On receipt of Username and Password from Monster’s Relationship Contact, Purchaser can use the subscribed Service onto the
+concerned website of Monster to which the Service relates. Purchaser’s profile / Banners / Logo title if subscribed by Purchaser, would be uploaded on the
+concerned website of Monster and/ or applicable Monster sites wherever applicable, within a reasonable period from the day Monster receives all the
+relevant information/approval from the Purchaser for the design / Banners / Logo title of any profile required to be uploaded, as may be applicable. Release
+schedule to be worked out after confirming the availability of inventory on the Monster website. Monster may either through its officials or authorized
+representative formally visit the Purchaser's office premises for implementation.
+
+</p>
+
+<p style="font-size:13px;text-align:justify"> 
+Purchaser shall provide to Monster the artwork and profile page information, wherever applicable,, as designed and submitted by Monster to the Purchaser, if
+subscribed by Purchaser, as soon as possible and shall be responsible to use the Service including Job Postings, if subscribed under this Agreement to post
+job vacancies on the concerned Website of Monster. Purchaser should immediately intimate to Monster on any change in its address, name, shifting of its
+office. Monster will allow the Purchaser’s job postings, as subscribed, on the concerned website(s) of Monster, with each job posting having a validity of 60
+(sixty) days.
+
+</p>
+
+
+
+<p style="font-size:13px;text-align:justify">
+Monster will endeavor to maintain its websites (each a “site" or “sites") in a fully operating condition and error free, except for unavailability and errors
+which may result from (i) insufficient or inadequate customer bandwidth or technology, (ii) general Internet brown-outs, black-outs and slowdowns, (iii)
+bring- downs in the ordinary course that are necessary to maintain, update or refresh Monsterindia.com or any other applicable relevant website, (iv) any
+“hacking" or “denial of service" activity by a third party and (v) any other reason beyond Monster's reasonable control.
+ 
+</p>
+
+
+<p style="font-size:13px;text-align:justify"> 
+If Purchaser (including any of Purchaser employees) are found to share passwords with any third party, Monster may revoke all login &amp; passwords deactivate
+Purchaser’s account and no refund will be given. Purchaser agrees not to resell any of the products and services subscribed by Purchaser from Monster
+including but not limited to any job postings or any database access to any third party. Amounts paid for Services are non-refundable. The services may be
+deactivated if the payment is not made by the due date(s) mentioned in the agreement / invoice. Purchaser shall also be liable to pay to Monster for
+dishonor of each payment instruments, which includes either by cheque, ECS electronic payment, or any other method of payment instructions by
+Purchaser. Purchaser represents and warrants that Purchaser use of data shall be lawful and shall comply with all the applicable local, national and
+international laws, including but not limited to the laws relating to contracts, labour and employment laws, data privacy laws, cyber laws and law relating to
+intellectual property. Purchaser further represents and warrants that all and any materials or information provided to Monster to be uploaded to any Site or
+otherwise used by Monster in the provision of the Service, complies with all applicable laws, and its use in connection with the Service does not infringe the
+rights of any third parties.
+
+
+</p>
+
+
+
+<p style="font-size:13px;text-align:justify"> 
+Navigation/Search Engines: Notwithstanding anything to the contrary contained herein, Purchaser shall not use or attempt to use, and shall cause each party
+under your control not to use or attempt to use, any engine, software, tool, agent or other device or mechanism (including without limitation browsers,
+spiders, avatars or intelligent agents) to navigate or search any Site other than the search engine and search agents available on such Site and other than
+generally acceptable third party web browsers. To the extent permitted by law Monster makes no warranties, express or implied, including the warranties of
+merchantability, fitness for a particular purpose, or non-infringement with respect to its services or any site, or results of use thereof and all warranties and
+conditions, express or implied are hereby excluded.
+
+
+</p>
+
+
+<p style="font-size:13px;text-align:justify"> 
+
+The contents of each Site (including without limitation all job postings and all resumes), and all elements, which are a part of the foregoing, and all
+intellectual and other proprietary rights therein, are the property of Monster. Neither Purchaser nor any of its employees shall do anything, which would in
+any way damage, injure or impair the validity of Monster’s rights in the contents of each Site. Notwithstanding the above, any job postings placed on any
+Site by Purchaser, and all elements which are a part of the foregoing, and all intellectual and other proprietary rights therein, are and shall at all times remain
+Purchaser’s property. 
+</p>
+
+
+<p style="font-size:13px;text-align:justify"> 
+In the event Purchaser consents to Monster for replicating its job postings into its Monster Account in Monster website Purchaser agrees and accepts that job
+posting to be replicated on Monster website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking
+employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual,
+violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Purchaser agrees to use only its names, logos or trademarks. 
+
+
+</p>
+
+
+
+<p style="font-size:13px;text-align:justify">
+Monster may not replicate any job posting of Purchaser and/or delete the job postings from Monster site which does not comply with applicable local,
+national and international laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility
+requirements, data privacy, data access and use, and intellectual property. 
+ 
+</p>
+
+
+
+<p style="font-size:13px;text-align:justify"> 
+The advertisements for competitors of Monster or post jobs or other content that contains links to any site competitive with Monster shall not qualify for
+replication. Any such replicated postings will be immediately deleted / removed without notice. Monster reserves the right to remove any job posting or
+content from any Monster Site, which in the reasonable exercise of Monster’s discretion, does not comply with the above Terms, or if any content is posted
+that Monster believes is not in accordance with the Terms of Use &amp; Privacy of Monster website and/or applicable laws and regulations. Monster shall not be
+liable for any conflict, in the event of replication of the Job Postings of Purchaser’s competitor on Monster site or vice versa or any disagreement between
+them in this connection. The replication of Purchaser’s job posting will be only during the continuance of Service Agreement with Monster. Purchaser does
+not have any right to get its job Postings replicated on Monster site. Monster shall in its sole discretion may decide whether to assist the Purchaser in
+replication or not without giving any reason thereof.
+
+</p>
+
+<p style="font-size:13px;text-align:justify"> 
+Monster Referral Widget is a Search &amp; Match Referral interface deployed on Purchaser’s Career Site/ATS or on a URL shared with their employees. It helps
+their employees to search through their company’s hiring requirements listed on the widget, and accordingly refer a matching candidate’s profile.
+Monster does not have any role in the Purchaser’s referral programs &amp; Policy, or in promoting the widget to their employees, or in the process that follows
+the candidate referral. Any resulting outcome of Service; the quality and quantity of the referred candidates by its employees or otherwise;
+financial/commercial arrangement between Purchaser and its employees/users shall be at sole risk, cost &amp; consequences of the purchaser, and Monster shall
+not be held liable thereof under any circumstances.
+
+
+</p>
+
+<p style="font-size:13px;text-align:justify">
+Monster Referral Widget and its elements, which are a part of the foregoing, and all intellectual and other proprietary rights therein, are the property of
+Monster. Neither Purchaser nor any of its employees shall do anything, which would in any way damage, injure or impair the validity of Monster’s rights on
+the widget. Notwithstanding the above, any content like jobs &amp; referred resumes, placed on the Monster Widget by Purchasers or their employees, and all
+intellectual and other proprietary rights therein, are and shall at all times remain Purchaser’s property. The Purchasers shall use the service solely for the
+purpose of attaining their own recruitment needs and shall not use the Service for any unlawful purposes or spamming or for any purpose not authorized for
+use otherwise. Monster may, at its sole discretion do away with this service at any time, without giving any reason thereof, without notice.
+ 
+</p>
+
+
+
+
+<p style="font-size:13px;text-align:justify"> 
+Notwithstanding anything to the contrary contained herein, neither party will be liable to the other party (nor to any person claiming rights derived from the
+other party's rights) for incidental, indirect, consequential, special, punitive or exemplary damages of any kind including lost revenues or profits, loss of
+business arising out of this agreement (including without limitation as a result of any breach of any warranty, or other term of this agreement), regardless of
+whether the party liable or allegedly liable was advised, had other reason to know, or in fact knew of the possibility thereof. Moreover, Monster's maximum
+liability arising out of or relating to the transaction, which is the subject matter of the agreement, regardless of the cause of action (whether in contract, tort,
+breach of warranty or otherwise), will not exceed the amount paid by Purchaser to Monster.
+
+
+</p>
+
+
+<p style="font-size:13px;text-align:justify"> 
+In case of conflict of any term(s) of this Agreement with any subsequent Purchase Order / written document executed post the signing of this Agreement in
+relation to this Agreement, the term(s) of this Agreement shall prevail. 
+
+</p>
+
+<p style="font-size:13px;text-align:justify"> 
+
+If Purchaser breaches any provision of the Agreement, Monster may (i) discontinue the service and/or (ii) pursue all other available remedies to enforce the
+Agreement and obtain payment due thereof. Purchaser agrees to comply with all the applicable laws, including but not limited to the laws relating to
+contracts, labor and employment laws, data privacy laws, cyber laws and law relating to intellectual property. Purchaser agrees to indemnify Monster, its
+officers, directors, employees and agents, from and against any claims, actions or demands, including without limitation reasonable legal and accounting
+fees, arising or resulting from Purchaser’s breach of the Agreement terms including but not limited to claims of breach of third party intellectual property
+rights. Notwithstanding anything to the contrary contained herein, Purchaser’s use of the Monster website and Career Services is subject to the Terms of Use
+&amp; Privacy Policy available from such Monster website's homepage in which the Service subscribed. By Purchaser’s execution of the Agreement, the Purchaser
+agree to abide by such Terms of Use &amp; Privacy Policy of Monster, as they may be amended from time to time and these Terms and Conditions.
+
+</p>
+
+
+
+<p style="font-size:13px;text-align:justify"> 
+
+Any Extension/ Up-gradation / renewal of the Services of the Purchaser after the date of expiry of the Agreement shall be given effect only after executing a
+fresh / renewal Agreement between Monster and Purchaser. Monster will accordingly raise a fresh Invoice for a price as agreed by the Monster and Purchaser
+for the aforesaid extension/up-gradation/renewal period. Every Dispute, difference or question which may at any time arise between the parties hereto or
+any person claiming under them, touching or arising out of or in respect of this agreement or the subject matter thereof shall be referred to the Sole
+Arbitrator nominated by the First Part, the award passed by the Arbitrator shall be final and binding on the parties hereto. The venue of Arbitration shall be
+Hyderabad, India. All and any disputes shall be subject to the Jurisdiction of the Courts at Hyderabad, India.
+</p>
+
+<p style="font-size:13px;text-align:justify"> 
+The Agreement including these terms constitutes the entire understanding between Monster &amp; Purchaser with respect to the subject matter hereof and
+supersedes any previous oral or written arrangements or understandings relating thereto and governs use of the Monster website or websites in which
+services are subscribed under the Agreement and may not be amended, terminated or waived unless agreed in writing by the Parties, and shall not be
+assigned, in whole or in part, directly or indirectly, by Purchaser except by operation law and only comes into existence when signed by the Parties. Any
+terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid terms of the Agreement. The Agreement shall
+not be amended without the affirmative written consent of Parties in writing. Monster has devised a dedicated nodal email ID i.e. cr@monsterindia.com
+for its Purchasers. Purchaser can write to Monster at the said email for any information, support and concerns.
+
+</p>
+
+
+</div>
+
+
+</apex:pageBlock>
+</apex:form> 
+</apex:page>

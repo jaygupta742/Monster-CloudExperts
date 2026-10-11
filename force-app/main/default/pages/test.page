@@ -1,0 +1,7 @@
+<apex:page >
+  <!-- Begin Default Content REMOVE THIS -->
+  public String getFileContents() {
+    return EncodingUtil.base64Encode(Blob.valueOf(description));
+}
+  <!-- End Default Content REMOVE THIS -->
+</apex:page>

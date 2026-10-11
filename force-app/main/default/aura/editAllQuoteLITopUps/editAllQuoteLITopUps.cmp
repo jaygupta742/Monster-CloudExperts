@@ -1,0 +1,90 @@
+<aura:component controller="editAllQULITopUps_cls" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global">
+    <aura:attribute name="acc" type="QULI_Accessories__c[]" />
+    <aura:attribute name="status" type="string" />
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 80rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        
+        }
+    </aura:html>
+    <!-- Header -->    
+        <aura:if isTrue="{!v.status!='Approved'}">
+
+    <div class="slds-modal__header"> 
+        <h1 class="slds-page-header__title">Edit All QULI Top Ups</h1>
+    </div> 
+    <div class="slds-modal__content slds-p-around_medium">
+        <div class="heading">QULI Top Ups</div>
+        <div style="margin: 10px">
+        	<table>
+                <thead>
+                    <tr class="table-thead-tr">
+                        <th class="table-thead-th" style="text-align: center">Sl No</th>
+                        <th class="table-thead-th" style="padding-left: 10px">Top Up Name</th>
+                        <th class="table-thead-th" style="padding-left: 10px">Inventory Quota(Tenure)</th>
+                        <th class="table-thead-th" style="text-align: center">Mandatory</th>
+                        <th class="table-thead-th" style="text-align: center">Quantity(Unit)</th>
+                        <th class="table-thead-th" style="text-align: center">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                	<aura:iteration items="{!v.acc}" var="i" indexVar="row">
+                    	<tr class="table-tbody-tr">
+                        	<td style="text-align: center">{!row+1}</td>
+                            <td style="padding-left: 10px"><b>{!i.Top_Up_Name__c}</b></td>
+                            <td style="padding-left: 10px"><b>{!i.Inventory_Quota_Tenure1__c}</b></td>
+                            <td style="padding-left: 100px;">
+                                <ui:inputCheckbox value="{!i.Mandatory__c}"/>
+                            </td>
+                            <td style="text-align: center">{!i.Quantity_Unit__c}</td>
+                            <td style="text-align: center">
+                                <lightning:buttonIcon iconName="utility:delete" 
+                                                      variant="bare" 
+                                                      alternativeText="delete" 
+                                                      title="delete this item"
+                                                      onclick="{!c.deleteit}"
+                                                      size="large"
+                                                      class="deletebtn"
+                                                      value="{!row}"/>
+
+                            </td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <div class="slds-modal__footer" style="text-align: center">
+        <div class="slds-docked-form-footer">
+            <button class="slds-button slds-button_neutral" onclick="{!c.cancelit}">Cancel</button>
+            <button class="slds-button slds-button_brand" aura:id="disablebuttonid" onclick="{!c.saveit}">Save</button>
+        </div>
+    </div>
+                <aura:set attribute="else">
+                    <div style="text-align:center;font-size:19px;font-weight:bold;">You Cannot Edit Line Items Once It is Approved </div>
+            </aura:set>
+    </aura:if>
+</aura:component>

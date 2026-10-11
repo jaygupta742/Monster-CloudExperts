@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_It_Is_Sent_Back_Then_Reason_Is_Must</fullName>
+    <active>true</active>
+    <description>Finance sending the quote back then they have pass to provide the reason</description>
+    <errorConditionFormula>IF( NOT(Account__r.Person_Account__c || $User.ProfileId = &apos;00e7F000000uSSe&apos;),  
+
+IF( SentBack__c=true,isblank( Sent_Back_Reason__c ),false )
+			
+,false)</errorConditionFormula>
+    <errorDisplayField>Sent_Back_Reason__c</errorDisplayField>
+    <errorMessage>Please update reason for sending it back</errorMessage>
+</ValidationRule>

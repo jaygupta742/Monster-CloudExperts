@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_can_not_be_changed_once_closed</fullName>
+    <active>true</active>
+    <description>Status can&apos;t be changed once closed the opportunity</description>
+    <errorConditionFormula>AND(
+  ISCHANGED( Stage__c ),
+  OR(
+    ISPICKVAL(PRIORVALUE( Stage__c ), &apos;Closed Won&apos;),
+    ISPICKVAL(PRIORVALUE( Stage__c ), &apos;Closed Lost&apos;)
+  ),
+  $Profile.Name &lt;&gt; &apos;System Admin&apos;
+)</errorConditionFormula>
+    <errorMessage>Once the stage is Closed Won / Lost, You cannot change the status!!!</errorMessage>
+</ValidationRule>

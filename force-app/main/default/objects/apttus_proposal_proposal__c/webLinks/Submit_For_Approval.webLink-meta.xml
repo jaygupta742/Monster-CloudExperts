@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Submit_For_Approval</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Submit For Approval</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+
+if(&apos;{!apttus_proposal_proposal__c.Approval_Status__c}&apos; != &apos;Required Approval&apos; || &apos;{!apttus_proposal_proposal__c.Approval_Status__c}&apos; != &apos;Recalled&apos; || &apos;{!apttus_proposal_proposal__c.GCS_Opportunity__c}&apos; == false || &apos;{!apttus_proposal_proposal__c.Total_Discount__c}&apos; &gt;= 25){ 
+    alert(&apos;Approval Not Required&apos;); 
+}
+else if(&apos;{!apttus_proposal_proposal__c.Manager1__c}&apos; == &apos;&apos;){ 
+    alert(&apos;Manager Not Found&apos;); 
+}
+else if(&apos;{!apttus_proposal_proposal__c.Payment_count__c}&apos; &gt;= 1){ 
+    alert(&apos;Please Add APAC Payment&apos;); 
+}
+else{
+If(Modal.Confirm &amp;&amp; Modal.Confirm(confirmMsg)){
+    navigateTourl(&apos;/p/process/Submit?retURL=/{!apttus_proposal_proposal__c.Id}&amp;Id={!apttus_proposal_proposal__c.Id}&apos;,&apos;DETAIL&apos;,&apos;submit&apos;);
+}
+}
+location.reload();</url>
+</WebLink>

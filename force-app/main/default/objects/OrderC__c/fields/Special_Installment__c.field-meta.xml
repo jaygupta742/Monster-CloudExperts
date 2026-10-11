@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Special_Installment__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Allows OM and Finance users to indicate if there is any installment billing</description>
+    <label>Special Installment</label>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

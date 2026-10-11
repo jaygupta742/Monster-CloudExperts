@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Rejected Pending Lead</name>
+    <style>freeForm</style>
+    <subject>Rejected Inactive Account - {!Account.Name}</subject>
+    <textOnly>You are receiving this email as one of the Pending Leads that you marked for promotion is rejected by the Lead Team. Please see the details below.
+
+Pending Lead Name - {!Opportunity.Account}
+Pending Lead Sales Channel - {!Account.SalesChannel__c}
+Pending Lead Sales Rep - {!Opportunity.OwnerFullName}
+Pending Lead City - {!Account.ShippingCity}
+Reason for Rejection - This lead is not promoted because:{!Opportunity.ReasonforRejection__c}
+
+Other Comments:
+
+Please Note:
+
+1) To resend this lead for promotion, please check the &apos;reason for rejection&apos; and update the Pending Lead on SF and mark it &apos;Ready&apos; for promotion
+2) Promotion request cannot be resend if Pending Lead &quot;Already exists in Accounts&quot; or &quot;Do not meet addition parameters&quot;
+3) No Action will be taken if correction request is send by email</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

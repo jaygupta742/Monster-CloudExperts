@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>phone_edit</fullName>
+    <active>false</active>
+    <description>Deactivated on 21st march 2022</description>
+    <errorConditionFormula>IF( (Integration__c !=true || NOT( CreatedBy.Id ==&apos;0057F000003RvIZQA0&apos;)||NOT( $Profile.Id ==&apos;00e7F000000uSSeQAM&apos;)),(OR(ISCHANGED( First_Name__c ), ISCHANGED( Email__c ), ISCHANGED( Last_Name__c ))), false)</errorConditionFormula>
+    <errorDisplayField>Size_of_Account__c</errorDisplayField>
+    <errorMessage>Sorry you can&apos;t edit  first name ,last name and email.</errorMessage>
+</ValidationRule>

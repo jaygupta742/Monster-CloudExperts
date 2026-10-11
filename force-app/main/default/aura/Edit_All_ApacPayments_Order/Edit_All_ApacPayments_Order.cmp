@@ -1,0 +1,121 @@
+<aura:component controller="Edit_All_ApacPayments_Order" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+    <aura:attribute name="apac" type="APAC_Payments__c[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:attribute name="status" type="string" />
+    
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 180rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        
+        }
+    </aura:html>
+    
+    <aura:if isTrue="{!v.status!='Verified'}">
+        
+        <div class="slds-modal__header">
+            <h1 class="slds-page-header__title">Edit All APAC Payments</h1>
+        </div>
+        <div class="slds-modal__content slds-p-around_medium">
+            <div class="slds-scrollable_x" style="margin: 2px; padding: 5px; border: 0.5px solid #C1C1C1; border-radius: 5px; width: 100%;">
+                <div style="width: 140%;">
+                    
+                    <lightning:recordEditForm objectApiName="APAC_Payments__c">
+                        <table>
+                            <thead>
+                                <tr class="table-thead-tr">
+                                    <th class="table-thead-th" style="width: 1%">No</th>
+                                    <th class="table-thead-th" style="width: 3%">Name</th>
+                                    <th class="table-thead-th" style="width: 3%">Quote LI Name</th>
+                                    <th class="table-thead-th" style="width: 1%">Payment Type</th>
+                                    <th class="table-thead-th" style="width: 2%">Due Date</th>
+                                    <th class="table-thead-th" style="width: 2%">Amount</th>
+                                    <th class="table-thead-th" style="width: 2%">TDS Amount</th>
+                                    <th class="table-thead-th" style="width: 2%">Revised Due Date</th>
+                                    <th class="table-thead-th" style="width: 3%">Payment Received Amount</th>
+                                    <th class="table-thead-th" style="width: 2%">TDS Payment Amount</th>
+                                    <th class="table-thead-th" style="width: 2%">Payment Date</th>
+                                    <th class="table-thead-th" style="width: 2%">Finance Reference</th>
+                                    <th class="table-thead-th" style="width: 1%">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.apac}" var="i" indexVar="row">
+                                    <tr class="table-tbody-tr">
+                                        <td class="table-tbody-td">{!row+1}</td>
+                                        <td class="table-tbody-td"><b>{!i.Name}</b></td>
+                                        <td class="table-tbody-td"><b>{!i.Order__r.Name}</b></td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="APAC_Payment_Name__c" value="{!i.APAC_Payment_Name__c}" variant="label-hidden"></lightning:inputField>
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="Due_Date__c" value="{!i.Due_Date__c}" variant="label-hidden"></lightning:inputField>
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="Payment_Amount__c" value="{!i.Payment_Amount__c}" variant="label-hidden"></lightning:inputField>                            
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="TDS_Amount__c" value="{!i.TDS_Amount__c}" variant="label-hidden"></lightning:inputField>                            
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="Revised_Due_Date__c" value="{!i.Revised_Due_Date__c}" variant="label-hidden"></lightning:inputField>                            
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="Payment_Received_Amount__c" value="{!i.Payment_Received_Amount__c}" variant="label-hidden"></lightning:inputField>                                                        
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="TDS_Payment_Amount__c" value="{!i.TDS_Payment_Amount__c}" variant="label-hidden"></lightning:inputField>                                                        
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="Payment_Date__c" value="{!i.Payment_Date__c}" variant="label-hidden"></lightning:inputField>                                                        
+                                        </td>
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:inputField fieldName="Finance_Reference__c" value="{!i.Finance_Reference__c}" variant="label-hidden"></lightning:inputField>                                                        
+                                        </td>                            
+                                        <td class="table-tbody-td" style="padding: 5px 10px 5px 10px">
+                                            <lightning:button label="Delete"
+                                                              variant="destructive"
+                                                              value="{!row}"
+                                                              onclick="{!c.deleteit}"
+                                                              />
+                                            
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </lightning:recordEditForm>
+                </div>
+            </div>
+        </div>
+        
+        <div class="slds-modal__footer">
+            <button class="slds-button slds-button_neutral" aria-label="Cancel and close" onclick="{!c.cancelit}">Cancel</button>
+            <button class="slds-button slds-button_brand" onclick="{!c.saveit}">Save</button>
+        </div>
+        <aura:set attribute="else">
+            <div style="font-size:25px;text-align:center;font-family:times new roman;font-weight:bold;hight:30%;">
+                You Can Not Edit Apac Payment Once its Verified...!!!</div>
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

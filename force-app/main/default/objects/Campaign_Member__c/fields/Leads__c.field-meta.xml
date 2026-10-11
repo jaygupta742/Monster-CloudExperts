@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Leads__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Leads</label>
+    <referenceTo>Leads__c</referenceTo>
+    <relationshipLabel>Campaign Members(C)</relationshipLabel>
+    <relationshipName>Campaign_Members_C</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

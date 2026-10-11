@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_Sub_Type__c</fullName>
+    <description>S-449443</description>
+    <label>Category Sub Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3rd Party CV</fullName>
+                <default>false</default>
+                <label>3rd Party CV</label>
+            </value>
+            <value>
+                <fullName>Acting</fullName>
+                <default>false</default>
+                <label>Acting</label>
+            </value>
+            <value>
+                <fullName>Advertising Services</fullName>
+                <default>false</default>
+                <label>Advertising Services</label>
+            </value>
+            <value>
+                <fullName>Age Gender Religion Race</fullName>
+                <default>false</default>
+                <label>Age Gender Religion Race</label>
+            </value>
+            <value>
+                <fullName>Association</fullName>
+                <default>false</default>
+                <label>Association</label>
+            </value>
+            <value>
+                <fullName>BEL Discrimination</fullName>
+                <default>false</default>
+                <label>BEL Discrimination</label>
+            </value>
+            <value>
+                <fullName>Body Parts</fullName>
+                <default>false</default>
+                <label>Body Parts</label>
+            </value>
+            <value>
+                <fullName>Business Opportunity</fullName>
+                <default>false</default>
+                <label>Business Opportunity</label>
+            </value>
+            <value>
+                <fullName>Career Fair</fullName>
+                <default>false</default>
+                <label>Career Fair</label>
+            </value>
+            <value>
+                <fullName>Citizenship Required</fullName>
+                <default>false</default>
+                <label>Citizenship Required</label>
+            </value>
+            <value>
+                <fullName>Commission Only</fullName>
+                <default>false</default>
+                <label>Commission Only</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>Confirmed Reselling</fullName>
+                <default>false</default>
+                <label>Confirmed Reselling</label>
+            </value>
+            <value>
+                <fullName>Confirmed Transfer Services</fullName>
+                <default>false</default>
+                <label>Confirmed Transfer Services</label>
+            </value>
+            <value>
+                <fullName>Currently Employed</fullName>
+                <default>false</default>
+                <label>Currently Employed</label>
+            </value>
+            <value>
+                <fullName>Dancers</fullName>
+                <default>false</default>
+                <label>Dancers</label>
+            </value>
+            <value>
+                <fullName>Disabled Account Ecomm</fullName>
+                <default>false</default>
+                <label>Disabled Account Ecomm</label>
+            </value>
+            <value>
+                <fullName>Disabled Account Other</fullName>
+                <default>false</default>
+                <label>Disabled Account Other</label>
+            </value>
+            <value>
+                <fullName>ESP Discrimination</fullName>
+                <default>false</default>
+                <label>ESP Discrimination</label>
+            </value>
+            <value>
+                <fullName>Foster Parents</fullName>
+                <default>false</default>
+                <label>Foster Parents</label>
+            </value>
+            <value>
+                <fullName>FRA Discrimination</fullName>
+                <default>false</default>
+                <label>FRA Discrimination</label>
+            </value>
+            <value>
+                <fullName>Fraud Issue</fullName>
+                <default>false</default>
+                <label>Fraud Issue</label>
+            </value>
+            <value>
+                <fullName>FR ENG Discrimination</fullName>
+                <default>false</default>
+                <label>FR ENG Discrimination</label>
+            </value>
+            <value>
+                <fullName>GBR Discrimination</fullName>
+                <default>false</default>
+                <label>GBR Discrimination</label>
+            </value>
+            <value>
+                <fullName>IE Unpaid Internships</fullName>
+                <default>false</default>
+                <label>IE Unpaid Internships</label>
+            </value>
+            <value>
+                <fullName>Investment Required</fullName>
+                <default>false</default>
+                <label>Investment Required</label>
+            </value>
+            <value>
+                <fullName>IP Verification/IP Block</fullName>
+                <default>false</default>
+                <label>IP Verification/IP Block</label>
+            </value>
+            <value>
+                <fullName>Irrelevant Keywords</fullName>
+                <default>false</default>
+                <label>Irrelevant Keywords</label>
+            </value>
+            <value>
+                <fullName>ITA Discrimination</fullName>
+                <default>false</default>
+                <label>ITA Discrimination</label>
+            </value>
+            <value>
+                <fullName>Lead Generation</fullName>
+                <default>false</default>
+                <label>Lead Generation</label>
+            </value>
+            <value>
+                <fullName>LUX Discrimination</fullName>
+                <default>false</default>
+                <label>LUX Discrimination</label>
+            </value>
+            <value>
+                <fullName>Modeling</fullName>
+                <default>false</default>
+                <label>Modeling</label>
+            </value>
+            <value>
+                <fullName>Multiple Jobs</fullName>
+                <default>false</default>
+                <label>Multiple Jobs</label>
+            </value>
+            <value>
+                <fullName>Mystery Shopping</fullName>
+                <default>false</default>
+                <label>Mystery Shopping</label>
+            </value>
+            <value>
+                <fullName>NLD Discrimination</fullName>
+                <default>false</default>
+                <label>NLD Discrimination</label>
+            </value>
+            <value>
+                <fullName>Non Payment</fullName>
+                <default>false</default>
+                <label>Non Payment</label>
+            </value>
+            <value>
+                <fullName>Other Compliance</fullName>
+                <default>false</default>
+                <label>Other Compliance</label>
+            </value>
+            <value>
+                <fullName>Other Discrimination</fullName>
+                <default>false</default>
+                <label>Other Discrimination</label>
+            </value>
+            <value>
+                <fullName>Other Non Direct Employment</fullName>
+                <default>false</default>
+                <label>Other Non Direct Employment</label>
+            </value>
+            <value>
+                <fullName>Photo Requirement</fullName>
+                <default>false</default>
+                <label>Photo Requirement</label>
+            </value>
+            <value>
+                <fullName>Recruiter License suspension</fullName>
+                <default>false</default>
+                <label>Recruiter License suspension</label>
+            </value>
+            <value>
+                <fullName>Reselling OR Transfer</fullName>
+                <default>false</default>
+                <label>Reselling OR Transfer</label>
+            </value>
+            <value>
+                <fullName>RPO Recruitment Process Outsourcing</fullName>
+                <default>false</default>
+                <label>RPO Recruitment Process Outsourcing</label>
+            </value>
+            <value>
+                <fullName>Scout</fullName>
+                <default>false</default>
+                <label>Scout</label>
+            </value>
+            <value>
+                <fullName>Suspicious Email</fullName>
+                <default>false</default>
+                <label>Suspicious Email</label>
+            </value>
+            <value>
+                <fullName>Suspicious Job Posting</fullName>
+                <default>false</default>
+                <label>Suspicious Job Posting</label>
+            </value>
+            <value>
+                <fullName>SWE Discrimination</fullName>
+                <default>false</default>
+                <label>SWE Discrimination</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>UK Unpaid Internships</fullName>
+                <default>false</default>
+                <label>UK Unpaid Internships</label>
+            </value>
+            <value>
+                <fullName>Vulgarisms</fullName>
+                <default>false</default>
+                <label>Vulgarisms</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

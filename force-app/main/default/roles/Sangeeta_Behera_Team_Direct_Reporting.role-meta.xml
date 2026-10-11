@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Sangeeta Behera (Team Direct Reporting)</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Sangeeta_Behera_Under_Ananth_Roy</parentRole>
+</Role>

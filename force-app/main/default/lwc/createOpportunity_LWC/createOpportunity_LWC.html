@@ -1,0 +1,54 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-modal__header">
+        <h1 class="slds-modal__title slds-hyphenate" tabindex="-1">Create Opportunity</h1>
+    </div>
+    <div class="slds-modal__content slds-p-around_medium">
+        <div class="Save-Container">
+            <div>
+                <span class="slds-text-color_error">*</span> = Required Information
+            </div>
+            <div>
+                <lightning-button if:false={isDesktop} label="Save" variant="Base" class="slds-m-horizontal_x-small" onclick={HandleSaveChanges}></lightning-button>
+            </div>
+        </div>
+        <div class="container">
+            <lightning-record-edit-form object-api-name="OpportunityN__c" density="comfy">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <lightning-input-field field-name="Account__c" value={Opportunity.Account__c} disabled onchange={HandleChangeInput}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <lightning-combobox name="Opportunity_Type__c" label="Opportunity Type" options={OpportunityTypeOptions} value={Opportunity.Opportunity_Type__c} required onchange={HandleChangeInput}></lightning-combobox>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <lightning-input-field field-name="OwnerId" value={Opportunity.OwnerId} disabled onchange={HandleChangeInput}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <lightning-input-field field-name="Close_Date__c" value={Opportunity.Close_Date__c} onchange={HandleChangeInput}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <!-- <lightning-combobox name="Contact__c" label="Contact" options={ContactOptions} value={Opportunity.Contact__c} required onchange={HandleChangeInput}></lightning-combobox> -->
+                        <lightning-record-picker label="Contact" name="Contact__c" placeholder="Search Contact..." object-api-name="Contact" filter={RelatedContactFilter} required onchange={HandleChangeInput}></lightning-record-picker>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <lightning-input-field field-name="Expected_Revenue__c" value={Opportunity.Expected_Revenue__c} onchange={HandleChangeInput}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <lightning-input-field field-name="Price_Master__c" value={Opportunity.Price_Master__c} onchange={HandleChangeInput}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" medium-device-size="6" small-device-size="12">
+                        <lightning-input-field field-name="Base_Order_ID__c" value={Opportunity.Base_Order_ID__c} onchange={HandleChangeInput}></lightning-input-field>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="12" medium-device-size="12" small-device-size="12">
+                        <lightning-input-field field-name="Remarks__c" value={Opportunity.Remarks__c} onchange={HandleChangeInput}></lightning-input-field>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </lightning-record-edit-form>
+        </div>
+    </div>
+    <div class="slds-modal__footer" >
+        <lightning-button label="Cancel" variant="neutral" onclick={HandleCancel}></lightning-button>
+        <lightning-button label="Save Me" variant="brand" onclick={HandleSave} class="slds-m-horizontal_small" disabled={btndisabled}></lightning-button>
+    </div>
+</template>

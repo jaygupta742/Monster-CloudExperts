@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <defaultLandingTab>Item__c</defaultLandingTab>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Sample App: Shopping List</label>
+    <tabs>standard-Chatter</tabs>
+    <tabs>Item__c</tabs>
+    <tabs>Getting_Started</tabs>
+    <tabs>User__c</tabs>
+    <tabs>OldXcode_History__c</tabs>
+    <tabs>Target__c</tabs>
+    <tabs>Credit_order__c</tabs>
+    <tabs>Quote_Line_Items__c</tabs>
+    <tabs>Order_Item_Services__c</tabs>
+    <tabs>Call_Disposition__c</tabs>
+    <tabs>Opp_Line_Item__c</tabs>
+    <tabs>Order_Item__c</tabs>
+    <tabs>Activation__c</tabs>
+    <tabs>Developer_Helper__c</tabs>
+    <tabs>Guidelines__c</tabs>
+    <tabs>Debug_Compliance__c</tabs>
+    <tabs>Seeker_Order__c</tabs>
+    <tabs>Sample__c</tabs>
+    <tabs>Seeker_Account__c</tabs>
+    <tabs>Lead_Assignment_Settings__c</tabs>
+    <tabs>Lead_Assignment_State_Log__c</tabs>
+</CustomApplication>

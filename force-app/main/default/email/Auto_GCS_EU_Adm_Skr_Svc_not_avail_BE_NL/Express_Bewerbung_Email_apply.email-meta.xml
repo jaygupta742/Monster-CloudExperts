@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Express Bewerbung (Email apply)</name>
+    <style>none</style>
+    <subject>Express Bewerbung (Email apply)</subject>
+    <textOnly>Der Arbeitgeber, bei dem Sie sich bewerben möchten, verwendet die Funktion „Express-Bewerbung“. Das bedeutet für Sie, dass Sie lediglich Ihre E-Mail-Adresse benötigen, um sich zu bewerben. Wenn Ihr Lebenslauf auf Ihrem Computer verfügbar ist, können Sie diesen direkt mitsenden.
+Da Sie sich hierfür nicht extra in Ihr Monster-Benutzerkonto einloggen müssen, werden Express-Bewerbungen nicht in Ihrem Profil unter „Bewerbungsverlauf“ erscheinen. Sie erhalten jedoch per E-Mail eine Bestätigung, dass Ihre Bewerbung erfolgreich weitergeleitet wurde.
+Um jederzeit Zugriff auf die Stellenanzeige zu haben, rate ich Ihnen, die Anzeige entweder auf Ihrem Computer abzuspeichern oder einen Screenshot zu machen. Wenn die Anzeige abgelaufen ist, werden Sie sie online nicht mehr finden.
+
+]]&gt;</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

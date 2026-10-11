@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tenure_Months__c</fullName>
+    <label>Tenure (Months)</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>13 Months</fullName>
+                <default>false</default>
+                <label>13 Months</label>
+            </value>
+            <value>
+                <fullName>12 Months</fullName>
+                <default>false</default>
+                <label>12 Months</label>
+            </value>
+            <value>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+                <label>6 Months</label>
+            </value>
+            <value>
+                <fullName>4 Months</fullName>
+                <default>false</default>
+                <label>4 Months</label>
+            </value>
+            <value>
+                <fullName>3 Months</fullName>
+                <default>false</default>
+                <label>3 Months</label>
+            </value>
+            <value>
+                <fullName>1 Month</fullName>
+                <default>false</default>
+                <label>1 Month</label>
+            </value>
+            <value>
+                <fullName>1 Week</fullName>
+                <default>false</default>
+                <label>1 Week</label>
+            </value>
+            <value>
+                <fullName>Tenure</fullName>
+                <default>false</default>
+                <label>Tenure</label>
+            </value>
+            <value>
+                <fullName>Per Month</fullName>
+                <default>false</default>
+                <label>Per Month</label>
+            </value>
+            <value>
+                <fullName>As per Balance Original Contract</fullName>
+                <default>false</default>
+                <label>As per Balance Original Contract</label>
+            </value>
+            <value>
+                <fullName>0.1 Months</fullName>
+                <default>false</default>
+                <label>0.1 Months</label>
+            </value>
+            <value>
+                <fullName>1 Day</fullName>
+                <default>false</default>
+                <label>1 Day</label>
+            </value>
+            <value>
+                <fullName>2 Days</fullName>
+                <default>false</default>
+                <label>2 Days</label>
+            </value>
+            <value>
+                <fullName>4 Days</fullName>
+                <default>false</default>
+                <label>4 Days</label>
+            </value>
+            <value>
+                <fullName>5 Days</fullName>
+                <default>false</default>
+                <label>5 Days</label>
+            </value>
+            <value>
+                <fullName>6 Days</fullName>
+                <default>false</default>
+                <label>6 Days</label>
+            </value>
+            <value>
+                <fullName>7 Days</fullName>
+                <default>false</default>
+                <label>7 Days</label>
+            </value>
+            <value>
+                <fullName>14 Days</fullName>
+                <default>false</default>
+                <label>14 Days</label>
+            </value>
+            <value>
+                <fullName>30 Days</fullName>
+                <default>false</default>
+                <label>30 Days</label>
+            </value>
+            <value>
+                <fullName>60 Days</fullName>
+                <default>false</default>
+                <label>60 Days</label>
+            </value>
+            <value>
+                <fullName>2 Months</fullName>
+                <default>false</default>
+                <label>2 Months</label>
+            </value>
+            <value>
+                <fullName>9 Months</fullName>
+                <default>false</default>
+                <label>9 Months</label>
+            </value>
+            <value>
+                <fullName>3 Days</fullName>
+                <default>false</default>
+                <label>3 Days</label>
+            </value>
+            <value>
+                <fullName>15 days</fullName>
+                <default>false</default>
+                <label>15 days</label>
+            </value>
+            <value>
+                <fullName>5 Months</fullName>
+                <default>false</default>
+                <label>5 Months</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

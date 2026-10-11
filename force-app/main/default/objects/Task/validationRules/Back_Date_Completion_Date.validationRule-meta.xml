@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Back_Date_Completion_Date</fullName>
+    <active>false</active>
+    <errorConditionFormula>And(
+NOT(ISNEW()), NOT(ISBLANK(CompletionDate__c)), CompletionDate__c &lt; TODAY(), ($Profile.Name = &quot;Finance (APAC)&quot;)|| ($Profile.Name = &quot;Order Management (APAC)&quot;)|| ($Profile.Name = &quot;Sales Manager (APAC)&quot;) || ($Profile.Name = &quot;Sales Operations (APAC)&quot;) || ($Profile.Name = &quot;Service Manager (APAC)&quot;) || ($Profile.Name = &quot;Service Rep (APAC)&quot;) || ($Profile.Name = &quot;Sales Rep (APAC)&quot;))</errorConditionFormula>
+    <errorMessage>Completion date cannot be set in the past</errorMessage>
+</ValidationRule>

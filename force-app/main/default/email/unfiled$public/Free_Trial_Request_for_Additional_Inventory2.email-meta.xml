@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Free_Trial_Request_for_Additional_Inventory2</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Free Trial Request for Additional Inventory2</name>
+    <style>none</style>
+    <subject>{!QuotesN__c.Name} - Free Trial Request for Additional Inventory</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

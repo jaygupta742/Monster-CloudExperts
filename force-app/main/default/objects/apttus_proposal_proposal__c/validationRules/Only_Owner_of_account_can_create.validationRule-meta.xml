@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Owner_of_account_can_create</fullName>
+    <active>true</active>
+    <errorConditionFormula>if( $Profile.Id == &apos;00e7F000000uSSh&apos;,Account__r.OwnerId != $User.Id,FALSE)</errorConditionFormula>
+    <errorMessage>Only Owner of the Account can create Quote</errorMessage>
+</ValidationRule>

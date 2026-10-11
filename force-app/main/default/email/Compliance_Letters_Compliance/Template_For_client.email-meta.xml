@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used for client validation if record is approved</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Template For client</name>
+    <style>none</style>
+    <subject>Client validation Record  {!Client_Validation_Request__c.Name}</subject>
+    <textOnly>Dear Team,
+
+Please process Client Validation Request : {!Client_Validation_Request__c.Name}.
+
+Thanks,
+
+{!Client_Validation_Request__c.OwnerFullName}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

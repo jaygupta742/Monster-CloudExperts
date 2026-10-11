@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p style="font-size: medium; font-family: &quot;Times New Roman&quot;;">You are receiving this email as one of the Account request is rejected by the Lead Team. Please see the details below.</p><p style="font-size: medium; font-family: &quot;Times New Roman&quot;;"><br></p><p style="font-size: medium; font-family: &quot;Times New Roman&quot;;">Account ID - &nbsp;{!Account.AccountID__c}<br>Account Name - {!Account.Name}<br>Account Team - {!Account.OwnerFullName}<br>Account Sales Channel&nbsp; - {!Account.SalesChannel__c}</p><p style="font-size: medium; font-family: &quot;Times New Roman&quot;;">Account Segment -&nbsp;{!Account.Segment__c}<br>F9 sent for -<br>Reason for&nbsp;Rejection -</p>]]></td>
+</tr>
+</table>

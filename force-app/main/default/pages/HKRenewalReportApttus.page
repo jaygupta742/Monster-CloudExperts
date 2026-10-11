@@ -1,0 +1,402 @@
+<!---Yam----->
+<apex:page standardController="apttus_proposal_proposal__c" extensions="HKRenewalReportApttus"  renderas="PDF" >
+ <apex:form >
+    
+  <!----- Header section ------------->
+<c:PDFHeaderFooterRunning value="header">
+
+<apex:image value="{!$Resource.Monster_Logo}" width="170" height="30"/>
+
+</c:PDFHeaderFooterRunning>
+
+<!------- Footer Section ------------>
+
+<c:PDFRunningFooter value="footer">
+<apex:stylesheet value="{!$Resource.PageNo}"/>
+<div style="text-align : right;">
+
+<br/>{!apttus_proposal_proposal__c.name} 
+{!YEAR(TODAY())}-{!MONTH(TODAY())}-{!DAY(TODAY())}
+</div>
+</c:PDFRunningFooter>
+
+
+<!-------------------------- content section ---------------------->
+
+<h1><center><b><div style="font-size:14px">RENEWAL AGREEMENT</div> </b></center></h1>
+<table border="0.8" cellspacing = "0" width = "90%" style="margin-right:30px;margin-left:30px;font-size:13px;">
+<tr><td>
+ <p style="font-size:14px">
+This RENEWAL SERVICE AGREEMENT  ("Renewal Agreement") is made <!---at place <b>{!u.Location1__c}</b> on this {!DAY(TODAY())} day of <apex:outputText value="{0, date, MMMM}">
+<apex:param value="{!TODAY()}" /> 
+</apex:outputText>
+{!YEAR(TODAY())}---> and entered into by and between: 
+
+<p align="justify">“Monster.com.hk Limited”, a Company duly incorporated and registered under the laws of Hong Kong having its office at Unit 1905, Empress Plaza, 17-19 Chatham Road South, Tsim Sha Tsui, Kowloon, Hong Kong (herein after referred to as 'Monster', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors-in-title and legal representatives) of the First Part;</p>
+
+<p><center>AND</center></p>
+<p align="justify"><b>
+{!apttus_proposal_proposal__c.PostingContact__r.Account.name}</b> organized under the Hong Kong Laws and having its registered office / principal place of business at 
+ {!apttus_proposal_proposal__c.Posting_Street__c}, {!apttus_proposal_proposal__c.Posting_City__c}, 
+{!apttus_proposal_proposal__c.Posting_State__c}, {!apttus_proposal_proposal__c.Posting_Country__c}, {!apttus_proposal_proposal__c.Posting_Pin_Code__c}
+
+(hereinafter referred to as 'Purchaser', which expression shall, unless repugnant to the context or meaning thereof, mean and include its authorized representatives , successors, transferees and permitted assigns) of the Second Part. </p>
+
+
+<p align="justify">
+(Monster and Purchaser are hereinafter collectively referred to as "the Parties" and severally as "Party") </p>
+
+
+<!--<p align="justify">The Parties had executed Service  Agreement dated <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!pli[0].Product_Start_Date__c}"/></apex:outputText>(“Agreement”) where-under the Purchaser has agreed to subscribe the services of Monster on the terms and conditions as stated in the said Agreement. Purchaser is now desirous to subscribe some additional services from Monster under the said Agreement for consideration as agreed between the Parties as under :</p>
+</p>-->
+<p align="justify">
+The Parties had signed  Service  Agreement  dated .................(“Agreement”), the Term
+ of the said Agreement expired by efflux of time and Purchaser hereby agrees to renew the Agreement 
+ to subscribe the below products and services from Monster for consideration as agreed between the Parties as under :</p>
+ </p>
+ </td>
+ </tr>
+ </table>
+
+<br/>
+
+<table cellspacing = "0" width = "90%" style="margin-right:30px;margin-left:30px;font-size:14px;">
+
+<tr>
+<td width="50%" style="border-top:1px solid;border-bottom:1px solid;border-right:1px solid;">
+
+<b>Date :</b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate}"/></apex:outputText>  <br/><br/>
+<b>Quote #:</b> {!apttus_proposal_proposal__c.name} <br/><br/>
+<b>Quote Valid From </b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.Start_Date__c}"/></apex:outputText> 
+                                            <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.End_Date__c}"/></apex:outputText> <br/>
+
+</td>
+
+<td style="border-top:1px solid;border-bottom:1px solid;">
+<br/>
+<b>Sales Rep: </b> {!u.Firstname} {!u.lastname} <br/><br/>
+<b>Email: </b> {!u.email} <br/><br/>
+<b>Tel: </b>{!u.phone}<br/><br/>
+<b>Fax: </b>{!u.Fax} <br/><br/>
+</td>
+</tr>
+
+<tr>
+<td style="border-top:1px solid;border-bottom:1px solid;border-right:1px solid;">
+<b>Purchaser: </b><br/>
+{!apttus_proposal_proposal__c.PostingContact__r.name} <br/>
+<b>Account Name:</b>{!apttus_proposal_proposal__c.PostingContact__r.Account.name} <br/>
+<b>Email:</b> {!apttus_proposal_proposal__c.PostingContact__r.email} <br/>
+<b>Mobile:</b> {!apttus_proposal_proposal__c.PostingContact__r.Phone} <br/>
+<b>Fax:</b> {!apttus_proposal_proposal__c.PostingContact__r.Fax} <br/>
+<b>Address:</b> {!apttus_proposal_proposal__c.Posting_Street__c}<br/>
+{!apttus_proposal_proposal__c.Posting_City__c}<br/>
+{!apttus_proposal_proposal__c.Posting_State__c}<br/>
+{!apttus_proposal_proposal__c.Posting_Country__c}<br/>
+{!apttus_proposal_proposal__c.Posting_Pin_Code__c} <br/>
+<!-----<b>GST ID:{!apttus_proposal_proposal__c.Account__r.GST_ID__c}</b><br/>---->
+
+
+</td>
+
+<td style="border-top:1px solid;border-bottom:1px solid;">
+<b>Bill To: </b><br/>{!apttus_proposal_proposal__c.BillContact__r.name}<br/>
+<b>Account Name :</b>{!apttus_proposal_proposal__c.BillContact__r.Account.name}<br/>
+<b>Email:</b> {!apttus_proposal_proposal__c.BillContact__r.Email}<br/>
+<b>Mobile: </b>{!apttus_proposal_proposal__c.BillContact__r.MobilePhone}<br/>
+<b>Fax: </b>{!apttus_proposal_proposal__c.BillContact__r.Fax}<br/>
+<b>Address:</b> {!apttus_proposal_proposal__c.Billing_Street__c}<br/>
+{!apttus_proposal_proposal__c.Billing_City__c} <br/>
+{!apttus_proposal_proposal__c.Billing_State__c} <br/>
+{!apttus_proposal_proposal__c.Billing_Country__c} <br/>
+{!apttus_proposal_proposal__c.Billing_Pin_code__c} <br/>
+
+<br/>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="2" style="border-top:1px solid;border-bottom:1px solid;">
+<!---<center>If any of the above information is incorrect please advise in the correction section on the next page</center>---> </td>
+</tr>
+
+</table>
+
+
+<br/><br/>
+<p style="font-size:13px;margin-right:30px;margin-left:30px;"><b>SERVICE DETAILS:</b> 
+details of service that Purchaser has agreed to take from Monster are as follows ("Service"): : </p>
+<!------------------------------------------------   Line Item   ----------------------------------------------->
+
+
+
+<apex:variable value="{!1}" var="Slno"/>
+  
+  <table border="1 solid" cellspacing="0" cellpadding="3" width="90%" style=" font-size:14px;margin-left:30px;margin-right:30px;" >
+  <tr style="font-size:14px;color:#FFFFFF;" >
+  <th bgcolor="#800080">Item <br/>#</th>
+   <th width="40%" bgcolor="#800080">Product</th>
+   <th bgcolor="#800080">QTY</th>
+   <th bgcolor="#800080">Product Start <br/>
+Date</th>
+   <td bgcolor="#800080">Product End Date</td>
+   
+  </tr>
+  
+  <apex:repeat value="{!pli}" var="p">
+  
+  <tr style="font-size:14px;color:black;margin-top:25px;page-break-inside:avoid;" width="90%">
+  <td>
+      <apex:outputText value="{!Floor(Slno)}"/> 
+            <apex:variable var="Slno" value="{!Slno + 1}"/> 
+            <br/><br/>
+   </td>
+  <td>{!p.Product__r.name}<!----<br/>{!p.APTS_Attribute_Display__c}<br/> ----></td>
+  <td>{!p.Quantity__c}<br/><br/> </td>
+  <td>{!DAY(p.Product_Start_Date__c)}/{!MONTH(p.Product_Start_Date__c)}/{!YEAR(p.Product_Start_Date__c)} <br/><br/></td>
+  <td>{!DAY(p.Product_End_Date__c)}/{!MONTH(p.Product_End_Date__c)}/{!YEAR(p.Product_End_Date__c)}<br/><br/> </td>
+  </tr>
+  
+  <tr style="font-size:14px;">
+  <td  colspan = "5" height = "30px"><b>Comments:</b> {!p.Comment__c}</td>
+  </tr>
+  
+ 
+ </apex:repeat>
+  </table>
+  <br/>
+  <div style="margin-left:30px;margin-right:30px;font-size:14px;page-break-inside:avoid;">
+  
+  <div style="margin:0px 0px 0px 425px;">Value of Services: <apex:outputText value="{0, number, ###,###,###,###.00}">
+  <apex:param value="{!apttus_proposal_proposal__c.Gross_Total__c}" />
+  </apex:outputText>
+   </div>
+  <!---<div style="margin:0px 0px 0px 425px;">GST: {!apttus_proposal_proposal__c.Tax_Name__c} @ {!apttus_proposal_proposal__c.Tax_Percentage__c} {!apttus_proposal_proposal__c.Tax_Amount__c} </div>
+  <div style="margin:0px 0px 0px 425px;">Total Invoice value: {! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode } {!apttus_proposal_proposal__c.Net_Total__c} </div>--->
+  
+   
+
+</div>
+
+<div style="margin-right:30px;margin-left:30px;font-size:13px;"><p>
+
+<b>PAYMENT TERMS &amp; INVOICE DELIVERY</b><br/><br/>
+
+Purchaser has agreed to pay the total invoice value to Monster as per the following payment term (s) :<br/><br/>
+
+</p>
+</div>
+
+<apex:outputPanel rendered="{!if(aap.size>0,true,false)}">
+<table border="0.8px" cellspacing="0" style="margin-right:30px;margin-left:30px;font-size:14px; page-break-inside:avoid; border:1px solid black" width="90%">
+
+<tr>
+<td >Payment Due Date </td>
+<td >Payment Amount </td>
+<!---<td >TDS Amount </td>---->
+</tr>
+<apex:repeat value="{!aap}" var="py">
+
+
+<tr>
+<td > {!DAY(py.Due_Date__c)}/{!MONTH(py.Due_Date__c)}/{!YEAR(py.Due_Date__c)}
+
+</td>
+<td >{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode } 
+ <apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!py.Payment_Amount__c}"/>
+</apex:outputText>
+</td>
+<!----<td >{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode }  {!py.TDS_Amount_c__c}</td>----->
+</tr>
+</apex:repeat>
+
+</table><br/>
+</apex:outputPanel>
+
+
+<div style=" font-size:14px;margin-left:30px;margin-right:30px;"><p>(All payments to be made in favour of <b>"Monster.com.hk Limited")</b></p></div>
+
+<p align="justify" style="font-size:14px;margin-left:30px;margin-right:30px;">
+<b>*Terms for Replication of Purchaser’s Job Postings:</b>
+</p>
+
+<p align="justify" style="font-size:14px;margin-left:30px;margin-right:30px;">Purchaser consents to Monster for replicating its job postings into its Monster Account in Monster website Purchaser agrees and accepts that job posting to be replicated on Monster website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Purchaser agrees to use only its names, logos or trademarks. 
+</p>
+
+<p align="justify" style="font-size:14px;margin-left:30px;margin-right:30px;">
+Monster may not replicate any job posting of Purchaser and/or delete the job postings from Monster site which  does not comply with applicable local, national and international laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property. 
+</p>
+
+<p align="justify" style="font-size:14px;margin-left:30px;margin-right:30px;">
+The advertisements for competitors of Monster or post jobs or other content that contains links to any site competitive with Monster shall not qualify for replication. 
+Any such replicated postings will be immediately deleted / removed without notice. Monster reserves the right to remove any job posting or content from any Monster Site, 
+which in the reasonable exercise of Monster’s discretion, does not comply with the above Terms, or if any content is posted that Monster believes is not in accordance with 
+the Terms of Use &amp; Privacy of Monster website and/or applicable laws and regulations. Monster shall not be liable for any conflict, in the event of replication of the Job 
+Postings of Purchaser’s competitor on Monster site or vice versa or any disagreement between them in this connection. The replication of Purchaser’s job posting will be only 
+during the continuance of Service Agreement with Monster.  Purchaser does not have any right to get its job Postings replicated on Monster site. Monster shall in its sole 
+discretion may decide whether to assist the Purchaser in replication or not without giving any reason thereof.
+</p>
+
+<p style="font-size:14px;margin-left:30px;margin-right:30px;"> <i>*Note: If not covered in the main Agreement</i></p>
+
+
+
+
+
+<hr style="height:3px;border:none;color:#333;background-color:#333;" width="90%" />
+ 
+<div style=" font-size:11px;margin-left:30px;margin-right:30px;font-color:black;">    
+<center><b>
+ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR
+
+</b></center></div>
+
+<br/>
+<br/>
+<div style=" font-size:12px;margin-left:30px;margin-right:30px;font-color:black;">
+<sup>1</sup> Authorised Signature: _________________________________________________
+<div style="margin:-15px 0px 0px 450px;"><sup>2</sup> Signing Date: ______/_______/________ </div><br/>
+ <div style="margin:-10px 0px 0px 555px;"> (dd/mm/yyyy) </div><br/>
+
+ <p align="right"> <div style="margin:5px 0px 0px 450px;"> Total Price:     <b>{!apttus_proposal_proposal__c.PriceList__r.name}
+ 
+<apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!apttus_proposal_proposal__c.Net_Total__c}"/>
+</apex:outputText></b></div> </p> 
+   
+  <p align="left"> <div style="margin:-30px 0px 0px 0px;"> <sup>3</sup> Printed Name: {!apttus_proposal_proposal__c.Primary_Contact__r.name}  <br/> </div> </p><br/> 
+   
+   <sup>4</sup> Job Title: {!apttus_proposal_proposal__c.Primary_Contact__r.Title}      <br/><br/>
+   
+   <sup>5</sup> Company Name (as registered, if applicable): {!apttus_proposal_proposal__c.Account__r.name} <br/><br/>  
+   
+   <sup>6</sup> Registration Number (if applicable):  <!-- {!apttus_proposal_proposal__c.Account__r.RegistrationNumber__c} -->
+ <!--- <div style="margin:-18px 0px 0px 420px"> <sup>7</sup> TAN Number (if applicable): </div>   <br/><br/>
+  
+   <div style="margin:-15px 0px 0px 420px"><sup>8</sup>  PAN of the Purchaser: </div> <br/>  
+   <sup>9</sup >Name of the Purchaser as per PAN: <br/><br/>  ---->
+  <br/><br/>  <sup>8</sup> Agreement Start Date: <!--<apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate}"/></apex:outputText> -->
+    
+                              
+ <div style="margin:-13px 0px 0px 280px;"><i> The ‘Agreement Start Date’ will be the date nominated by the Purchaser. </i> </div>
+   
+ <div style="margin:0px 0px 0px 280px;">  <i>  If left blank,
+the earliest product start date will be the nominated date.</i></div> <br/><Br/>
+
+<div style="margin:-22px 0px 0px 0px;"><sup>9</sup> Purchase Order Number:_______________________________<i>If this field is left blank the invoice will be issued 
+without a PO number.</i>
+  </div>  
+
+</div>
+
+<br/>
+
+<hr style="height:3px;border:none;color:#333;background-color:#333;" width="90%" />
+<hr style="height:3px;border:none;color:#333;background-color:#333;" width="90%" />
+
+
+ <div style=" font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px"><p><b> <center>Reserved the Monster</center> </b> <br/>
+ 
+ Name:{!apttus_proposal_proposal__c.Account__r.PrimarySalesManager__c}
+ 
+ 
+ <div style="margin:-15px 0px 0px 500px;">      Designation: {!apttus_proposal_proposal__c.Sales_Manager_Designation__c}</div><br/>
+
+<!---Regd. Office  : Room 2201-07,Tower Two,Times Square, 1 Matheson Street,---->
+Regd. Office : Unit 1905, Empress Plaza, 17-19 Chatham Road South, Tsim Sha Tsui, Kowloon, Hong Kong<br/><br/>
+<!--City:Causeway Bay--->
+
+City:Kowloon
+
+ <div style="margin:-15px 0px 0px 290px;"> Country: Hong Kong</div>
+
+<!--- <div style="margin:-16px 0px 0px 600px;"> PIN Code: {!u.PostalCode}</div>  --->
+
+ <br/><br/>
+ 
+
+Email : {!apttus_proposal_proposal__c.Sales_Manager_Email__c}
+
+
+<div style="margin:-18px 0px 0px 480px;"> Phone:{!apttus_proposal_proposal__c.Sales_Manager_Phone__c} </div> <br/> 
+<div style="margin:0px 0px 0px 480px;">Signing Date:_____/_____/________ </div> <br/>
+ 
+ 
+ 
+ 
+ <div style="margin:-10px 0px 0px 565px;"> (dd/mm/yyyy) </div><br/>
+ 
+ Signature:_____________________________________________________
+</p></div> 
+<br/>
+
+<hr style="height:2.5px;border:none;color:#333;background-color:#333;" width="90%" /> <br/>
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black; margin: -10px 0px 0px 0px;">    
+<center><b>
+Sales Manager :{!apttus_proposal_proposal__c.Account__r.PrimarySalesManager__c} &nbsp;&nbsp;&nbsp;&nbsp;   
+  Email :{!apttus_proposal_proposal__c.Sales_Manager_Email__c}   &nbsp;&nbsp;&nbsp;&nbsp; 
+   Phone:{!apttus_proposal_proposal__c.Sales_Manager_Phone__c}
+   
+</b></center></div>
+<br/>
+<br/>
+<br/>
+<!----<p style="font-size:13px">
+By signing this Addendum Agreement Purchaser agrees to purchase the products and services listed above.  Except amended herein Parties hereby agree that all the other terms and conditions of the Agreement shall remain in full force and effect. This Addendum Agreement shall be effective as of the date of execution by the Parties hereto.</p>
+<p style="font-size:13px">
+Purchaser can write to Monster at the email <b>cs@monster.com.hk</b>  for any information, support and concerns.</p>
+
+
+   </apex:form>
+    
+</apex:page>------>
+
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px;page-break-inside:avoid;">
+<p align="Justify">
+By signing this Renewal Agreement Purchaser agrees to purchase the products and services listed above.  Except amended herein Parties hereby agree that all the other terms and conditions of the Agreement shall remain in full force and effect. This Renewal Agreement shall be effective as of the date of execution by the Parties hereto.   </p>
+ <p align="justify">
+Purchaser can write to Monster at the email <b>cs@monster.com.hk </b> for any information, support and concerns.
+
+
+ </p> 
+ <p align="Justify"> 
+ IN WITNESS WHEREOF the Parties hereto have caused this Agreement to be executed by their authorized representatives on the day, date and year mentioned hereinabove.
+  </p>
+  
+</div>
+<br/>
+<br/>
+<div style=" font-size:14px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px;page-break-inside:avoid;"> For and on behalf of within named </div><br/>
+ 
+
+ <!--------------------------------------------------------------------------------extra info--------------------------------------------------------------->
+ 
+ 
+ <div style="font-size:14px;margin:-25px 0px 0px 400px;">    For and on behalf of within named  </div><br/>
+
+<b>Monster.com.hk Limited</b><br/> 
+<div style="margin:-15px 0px 0px 400px;"> <b> {!apttus_proposal_proposal__c.PostingContact__r.Account.name} </b> </div><br/><br/>
+
+<!--- <div style="margin:-16px 0px 0px 600px;"> PIN Code: 189702</div>  ---->
+
+ 
+Authorised Signatory
+
+
+<div style="margin:-18px 0px 0px 400px;"> Authorised Signatory </div> <br/> 
+<div style="margin:-16px 0px 0px 400px;">Name:  </div> <br/>
+<div style="margin:-16px 0px 0px 400px;">Title:  </div> <br/>
+<div style="margin:-16px 0px 0px 400px;">Date:  </div> <br/>
+<div style="margin:-16px 0px 0px 400px;">Company Seal:  </div> <br/> 
+
+<br/>
+<br/><br/>
+
+
+</apex:form>
+
+</apex:page>

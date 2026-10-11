@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Re_Process_By_With_DateTime__c</fullName>
+    <externalId>false</externalId>
+    <formula>/*Re_Processor_Name__c+ Text (Re_Process_DateTime__c)*/
+
+
+if(Re_Process_DateTime__c != NULL,
+Re_Processor_Name__c +&apos; &apos;+ TEXT(Day(DATEVALUE(Re_Process_DateTime__c ) ) ) &amp;&quot;/&quot;&amp;TEXT(MONTH(DATEVALUE(Re_Process_DateTime__c ) ) ) &amp;&quot;/&quot;&amp; TEXT(YEAR(DATEVALUE(Re_Process_DateTime__c ) ) )  &amp;&quot; &quot;&amp;(IF( 
+OR( 
+VALUE( MID( TEXT( Re_Process_DateTime__c+ (5.5/24)), 12, 2 ) ) = 0, 
+VALUE( MID( TEXT( Re_Process_DateTime__c+ (5.5/24) ), 12, 2 ) ) = 12 
+), 
+&quot;12&quot;, 
+TEXT( VALUE( MID( TEXT( Re_Process_DateTime__c+ (5.5/24) ), 12, 2 ) ) 
+- 
+IF( 
+VALUE( MID( TEXT( Re_Process_DateTime__c+ (5.5/24)), 12, 2 ) ) &lt; 12, 
+0, 
+12 
+) 
+) 
+) 
+&amp; &quot;:&quot; &amp; 
+MID( TEXT( Re_Process_DateTime__c+ (5.5/24) ), 15, 2 ) 
+&amp; &quot; &quot; &amp; 
+IF( 
+VALUE( MID( TEXT( Re_Process_DateTime__c+ (5.5 /24)), 12, 2 ) ) &lt; 12, 
+&quot;AM&quot;, 
+&quot;PM&quot; 
+))
+
+,&apos;  &apos;)</formula>
+    <label>Re Process By With DateTime</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

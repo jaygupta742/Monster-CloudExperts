@@ -1,0 +1,20 @@
+.comment-header {
+    border-bottom: 1px solid #d8dde6;
+    padding-bottom: 4px;
+}
+
+.comment-body {
+    margin-top: 4px;
+    padding-left: 8px;
+    border-left: 2px solid #0070d2;
+}
+
+.view-all-text {
+    color: #0070d2; /* Salesforce Blue */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.view-all-text:hover {
+    color: #005fb2; /* Darker blue on hover */
+}

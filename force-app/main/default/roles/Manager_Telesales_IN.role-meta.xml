@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Manager-Telesales.IN - L3</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Manager-Telesales.IN - L3(Akash Jain)</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>BusinessHead_FS_TS_SEA</parentRole>
+</Role>

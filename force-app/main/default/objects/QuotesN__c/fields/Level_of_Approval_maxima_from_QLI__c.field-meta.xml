@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Level_of_Approval_maxima_from_QLI__c</fullName>
+    <label>Level of Approval(maxima from QLI)</label>
+    <summarizedField>Quote_Line_Items__c.Level_of_Approval_Required__c</summarizedField>
+    <summaryForeignKey>Quote_Line_Items__c.Quotes__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

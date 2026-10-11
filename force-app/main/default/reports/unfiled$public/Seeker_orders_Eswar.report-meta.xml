@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Seeker_Order__c.Seeker_Name__c</field>
+    </columns>
+    <columns>
+        <field>Seeker_Order__c.Seeker_Email__c</field>
+    </columns>
+    <columns>
+        <field>Seeker_Order__c.Enrollment_No__c</field>
+    </columns>
+    <columns>
+        <field>Seeker_Order__c.Seeker_Contact__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <currency>INR</currency>
+    <filter>
+        <criteriaItems>
+            <column>Seeker_Order__c.Enrollment_No__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>OPEN24JUL</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Seeker orders-Eswar</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Seeker_Order__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Seeker_Order__c.Registration_Date__c</dateColumn>
+        <endDate>2024-09-18</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2024-04-08</startDate>
+    </timeFrameFilter>
+</Report>

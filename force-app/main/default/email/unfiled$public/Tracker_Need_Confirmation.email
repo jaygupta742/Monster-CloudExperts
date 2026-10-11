@@ -1,0 +1,21 @@
+Dear {!Tracker__c.OwnerFullName}, 
+
+Greetings from Cloud Experts Service team. 
+
+We have given you the Resolution for the Tracker {!Tracker__c.Name}. Hope it helped you to resolve the issue.
+Need a confirmation from you for the same.
+
+Find the details below:
+
+Department: {!Tracker__c.Department__c}
+Related Object: {!Tracker__c.Related_Object__c}
+Resolution : {!Tracker__c.Resolution__c}
+Time Frame:  {!Tracker__c.Time_Frame__c}
+Developer Name: {!Tracker__c.Developer_Name__c}
+Developer Mobile: {!Tracker__c.Developer_Mobile__c}
+
+
+
+Best Regards, 
+Cloud Experts Team
+Email:crm@cloudexpertsindia.com

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source__c</fullName>
+    <label>Lead Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Emailer Campaign</fullName>
+                <default>false</default>
+                <label>Emailer Campaign</label>
+            </value>
+            <value>
+                <fullName>Let us call you</fullName>
+                <default>false</default>
+                <label>Let us call you</label>
+            </value>
+            <value>
+                <fullName>Let us call you - Ecomm</fullName>
+                <default>false</default>
+                <label>Let us call you - Ecomm</label>
+            </value>
+            <value>
+                <fullName>Skillyst</fullName>
+                <default>false</default>
+                <label>Skillyst</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

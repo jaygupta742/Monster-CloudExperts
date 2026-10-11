@@ -1,0 +1,139 @@
+<apex:page controller="editall" sidebar="false" tabStyle="Green_Sheet__c"  lightningStylesheets="true">
+ <apex:sectionHeader title="Contract Details"/>
+<apex:form >
+ <apex:pageBlock id="ll" >
+ <apex:pageblockButtons >
+ 
+ <apex:commandButton value="update" action="{!save}" />
+ <apex:commandButton value="Cancel" action="{!Cancel}" />
+ 
+ </apex:pageblockButtons>
+     <apex:pageblockSection title="Green Sheet Contract " collapsible="false">
+     <apex:pageblockTable value="{!cl}" var="o" id="JK">
+      
+     <apex:column headervalue="Position">
+     <apex:inputField value="{!o.Position__c}"/>
+     </apex:column>
+     
+     
+    
+     
+     
+      <apex:column headervalue="Skill Category">
+     <apex:inputField value="{!o.Skill_Category__c}"/>
+     </apex:column>
+     
+       
+      <apex:column headervalue="No Of Employees">
+     <apex:inputField value="{!o.No_of_Employees__c}" style="width:50px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="Employer">
+     <apex:inputField value="{!o.Employer__c}"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="Working Hours">
+     <apex:inputField value="{!o.Working_Hour_X_days__c}"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="Staff Category">
+     <apex:inputField value="{!o.Staff_Category__c}" style="width:80px;"/>
+     </apex:column>
+     
+     
+     
+      <apex:column headervalue="Service Category">
+     <apex:inputField value="{!o.Service_Category__c}"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="Basic Salary">
+     <apex:inputField value="{!o.Basic_Salary__c}" style="width:80px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="Bonus">
+     <apex:inputField value="{!o.Bonus__c}" style="width:50px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="HRA">
+     <apex:inputField value="{!o.HRA__c}" style="width:40px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="Gratuity">
+     <apex:inputField value="{!o.Gratuity__c}" style="width:50px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="Ex-Gratia">
+     <apex:inputField value="{!o.Ex_Gratia__c}" style="width:50px;"/>
+     </apex:column>
+     
+     
+     
+      <apex:column headervalue="DA">
+     <apex:inputField value="{!o.DA__c}" style="width:40px;"/>
+     </apex:column>
+     
+     
+     
+      <apex:column headervalue="Other Allowance">
+     <apex:inputField value="{!o.Spl_Other_Allowances__c}" style="width:80px;"/>
+     </apex:column>
+     
+      <apex:column headervalue="Washing Allowance">
+     <apex:inputField value="{!o.Washing_Allowance__c}" style="width:90px;"/>
+     </apex:column>
+     
+      <apex:column headervalue="Uniform cost">
+     <apex:inputField value="{!o.Uniform_Cost__c}" style="width:80px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="LWF">
+     <apex:inputField value="{!o.LWF__c}" style="width:30px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="OT Amount">
+     <apex:inputField value="{!o.OT_Amount__c}" style="width:50px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="OT ESI">
+     <apex:inputField value="{!o.OT_ESI__c}" style="width:40px;"/>
+     </apex:column>
+     
+     
+      <apex:column headervalue="PF Employee">
+     <apex:inputField value="{!o.PF_Employee__c}" style="width:80px;"/>
+     </apex:column>
+     
+     
+        <apex:column headervalue="LWF Employee">
+     <apex:inputField value="{!o.LWF_Employee__c}" style="width:80px;"/>
+     </apex:column>
+     
+     
+        <apex:column headervalue="ESI Employee">
+     <apex:inputField value="{!o.ESI_Employee__c}" style="width:80px;"/>
+     </apex:column>
+     
+        <apex:column headervalue="PT Employee">
+     <apex:inputField value="{!o.PT_Employee__c}" style="width:80px;"/>
+     </apex:column>
+     
+     <apex:column headervalue="Other Employee">
+     <apex:inputField value="{!o.Other_Employee__c}" style="width:80px;"/>
+     </apex:column>
+     
+     </apex:pageblockTable>
+     
+     </apex:pageblockSection>
+ </apex:pageBlock></apex:form>
+</apex:page>

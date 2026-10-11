@@ -1,0 +1,734 @@
+<!--  Last modified by - Gaurav Parate on 28 June 2024 | Descr - Added Table section rendering condition on Selling_Country__c & Company Name in Vf page only--> 
+
+<apex:page renderAs="pdf" showHeader="false" standardController="QuotesN__c" extensions="RecontractAgreementController" applyHtmlTag="false" applyBodyTag="false">
+    <head>
+        <style type="text/css" media="print">
+            @page {
+            size:100%;
+            @bottom-right {
+            
+            }
+            }
+            div.footer {
+            display:block;
+            padding: 5px;
+            position: running(footer);
+            vertical-align:bottom;
+            }
+            
+            .pagenumber:before {
+            content: counter(page);
+            }
+            .pagecount:before {
+            content: counter(pages);
+            }
+            table {-fs-table-paginate: paginate;}
+            thead {display: table-header-group;}            
+        </style>
+    </head>
+    <c:PDFHeaderFooterRunning value="header">
+        <div style="margin-left: -20px;">
+            <apex:image url="{!URLFOR($Resource.FoundIt_Logo)}" width="150px" />
+        </div>
+    </c:PDFHeaderFooterRunning>
+    <div class ="footer" style="text-align: right; margin-right: 55px;">
+        <div class="pagenumber"/>
+        <div style="margin: 10px 0px;">
+            {!QuotesN.Name} {!YEAR(TODAY())}{!MONTH(TODAY())}{!DAY(TODAY())}
+        </div> 
+    </div>
+    
+    <div style="font-size: 14px; font-weight: bold; text-align: center;">SERVICE AGREEMENT</div>
+    
+    <!-- - -----------------------------------------------------------  For Selling Country INDIA ----------------------------------------------------------- -->
+    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'India'}">       
+        <div style="border: 0.8px solid; margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+            <div style="padding:5px;">
+                This SERVICE AGREEMENT ("Agreement") is made at <b>{!SalesRep.Location1__c}</b> on  
+                <apex:outputText value="{0, date, dd/MMM/yyyy}">
+                    <apex:param value="{!TODAY()}" /> 
+                </apex:outputText>
+                and entered into by and between Monster.com (India) Private Limited, a company duly incorporated and registered under the Companies Act, 1956 and deemed to be existing under the Companies Act, 2013 having
+                PAN-AACCM3695G bearing Corporate Identification Number (CIN)- U72200TG2000PTC035617 having its registered office at Wing B, 6th Floor, Smartworks, Aurobindo Galaxy, Plot No
+                01, Sy. No 83/1, TSIIC, HITECH City, Raidurg, Hyderabad, Telangana, 500081, India (herein after referred to as 'Company', which expression shall, unless repugnant to the context or
+                meaning thereof, shall mean and include its successors-in-title and legal representatives) of the First Part;
+                <p style="margin-top:-5px;"><center>AND</center></p>
+                <br/>            
+                <p align="justify" style="margin-top:1px;"> 
+                    <b>{!QuotesN.Account__r.Name}</b> organized under the Indian Laws under the provisions of_____________________
+                    (Relevant Legislation/Act/Law) bearing registration number-&nbsp;<apex:outputText value="{!IF((QuotesN.Account__r.RegistrationNumber__c==null),'__________',QuotesN.Account__r.RegistrationNumber__c)}"/> having 
+                    PAN-<apex:outputText value="{!IF((QuotesN.Account__r.PAN__c==null), '___________', QuotesN.Account__r.PAN__c)}"/> and having its registered office / principal place of business at 
+                    {!QuotesN.Posting_Street__c}, {!QuotesN.Posting_City__c}, 
+                    {!QuotesN.Posting_State__c}, {!QuotesN.Posting_Country__c}, {!QuotesN.Posting_Pin_Code__c}
+                    (hereinafter referred to as 'Client', which expression shall, unless repugnant to the context or meaning thereof, mean and include its authorized representatives , successors, transferees
+                    and permitted assigns) of the Second Part. <br/> 
+                    (Company and Client are hereinafter collectively referred to as "the Parties" and severally as "Party")</p>
+                <p  style="font-size:14px;text-align:justify;font-family:verdana"> 
+                    Whereas Parties had signed a Services Agreement dated 
+                    <apex:outputText rendered="{!QuotesN.Base_Quote_Id__c == null}"> ..................................</apex:outputText>
+                    <apex:outputText value="{0, date, dd/MMM/YYYY}" rendered="{!QuotesN.Base_Quote_Id__c != null}">
+                        <apex:param value="{!BaseQuotesN.Start_Date__c}" /> 
+                    </apex:outputText>.
+                    The Company has upgraded its product and services. The Client wishes to purchase and subscribe to the Company’s upgraded product and services as described below and Parties mutually agree to the following terms and conditions:
+                </p>
+            </div>
+        </div>
+    </apex:outputText>
+    
+    <!-- - -----------------------------------------------------------  For Selling Country Hong Kong ----------------------------------------------------------- -->
+    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Hong Kong'}">       
+        <div style="border: 0.8px solid; margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+            <div style="padding:5px;">
+                This SERVICE AGREEMENT ("Agreement") is made <b>{!SalesRep.Location1__c}</b> on  
+                <apex:outputText value="{0, date, dd/MMM/yyyy}">
+                    <apex:param value="{!TODAY()}" /> 
+                </apex:outputText>
+                and entered into by and between “Monster.com.hk Limited”, a Company duly incorporated and registered under the laws of Hong Kong having its office at Unit 1905,
+                Empress Plaza, 17-19 Chatham Road South, Tsim Sha Tsui, Kowloon, Hong Kong (herein after referred to as 'Company', which expression shall, 
+                unless repugnant to the context or meaning thereof, mean and include its successors-in-title and legal representatives) of the First Part; 
+                
+                <p><center>AND</center></p>
+                <br/>
+                <p align="justify" style="margin-top:-1px;">
+                    <b>{!QuotesN.Account__r.Name}</b> organized under the Hong Kong Laws and having its registered office / principal place of business at {!QuotesN.Posting_Street__c}, {!QuotesN.Posting_City__c}, 
+                    {!QuotesN.Posting_State__c}, {!QuotesN.Posting_Country__c}, {!QuotesN.Posting_Pin_Code__c} 
+                    (hereinafter referred to as 'Client', which expression shall, unless repugnant to the context or meaning thereof, mean and include
+                    its authorized representatives , successors, transferees and permitted assigns) of the Second Part.   
+                    <br/> 
+                    (Company and Client are hereinafter collectively referred to as "the Parties" and severally as "Party")</p>
+                <p style="font-size:14px;text-align:justify;font-family:verdana"> 
+                    Whereas Parties had signed a Services Agreement dated
+                    
+                    <apex:outputText rendered="{!QuotesN.Base_Quote_Id__c == null}"> ..................................</apex:outputText>
+                    <apex:outputText value="{0, date, dd/MMM/YYYY}" rendered="{!QuotesN.Base_Quote_Id__c != null}">
+                        <apex:param value="{!BaseQuotesN.Start_Date__c}" /> 
+                    </apex:outputText>.
+                    The Company has upgraded its product and services. The Client wishes to purchase and subscribe to the Company’s upgraded product and services as described below and Parties mutually agree to the following terms and conditions:
+                </p>
+            </div>
+        </div>
+    </apex:outputText>
+    
+    
+    <!-- - -----------------------------------------------------------  For Selling Country Malaysia ----------------------------------------------------------- -->
+    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}">
+        <div style="border: 0.8px solid; margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+            <div style="padding:5px;"> This SERVICE AGREEMENT ("Agreement") is made at place <b>{!SalesRep.Location1__c}</b> on 
+                <apex:outputText value="{0, date, dd/MMM/yyyy}">
+                    <apex:param value="{!TODAY()}" /> 
+                </apex:outputText>
+                
+                and entered into by and between: 
+                <b> Agensi Pekerjaan Monster Malaysia Sdn. Bhd. (Formerly known as Monster Malaysia Sdn. Bhd.)</b> a company incorporated under the laws of Malaysia having its 
+                registered office at Level 16 and 17, The Bousteador, No 10 Jalan PJU 7/6, Mutiara Damansara, 47800 Petaling Jaya, Selangor, Malaysia  (herein after referred 
+                to as ‘Company’, which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors-in title and legal representatives) 
+                of the First Part;
+                <p><center>AND</center></p>
+                <p align="justify">
+                    {!QuotesN.Account__r.Name} organized under the Malaysian laws and having its registered office / principal place of business at 
+                    {!QuotesN.Posting_Street__c}, {!QuotesN.Posting_City__c}, 
+                    {!QuotesN.Posting_State__c}, {!QuotesN.Posting_Country__c}, {!QuotesN.Posting_Pin_Code__c}
+                    (hereinafter referred to as &#39;Client&#39;, which expression shall, unless repugnant to the context or meaning thereof, mean and include its authorized representatives , successors, transferees and permitted assigns) of the Second Part.<br/> 
+                    (Company and Client are hereinafter collectively referred to as “the Parties” and severally as “Party”)</p>
+                
+                <p style="font-size:14px;text-align:justify;font-family:verdana"> 
+                    Whereas Parties had signed a Services Agreement dated 
+                    <apex:outputText rendered="{!QuotesN.Base_Quote_Id__c == null}"> ..................................</apex:outputText>
+                    <apex:outputText value="{0, date, dd/MMM/YYYY}" rendered="{!QuotesN.Base_Quote_Id__c != null}">
+                        <apex:param value="{!BaseQuotesN.Start_Date__c}" /> 
+                    </apex:outputText>.
+                    The Company has upgraded its product and services. The Client wishes to purchase and subscribe to the Company’s upgraded product and services as described below and Parties mutually agree to the following terms and conditions:
+                </p>
+            </div>
+        </div>
+    </apex:outputText>
+    
+    <!-- - -----------------------------------------------------------  For Selling Country Philippines ----------------------------------------------------------- -->
+    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Philippines'}">
+        <div style="border: 0.8px solid; margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+            <div style="padding:5px;"> 
+                <p align="justify">This SERVICE AGREEMENT ("Agreement") is made at place <b>{!SalesRep.Location1__c}</b> on 
+                    <apex:outputText value="{0, date, dd/MMM/yyyy}">
+                        <apex:param value="{!TODAY()}" /> 
+                    </apex:outputText>
+                    and entered into between <b>“Monster.com Philippines”</b> a branch office of Monster.com (India) Private Limited, a company incorporated under the [Indian] Companies Act, 1956, having its registered
+                    office at Wing B, 6th Floor, Smartworks, Aurobindo Galaxy, Plot No 01, Sy. No 83/1, TSIIC, HITECH City, Raidurg, Hyderabad, Telangana, 500081, India
+                    and licensed to transact business in the Philippines as a branch office by the Philippine SEC, 31st floor, Yuchengco Tower, RCBC Plaza, 6819, Ayala Avenue,
+                    Makati City, Metro Manila, Philippines – 1227, (herein after referred to as 'Company', which expression shall, unless repugnant to the context or meaning
+                    thereof, mean and include its successors and assigns) of the First Part;</p> 
+                <center>AND</center>
+                <p align="justify"><b>{!QuotesN.Account__r.Name}</b> having its registered office / principal place of business at
+                    {!QuotesN.Posting_Street__c},{!QuotesN.Posting_Country__c},{!QuotesN.Posting_Pin_Code__c} 
+                    (hereinafter referred to as 'Client', which expression
+                    shall, unless repugnant to the context or meaning thereof, mean and include its authorized representatives , successors, transferees and permitted assigns)
+                    of the Second Part. (hereinafter referred to as 'Client', which expression shall, unless repugnant to the context or meaning thereof, mean and include its
+                    successors and permitted assigns) of the Second Part. <br/>
+                    
+                    (Company and Client are hereinafter collectively referred to as "the Parties" and severally as "Party")</p> 
+                <p style="font-size:14px;text-align:justify;font-family:verdana"> 
+                    Whereas Parties had signed a Services Agreement dated 
+                    <apex:outputText rendered="{!QuotesN.Base_Order_ID__c == null}"> ..................................</apex:outputText>
+                    <apex:outputText value="{0, date, dd/MMM/YYYY}" rendered="{!QuotesN.Base_Order_ID__c != null}">
+                        <apex:param value="{!BaseQuotesN.Start_Date__c}" /> 
+                    </apex:outputText>.
+                    The Company has upgraded its product and services. The Client wishes to purchase and subscribe to the Company’s upgraded product and services as described below and Parties mutually agree to the following terms and conditions:
+                </p>
+                
+            </div>
+        </div>
+    </apex:outputText>
+    
+    <!-- - -----------------------------------------------------------  For Selling Country Singapore ----------------------------------------------------------- -->
+    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Singapore'}">
+        <div style="border: 0.8px solid; margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+            <div style="padding:5px;">
+                <p align="justify" style="margin-top:-5px;margin-bottom:-5px;">
+                    This SERVICE AGREEMENT ("Agreement") is made at place <b>{!SalesRep.Location1__c}</b> on 
+                    <apex:outputText value="{0, date, dd/MMM/yyyy}">
+                        <apex:param value="{!TODAY()}" /> 
+                    </apex:outputText>
+                    and entered into between Monster.com.sg Pte Limited, having its registered office
+                    at Carpenter Haus, 36, Carpenter Street, Unit 4F, #02-01 Singapore 059915 (herein after referred to as 'Company', which expression
+                    shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns)
+                </p>
+                
+                <p><center>AND</center></p>
+                <br/>
+                
+                <b>{!QuotesN.Account__r.Name}</b> (hereinafter referred to as ' Client ', which expression shall, unless repugnant
+                to the context or meaning thereof, mean and include its successors and permitted assigns).
+                <br/>
+                (Company and Client are hereinafter collectively referred to as "the Parties" and severally as "Party")
+                
+                <p style="font-size:14px;text-align:justify;font-family:verdana"> 
+                    Whereas Parties had signed a Services Agreement dated 
+                    <apex:outputText rendered="{!QuotesN.Base_Quote_Id__c == null}"> ..................................</apex:outputText>
+                    <apex:outputText value="{0, date, dd/MMM/YYYY}" rendered="{!QuotesN.Base_Quote_Id__c != null}">
+                        <apex:param value="{!BaseQuotesN.Start_Date__c}" /> 
+                    </apex:outputText>.
+                    The Company has upgraded its product and services. The Client wishes to purchase and subscribe to the Company’s upgraded product and services as described below and Parties mutually agree to the following terms and conditions:
+                </p>
+            </div>
+        </div>
+    </apex:outputText>
+    
+    <!-- - -----------------------------------------------------------  For Selling Country United Arab Emirates ----------------------------------------------------------- -->
+    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'United Arab Emirates'}">
+        <div style="border: 0.8px solid; margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+            <div style="padding:5px;">
+                <p style="font-size:14px;text-align:justify;font-family:verdana">
+                    This SERVICE AGREEMENT ("Agreement") is made at <b>{!SalesRep.Location1__c}</b> on 
+                    <apex:outputText value="{0, date, dd/MMM/yyyy}">
+                        <apex:param value="{!TODAY()}" /> 
+                    </apex:outputText>
+                    and entered into between MONSTER.COM INDIA PRIVATE LIMITED (DUBAI BRANCH), 
+                    a company incorporated [in India] under the [Indian] Companies Act, 1956, having its Dubai Branch office at Office No. 2204, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360 (herein after referred to as 'Company', 
+                    which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns) 
+                </p>
+                <p style="text-align:center;font-size:14px;">
+                    AND
+                </p>
+                <p style="font-size:14px;font-family:verdana">
+                    <b>{!QuotesN__c.Account__r.Name}</b> (hereinafter referred to as 'Client', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and permitted assigns).<br/>
+                    (Company and Client are hereinafter collectively referred to as "the Parties" and severally as "Party")
+                </p>
+                <p style="font-size:14px;text-align:justify;font-family:verdana">
+                    Company is inter alia in the business of online /web solutions, online public networking, web designing and online access services to the customers through its website  
+                    <a href="https://www.founditgulf.com/">https://www.founditgulf.com/</a>.
+                    Client is desirous of   taking the Service from the Company for the purpose of gaining access to Company Service on the terms agreed and contained herein;  
+                </p>
+                
+                <p  style="font-size:14px;text-align:justify;font-family:verdana"> 
+                    Whereas Parties had signed a Services Agreement dated 
+                    <apex:outputText rendered="{!QuotesN.Base_Quote_Id__c == null}"> ..................................</apex:outputText>
+                    <apex:outputText value="{0, date, dd/MMM/YYYY}" rendered="{!QuotesN.Base_Quote_Id__c != null}">
+                        <apex:param value="{!BaseQuotesN.Start_Date__c}" /> 
+                    </apex:outputText>.
+                    The Company has upgraded its product and services. The Client wishes to purchase and subscribe to the Company’s upgraded product and services as described below and Parties mutually agree to the following terms and conditions:
+                </p>
+            </div>   
+        </div>
+    </apex:outputText>
+    
+    
+    <!-- ************************************** DETAILS OF PARTIES ************************************** -->
+    <div style="margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+        <div style="padding: 10px 0px;">
+            <b>1. DETAILS OF PARTIES</b>
+        </div>
+        <table cellspacing="0" width="100%"> 
+            <tr style="height: 30px;">
+                <td style="width: 50%; border-top: 1px solid; border-right:1px solid; padding-left: 5px;">
+                    <b>Date :</b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.CreatedDate}"/></apex:outputText>
+                </td>
+                <td style="width: 50%; border-top: 1px solid; padding-left: 5px;">
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}">
+                        <b>Sales Reps : </b> {!SalesRep.Name}
+                    </apex:outputText>
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c != 'Malaysia'}">
+                        <b>Sales Manager : </b> {!SalesRep.Manager.Name}
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr style="height: 30px;">
+                <td style="width: 50%; border-right:1px solid; padding-left: 5px;">
+                    <b>Quote #:</b>{!QuotesN.Name}
+                </td>
+                <td style="width: 50%; padding-left: 5px;">
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}">
+                        <b>Email : </b> {!SalesRep.Email}
+                    </apex:outputText>
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c != 'Malaysia'}">
+                        <b>Email : </b> {!SalesRep.Manager.Email}
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr style="height: 30px;">
+                <td style="width: 50%; border-right:1px solid; padding-left: 5px;">
+                    <b>Quote Validity: From </b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.CreatedDate}"/></apex:outputText> 
+                    <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.CreateDdate+30}"/></apex:outputText>
+                </td>
+                <td style="width: 50%; padding-left: 5px;">
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}">
+                        <b>Tel : </b> +603 2779 4155
+                    </apex:outputText>
+                    <apex:outputText rendered="{!QuotesN.Selling_Country__c != 'Malaysia'}">
+                        <b>Tel : </b> {!SalesRep.Manager.Phone}
+                    </apex:outputText>
+                </td>
+            </tr>
+            <tr style="height: 30px;">
+                <td style="width: 50%; border-bottom:1px solid; border-right:1px solid; padding-left: 5px;">
+                    <b>New Quote for upgraded Services : {!BaseQuotesN.Name}</b>
+                </td>
+                <td style="width: 50%; border-bottom:1px solid; padding-left: 5px;">
+                    <b>Fax : </b>{!SalesRep.Manager.Fax}
+                </td>
+            </tr>
+        </table>  
+    </div>
+    
+    <!-- ************************************** SERVICE DETAILS ************************************** -->
+    <div style="margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+        <apex:outputPanel rendered="{!if(QuoteItems.size > 0, true, false)}">
+            <div style="padding: 10px 0px;">
+                <b>2. SERVICE DETAILS :</b> The details of service that Client has agreed to take from Company under this Agreement are as follows: 
+            </div>
+            <table border="1 solid" cellspacing ="0" cellpadding="3" width="100%">
+                <thead>
+                    <tr style="color:#FFFFFF;">
+                        <th bgcolor="#800080" width="6%" style="text-align:center">Item #</th>
+                        <th bgcolor="#800080" width="25%" style="text-align:left"> Product</th>
+                        <th bgcolor="#800080" width="8%" style="text-align:center">QTY</th>
+                        <th bgcolor="#800080" width="16%" style="text-align:center">Product start date</th>
+                        <th bgcolor="#800080" width="16%" style="text-align:center">Product end date</th>          
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:variable var="Slno" value="{!1}"/>
+                    <apex:repeat value="{!QuoteItems}" var="item">
+                        <tr style="page-break-inside: avoid;">
+                            <td style="text-align:center">
+                                <apex:outputText value="{!Floor(Slno)}"/> 
+                                <apex:variable var="Slno" value="{!Slno + 1}"/> 
+                            </td>
+                            <td style="text-align:left">
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '1'}">
+                                    {!item.Product_Name__c}<br/>
+                                    {!item.Product__r.Product_SKU_Code__c}<br/>
+                                    Country: {!item.Product_Country__c}<br/>
+                                    Industry: {!item.Product_Industry__c}<br/>
+                                    Scope: {!item.Product_Geo_Scope__c }<br/>
+                                    {!item.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(item.Product__r.Text__c))}">
+                                        {!item.Product__r.Text__c}<br/>
+                                    </apex:outputText>                           
+                                    {!item.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '2'}">
+                                    {!item.Product_Name__c}<br/>
+                                    Country: {!item.Product_Country__c}<br/>
+                                    {!item.Tenure_Months__c}<br/>
+                                    {!item.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '3'}">
+                                    {!item.Product_Name__c}<br/>
+                                    Industry: {!item.Product_Industry__c}<br/>
+                                    {!item.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(item.Product__r.Text__c))}">
+                                        {!item.Product__r.Text__c}<br/>
+                                    </apex:outputText>
+                                    {!item.Product__r.Name}<br/>
+                                    Add Desc: {!item.Comment__c}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '4'}">
+                                    {!item.Product_Name__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(item.Product__r.Text__c))}">
+                                        {!item.Product__r.Text__c}<br/>
+                                    </apex:outputText> 
+                                    {!item.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '5'}">
+                                    {!item.Product_Name__c}<br/>
+                                    Country: {!item.Product_Country__c}<br/>
+                                    {!item.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '6'}">
+                                    {!item.Product_Name__c}<br/>
+                                    {!item.Product__r.Product_SKU_Code__c}<br/>
+                                    Country: {!item.Product_Country__c}<br/>
+                                    Industry: {!item.Product_Industry__c}<br/>
+                                    {!item.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(item.Product__r.Text__c))}">
+                                        {!item.Product__r.Text__c}<br/>
+                                    </apex:outputText>
+                                    {!item.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '7'}">
+                                    {!item.Product_Name__c}<br/>
+                                    {!item.Product__r.Product_SKU_Code__c}<br/>
+                                    {!item.Product__r.Name}<br/>
+                                    Add Desc: {!item.Comment__c}
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!item.Product__r.Classification__c == '8'}">
+                                    {!item.Product_Name__c}<br/>
+                                    Industry: {!item.Product_Industry__c}<br/>
+                                    <apex:outputPanel rendered="{!(item.Product_Geo_Scope__c!= 'S1' && item.Product_Geo_Scope__c!= 'S2')}">
+                                        Scope: {!item.Product_Geo_Scope__c}<br/>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{!(item.Product_Geo_Scope__c== 'S1' || item.Product_Geo_Scope__c== 'S2')}">
+                                        Scope: {!item.Product__r.Location__c}<br/>
+                                    </apex:outputPanel>
+                                    {!item.Product__r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(item.Product__r.Text__c))}">
+                                        {!item.Product__r.Text__c}<br/>
+                                    </apex:outputText>
+                                    {!item.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                            </td>
+                            <td style="text-align:center">
+                                {!item.Quantity_Unit__c}
+                            </td>
+                            <td style="text-align:center">
+                                {!DAY(item.Start_Date__c)}/{!MONTH(item.Start_Date__c)}/{!YEAR(item.Start_Date__c)}
+                            </td>                           
+                            <td style="text-align:center">
+                                {!DAY(item.End_Date__c)}/{!MONTH(item.End_Date__c)}/{!YEAR(item.End_Date__c)}
+                            </td>
+                        </tr>
+                    </apex:repeat> 
+                </tbody>                
+            </table>
+            <div style="padding: 10px 0px;">
+                *Profile Credits includes "View, Download (Excel/ATS), Job Apply View, Auto Match View" &amp;
+                Outreach Credits includes “Email, SMS, WhatsApp”
+            </div>
+        </apex:outputPanel>
+    </div>
+    
+    <!-- ************************************** QUOTE SUMMARY DETAILS ************************************** -->
+    <div style="margin: 10px 30px; padding: 5px; font-size: 14px; page-break-inside: avoid;">
+        <table style="width: 100%">
+            <tr>
+                <td style="width: 75%" align="right">Value of Services : </td>
+                <td style="width: 25%; text-align: right;">
+                    <b>
+                        <!-- {!QuotesN.CurrencyIsoCode} {!QuoteValue}
+
+{!QuotesN.CurrencyISOCode}  &nbsp;
+<apex:outputText value="{0,number,###,###,###.##}">
+<apex:param value="{!QuotesN.Quote_Value__c}" />
+</apex:outputText>-->
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode == 'INR'}">
+                            {!QuotesN.CurrencyIsoCode} {!QuoteValue}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode != 'INR'}">
+                            {!QuotesN.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!QuotesN.Quote_Value__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                        
+                        
+                    </b>
+                </td>
+            </tr>
+        </table>
+        
+        <div style="padding: 10px 0px;">
+            It is the responsibility of the Client to provide a valid TAX ID relevant for credit of Goods &amp; Services Tax under applicable acts and rules thereof.
+        </div>
+    </div>
+    
+    <!-- ************************************** PAYMENT TERMS & INVOICE DELIVERY DETAILS ************************************** -->
+    <div style="margin: 10px 30px; padding: 5px; font-size: 14px; page-break-inside: avoid;">
+        
+        <div style="padding: 10px 0px; font-weight: bold;">3. PAYMENT TERMS &amp; INVOICE DELIVERY</div>
+        <div style="padding: 10px 0px;">
+            
+            <!--  -------------------------------------- If Selling_Country__c is India -- ------------------------------------->
+            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'India'}">
+                Client has agreed to pay the total invoice value to the Company as per the following payment term (s): (All payments to be made in favour of "Monster.com (India) Private Limited")
+            </apex:outputText>
+            
+            <!--  -------------------------------------- If Selling_Country__c is Hong Kong -- ------------------------------------->
+            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Hong Kong'}">
+                Client has agreed to pay the total invoice value to the Company as per the following payment term (s): (All payments to be made in favour of "Monster.com.hk Limited")
+            </apex:outputText>
+            
+            <!--  -------------------------------------- If Selling_Country__c is Malaysia -- ----------------------  ---------Name not available ----->
+            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}">
+                Client has agreed to pay the total invoice value to the Company as per the following payment term (s): (All payments to be made in favour of "Agensi Pekerjaan Monster Malaysia Sdn. Bhd.")
+            </apex:outputText>
+            
+            <!--  -------------------------------------- If Selling_Country__c is Philippines -- ------------------------------------->
+            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Philippines'}">
+                Client has agreed to pay the total invoice value to the Company as per the following payment term (s): (All payments to be made in favour of "Monster.com Philippines")
+            </apex:outputText>
+            
+            <!--  -------------------------------------- If Selling_Country__c is Singapore -- ------------------------------------->
+            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Singapore'}">
+                Client has agreed to pay the total invoice value to the Company as per the following payment term (s): (All payments to be made in favour of "Monster.com.sg Pte Limited")
+            </apex:outputText>
+            
+            <!--  -------------------------------------- If Selling_Country__c is United Arab Emirates -- --------------------------------- Name not available  ---->
+            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'United Arab Emirates'}">
+                Client has agreed to pay the total invoice value to the Company as per the following payment term (s): (All payments to be made in favour of "MONSTER.COM INDIA PRIVATE LIMITED (DUBAI BRANCH)")
+            </apex:outputText>
+            
+        </div>
+        <table border="1" style="width: 100%;" cellspacing="0">
+            <thead>
+                <tr>
+                    <th style="text-align: center; width: 40%;">Payment Due Date </th>
+                    <th style="text-align: center; width: 30%;">Payment Amount </th>
+                    <th style="text-align: center; width: 30%;">TDS Amount </th>
+                </tr>
+            </thead>
+            <tbody>
+                <apex:repeat value="{!lstAPACPayments}" var="item">
+                    <tr style="page-break-inside: avoid;">
+                        <td style="text-align: center;"> {!DAY(item.Due_Date__c)}/{!Month(item.Due_Date__c)}/{!Year(item.Due_Date__c)}</td>
+                        <td style="text-align: center;">
+                            
+                            
+                         <apex:outputPanel rendered="{!item.CurrencyISOCode == 'INR'}">
+                          <apex:outputField value="{!item.Payment_Amount__c}"/>
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!item.CurrencyISOCode != 'INR'}">
+                            {!item.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!item.Payment_Amount__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                            
+                        </td>
+                        <td style="text-align: center;"> 
+                          
+                            
+                             <apex:outputPanel rendered="{!item.CurrencyISOCode == 'INR'}">
+                           <apex:outputField value="{!item.TDS_Payment_Amount__c}"/>
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!item.CurrencyISOCode != 'INR'}">
+                            {!item.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!item.TDS_Payment_Amount__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                            
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </tbody>
+        </table>
+        
+    </div>
+    
+    <!-- ************************************** PAYMENT TERMS & INVOICE DELIVERY SUMMARY DETAILS ************************************** -->
+    <div style="margin: 10px 30px; padding: 5px; font-size: 14px; page-break-inside: avoid;">
+        <table style="width: 100%;" cellspacing="0">
+            <tr>
+                <td style="width: 75%" align="right">Total Value : </td>
+                <td style="width: 25%" align="right">
+                    <b>
+                        
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode == 'INR'}">
+                           {!QuotesN.CurrencyIsoCode} {!QuoteValue}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode != 'INR'}">
+                            {!QuotesN.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!QuotesN.Quote_Value__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                        
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 75%" align="right">
+                    <apex:outputText rendered="{!QuotesN.Payment_Type__c == 'Advance Payment'}">Less (Adjustment under existing Agreement <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!BaseQuotesN.Start_Date__c}"/></apex:outputText>) : </apex:outputText>
+                    <apex:outputText rendered="{!QuotesN.Payment_Type__c == 'Due Payment'}">Add (Adjustment under existing Agreement <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!BaseQuotesN.Start_Date__c}"/></apex:outputText>) : </apex:outputText>
+                </td>
+                <td style="width: 25%" align="right">
+                    <b>
+                      
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode == 'INR'}">
+                              {!QuotesN.CurrencyIsoCode} {!RecontractAmount}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode != 'INR'}">
+                            {!QuotesN.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!QuotesN.Amount__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                        
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 75%" align="right">Net Total :</td>
+                <td style="width: 25%" align="right">
+                    <b>
+                       
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode == 'INR'}">
+                            {!QuotesN.CurrencyIsoCode} {!RecontractAdjustment}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode != 'INR'}">
+                            {!QuotesN.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!QuotesN.Recontract_Adjustment__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                        
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 75%" align="right"><apex:outputText value="Add : {!QuotesN.Tax_Type__c}@{!QuotesN.Tax__c} :"/></td>
+                <td style="width: 25%; text-align: right;">
+                    <b>
+                        
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode == 'INR'}">
+                          {!QuotesN.CurrencyIsoCode} {!TaxAmount}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode != 'INR'}">
+                            {!QuotesN.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!QuotesN.Tax_Amount__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                        
+                    </b>
+                </td>
+            </tr>
+            <tr>
+                <td style="width: 75%" align="right">Total Invoice Value : </td>
+                <td style="width: 25%" align="right">
+                    <b>
+                     
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode == 'INR'}">
+                             {!QuotesN.CurrencyIsoCode} {!NetTotal}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!QuotesN.CurrencyISOCode != 'INR'}">
+                            {!QuotesN.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!QuotesN.Net_Total__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                        
+                    </b>
+                </td>
+            </tr>
+        </table>
+    </div>
+    
+    <!-- ************************************** OTHER DETAILS ************************************** -->
+    <div style="margin: 10px 30px; padding: 5px; font-size: 14px; text-align: justify;">
+        <div style="page-break-inside: avoid;">
+            *Parties may mutually agree to any adjustments to the existing services under the existing Agreement with the new services under this Agreement, specifically with reference to pricings, if any, in writing.
+        </div>
+        
+        <div style="margin-top: 10px; page-break-inside: avoid;">
+            For detailed terms and conditions - please visit our website Terms and Conditions <a href="{!termsUrl}" style="text-decoration:none">{!termsUrl}</a>
+        </div>
+        
+        <div style="margin-top: 10px; page-break-inside: avoid;">
+            The Client agrees to purchase the products and services listed above. Once signed, please return this Agreement to the Company sales representative.
+        </div>
+        
+        <div style="margin-top: 10px; page-break-inside: avoid;">
+            <table style="border: 1px solid; width: 100%;" cellpadding="5" cellspacing="0">
+                <tr style="height: 100px;">
+                    <td style="width: 50%; vertical-align: top;">
+                        <div>For and on behalf Company within named</div>
+                        
+                        <!--  -------------------------------------- If Selling_Country__c is India -- ------------------------------------->
+                        <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'India'}">
+                            <div style="font-weight: bold;">Monster.com (India) Private Limited</div>
+                        </apex:outputText>
+                        
+                        <!--  -------------------------------------- If Selling_Country__c is Hong Kong -- ------------------------------------->
+                        <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Hong Kong'}">
+                            <div style="font-weight: bold;">Monster.com.hk Limited</div>
+                        </apex:outputText>
+                        
+                        <!--  -------------------------------------- If Selling_Country__c is Malaysia -- ------------------------------------->
+                        <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}">
+                            <div style="font-weight: bold;">Agensi Pekerjaan Monster Malaysia Sdn. Bhd.</div>
+                        </apex:outputText>
+                        
+                        <!--  -------------------------------------- If Selling_Country__c is Philippines -- ------------------------------------->
+                        <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Philippines'}">
+                            <div style="font-weight: bold;">Monster.com Philippines</div>
+                        </apex:outputText>
+                        
+                        <!--  -------------------------------------- If Selling_Country__c is Singapore -- ------------------------------------->
+                        <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Singapore'}">
+                            <div style="font-weight: bold;">Monster.com.sg Pte Limited</div>
+                        </apex:outputText>
+                        <!--  -------------------------------------- If Selling_Country__c is United Arab Emirates -- ------------------------------------->
+                        <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'United Arab Emirates'}">
+                            <div style="font-weight: bold;">MONSTER.COM INDIA PRIVATE LIMITED (DUBAI BRANCH)</div>
+                        </apex:outputText>
+                        
+                    </td>
+                    <td style="width: 50%; vertical-align: top; text-align: right;">
+                        <div>For and on behalf of Client within named</div>
+                        <div style="font-weight: bold;">{!QuotesN.Account__r.Name}</div>
+                    </td>                
+                </tr>
+                <tr style="height: 30px;">
+                    <td style="width: 50%; vertical-align: bottom;">
+                        Authorized Signatory 
+                    </td>
+                    <td style="width: 50%; vertical-align: bottom; text-align: right;">
+                        <div>Authorized Signatory</div>
+                        <div>Name &amp; Designation</div>
+                        <div>Company Seal</div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</apex:page>

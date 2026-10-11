@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Segment__c</fullName>
+    <label>Segment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Blank</fullName>
+                <default>false</default>
+                <label>Blank</label>
+            </value>
+            <value>
+                <fullName>ECOMM</fullName>
+                <default>false</default>
+                <label>ECOMM</label>
+            </value>
+            <value>
+                <fullName>Enterprise</fullName>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>MC Corporate</fullName>
+                <default>false</default>
+                <label>MC Corporate</label>
+            </value>
+            <value>
+                <fullName>MMW</fullName>
+                <default>false</default>
+                <label>MMW</label>
+            </value>
+            <value>
+                <fullName>Monster College</fullName>
+                <default>false</default>
+                <label>Monster College</label>
+            </value>
+            <value>
+                <fullName>Small &amp; Medium Business</fullName>
+                <default>false</default>
+                <label>Small &amp; Medium Business</label>
+            </value>
+            <value>
+                <fullName>Revenue in</fullName>
+                <default>false</default>
+                <label>Revenue in</label>
+            </value>
+            <value>
+                <fullName>Telesales</fullName>
+                <default>false</default>
+                <label>Telesales</label>
+            </value>
+            <value>
+                <fullName>Mini EA</fullName>
+                <default>false</default>
+                <label>Mini EA</label>
+            </value>
+            <value>
+                <fullName>BFSI Business</fullName>
+                <default>false</default>
+                <label>BFSI Business</label>
+            </value>
+            <value>
+                <fullName>Business &amp; Strategy</fullName>
+                <default>false</default>
+                <label>Business &amp; Strategy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

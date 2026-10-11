@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>apttus_proposal_proposal__c$Name</field>
+    </columns>
+    <columns>
+        <field>apttus_proposal_proposal__c$Quote_Created_Date_Time__c</field>
+    </columns>
+    <columns>
+        <field>apttus_proposal_proposal__c.Orders__r$Name</field>
+    </columns>
+    <columns>
+        <field>apttus_proposal_proposal__c.Orders__r$Order_Created_Time__c</field>
+    </columns>
+    <currency>INR</currency>
+    <format>Tabular</format>
+    <name>Quote To Order</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Quote_Proposal_With_Order_And_Note_And_Attachment__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>apttus_proposal_proposal__c.Orders__r$Order_Created_Time__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>apttus_proposal_proposal__c$Order_Created_Date_N_Time__c</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

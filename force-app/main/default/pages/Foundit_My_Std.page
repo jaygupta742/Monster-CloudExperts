@@ -1,0 +1,628 @@
+<!-- Last Modified By : Abdul Aziz , Date : 10/07/2024 , Description : made currency amount in outputtext-->
+<apex:page standardController="QuotesN__c" extensions="Foundit_My_Std" renderAs="pdf" cache="false"  applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false">
+    
+    <!-- ************************* Header section ************************* -->
+    <c:PDFHeaderFooterRunning value="header">
+        <div style="margin-left:-20px;">
+            <apex:image url="{!URLFOR($Resource.FoundIt_Logo)}" width="150px" />
+        </div>
+    </c:PDFHeaderFooterRunning>
+    
+    <c:PDFRunningFooter value="footer">
+        <apex:stylesheet value="{!$Resource.PageNo}"/>
+        <div style="text-align : right;">
+            {!QuotesN.Name} 
+        </div>
+    </c:PDFRunningFooter>
+    
+    <!-- ************************* service aggrement ************************* -->
+    <center><b>SERVICE AGREEMENT</b></center>
+    <br/>
+    <table border="0.8" cellspacing = "0" width = "90%" style="margin-right:30px;margin-left:30px;font-size:13px;">
+        <tr>
+            <td>This SERVICE AGREEMENT ("Agreement") is made at <b>{!u.Location1__c}</b> on 
+                <apex:outputText value="{0, date, dd/MMM/yyyy}">
+                    <apex:param value="{!TODAY()}" /> 
+                </apex:outputText>
+                and entered into by and between: <b>Agensi Pekerjaan Monster Malaysia Sdn. Bhd. (Formerly known as Monster Malaysia Sdn. Bhd.)</b> a company incorporated 
+                under the laws of Malaysia having its registered office at Level 16 and 17, The Bousteador, No 10 Jalan PJU 7/6, Mutiara Damansara, 47800 Petaling Jaya, 
+                Selangor, Malaysia  (herein after referred to as ‘Company’, which expression shall, unless repugnant to the context or meaning thereof, mean and include 
+                its successors-in title and legal representatives) of the First Part;
+                <p><center>AND</center></p>
+                <p align="justify">
+                    {!QuotesN.Account__r.Name} organized under the Malaysian laws and having its registered office / principal place of business at 
+                    {!QuotesN.Posting_Street__c}, {!QuotesN.Posting_City__c}, 
+                    {!QuotesN.Posting_State__c}, {!QuotesN.Posting_Country__c}, {!QuotesN.Posting_Pin_Code__c}
+                    (hereinafter referred to as &#39;Client&#39;, which expression shall, unless repugnant to the context or meaning
+                    thereof, mean and include its authorized representatives , successors, transferees and permitted assigns) of the Second Part.</p>
+                <p>(Company and Client are hereinafter collectively referred to as “the Parties” and severally as “Party”)</p>
+            </td>
+        </tr>
+    </table>
+    <!-- ************************* DETAILS OF PARTIES ************************* -->
+    <div style="margin-left: 1em;">
+        <p style="font-size:13px;"><b>1.DETAILS OF  PARTIES</b></p></div>   
+    <table cellspacing = "0" width = "90%" style="margin-right:30px;margin-left:30px;font-size:14px;">
+        <tr>
+            <td width="50%" style="border-top:1px solid;border-bottom:1px solid;border-right:1px solid;">
+                <b>Date :</b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.CreatedDate}"/></apex:outputText>  <br/><br/>
+                <b>Quote #:</b> {!QuotesN.name} <br/><br/>
+                <b>Quote Valid From </b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate}"/></apex:outputText> 
+                <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate+30}"/></apex:outputText> <br/>
+            </td>
+            
+            <td style="border-top:1px solid;border-bottom:1px solid;">
+                <br/>
+                <b>Sales Reps: </b>{!u.Name}<br/><br/>
+                <b>Email: </b>{!u.Email }<br/><br/>
+                <b>Tel: </b>+603 2779 4155<br/><br/>
+                <b>Fax: </b>{!u.Manager.Fax}<br/><br/>
+            </td>
+        </tr>
+        
+        <tr>
+            <td style="vertical-align:top;border-bottom:1px solid black;border-right:1px solid;">
+                <b> Client: </b> 
+                {!QuotesN.Posting_Contact__r.name} <br/>
+                {!QuotesN.Account__r.Name}<br/>
+                Address: {!QuotesN.Posting_Street__c}<br/>
+                {!QuotesN.Posting_City__c}<br/>
+                {!QuotesN.Posting_State__c}<br/>
+                {!QuotesN.Posting_Country__c}<br/>
+                {!QuotesN.Posting_Pin_Code__c} <br/>
+            </td>
+            
+            <td style="border-bottom:1px solid black;">
+                <b>Bill To: </b>{!QuotesN.Bill_Contact__r.name}<br/>
+                {!QuotesN.Bill_Contact__r.Account.name}<br/>
+                Address: {!QuotesN.Billing_Street__c}<br/>
+                {!QuotesN.Billing_City__c} <br/>
+                {!QuotesN.Billing_State__c} <br/>
+                {!QuotesN.Billing_Country__c} <br/>
+                {!QuotesN.Billing_Pin_code__c} <br/>
+                Email: {!QuotesN.Bill_Contact__r.Email}<br/>
+                Mobile: {!QuotesN.Bill_Contact__r.MobilePhone}<br/>
+                Fax: {!QuotesN.Bill_Contact__r.Fax}<br/>
+                <br/>
+            </td>
+        </tr>
+    </table>
+    <!-- *************************Detail Service ends here ************************* -->  
+    
+    <!-- ************************* Service detail ************************* -->
+    <div style="font-family:verdana;font-size:14px">
+        <br/>    <b>2.SERVICE DETAILS: </b>The details of service that Client has agreed to take from Company are as follows (“Service”):  <br/>
+        <br/>
+        <table  border="1 solid" cellspacing ="0" cellpadding="3" width="90%" style=" font-size:13px;margin-left:35px;margin-right:35px;page-break-inside:avoid; ">
+            <tr style="border:1px solid black;background-color:#800080; ">
+                <td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Item #</td>
+                <td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Product</td>
+                <td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:13px">Qty</td>
+                <td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+                <td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product End Date</td>  </tr>
+            
+            <apex:variable value="{!1}" var="rowNum"/>
+            <apex:repeat value="{!pli}" var="r">
+                <tr style="page-break-inside:avoid;">
+                    <td style="text-align:center">
+                        <apex:outputLabel value="{!rowNum}"/>  
+                        <apex:variable var="rowNum" value="{!rowNum + 1}"/>   
+                        <br/></td>
+                    
+                    
+                    <td style="text-align:left">
+                        <div style="margin-top:10px;">
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '1'}">
+                                {!r.Product_Name__c}<br/>
+                                {!r.Product__r.Product_SKU_Code__c}<br/>  
+                                Country:  {!r.Product_Country__c}<br/>
+                                Industry: {!r.Product_Industry__c}<br/>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText>                           
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '2'}">
+                                {!r.Product_Name__c}<br/>
+                                Country: {!r.Product_Country__c}<br/>
+                                {!r.Product__r.Tenure_Months__c}<br/>  
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '3'}">
+                                {!r.Product_Name__c}<br/>
+                                Industry: {!r.Product_Industry__c}<br/>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText>
+                                {!r.Product__r.Name}<br/>
+                                Add Desc: {!r.Comment__c}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '4'}">
+                                {!r.Product_Name__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText> 
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '5'}">
+                                {!r.Product_Name__c}<br/>
+                                Country:  {!r.Product_Country__c}<br/>
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '6'}">
+                                {!r.Product_Name__c}<br/>
+                                {!r.Product__r.Product_SKU_Code__c}<br/>  
+                                Country:  {!r.Product_Country__c}<br/>
+                                Industry: {!r.Product_Industry__c}<br/>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText>
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '7'}">
+                                {!r.Product_Name__c}<br/>
+                                {!r.Product__r.Product_SKU_Code__c}<br/>  
+                                {!r.Product__r.Name}<br/>
+                                Add Desc: {!r.Comment__c}
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '8'}">
+                                {!r.Product_Name__c}<br/>
+                                Industry: {!r.Product_Industry__c}<br/>
+                                <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c!= 'S1' && r.Product_Geo_Scope__c!= 'S2')}">
+                                    Scope: {!r.Product_Geo_Scope__c}<br/>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c== 'S1' || r.Product_Geo_Scope__c== 'S2')}">
+                                    Scope:   {!r.Product__r.Location__c}<br/>
+                                </apex:outputPanel>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText>                           
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            
+                        </div>
+                        <br/>
+                    </td>
+                    
+                    
+                    <td style="text-align:center" >{!r.Quantity_Unit__c}</td>
+                    <td  style="text-align:center" >{!DAY(r.Start_Date__c)}/{!MONTH(r.Start_Date__c)}/{!YEAR(r.Start_Date__c)}</td>
+                    <td style="text-align:center" >{!DAY(r.End_Date__c)}/{!MONTH(r.End_Date__c)}/{!YEAR(r.End_Date__c)}</td>
+                </tr>
+                
+                
+            </apex:repeat>
+        </table>
+        
+        <br/>
+    </div>
+    <apex:outputPanel rendered="{!showAccessories == 'true'}">
+        <div style="page-break-inside:avoid;">
+            <div style="font-size:13px; page-break-inside:avoid; padding: 10px 35px;">
+                <b>SERVICES</b> 
+                
+                <table border="1 solid" cellspacing ="0" cellpadding="3" width="100%" style="page-break-inside:avoid; padding-top: 10px;">
+                    <thead>
+                        <tr style="font-size:14px; color:#FFFFFF;page-break-inside:avoid;">
+                            <th bgcolor="#800080" width="8%" style="text-align:center">Item #</th>
+                            <th bgcolor="#800080" width="26%" style="text-align:left">Services</th>
+                            <th bgcolor="#800080" width="15%" style="text-align:center">Country</th>
+                            <th bgcolor="#800080" width="12%" style="text-align:center">Quantity</th>
+                            <th bgcolor="#800080" width="15%" style="text-align:center">Quota</th>
+                            <th bgcolor="#800080" width="12%" style="text-align:center">Start Date</th>
+                            <th bgcolor="#800080" width="12%" style="text-align:center">End Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <apex:variable value="{!1}" var="slno"></apex:variable>
+                        <apex:repeat value="{!wraplist}" var="item">
+                            <tr>
+                                
+                                <td style="text-align:center">
+                                    <div style="margin-top:1px;">
+                                        <!--<apex:outputText value="{!Floor(slno)}"/> 
+<apex:variable var="slno" value="{!slno + 1}"/> -->
+                                        {!item.srno}
+                                    </div>  
+                                </td>
+                                <td style="text-align:left">{!item.service.Top_Ups__r.name}</td>
+                                <td style="text-align:center">{!item.service.Product_Country__c}</td>
+                                <td style="text-align:center">{!item.service.Quantity_Unit__c}</td>
+                                <td style="text-align:center">{!item.service.Top_Ups__r.Inventory_Quota_Tenure__c}</td>
+                                <td style="text-align:center">
+                                    <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                        <apex:param value="{!item.service.Start_Date__c}" /> 
+                                    </apex:outputText>
+                                </td>
+                                <td style="text-align:center">
+                                    <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                        <apex:param value="{!item.service.End_Date__c}" /> 
+                                    </apex:outputText>
+                                </td>
+                            </tr>
+                        </apex:repeat>
+                        
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+    </apex:outputPanel>
+    <!--start tax-->
+    <table style="width:70%; margin-left:195px;">
+        <tr style="margin:0px 10px 0px 0px;text-align:right;">
+            <td>Total Taxable Value &nbsp;:
+            </td>
+            <td>
+               <!-- <apex:outputField value="{!QuotesN.Quote_Value__c}"/> -->
+                
+                {!QuotesN.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!QuotesN.Quote_Value__c}" />
+                        </apex:outputText>
+
+                
+            </td>
+        </tr>
+        <tr style="margin:0px 10px 0px 0px;text-align:right;">
+            <td>SST @{!QuotesN.Tax__c}% &nbsp;:
+            </td>
+            <td>
+                <!--  <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'United Arab Emirates' ||QuotesN.Selling_Country__c=='Philippines'}"
+value="VAT@{!QuotesN.Tax__c} :"
+/>
+
+<apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Singapore' || QuotesN.Selling_Country__c == 'India' }"
+value="GST Levy@{!QuotesN.Tax__c}% : "
+/>
+<apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}"
+value="SST@{!QuotesN.Tax__c}% :"
+/> -->
+             
+                {!QuotesN.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!QuotesN.Tax_Amount__c}" />
+                        </apex:outputText>
+
+                
+            </td>
+        </tr>
+        <tr style="margin:0px 10px 0px 0px;text-align:right;">
+            <td>Grand Total with Tax  &nbsp;:
+            </td>
+            <td>
+              
+                {!QuotesN.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!QuotesN.Net_Total__c}" />
+                        </apex:outputText>
+
+            </td>
+        </tr>
+    </table><br/>
+    
+    
+    <p><i>* The tax payable is subject to rate applicable on majority events falling for 2 out of 3 dates (i.e., date of invoice, date of provision of service and date of payment by Client) as may be applicable under the law, such tax rate is applicable. In the event of change in tax rate during the period and as per law if such changed is applicable, differential in tax also to be paid by Client.
+        
+        </i></p><br/>
+    
+    <!------------------- Payment terms & invoice delivery --------------->
+    <div>
+        <p>    
+            <b>3. PAYMENT TERMS &amp; Invoice delivery</b>
+        </p>
+        Client has agreed to pay the total invoice value to Company as per the following payment term (s) : <br/><br/>
+        <apex:outputPanel rendered="{!if(aap.size>0,true,false)}">
+            <table border="0.8px" cellspacing="0" style="margin-right:30px;margin-left:30px;font-size:14px; page-break-inside:avoid; border:1px solid black" width="90%">
+                
+                <tr>
+                    <td >Payment Due Date </td>
+                    <td >Payment Amount </td>
+                    <td >TDS Amount </td>
+                </tr>
+                <apex:repeat value="{!aap}" var="py">
+                    
+                    
+                    <tr>
+                        <td > {!DAY(py.Due_Date__c)}/{!MONTH(py.Due_Date__c)}/{!YEAR(py.Due_Date__c)}
+                            
+                        </td>
+                        <td >
+                          
+                            {!py.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!py.Payment_Amount__c}" />
+                        </apex:outputText>
+
+                            
+                        </td>
+                        <td >
+                          
+                            {!py.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!py.TDS_Payment_Amount__c}" />
+                        </apex:outputText>
+
+                            
+                        </td>
+                    </tr>
+                </apex:repeat>
+                
+            </table><br/>
+        </apex:outputPanel>
+        <br/>
+        All payments to be made in favour of <b>Agensi Pekerjaan Monster Malaysia Sdn. Bhd.</b>  
+    </div>
+    
+    <!----------------------------------------------Newly added Anup----------------------------------------------------------------->
+    <div style="margin-right:30px;margin-left:30px;font-size:13px;">
+        <p align="justify">
+            Company will raise the invoice upon execution of the Agreement by Client. Client shall pay the total invoice value to Company on or before the payment due date as per the agreed payment term(s).  In the event any payment is not made within the due date, Company may, without prejudice to its other rights under this Agreement or in law, have the right to deactivate Client's account and/or terminate this Agreement without any liability to Client. Client is bound to make the full payment for the Term, irrespective of whether they use the service(s) or not.  Client shall also be liable to pay the legal costs which may be incurred by Company towards recovery of any of the dues from Client.
+        </p>
+    </div>
+    
+    <div style="margin-right:30px;margin-left:30px;font-size:13px;"><p align="justify" style="font-size:13px;">Payment shall be subject to deduction of tax at source as may be applicable. Client shall provide a tax deduction certificate to Company as may be applicable. </p> </div>
+    
+    <div style="margin-right:30px;margin-left:30px;font-size:13px;">
+        
+        <b>4. DISPUTE RESOLUTION, ARBITRATION &amp; LAW</b>
+        <p align="justify">
+            Every dispute, difference or question which may at any time arise between the parties hereto or any person claiming under them, touching or arising out of or in respect of this agreement or the subject matter thereof shall be referred to and finally resolved by arbitration under the rules of Asian International Arbitration Centre (“AIAC”) at  Malaysia  as in force at the time of the dispute, which Rules shall be deemed to be a part of this Agreement by reference. The arbitration shall be conducted by one arbitrator mutually appointed by the Parties. The arbitration shall be conducted in the English language. The award passed by the Arbitrator shall be final and binding on the parties hereto. The venue of the arbitration shall be Malaysia. This Agreement shall be governed and construed in accordance with the laws of Malaysia and subject to Arbitration clause above, the courts of Malaysia shall have the exclusive jurisdiction to settle any disputes that may arise between the Parties out of or in connection with this Agreement.
+        </p>
+        
+    </div>
+    
+    
+    <!--------------------------------------------Newly Added Anup Ends Here--------------------------------------------------------->
+    
+    <!-----------------------------------------Newly added anup2--------------------------------------------------------------->
+    <div style="margin-right:30px;margin-left:30px;font-size:13px;">
+        
+        <b>5.    COMPLETE AGREEMENT</b>
+        <p align="justify">
+            The Agreement including these terms constitutes the entire understanding between Company &amp; Client with respect to the subject matter hereof and supersedes any previous oral or written arrangements or understandings relating thereto and governs use of the Company website or websites in which services are subscribed under the Agreement and may not be amended, terminated or waived unless agreed in writing by the Parties, and shall not be assigned, in whole or in part, directly or indirectly, by Client except by operation law and only comes into existence when signed by the Parties.  Any terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid terms of the Agreement. The Agreement shall not be amended without the affirmative written consent of Parties in writing.
+        </p>
+        
+        <p>IN WITNESS WHEREOF the Parties hereto have caused this Agreement to be executed by their authorized representatives on the day, date and year mentioned hereinabove.
+            
+        </p>
+    </div>
+    <!---------------------------------------Newly added ends here------------------------------------------------------------------------->
+    
+    <!--Guideline Start Here-->    
+    <apex:outputPanel rendered="{!showGuideLine}">
+        <div style="margin-left:35px; margin-right:30px; font-color:black;"> 
+            <apex:outputField value="{!guidelines.GuideLine_Details__c}"/>
+        </div>
+    </apex:outputPanel>
+    <!--Guideline End Here-->
+    
+    
+    <!--------------- Page change ------------------>
+    <div style=" page-break-after: always;"></div>
+    <hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+    <div style=" font-size:13px;font-family:verdana;font-color:black;">    
+        <center><b>ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR  </b></center></div>
+    <br/>
+    <br/>
+    <div style=" font-size:13px;font-color:black;">
+        1. Authorised Signature: _________________________________________________
+        
+        
+        <div style="margin:-15px 0px 0px 450px;text-align:right">2. Signing Date: ______/_______/________ </div>
+        <div style="margin:02px 0px 0px 595px;"> (dd/mm/yyyy) </div>
+        3. Printed Name:{!QuotesN.Contact__r.Name} <br/>
+        
+        <div style="margin:-10px 0px -10px 499px;"> <i>Total Price:  </i>   <b>
+             {!QuotesN.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!QuotesN.Net_Total__c}" />
+                        </apex:outputText>
+
+            <br/>
+            <br/>
+            </b>
+          
+          
+        </div> 
+        4. Job Title: {!QuotesN.Contact__r.Role__c}    <br/><br/>
+        
+        5. Company Name (as registered, if applicable) <br/><br/>  
+        
+        6. Registration Number (if applicable): <br/>
+        
+        
+        <br/><br/>
+        7. Agreement Start Date: <apex:outputText value="{0,date,dd/MM/yyyy}"><apex:param value="{!QuotesN.Start_Date__c}" /></apex:outputText>
+        <div style=" text-align:left"> </div>                       
+        <div style="margin:-30px 0px 0px 280px;"><i> The ‘Agreement Start Date’ will be the date nominated by the Purchaser. </i> </div>
+        
+        <div style="margin:0px 0px 0px 280px;">    If left blank,
+            the earliest product start date will be the nominated date.</div> <br/><Br/>
+        
+        8. Purchase Order Number:_______________________________If this field is left blank the invoice will be issued without a PO number.
+        
+    </div>
+    
+    <br/>
+    
+    <hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+    <hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+    
+    <!--- Section Reserve for monster ---------------->
+    
+    <div style=" font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px"><p><b> <center><i>Reserved for Agensi Pekerjaan Monster Malaysia Sdn. Bhd. </i></center> </b> <br/>
+        
+         Name: <!--«ProposalOwner_FirstName» «ProposalOwner_LastName» -->{!u.Manager.Name} 
+        
+        
+        <div style="margin:-15px 0px 0px 370px;">      Designation: <!--«ProposalOwner_Title» -->{!u.Manager.title} </div><br/><br/>
+        
+        Regd. Office : Level 16 and 17, The Bousteador, No 10 Jalan PJU 7/6, Mutiara Damansara, 47800 Petaling Jaya, Selangor, Malaysia, <br/><br/>
+        City: Selangor 
+        
+        <div style="margin:-15px 0px 0px 290px;"> Country: Malaysia</div>
+        
+        <br/>
+         Email : <!--«ProposalOwner_Email» -->{!u.Manager.email}
+        
+        <div style="margin:-13px 0px 0px 480px;">  Phone: +603 2779 4155</div> <br/> <br/>
+        
+        Signature:_____________________________________________________
+        
+        <div style="margin:-30px 0px 0px 480px;">Signing Date:_____/_____/________ </div> <br/>
+        
+        <div style="margin:-10px 0px 0px 565px;"> (dd/mm/yyyy) </div><br/>
+        
+        
+        
+    </p></div> 
+<hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+<div style="font-size:14px;font-family:verdana;">
+    <b>Sales Rep : </b><!--«{!QuotesN.Account__r.PrimarySalesManager__c}» -->«{!u.Name}» &nbsp; <b>Email :</b>«{!u.email}» &nbsp;  <b>Phone :</b>«{!u.Phone}»
+    <p style="text-align:justify;">
+        By signing this Agreement Client is agreeing to purchase the products and services listed above subject to the attached standard Services “TERMS AND CONDITIONS” and product terms, a copy of which was sent to the Client with this Agreement. Please return this Agreement to the Company sales representative. 
+    </p>
+</div>
+<br/>
+<!---------------------------------------------------------Signatory part-------------------------------------------------------------------------------------------------------->
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px;page-break-inside:avoid;"> For and on behalf of within named </div><br/>
+
+
+<!--------------------------------------------------------------------------------extra info--------------------------------------------------------------->
+<div style="font-size:13px;font-family:verdana;">
+    
+    <div style="margin:-25px 0px 0px 400px;">    For and on behalf of within named  </div><br/>
+    
+    <b>Agensi Pekerjaan Monster Malaysia Sdn. Bhd.</b><br/> 
+    <div style="margin:-15px 0px 0px 400px;"> <b> {!QuotesN.Account__r.name} </b> </div><br/><br/>
+    
+    <!--- <div style="margin:-16px 0px 0px 600px;"> PIN Code: 189702</div>  ---->
+    Authorised Signatory
+    <div style="margin:-18px 0px 0px 400px;"> Authorised Signatory </div> <br/> 
+    <div style="margin:-16px 0px 0px 400px;">Name :  </div> <br/>
+    <div style="margin:-16px 0px 0px 400px;">Title:  </div> <br/>
+    <div style="margin:-16px 0px 0px 400px;">Date:  </div> <br/>
+    
+    
+    <div style="margin:-16px 0px 0px 400px;">Company Seal:  </div> <br/> 
+    
+    <br/>
+    
+    
+    
+    <!-- <p style="page-break-after: always;">&nbsp;</p> -->
+    
+</div>
+
+<!--------------------------------------------------------Signatory part ends here------------------------------------------------------------------------------------------------>
+<!------------- Page Change ---------------------->
+<div style=" page-break-after: always;">
+</div> 
+
+<!-------------- Terms & Conditions --------------->
+<div style="font-family:verdana;font-size:14px;text-align:justify">
+    <center><b>TERMS AND CONDITIONS</b></center>
+    
+    <p align="justify">
+        Training on the Company products and services, wherever applicable, will be scheduled by the Company's relationship contact.  On receipt of Username and Password from the Company’s Relationship Contact, Client can use the subscribed Service onto the concerned website of the Company to which the Service relates. 
+    </p>
+    
+    <p align="justify">
+        If Client (including any of Client employees) are found to share passwords with any third party, the Company may revoke all login &amp; passwords deactivate Client’s account and no refund will be given.  Client agrees not to resell any of the products and services subscribed by Client from the Company including but not limited to any job postings or any database access to any third party.  Amounts paid for Services are non-refundable. The services may be deactivated if the payment is not made by the due date(s) mentioned in the agreement / invoice. Client shall also be liable to pay to the Company for dishonor of each payment instruments, which includes either by cheque, ECS electronic payment, or any other method of payment instructions by Client. 
+    </p>
+    <p align="justify">
+        Client represents and warrants that Client use of foundit website (Site) data shall be lawful and shall comply with all the applicable laws, including but not limited to the laws relating to contracts, labour and employment laws, data privacy laws, cyber laws and law relating to intellectual property. Client further represents and warrants that all and any materials or information provided to the Company to be uploaded to any Site or otherwise used by the Company in the provision of the Service, complies with all applicable laws, and its use in connection with the Service does not infringe the rights of any third parties. Client shall provide the relevant accurate documents for verification / validation at Company’s end. 
+    </p>
+    <p align="justify">
+        The Company reserves the right to deactivate the Client’s account and / or initiate appropriate action under any applicable law including Personal Data protection Act   in the event of any deficiency and/or any acts and omission with the intent to forgery or use of Company’s data other than recruitment purpose.    
+    </p>
+    <p align="justify">
+        The contents of each foundit website “Site” (including without limitation all job postings and all resumes), and all elements, which are a part of the foregoing, and all intellectual and other proprietary rights therein, are the property of the Company. Notwithstanding the above, any job postings placed on any Site by the Client, and all elements which are a part of the foregoing, and all intellectual and other proprietary rights therein, are and shall at all times remain Client’s property.  
+    </p>
+    <p align="justify">
+        Client consents to the Company for replicating its job postings into Client’s Account in the foundit website. Client agrees and accepts that job posting to be replicated on foundit website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Client agrees to use only its names, logos or trademarks.  
+    </p>
+    <p align="justify">
+        The Company may not replicate any job posting of Client and/or delete the job postings from the foundit website which does not comply with applicable laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property.  
+    </p>
+    <p align="justify">
+        The advertisements for competitors of the Company or post jobs or other content that contains links to any site competitive with the Company shall not qualify for replication. Any such replicated postings will be immediately deleted / removed without notice. The Company reserves the right to remove any job posting or content from foundit website, which in the reasonable exercise of The Company’s discretion, does not comply with the above Terms, or if any content is posted that the Company believes is not in accordance with the Terms of Use &amp; Privacy of the foundit website and/or applicable laws and regulations. The Company shall not be liable for any conflict, in the event of replication of the Job Postings of Client’s competitor on the foundit site or vice versa or any disagreement between them in this connection. The replication of Client’s job posting will be only during the continuance of Service Agreement with The Company.  Client does not have any right to get its job Postings replicated on foundit website. The Company shall in its sole discretion may decide whether to assist the Client in replication or not without giving any reason thereof.
+    </p>
+    <p align="justify">
+        In view of the Personal Data Protection Act 2010 (“the Act”), to the extent that any of the data/information extended from either party and/or collected/processed by either party, pursuant to this Agreement, consists of “personal data” as defined in the Personal Data Protection Act (“PDPA”), Parties shall procure that its respective employees, representatives and/or agents agree to observe the personal data protection requirements hereunder as may be modified from time to time under the Act. Parties shall only process personal data which it may receive from the other, while carrying out its duties under this Agreement in such a manner as is necessary to carry out their respective obligations under this Agreement for the Services and adopt appropriate technical and organizational measures to prevent the unauthorized or unlawful processing of such personal data and/or the accidental loss or destruction of, or damage to, such personal data.  
+    </p>
+    <p align="justify">
+        Each of the Parties shall at all times use its best endeavors to keep confidential (and to ensure that its officers, directors, employees or representatives shall keep confidential) each other’s sensitive business or proprietary information, whether marked or otherwise indicated to be confidential or not, which it may acquire, have access to or obtain, whether directly or indirectly, in relation to this Agreement or in relation to their respective business or affairs of the other Party (or any of its respective affiliates) and shall not use or disclose such information except with the approval in writing of the other party or in accordance with the order of a court of competent jurisdiction or as contemplated under this Agreement. 
+    </p>
+    <p align="justify">
+        Each Party agrees to comply all the applicable Data Protection and Privacy laws and shall adhere to general principles of Personal Data processing; ensure the processing, use, transfer of the Personal Data in accordance with the applicable Data Protection and Privacy laws; adopt appropriate technical and security measures to protect the Personal Data from any potential misuse / unauthorized disclosures  and will indemnify and keep indemnified and defend at its own expense the other Party (Indemnified Party) against all costs, third party claims, direct damages, or proceedings which other Party may incur as a result of a breach solely by the Indemnifying Party’s of its obligations within the ambit of this Agreement. 
+    </p>
+    <p align="justify">
+        Client shall use the foundit website data only for the recruitment purposes and not otherwise. Client shall not use foundit website data for any other purpose except as permitted under this Agreement. Client shall not use foundit website data for its storage purpose and shall not use it for making a database of its own by using it. Breach of this obligation will result in immediate suspension of the Agreement by the Company without any liability towards Client besides availing appropriate remedy under the process of law including but not limited to injunctive relief.  
+    </p>
+    <p align="justify">
+   Each Party represents and warrants that it will not in connection with its obligations under this Agreement give, offer, promise to offer, or authorize the offer, directly or indirectly (proxy bribing), anything of value (such as money, shares, goods or service, gifts or entertainment) to government officials, government customers, potential government customers or foreign government
+officials including officials of any public international organizations or officials of any political party either in Malaysia or abroad (“Officials” ) with an intent to influence any act or decision in his or her official capacity, induce the Official to do or omit to do any act in violation of his or her lawful duty to obtain any improper advantage, or induce to use such Official’s influence improperly to affect or influence an act or decision. Each Party understands and acknowledges that any non adherence to the warranty as stated hereinabove will violate the provisions of the Malaysian Anti-Corruption. Commission Act 2009; (“Anti- bribery Law”). Each Party shall indemnify, save and hold harmless the other Party, its subsidiaries and affiliates, officers, directors and employees, against any and all losses, penalties and expense including court costs and reasonable attorney fees resulting from any breach of this warranty by it. Company shall have the right to terminate this Agreement with immediate effect, without any liability whatsoever, if Client is in breach of this warranty.
+   
+    </p>
+    <p align="justify">
+        
+    </p>
+    
+    <!--<p align="justify" style="">
+        The Company's user's/job seeker's database, which also contains publicly available information of the users educational qualification, skills, employment history and relevant information. 
+        The Company provides to the Client the publicly available information of the users which is obtained from third-party data aggregators /service providers.
+        The Company has tech enabled unique search features on foundit website to search and find relevant candidates on foundit website as required by the Client.
+        Client may use these features to search the relevant candidates.
+    </p>
+    <p align="justify" style="">
+        The Company services and all data and information obtained and provided the services are provided on an "as is," "as available" basis. To the fullest extent permissible under applicable law,
+        Company makes no warranty or guarantee, express or implied, relating to the services or Client's use of the services, or any data or information obtained via the services or provided under
+        this agreement and/or accuracy thereof, including but not limited to any implied warranties of merchantability, satisfactory quality, non-infringement, and/or fitness for a particular purpose.
+    </p>
+    <p align="justify" style="">
+        Company does not have any obligation to monitor the information included in the Product and it is not responsible for the availability,
+        accuracy, applicability, or legality of any information, data, or domain does not represent or warrant that the information provided under the Product shall be error-free or that
+        any errors will be corrected. Company shall not be liable for any damages or loss incurred to the Client, or any other third party as a result or in connection with the use of the Product
+        or in connection with use of or reliance on any information derived from the Product.
+    </p>-->
+    
+    <p align="justify">
+        Notwithstanding anything to the contrary contained herein, neither party will be liable to the other party (nor to any person claiming rights derived from the other party's rights) for incidental, indirect, consequential, special, punitive or exemplary damages of any kind including lost revenues or profits, loss of business  arising out of this agreement (including without limitation as a result of any breach of any warranty, or other term of this agreement), regardless of whether the party liable or allegedly liable was advised, had other reason to know, or in fact knew of the possibility thereof.  In no event shall the Company’s liability under this Agreement exceed one (1) month Service Fee received by it from the Client for the immediately preceding month from when such liability arose.
+    </p>
+    <p align="justify">
+        The defaulting Party agrees to keep the non-defaulting Party indemnified against all suits and proceedings filed against, and actual costs, charges, expenses, losses or damages including reasonable attorney fees incurred, suffered or sustained by the non-defaulting Party by reason of breach of any third party intellectual property rights by the defaulting Party.   
+    </p>
+    <p align="justify">
+        In case of conflict of any term(s) of this Agreement with any subsequent Purchase Order / written document executed post the signing of this Agreement in relation to this Agreement, the term(s) of this Agreement shall prevail  
+    </p>
+    <p align="justify">
+        If Client breaches any provision of the Agreement, The Company may (i) discontinue the service and/or (ii) pursue all other available remedies to enforce the Agreement and obtain payment due thereof. Notwithstanding anything to the contrary contained herein, Client’s use of the The Company website and Career Services is subject to the Terms of Use<a href="https://www.foundit.my/info/terms-of-use"> https://www.foundit.my/info/terms-of-use</a>  &amp; Privacy Policy <a href="https://www.foundit.my/info/privacy"> https://www.foundit.my/info/privacy</a> and/or available from such other applicable foundit website's homepage in which the Service subscribed. By Client’s execution of the Agreement, the Client agree to abide by such Terms of Use &amp; Privacy Policy of applicable foundit website (s), as they may be amended from time to time and these Terms and Conditions.  
+    </p>
+    <p align="justify">
+        Any Extension/ Up-gradation / renewal of the Services of the Client after the date of expiry of the Agreement shall be given effect only after executing a fresh / renewal Agreement between the Company and Client. The Company will accordingly raise a fresh Invoice for a price as agreed by the Company and Client for the aforesaid extension/up-gradation/renewal period.   
+    </p>
+    <p align="justify">
+        The Agreement including these terms constitutes the entire understanding between Company &amp; Client with respect to the subject matter hereof and supersedes any previous oral or written arrangements or understandings relating thereto and governs use of the Company website or websites in which services are subscribed under the Agreement and may not be amended, terminated or waived unless agreed in writing by the Parties, and shall not be assigned, in whole or in part, directly or indirectly, by Client except by operation law and only comes into existence when signed by the Parties.  Any terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid terms of the Agreement. The Agreement shall not be amended without the affirmative written consent of Parties in writing. 
+    </p>
+    <p align="justify">
+        The Company has devised a dedicated nodal email ID i.e. cr@foundit.my  for its clients. Client can write to the Company at the said email for any information, support and concerns.
+        
+        
+    </p>
+    
+</div>
+</apex:page>

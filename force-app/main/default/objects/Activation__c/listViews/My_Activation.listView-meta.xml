@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Activation</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Order_For_Revamp__c</columns>
+    <columns>CR_Name__c</columns>
+    <columns>Gross_Total__c</columns>
+    <columns>No_of_Job_Postings__c</columns>
+    <columns>Account_Type__c</columns>
+    <columns>Order_Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Activation</label>
+</ListView>

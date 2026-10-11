@@ -1,0 +1,12 @@
+<p><span style="font-size:12px;"><img alt="Monster Logo" src="https://monster--c.na23.content.force.com/servlet/servlet.ImageServer?id=0151600000IXMBy&amp;oid=00D3F000000CrWG" /></span></p>
+<span style="font-size:12px;"><span style="font-family:tahoma,geneva,sans-serif;">Thank you for contacting Monster Customer Service. This is an automated response to inform you that we have received your message.<br />
+</span>
+<br />
+<span style="font-family:tahoma,geneva,sans-serif;">Regards,<br />
+Monster Customer Service</span><br />
+&nbsp;&nbsp;<br />
+<span style="font-family:tahoma,geneva,sans-serif;">Case Thread ID: {!Case.Thread_Id}</span><br />
+&nbsp;<br />
+<span style="font-family:tahoma,geneva,sans-serif;">---- Original Message ----<br />
+{!Case.Description}<br />
+---------------------------------</span></span>Confirmation Receipt - {!Case.Subject} - Case #: {!Case.CaseNumber}

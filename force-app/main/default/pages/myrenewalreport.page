@@ -1,0 +1,113 @@
+<apex:page controller="myrenewalreport" renderas="PDF" cache="false" applyBodyTag="false" applyHtmlTag="false"   showHeader="false" sidebar="false">
+<apex:form >   
+    <c:PDFHeaderFooterRunning value="header">
+         <apex:image url="{!URLFOR($Resource.Monster_Logo)}" width="200px" />
+        </c:PDFHeaderFooterRunning>
+    
+    <c:PDFHeaderFooterRunning value="footer">
+        
+        </c:PDFHeaderFooterRunning>
+    
+    <apex:pageBlock >
+        
+<h4 style="text-align:center">RENEWAL AGREEMENT</h4>
+<table style=" border: 1px  solid;font-size:13px;  align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+<tr><td>
+     <p style="font-size:13px">
+This RENEWAL SERVICE AGREEMENT  is made and entered into between Monster Malaysia Sdn Bhd, (hereinafter referred to as 'Monster', 
+which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns) AND 
+Error! Bookmark not defined.(hereinafter referred to as 'Purchaser', which expression shall, unless repugnant to the context or 
+meaning thereof, mean and include its successors and permitted assigns). 
+         <br></br><br></br>
+        
+(Monster and Purchaser are hereinafter collectively referred to as "the Parties" and severally as "Party")
+        
+        <br></br><br></br>
+    
+The Parties had signed  Service  Agreement  dated (&#34;Agreement&#34;), the Term of the said Agreement expired by efflux 
+of time and Purchaser hereby agrees to renew the Agreement to subscribe the below products and services from Monster 
+for consideration as agreed between the Parties as under : 
+         
+         
+         </p>
+    
+    </td>
+ </tr>
+         </table>
+
+<table style="   align:left; height:-100px;width:100%; margin-top:18px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+   <tr><td style="border-bottom: 1px solid black;border-top: 1px solid black;border-right: 1px solid black; width:50%">
+<b>Date :</b><br/>
+<b>Quote #:</b> <br/>
+<b>Quote Valid From:</b><br/>
+</td>
+<td style="text-align:left;border-bottom: 1px solid black;border-top: 1px solid black;width:50% ">
+<b>Sales Rep:</b><br/>
+<b>Email:</b> <br/>
+<b>Tel:</b> <br/>
+<b>Fax:</b> <br/>
+</td>
+</tr>      
+    
+<tr>
+  <td style="text-align:left;border-bottom: 1px solid black; border-right: 1px solid black;width:50%"><b>Purchaser:</b><br/>
+</td>
+
+<td style="text-align:left;border-bottom: 1px solid black;width:50% "><b>Bill To:</b><br/></td>
+</tr>
+
+    <br/>
+<hr> </hr>
+
+<div style="font-size:14px">
+
+    <center>
+<b>SERVICE DETAILS:</b>
+The details of service that Purchaser has agreed to take from Monster are as follows (&#34;Service&#34;):
+</center>
+    <br/>
+
+<table style="border:1px solid black;border-collapse: collapse;">
+<th style="">
+<tr style="border:1px solid black;background-color:#800080; ">
+<td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Items<br/>#</td>
+<td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Product</td>
+<td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:13px">Qty</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product End Date</td>
+
+</tr>
+</th>
+        
+        <tr>
+<td style="border:1px solid black;">1</td>
+<td style="border:1px solid black;">Product</td>
+<td style="border:1px solid black;">1</td>
+<td style="border:1px solid black;">28-1-2018</td>
+<td style="border:1px solid black;">29-9-2019</td>
+</tr>
+<tr><td style="border:1px solid black;" colspan="5"><b>Comments:</b></td></tr>
+
+</table><br/>
+
+<div align="right">
+    
+<table width="100%">
+<tr >
+<td align="right">Value of Services:</td><td>&nbsp;&nbsp;INR 222552254</td>
+</tr>
+</table>
+    
+</div>
+    
+     </div>
+</table>
+   
+        
+        
+    
+    </apex:pageBlock>
+    
+ </apex:form>   
+    
+</apex:page>

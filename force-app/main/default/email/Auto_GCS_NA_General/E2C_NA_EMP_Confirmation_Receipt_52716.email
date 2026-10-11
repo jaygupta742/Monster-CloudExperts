@@ -1,0 +1,15 @@
+<p><span style="font-size:12px;"><img alt="Monster Logo" src="https://monster--c.na23.content.force.com/servlet/servlet.ImageServer?id=0151600000IXMBy&amp;oid=00DG0000000kUQ2" /></span></p>
+<span style="font-size:12px;"><span style="font-family:tahoma,geneva,sans-serif;">Thank you for contacting Monster Customer Service. This is an automated response to inform you that we have received your message. You should receive a response to your inquiry or comment within 1-2 business days.<br />
+<br />
+If you need more immediate assistance please contact us at 1-800-MONSTER (1-800-666-7837).</span><br />
+<br />
+<span style="font-family:tahoma,geneva,sans-serif;">Our Customer Service Hours are Monday through Friday 8:30AM to 6PM EST.<br />
+<br />
+Your email is important to us and we thank you for using Monster!</span><br />
+<br />
+Regards,<br />
+Monster Customer Service</span><br />
+&nbsp;&nbsp;<br />
+Case Thread ID: {!Case.Thread_Id}
+---- Original Message ----<br />
+{!Case.Description}<br />

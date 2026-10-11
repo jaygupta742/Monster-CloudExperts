@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Account Merge Request</name>
+    <style>freeForm</style>
+    <subject>{!Account.SalesChannel__c} Account Merge Request (Account Merge Request )</subject>
+    <textOnly>Send Email To:
+India Users - MO-IN-Karma Cleanup
+Gulf Users - MO-ME-Karma Request
+SEA Users - MO-SEA-Karma Request
+
+Current Primary Account Rep: {!Account.Primary_Sales_Rep__c}
+
+Subject: Account Correction Request for Account {!Account.Id}:
+
+Instructions:
+
+Use this form to request Account Merge to your accounts in Karma.
+
+Complete ALL required fields to ensure that the request is processed properly
+
+Required Information:
+1. Merge Duplicate Account
+Karma Account ID of Duplicate Account (to be purged from Karma):
+Karma Account ID of Existing Account (to remain in Karma):
+Sales Rep Login to remain on Existing Account:
+
+Comments Indicate any clarifying comments below:</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

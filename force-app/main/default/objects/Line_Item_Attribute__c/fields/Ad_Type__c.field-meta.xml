@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ad_Type__c</fullName>
+    <label>Ad Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Select One</fullName>
+                <default>true</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Extended</fullName>
+                <default>false</default>
+                <label>Extended</label>
+            </value>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Bundled Mirrored</fullName>
+                <default>false</default>
+                <label>Bundled Mirrored</label>
+            </value>
+            <value>
+                <fullName>Basic Posting</fullName>
+                <default>false</default>
+                <label>Basic Posting</label>
+            </value>
+            <value>
+                <fullName>Enterprise Posting</fullName>
+                <default>false</default>
+                <label>Enterprise Posting</label>
+            </value>
+            <value>
+                <fullName>FTP</fullName>
+                <default>false</default>
+                <label>FTP</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>Intelli Post</fullName>
+                <default>false</default>
+                <label>Intelli Post</label>
+            </value>
+            <value>
+                <fullName>MHX</fullName>
+                <default>false</default>
+                <label>MHX</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Premium Posting</fullName>
+                <default>false</default>
+                <label>Premium Posting</label>
+            </value>
+            <value>
+                <fullName>Quick Post</fullName>
+                <default>false</default>
+                <label>Quick Post</label>
+            </value>
+            <value>
+                <fullName>Designed Ad</fullName>
+                <default>false</default>
+                <label>Designed Ad</label>
+            </value>
+            <value>
+                <fullName>EB Multi Language</fullName>
+                <default>false</default>
+                <label>EB Multi Language</label>
+            </value>
+            <value>
+                <fullName>EB Multi Navigation</fullName>
+                <default>false</default>
+                <label>EB Multi Navigation</label>
+            </value>
+            <value>
+                <fullName>EB Multi Rotation</fullName>
+                <default>false</default>
+                <label>EB Multi Rotation</label>
+            </value>
+            <value>
+                <fullName>Standard Template</fullName>
+                <default>false</default>
+                <label>Standard Template</label>
+            </value>
+            <value>
+                <fullName>Maritimes</fullName>
+                <default>false</default>
+                <label>Maritimes</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Single</fullName>
+                <default>false</default>
+                <label>Single</label>
+            </value>
+            <value>
+                <fullName>Trial</fullName>
+                <default>false</default>
+                <label>Trial</label>
+            </value>
+            <value>
+                <fullName>Bridge</fullName>
+                <default>false</default>
+                <label>Bridge</label>
+            </value>
+            <value>
+                <fullName>Springer</fullName>
+                <default>false</default>
+                <label>Springer</label>
+            </value>
+            <value>
+                <fullName>Power Post</fullName>
+                <default>false</default>
+                <label>Power Post</label>
+            </value>
+            <value>
+                <fullName>Handling Fee/Transition</fullName>
+                <default>false</default>
+                <label>Handling Fee/Transition</label>
+            </value>
+            <value>
+                <fullName>Fixed</fullName>
+                <default>false</default>
+                <label>Fixed</label>
+            </value>
+            <value>
+                <fullName>Employer Branding</fullName>
+                <default>false</default>
+                <label>Employer Branding</label>
+            </value>
+            <value>
+                <fullName>Public CH</fullName>
+                <default>false</default>
+                <label>Public CH</label>
+            </value>
+            <value>
+                <fullName>Secondary Location</fullName>
+                <default>false</default>
+                <label>Secondary Location</label>
+            </value>
+            <value>
+                <fullName>Weblaw Job</fullName>
+                <default>false</default>
+                <label>Weblaw Job</label>
+            </value>
+            <value>
+                <fullName>Weblaw Job Campus</fullName>
+                <default>false</default>
+                <label>Weblaw Job Campus</label>
+            </value>
+            <value>
+                <fullName>Classic</fullName>
+                <default>false</default>
+                <label>Classic</label>
+            </value>
+            <value>
+                <fullName>Premium</fullName>
+                <default>false</default>
+                <label>Premium</label>
+            </value>
+            <value>
+                <fullName>Pushdown</fullName>
+                <default>false</default>
+                <label>Pushdown</label>
+            </value>
+            <value>
+                <fullName>Promoted</fullName>
+                <default>false</default>
+                <label>Promoted</label>
+            </value>
+            <value>
+                <fullName>One Time</fullName>
+                <default>false</default>
+                <label>One Time</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assign_To_Me</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Assign To Me</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT (&quot;/soap/ajax/13.0/connection.js&quot;)} 
+
+var selected = {!GETRECORDIDS($ObjectType.Compliance__c)}; 
+var updateRecords = []; 
+
+if (selected[0] == null) { 
+
+alert(&quot;Please select at least one Case.&quot;) 
+location.reload(); 
+} 
+
+else { 
+
+//alert(selected.length); 
+
+for (var a=0; a&lt;selected.length; a++) { 
+var update_Case = new sforce.SObject(&quot;Compliance__c&quot;); 
+update_Case.OwnerId = &quot;{!$User.Id}&quot;; 
+update_Case.Id = selected[a]; 
+updateRecords.push(update_Case); 
+
+} 
+
+result = sforce.connection.update(updateRecords); 
+//alert(&quot;Closed Successfully&quot;); 
+location.reload(); 
+
+}</url>
+</WebLink>

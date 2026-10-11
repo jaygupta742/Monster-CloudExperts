@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>To_restrict_change_owner_for_other_objec</fullName>
+    <active>true</active>
+    <description>If user(suresh,yasmine) are trying to change owner for other objects except for opportunity then they should get an error</description>
+    <errorConditionFormula>AND(
+ISCHANGED(OwnerId),
+($User.Alias = &quot;SBabu&quot;||$User.Alias = &quot;YYaqub&quot;),
+LEFT(Id,3) &lt;&gt; &quot;a0k&quot;
+)</errorConditionFormula>
+    <errorDisplayField>OwnerId</errorDisplayField>
+    <errorMessage>You do not have the access to change the ownership!!!</errorMessage>
+</ValidationRule>

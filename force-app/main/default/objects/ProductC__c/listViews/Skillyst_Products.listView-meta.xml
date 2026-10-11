@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Skillyst_Products</fullName>
+    <columns>NAME</columns>
+    <columns>Main_Product_Type__c</columns>
+    <columns>Product_Code__c</columns>
+    <columns>Product_Name__c</columns>
+    <columns>DB_Scope_Geography__c</columns>
+    <columns>Product_Country__c</columns>
+    <columns>Product_SKU_Code__c</columns>
+    <columns>SKU_Type__c</columns>
+    <columns>DB_Type_Industry__c</columns>
+    <columns>Price_Master__c</columns>
+    <columns>Tenure_Months__c</columns>
+    <columns>UOM__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Type__c</field>
+        <operation>equals</operation>
+        <value>Skillyst</value>
+    </filters>
+    <label>Skillyst Products</label>
+</ListView>

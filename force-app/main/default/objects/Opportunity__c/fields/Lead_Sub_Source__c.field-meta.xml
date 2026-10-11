@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Sub_Source__c</fullName>
+    <label>Lead Sub Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Alliances</fullName>
+                <default>false</default>
+                <label>Alliances</label>
+            </value>
+            <value>
+                <fullName>Collected Jobs</fullName>
+                <default>false</default>
+                <label>Collected Jobs</label>
+            </value>
+            <value>
+                <fullName>Company</fullName>
+                <default>false</default>
+                <label>Company</label>
+            </value>
+            <value>
+                <fullName>Company website</fullName>
+                <default>false</default>
+                <label>Company website</label>
+            </value>
+            <value>
+                <fullName>Competitor website</fullName>
+                <default>false</default>
+                <label>Competitor website</label>
+            </value>
+            <value>
+                <fullName>Contact Information</fullName>
+                <default>false</default>
+                <label>Contact Information</label>
+            </value>
+            <value>
+                <fullName>CRM Mktg List</fullName>
+                <default>false</default>
+                <label>CRM Mktg List</label>
+            </value>
+            <value>
+                <fullName>eCom call</fullName>
+                <default>false</default>
+                <label>eCom call</label>
+            </value>
+            <value>
+                <fullName>Helpline-Info</fullName>
+                <default>false</default>
+                <label>Helpline-Info</label>
+            </value>
+            <value>
+                <fullName>International LCS</fullName>
+                <default>false</default>
+                <label>International LCS</label>
+            </value>
+            <value>
+                <fullName>Kununu Opportunity</fullName>
+                <default>false</default>
+                <label>Kununu Opportunity</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>News Alerts</fullName>
+                <default>false</default>
+                <label>News Alerts</label>
+            </value>
+            <value>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+                <label>Newspaper</label>
+            </value>
+            <value>
+                <fullName>Notify Sales Rep</fullName>
+                <default>false</default>
+                <label>Notify Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Product Demo</fullName>
+                <default>false</default>
+                <label>Product Demo</label>
+            </value>
+            <value>
+                <fullName>ProspectFinder</fullName>
+                <default>false</default>
+                <label>ProspectFinder</label>
+            </value>
+            <value>
+                <fullName>Tradeshow</fullName>
+                <default>false</default>
+                <label>Tradeshow</label>
+            </value>
+            <value>
+                <fullName>VC Funding Lead</fullName>
+                <default>false</default>
+                <label>VC Funding Lead</label>
+            </value>
+            <value>
+                <fullName>Whos Hiring</fullName>
+                <default>false</default>
+                <label>Whos Hiring</label>
+            </value>
+            <value>
+                <fullName>YTM-Potential</fullName>
+                <default>false</default>
+                <label>YTM-Potential</label>
+            </value>
+            <value>
+                <fullName>Monster Talent Gateway</fullName>
+                <default>false</default>
+                <label>Monster Talent Gateway</label>
+            </value>
+            <value>
+                <fullName>Monster Twitter Cards</fullName>
+                <default>false</default>
+                <label>Monster Twitter Cards</label>
+            </value>
+            <value>
+                <fullName>Social Job Ads</fullName>
+                <default>false</default>
+                <label>Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>Talent CRM</fullName>
+                <default>false</default>
+                <label>Talent CRM</label>
+            </value>
+            <value>
+                <fullName>TalentBin</fullName>
+                <default>false</default>
+                <label>TalentBin</label>
+            </value>
+            <value>
+                <fullName>TMS</fullName>
+                <default>false</default>
+                <label>TMS</label>
+            </value>
+            <value>
+                <fullName>GCS Buying Signal</fullName>
+                <default>false</default>
+                <label>GCS Buying Signal</label>
+            </value>
+            <value>
+                <fullName>GCS Call Inbound</fullName>
+                <default>false</default>
+                <label>GCS Call Inbound</label>
+            </value>
+            <value>
+                <fullName>GCS Email Inbound</fullName>
+                <default>false</default>
+                <label>GCS Email Inbound</label>
+            </value>
+            <value>
+                <fullName>Abandoned Cart</fullName>
+                <default>false</default>
+                <label>Abandoned Cart</label>
+            </value>
+            <value>
+                <fullName>Call Inbound</fullName>
+                <default>false</default>
+                <label>Call Inbound</label>
+            </value>
+            <value>
+                <fullName>CS Buying Signal</fullName>
+                <default>false</default>
+                <label>CS Buying Signal</label>
+            </value>
+            <value>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+                <label>Email Inbound</label>
+            </value>
+            <value>
+                <fullName>Proactive Chat</fullName>
+                <default>false</default>
+                <label>Proactive Chat</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>DF - Lapsed</fullName>
+                <default>false</default>
+                <label>DF - Lapsed</label>
+            </value>
+            <value>
+                <fullName>DF - Data.com</fullName>
+                <default>false</default>
+                <label>DF - Data.com</label>
+            </value>
+            <value>
+                <fullName>DF - Hoovers</fullName>
+                <default>false</default>
+                <label>DF - Hoovers</label>
+            </value>
+            <value>
+                <fullName>DF - Wanted</fullName>
+                <default>false</default>
+                <label>DF - Wanted</label>
+            </value>
+            <value>
+                <fullName>DF - Candidate</fullName>
+                <default>false</default>
+                <label>DF - Candidate</label>
+            </value>
+            <value>
+                <fullName>DF - Marketing</fullName>
+                <default>false</default>
+                <label>DF - Marketing</label>
+            </value>
+            <value>
+                <fullName>DF - Warm</fullName>
+                <default>false</default>
+                <label>DF - Warm</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

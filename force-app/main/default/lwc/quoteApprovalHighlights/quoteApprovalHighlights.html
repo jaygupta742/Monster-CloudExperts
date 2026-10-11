@@ -1,0 +1,30 @@
+<template>
+    <div style="background-color: #FFFFFF; border-radius: 5px; width: 100%;" if:true={isQuoteObject}>
+        <div class="slds-align_absolute-center slds-var-p-around_small" style="border-bottom: 1px dashed #C9C9C9;">
+            Approval Highlights
+        </div>
+
+        <c-quote-approval-settings record-id={TargetRecordId} if:true={TargetRecordId}></c-quote-approval-settings>
+
+        <div class="slds-section slds-is-open slds-m-around_small">
+            <h3 class="slds-section__title slds-theme_shade revamp-theme">
+                <span class="slds-truncate slds-p-horizontal_small" title="Quote Highlights">Quote Highlights</span>
+            </h3>
+            <div class="slds-section__content slds-p-horizontal_small">
+                <lightning-layout multiple-rows="true">
+                    <template for:each={ApprovalHighLights} for:item="item">
+                        <lightning-layout-item key={item.key} size="12" class="slds-var-p-around_xx-small"
+                            large-device-size="3" medimum-device-size="3" small-device-size="12">
+                            <div class={item.boxClass} style="text-align: center;">
+                                <div style="font-size: 12px;">{item.value}</div>
+                                <span class="slds-text-title_caps">{item.label}</span>
+                            </div>
+                        </lightning-layout-item>
+                    </template>
+                </lightning-layout>
+            </div>
+        </div>
+
+        <p class="slds-text-color_error slds-text-body_small" data-id="error-text" hidden></p>
+    </div>
+</template>

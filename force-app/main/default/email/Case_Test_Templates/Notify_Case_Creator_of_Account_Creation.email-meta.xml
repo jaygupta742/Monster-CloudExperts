@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Notify Case Creator of Account Creation for New Account Request cases</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Notify Case Creator of Account Creation</name>
+    <style>none</style>
+    <subject>Case Closed - {!Case.CaseNumber} - New Account: {!Account.Name} - {!Account.Lead_Account_Status__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

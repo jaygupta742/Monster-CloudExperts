@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExtlClntAppOauthSettings xmlns="http://soap.sforce.com/2006/04/metadata">
+    <commaSeparatedOauthScopes>Basic, Api, Web, Full, Chatter, CustomApplications, RefreshToken, OpenID, CustomPermissions, Wave, Eclair, Pardot, Lightning, Content, CDPIngest, CDPProfile, CDPQuery, Chatbot, CDPSegment, CDPIdentityResolution, ForgotPassword, CDPCalculatedInsight, UserRegistration, SFApiPlatform, Interaction, CDP, EinsteinGPT, PwdlessLogin, MCP, SCRT, DataCloudUserClaims, A2A, CmdbDiscovery</commaSeparatedOauthScopes>
+    <externalClientApplication>Claude</externalClientApplication>
+    <label>Claude_oauth</label>
+    <oauthLink>00DC4000003ZhbR:888C40000003CUT</oauthLink>
+</ExtlClntAppOauthSettings>

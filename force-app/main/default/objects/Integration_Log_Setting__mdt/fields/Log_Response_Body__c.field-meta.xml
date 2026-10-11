@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Log_Response_Body__c</fullName>
+    <defaultValue>true</defaultValue>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Store the response returned to the caller on the log.</inlineHelpText>
+    <label>Log Response Body</label>
+    <type>Checkbox</type>
+</CustomField>

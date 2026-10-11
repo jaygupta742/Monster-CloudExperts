@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closure_probablity__c</fullName>
+    <label>Closure Probability</label>
+    <required>true</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Stage__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Will</fullName>
+                <default>false</default>
+                <label>Will</label>
+            </value>
+            <value>
+                <fullName>Could</fullName>
+                <default>false</default>
+                <label>Could</label>
+            </value>
+            <value>
+                <fullName>Lead</fullName>
+                <default>false</default>
+                <label>Lead</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Strong Could</fullName>
+                <default>false</default>
+                <label>Strong Could</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Identification</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Lead</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Identification</controllingFieldValue>
+            <controllingFieldValue>Need Analysis</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Prospect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Declared</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Solutioning</controllingFieldValue>
+            <controllingFieldValue>Negotiation</controllingFieldValue>
+            <valueName>Will</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Declared</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Solutioning</controllingFieldValue>
+            <controllingFieldValue>Negotiation</controllingFieldValue>
+            <valueName>Could</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Sale Declared</controllingFieldValue>
+            <controllingFieldValue>Closed Won</controllingFieldValue>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <controllingFieldValue>Solutioning</controllingFieldValue>
+            <controllingFieldValue>Negotiation</controllingFieldValue>
+            <valueName>Strong Could</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

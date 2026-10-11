@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Escalate_Approval</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Escalate Approval</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)}
+
+var err = sforce.apex.execute(&quot;CVRReassign&quot;,&quot;met&quot;,{recid:&apos;{!Client_Validation_Request__c.Id}&apos;}); 
+/*alert(err);*/
+
+if(err == &apos;&quot;Failed&quot;&apos;){
+
+alert(&apos;You cannot reassign further&apos;);
+location.reload(true);
+
+}else
+
+{alert(&apos;Reassigned successfully&apos;);
+location.reload(true);
+}</url>
+</WebLink>

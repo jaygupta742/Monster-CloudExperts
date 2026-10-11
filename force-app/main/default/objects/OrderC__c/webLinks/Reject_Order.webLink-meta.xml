@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reject_Order</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Reject Order</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+if(&apos;{!OrderC__c.RejectedReason__c}&apos;==&apos;&apos;)
+{
+alert(&apos;PLease Choose Rejected Reason&apos;);
+
+}else
+{
+sforce.connection.sessionid = &apos;{!GETSESSIONID()}&apos;;
+var Order = new sforce.SObject(&quot;OrderC__c&quot;);
+Order.id=&apos;{!OrderC__c.Id}&apos;;
+
+
+
+Order.OrderStatus__c = &quot;Rejected&quot;;
+
+var result = sforce.connection.update([Order]);
+var oid=&apos;{!OrderC__c.Id}&apos;;
+var ord = sforce.apex.execute(&quot;CaptureOrderVfDateTime&quot;,&quot;ORderRejectCatcher&quot;,{Ids:oid});
+location.reload(true);
+}</url>
+</WebLink>

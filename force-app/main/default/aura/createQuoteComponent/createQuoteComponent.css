@@ -1,0 +1,19 @@
+.THIS {
+}
+.THIS .c-select {
+    position : relative;
+    top : -12px; 
+}
+
+.THIS .Revamp-Section {
+    background-color: #8367d7;
+    color: white;
+}
+
+.THIS .container{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-height: 200px;
+    max-height: 400px;
+}

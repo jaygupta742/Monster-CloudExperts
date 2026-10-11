@@ -1,0 +1,9 @@
+.container {
+    height: 100%;
+    max-height: 500px;
+}
+
+.revamp-theme {
+    background-color: #8367d7;
+    color: white;
+}

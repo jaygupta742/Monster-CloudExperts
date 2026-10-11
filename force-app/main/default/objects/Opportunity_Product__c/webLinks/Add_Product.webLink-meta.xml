@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Add_Product</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Add Product</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>https://ap5.salesforce.com/a02/e?CF00N7F00000BfZAd={!Opportunity__c.Name}&amp;CF00N7F00000BfZAd_lkid={!Opportunity__c.Id}&amp;CF00N7F00000BjGEb={!Opportunity__c.Account__c}&amp;CF00N7F00000BjGEb_lkid={!Opportunity__c.AccountId__c}</url>
+</WebLink>

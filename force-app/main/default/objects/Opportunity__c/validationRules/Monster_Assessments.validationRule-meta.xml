@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monster_Assessments</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(INCLUDES(Products_Interested__c , &apos;Monster Assessments&apos;), ISBLANK( Monster_Assessments_Revenue__c ))</errorConditionFormula>
+    <errorDisplayField>Monster_Assessments_Revenue__c</errorDisplayField>
+    <errorMessage>Please Enter Value</errorMessage>
+</ValidationRule>

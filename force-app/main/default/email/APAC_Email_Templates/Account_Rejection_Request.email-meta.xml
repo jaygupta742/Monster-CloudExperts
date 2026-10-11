@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Account Rejection Request</name>
+    <style>freeForm</style>
+    <subject>{!Account.SalesChannel__c} Account Rejection Request for Account-{!Account.AccountID__c} (Account Rejection Request)</subject>
+    <textOnly>You are receiving this email as one of the Account request is rejected by the Lead Team. Please see the details below.
+
+Account ID- {!Account.Id}
+Account Name- {!Account.Name}
+Account Team- {!Account.OwnerFullName}
+Account Sales Channel- {!Account.SalesChannel__c}
+F9 sent for-
+Reason for Rejection-</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,236 @@
+<aura:component controller="AddAccessoriesLineItem" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+    <aura:attribute name="oppInstance" type="Opportunity__c"/>
+    <aura:attribute name="sel" type="boolean" />
+    <aura:attribute name="oppliWrapList" type="Object"/>
+    <aura:attribute name="allData" type="Object"/>
+    <aura:attribute name="proceedItem" type="Object"/>
+    <aura:attribute name="showFirstpage" type="boolean" />
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="num" type="Integer" default="1" />
+    
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 80rem;
+        }
+         .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+background-color: white;
+
+}
+    </aura:html>
+   
+    
+    <aura:if isTrue="{!v.showFirstpage==true}">
+    <span style="margin-left:5px;margin-right:5px;width:80%;">
+        <div style="float:left;width:20%;margin-left:10px;"> 
+    	Search by Service Details <lightning:input type="search" lable="Search" placeholder="Search from Services" aura:id="SearchBox"
+                         onchange="{!c.searchTable}" />
+        </div><br/><br/>
+        <table width="100%" class="slds-table slds-table_bordered slds-table_cell-buffer" style="table-layout:fixed;padding:20px;font-size:12px;width:100%;color:#9999ff;">
+        <thead>    
+            <tr>
+                <th style="width: 2%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                  <ui:inputCheckbox text="" value="{!v.sel}" change="{!c.selectAllCheckbox}"/>               
+                </th>
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Service ID</b>
+                </th>
+                 <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Service Name</b>
+                </th >
+                 <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Product Name</b>
+                </th>
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Product SKU</b>
+                </th>
+                
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Inventory Count</b>
+                </th>
+               
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Inventory Quota Tenure</b>
+                </th>
+              
+                
+            </tr>
+        </thead>
+        
+        <aura:iteration items="{!v.oppliWrapList}" var="cusProd" indexVar="index">
+            <tr>
+              <th style="border-bottom:1px solid #F5F5F5;">
+                 <ui:inputCheckbox text="{!cusProd.accLi.Accessories__c}" value="{!cusProd.ckb}" />
+              </th>
+              
+              <th style="border-bottom:1px solid #F5F5F5;">
+                  {!cusProd.accName}
+              </th>
+              <th style="border-bottom:1px solid #F5F5F5;">
+                  {!cusProd.topuptype}
+              </th>
+                <th style="border-bottom:1px solid #F5F5F5;">
+                  {!cusProd.prodName}
+              </th>
+              <th style="border-bottom:1px solid #F5F5F5;">
+                  {!cusProd.prodsku}
+              </th>
+              <td class="dataCell " style="width: 8rem;">
+                  {!cusProd.invcount}
+              </td>
+              <th style="border-bottom:1px solid #F5F5F5;">
+                  {!cusProd.invtenure}
+              </th>
+             
+            </tr>
+          
+        </aura:iteration>
+        
+    </table>
+        <div  style="text-align:center;background-color:white;">
+      <lightning:button aura:id="button" class="button" label="Next" onclick="{!c.showNext}" variant="brand"/> 
+    </div> 
+    </span>
+    <aura:set attribute="else">
+        <span></span>
+        <h1 style="text-align:center;color:green;font-size:24px;">Selected Services</h1>
+         <div class="slds-table--header-fixed_container">
+        <div class="slds-scrollable" style="height:550Px;width:100%">
+        <table width="100%" style="table-layout:fixed;padding:20px;font-size:12px;width:100%;"  class="slds-table slds-table_bordered slds-table_cell-buffer" >
+            
+            <thead>
+                <tr>
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Service Name</b>
+                </th>
+                <th style="width: 10%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Product</b>
+                </th >
+                       <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Inventory Quota</b>
+                </th >
+                       <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Inventory Count</b>
+                </th >
+                 <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Unit Price </b>
+                    </th>
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Quantity</b>
+                </th>
+                    <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>% of Master Login</b>
+                </th>
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Adjustment Type</b>
+                </th>
+                <th style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                    <b>Adjustment Value</b>
+                </th> 
+                   
+                    
+                
+               
+                </tr>
+                
+                <aura:iteration items="{!v.proceedItem}" var="cusProd" indexVar="index">
+                    <tr>
+                        <th style="width: 5rem;border:0.5px solid #dddddd;width:6%;">
+                          {!cusProd.topuptype}
+                        </th>
+                        <th style="width: 5rem;border:0.5px solid #dddddd;width:10%;">
+                          {!cusProd.prodName}
+                        </th>
+                         <th style="width: 5rem;border:0.5px solid #dddddd;width:6%;">
+                          {!cusProd.invtenure}
+                        </th>
+                         <th style="width: 5rem;border:0.5px solid #dddddd;width:12%;">
+                          <lightning:input type="number" value="{!cusProd.opli.Quantity_Unit__c}" style="width:100%;"  onchange="{!c.validateqty}"/>
+                        </th>
+                        
+                        
+                        <aura:if isTrue="{!cusProd.additop==true}">
+                        <th style="width: 5rem;border:0.5px solid #dddddd;width:8%;">
+                          <lightning:input type="number" value="{!cusProd.opli.Unit_Price__c}" style="width:90%;" disabled="true"/>
+                        </th>
+                        </aura:if>
+                        
+                         <aura:if isTrue="{!cusProd.additop==false}">
+                        <th style="width: 5rem;border:0.5px solid #dddddd;width:8%;">
+                          <lightning:input type="number" value="{!cusProd.opli.Unit_Price__c}" style="width:90%;"/>
+                        </th>
+                        </aura:if>
+                        
+                         <aura:if isTrue="{!cusProd.invtenure!='Per Month'}">
+                             
+                        <th style="width: 5rem;border:0.5px solid #dddddd;width:6%;">
+                          <lightning:input type="number" value="{!cusProd.opli.Quantity__c}" style="width:100%;" Default="1" />
+                        </th>
+                        </aura:if>
+                        
+                         <aura:if isTrue="{!cusProd.invtenure=='Per Month'}">
+
+                        <th style="width: 5rem;border:0.5px solid #dddddd;width:6%;">
+                          <lightning:input type="number" value="{!cusProd.opli.Quantity__c}" style="width:100%;" disabled="true" />
+                        </th>
+                            
+                              
+                      
+                         </aura:if>
+                        <th style="width: 5rem;border:0.5px solid #dddddd;width:6%;">
+                            <lightning:select value="{!cusProd.opli.of_Master_Login__c}" label="" >
+                           <option value="Not Applicable" label="Not Applicable" ></option>
+                           <option value="5" label="5" ></option>
+                           <option value="7" label="7" ></option>
+                           </lightning:select>
+                        </th>
+                         <th style="border-bottom:1px solid #F5F5F5;">
+                           <lightning:select value="{!cusProd.opli.Adjustment_Type__c}" label="" >
+                           <option value="%" label="%" ></option>
+                           <option value="Amount" label="Amount" ></option>
+                            <option value="Price Override" label="Price Override" ></option>
+                             <option value="Base Price Override" label="Base Price Override" ></option>
+                           </lightning:select>
+                        </th>
+                        
+                        <th style="border-bottom:1px solid #F5F5F5;width:6%;">
+                          <lightning:input type="number" value="{!cusProd.opli.Adjustment_Value__c}" style="width:90%;" />
+                        </th>
+                      
+                        
+                   </tr>
+                </aura:iteration>
+                
+            </thead>   
+        </table>
+             </div>
+        </div>
+<div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+    <lightning:button aura:id="button" class="button" label="Save" onclick="{!c.saveOn}" variant="brand"/> 
+    </div> 
+    </aura:set>
+        
+    
+    </aura:if>
+</aura:component>

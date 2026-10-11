@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NameFieldMandatotyForCRTeam</fullName>
+    <active>true</active>
+    <description>in log a call the name shuld be mandatory only for the monster cr profile.</description>
+    <errorConditionFormula>AND(
+$Profile.Name == &apos;Monster - Service/CR&apos; ,
+ISBLANK(WhoId)
+)</errorConditionFormula>
+    <errorMessage>Please fill the &apos;Name&apos; field.</errorMessage>
+</ValidationRule>

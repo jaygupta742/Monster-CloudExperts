@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Location__c</fullName>
+    <label>Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>DB_Scope_Geography__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Andra Pradesh</fullName>
+                <default>false</default>
+                <label>Andra Pradesh</label>
+            </value>
+            <value>
+                <fullName>Arunachal Pradesh</fullName>
+                <default>false</default>
+                <label>Arunachal Pradesh</label>
+            </value>
+            <value>
+                <fullName>Assam</fullName>
+                <default>false</default>
+                <label>Assam</label>
+            </value>
+            <value>
+                <fullName>Bihar</fullName>
+                <default>false</default>
+                <label>Bihar</label>
+            </value>
+            <value>
+                <fullName>Chhattisgarh</fullName>
+                <default>false</default>
+                <label>Chhattisgarh</label>
+            </value>
+            <value>
+                <fullName>Goa</fullName>
+                <default>false</default>
+                <label>Goa</label>
+            </value>
+            <value>
+                <fullName>Gujarat</fullName>
+                <default>false</default>
+                <label>Gujarat</label>
+            </value>
+            <value>
+                <fullName>Haryana</fullName>
+                <default>false</default>
+                <label>Haryana</label>
+            </value>
+            <value>
+                <fullName>Himachal Pradesh</fullName>
+                <default>false</default>
+                <label>Himachal Pradesh</label>
+            </value>
+            <value>
+                <fullName>Jharkhand</fullName>
+                <default>false</default>
+                <label>Jharkhand</label>
+            </value>
+            <value>
+                <fullName>Karnataka</fullName>
+                <default>false</default>
+                <label>Karnataka</label>
+            </value>
+            <value>
+                <fullName>Kerala</fullName>
+                <default>false</default>
+                <label>Kerala</label>
+            </value>
+            <value>
+                <fullName>Madhya Pradesh</fullName>
+                <default>false</default>
+                <label>Madhya Pradesh</label>
+            </value>
+            <value>
+                <fullName>Maharashtra</fullName>
+                <default>false</default>
+                <label>Maharashtra</label>
+            </value>
+            <value>
+                <fullName>Manipur</fullName>
+                <default>false</default>
+                <label>Manipur</label>
+            </value>
+            <value>
+                <fullName>Meghalaya</fullName>
+                <default>false</default>
+                <label>Meghalaya</label>
+            </value>
+            <value>
+                <fullName>Mizoram</fullName>
+                <default>false</default>
+                <label>Mizoram</label>
+            </value>
+            <value>
+                <fullName>Nagaland</fullName>
+                <default>false</default>
+                <label>Nagaland</label>
+            </value>
+            <value>
+                <fullName>Odisha</fullName>
+                <default>false</default>
+                <label>Odisha</label>
+            </value>
+            <value>
+                <fullName>Punjab(Including Chandigarh/Mohali)</fullName>
+                <default>false</default>
+                <label>Punjab(Including Chandigarh/Mohali)</label>
+            </value>
+            <value>
+                <fullName>Rajasthan</fullName>
+                <default>false</default>
+                <label>Rajasthan</label>
+            </value>
+            <value>
+                <fullName>Sikkim</fullName>
+                <default>false</default>
+                <label>Sikkim</label>
+            </value>
+            <value>
+                <fullName>Tamil Nadu</fullName>
+                <default>false</default>
+                <label>Tamil Nadu</label>
+            </value>
+            <value>
+                <fullName>Telangana</fullName>
+                <default>false</default>
+                <label>Telangana</label>
+            </value>
+            <value>
+                <fullName>Tripura</fullName>
+                <default>false</default>
+                <label>Tripura</label>
+            </value>
+            <value>
+                <fullName>Uttar Pradesh</fullName>
+                <default>false</default>
+                <label>Uttar Pradesh</label>
+            </value>
+            <value>
+                <fullName>Uttarakhand</fullName>
+                <default>false</default>
+                <label>Uttarakhand</label>
+            </value>
+            <value>
+                <fullName>Uttranchal</fullName>
+                <default>false</default>
+                <label>Uttranchal</label>
+            </value>
+            <value>
+                <fullName>West Bengal</fullName>
+                <default>false</default>
+                <label>West Bengal</label>
+            </value>
+            <value>
+                <fullName>Andaman and Nicobar Islands</fullName>
+                <default>false</default>
+                <label>Andaman and Nicobar Islands</label>
+            </value>
+            <value>
+                <fullName>Chandigarh</fullName>
+                <default>false</default>
+                <label>Chandigarh</label>
+            </value>
+            <value>
+                <fullName>Dadra Nagar Haveli and Daman Diu</fullName>
+                <default>false</default>
+                <label>Dadra Nagar Haveli and Daman Diu</label>
+            </value>
+            <value>
+                <fullName>Delhi</fullName>
+                <default>false</default>
+                <label>Delhi</label>
+            </value>
+            <value>
+                <fullName>Jammu and Kashmir</fullName>
+                <default>false</default>
+                <label>Jammu and Kashmir</label>
+            </value>
+            <value>
+                <fullName>Ladakh</fullName>
+                <default>false</default>
+                <label>Ladakh</label>
+            </value>
+            <value>
+                <fullName>Lakshadweep</fullName>
+                <default>false</default>
+                <label>Lakshadweep</label>
+            </value>
+            <value>
+                <fullName>Puducherry</fullName>
+                <default>false</default>
+                <label>Puducherry</label>
+            </value>
+            <value>
+                <fullName>North Eastern Regions</fullName>
+                <default>false</default>
+                <label>North Eastern Regions</label>
+            </value>
+            <value>
+                <fullName>Any</fullName>
+                <default>false</default>
+                <label>Any</label>
+            </value>
+            <value>
+                <fullName>Andhra Pradesh &amp; Telangana</fullName>
+                <default>false</default>
+                <label>Andhra Pradesh &amp; Telangana</label>
+            </value>
+            <value>
+                <fullName>Punjab, Haryana, Himachal Pradesh, Jammu &amp; Kashmir(Incl Delhi)</fullName>
+                <default>false</default>
+                <label>Punjab, Haryana, Himachal Pradesh, Jammu &amp; Kashmir(Incl Delhi)</label>
+            </value>
+            <value>
+                <fullName>Rajasthan, Haryana</fullName>
+                <default>false</default>
+                <label>Rajasthan, Haryana</label>
+            </value>
+            <value>
+                <fullName>Uttar Pradesh, Uttranchal</fullName>
+                <default>false</default>
+                <label>Uttar Pradesh, Uttranchal</label>
+            </value>
+            <value>
+                <fullName>Madhya Pradesh, Chattisgarh</fullName>
+                <default>false</default>
+                <label>Madhya Pradesh, Chattisgarh</label>
+            </value>
+            <value>
+                <fullName>Jharkand</fullName>
+                <default>false</default>
+                <label>Jharkand</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>S1</controllingFieldValue>
+            <controllingFieldValue>State(S1)</controllingFieldValue>
+            <valueName>Karnataka</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S1</controllingFieldValue>
+            <controllingFieldValue>State(S1)</controllingFieldValue>
+            <valueName>Maharashtra</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S1</controllingFieldValue>
+            <controllingFieldValue>State(S1)</controllingFieldValue>
+            <valueName>Tamil Nadu</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S1</controllingFieldValue>
+            <valueName>Andhra Pradesh &amp; Telangana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S1</controllingFieldValue>
+            <valueName>Punjab, Haryana, Himachal Pradesh, Jammu &amp; Kashmir(Incl Delhi)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <valueName>Bihar</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Gujarat</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Kerala</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Odisha</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <controllingFieldValue>State(S1)</controllingFieldValue>
+            <valueName>Punjab(Including Chandigarh/Mohali)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>West Bengal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>North Eastern Regions</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <valueName>Rajasthan, Haryana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <valueName>Uttar Pradesh, Uttranchal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <valueName>Madhya Pradesh, Chattisgarh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>S2</controllingFieldValue>
+            <valueName>Jharkand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S1)</controllingFieldValue>
+            <valueName>Andra Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S1)</controllingFieldValue>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Haryana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S1)</controllingFieldValue>
+            <valueName>Telangana</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Chhattisgarh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Goa</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Himachal Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Jharkhand</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Madhya Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Rajasthan</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Uttar Pradesh</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Andaman and Nicobar Islands</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>State(S2)</controllingFieldValue>
+            <valueName>Jammu and Kashmir</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

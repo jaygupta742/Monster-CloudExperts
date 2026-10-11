@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KYCOpenandreverted</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND 4 AND 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Request_Date__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Reference__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Status__c</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>Validation_Owner__c</columns>
+    <columns>Validated_BY__c</columns>
+    <columns>Validated_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Submitted</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Client_Validation_Request__c.Approved</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <filters>
+        <field>Stage__c</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Approved</value>
+    </filters>
+    <label>KYC Open and Reverted</label>
+    <sharedTo>
+        <group>Collection_Team</group>
+        <group>Finance_Team</group>
+    </sharedTo>
+</ListView>

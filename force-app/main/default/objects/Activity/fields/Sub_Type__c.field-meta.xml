@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Type__c</fullName>
+    <label>Task Sub Type</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Task_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product Issue – DB Inventory / Applications</fullName>
+                <default>false</default>
+                <label>Product Issue – DB Inventory / Applications</label>
+            </value>
+            <value>
+                <fullName>Technical Issue/Bug</fullName>
+                <default>false</default>
+                <label>Technical Issue/Bug</label>
+            </value>
+            <value>
+                <fullName>ATS related Issue</fullName>
+                <default>false</default>
+                <label>ATS related Issue</label>
+            </value>
+            <value>
+                <fullName>Branding related Issue</fullName>
+                <default>false</default>
+                <label>Branding related Issue</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Online</fullName>
+                <default>false</default>
+                <label>Online</label>
+            </value>
+            <value>
+                <fullName>Onsite</fullName>
+                <default>false</default>
+                <label>Onsite</label>
+            </value>
+            <value>
+                <fullName>Free Trial</fullName>
+                <default>false</default>
+                <label>Free Trial</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Senior Leadership</fullName>
+                <default>false</default>
+                <label>Senior Leadership</label>
+            </value>
+            <value>
+                <fullName>Telecall</fullName>
+                <default>false</default>
+                <label>Telecall</label>
+            </value>
+            <value>
+                <fullName>Channel Head</fullName>
+                <default>false</default>
+                <label>Channel Head</label>
+            </value>
+            <value>
+                <fullName>Not Renewed</fullName>
+                <default>false</default>
+                <label>Not Renewed</label>
+            </value>
+            <value>
+                <fullName>Renewed</fullName>
+                <default>false</default>
+                <label>Renewed</label>
+            </value>
+            <value>
+                <fullName>A/C Disabled</fullName>
+                <default>false</default>
+                <label>A/C Disabled</label>
+            </value>
+            <value>
+                <fullName>A/C Warning</fullName>
+                <default>false</default>
+                <label>A/C Warning</label>
+            </value>
+            <value>
+                <fullName>A/C Audit</fullName>
+                <default>false</default>
+                <label>A/C Audit</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>VOC</controllingFieldValue>
+            <valueName>Product Issue – DB Inventory / Applications</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC</controllingFieldValue>
+            <valueName>Technical Issue/Bug</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC</controllingFieldValue>
+            <valueName>ATS related Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC</controllingFieldValue>
+            <valueName>Branding related Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Demo</controllingFieldValue>
+            <valueName>Online</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Demo</controllingFieldValue>
+            <valueName>Onsite</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Free Trial</controllingFieldValue>
+            <valueName>Free Trial</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Telecall</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leadership Meeting</controllingFieldValue>
+            <valueName>Senior Leadership</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Leadership Meeting</controllingFieldValue>
+            <valueName>Channel Head</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Email</controllingFieldValue>
+            <valueName>Email</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

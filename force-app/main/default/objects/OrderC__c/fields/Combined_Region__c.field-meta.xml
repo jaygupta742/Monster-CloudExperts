@@ -1,0 +1,749 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Combined_Region__c</fullName>
+    <label>Combined Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>East - Retention</fullName>
+                <default>false</default>
+                <label>East - Retention</label>
+            </value>
+            <value>
+                <fullName>East - Hybrid</fullName>
+                <default>false</default>
+                <label>East - Hybrid</label>
+            </value>
+            <value>
+                <fullName>Central - Acquisition</fullName>
+                <default>false</default>
+                <label>Central - Acquisition</label>
+            </value>
+            <value>
+                <fullName>Central - Retention</fullName>
+                <default>false</default>
+                <label>Central - Retention</label>
+            </value>
+            <value>
+                <fullName>Central - Hybrid</fullName>
+                <default>false</default>
+                <label>Central - Hybrid</label>
+            </value>
+            <value>
+                <fullName>West - Retention</fullName>
+                <default>false</default>
+                <label>West - Retention</label>
+            </value>
+            <value>
+                <fullName>West - Hybrid</fullName>
+                <default>false</default>
+                <label>West - Hybrid</label>
+            </value>
+            <value>
+                <fullName>South - Acquisition</fullName>
+                <default>false</default>
+                <label>South - Acquisition</label>
+            </value>
+            <value>
+                <fullName>South - Retention</fullName>
+                <default>false</default>
+                <label>South - Retention</label>
+            </value>
+            <value>
+                <fullName>South - Hybrid</fullName>
+                <default>false</default>
+                <label>South - Hybrid</label>
+            </value>
+            <value>
+                <fullName>Overlay</fullName>
+                <default>false</default>
+                <label>Overlay</label>
+            </value>
+            <value>
+                <fullName>Weston/New York - Acquisition</fullName>
+                <default>false</default>
+                <label>Weston/New York - Acquisition</label>
+            </value>
+            <value>
+                <fullName>Indy - Acquisition</fullName>
+                <default>false</default>
+                <label>Indy - Acquisition</label>
+            </value>
+            <value>
+                <fullName>Tempe - Acquisition</fullName>
+                <default>false</default>
+                <label>Tempe - Acquisition</label>
+            </value>
+            <value>
+                <fullName>Florence - Acquisition</fullName>
+                <default>false</default>
+                <label>Florence - Acquisition</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Northeast - Retention</fullName>
+                <default>false</default>
+                <label>Northeast - Retention</label>
+            </value>
+            <value>
+                <fullName>Southeast - Retention</fullName>
+                <default>false</default>
+                <label>Southeast - Retention</label>
+            </value>
+            <value>
+                <fullName>GLNC - Retention</fullName>
+                <default>false</default>
+                <label>GLNC - Retention</label>
+            </value>
+            <value>
+                <fullName>Southwest - Retention</fullName>
+                <default>false</default>
+                <label>Southwest - Retention</label>
+            </value>
+            <value>
+                <fullName>Weston/New York - Retention</fullName>
+                <default>false</default>
+                <label>Weston/New York - Retention</label>
+            </value>
+            <value>
+                <fullName>Florence - Retention</fullName>
+                <default>false</default>
+                <label>Florence - Retention</label>
+            </value>
+            <value>
+                <fullName>IAF</fullName>
+                <default>false</default>
+                <label>IAF</label>
+            </value>
+            <value>
+                <fullName>Indy - Retention</fullName>
+                <default>false</default>
+                <label>Indy - Retention</label>
+            </value>
+            <value>
+                <fullName>Tempe - Retention</fullName>
+                <default>false</default>
+                <label>Tempe - Retention</label>
+            </value>
+            <value>
+                <fullName>East - Acquisition</fullName>
+                <default>false</default>
+                <label>East - Acquisition</label>
+            </value>
+            <value>
+                <fullName>West - Acquisition</fullName>
+                <default>false</default>
+                <label>West - Acquisition</label>
+            </value>
+            <value>
+                <fullName>Florence - SMB</fullName>
+                <default>false</default>
+                <label>Florence - SMB</label>
+            </value>
+            <value>
+                <fullName>Other Centers - SMB</fullName>
+                <default>false</default>
+                <label>Other Centers - SMB</label>
+            </value>
+            <value>
+                <fullName>India - SMB</fullName>
+                <default>false</default>
+                <label>India - SMB</label>
+            </value>
+            <value>
+                <fullName>Staffing - Fieldsales</fullName>
+                <default>false</default>
+                <label>Staffing - Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Staffing - Telesales</fullName>
+                <default>false</default>
+                <label>Staffing - Telesales</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Fieldsales</fullName>
+                <default>false</default>
+                <label>Healthcare - Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Telesales</fullName>
+                <default>false</default>
+                <label>Healthcare - Telesales</label>
+            </value>
+            <value>
+                <fullName>Canada - Fieldsales</fullName>
+                <default>false</default>
+                <label>Canada - Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Canada - Telesales</fullName>
+                <default>false</default>
+                <label>Canada - Telesales</label>
+            </value>
+            <value>
+                <fullName>Newspapers</fullName>
+                <default>false</default>
+                <label>Newspapers</label>
+            </value>
+            <value>
+                <fullName>State Local Education</fullName>
+                <default>false</default>
+                <label>State Local Education</label>
+            </value>
+            <value>
+                <fullName>Austria Agency Hybrid</fullName>
+                <default>false</default>
+                <label>Austria Agency Hybrid</label>
+            </value>
+            <value>
+                <fullName>Austria Commercial Enterprise</fullName>
+                <default>false</default>
+                <label>Austria Commercial Enterprise</label>
+            </value>
+            <value>
+                <fullName>Austria Commercial Mid Market</fullName>
+                <default>false</default>
+                <label>Austria Commercial Mid Market</label>
+            </value>
+            <value>
+                <fullName>Austria Commercial Small</fullName>
+                <default>false</default>
+                <label>Austria Commercial Small</label>
+            </value>
+            <value>
+                <fullName>Austria Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Austria Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Austria Staffing Hybrid</fullName>
+                <default>false</default>
+                <label>Austria Staffing Hybrid</label>
+            </value>
+            <value>
+                <fullName>Belgium Commercial Enterprise</fullName>
+                <default>false</default>
+                <label>Belgium Commercial Enterprise</label>
+            </value>
+            <value>
+                <fullName>Belgium Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>Belgium Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>Belgium Commercial Mid Market</fullName>
+                <default>false</default>
+                <label>Belgium Commercial Mid Market</label>
+            </value>
+            <value>
+                <fullName>Belgium Commercial Small</fullName>
+                <default>false</default>
+                <label>Belgium Commercial Small</label>
+            </value>
+            <value>
+                <fullName>Belgium Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Belgium Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Switzerland Commercial Enterprise</fullName>
+                <default>false</default>
+                <label>Switzerland Commercial Enterprise</label>
+            </value>
+            <value>
+                <fullName>Switzerland Commercial Mid Market</fullName>
+                <default>false</default>
+                <label>Switzerland Commercial Mid Market</label>
+            </value>
+            <value>
+                <fullName>Switzerland Commercial Small</fullName>
+                <default>false</default>
+                <label>Switzerland Commercial Small</label>
+            </value>
+            <value>
+                <fullName>Switzerland Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Switzerland Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Switzerland Staffing Hybrid</fullName>
+                <default>false</default>
+                <label>Switzerland Staffing Hybrid</label>
+            </value>
+            <value>
+                <fullName>Germany Agency Hybrid</fullName>
+                <default>false</default>
+                <label>Germany Agency Hybrid</label>
+            </value>
+            <value>
+                <fullName>Germany Agency Mid Market</fullName>
+                <default>false</default>
+                <label>Germany Agency Mid Market</label>
+            </value>
+            <value>
+                <fullName>Germany Commercial Enterprise</fullName>
+                <default>false</default>
+                <label>Germany Commercial Enterprise</label>
+            </value>
+            <value>
+                <fullName>Germany Commercial Mid Market</fullName>
+                <default>false</default>
+                <label>Germany Commercial Mid Market</label>
+            </value>
+            <value>
+                <fullName>Germany Commercial Small</fullName>
+                <default>false</default>
+                <label>Germany Commercial Small</label>
+            </value>
+            <value>
+                <fullName>Germany Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Germany Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Germany International Hybrid</fullName>
+                <default>false</default>
+                <label>Germany International Hybrid</label>
+            </value>
+            <value>
+                <fullName>Germany Staffing Enterprise</fullName>
+                <default>false</default>
+                <label>Germany Staffing Enterprise</label>
+            </value>
+            <value>
+                <fullName>Germany Staffing Mid Market</fullName>
+                <default>false</default>
+                <label>Germany Staffing Mid Market</label>
+            </value>
+            <value>
+                <fullName>Germany Staffing Small</fullName>
+                <default>false</default>
+                <label>Germany Staffing Small</label>
+            </value>
+            <value>
+                <fullName>Spain Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Spain Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>France Agency Hybrid</fullName>
+                <default>false</default>
+                <label>France Agency Hybrid</label>
+            </value>
+            <value>
+                <fullName>France Commercial Enterprise</fullName>
+                <default>false</default>
+                <label>France Commercial Enterprise</label>
+            </value>
+            <value>
+                <fullName>France Commercial Mid Market</fullName>
+                <default>false</default>
+                <label>France Commercial Mid Market</label>
+            </value>
+            <value>
+                <fullName>France Commercial Small</fullName>
+                <default>false</default>
+                <label>France Commercial Small</label>
+            </value>
+            <value>
+                <fullName>France Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>France Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>France Public Enterprise</fullName>
+                <default>false</default>
+                <label>France Public Enterprise</label>
+            </value>
+            <value>
+                <fullName>France Staffing Enterprise</fullName>
+                <default>false</default>
+                <label>France Staffing Enterprise</label>
+            </value>
+            <value>
+                <fullName>France Staffing Mid Market</fullName>
+                <default>false</default>
+                <label>France Staffing Mid Market</label>
+            </value>
+            <value>
+                <fullName>Ireland Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Ireland Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Italy Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>Italy Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>Italy Commercial Small</fullName>
+                <default>false</default>
+                <label>Italy Commercial Small</label>
+            </value>
+            <value>
+                <fullName>Italy Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Italy Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Italy Staffing Hybrid</fullName>
+                <default>false</default>
+                <label>Italy Staffing Hybrid</label>
+            </value>
+            <value>
+                <fullName>Italy Staffing Small</fullName>
+                <default>false</default>
+                <label>Italy Staffing Small</label>
+            </value>
+            <value>
+                <fullName>Luxembourg Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>Luxembourg Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>Luxembourg Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Luxembourg Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Netherlands Commercial Enterprise</fullName>
+                <default>false</default>
+                <label>Netherlands Commercial Enterprise</label>
+            </value>
+            <value>
+                <fullName>Netherlands Commercial Mid Market</fullName>
+                <default>false</default>
+                <label>Netherlands Commercial Mid Market</label>
+            </value>
+            <value>
+                <fullName>Netherlands Commercial Small</fullName>
+                <default>false</default>
+                <label>Netherlands Commercial Small</label>
+            </value>
+            <value>
+                <fullName>Netherlands Commercial Unspecified</fullName>
+                <default>false</default>
+                <label>Netherlands Commercial Unspecified</label>
+            </value>
+            <value>
+                <fullName>Netherlands Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Netherlands Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Netherlands International Mid Market</fullName>
+                <default>false</default>
+                <label>Netherlands International Mid Market</label>
+            </value>
+            <value>
+                <fullName>Netherlands Staffing Enterprise</fullName>
+                <default>false</default>
+                <label>Netherlands Staffing Enterprise</label>
+            </value>
+            <value>
+                <fullName>Netherlands Staffing Mid Market</fullName>
+                <default>false</default>
+                <label>Netherlands Staffing Mid Market</label>
+            </value>
+            <value>
+                <fullName>Sweden Hybrid Enterprise</fullName>
+                <default>false</default>
+                <label>Sweden Hybrid Enterprise</label>
+            </value>
+            <value>
+                <fullName>Sweden Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Sweden Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Sweden Hybrid Mid Market</fullName>
+                <default>false</default>
+                <label>Sweden Hybrid Mid Market</label>
+            </value>
+            <value>
+                <fullName>Sweden Hybrid Small</fullName>
+                <default>false</default>
+                <label>Sweden Hybrid Small</label>
+            </value>
+            <value>
+                <fullName>Sweden International Hybrid</fullName>
+                <default>false</default>
+                <label>Sweden International Hybrid</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Agency Enterprise</fullName>
+                <default>false</default>
+                <label>United Kingdom Agency Enterprise</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Commercial Enterprise</fullName>
+                <default>false</default>
+                <label>United Kingdom Commercial Enterprise</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Commercial Mid Market</fullName>
+                <default>false</default>
+                <label>United Kingdom Commercial Mid Market</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Commercial Small</fullName>
+                <default>false</default>
+                <label>United Kingdom Commercial Small</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>United Kingdom Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>United Kingdom International Hybrid</fullName>
+                <default>false</default>
+                <label>United Kingdom International Hybrid</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Public Enterprise</fullName>
+                <default>false</default>
+                <label>United Kingdom Public Enterprise</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Staffing Enterprise</fullName>
+                <default>false</default>
+                <label>United Kingdom Staffing Enterprise</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Staffing Mid Market</fullName>
+                <default>false</default>
+                <label>United Kingdom Staffing Mid Market</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Staffing Small</fullName>
+                <default>false</default>
+                <label>United Kingdom Staffing Small</label>
+            </value>
+            <value>
+                <fullName>Spain Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>Spain Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>Netherlands Commercial Acquisition</fullName>
+                <default>false</default>
+                <label>Netherlands Commercial Acquisition</label>
+            </value>
+            <value>
+                <fullName>Sweden Hybrid Retention</fullName>
+                <default>false</default>
+                <label>Sweden Hybrid Retention</label>
+            </value>
+            <value>
+                <fullName>Netherlands International Hybrid</fullName>
+                <default>false</default>
+                <label>Netherlands International Hybrid</label>
+            </value>
+            <value>
+                <fullName>PPC Wholesale</fullName>
+                <default>false</default>
+                <label>PPC Wholesale</label>
+            </value>
+            <value>
+                <fullName>PPC Direct</fullName>
+                <default>false</default>
+                <label>PPC Direct</label>
+            </value>
+            <value>
+                <fullName>Germany Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>Germany Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Commercial Acquisition</fullName>
+                <default>false</default>
+                <label>United Kingdom Commercial Acquisition</label>
+            </value>
+            <value>
+                <fullName>France Staffing Hybrid</fullName>
+                <default>false</default>
+                <label>France Staffing Hybrid</label>
+            </value>
+            <value>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+                <label>Newspaper</label>
+            </value>
+            <value>
+                <fullName>PPC-Direct</fullName>
+                <default>false</default>
+                <label>PPC-Direct</label>
+            </value>
+            <value>
+                <fullName>Switzerland Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>Switzerland Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>Austria Commercial Acquisition</fullName>
+                <default>false</default>
+                <label>Austria Commercial Acquisition</label>
+            </value>
+            <value>
+                <fullName>Austria Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>Austria Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>Belgium Commercial Acquisition</fullName>
+                <default>false</default>
+                <label>Belgium Commercial Acquisition</label>
+            </value>
+            <value>
+                <fullName>France Commercial Acquisition</fullName>
+                <default>false</default>
+                <label>France Commercial Acquisition</label>
+            </value>
+            <value>
+                <fullName>France Commercial Hybrid</fullName>
+                <default>false</default>
+                <label>France Commercial Hybrid</label>
+            </value>
+            <value>
+                <fullName>France Government Hybrid</fullName>
+                <default>false</default>
+                <label>France Government Hybrid</label>
+            </value>
+            <value>
+                <fullName>France Staffing Acquisition</fullName>
+                <default>false</default>
+                <label>France Staffing Acquisition</label>
+            </value>
+            <value>
+                <fullName>Germany Commercial Acquisition</fullName>
+                <default>false</default>
+                <label>Germany Commercial Acquisition</label>
+            </value>
+            <value>
+                <fullName>Germany Staffing Hybrid</fullName>
+                <default>false</default>
+                <label>Germany Staffing Hybrid</label>
+            </value>
+            <value>
+                <fullName>Netherlands Commercial Retention</fullName>
+                <default>false</default>
+                <label>Netherlands Commercial Retention</label>
+            </value>
+            <value>
+                <fullName>Netherlands International Retention</fullName>
+                <default>false</default>
+                <label>Netherlands International Retention</label>
+            </value>
+            <value>
+                <fullName>Netherlands Staffing Acquisition</fullName>
+                <default>false</default>
+                <label>Netherlands Staffing Acquisition</label>
+            </value>
+            <value>
+                <fullName>Netherlands Staffing Retention</fullName>
+                <default>false</default>
+                <label>Netherlands Staffing Retention</label>
+            </value>
+            <value>
+                <fullName>Sweden Hybrid Acquisition</fullName>
+                <default>false</default>
+                <label>Sweden Hybrid Acquisition</label>
+            </value>
+            <value>
+                <fullName>Switzerland Agency Hybrid</fullName>
+                <default>false</default>
+                <label>Switzerland Agency Hybrid</label>
+            </value>
+            <value>
+                <fullName>Switzerland Commercial Acquisition</fullName>
+                <default>false</default>
+                <label>Switzerland Commercial Acquisition</label>
+            </value>
+            <value>
+                <fullName>Switzerland Government Hybrid</fullName>
+                <default>false</default>
+                <label>Switzerland Government Hybrid</label>
+            </value>
+            <value>
+                <fullName>Switzerland Hybrid Acquisition</fullName>
+                <default>false</default>
+                <label>Switzerland Hybrid Acquisition</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Agency Retention</fullName>
+                <default>false</default>
+                <label>United Kingdom Agency Retention</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Commercial Retention</fullName>
+                <default>false</default>
+                <label>United Kingdom Commercial Retention</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Staffing Acquisition</fullName>
+                <default>false</default>
+                <label>United Kingdom Staffing Acquisition</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Staffing Retention</fullName>
+                <default>false</default>
+                <label>United Kingdom Staffing Retention</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>Other Other Other</fullName>
+                <default>false</default>
+                <label>Other Other Other</label>
+            </value>
+            <value>
+                <fullName>Belgium Hybrid Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Belgium Hybrid Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Germany Hybrid Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Germany Hybrid Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>France Hybrid Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>France Hybrid Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Italy Hybrid Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Italy Hybrid Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>Netherlands Hybrid Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>Netherlands Hybrid Hybrid Hybrid</label>
+            </value>
+            <value>
+                <fullName>United Kingdom Hybrid Hybrid Hybrid</fullName>
+                <default>false</default>
+                <label>United Kingdom Hybrid Hybrid Hybrid</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

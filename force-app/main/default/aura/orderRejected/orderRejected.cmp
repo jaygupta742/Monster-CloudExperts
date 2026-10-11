@@ -1,0 +1,105 @@
+<aura:component controller ="orderRejected" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+     
+    <aura:attribute name="getmrnfrpo" type="Order__c"/>
+   
+ <aura:attribute name="showFirstpage" type="boolean" />
+    <aura:attribute name="f1" type="boolean" default="false"/>
+    <aura:attribute name="f2" type="boolean" default="false"/>
+    
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 180rem; 
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        
+        }
+    </aura:html>
+     <!-- default page \\\ blank 
+    <aura:if isTrue="{!and(v.f1 == false, v.f2 == false)}">
+        
+    </aura:if>-->
+    
+    <!-- Main Page 
+     <aura:if isTrue="{!and(v.f1 == true, v.f2 == false)}"> -->
+        
+        <div class="slds-table--header-fixed_container">
+            
+            <div class="slds-page-header" style="text-align:center;background-color:#2E86C1;color:white;">
+                <h1 class="slds-page-header_title">Rejected Order Details</h1>
+            </div>
+              
+            <div class="slds-scrollable" style="height:150Px;width:100%">
+                
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-scrollable" style="table-layout:fixed;width:100%;font-size:12px;overflow:scroll;" cellpadding="0">
+                    
+                    <lightning:card title="" >
+                        
+                        <lightning:recordEditForm objectApiName="Order__c">
+                            <div class="slds-grid slds-wrap" style="margin-left:10px;margin-right:10px;">
+                                
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning:inputField fieldName="Rejected_By__c" value="{!v.getmrnfrpo.Rejected_By__c}" disabled="true"/>
+                                    
+                                </div>
+                                
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning:inputField fieldName="Rejected_Date__c" value="{!v.getmrnfrpo.Rejected_Date__c}" disabled="true"/>                                    
+                                </div>
+                                
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning:inputField fieldName="Order_Status__c" value="{!v.getmrnfrpo.Order_Status__c}" disabled="true"/>
+                                </div>
+                                
+                                <div class="slds-col slds-size_6-of-12">
+                                    <lightning:inputField fieldName="Rejected_Reason__c" value="{!v.getmrnfrpo.Rejected_Reason__c}"/>
+                                </div> 
+                                
+                            </div>
+                        </lightning:recordEditForm> 
+                          
+                    </lightning:card>
+                </table>
+            </div>  
+            
+            <div class="slds-modal__footer" style="text-align: center">
+            <div class="slds-docked-form-footer"> 
+                <button class="slds-button slds-button_brand" onclick="{!c.saveOn}">Save</button>
+            </div>
+        </div>
+            
+            
+        </div>
+    
+    
+    
+    
+     <!-- Message Page
+    <aura:if isTrue="{!and(v.f1 == false, v.f2 == true)}">
+        <div style="font-size:20px;text-align:center;font-family:times new roman;font-weight:bold; height: 100px; padding-top: 30px;">
+            This Order has been already Rejected...!!!
+        </div>
+    </aura:if>  -->
+
+   
+    
+</aura:component>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Edit_All</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Edit Al</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)}
+
+var prof=&apos;{!$Profile.Id}&apos;;
+var fpid=&apos;00e7F000000uSSkQAM&apos;;
+var finProId=fpid.includes(prof);
+var rtid = sforce.connection.query(&quot;Select Id From RecordType Where SobjectType = &apos;apttus_proposal_proposal__c&apos; AND Name = &apos;After Validated&apos;&quot;);
+var  v1f= rtid.getArray(&quot;records&quot;);
+var rtaf = v1f[0].Id;
+    var Currentrt=&apos;{!apttus_proposal_proposal__c.RecordTypeId}&apos;;
+var orgiRt=rtaf.includes(Currentrt);
+var adminPro=&apos;00e7F000002zNyqQAE&apos;;
+var adminProf=adminPro.includes(prof);
+if((orgiRt &amp;&amp; finProId) ||(orgiRt &amp;&amp; adminProf)){
+window.open(&apos;/apex/editallPayment?id={!apttus_proposal_proposal__c.Id}&apos;);
+
+}
+
+else if(orgiRt &amp;&amp; !finProId){
+  {
+alert(&apos;After Validating only finanace team members are allowed to edit APAC Pyment&apos;);
+}
+}
+else if(!orgiRt ){
+window.open(&apos;/apex/editallPayment?id={!apttus_proposal_proposal__c.Id}&apos;);
+
+}</url>
+</WebLink>

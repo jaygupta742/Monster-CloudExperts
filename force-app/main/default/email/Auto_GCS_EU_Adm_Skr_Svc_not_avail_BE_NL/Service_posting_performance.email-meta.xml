@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Service posting performance</name>
+    <style>none</style>
+    <subject>Service posting performance</subject>
+    <textOnly>Hallo zusammen, 
+
+Der Kunde hat SP, beschwert sich, hat:
+
+keine Bewerbungen erhalten
+hat wenige Ansichten und Bewerbungen
+hat irrelevante Bewerbungen
+.
+.
+.
+.
+Der Kunde erwartet Rückruf um ***.
+
+Vielen Dank fürs Übernehmen. 
+
+LG, 
+
+Name</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

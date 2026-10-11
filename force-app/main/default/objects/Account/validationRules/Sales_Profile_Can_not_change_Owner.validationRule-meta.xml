@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Profile_Can_not_change_Owner</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND (
+ISCHANGED( OwnerId ),   
+$Profile.Name = &apos;Monster - Sales&apos;,
+NOT($User.X18DigitUserId__c=&apos;0050o00000Xybp6AAB&apos;),
+NOT($User.X18DigitUserId__c=&apos;0050o00000YsVAiAAN&apos;) 
+)</errorConditionFormula>
+    <errorMessage>Monster Sales Profile Can not change Account Onwer</errorMessage>
+</ValidationRule>

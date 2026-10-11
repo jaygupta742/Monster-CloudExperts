@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Organization__c</fullName>
+    <label>Position Organization</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+                <label>Asia Pacific</label>
+            </value>
+            <value>
+                <fullName>Monster.com india private limited</fullName>
+                <default>false</default>
+                <label>Monster.com india private limited</label>
+            </value>
+            <value>
+                <fullName>domestic</fullName>
+                <default>false</default>
+                <label>domestic</label>
+            </value>
+            <value>
+                <fullName>IN-TS</fullName>
+                <default>false</default>
+                <label>IN-TS</label>
+            </value>
+            <value>
+                <fullName>Support</fullName>
+                <default>false</default>
+                <label>Support</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

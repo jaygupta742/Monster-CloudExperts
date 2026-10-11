@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <label>Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>End User</fullName>
+                <default>false</default>
+                <label>End User</label>
+            </value>
+            <value>
+                <fullName>Evaluator</fullName>
+                <default>false</default>
+                <label>Evaluator</label>
+            </value>
+            <value>
+                <fullName>Financial Approver</fullName>
+                <default>false</default>
+                <label>Financial Approver</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Informer</fullName>
+                <default>false</default>
+                <label>Informer</label>
+            </value>
+            <value>
+                <fullName>Signing Authority</fullName>
+                <default>false</default>
+                <label>Signing Authority</label>
+            </value>
+            <value>
+                <fullName>Technical Approver</fullName>
+                <default>false</default>
+                <label>Technical Approver</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

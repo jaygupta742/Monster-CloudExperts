@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Finalize</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Finalize</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)}
+var recordtype= sforce.connection.query(&quot;select name, id from recordtype where name=&apos;after finalize&apos;&quot;);
+var records = recordtype.getArray(&quot;records&quot;);
+//alert(records);
+try
+{
+if(&apos;{!apttus_proposal_proposal__c.Net_Total__c}&apos; == &apos;{!apttus_proposal_proposal__c.Payment_Net_Total__c}&apos;){
+ if(&apos;{!apttus_proposal_proposal__c.Approval_Status__c}&apos; == &apos;No Need Of Approval&apos;||&apos;{!apttus_proposal_proposal__c.Approval_Status__c}&apos; == &apos;Ready To Finalize&apos;)
+{
+sforce.connection.sessionid = &apos;{!GETSESSIONID()}&apos;;
+var quote = new sforce.SObject(&quot;apttus_proposal_proposal__c&quot;);
+quote.id=&apos;{!apttus_proposal_proposal__c.Id}&apos;;
+quote.Approval_Status__c=&apos;Finalized&apos;;
+quote.RecordTypeId =records[0].Id;
+var result = sforce.connection.update([quote]);
+//alert(result);
+}else{
+	alert(&apos;Please Submit for Approval To Finalize&apos;);
+}
+}
+else{
+	alert(&apos;Net Total of Quote/Proposal and APAC Payment are not Equal&apos;);
+}
+}
+
+catch (ex)
+{
+alert(ex);
+}
+
+location.reload(true);</url>
+</WebLink>

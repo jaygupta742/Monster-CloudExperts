@@ -1,0 +1,17 @@
+<span style="font-size:12px;"><img alt="Monster Logo" src="https://monster--c.na23.content.force.com/servlet/servlet.ImageServer?id=0151600000IXMBy&amp;oid=00DG0000000kUQ2" /></span><br />
+<br />
+<span style="font-size:12px;"><span style="font-family:tahoma,geneva,sans-serif;">Thank you for contacting Monster Newspaper Customer Support. This automated response is to inform you that we have received your email. Emails are addressed as they are received. Please allow 24 hours for processing and reference the Case Number if follow up on this request is needed.<br />
+&nbsp;<br />
+If you need more immediate assistance please contact us at 1-800-MONSTER (1-800-666-7837) ext NEWS (6397).<br />
+&nbsp;</span></span><br />
+<span style="font-size:12px;"><span style="font-family:tahoma,geneva,sans-serif;">Your email is important to us and we thank you for using Monster.</span></span><br />
+<span style="font-size:12px;"><span style="font-family:tahoma,geneva,sans-serif;">&nbsp;</span></span><br />
+<span style="font-size:12px;"><span style="font-family:tahoma,geneva,sans-serif;"><span style="line-height: 1.6;">Regards,<br />
+Monster Customer Service</span><br />
+<br />
+<span style="line-height: 1.6;">Case Thread ID:&nbsp;{!Case.Thread_Id}</span><br />
+<br />
+---- Original Message ----<br />
+{!Case.Description}<br />
+---------------------------------</span></span><br />
+&nbsp;

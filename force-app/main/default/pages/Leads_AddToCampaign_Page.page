@@ -1,0 +1,64 @@
+<!--
+/* 
+         * @ VFPage Name: Leads_AddToCampaign_Page
+         * @ Description: This Page Used For Custom List Button Opertaion Throgh LWC in Custom Lead ListView.
+         * @ Developed By : Shahid Sangolli
+		 * @ Controller : Leads_AddToCampaign_Page_Controller
+         * @ Modified By: 
+         *     User Name      |     Modified Date     |     Reason
+         * ---------------------------------------------------------------
+         *     Shahid               ----------               Intial Creation
+		 *     Shahid               ----------               Added Cancel Button if No Record Selected Window.
+*/
+-->
+
+
+<apex:page standardController="Leads__c" sidebar="false" showHeader="true"  extensions="Leads_AddToCampaign_Page_Controller" lightningStylesheets="true"    recordSetVar="Lead" >
+	<apex:form style="width: 50%;margin-left: 25%;">
+    
+    <!--
+    <apex:sectionHeader title="Select Contacts"/>
+    -->
+    
+    
+    
+    <apex:outputPanel rendered="{!renderMe}" >
+         
+        <!--Whenever LWC Used inside VF Page this Tag Required
+        createCampaign -> LWC Component Name
+        -->
+        <apex:includeLightning />
+            <script>
+                var compDefinition = { 
+                "componentDef" : "c:createCampaignLead", 
+                "attributes" :{ 
+                      "contacts" : {!json_val}
+                 } 
+                };
+            // Base64 encode the compDefinition JS object
+            var encodedCompDef = btoa(JSON.stringify(compDefinition));
+            window.parent.location = "/one/one.app#"+encodedCompDef;  
+        </script>  
+ 
+    </apex:outputPanel>
+	
+    	<br/>
+         <apex:outputPanel >
+                <apex:pageMessages />
+            </apex:outputPanel>
+         <apex:commandButton action="{!Cancel}" value="Back" style="margin-left: 90%;font-weight: bold;"/>
+        <!--
+		This is Backup
+		 <apex:pageBlock >
+            
+            <apex:outputPanel >
+                <apex:pageMessages />
+            </apex:outputPanel>
+            
+             <apex:pageBlockButtons location="bottom" style="margin-left: 25%;">
+               <apex:commandButton action="{!Cancel}" value="Back"/>
+             </apex:pageBlockButtons>  
+        </apex:pageBlock>
+		-->
+    </apex:form>
+</apex:page>

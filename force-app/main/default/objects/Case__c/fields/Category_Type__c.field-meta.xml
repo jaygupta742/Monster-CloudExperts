@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Category_Type__c</fullName>
+    <description>S-449443</description>
+    <label>Category Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3rd Party CV</fullName>
+                <default>false</default>
+                <label>3rd Party CV</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>EU Discrimination</fullName>
+                <default>false</default>
+                <label>EU Discrimination</label>
+            </value>
+            <value>
+                <fullName>Irrelevant Keywords</fullName>
+                <default>false</default>
+                <label>Irrelevant Keywords</label>
+            </value>
+            <value>
+                <fullName>Multiple Jobs</fullName>
+                <default>false</default>
+                <label>Multiple Jobs</label>
+            </value>
+            <value>
+                <fullName>NA Discrimination</fullName>
+                <default>false</default>
+                <label>NA Discrimination</label>
+            </value>
+            <value>
+                <fullName>Non Direct Employment</fullName>
+                <default>false</default>
+                <label>Non Direct Employment</label>
+            </value>
+            <value>
+                <fullName>Non Payment</fullName>
+                <default>false</default>
+                <label>Non Payment</label>
+            </value>
+            <value>
+                <fullName>Non Traditional</fullName>
+                <default>false</default>
+                <label>Non Traditional</label>
+            </value>
+            <value>
+                <fullName>Other Compliance</fullName>
+                <default>false</default>
+                <label>Other Compliance</label>
+            </value>
+            <value>
+                <fullName>Reselling Transfer Services</fullName>
+                <default>false</default>
+                <label>Reselling Transfer Services</label>
+            </value>
+            <value>
+                <fullName>Security</fullName>
+                <default>false</default>
+                <label>Security</label>
+            </value>
+            <value>
+                <fullName>Talent</fullName>
+                <default>false</default>
+                <label>Talent</label>
+            </value>
+            <value>
+                <fullName>Unpaid Internships</fullName>
+                <default>false</default>
+                <label>Unpaid Internships</label>
+            </value>
+            <value>
+                <fullName>Vulgarisms</fullName>
+                <default>false</default>
+                <label>Vulgarisms</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

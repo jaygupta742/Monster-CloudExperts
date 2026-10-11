@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expirence_In_Numbers__c</fullName>
+    <externalId>false</externalId>
+    <formula>ROUND(
+    IF(
+        CONTAINS(Experience__c, &quot;years&quot;),
+        VALUE(
+            TRIM(
+                LEFT(
+                    Experience__c, 
+                    FIND(&quot;years&quot;, Experience__c) - 1
+                )
+            )
+        ) +
+        IF(
+            CONTAINS(Experience__c, &quot;months&quot;),
+            VALUE(
+                TRIM(
+                    MID(
+                        Experience__c,
+                        FIND(&quot;years&quot;, Experience__c) + 6,
+                        FIND(&quot;months&quot;, Experience__c) - (FIND(&quot;years&quot;, Experience__c) + 6)
+                    )
+                )
+            ) / 12,
+            0
+        ),
+        IF(
+            CONTAINS(Experience__c, &quot;months&quot;),
+            VALUE(
+                TRIM(
+                    LEFT(
+                        Experience__c,
+                        FIND(&quot;months&quot;, Experience__c) - 1
+                    )
+                )
+            ) / 12,
+            0
+        )
+    ),
+    2
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Expirence In Numbers</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

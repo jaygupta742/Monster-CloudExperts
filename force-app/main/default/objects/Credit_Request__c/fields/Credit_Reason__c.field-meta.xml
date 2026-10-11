@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Credit_Reason__c</fullName>
+    <label>Reversal/Bad Debt Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Closed down</fullName>
+                <default>false</default>
+                <label>Business Closed down</label>
+            </value>
+            <value>
+                <fullName>Business Decision-Better Deal from Competition</fullName>
+                <default>false</default>
+                <label>Business Decision-Better Deal from Competition</label>
+            </value>
+            <value>
+                <fullName>Business Decision-Change in Key Staff</fullName>
+                <default>false</default>
+                <label>Business Decision-Change in Key Staff</label>
+            </value>
+            <value>
+                <fullName>Business Decision-Closure of Business</fullName>
+                <default>false</default>
+                <label>Business Decision-Closure of Business</label>
+            </value>
+            <value>
+                <fullName>Business Decision-No Business</fullName>
+                <default>false</default>
+                <label>Business Decision-No Business</label>
+            </value>
+            <value>
+                <fullName>Business Decision-Partnership Disintegrated</fullName>
+                <default>false</default>
+                <label>Business Decision-Partnership Disintegrated</label>
+            </value>
+            <value>
+                <fullName>Change of Purchaser/Agency</fullName>
+                <default>false</default>
+                <label>Change of Purchaser/Agency</label>
+            </value>
+            <value>
+                <fullName>Client-Budget/Operation issues</fullName>
+                <default>false</default>
+                <label>Client-Budget/Operation issues</label>
+            </value>
+            <value>
+                <fullName>Compliance Issue-Charging Registration fees</fullName>
+                <default>false</default>
+                <label>Compliance Issue-Charging Registration fees</label>
+            </value>
+            <value>
+                <fullName>Compliance Issue Fraud employer</fullName>
+                <default>false</default>
+                <label>Compliance Issue Fraud employer</label>
+            </value>
+            <value>
+                <fullName>Compliance Issue-Misuse,Fake Job Offer etc.</fullName>
+                <default>false</default>
+                <label>Compliance Issue-Misuse,Fake Job Offer etc.</label>
+            </value>
+            <value>
+                <fullName>Compliance Issue-Others(TAFEP (discrimination Gender,Race) or  any other Reason)</fullName>
+                <default>false</default>
+                <label>Compliance Issue-Others(TAFEP (discrimination Gender,Race) or  any other Reason)</label>
+            </value>
+            <value>
+                <fullName>Compliance Issue-Promoting services</fullName>
+                <default>false</default>
+                <label>Compliance Issue-Promoting services</label>
+            </value>
+            <value>
+                <fullName>Compliance Issue-Sharing access</fullName>
+                <default>false</default>
+                <label>Compliance Issue-Sharing access</label>
+            </value>
+            <value>
+                <fullName>Documents Non-Submission-KYC etc.</fullName>
+                <default>false</default>
+                <label>Documents Non-Submission-KYC etc.</label>
+            </value>
+            <value>
+                <fullName>Documents Submission-Non-Submission-Cheques</fullName>
+                <default>false</default>
+                <label>Documents Submission-Non-Submission-Cheques</label>
+            </value>
+            <value>
+                <fullName>Documents Submission-Non-Submission-KYC</fullName>
+                <default>false</default>
+                <label>Documents Submission-Non-Submission-KYC</label>
+            </value>
+            <value>
+                <fullName>False Promise to Pay</fullName>
+                <default>false</default>
+                <label>False Promise to Pay</label>
+            </value>
+            <value>
+                <fullName>Financial Issue-Business Losses</fullName>
+                <default>false</default>
+                <label>Financial Issue-Business Losses</label>
+            </value>
+            <value>
+                <fullName>Financial Issue-Delay from payments from Clients</fullName>
+                <default>false</default>
+                <label>Financial Issue-Delay from payments from Clients</label>
+            </value>
+            <value>
+                <fullName>Financial Issue -Financial Crisis/Budget</fullName>
+                <default>false</default>
+                <label>Financial Issue -Financial Crisis/Budget</label>
+            </value>
+            <value>
+                <fullName>Non-Contactable Client</fullName>
+                <default>false</default>
+                <label>Non-Contactable Client</label>
+            </value>
+            <value>
+                <fullName>Non-Contactable Client-No Response to Emails</fullName>
+                <default>false</default>
+                <label>Non-Contactable Client-No Response to Emails</label>
+            </value>
+            <value>
+                <fullName>Non-Contactable Client-Not in Contact with Sales</fullName>
+                <default>false</default>
+                <label>Non-Contactable Client-Not in Contact with Sales</label>
+            </value>
+            <value>
+                <fullName>Non-Contactable Client-Phone numbers switched off</fullName>
+                <default>false</default>
+                <label>Non-Contactable Client-Phone numbers switched off</label>
+            </value>
+            <value>
+                <fullName>Non- Responsive Client-Client always disconnects</fullName>
+                <default>false</default>
+                <label>Non- Responsive Client-Client always disconnects</label>
+            </value>
+            <value>
+                <fullName>Non- Responsive Client-Contact numbers Ringing but not being received/No Response to Emails</fullName>
+                <default>false</default>
+                <label>Non- Responsive Client-Contact numbers Ringing but not being received/No Response to Emails</label>
+            </value>
+            <value>
+                <fullName>Other Issue-Client disputing Invoice ( Name of Client)</fullName>
+                <default>false</default>
+                <label>Other Issue-Client disputing Invoice ( Name of Client)</label>
+            </value>
+            <value>
+                <fullName>Other Issue-Client Disputing Invoice (Separate Invoice for each installment )</fullName>
+                <default>false</default>
+                <label>Other Issue-Client Disputing Invoice (Separate Invoice for each installment )</label>
+            </value>
+            <value>
+                <fullName>Other Issue-Client Disputing Invoices ( Date of Invoice)</fullName>
+                <default>false</default>
+                <label>Other Issue-Client Disputing Invoices ( Date of Invoice)</label>
+            </value>
+            <value>
+                <fullName>Other Issue-Client disputing Service Tax ( SEZ etc.)</fullName>
+                <default>false</default>
+                <label>Other Issue-Client disputing Service Tax ( SEZ etc.)</label>
+            </value>
+            <value>
+                <fullName>Other Issue-Purchase Order Not In Place</fullName>
+                <default>false</default>
+                <label>Other Issue-Purchase Order Not In Place</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Product Issue</fullName>
+                <default>false</default>
+                <label>Product Issue</label>
+            </value>
+            <value>
+                <fullName>Product IssueJob Posting Performance</fullName>
+                <default>false</default>
+                <label>Product IssueJob Posting Performance</label>
+            </value>
+            <value>
+                <fullName>Product Issue-Jobs+Resume Database Performance</fullName>
+                <default>false</default>
+                <label>Product Issue-Jobs+Resume Database Performance</label>
+            </value>
+            <value>
+                <fullName>Product Issue-Resume Database Performance</fullName>
+                <default>false</default>
+                <label>Product Issue-Resume Database Performance</label>
+            </value>
+            <value>
+                <fullName>Service Issue-No backend Support</fullName>
+                <default>false</default>
+                <label>Service Issue-No backend Support</label>
+            </value>
+            <value>
+                <fullName>Service Issue-No Training</fullName>
+                <default>false</default>
+                <label>Service Issue-No Training</label>
+            </value>
+            <value>
+                <fullName>Service Issue-Poor/No After Sales Service by Sales or Customer Service teams</fullName>
+                <default>false</default>
+                <label>Service Issue-Poor/No After Sales Service by Sales or Customer Service teams</label>
+            </value>
+            <value>
+                <fullName>Settlement/Refund</fullName>
+                <default>false</default>
+                <label>Settlement/Refund</label>
+            </value>
+            <value>
+                <fullName>Technical Issue</fullName>
+                <default>false</default>
+                <label>Technical Issue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>SEA Free Trial Request (PL)</name>
+    <style>freeForm</style>
+    <subject>Free Trial Request for {!Opportunity.Account} - {!Opportunity.Id}</subject>
+    <textOnly>Send Email to - Finance and CR dept
+
+Hi,
+
+Please find attached the free trial request for
+
+Account Information:
+PL Name - {!Opportunity.Account}
+PL ID - {!Opportunity.Id}
+PL Industry - {!Account.Industry}
+Address - {!Account.ShippingStreet} {!Account.ShippingCity}, {!Account.ShippingState} {!Account.ShippingPostalCode}, {!Account.ShippingCountry}
+
+
+User Contact Information:
+Name - {!Contact.FirstName} {!Contact.LastName}
+Email - {!Contact.Email}
+Phone - {!Contact.Phone}
+
+Sales Rep Name - {!Opportunity.OwnerFullName}
+
+Special Instructions (if they apply):
+
+
+This has also been approved by my manager, enclosed is the email.
+
+
+Regards,
+&lt;Enter Signature&gt;</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

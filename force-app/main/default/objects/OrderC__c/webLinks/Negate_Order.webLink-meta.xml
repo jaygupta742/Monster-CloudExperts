@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Negate_Order</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Negate Order</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/34.0/connection.js&quot;)}; 
+{!REQUIRESCRIPT(&quot;/soap/ajax/34.0/apex.js&quot;)}
+
+
+if(&quot;{!OrderC__c.OrderStatus__c}&quot; != &quot;Rejected&quot; ||  &quot;{!OrderC__c.Change_Type__c}&quot; == &quot;&quot; ){
+alert(&quot;Order Status must be \&quot;Rejected\&quot; AND Negation Type must be specified in order to \&quot;Negate\&quot; an Order &quot;);
+}
+else{
+alert(&quot;Nagated successfully&quot;); 
+var newRecords = []; 
+var c = new sforce.SObject(&quot;OrderC__c&quot;); 
+c.ID = &apos;{!OrderC__c.Id}&apos;; 
+c.OrderStatus__c = &quot;Negated&quot;; 
+newRecords.push(c); 
+var result = sforce.connection.update(newRecords); 
+window.location.reload(); 
+}</url>
+</WebLink>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SKA-558</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>APAC_Monster_College</letterhead>
+    <name>Monster College</name>
+    <style>formalLetter</style>
+    <subject>Welcome to Monster College - {!Account.Name}</subject>
+    <textOnly>Dear Mr/Ms,
+Welcome to Monster College™ - a perfect platform for potential employers to connect with fresh graduates and college students across India. Monster College™ is backed by the brand Monster (www.monsterindia.com), a leading job portal with a database of 20,000 employers and 61.3 million cumulative resumes.
+
+Your account has been created and we are highly pleased to have you as a privileged member of the Monster College™. A copy of the Service Agreement executed is attached herewith for your ready reference and record.  We request you to go through the Agreement to verify products/services subscribed and payment terms.
+With this association, we are confident to help you find the right talent for your hiring needs and showcase your employer brand effectively to the potential job seekers.
+We look forward to having a mutually beneficial relationship.
+If you have any queries, please feel free to reach out at operations@monstercollege.in
+Thanks &amp; Regards,
+Monster College Team
+Phone: 01204024310 ( Available Monday to Friday from 10:30 Hrs. to 17:00 Hrs.)
+Email: operations@monstercollege.in
+Escalation of any Customer Service matter
+In the unlikely event of your query or complaint not being resolved promptly to your satisfaction, please write a mail to operations@monstercollege.in as a first level of escalation and to crhead@monstercollege.in for second level escalation.  The matter will be directly investigated by the senior management of our Customer Service team.
+Terms of Use
+We thank you for using Monster. For uninterrupted access to our services, it is important for you to read and understand our Terms of Use</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

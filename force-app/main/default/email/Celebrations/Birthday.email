@@ -1,0 +1,12 @@
+<html>
+<body>
+
+<b><i>Dear {!Contact.FirstName} {!Contact.LastName}, <br /><br />
+
+<div style="margin:0px 200px 0px 0px;">May this birthday bring happiness, joy and loads of success. May you achieve all your ambitions. A very Happy Birthday.Forget about the past and hope for the best for we all believe this birthday will bring all the success you deserve in your life and you will again grow in your professional career. Have a fantastic birthday filled with love and surprises.
+</div><br /><br/>
+<image URL="https://c.ap5.content.force.com/servlet/servlet.FileDownload?file=0157F000000lhef" alt="Birthday Image"></image>
+
+</i></b> 
+
+</body></html>

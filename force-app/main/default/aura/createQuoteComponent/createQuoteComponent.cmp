@@ -1,0 +1,242 @@
+<aura:component controller="Newcreatequoteclasss"
+    implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader"
+    access="global">
+    <aura:import library="lightning:alert" property="LightningAlert" />
+
+    <aura:attribute name="oppObj" type="OpportunityN__c" />
+    <aura:attribute name="OpportunityItems" type="Opp_Line_Item__c[]" />
+    <aura:attribute name="OpportunityServices" type="Opp_Line_Item__c[]" />
+
+    <aura:attribute name="ProductColumns" type="list" />
+    <aura:attribute name="AccessoriesColumns" type="list" />
+
+    <aura:attribute name="quoteObj" type="QuotesN__c" />
+    <aura:attribute name="quoteLineItems" type="Quote_Line_Items__c[]" />
+    <aura:attribute name="quliAccessories" type="QULI_Accessories__c[]" />
+    <aura:attribute name="RecontractQuotes" type="QuotesN__c[]" />
+    <aura:attribute name="coption" type="Object" />
+    <aura:attribute name="SpinnerStatus" type="boolean" />
+    <aura:attribute name="ren" type="boolean" />
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}" />
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow1}" />
+    <aura:attribute name="pc" type="string" />
+    <aura:attribute name="bc" type="string" />
+    <aura:attribute name="RelatedContactFilter" type="Object" />
+    <aura:attribute name="RelatedBaseOrderFilter" type="Object" />
+    <aura:attribute name="RelatedBaseQuoteFilter" type="Object" />
+    <aura:attribute name="accountStatus" type="String" />
+    <aura:attribute name="RelatedBaseOrderTypeOptions" type="List" default="[{'label': 'Orders(For Revamp)', 'value': 'Order__c'},
+                                                                        {'label': 'Orders', 'value': 'OrderC__c'}]" />
+    <aura:attribute name="RelatedBaseOrderType" type="String" default="Order__c" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 90%;
+        max-width: 120rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }
+        .slds-modal__content{
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+
+        }
+    </aura:html>
+
+    <div class="slds-modal__header">
+        <h1 class="slds-modal__title slds-hyphenate" tabindex="-1">Create Quote </h1>
+    </div>
+    <div class="slds-modal__content slds-var-p-around_medium">
+        <aura:if isTrue="{!v.accountStatus != 'Unpromoted'}">
+            <aura:if isTrue="{!v.SpinnerStatus}">
+                <div class="container" aura:id="spinnerContainer">
+                    <lightning:spinner alternativeText="Loading" size="large" variant="brand" />
+                </div>
+                <aura:set attribute="else">
+                    <div class="container" aura:id="Container">
+                        <div class="slds-section slds-is-open">
+                            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                                <span class="slds-truncate slds-var-p-horizontal_small" title="Quote Information">Quote
+                                    Information</span>
+                            </h3>
+                            <div class="slds-section__content">
+                                <lightning:recordEditForm objectApiName="QuotesN__c" density="comfy">
+                                    <lightning:layout multipleRows="true">
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Account__c"
+                                                value="{!v.quoteObj.Account__c}" disabled="true"></lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <c:recordPicker label="Contacts" name="Contact__c"
+                                                placeholder="Search Contacts..." objectApiName="Contact"
+                                                filter="{!v.RelatedContactFilter}" value="{!v.quoteObj.Contact__c}"
+                                                onchange="{!c.HandleChangeValue}" required="true"></c:recordPicker>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Price_Master__c"
+                                                value="{!v.quoteObj.Price_Master__c}" disabled="true">
+                                            </lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Opportunities__c"
+                                                value="{!v.quoteObj.Opportunities__c}" disabled="true">
+                                            </lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Quote_Type__c"
+                                                value="{!v.quoteObj.Quote_Type__c}" required="true">
+                                            </lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <aura:if
+                                                isTrue="{!v.quoteObj.Quote_Type__c == 'Lapsed' || v.quoteObj.Quote_Type__c == 'Renewal' || v.quoteObj.Quote_Type__c == 'Slippage'}">
+                                                <div style="display: flex; flex-direction: row;">
+                                                    <div style="max-width: 100px;">
+                                                        <lightning:combobox label="Related To"
+                                                            options="{!v.RelatedBaseOrderTypeOptions}"
+                                                            value="{!v.RelatedBaseOrderType}"></lightning:combobox>
+                                                    </div>
+                                                    <div style="flex: 1;">
+                                                        <c:recordPicker label="Base Order Id" name="Base_Order_ID__c"
+                                                            placeholder="Search a Order"
+                                                            objectApiName="{!v.RelatedBaseOrderType}"
+                                                            value="{!v.quoteObj.Base_Order_ID__c}"
+                                                            filter="{!v.RelatedBaseOrderFilter}" required="true"
+                                                            onchange="{!c.HandleChangeValue}"></c:recordPicker>
+                                                    </div>
+                                                </div>
+                                            </aura:if>
+                                            <aura:if isTrue="{!v.quoteObj.Quote_Type__c == 'Recontract'}">
+                                                <c:recordPicker label="Base Quote Id" name="Base_Quote_Id__c"
+                                                    placeholder="Search Quote..." objectApiName="QuotesN__c"
+                                                    value="{!v.quoteObj.Base_Quote_Id__c}"
+                                                    filter="{!v.RelatedBaseOrderFilter}" required="true"
+                                                    onchange="{!c.HandleChangeValue}"></c:recordPicker>
+                                            </aura:if>
+                                        </lightning:layoutItem>
+                                        <aura:if isTrue="{!v.quoteObj.Quote_Type__c == 'Recontract'}">
+                                            <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                                smallDeviceSize="12" padding="horizontal-small">
+                                                <lightning:inputField fieldName="Payment_Type__c"
+                                                    value="{!v.quoteObj.Payment_Type__c}" required="true">
+                                                </lightning:inputField>
+                                            </lightning:layoutItem>
+                                            <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                                smallDeviceSize="12" padding="horizontal-small">
+                                                <lightning:inputField fieldName="Amount__c"
+                                                    value="{!v.quoteObj.Amount__c}" required="true">
+                                                </lightning:inputField>
+                                            </lightning:layoutItem>
+                                        </aura:if>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Billing_Address__c"
+                                                value="{!v.quoteObj.Billing_Address__c}" required="true">
+                                            </lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Posting_Address__c"
+                                                value="{!v.quoteObj.Posting_Address__c}" required="true">
+                                            </lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Selling_Country__c"
+                                                value="{!v.quoteObj.Selling_Country__c}" required="true">
+                                            </lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Xcode__c" value="{!v.quoteObj.Xcode__c}">
+                                            </lightning:inputField>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <!-- <lightning:inputField fieldName="Bill_Contact__c" value="{!v.quoteObj.Bill_Contact__c}"></lightning:inputField> -->
+                                            <c:recordPicker label="Bill Contact" name="Bill_Contact__c"
+                                                placeholder="Search Contacts..." objectApiName="Contact"
+                                                filter="{!v.RelatedContactFilter}" value="{!v.quoteObj.Bill_Contact__c}"
+                                                onchange="{!c.HandleChangeValue}"></c:recordPicker>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="6" mediumDeviceSize="6"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <!-- <lightning:inputField fieldName="Posting_Contact__c" value="{!v.quoteObj.Posting_Contact__c}"></lightning:inputField> -->
+                                            <c:recordPicker label="Posting Contact" name="Posting_Contact__c"
+                                                placeholder="Search Contacts..." objectApiName="Contact"
+                                                filter="{!v.RelatedContactFilter}"
+                                                value="{!v.quoteObj.Posting_Contact__c}"
+                                                onchange="{!c.HandleChangeValue}"></c:recordPicker>
+                                        </lightning:layoutItem>
+                                        <lightning:layoutItem size="12" largeDeviceSize="12" mediumDeviceSize="12"
+                                            smallDeviceSize="12" padding="horizontal-small">
+                                            <lightning:inputField fieldName="Special_Terms__c"
+                                                value="{!v.quoteObj.Special_Terms__c}"></lightning:inputField>
+                                        </lightning:layoutItem>
+                                    </lightning:layout>
+                                </lightning:recordEditForm>
+                            </div>
+                        </div>
+
+                        <div class="slds-section slds-is-open">
+                            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                                <span class="slds-truncate slds-var-p-horizontal_small" title="Quote Line Items">Quote
+                                    Line Items</span>
+                            </h3>
+                            <div class="slds-section__content">
+                                <lightning:datatable keyField="Id" data="{!v.OpportunityItems}"
+                                    columns="{!v.ProductColumns}" hideCheckboxColumn="true"
+                                    showRowNumberColumn="true" />
+                            </div>
+                        </div>
+
+                        <div class="slds-section slds-is-open">
+                            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                                <span class="slds-truncate slds-var-p-horizontal_small"
+                                    title="Quote Items Accessories">Quote Items
+                                    Accessories</span>
+                            </h3>
+                            <div class="slds-section__content">
+                                <lightning:datatable keyField="Id" data="{!v.OpportunityServices}"
+                                    columns="{!v.AccessoriesColumns}" hideCheckboxColumn="true"
+                                    showRowNumberColumn="true" />
+                            </div>
+                        </div>
+                    </div>
+                </aura:set>
+            </aura:if>
+            <aura:set attribute="else">
+                <h1 class="slds-section__title slds-theme_shade Revamp-Section slds-align_absolute-center">
+                    Quotation can't be created For Account status Lead and Unpromoted !!!
+                </h1>
+            </aura:set>
+        </aura:if>
+    </div>
+    <div class="slds-modal__footer">
+        <lightning:button aura:id="CancelButton" label="Cancel" onclick="{!c.HandleCancelPage}"></lightning:button>
+        <aura:if
+            isTrue="{!v.accountStatus != 'Unpromoted'}">
+            <lightning:button aura:id="SaveButton" label="Save" variant="brand" onclick="{!c.HandleSaveQuote}">
+            </lightning:button>
+        </aura:if>
+    </div>
+</aura:component>

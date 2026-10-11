@@ -1,0 +1,25 @@
+<style>
+p {
+font-family: Tahoma, Geneva, sans-serif;
+font-size: 14px;
+letter-spacing: 0px;
+word-spacing: 0px;
+color: #000000;
+font-weight: normal;
+text-decoration: none;
+font-style: normal;
+font-variant: normal;
+text-transform: none;
+}
+#hiddenRef{
+visibility: hidden;
+}
+</style>
+
+<p>Dear Customer,</p>
+<p>Greetings from Monster Customer Service team.</p>
+<p>Thank you for writing to us. We acknowledge the receipt of your email and our team will shortly get in touch with you. Your Case number is {!Case__c.Name} .</p>
+<p><strong>Best Regards,</strong><strong><br /> Client Relations Team<br /> Monsterindia.com</strong></p>
+<p><strong>Email:</strong> <a href="mailto:cr@monsterindia.com">cr@monsterindia.com</a><br /> <strong>Toll Free:</strong> 1-800-4196666* (From MTNL/BSNL lines only)<br /> <strong>Toll Number:</strong>&nbsp; +91-40-6611-6611* (Standard STD/ISD charges apply)<br /> <em>*Press 2 when the IVR message comes up</em></p>
+<p></p><p></p>
+<p>{!Case.Thread_Id}</p>

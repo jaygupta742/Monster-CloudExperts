@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Size_of_Account__c</fullName>
+    <label>Account Annual Spend</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SMALL(less than 10 Cr)</fullName>
+                <default>false</default>
+                <label>SMALL(less than 10 Cr)</label>
+            </value>
+            <value>
+                <fullName>MEDIUM(Between 10-20 Cr)</fullName>
+                <default>false</default>
+                <label>MEDIUM(Between 10-20 Cr)</label>
+            </value>
+            <value>
+                <fullName>LARGE(Above 20 Cr)</fullName>
+                <default>false</default>
+                <label>LARGE(Above 20 Cr)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

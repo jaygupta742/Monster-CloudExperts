@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreditStatus__c</fullName>
+    <label>Credit Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Ok</fullName>
+                <default>false</default>
+                <label>Ok</label>
+            </value>
+            <value>
+                <fullName>On Hold - Finance</fullName>
+                <default>false</default>
+                <label>On Hold - Finance</label>
+            </value>
+            <value>
+                <fullName>On Hold - Compliance</fullName>
+                <default>false</default>
+                <label>On Hold - Compliance</label>
+            </value>
+            <value>
+                <fullName>Approved PrePay</fullName>
+                <default>false</default>
+                <label>Approved PrePay</label>
+            </value>
+            <value>
+                <fullName>Suspend</fullName>
+                <default>false</default>
+                <label>Suspend</label>
+            </value>
+            <value>
+                <fullName>Bankrupt</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bankrupt</label>
+            </value>
+            <value>
+                <fullName>Discretionary</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Discretionary</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>On Hold - Both</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>On Hold - Both</label>
+            </value>
+            <value>
+                <fullName>PrePay Terms Required</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PrePay Terms Required</label>
+            </value>
+            <value>
+                <fullName>Progressive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Progressive</label>
+            </value>
+            <value>
+                <fullName>Terminated - Compliance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Terminated - Compliance</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

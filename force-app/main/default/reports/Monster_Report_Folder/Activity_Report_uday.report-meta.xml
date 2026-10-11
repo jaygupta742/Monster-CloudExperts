@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Account.AccountID__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.AccountStatus__c</field>
+    </columns>
+    <columns>
+        <field>Activity.Name1__c</field>
+    </columns>
+    <columns>
+        <field>Activity.Mobile_Task_sales__c</field>
+    </columns>
+    <columns>
+        <field>Activity.Description__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Activity Report</description>
+    <filter>
+        <criteriaItems>
+            <column>Activity.Task_Type__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,VOC,Meeting,Demo,Free Trial,Email,Telecall,Leadership Meeting,Call Inbound,Call Outbound,Email Inbound,Email Outbound,Visit,Call,Customer Event,Foundit2.0,Compliance,RenewalStatus,Renewal Status,QBR,A/C Disabled,DND,No Training Required</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Activity.Task_Sub_Type1__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Product Issue – DB Inventory / Applications,Technical Issue/Bug,ATS related Issue,Branding related Issue,Others,Online,Onsite,Free Trial,Email,Senior Leadership,Channel Head,2.0 Migration Walkthru – TA Lead,2.0 Migration Training – Recruiters,2.0 – VOC,2.0 – No Training Required,2.0 – Client Unreachable,ATS Setup,2.0 – Interested to upgrade,Not Renewed,Renewed,A/C Disabled,A/C Warning,A/C Audit,Connected,Not Connected</value>
+        </criteriaItems>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Activity.Task_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Activity.Task_Sub_Type1__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Activity Report - uday</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountActivity</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2025-12-24</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2025-12-24</startDate>
+    </timeFrameFilter>
+</Report>

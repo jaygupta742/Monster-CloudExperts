@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Play__c</fullName>
+    <label>Sales Play</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Hi-Po</fullName>
+                <default>false</default>
+                <label>Hi-Po</label>
+            </value>
+            <value>
+                <fullName>Large Deal</fullName>
+                <default>false</default>
+                <label>Large Deal</label>
+            </value>
+            <value>
+                <fullName>High Potential</fullName>
+                <default>false</default>
+                <label>High Potential</label>
+            </value>
+            <value>
+                <fullName>Renewal Q1 FY24</fullName>
+                <default>false</default>
+                <label>Renewal Q1 FY24</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

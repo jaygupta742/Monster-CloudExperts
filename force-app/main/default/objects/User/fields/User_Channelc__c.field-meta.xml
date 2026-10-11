@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_Channelc__c</fullName>
+    <inlineHelpText>This Field is created for product channel wise Sharing</inlineHelpText>
+    <label>User Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Channel__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BFSI</fullName>
+                <default>false</default>
+                <label>BFSI</label>
+            </value>
+            <value>
+                <fullName>Business</fullName>
+                <default>false</default>
+                <label>Business</label>
+            </value>
+            <value>
+                <fullName>Business &amp; Strategy</fullName>
+                <default>false</default>
+                <label>Business &amp; Strategy</label>
+            </value>
+            <value>
+                <fullName>Client Relations</fullName>
+                <default>false</default>
+                <label>Client Relations</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Consumer sales</fullName>
+                <default>false</default>
+                <label>Consumer sales</label>
+            </value>
+            <value>
+                <fullName>Enterprise Business</fullName>
+                <default>false</default>
+                <label>Enterprise Business</label>
+            </value>
+            <value>
+                <fullName>Fieldsales-HK</fullName>
+                <default>false</default>
+                <label>Fieldsales-HK</label>
+            </value>
+            <value>
+                <fullName>Fieldsales-IN</fullName>
+                <default>false</default>
+                <label>Fieldsales-IN</label>
+            </value>
+            <value>
+                <fullName>Fieldsales-ME</fullName>
+                <default>false</default>
+                <label>Fieldsales-ME</label>
+            </value>
+            <value>
+                <fullName>Fieldsales-MY</fullName>
+                <default>false</default>
+                <label>Fieldsales-MY</label>
+            </value>
+            <value>
+                <fullName>Fieldsales-PH</fullName>
+                <default>false</default>
+                <label>Fieldsales-PH</label>
+            </value>
+            <value>
+                <fullName>Fieldsales-SG</fullName>
+                <default>false</default>
+                <label>Fieldsales-SG</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Growth</fullName>
+                <default>false</default>
+                <label>Growth</label>
+            </value>
+            <value>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+                <label>Lead Management</label>
+            </value>
+            <value>
+                <fullName>Lead Mgmt</fullName>
+                <default>false</default>
+                <label>Lead Mgmt</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Media Works</fullName>
+                <default>false</default>
+                <label>Media Works</label>
+            </value>
+            <value>
+                <fullName>Mini EA</fullName>
+                <default>false</default>
+                <label>Mini EA</label>
+            </value>
+            <value>
+                <fullName>MMW</fullName>
+                <default>false</default>
+                <label>MMW</label>
+            </value>
+            <value>
+                <fullName>Monster Media Works</fullName>
+                <default>false</default>
+                <label>Monster Media Works</label>
+            </value>
+            <value>
+                <fullName>Seeker Business</fullName>
+                <default>false</default>
+                <label>Seeker Business</label>
+            </value>
+            <value>
+                <fullName>SMB</fullName>
+                <default>false</default>
+                <label>SMB</label>
+            </value>
+            <value>
+                <fullName>SMB Business</fullName>
+                <default>false</default>
+                <label>SMB Business</label>
+            </value>
+            <value>
+                <fullName>Strat</fullName>
+                <default>false</default>
+                <label>Strat</label>
+            </value>
+            <value>
+                <fullName>Surplus</fullName>
+                <default>false</default>
+                <label>Surplus</label>
+            </value>
+            <value>
+                <fullName>Telesales-India</fullName>
+                <default>false</default>
+                <label>Telesales-India</label>
+            </value>
+            <value>
+                <fullName>Telesales-ME</fullName>
+                <default>false</default>
+                <label>Telesales-ME</label>
+            </value>
+            <value>
+                <fullName>Telesales-SEA</fullName>
+                <default>false</default>
+                <label>Telesales-SEA</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>HK FS</controllingFieldValue>
+            <valueName>Fieldsales-HK</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>EA</controllingFieldValue>
+            <valueName>Mini EA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IN TS</controllingFieldValue>
+            <valueName>Telesales-India</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SG FS</controllingFieldValue>
+            <valueName>Fieldsales-SG</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SEA TS</controllingFieldValue>
+            <valueName>Telesales-SEA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MY FS</controllingFieldValue>
+            <valueName>Fieldsales-MY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>PH FS</controllingFieldValue>
+            <valueName>Fieldsales-PH</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ME FS</controllingFieldValue>
+            <valueName>Fieldsales-ME</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ME TS</controllingFieldValue>
+            <valueName>Telesales-ME</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

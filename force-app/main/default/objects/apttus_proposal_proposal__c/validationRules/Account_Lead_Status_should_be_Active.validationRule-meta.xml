@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Lead_Status_should_be_Active</fullName>
+    <active>true</active>
+    <errorConditionFormula>IF( NOT(Account__r.Person_Account__c  ||   $User.ProfileId = &apos;00e7F000000uSSe&apos;), 
+IF( 
+
+NOT(ISBLANK( Account__c )),
+NOT(OR(ISPICKVAL(Account__r.Lead_Account_Status__c ,&apos;Active&apos;),ISPICKVAL(Account__r.Lead_Account_Status__c ,&apos;&apos;))),
+false
+ )
+			
+,false)</errorConditionFormula>
+    <errorDisplayField>Account__c</errorDisplayField>
+    <errorMessage>You cannot create Quote until Lead Account Status is Active or Blank</errorMessage>
+</ValidationRule>

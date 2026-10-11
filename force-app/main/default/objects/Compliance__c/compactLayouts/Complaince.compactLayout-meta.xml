@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complaince</fullName>
+    <fields>Name</fields>
+    <fields>Account_Id__c</fields>
+    <fields>Account__c</fields>
+    <fields>Email__c</fields>
+    <fields>Category__c</fields>
+    <fields>Issue__c</fields>
+    <label>Complaince</label>
+</CompactLayout>

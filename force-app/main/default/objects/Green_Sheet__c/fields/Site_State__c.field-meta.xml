@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site_State__c</fullName>
+    <description>TEXT( Site_Address_C__r.State__c )</description>
+    <externalId>false</externalId>
+    <formula>Account__r.ShippingState 
+
+/*TEXT( Site_Address_C__r.state__c )*/</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Site State</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,11 @@
+<b>{!Credit_Request__c.OwnerFullName}</b> has requested your approval for the following item:<br/><br/>
+
+Credit Request Owner : {!Credit_Request__c.OwnerFullName}<br/>
+Credit Request Name : {!Credit_Request__c.Name}<br/>
+Account : {!Credit_Request__c.Account__c}<br/>
+Order : {!Credit_Request__c.Order_CustomId__c}<br/>
+Reversal/Bad Debt Reason : {!Credit_Request__c.Order_CustomId__c}<br/><br/><br/>
+
+
+Thanks & Regards<br/>
+<b>{!Credit_Request__c.OwnerFullName}</b>

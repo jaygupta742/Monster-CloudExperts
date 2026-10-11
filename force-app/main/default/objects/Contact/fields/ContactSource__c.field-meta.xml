@@ -1,0 +1,520 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactSource__c</fullName>
+    <label>Contact Source</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>(GAM 1)</fullName>
+                <default>false</default>
+                <label>(GAM 1)</label>
+            </value>
+            <value>
+                <fullName>(GAM 1)(VI)</fullName>
+                <default>false</default>
+                <label>(GAM 1)(VI)</label>
+            </value>
+            <value>
+                <fullName>(GAM 2)(VI)</fullName>
+                <default>false</default>
+                <label>(GAM 2)(VI)</label>
+            </value>
+            <value>
+                <fullName>(GAM 3)</fullName>
+                <default>false</default>
+                <label>(GAM 3)</label>
+            </value>
+            <value>
+                <fullName>Alliance</fullName>
+                <default>false</default>
+                <label>Alliance</label>
+            </value>
+            <value>
+                <fullName>Anzeigendaten.de</fullName>
+                <default>false</default>
+                <label>Anzeigendaten.de</label>
+            </value>
+            <value>
+                <fullName>Chat (Inbound)</fullName>
+                <default>false</default>
+                <label>Chat (Inbound)</label>
+            </value>
+            <value>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>commercial database</fullName>
+                <default>false</default>
+                <label>commercial database</label>
+            </value>
+            <value>
+                <fullName>CONARH 2009</fullName>
+                <default>false</default>
+                <label>CONARH 2009</label>
+            </value>
+            <value>
+                <fullName>Conference</fullName>
+                <default>false</default>
+                <label>Conference</label>
+            </value>
+            <value>
+                <fullName>Corzen</fullName>
+                <default>false</default>
+                <label>Corzen</label>
+            </value>
+            <value>
+                <fullName>Demo Attendee</fullName>
+                <default>false</default>
+                <label>Demo Attendee</label>
+            </value>
+            <value>
+                <fullName>Directory of Recruiters</fullName>
+                <default>false</default>
+                <label>Directory of Recruiters</label>
+            </value>
+            <value>
+                <fullName>Direktmarket.</fullName>
+                <default>false</default>
+                <label>Direktmarket.</label>
+            </value>
+            <value>
+                <fullName>DM Brazil Migration</fullName>
+                <default>false</default>
+                <label>DM Brazil Migration</label>
+            </value>
+            <value>
+                <fullName>DM Mexico Migration</fullName>
+                <default>false</default>
+                <label>DM Mexico Migration</label>
+            </value>
+            <value>
+                <fullName>DM New Contact</fullName>
+                <default>false</default>
+                <label>DM New Contact</label>
+            </value>
+            <value>
+                <fullName>DM Turkey Migration</fullName>
+                <default>false</default>
+                <label>DM Turkey Migration</label>
+            </value>
+            <value>
+                <fullName>DM Upsell</fullName>
+                <default>false</default>
+                <label>DM Upsell</label>
+            </value>
+            <value>
+                <fullName>Dunn and Bradstreet</fullName>
+                <default>false</default>
+                <label>Dunn and Bradstreet</label>
+            </value>
+            <value>
+                <fullName>ECOMM</fullName>
+                <default>false</default>
+                <label>ECOMM</label>
+            </value>
+            <value>
+                <fullName>Ecomm Event</fullName>
+                <default>false</default>
+                <label>Ecomm Event</label>
+            </value>
+            <value>
+                <fullName>Ecomm No Contact</fullName>
+                <default>false</default>
+                <label>Ecomm No Contact</label>
+            </value>
+            <value>
+                <fullName>Email (hire@monster.com)</fullName>
+                <default>false</default>
+                <label>Email (hire@monster.com)</label>
+            </value>
+            <value>
+                <fullName>Email (Inbound)</fullName>
+                <default>false</default>
+                <label>Email (Inbound)</label>
+            </value>
+            <value>
+                <fullName>Email (Outbound)</fullName>
+                <default>false</default>
+                <label>Email (Outbound)</label>
+            </value>
+            <value>
+                <fullName>Empfehlung</fullName>
+                <default>false</default>
+                <label>Empfehlung</label>
+            </value>
+            <value>
+                <fullName>Fax (Inbound)</fullName>
+                <default>false</default>
+                <label>Fax (Inbound)</label>
+            </value>
+            <value>
+                <fullName>FTP Technical</fullName>
+                <default>false</default>
+                <label>FTP Technical</label>
+            </value>
+            <value>
+                <fullName>Gehaltsempfehlung</fullName>
+                <default>false</default>
+                <label>Gehaltsempfehlung</label>
+            </value>
+            <value>
+                <fullName>Google</fullName>
+                <default>false</default>
+                <label>Google</label>
+            </value>
+            <value>
+                <fullName>HBI</fullName>
+                <default>false</default>
+                <label>HBI</label>
+            </value>
+            <value>
+                <fullName>Homepage</fullName>
+                <default>false</default>
+                <label>Homepage</label>
+            </value>
+            <value>
+                <fullName>Hr-media</fullName>
+                <default>false</default>
+                <label>Hr-media</label>
+            </value>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers</fullName>
+                <default>false</default>
+                <label>Intern. Customers</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (CV)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (CV)</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (GAM 1)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (GAM 1)</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (GAM 1)(CV)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (GAM 1)(CV)</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (GAM 1)(VI)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (GAM 1)(VI)</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (GAM 2)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (GAM 2)</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (GAM 3)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (GAM 3)</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (GAM 3)(VI)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (GAM 3)(VI)</label>
+            </value>
+            <value>
+                <fullName>Intern. Customers (VI)</fullName>
+                <default>false</default>
+                <label>Intern. Customers (VI)</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>International Lead</fullName>
+                <default>false</default>
+                <label>International Lead</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>jobs.cz</fullName>
+                <default>false</default>
+                <label>jobs.cz</label>
+            </value>
+            <value>
+                <fullName>Kariyer.net</fullName>
+                <default>false</default>
+                <label>Kariyer.net</label>
+            </value>
+            <value>
+                <fullName>Local Customers</fullName>
+                <default>false</default>
+                <label>Local Customers</label>
+            </value>
+            <value>
+                <fullName>Local Customers (GAM 3)(VI)</fullName>
+                <default>false</default>
+                <label>Local Customers (GAM 3)(VI)</label>
+            </value>
+            <value>
+                <fullName>Mail (Inbound)</fullName>
+                <default>false</default>
+                <label>Mail (Inbound)</label>
+            </value>
+            <value>
+                <fullName>Mailing 032010</fullName>
+                <default>false</default>
+                <label>Mailing 032010</label>
+            </value>
+            <value>
+                <fullName>Mailshot (Outbound)</fullName>
+                <default>false</default>
+                <label>Mailshot (Outbound)</label>
+            </value>
+            <value>
+                <fullName>MSN Monster Direct</fullName>
+                <default>false</default>
+                <label>MSN Monster Direct</label>
+            </value>
+            <value>
+                <fullName>NewDirect</fullName>
+                <default>false</default>
+                <label>NewDirect</label>
+            </value>
+            <value>
+                <fullName>Newsletter</fullName>
+                <default>false</default>
+                <label>Newsletter</label>
+            </value>
+            <value>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+                <label>Newspaper</label>
+            </value>
+            <value>
+                <fullName>Newspaper Partner</fullName>
+                <default>false</default>
+                <label>Newspaper Partner</label>
+            </value>
+            <value>
+                <fullName>Online Import</fullName>
+                <default>false</default>
+                <label>Online Import</label>
+            </value>
+            <value>
+                <fullName>Online Lead</fullName>
+                <default>false</default>
+                <label>Online Lead</label>
+            </value>
+            <value>
+                <fullName>Online Survey</fullName>
+                <default>false</default>
+                <label>Online Survey</label>
+            </value>
+            <value>
+                <fullName>Pending</fullName>
+                <default>false</default>
+                <label>Pending</label>
+            </value>
+            <value>
+                <fullName>Personal Network</fullName>
+                <default>false</default>
+                <label>Personal Network</label>
+            </value>
+            <value>
+                <fullName>Personal Network (VI)</fullName>
+                <default>false</default>
+                <label>Personal Network (VI)</label>
+            </value>
+            <value>
+                <fullName>Phone (Direct Mail)</fullName>
+                <default>false</default>
+                <label>Phone (Direct Mail)</label>
+            </value>
+            <value>
+                <fullName>Phone (Inbound)</fullName>
+                <default>false</default>
+                <label>Phone (Inbound)</label>
+            </value>
+            <value>
+                <fullName>Phone (Outbound)</fullName>
+                <default>false</default>
+                <label>Phone (Outbound)</label>
+            </value>
+            <value>
+                <fullName>Pipeline Internacional</fullName>
+                <default>false</default>
+                <label>Pipeline Internacional</label>
+            </value>
+            <value>
+                <fullName>Pipeline Internacional (VI)</fullName>
+                <default>false</default>
+                <label>Pipeline Internacional (VI)</label>
+            </value>
+            <value>
+                <fullName>Post-a-Job</fullName>
+                <default>false</default>
+                <label>Post-a-Job</label>
+            </value>
+            <value>
+                <fullName>prace.cz</fullName>
+                <default>false</default>
+                <label>prace.cz</label>
+            </value>
+            <value>
+                <fullName>Purchased List</fullName>
+                <default>false</default>
+                <label>Purchased List</label>
+            </value>
+            <value>
+                <fullName>Reactivated</fullName>
+                <default>false</default>
+                <label>Reactivated</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Research</fullName>
+                <default>false</default>
+                <label>Research</label>
+            </value>
+            <value>
+                <fullName>Reseller</fullName>
+                <default>false</default>
+                <label>Reseller</label>
+            </value>
+            <value>
+                <fullName>Schober</fullName>
+                <default>false</default>
+                <label>Schober</label>
+            </value>
+            <value>
+                <fullName>Secretcv.com</fullName>
+                <default>false</default>
+                <label>Secretcv.com</label>
+            </value>
+            <value>
+                <fullName>Seminar</fullName>
+                <default>false</default>
+                <label>Seminar</label>
+            </value>
+            <value>
+                <fullName>sprace.cz</fullName>
+                <default>false</default>
+                <label>sprace.cz</label>
+            </value>
+            <value>
+                <fullName>Stern</fullName>
+                <default>false</default>
+                <label>Stern</label>
+            </value>
+            <value>
+                <fullName>Studie</fullName>
+                <default>false</default>
+                <label>Studie</label>
+            </value>
+            <value>
+                <fullName>Take Over</fullName>
+                <default>false</default>
+                <label>Take Over</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>TMP Lead Generation</fullName>
+                <default>false</default>
+                <label>TMP Lead Generation</label>
+            </value>
+            <value>
+                <fullName>Top 500</fullName>
+                <default>false</default>
+                <label>Top 500</label>
+            </value>
+            <value>
+                <fullName>Trade Show</fullName>
+                <default>false</default>
+                <label>Trade Show</label>
+            </value>
+            <value>
+                <fullName>Yenibiris.com</fullName>
+                <default>false</default>
+                <label>Yenibiris.com</label>
+            </value>
+            <value>
+                <fullName>Zeitung (Anzeige)</fullName>
+                <default>false</default>
+                <label>Zeitung (Anzeige)</label>
+            </value>
+            <value>
+                <fullName>Zeitung (PR Art.)</fullName>
+                <default>false</default>
+                <label>Zeitung (PR Art.)</label>
+            </value>
+            <value>
+                <fullName>Zukunft Personal</fullName>
+                <default>false</default>
+                <label>Zukunft Personal</label>
+            </value>
+            <value>
+                <fullName>Lusha</fullName>
+                <default>false</default>
+                <label>Lusha</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Sales Navigator</fullName>
+                <default>false</default>
+                <label>LinkedIn Sales Navigator</label>
+            </value>
+            <value>
+                <fullName>Billing/Finance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Billing/Finance</label>
+            </value>
+            <value>
+                <fullName>Internet Billing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internet Billing</label>
+            </value>
+            <value>
+                <fullName>Internet Primary</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internet Primary</label>
+            </value>
+            <value>
+                <fullName>Internet Purchaser</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internet Purchaser</label>
+            </value>
+            <value>
+                <fullName>Internet User</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Internet User</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

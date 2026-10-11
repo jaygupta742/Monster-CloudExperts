@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax__c</fullName>
+    <formula>IF(ISPICKVAL(Account_Entity_Use_Code1__c,&apos;X&apos;),0,IF(ISPICKVAL(Account_Entity_Use_Code1__c,&apos;Y&apos;),0,
+IF(ISPICKVAL(Selling_Country__c, &apos;India&apos;), 18,IF(ISPICKVAL(Selling_Country__c, &apos;Singapore&apos;),8,IF(ISPICKVAL(Selling_Country__c, &apos;Malaysia&apos;), 6,IF(ISPICKVAL(Selling_Country__c, &apos;Philippines&apos;), 12,IF(ISPICKVAL(Selling_Country__c, &apos;United Arab Emirates&apos;), 5,0
+)))))))/100</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Tax</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

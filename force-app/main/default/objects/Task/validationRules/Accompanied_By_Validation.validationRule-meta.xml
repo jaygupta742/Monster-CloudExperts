@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Accompanied_By_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( $Profile.Name =&apos;Monster - Sales&apos;,
+ ISPICKVAL( Subject__c ,&apos;Meeting&apos;), ISBLANK( TEXT(Accompanied_By__c)),
+RecordTypeId != &apos;012C50000004HX8IAM&apos;
+)</errorConditionFormula>
+    <errorDisplayField>Accompanied_By__c</errorDisplayField>
+    <errorMessage>Please Select Accompanied By Value</errorMessage>
+</ValidationRule>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ProcessFlowMigration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <destinationFlowDefinition>AccountLock_1</destinationFlowDefinition>
+    <destinationFlowVersion>AccountLock_1-1</destinationFlowVersion>
+    <developerName>myRule_3_301OX00000MC5t4YAD</developerName>
+    <masterLabel>AccountLock_1</masterLabel>
+    <migratedCriteriaLabel>unlocktheaccount</migratedCriteriaLabel>
+    <migratedCriteriaName>myRule_3</migratedCriteriaName>
+    <processVersion>AccountLock-23</processVersion>
+</ProcessFlowMigration>

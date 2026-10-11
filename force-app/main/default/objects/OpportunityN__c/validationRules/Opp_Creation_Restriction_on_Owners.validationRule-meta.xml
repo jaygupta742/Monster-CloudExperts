@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opp_Creation_Restriction_on_Owners</fullName>
+    <active>false</active>
+    <description>Only account owners can create the opportunity and  Swapna chintala</description>
+    <errorConditionFormula>IF( $Profile.Id == &apos;00e7F000000uSSh&apos;,
+   AND(
+         ISNEW(),
+         Account__r.OwnerId != $User.Id ,
+         $User.Id != &apos;0057F000003Sa4KQAS&apos;
+       ),false
+)</errorConditionFormula>
+    <errorMessage>Only Account Owner Can Create Opporutnity !!</errorMessage>
+</ValidationRule>

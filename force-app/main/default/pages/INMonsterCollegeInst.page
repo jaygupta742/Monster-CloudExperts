@@ -1,0 +1,105 @@
+<apex:page renderAs="pdf" >
+ <c:PDFHeaderFooterRunning value="header" >
+     <apex:image value="{!$Resource.Monster_Logo}" width="170" height="30"/><br />
+     <div style="color:#A9A9A9;"> Plot No.1024 &amp; 1024/1, Road No 45, <br />
+                                  Jubilee Hills, Hyderabad 500033, India. </div>
+ </c:PDFHeaderFooterRunning>
+ 
+ <div style="font-family:times new roman;font-size:90%">
+     <div style="font-size:13px;font-weight:10px;"><b><u><center>SERVICE AGREEMENT</center></u></b></div>
+     <table border="1" width="100%" cellspacing="0" cellpadding="0">
+     <tr><td style="padding: 6px;">
+    This <b>SERVICE AGREEMENT</b> is made and entered into this 22/8/2016 date/month/year Mumbai, Maharashtra at Place.
+     ("AGREEMENT") 
+     <center>BY AND BETWEEN </center>
+     <p align="justify"><b>Monster.com India Private Limited,</b> having PAN-AACCM3695G a company incorporated under the [Indian]
+     Companies Act, 1956, having its registered office at Plot No.1024 &amp; 1024/1, Road No. 45, Jubilee Hills, Hyderabad – 500
+     033, India (hereinafter referred to as 'Monster', which expression shall, unless repugnant to the context or meaning
+     thereof, mean and include its successors and assigns) of the FIRST PART;
+                                             <center> AND </center></p>    
+
+     
+     </td></tr>
+     <tr><td style="padding: 6px;">
+      <p align="justify"><b>Globeop Financial Services Technologies India Private Limited </b> organized under the Indian Laws having its
+                principal place of business at <b>5th floor, Building 16, Interface, Malad (West) Mumbai, Maharashtra 400064
+                India </b>(hereinafter referred to as 'Member', which expression shall, unless repugnant to the context or meaning thereof,
+                mean and include its successors and permitted assigns) of the SECOND PART. </p>
+                (Monster and Member are hereinafter collectively referred to as "the Parties" and severally as "Party")
+     <p align="justify"> WHEREAS Monster is inter alia in the business of e-recruitment solutions and is responsible for the functioning of its
+                websites www.monsterindia.com, <b>Error! Bookmark not defined.,</b> www.rozgarduniya.com and
+                www.monstercollege.in </p>
+     <p align="justify">WHEREAS Member is in the business of ‘Education Provider’ and is desirous of taking service from Monster as described
+                here under, on the terms agreed and contained herein; </p>
+     <p align="justify"> WHEREAS the Parties intend to facilitate Monster’s online recruitment solution by bringing the Member’s placement
+                activities online thereby attracting more corporate and other entities for recruitment of registered users ("users") of
+                Monstercollege.in. </p>
+                
+     
+     </td></tr>
+     </table>
+     <p align="justify" style="font-size:83%;"><b><u>NOW, THEREFORE, IN CONSIDERATION OF THE PROMISES AND THE MUTUAL COVENANTS, AGREEMENT HEREINAFTER
+        SET FORTH, THE PARTIES INTENDING TO BE LEGALLY BOUND, HEREBY AGREE AS FOLLOWS:</u> </b></p>
+        
+      <div style="color:black;background-color: #D3D3D3;width:22%"><b><u>  1. SERVICE DETAILS: </u></b> </div><br />
+      The details of the service that Member has agreed to take from Monster are as follows (<b>"Service"</b>):
+      <br />
+      <!-- need to have a dynamic value over here in this table  --->
+      <table border="1" cellspacing="0" cellpadding="3" width="100%">
+      <tr>
+      <td><b>Member Name:</b></td>
+      
+      <td><b>Globeop Financial Services Technologies India Private Limited</b></td>
+      </tr>
+      <tr>
+      <td><b>Service:</b></td>
+      <td><b></b></td>
+      </tr>
+      <tr>
+      <td><b>Quote No:</b></td>
+      <td><b>Q-04897479</b></td>
+      </tr>
+      <tr>
+      <td><b>Start Date :</b></td>
+      <td><b>8/23/2016 </b></td>
+      </tr>
+      <tr>
+      <td><b>End Date :</b></td>
+      <td><b>21/8/2017</b></td>
+      </tr>
+      <tr>
+      <td><b>Session :</b></td>
+      <td><b></b></td>
+      </tr>
+      </table>
+      
+      <table border="1" cellspacing="0" cellpadding="3" width="100%" >
+      <tr style="color:black;background-color: #D3D3D3;">
+      <th>Item #</th>
+      <th>Product</th>
+      <th>QTY</th>
+      <th>Price per Drive</th>
+      <th>Start Date</th>
+      <th>End Date</th>
+      </tr>
+      <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      </tr>
+       <tr>
+      
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+     
+      </tr>
+
+    
+      </table>
+ </div> 
+ </apex:page>

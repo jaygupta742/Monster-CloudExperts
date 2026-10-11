@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Name__c</fullName>
+    <label>Product Name</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Main_Product_Type__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADS</fullName>
+                <default>false</default>
+                <label>ADS</label>
+            </value>
+            <value>
+                <fullName>ANY</fullName>
+                <default>false</default>
+                <label>ANY</label>
+            </value>
+            <value>
+                <fullName>BR1</fullName>
+                <default>false</default>
+                <label>BR1</label>
+            </value>
+            <value>
+                <fullName>BR2</fullName>
+                <default>false</default>
+                <label>BR2</label>
+            </value>
+            <value>
+                <fullName>BR3</fullName>
+                <default>false</default>
+                <label>BR3</label>
+            </value>
+            <value>
+                <fullName>BR4</fullName>
+                <default>false</default>
+                <label>BR4</label>
+            </value>
+            <value>
+                <fullName>BR5</fullName>
+                <default>false</default>
+                <label>BR5</label>
+            </value>
+            <value>
+                <fullName>BR6</fullName>
+                <default>false</default>
+                <label>BR6</label>
+            </value>
+            <value>
+                <fullName>Branding</fullName>
+                <default>false</default>
+                <label>Branding</label>
+            </value>
+            <value>
+                <fullName>Campaign Mailers</fullName>
+                <default>false</default>
+                <label>Campaign Mailers</label>
+            </value>
+            <value>
+                <fullName>CJT</fullName>
+                <default>false</default>
+                <label>CJT</label>
+            </value>
+            <value>
+                <fullName>CUS</fullName>
+                <default>false</default>
+                <label>CUS</label>
+            </value>
+            <value>
+                <fullName>Cust-International</fullName>
+                <default>false</default>
+                <label>Cust-International</label>
+            </value>
+            <value>
+                <fullName>Custom International Sponsorship</fullName>
+                <default>false</default>
+                <label>Custom International Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Custom-INTL-FreeTrial</fullName>
+                <default>false</default>
+                <label>Custom-INTL-FreeTrial</label>
+            </value>
+            <value>
+                <fullName>Custom Job Template</fullName>
+                <default>false</default>
+                <label>Custom Job Template</label>
+            </value>
+            <value>
+                <fullName>Custom Product</fullName>
+                <default>false</default>
+                <label>Custom Product</label>
+            </value>
+            <value>
+                <fullName>CV Views</fullName>
+                <default>false</default>
+                <label>CV Views</label>
+            </value>
+            <value>
+                <fullName>Excel Downloads</fullName>
+                <default>false</default>
+                <label>Excel Downloads</label>
+            </value>
+            <value>
+                <fullName>Excel Views</fullName>
+                <default>false</default>
+                <label>Excel Views</label>
+            </value>
+            <value>
+                <fullName>Inventory Login</fullName>
+                <default>false</default>
+                <label>Inventory Login</label>
+            </value>
+            <value>
+                <fullName>Job Ad</fullName>
+                <default>false</default>
+                <label>Job Ad</label>
+            </value>
+            <value>
+                <fullName>Job Posting</fullName>
+                <default>false</default>
+                <label>Job Posting</label>
+            </value>
+            <value>
+                <fullName>JPO</fullName>
+                <default>false</default>
+                <label>JPO</label>
+            </value>
+            <value>
+                <fullName>Logo on Job Postings</fullName>
+                <default>false</default>
+                <label>Logo on Job Postings</label>
+            </value>
+            <value>
+                <fullName>Mailers</fullName>
+                <default>false</default>
+                <label>Mailers</label>
+            </value>
+            <value>
+                <fullName>Monster US Services</fullName>
+                <default>false</default>
+                <label>Monster US Services</label>
+            </value>
+            <value>
+                <fullName>MRDS</fullName>
+                <default>false</default>
+                <label>MRDS</label>
+            </value>
+            <value>
+                <fullName>MRDS2</fullName>
+                <default>false</default>
+                <label>MRDS2</label>
+            </value>
+            <value>
+                <fullName>MSJ</fullName>
+                <default>false</default>
+                <label>MSJ</label>
+            </value>
+            <value>
+                <fullName>Power Login</fullName>
+                <default>false</default>
+                <label>Power Login</label>
+            </value>
+            <value>
+                <fullName>Q Hire Basic</fullName>
+                <default>false</default>
+                <label>Q Hire Basic</label>
+            </value>
+            <value>
+                <fullName>Q Hire Executive</fullName>
+                <default>false</default>
+                <label>Q Hire Executive</label>
+            </value>
+            <value>
+                <fullName>Q Hire Pro</fullName>
+                <default>false</default>
+                <label>Q Hire Pro</label>
+            </value>
+            <value>
+                <fullName>QTN</fullName>
+                <default>false</default>
+                <label>QTN</label>
+            </value>
+            <value>
+                <fullName>Quinton</fullName>
+                <default>false</default>
+                <label>Quinton</label>
+            </value>
+            <value>
+                <fullName>RDA</fullName>
+                <default>false</default>
+                <label>RDA</label>
+            </value>
+            <value>
+                <fullName>Resume Database Access</fullName>
+                <default>false</default>
+                <label>Resume Database Access</label>
+            </value>
+            <value>
+                <fullName>Search M</fullName>
+                <default>false</default>
+                <label>Search M</label>
+            </value>
+            <value>
+                <fullName>Short Message Service</fullName>
+                <default>false</default>
+                <label>Short Message Service</label>
+            </value>
+            <value>
+                <fullName>SMS</fullName>
+                <default>false</default>
+                <label>SMS</label>
+            </value>
+            <value>
+                <fullName>Social Job Ads</fullName>
+                <default>false</default>
+                <label>Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>Target Mailers (Employer)</fullName>
+                <default>false</default>
+                <label>Target Mailers (Employer)</label>
+            </value>
+            <value>
+                <fullName>TGM</fullName>
+                <default>false</default>
+                <label>TGM</label>
+            </value>
+            <value>
+                <fullName>TJP</fullName>
+                <default>false</default>
+                <label>TJP</label>
+            </value>
+            <value>
+                <fullName>TPS</fullName>
+                <default>false</default>
+                <label>TPS</label>
+            </value>
+            <value>
+                <fullName>TPS Promo-Offer</fullName>
+                <default>false</default>
+                <label>TPS Promo-Offer</label>
+            </value>
+            <value>
+                <fullName>TRD</fullName>
+                <default>false</default>
+                <label>TRD</label>
+            </value>
+            <value>
+                <fullName>Trial-Job Postings</fullName>
+                <default>false</default>
+                <label>Trial-Job Postings</label>
+            </value>
+            <value>
+                <fullName>Trial-Resume Search</fullName>
+                <default>false</default>
+                <label>Trial-Resume Search</label>
+            </value>
+            <value>
+                <fullName>User Login</fullName>
+                <default>false</default>
+                <label>User Login</label>
+            </value>
+            <value>
+                <fullName>VCF</fullName>
+                <default>false</default>
+                <label>VCF</label>
+            </value>
+            <value>
+                <fullName>Views</fullName>
+                <default>false</default>
+                <label>Views</label>
+            </value>
+            <value>
+                <fullName>Virtual Career Fair</fullName>
+                <default>false</default>
+                <label>Virtual Career Fair</label>
+            </value>
+            <value>
+                <fullName>Agreement Koyo Beta</fullName>
+                <default>false</default>
+                <label>Agreement Koyo Beta</label>
+            </value>
+            <value>
+                <fullName>Agreement PPI</fullName>
+                <default>false</default>
+                <label>Agreement PPI</label>
+            </value>
+            <value>
+                <fullName>Agreement PPJ</fullName>
+                <default>false</default>
+                <label>Agreement PPJ</label>
+            </value>
+            <value>
+                <fullName>Agreement PPO</fullName>
+                <default>false</default>
+                <label>Agreement PPO</label>
+            </value>
+            <value>
+                <fullName>Agreement Skillyst</fullName>
+                <default>false</default>
+                <label>Agreement Skillyst</label>
+            </value>
+            <value>
+                <fullName>WSG</fullName>
+                <default>false</default>
+                <label>WSG</label>
+            </value>
+            <value>
+                <fullName>Jain</fullName>
+                <default>false</default>
+                <label>Jain</label>
+            </value>
+            <value>
+                <fullName>Amity</fullName>
+                <default>false</default>
+                <label>Amity</label>
+            </value>
+            <value>
+                <fullName>Manipal</fullName>
+                <default>false</default>
+                <label>Manipal</label>
+            </value>
+            <value>
+                <fullName>Career Booster</fullName>
+                <default>false</default>
+                <label>Career Booster</label>
+            </value>
+            <value>
+                <fullName>Cover Letter</fullName>
+                <default>false</default>
+                <label>Cover Letter</label>
+            </value>
+            <value>
+                <fullName>Custom Seeker</fullName>
+                <default>false</default>
+                <label>Custom Seeker</label>
+            </value>
+            <value>
+                <fullName>Express Resume</fullName>
+                <default>false</default>
+                <label>Express Resume</label>
+            </value>
+            <value>
+                <fullName>Featured Profile</fullName>
+                <default>false</default>
+                <label>Featured Profile</label>
+            </value>
+            <value>
+                <fullName>Interview Preparation</fullName>
+                <default>false</default>
+                <label>Interview Preparation</label>
+            </value>
+            <value>
+                <fullName>LI Makeover</fullName>
+                <default>false</default>
+                <label>LI Makeover</label>
+            </value>
+            <value>
+                <fullName>Mock Interview Guide</fullName>
+                <default>false</default>
+                <label>Mock Interview Guide</label>
+            </value>
+            <value>
+                <fullName>Profile Highlighter</fullName>
+                <default>false</default>
+                <label>Profile Highlighter</label>
+            </value>
+            <value>
+                <fullName>Resume Builder</fullName>
+                <default>false</default>
+                <label>Resume Builder</label>
+            </value>
+            <value>
+                <fullName>Resume Highlighter</fullName>
+                <default>false</default>
+                <label>Resume Highlighter</label>
+            </value>
+            <value>
+                <fullName>Resume Writing</fullName>
+                <default>false</default>
+                <label>Resume Writing</label>
+            </value>
+            <value>
+                <fullName>Sprynt</fullName>
+                <default>false</default>
+                <label>Sprynt</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>BR6</controllingFieldValue>
+            <controllingFieldValue>BR1</controllingFieldValue>
+            <controllingFieldValue>BR2</controllingFieldValue>
+            <controllingFieldValue>BR3</controllingFieldValue>
+            <controllingFieldValue>BR4</controllingFieldValue>
+            <controllingFieldValue>BR5</controllingFieldValue>
+            <valueName>Branding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CVV</controllingFieldValue>
+            <valueName>CV Views</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>ADS</controllingFieldValue>
+            <valueName>Campaign Mailers</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MSJ</controllingFieldValue>
+            <valueName>Social Job Ads</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>SMS</controllingFieldValue>
+            <valueName>Short Message Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rev-Out</controllingFieldValue>
+            <controllingFieldValue>Custom-INTL-Sponsership</controllingFieldValue>
+            <valueName>ANY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rev-Out</controllingFieldValue>
+            <valueName>Job Ad</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rev-Out</controllingFieldValue>
+            <valueName>MRDS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rev-Out</controllingFieldValue>
+            <valueName>MRDS2</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Rev-Out</controllingFieldValue>
+            <valueName>Search M</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QTN</controllingFieldValue>
+            <valueName>Quinton</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QH1</controllingFieldValue>
+            <valueName>Q Hire Basic</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QH2</controllingFieldValue>
+            <valueName>Q Hire Executive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>QH3</controllingFieldValue>
+            <valueName>Q Hire Pro</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RDA</controllingFieldValue>
+            <controllingFieldValue>CUS</controllingFieldValue>
+            <valueName>Custom Product</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RDA</controllingFieldValue>
+            <valueName>Resume Database Access</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>RDA</controllingFieldValue>
+            <valueName>Agreement PPI</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>JPO</controllingFieldValue>
+            <valueName>Job Posting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>CJT</controllingFieldValue>
+            <valueName>Custom Job Template</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VCF</controllingFieldValue>
+            <valueName>Virtual Career Fair</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TGM</controllingFieldValue>
+            <valueName>Target Mailers (Employer)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TRD</controllingFieldValue>
+            <valueName>Trial-Resume Search</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>TJP</controllingFieldValue>
+            <valueName>Trial-Job Postings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>MMW</controllingFieldValue>
+            <valueName>Monster US Services</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

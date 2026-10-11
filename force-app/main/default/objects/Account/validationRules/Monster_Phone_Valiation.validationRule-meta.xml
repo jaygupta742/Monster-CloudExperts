@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monster_Phone_Valiation</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(NOT(Integration__c)|| NOT( Marketing_Lead__c ),
+/*IF( (RecordTypeId == &apos;&apos; || RecordTypeId == &apos;0120k0000009jGy&apos; )&amp;&amp;   ISPICKVAL(Location__c, &apos;India&apos;) ,len(  Phone ) &lt;&gt;13|| CONTAINS(Phone , &apos;/&apos;) ||CONTAINS(Phone , &apos;,&apos;)  ||CONTAINS(Phone , &apos;*&apos;)||CONTAINS(Phone , &apos;-&apos;)||CONTAINS(Phone , &apos;.&apos;),null)||NOT( CONTAINS(Phone, &apos;+&apos;) )
+*/
+
+/*
+IF( Case_Accounts__c == False,
+			IF( (RecordTypeId == &apos;&apos; || RecordType.Name == &apos;Monster In-Active Account&apos;)&amp;&amp;   ISPICKVAL(Location__c, &apos;India&apos;) ,
+						len(  Phone ) &lt;&gt;13|| CONTAINS(Phone , &apos;/&apos;) ||CONTAINS(Phone , &apos;,&apos;)  ||CONTAINS(Phone , &apos;*&apos;)||CONTAINS(Phone , &apos;-&apos;)||CONTAINS(Phone , &apos;.&apos;)
+						,null)||NOT( CONTAINS(Phone, &apos;+&apos;) )
+			
+			, False)*/
+
+
+OR 
+( 
+ISNEW() &amp;&amp; ( 
+
+IF(Case_Accounts__c == False,
+IF((RecordType.Name == &apos;Monster In-Active Account&apos; || RecordType.Name == &apos;Monster Active Account&apos;),
+
+IF( ISPICKVAL( Location__c , &quot;India&quot;), 
+
+LEN(Phone ) &lt;&gt; 13 || NOT(ISNUMBER(RIGHT(Phone ,(LEN(Phone ) - 1)))) || NOT( BEGINS(Phone , &quot;+&quot;) ), 
+
+NOT(ISNUMBER(RIGHT(Phone ,(LEN(Phone ) - 1)))) || NOT( BEGINS(Phone , &quot;+&quot;) ) ) 
+,
+false),
+false)
+
+) 
+, 
+DATEVALUE(CreatedDate)&gt;=DATEVALUE(&quot;2018-08-01&quot;) &amp;&amp; 
+( 
+IF(Case_Accounts__c == False,
+IF((RecordType.Name == &apos;Monster In-Active Account&apos; || RecordType.Name == &apos;Monster Active Account&apos;),
+
+IF( ISPICKVAL( Location__c , &quot;India&quot;), 
+
+LEN(Phone ) &lt;&gt; 13 || NOT(ISNUMBER(RIGHT(Phone ,(LEN(Phone ) - 1)))) || NOT( BEGINS(Phone , &quot;+&quot;) ), 
+
+NOT(ISNUMBER(RIGHT(Phone ,(LEN(Phone ) - 1)))) || NOT( BEGINS(Phone , &quot;+&quot;) ) ) 
+,
+false),
+false)
+
+) 
+)
+			,false)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>If Location is India,Phone Number Should Be Equal to 13 Digits Only And It should be prefixed with &apos;+&apos; OR If Location is other countries,  It should be prefixed with &apos;+&apos;</errorMessage>
+</ValidationRule>

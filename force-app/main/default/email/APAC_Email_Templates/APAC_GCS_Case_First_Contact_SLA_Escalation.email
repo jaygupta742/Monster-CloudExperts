@@ -1,0 +1,5 @@
+Hello,
+
+The First Contact date on Case # {!Case__c.Name} is past due.  Please review at your earliest convenience.
+
+{!Case.Link}

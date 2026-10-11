@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Collections</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Collections</label>
+        <sharedTo>
+            <group>Collection_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Finance_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Order_Access_to_Raj</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Order Access to Raj</label>
+        <sharedTo>
+            <group>Service_CR_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Finance_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Order_From_Raj_To_Rizwan</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Order From Raj To Rizwan</label>
+        <sharedTo>
+            <group>Collection_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Service_CR_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Order_From_Raj_To_Saleem</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Order From Raj To Saleem</label>
+        <sharedTo>
+            <group>Sales_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Service_CR_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Admin_Orders_With_All_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Admin Orders With All User</label>
+        <sharedTo>
+            <group>All_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Admin</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>saleem_Team_order</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>saleem Team order</label>
+        <sharedTo>
+            <group>Service_CR_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Sales_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

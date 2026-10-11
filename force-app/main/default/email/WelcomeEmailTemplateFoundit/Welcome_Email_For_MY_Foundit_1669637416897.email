@@ -1,0 +1,305 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="margin: 0px; padding: 0px; min-width: 100%; font-family: Poppins, sans-serif; color: rgb(29, 30, 31); background: rgb(249, 250, 255) !important; height: auto; min-height: auto;">
+<table bgcolor="#fafafa" border="0" cellpadding="0" cellspacing="0" style="background:#fafafa;" width="100%">
+	
+		<tr>
+			<td>
+			<table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%; max-width:600px !important; padding:0;font-family: 'Poppins', sans-serif; table-layout:fixed;" width="600">
+				
+					<tr>
+						<td style="margin:0; padding:0;">
+						<table border="0" cellpadding="0" cellspacing="0" width="100%">
+							
+								<tr>
+									<td bgcolor="#efefef" style="padding:0px;"><img alt="header" src="" style="max-width: 681.15px" title="header" /></td>
+								</tr>
+								<tr>
+									<td bgcolor="#FFFFFF" class="padng" style="padding:20px;">
+									<table border="0" cellpadding="0" cellspacing="0" style="background:#7901C5; border-radius:10px;" width="100%">
+										
+											<tr>
+												<td style="padding:0px;">
+												<table border="0" cellpadding="0" cellspacing="0" width="100%">
+													
+														<tr>
+															<td class="fullwidth m-center m-font-3" style="padding:15px;">
+															<table border="0" cellpadding="5" cellspacing="0" width="100%">
+																
+																	<tr>
+																		<td style="font-size:30px; color:#fff; font-weight:bold; line-height:35px;">We're glad you're here!</td>
+																	</tr>
+																	<tr>
+																		<td style="font-size:16px; color:#fff; line-height:22px;">Congratulation on your first step toward hiring talent!</td>
+																	</tr>
+																
+															</table>
+															</td>
+															<td align="right" class="fullwidth m-center" valign="bottom" width="50%"><img alt="banner-img" src="" style="max-width: 681.15px" title="banner-img" /></td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td bgcolor="#FFFFFF" class="padng" style="padding:10px 20px; font-size:15px;">Hi&nbsp;{{{Recipient.Name}}},<br />
+									<br />
+									Welcome to foundit!<br />
+									<br />
+									Now you have access to the most powerful recruitment tool.<br />
+									<br />
+									foundit's cutting-edge hiring solutions help you find the most relevant candidates faster than ever!<br />
+									<br />
+									I am {{{Sender.Name}}}, from the Customer Success team and I'll be happy to help you.</td>
+								</tr>
+								<tr>
+									<td bgcolor="#FFFFFF" class="padng" style="padding:10px 20px;">
+									<table border="0" cellpadding="0" cellspacing="0" style="background:#f0f0f0; border-radius:10px;" width="100%">
+										
+											<tr>
+												<td class="padng" style="padding:20px; font-size:15px;"><strong style="font-size:18px;">Let's get started!</strong><br />
+												We've sent your login details to your registered email id
+												<ol>
+													<li>Login to https://recruiter.foundit.my/</li>
+													<li>Change your password immediately</li>
+												</ol>
+												Yes, it's that easy</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td bgcolor="#FFFFFF" class="padng" style="padding:20px; font-size:15px;">Your contract covers the following products/services<br />
+									&nbsp;
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										
+											<tr>
+												<td bgcolor="#000">
+												<table border="1" cellpadding="5" cellspacing="0" style="border:solid 1px #" width="100%">
+													
+														<tr>
+															<td bgcolor="#800080" style="font-size:13px;color:#FFFFFF;"><strong>Products/Service</strong></td>
+															<td bgcolor="#800080" style="font-size:13px;color:#FFFFFF;"><strong>Country/Website</strong></td>
+															<td bgcolor="#800080" style="font-size:13px;color:#FFFFFF;"><strong>Quantity</strong></td>
+															<td bgcolor="#800080" style="font-size:13px;color:#FFFFFF;"><strong>Validity</strong></td>
+															<td bgcolor="#800080" style="font-size:13px;color:#FFFFFF;"><strong>Amount</strong></td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+														<tr>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+															<td bgcolor="#FFFFFF">&nbsp;</td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+								<tr>
+									<td bgcolor="#FFFFFF" class="padng" style="padding:20px; font-size:15px;">If you need help, please get in touch with:<br />
+									<br />
+									Yasmin Maideen<br />
+									Customer Service Representative<br />
+									+65 6718 2355 | yasmin.maideen@monster.com.sg<br />
+									<br />
+									Amira Ibrahim<br />
+									Sales Representative<br />
+									+65 9185 8366 | Amira.Ibrahim@monster.com.sg<br />
+									<br />
+									Nilesh Ghai<br />
+									Sales Manager<br />
+									+65 6718 2357 | nilesh.ghai@monster.com.sg</td>
+								</tr>
+							
+						</table>
+
+						<table border="0" cellpadding="20" cellspacing="0" style="background:#f0f0f0;" width="100%">
+							
+								<tr>
+									<td bgcolor="#f0f0f0" style="padding:0px; background:url(images/bg.jpg);">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										
+											<tr>
+												<td class="padng" style="padding:0px 20px"><img alt="footer-logo" src="" style="max-width: 681.15px" title="footer-logo" /></td>
+												<td align="right" class="padng" style="padding:20px;">
+												<table border="0" cellpadding="3" cellspacing="0" width="100">
+													
+														<tr>
+															<td align="center"><a href="https://www.facebook.com/founditMY/"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-facebook.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+															<td align="center"><a href="https://www.instagram.com/foundit_malaysia/"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-insta.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+															<td align="center"><a href="https://twitter.com/foundit_MY"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-twitter.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+															<td align="center"><a href="https://www.linkedin.com/company/foundit-my/"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-linkedin.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td class="padng" style="margin:0; padding:10px 20px; font-size:12px; color:#737373"><strong>Escalation of any Customer Success matter</strong><br />
+						In the unlikely event of your query or complaint not being resolved promptly to your satisfaction, please write to <span lang="EN-US"><a href="mailto:crhead-sea@foundit.com.sg" target="_blank">crhead-sea@foundit.com.sg</a></span> for escalation and matter will be directly investigated by senior management of our Customer Success team.<br />
+						<br />
+						<strong>Terms of Use</strong><br />
+						We thank you for using foundit. For uninterrupted access to our services, it is important for you to read and understand our Terms of Use. For your convenience, we are emphasizing on some of the prohibited uses of foundit listed and we look forward to your cooperation in adhering to the same.<br />
+						<br />
+						In view of our experience of Clients' request for the inclusion of their jobs on foundit platform for better visibility, outreach and result, we are enabling job scrapping / job replication feature as default for select customers including your organization. Please note, jobs that are scrapped from your career site will not be consuming inventory that you have purchased.</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+</body>
+</html>

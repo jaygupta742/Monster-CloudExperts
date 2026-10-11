@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Neha Munjal DR RP</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Neha Munjal DR RP</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Neha_Munjal_Reporting_Anurag</parentRole>
+</Role>

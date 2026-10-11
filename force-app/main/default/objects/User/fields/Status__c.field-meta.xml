@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active</fullName>
+                <default>false</default>
+                <label>Active</label>
+            </value>
+            <value>
+                <fullName>Discount Authority</fullName>
+                <default>false</default>
+                <label>Discount Authority</label>
+            </value>
+            <value>
+                <fullName>Inactive</fullName>
+                <default>false</default>
+                <label>Inactive</label>
+            </value>
+            <value>
+                <fullName>Leave of Absence</fullName>
+                <default>false</default>
+                <label>Leave of Absence</label>
+            </value>
+            <value>
+                <fullName>Paid Leave of Absence</fullName>
+                <default>false</default>
+                <label>Paid Leave of Absence</label>
+            </value>
+            <value>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+                <label>Terminated</label>
+            </value>
+            <value>
+                <fullName>Territory Coverage</fullName>
+                <default>false</default>
+                <label>Territory Coverage</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

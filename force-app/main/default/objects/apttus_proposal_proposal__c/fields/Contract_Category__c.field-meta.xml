@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Category__c</fullName>
+    <label>Contract Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Bridge Agreement</fullName>
+                <default>false</default>
+                <label>Bridge Agreement</label>
+            </value>
+            <value>
+                <fullName>Commitment</fullName>
+                <default>false</default>
+                <label>Commitment</label>
+            </value>
+            <value>
+                <fullName>No Commitment</fullName>
+                <default>false</default>
+                <label>No Commitment</label>
+            </value>
+            <value>
+                <fullName>Non Standard</fullName>
+                <default>false</default>
+                <label>Non Standard</label>
+            </value>
+            <value>
+                <fullName>Non-Standard Other</fullName>
+                <default>false</default>
+                <label>Non-Standard Other</label>
+            </value>
+            <value>
+                <fullName>Rolling Contract</fullName>
+                <default>false</default>
+                <label>Rolling Contract</label>
+            </value>
+            <value>
+                <fullName>Start/Stop Billing</fullName>
+                <default>false</default>
+                <label>Start/Stop Billing</label>
+            </value>
+            <value>
+                <fullName>Termination Clause</fullName>
+                <default>false</default>
+                <label>Termination Clause</label>
+            </value>
+            <value>
+                <fullName>Part Booking</fullName>
+                <default>false</default>
+                <label>Part Booking</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

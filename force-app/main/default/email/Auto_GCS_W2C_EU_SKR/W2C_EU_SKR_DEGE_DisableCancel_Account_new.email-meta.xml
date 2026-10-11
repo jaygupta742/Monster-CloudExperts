@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>5/4: Tested OK</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>W2C_EU_SKR_DEGE_DisableCancel_Account_new</name>
+    <style>none</style>
+    <subject>Konto (erstellen / bearbeiten / kündigen) - Case #: {!Case.CaseNumber} {!Case.Thread_Id}</subject>
+    <textOnly>Sehr geehrte(r) Monster-Nutzer /-in,
+
+vielen Dank für Ihre E-Mail.
+
+Ihrer Nachricht entnehmen wir, dass Sie Fragen zu Ihrem Konto haben. Gerne stellen wir Ihnen Lösungsmöglichkeiten zur Verfügung.
+
+Wo kann ich mich registrieren:
+
+Bitte klicken Sie auf „Registrieren“ (oben rechts auf monster.de), um Ihr Konto zu erstellen.
+Bitte füllen Sie die Felder aus und klicken Sie auf „Benutzerkonto erstellen“.
+Sie erhalten nun an die angegebene E-Mail-Adresse eine Nachricht mit dem offiziellen Bestätigungslink. Bitte folgen Sie diesem, um das Konto fertigzustellen.
+
+
+Nach erfolgreicher Bestätigung Ihrer Registrierung, können Sie alle Services, wie das Hochladen von Lebensläufen, Jobs per E-Mail und BeKnown uneingeschränkt und kostenfrei nutzen.
+Sollten Sie in der Vergangenheit bereits ein Konto erstellt, es aber schon seit einigen Jahren nicht mehr verwendet haben, ist es möglich, dass es aufgrund von Inaktivität unwiderruflich gelöscht wurde.
+
+Fehlermeldung Bestätigungslink:
+
+Sollten Sie eine Fehlermeldung nach dem Klicken des Bestätigungslinks erhalten haben, möchten wir Sie bitten, das Einloggen trotzdem zu versuchen. Bitte verwenden Sie dazu Ihre E-Mail Adresse und das Passwort, welches Sie sich bei der Erstellung des Kontos ausgewählt hatten. Sie sollten sich ohne weiteres einloggen können.
+
+Sollte Ihnen der Zugang nach wie vor nicht gelingen, empfehlen wir Ihnen ein neues Konto mit einer anderen E-Mail Adresse zu erstellen.
+
+Persönliche Nutzereinstellungen, Passwort und E-Mail-Adresse ändern:
+
+Um Ihre Nutzereinstellungen zu ändern, bewegen Sie Ihre Maus bitte über Ihren Namen rechts oben, und wählen Sie „Einstellungen“. Hier können Sie neben Ihren Kontaktdaten auch Ihr Passwort, Ihre E-Mail Adresse und Ihre verbundenen Links (z. B. zu BeKnown) ändern, Ihre Newsletter verwalten oder Ihre persönlichen Profilangaben anpassen.
+
+Um die gewünschten Einstellungen zu ändern, wählen Sie bitte den entsprechenden Bereich aus, führen Sie Ihre Änderung durch und bestätigen Sie die Anpassung.
+
+Kündigung Benutzerkonto:
+
+Sie haben die Möglichkeit, Ihr Benutzerkonto zu deaktivieren oder komplett zu löschen. Wir empfehlen Ihnen, Ihr Konto lediglich zu deaktivieren, damit Sie Ihre Daten und Einstellungen bei einer späteren Jobsuche ohne großen Aufwand wieder verwenden können.
+
+Um Ihr Konto zu deaktivieren,
+
+setzen Sie bitte den Status Ihres Lebenslaufs auf „Nicht sichtbar“,
+stellen Sie die E-Mail-Frequenz Ihrer gespeicherten Suche in „Jobs per E-Mail“ auf „Nie“, und
+wählen Sie eventuell abonnierte Newsletter ab.
+
+Sie können sich nach wie vor mit Ihrer E-Mail-Adresse und Ihrem Passwort einloggen und das Konto somit auch wieder aktivieren.
+
+Um Ihr Benutzerkonto zu löschen, führen Sie bitte folgende Schritte durch:
+
+Melden Sie sich in Ihrem Konto mit Ihren Zugangsdaten an.
+Bewegen Sie Ihre Maus bitte über Ihren Namen rechts oben auf der Seite. Ein kleines Fenster wird sich öffnen - wählen Sie hier bitte „Einstellungen“ aus.
+Sie werden direkt auf Ihre „Kontoeinstellungen“ weitergeleitet. Ganz unten auf der Seite finden Sie den Link „Benutzerkonto löschen“. Bitte klicken Sie darauf.
+Nun werden Sie gebeten, die Kontolöschung zu bestätigen. Bitte lesen Sie sich die Meldung durch und wenn Sie nach wie vor Ihr Konto löschen möchten, bestätigen Sie bitte mit einem Klick auf „KONTO LÖSCHEN“.
+
+
+Sobald die Löschung vollzogen ist, erhalten Sie eine automatische Bestätigung per E-Mail. In Einzelfällen kann es vorkommen, dass Sie noch bis zu einer Woche E-Mails von uns erhalten.
+
+Wir hoffen, dass Ihnen diese Schritte weiterhelfen konnten.
+
+Rechts oben auf monster.de finden Sie unter „Hilfe &amp; Sicherheit“ – „FAQ“ weitere Informationen zu „Konto (erstellen / bearbeiten / kündigen)“.
+
+Monster legt hohen Wert auf Kundenzufriedenheit. Daher können Sie in Kürze eine Umfrage bezüglich Ihrer Erfahrungen mit unserem Kundenservice erhalten. Wir würden uns freuen, wenn Sie sich ein paar Minuten Ihrer Zeit für die Umfrage nehmen würden. Die Ergebnisse</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

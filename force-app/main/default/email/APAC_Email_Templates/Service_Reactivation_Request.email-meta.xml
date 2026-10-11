@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Service Reactivation Request</name>
+    <style>freeForm</style>
+    <subject>Reactivate Services for -</subject>
+    <textOnly>Send Email To:  MO-IN-Activation
+
+
+Activation Team,
+
+
+Please reactivate the services of the following client:
+
+
+Account ID  - {!Account.AccountID__c}
+Account Name - {!Account.Name}
+Account Xcode - {!Account.Primary_Xcode__c}
+Account Sales Channel - {!Account.SalesChannel__c}
+
+
+Reason -
+
+
+Confirm us back on the same.
+
+
+Regards,
+
+&lt;Enter Signature&gt;</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

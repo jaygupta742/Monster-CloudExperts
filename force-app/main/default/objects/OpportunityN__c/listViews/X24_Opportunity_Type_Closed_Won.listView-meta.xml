@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X24_Opportunity_Type_Closed_Won</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Contact__c</columns>
+    <columns>Opportunity_Source__c</columns>
+    <columns>Opportunity_Type__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Price_Master__c</columns>
+    <columns>CURRENCY_ISO_CODE</columns>
+    <columns>Close_Date__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Stage__c</field>
+        <operation>equals</operation>
+        <value>Closed Won</value>
+    </filters>
+    <label>24. Opportunity Type - Closed Won</label>
+</ListView>

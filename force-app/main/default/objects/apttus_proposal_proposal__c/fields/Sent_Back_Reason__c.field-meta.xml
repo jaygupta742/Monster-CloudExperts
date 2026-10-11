@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sent_Back_Reason__c</fullName>
+    <label>Sent Back Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product Conversion Setup Incorrectly</fullName>
+                <default>false</default>
+                <label>Product Conversion Setup Incorrectly</label>
+            </value>
+            <value>
+                <fullName>Client not Validated</fullName>
+                <default>false</default>
+                <label>Client not Validated</label>
+            </value>
+            <value>
+                <fullName>Contract not signed</fullName>
+                <default>false</default>
+                <label>Contract not signed</label>
+            </value>
+            <value>
+                <fullName>Documents not legible/visible</fullName>
+                <default>false</default>
+                <label>Documents not legible/visible</label>
+            </value>
+            <value>
+                <fullName>SF Sales Rep ownership not matching</fullName>
+                <default>false</default>
+                <label>SF Sales Rep ownership not matching</label>
+            </value>
+            <value>
+                <fullName>Multiyear deal approval is not provided</fullName>
+                <default>false</default>
+                <label>Multiyear deal approval is not provided</label>
+            </value>
+            <value>
+                <fullName>Pre Renewal approval not provided</fullName>
+                <default>false</default>
+                <label>Pre Renewal approval not provided</label>
+            </value>
+            <value>
+                <fullName>SEZ tax exemption documents not provided</fullName>
+                <default>false</default>
+                <label>SEZ tax exemption documents not provided</label>
+            </value>
+            <value>
+                <fullName>TAN number not updated / incorrect</fullName>
+                <default>false</default>
+                <label>TAN number not updated / incorrect</label>
+            </value>
+            <value>
+                <fullName>GST ID not updated in SF</fullName>
+                <default>false</default>
+                <label>GST ID not updated in SF</label>
+            </value>
+            <value>
+                <fullName>Unequal installments / Less than 10k</fullName>
+                <default>false</default>
+                <label>Unequal installments / Less than 10k</label>
+            </value>
+            <value>
+                <fullName>Other reasons as given in Text</fullName>
+                <default>false</default>
+                <label>Other reasons as given in Text</label>
+            </value>
+            <value>
+                <fullName>Internal System Issue - track internal to GCS</fullName>
+                <default>false</default>
+                <label>Internal System Issue - track internal to GCS</label>
+            </value>
+            <value>
+                <fullName>Non-standard contract approval is not provided</fullName>
+                <default>false</default>
+                <label>Non-standard contract approval is not provided</label>
+            </value>
+            <value>
+                <fullName>Name in Contract not matching with name in SF</fullName>
+                <default>false</default>
+                <label>Name in Contract not matching with name in SF</label>
+            </value>
+            <value>
+                <fullName>Address in SF not matching with address in contract</fullName>
+                <default>false</default>
+                <label>Address in SF not matching with address in contract</label>
+            </value>
+            <value>
+                <fullName>Email id in the contract not matching with it in SF</fullName>
+                <default>false</default>
+                <label>Email id in the contract not matching with it in SF</label>
+            </value>
+            <value>
+                <fullName>International product discount approval is not provided</fullName>
+                <default>false</default>
+                <label>International product discount approval is not provided</label>
+            </value>
+            <value>
+                <fullName>Line item wise pricing / discount not updated</fullName>
+                <default>false</default>
+                <label>Line item wise pricing / discount not updated</label>
+            </value>
+            <value>
+                <fullName>Cheques total not equal to contract total and no TDS detail</fullName>
+                <default>false</default>
+                <label>Cheques total not equal to contract total and no TDS detail</label>
+            </value>
+            <value>
+                <fullName>Business Head approval for Installments is not provided</fullName>
+                <default>false</default>
+                <label>Business Head approval for Installments is not provided</label>
+            </value>
+            <value>
+                <fullName>Payment due dates incorrect / not updated</fullName>
+                <default>false</default>
+                <label>Payment due dates incorrect / not updated</label>
+            </value>
+            <value>
+                <fullName>Payment term in SF not matching with contract</fullName>
+                <default>false</default>
+                <label>Payment term in SF not matching with contract</label>
+            </value>
+            <value>
+                <fullName>Cash App for direct deposit confirmation is not provided</fullName>
+                <default>false</default>
+                <label>Cash App for direct deposit confirmation is not provided</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

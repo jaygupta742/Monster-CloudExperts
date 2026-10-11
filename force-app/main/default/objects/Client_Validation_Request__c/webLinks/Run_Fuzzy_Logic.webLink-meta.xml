@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Run_Fuzzy_Logic</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Run Fuzzy Logic</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+
+
+var a=&apos;{!Client_Validation_Request__c.Id}&apos;; 
+//alert(&apos;see&apos;+a); 
+
+var re = sforce.apex.execute(&quot;FuzzyLogic&quot;,&quot;generatecsv&quot;,{cvrid:a}); 
+if(re == &apos;Success&apos;){
+alert(&quot;Success&quot;); 
+location.reload();
+}else 
+{ 
+alert(re); 
+location.reload(); 
+}</url>
+</WebLink>

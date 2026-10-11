@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreditReason__c</fullName>
+    <label>Credit Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A/R Error</fullName>
+                <default>false</default>
+                <label>A/R Error</label>
+            </value>
+            <value>
+                <fullName>Agency Commission</fullName>
+                <default>false</default>
+                <label>Agency Commission</label>
+            </value>
+            <value>
+                <fullName>Bought Package</fullName>
+                <default>false</default>
+                <label>Bought Package</label>
+            </value>
+            <value>
+                <fullName>Candidate Spotlight</fullName>
+                <default>false</default>
+                <label>Candidate Spotlight</label>
+            </value>
+            <value>
+                <fullName>Card System Error</fullName>
+                <default>false</default>
+                <label>Card System Error</label>
+            </value>
+            <value>
+                <fullName>Cat/Loc Error</fullName>
+                <default>false</default>
+                <label>Cat/Loc Error</label>
+            </value>
+            <value>
+                <fullName>Change in Payment Terms</fullName>
+                <default>false</default>
+                <label>Change in Payment Terms</label>
+            </value>
+            <value>
+                <fullName>Chargeback</fullName>
+                <default>false</default>
+                <label>Chargeback</label>
+            </value>
+            <value>
+                <fullName>Client Error</fullName>
+                <default>false</default>
+                <label>Client Error</label>
+            </value>
+            <value>
+                <fullName>Complimentary</fullName>
+                <default>false</default>
+                <label>Complimentary</label>
+            </value>
+            <value>
+                <fullName>Conversion</fullName>
+                <default>false</default>
+                <label>Conversion</label>
+            </value>
+            <value>
+                <fullName>Credit &amp; Rebill-Other</fullName>
+                <default>false</default>
+                <label>Credit &amp; Rebill-Other</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>eCom Upsell</fullName>
+                <default>false</default>
+                <label>eCom Upsell</label>
+            </value>
+            <value>
+                <fullName>EU 5 Day Query</fullName>
+                <default>false</default>
+                <label>EU 5 Day Query</label>
+            </value>
+            <value>
+                <fullName>EU Bad Debt Credit (Fr)</fullName>
+                <default>false</default>
+                <label>EU Bad Debt Credit (Fr)</label>
+            </value>
+            <value>
+                <fullName>EU Client Unhappy</fullName>
+                <default>false</default>
+                <label>EU Client Unhappy</label>
+            </value>
+            <value>
+                <fullName>EU Duplicate</fullName>
+                <default>false</default>
+                <label>EU Duplicate</label>
+            </value>
+            <value>
+                <fullName>EU Fraud</fullName>
+                <default>false</default>
+                <label>EU Fraud</label>
+            </value>
+            <value>
+                <fullName>EU Goodwill</fullName>
+                <default>false</default>
+                <label>EU Goodwill</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Add Or Vat Num</fullName>
+                <default>false</default>
+                <label>EU Incorrect Add Or Vat Num</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Agency Details</fullName>
+                <default>false</default>
+                <label>EU Incorrect Agency Details</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Bill Name / Acc</fullName>
+                <default>false</default>
+                <label>EU Incorrect Bill Name / Acc</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Currency</fullName>
+                <default>false</default>
+                <label>EU Incorrect Currency</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Cust Name / Acc</fullName>
+                <default>false</default>
+                <label>EU Incorrect Cust Name / Acc</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Payment Terms</fullName>
+                <default>false</default>
+                <label>EU Incorrect Payment Terms</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Price</fullName>
+                <default>false</default>
+                <label>EU Incorrect Price</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Prod Or Qty</fullName>
+                <default>false</default>
+                <label>EU Incorrect Prod Or Qty</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Sales Channel</fullName>
+                <default>false</default>
+                <label>EU Incorrect Sales Channel</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Service Details</fullName>
+                <default>false</default>
+                <label>EU Incorrect Service Details</label>
+            </value>
+            <value>
+                <fullName>EU Incorrect Vat %</fullName>
+                <default>false</default>
+                <label>EU Incorrect Vat %</label>
+            </value>
+            <value>
+                <fullName>EU Novation Agreement</fullName>
+                <default>false</default>
+                <label>EU Novation Agreement</label>
+            </value>
+            <value>
+                <fullName>EU Overlap On Contr.</fullName>
+                <default>false</default>
+                <label>EU Overlap On Contr.</label>
+            </value>
+            <value>
+                <fullName>EU Po Incorrect Or Null</fullName>
+                <default>false</default>
+                <label>EU Po Incorrect Or Null</label>
+            </value>
+            <value>
+                <fullName>EU Product Conversion (swap)</fullName>
+                <default>false</default>
+                <label>EU Product Conversion (swap)</label>
+            </value>
+            <value>
+                <fullName>EU Product Dissatisfaction</fullName>
+                <default>false</default>
+                <label>EU Product Dissatisfaction</label>
+            </value>
+            <value>
+                <fullName>EU Reconciliation</fullName>
+                <default>false</default>
+                <label>EU Reconciliation</label>
+            </value>
+            <value>
+                <fullName>EU Should Not Be Billed</fullName>
+                <default>false</default>
+                <label>EU Should Not Be Billed</label>
+            </value>
+            <value>
+                <fullName>EU Site Misunderstanding</fullName>
+                <default>false</default>
+                <label>EU Site Misunderstanding</label>
+            </value>
+            <value>
+                <fullName>EU Surcharge-Related</fullName>
+                <default>false</default>
+                <label>EU Surcharge-Related</label>
+            </value>
+            <value>
+                <fullName>EU Surcommissions</fullName>
+                <default>false</default>
+                <label>EU Surcommissions</label>
+            </value>
+            <value>
+                <fullName>EU System Error</fullName>
+                <default>false</default>
+                <label>EU System Error</label>
+            </value>
+            <value>
+                <fullName>EU Upsell</fullName>
+                <default>false</default>
+                <label>EU Upsell</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Free</fullName>
+                <default>false</default>
+                <label>Free</label>
+            </value>
+            <value>
+                <fullName>HJ Migrate Conversion</fullName>
+                <default>false</default>
+                <label>HJ Migrate Conversion</label>
+            </value>
+            <value>
+                <fullName>HJ Migrate Other</fullName>
+                <default>false</default>
+                <label>HJ Migrate Other</label>
+            </value>
+            <value>
+                <fullName>Illegal/Terms of use</fullName>
+                <default>false</default>
+                <label>Illegal/Terms of use</label>
+            </value>
+            <value>
+                <fullName>Job Counter Adjustment</fullName>
+                <default>false</default>
+                <label>Job Counter Adjustment</label>
+            </value>
+            <value>
+                <fullName>Order Detail Correction</fullName>
+                <default>false</default>
+                <label>Order Detail Correction</label>
+            </value>
+            <value>
+                <fullName>Other (See Detail)</fullName>
+                <default>false</default>
+                <label>Other (See Detail)</label>
+            </value>
+            <value>
+                <fullName>Product Conversion</fullName>
+                <default>false</default>
+                <label>Product Conversion</label>
+            </value>
+            <value>
+                <fullName>Renegotiated Terms</fullName>
+                <default>false</default>
+                <label>Renegotiated Terms</label>
+            </value>
+            <value>
+                <fullName>Sales Concession</fullName>
+                <default>false</default>
+                <label>Sales Concession</label>
+            </value>
+            <value>
+                <fullName>Site/Tech Issues</fullName>
+                <default>false</default>
+                <label>Site/Tech Issues</label>
+            </value>
+            <value>
+                <fullName>Tax Adjustment</fullName>
+                <default>false</default>
+                <label>Tax Adjustment</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Termination</label>
+            </value>
+            <value>
+                <fullName>Test Order</fullName>
+                <default>false</default>
+                <label>Test Order</label>
+            </value>
+            <value>
+                <fullName>Upgrade Services</fullName>
+                <default>false</default>
+                <label>Upgrade Services</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

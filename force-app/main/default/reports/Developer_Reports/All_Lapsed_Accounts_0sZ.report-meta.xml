@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <block>
+        <blockInfo>
+            <blockId>B0</blockId>
+            <joinTable>Account</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Account.Orders__r$Name</field>
+        </columns>
+        <columns>
+            <field>Account.Orders__r$OrderNumber__c</field>
+        </columns>
+        <columns>
+            <field>Account.Orders__r$Contract_End_Date__c</field>
+        </columns>
+        <currency>INR</currency>
+        <filter>
+            <criteriaItems>
+                <column>Account$AccountStatus__c</column>
+                <columnToColumn>false</columnToColumn>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Lapsed Customer</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Account with Orders(Custom) block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Account_with_Orders_c1__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Account$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <block>
+        <blockInfo>
+            <blockId>B1</blockId>
+            <joinTable>Account</joinTable>
+        </blockInfo>
+        <columns>
+            <field>Account.Orders1__r$Id</field>
+        </columns>
+        <columns>
+            <field>Account.Orders1__r$Name</field>
+        </columns>
+        <columns>
+            <field>Account.Orders1__r$Order_Service_End_Date__c</field>
+        </columns>
+        <currency>INR</currency>
+        <filter>
+            <criteriaItems>
+                <column>Account$AccountStatus__c</column>
+                <columnToColumn>false</columnToColumn>
+                <isUnlocked>true</isUnlocked>
+                <operator>equals</operator>
+                <value>Lapsed Customer</value>
+            </criteriaItems>
+        </filter>
+        <format>Summary</format>
+        <name>Account with Order(for Revamp) block 1</name>
+        <params>
+            <name>co</name>
+            <value>1</value>
+        </params>
+        <reportType>Account_with_Order_for_Revamp__c</reportType>
+        <scope>organization</scope>
+        <showGrandTotal>true</showGrandTotal>
+        <showSubTotals>true</showSubTotals>
+        <timeFrameFilter>
+            <dateColumn>Account$CreatedDate</dateColumn>
+            <interval>INTERVAL_CUSTOM</interval>
+        </timeFrameFilter>
+    </block>
+    <blockInfo>
+        <blockId xsi:nil="true"/>
+        <joinTable>Account</joinTable>
+    </blockInfo>
+    <format>MultiBlock</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All Lapsed Accounts</name>
+    <reportType>Account_with_Orders_c1__c</reportType>
+    <showDetails>true</showDetails>
+</Report>

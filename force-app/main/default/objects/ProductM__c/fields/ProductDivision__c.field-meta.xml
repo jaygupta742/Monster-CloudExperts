@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProductDivision__c</fullName>
+    <label>Product Division</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional Resume Views/Users</fullName>
+                <default>false</default>
+                <label>Additional Resume Views/Users</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>Branding Solutions</fullName>
+                <default>false</default>
+                <label>Branding Solutions</label>
+            </value>
+            <value>
+                <fullName>Career Ad Network (CAN)</fullName>
+                <default>false</default>
+                <label>Career Ad Network (CAN)</label>
+            </value>
+            <value>
+                <fullName>Compliance Reporting</fullName>
+                <default>false</default>
+                <label>Compliance Reporting</label>
+            </value>
+            <value>
+                <fullName>Custom Services or Development</fullName>
+                <default>false</default>
+                <label>Custom Services or Development</label>
+            </value>
+            <value>
+                <fullName>Hiring Solutions</fullName>
+                <default>false</default>
+                <label>Hiring Solutions</label>
+            </value>
+            <value>
+                <fullName>Job Posting Add-On</fullName>
+                <default>false</default>
+                <label>Job Posting Add-On</label>
+            </value>
+            <value>
+                <fullName>Job Postings and Accessories</fullName>
+                <default>false</default>
+                <label>Job Postings and Accessories</label>
+            </value>
+            <value>
+                <fullName>Media</fullName>
+                <default>false</default>
+                <label>Media</label>
+            </value>
+            <value>
+                <fullName>Media Product Various</fullName>
+                <default>false</default>
+                <label>Media Product Various</label>
+            </value>
+            <value>
+                <fullName>Resume</fullName>
+                <default>false</default>
+                <label>Resume</label>
+            </value>
+            <value>
+                <fullName>Seat Based</fullName>
+                <default>false</default>
+                <label>Seat Based</label>
+            </value>
+            <value>
+                <fullName>Software Solutions</fullName>
+                <default>false</default>
+                <label>Software Solutions</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ready_For_Validation</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Ready For Validation</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)} 
+
+
+var accRec =sforce.connection.query(&quot;select id,Name,GST_ID__c,PAN__c,PostCountry__c from Account where id = &apos;{!apttus_proposal_proposal__c.AccountId__c}&apos;&quot;); 
+
+
+if(&apos;{!apttus_proposal_proposal__c.Payment_count__c}&apos;==0) 
+{ 
+alert(&apos;please add payment to validate&apos;); 
+
+}else if(&apos;{!apttus_proposal_proposal__c.Validated__c}&apos;==true) 
+{ 
+alert(&apos;Record Already Validated&apos;); 
+}else 
+{ 
+sforce.connection.sessionid = &apos;{!GETSESSIONID()}&apos;; 
+var Aptus = new sforce.SObject(&quot;apttus_proposal_proposal__c&quot;);
+ 
+Aptus.id = &quot;{!apttus_proposal_proposal__c.Id}&quot;;
+
+
+var NA = new sforce.SObject(&quot;Attachment&quot;);
+var records = sforce.connection.query(&quot;select id,Name from Attachment where Parent.id=&apos;&quot;+ Aptus.id +&quot;&apos;&quot;);
+var atchrecs = records.getArray(&apos;records&apos;);
+//var nam =atchrecs[0].Name;
+
+
+
+
+var tmp  = new sforce.SObject(&quot;Template__c&quot;);
+var records =sforce.connection.query(&quot;select id,Name,DOC__c,PDF__c,Location__c from Template__c&quot;);
+var crek = records .getArray(&apos;records&apos;);
+
+
+var boo =0;
+if(atchrecs.length==0){
+alert(&apos;Pleasae Click  &quot;Generate Quote Report&quot;  in &quot;PDF Format&quot; TO add into &quot;NOTES &amp; Attachments&quot;&apos;);
+location.reload(true);
+}else{
+
+for(var i = 0 ; i&lt;atchrecs.length ; i++)
+{
+if(atchrecs[i].Name !==null ||atchrecs[i].Name !==&apos;&apos;){
+var aa =atchrecs[i].Name;
+}
+for(var j = 0 ; j&lt;crek.length ; j++)
+{
+var bb = crek[j].PDF__c+&apos;.pdf&apos;;
+var cc = crek[j].DOC__c+&apos;.doc&apos;;
+if(aa === bb ){
+ var boo =1;
+}
+}
+}
+
+if(boo ==1){
+
+var opp = new sforce.SObject(&quot;Opportunity__c&quot;); 
+opp.id=&apos;{!apttus_proposal_proposal__c.OpportunityId__c }&apos;; 
+ var query = &quot;select id,Name,Stage__c from Opportunity__c where id=&apos;&quot; + opp.id + &quot;&apos;&quot;;
+var opstg =sforce.connection.query(query);
+var aa = opstg.getArray(&apos;records&apos;); 
+
+sforce.apex.execute(&quot;Ready_For_Validation_email&quot;,&quot;myMethod&quot;,{recid:&apos;{!apttus_proposal_proposal__c.Id}&apos;}); 
+location.reload(true);
+
+opp.Stage__c=&apos;Quote / Agreement Stage&apos;; 
+opp.Probability__c = &apos;75&apos;; 
+var result = sforce.connection.update([opp]); 
+}else{
+
+alert(&apos;Pleasae Click&quot;Generate Quote Report&quot; in &quot;PDF Format&quot; TO add into &quot;NOTES &amp; Attachments&quot;&apos;);
+location.reload(true);
+
+}
+
+
+}
+/*var opp1 = new sforce.SObject(&quot;apttus_proposal_proposal__c&quot;); 
+opp1.id=&apos;{!apttus_proposal_proposal__c.Id }&apos;; 
+opp1.Validated__c=true; 
+opp1.RecordTypeId =records[0].Id;  
+var result = sforce.connection.update([opp1]);
+
+  */
+
+
+}</url>
+</WebLink>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>USEN: NAP – Receipt Confirmation</name>
+    <style>none</style>
+    <subject>Confirmation Receipt {!Case.Thread_Id}</subject>
+    <textOnly>Thank you for contacting Monster National Accounts Program Customer Service.  This email is to confirm receipt of your request.
+Please allow 24 hours for processing and reference the incident number if follow up on this request is needed. If you need faster service, please call Customer Service at 866-378-6224.
+Thank you</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sync_Conversion_Rate</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Sync Conversion Rate</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&apos;/soap/ajax/28.0/connection.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js&apos;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+try{ 
+var currency = sforce.connection.query( &quot;SELECT Conversion_Rate__c FROM Product_PriceList__c limit 1&quot;); 
+var records = currency.getArray(&quot;records&quot;); 
+//var newRecords = []; 
+var synccur = new sforce.SObject(&quot;apttus_proposal_proposal__c&quot;); 
+synccur.id = &apos;{!apttus_proposal_proposal__c.Id}&apos;; 
+
+synccur.Conversion_Rate__c = records[0].Conversion_Rate__c; 
+
+//newRecords.push(synccur); 
+result = sforce.connection.update([synccur]); 
+window.location.reload(); 
+} 
+catch(error){ 
+Alert(&apos;An Error has Occurred. Error: &apos; + error); 
+}</url>
+</WebLink>

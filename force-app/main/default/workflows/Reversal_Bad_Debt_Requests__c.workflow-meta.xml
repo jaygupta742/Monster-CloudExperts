@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Rejected_from_2nd_level_approver</fullName>
+        <description>Rejected from 2nd level approver</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/rejection_template</template>
+    </alerts>
+    <alerts>
+        <fullName>approval_email_for_owner</fullName>
+        <description>approval email for owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/approval_template</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Final_Approval_Pending</fullName>
+        <field>Final_Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Final Approval Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Approver_Name_Update</fullName>
+        <field>Final_Approver_Name__c</field>
+        <literalValue>Vikram Bhaskar</literalValue>
+        <name>Final Approver Name Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_approval_status</fullName>
+        <field>Final_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Final approval status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_approval_status_rejected</fullName>
+        <field>Final_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Final approval status rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_approval_update</fullName>
+        <field>Final_Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>after approval update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_rejection_update</fullName>
+        <field>Final_Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>after rejection update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_submission_update</fullName>
+        <field>Final_Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>after submission update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

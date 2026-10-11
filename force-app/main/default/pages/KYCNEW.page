@@ -1,0 +1,12 @@
+<apex:page standardController="Client_Validation_Request__c"  lightningStylesheets="true">
+<apex:pageblock >
+
+<b> Please create KYC REQUEST From Opportunity  Related list </b><br/><br/>
+
+<b> click left [New Quote Proposal]  button button to create Quote </b><br/><br/>
+
+<b> click Right  [New Quote Proposal] button to create KYC Request </b>
+
+</apex:pageblock>
+  
+</apex:page>

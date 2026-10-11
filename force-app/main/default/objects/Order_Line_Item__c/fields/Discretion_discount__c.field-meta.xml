@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Discretion_discount__c</fullName>
+    <description>Jeff L - The number of decimal places are needed for calculations to match between Order Line Item and Proposal Line Item, looks ugly but it works
+
+
+Jyothi A/Paul C: Increased the Length from 3 to 10 for legacy data. Due to Manual Price Override, Discount in Karma had negative values up to -155557677.7777770</description>
+    <label>Discretionary Discount %</label>
+    <precision>17</precision>
+    <required>false</required>
+    <scale>7</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

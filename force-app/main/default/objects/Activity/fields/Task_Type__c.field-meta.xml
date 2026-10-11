@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Type__c</fullName>
+    <defaultValue>&quot;Call&quot;</defaultValue>
+    <label>Activity Task Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>VOC</fullName>
+                <default>false</default>
+                <label>VOC</label>
+            </value>
+            <value>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+                <label>Meeting</label>
+            </value>
+            <value>
+                <fullName>Demo</fullName>
+                <default>false</default>
+                <label>Demo</label>
+            </value>
+            <value>
+                <fullName>Free Trial</fullName>
+                <default>false</default>
+                <label>Free Trial</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Telecall</fullName>
+                <default>false</default>
+                <label>Telecall</label>
+            </value>
+            <value>
+                <fullName>Leadership Meeting</fullName>
+                <default>false</default>
+                <label>Leadership Meeting</label>
+            </value>
+            <value>
+                <fullName>Call Inbound</fullName>
+                <default>false</default>
+                <label>Call Inbound</label>
+            </value>
+            <value>
+                <fullName>Call Outbound</fullName>
+                <default>false</default>
+                <label>Call Outbound</label>
+            </value>
+            <value>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+                <label>Email Inbound</label>
+            </value>
+            <value>
+                <fullName>Email Outbound</fullName>
+                <default>false</default>
+                <label>Email Outbound</label>
+            </value>
+            <value>
+                <fullName>Visit</fullName>
+                <default>false</default>
+                <label>Visit</label>
+            </value>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Customer Event</fullName>
+                <default>false</default>
+                <label>Customer Event</label>
+            </value>
+            <value>
+                <fullName>Foundit2.0</fullName>
+                <default>false</default>
+                <label>Foundit2.0</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>RenewalStatus</fullName>
+                <default>false</default>
+                <label>Renewal Status</label>
+            </value>
+            <value>
+                <fullName>QBR</fullName>
+                <default>false</default>
+                <label>QBR</label>
+            </value>
+            <value>
+                <fullName>A/C Disabled</fullName>
+                <default>false</default>
+                <label>A/C Disabled</label>
+            </value>
+            <value>
+                <fullName>DND</fullName>
+                <default>false</default>
+                <label>DND</label>
+            </value>
+            <value>
+                <fullName>No Training Required</fullName>
+                <default>false</default>
+                <label>No Training Required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

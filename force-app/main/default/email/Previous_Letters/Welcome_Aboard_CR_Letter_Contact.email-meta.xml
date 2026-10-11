@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>APAC_Welcome_Banner_Purple</letterhead>
+    <name>Welcome Aboard _CR Letter_Contact</name>
+    <style>freeForm</style>
+    <subject>Welcome Aboard Monsterindia.com - {!Account.Name}</subject>
+    <textOnly>Dear Patron,
+
+We would like to take this opportunity to welcome you to the array of our esteemed customers and feel deeply humbled for the trust you have placed in our organization.
+
+At Monster.com, we pride ourselves in offering responsive, competent and scalable recruitment solutions to help you find better and leverage your company’s core asset - YOUR PEOPLE. We foster this commitment through our excellent services and support, coordinated by a steering team dedicated to your account.
+
+Your Customer Service Representative is ______
+
+For business related queries or suggestions, please get in touch with our Customer Service Team or your respective Sales Representative.
+
+Thank you for choosing us. Looking forward to a great business association with you.
+
+Sincerely,
+Team Monster
+
+
+Customer Service Representative
+Name
+Phone
+Email ID
+
+Sales Representative
+Name
+Phone
+Email ID
+
+Sales Manager
+Name
+Phone
+Email ID</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

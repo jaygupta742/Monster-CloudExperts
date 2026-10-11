@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_End_Date_RollUp__c</fullName>
+    <description>Contract End Date RollUp = Maximum End Date from Order Items,</description>
+    <inlineHelpText>Contract End Date RollUp = Maximum End Date from Order Items,</inlineHelpText>
+    <label>Contract End Date RollUp</label>
+    <summarizedField>Order_Item__c.End_Date__c</summarizedField>
+    <summaryForeignKey>Order_Item__c.Order__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

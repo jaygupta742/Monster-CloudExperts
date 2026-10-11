@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <description>Created By : Abdul Aziz
+Created Date :01/08/2023
+Flow to update QULI Services Quantity as QUote Item Quantity</description>
+    <environments>Default</environments>
+    <formulas>
+        <name>CurrentServiceQty</name>
+        <dataType>Number</dataType>
+        <expression>{!Loop_on_Services.Top_Ups__r.Quantity__c} * {!$Record.Quantity_Unit__c}</expression>
+        <scale>2</scale>
+    </formulas>
+    <interviewLabel>Update QULI Services {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update QULI Services</label>
+    <loops>
+        <name>Loop_on_Services</name>
+        <label>Loop on Services</label>
+        <locationX>176</locationX>
+        <locationY>431</locationY>
+        <collectionReference>Get_All_Service_Record</collectionReference>
+        <iterationOrder>Asc</iterationOrder>
+        <nextValueConnector>
+            <targetReference>Update_Current_Service</targetReference>
+        </nextValueConnector>
+    </loops>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get All Service Record</description>
+        <name>Get_All_Service_Record</name>
+        <label>Get All Service Record</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Loop_on_Services</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Quote_Line_Items__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>false</getFirstRecordOnly>
+        <object>QULI_Accessories__c</object>
+        <sortField>Name</sortField>
+        <sortOrder>Asc</sortOrder>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update Current Service Quantity</description>
+        <name>Update_Current_Service</name>
+        <label>Update Current Service</label>
+        <locationX>264</locationX>
+        <locationY>539</locationY>
+        <connector>
+            <targetReference>Loop_on_Services</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Loop_on_Services.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Quantity_Unit__c</field>
+            <value>
+                <elementReference>CurrentServiceQty</elementReference>
+            </value>
+        </inputAssignments>
+        <object>QULI_Accessories__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_All_Service_Record</targetReference>
+        </connector>
+        <object>Quote_Line_Items__c</object>
+        <recordTriggerType>Update</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

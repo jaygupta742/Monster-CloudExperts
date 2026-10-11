@@ -1,0 +1,470 @@
+<!-- Last Modified By : Abdul Aziz , Date : 10/07/2024 , Description : made currency amount in outputtext-->
+<apex:page standardController="QuotesN__c" extensions="Foundit_UAE_Renewal" renderAs="pdf" cache="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false" >
+    <apex:form >
+        <c:PDFHeaderFooterRunning value="header">
+            <div style="margin-left:-20px;">
+                <apex:image url="{!URLFOR($Resource.FoundIt_Logo)}" width="150px" />
+            </div>
+        </c:PDFHeaderFooterRunning>
+        <c:PDFRunningFooter value="footer">
+            <apex:stylesheet value="{!$Resource.PageNo}"/>
+            <div style="text-align : right;">
+                {!quoteObj.name} 
+            </div>
+        </c:PDFRunningFooter>
+        <p style="font-size:15px;text-align:center;font-family:verdana">
+            <b>RENEWAL AGREEMENT </b>
+        </p>
+        <table style="border:1px solid black">
+            <tr>
+                <td>
+                    <p style="font-size:14px;font-family:verdana">
+                        This RENEWAL SERVICE AGREEMENT  is made and entered into between Monster.com (India) Private Limited, a company incorporated [in India] under the [Indian] Companies Act, 1956, having its Dubai Branch office at Office No. 2204, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360 (herein after referred to as 'Company', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns) 
+                        <br/>   <br/>     <b>{!QuotesN__c.Account__r.Name}</b> (hereinafter referred to as 'Purchaser', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and permitted assigns).<br/>
+                        Company and Purchaser are hereinafter collectively referred to as "the Parties" and severally as "Party")
+                    </p>
+                    <p style="text-align:center;font-size:14px;">
+                        AND
+                    </p>
+                    <p style="font-size:14px;font-family:verdana">
+                    </p>
+                    <p style="font-size:14px;text-align:justify;font-family:verdana">
+                        The Parties had signed  Service  Agreement  dated <b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!todate}"/></apex:outputText></b> , the Term of the said Agreement expired by efflux of time and Purchaser hereby agrees to renew the Agreement to subscribe the below products and services from Company for consideration as agreed between the Parties as under :   
+                    </p>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <p style="font-size:13px;font-family:Verdana;"><b>DETAILS OF PARTIES</b></p>
+        <table style="align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+            <tr  >
+                <td style="border-bottom: 1px solid black;border-top: 1px solid black;border-right: 1px solid black; width:50%"><b>Date: <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN__c.createddate}"/></apex:outputText>
+                    </b> <br/>
+                    <b>Quote #:</b>{!QuotesN__c.name} <br/>
+                    <b>Quote Valid From:</b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN__c.createddate}"/></apex:outputText> 
+                    <b> To </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN__c.createddate+30}"/></apex:outputText><br/>
+                </td>
+                <td style="text-align:left;border-bottom: 1px solid black;border-top: 1px solid black;width:50% ">
+                    <b>Sales Manager:</b> {!ss.Manager.Name} <br/>
+                    <b>Email:</b> {!ss.Manager.Email}<br/>
+                    <b>Tel:</b> {!ss.Manager.phone}<br/>
+                    <!---<b>Location:</b> {!ss.Location1__c }<br/>--->
+                    <b>Fax:</b> {!ss.Manager.fax }<br/>
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left;border-bottom: 1px solid black; border-right: 1px solid black;width:50%"><b>Client:</b><br/>
+                    <b>Name :</b> {!QuotesN__c.Posting_Contact__r.name }<br/>
+                    <b> Account Name: </b>  {!QuotesN__c.Account__r.Name}<br/>
+                    <!--<b>Account :</b> {!QuotesN__c.Posting_Contact__r.Account.name}<br/> -->
+                    <!---Mobile : {!QuotesN__c.Posting_Contact__r.MobilePhone}<br/>--->
+                    <b>Mobile :</b> {!QuotesN__c.Posting_Contact__r.Phone}<br/>
+                    <b>Email : </b>{!QuotesN__c.Posting_Contact__r.email}<br/>
+                    <b>Address: </b>{!QuotesN__c.Posting_Street__c}<br/>
+                    {!QuotesN__c.Posting_City__c}<br/>
+                    {!QuotesN__c.Posting_State__c}<br/>
+                    {!QuotesN__c.Posting_Country__c}<br/>
+                    {!QuotesN__c.Posting_Pin_Code__c}<br/>
+                    
+                </td>
+                <td style="text-align:left;border-bottom: 1px solid black;width:50%;margin-top:-15px "><b>Bill To:</b><br/>
+                    <b>Name :</b>{!QuotesN__c.Bill_Contact__r.name }<br/>
+                    <b>Account : </b>{!QuotesN__c.Posting_Contact__r.Account.name }<br/>
+                    <b>Mobile :</b> {!QuotesN__c.Bill_Contact__r.Phone}<br/>
+                    <b>Email :</b> {!QuotesN__c.Bill_Contact__r.Email}<br/>
+                    <b>Address: </b>{!QuotesN__c.Billing_Street__c}<br/>
+                    {!QuotesN__c.Billing_City__c}<br/>
+                    {!QuotesN__c.Billing_State__c}<br/>
+                    {!QuotesN__c.Billing_Country__c}<br/>
+                    {!QuotesN__c.Billing_Pin_code__c}<br/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" style="border-bottom: 1px solid black; text-align:center; font-size:14px; "><i>
+                    If any of the above information is incorrect please correct in the next page  </i>
+                </td>
+            </tr>
+        </table>
+        <div style="page-break-inside:avoid;">
+            <p style="font-size:13px;font-family:Verdana;"><b>SERVICE DETAILS:</b>
+                The details of service that Purchaser has agreed to take from Company are as follows (&#34;Service&#34;):</p>
+            <table  border="1 solid" cellspacing ="0" cellpadding="3" width="90%" style=" font-size:13px;margin-left:35px;margin-right:35px;page-break-inside:avoid;">
+                <tr style="border:1px solid black;background-color:#800080; ">
+                    <td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Item #</td>
+                    <td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Product</td>
+                    <td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:13px">Qty</td>
+                    <td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+                    <td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product End Date</td>
+                </tr>
+                
+                <apex:variable value="{!1}" var="rowNum"/>
+                <apex:repeat value="{!quoteLineItem}" var="r">
+                    <tr style="page-break-inside:avoid;">
+                        <td style="text-align:center">
+                            <apex:outputLabel value="{!rowNum }"/>  
+                            <apex:variable var="rowNum" value="{!rowNum + 1}"/>   
+                            <br/></td>
+                        <td style="text-align:left">
+                            <div style="margin-top:10px;">
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '1'}">
+                                    {!r.Product_Name__c}<br/>
+                                    {!r.Product__r.Product_SKU_Code__c}<br/>
+                                    Country:  {!r.Product_Country__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    {!r.Product__r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>                           
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '2'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Country:  {!r.Product_Country__c}<br/>
+                                    {!r.Product__r.Tenure_Months__c}<br/>
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '3'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    {!r.Product__r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>
+                                    {!r.Product__r.Name}<br/>
+                                    Add Desc: {!r.Comment__c}<br/>
+                                    
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '4'}">
+                                    {!r.Product_Name__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText> 
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '5'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Country:  {!r.Product_Country__c}<br/>
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '6'}">
+                                    {!r.Product_Name__c}<br/>
+                                    {!r.Product__r.Product_SKU_Code__c}<br/>
+                                    Country:  {!r.Product_Country__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    {!r.Product__r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '7'}">
+                                    {!r.Product_Name__c}<br/>
+                                    {!r.Product__r.Product_SKU_Code__c}<br/>
+                                    {!r.Product__r.Name}<br/>
+                                    Add Desc: {!r.Comment__c}
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!r.Product__r.Classification__c == '8'}">
+                                    {!r.Product_Name__c}<br/>
+                                    Industry: {!r.Product_Industry__c}<br/>
+                                    <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c!= 'S1' && r.Product_Geo_Scope__c!= 'S2')}">
+                                        Scope: {!r.Product_Geo_Scope__c}<br/>
+                                    </apex:outputPanel>
+                                    <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c== 'S1' || r.Product_Geo_Scope__c== 'S2')}">
+                                        Scope:   {!r.Product__r.Location__c}<br/>
+                                    </apex:outputPanel>
+                                    {!r.Product__r.Tenure_Months__c}<br/>
+                                    <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                        {!r.Product__r.Text__c}<br/>
+                                    </apex:outputText>                           
+                                    {!r.Product__r.Name}<br/>
+                                </apex:outputPanel>
+                                
+                                
+                            </div>
+                            <br/>
+                        </td>
+                        <td style="text-align:center" >{!r.Quantity_Unit__c}</td>
+                        <td  style="text-align:center" >{!DAY(r.Start_Date__c)}/{!MONTH(r.Start_Date__c)}/{!YEAR(r.Start_Date__c)}</td>
+                        <td style="text-align:center" >{!DAY(r.End_Date__c)}/{!MONTH(r.End_Date__c)}/{!YEAR(r.End_Date__c)}</td>
+                    </tr>
+                </apex:repeat>
+            </table>
+        </div>
+        
+        <apex:outputPanel rendered="{!showAccessories == 'true'}">
+            <div style="page-break-inside:avoid;">
+                <div style="font-size:13px; page-break-inside:avoid; padding: 10px 35px;">
+                    <b>SERVICES</b> 
+                    
+                    <table border="1 solid" cellspacing ="0" cellpadding="3" width="100%" style="page-break-inside:avoid; padding-top: 10px;">
+                        <thead>
+                            <tr style="font-size:14px; color:#FFFFFF;page-break-inside:avoid;">
+                                <th bgcolor="#800080" width="8%" style="text-align:center">Item #</th>
+                                <th bgcolor="#800080" width="26%" style="text-align:left">Services</th>
+                                <th bgcolor="#800080" width="15%" style="text-align:center">Country</th>
+                                <th bgcolor="#800080" width="12%" style="text-align:center">Quantity</th>
+                                <th bgcolor="#800080" width="15%" style="text-align:center">Quota</th>
+                                <th bgcolor="#800080" width="12%" style="text-align:center">Start Date</th>
+                                <th bgcolor="#800080" width="12%" style="text-align:center">End Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:variable value="{!1}" var="slno"></apex:variable>
+                            <apex:repeat value="{!wraplist}" var="item">
+                                <tr>
+                                    <td style="text-align:center">
+                                        <div style="margin-top:1px;">
+                                            
+                                            {!item.srno}
+                                        </div>  
+                                    </td>
+                                    <td style="text-align:left">{!item.service.Top_Ups__r.name}</td>
+                                    <td style="text-align:center">{!item.service.Product_Country__c}</td>
+                                    <td style="text-align:center">{!item.service.Quantity_Unit__c}</td>
+                                    <td style="text-align:center">{!item.service.Top_Ups__r.Inventory_Quota_Tenure__c}</td>
+                                    <td style="text-align:center">
+                                        <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                            <apex:param value="{!item.service.Start_Date__c}" /> 
+                                        </apex:outputText>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                            <apex:param value="{!item.service.End_Date__c}" /> 
+                                        </apex:outputText>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                
+            </div>
+        </apex:outputPanel>
+        
+        <div align="right" >
+            <table width="100%"  >
+                <tr >
+                    <td align="right">Value of Services</td>
+                    <td> 
+                        
+                        {!quoteObj.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!quoteObj.Quote_Value__c}" />
+                        </apex:outputText>
+                        
+                    </td>
+                </tr>
+                <tr >
+                    <td align="right">
+                        <apex:outputText rendered="{!quoteObj.Selling_Country__c == 'United Arab Emirates' ||quoteObj.Selling_Country__c=='Philippines'}"
+                                         value="Add: VAT@{!quoteObj.Tax__c} :"
+                                         />
+                        <apex:outputText rendered="{!quoteObj.Selling_Country__c == 'Singapore' || quoteObj.Selling_Country__c == 'India' }"
+                                         value="Add: GST Levy@{!quoteObj.Tax__c}% :"
+                                         />
+                        <apex:outputText rendered="{!quoteObj.Selling_Country__c == 'Malaysia'}"
+                                         value="Add: SST Levy@{!quoteObj.Tax__c}% :"
+                                         /> 
+                    </td>
+                    <td >
+                        {!quoteObj.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!quoteObj.Tax_Amount__c}" />
+                        </apex:outputText>
+                        
+                    </td>
+                    
+                </tr>
+                <tr >
+                    <td align="right">Total Invoice value (including Tax)</td>
+                    <td>
+                        {!quoteObj.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!quoteObj.Net_Total__c}" />
+                        </apex:outputText>
+                        
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div width="100" height="1%">
+        </div>
+        <br/><br/>
+        <p style="font-size:14px"><b>PAYMENT TERMS &amp; INVOICE DELIVERY
+            </b></p>
+        <apex:outputPanel rendered="{!if(app.size>0,true,false)}">
+            <table width="60%" >
+                <th>
+                    <tr style="page-break-inside:avoid">
+                        <td style="border:1px solid black; text-align:left; font-size:13px;width:33%">Payment Due Date </td>
+                        <td style="border:1px solid black; text-align:left;font-size:13px;width:33%">Payment Amount </td>
+                        <td style="border:1px solid black; text-align:center;font-size:13px;width:33%">TDS Amount </td>
+                    </tr></th>
+                <apex:repeat value="{!app}" var="py">
+                    <tr style="page-break-inside:avoid;">
+                        <td style="border:1px solid black; text-align:left; font-size:13px;width:25%"> {!DAY(py.Due_Date__c)}/{!MONTH(py.Due_Date__c)}/{!YEAR(py.Due_Date__c)}
+                        </td>
+                        <td style="border:1px solid black; text-align:left; font-size:13px;width:40%"> 
+                           
+                            {!py.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!py.Payment_Amount__c}" />
+                        </apex:outputText>
+                            
+                        </td>
+                        <td style="border:1px solid black; text-align:center; font-size:13px;width:35%"> 
+                          
+                            {!py.CurrencyISOCode}  &nbsp;
+                        <apex:outputText value="{0,number,###,###,###.##}">
+                            <apex:param value="{!py.TDS_Payment_Amount__c}" />
+                        </apex:outputText>
+                            
+                        </td>
+                    </tr>
+                </apex:repeat>
+            </table><br/>
+        </apex:outputPanel>
+        
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            All payments to be made in favour of “Company.com India Private Limited” to Bank Account No. 10580518442001 Abu Dhabi Commercial Bank, 2F Bay Gate Tower, Dubai, UAE, SWIFT Code ADCBAEAA, IBAN: AE400030010580518442001 
+        </p><br/>
+        <p style="font-size:15px;text-align:justify;font-family:verdana;margin-right:50px;">
+            Please circle your preferred method of invoice delivery:<i style="margin-left:65px">EMAIL</i> <i style="margin-left:80px">POST</i><!-- POST--> <br/>
+        </p>
+        <p style="font-size:15px;text-align:justify;font-family:verdana;margin-top:-10px;">
+            Please note that if you choose email, the invoice will be delivered to:   {!QuotesN__c.Contact__r.Email} <br/>
+            <b><i>If you opt for email and you wish to receive the invoice to a different email address please provide it in the &#34;change&#34; section further down 
+                this Agreement.</i></b>
+            <p style="font-size:14px;text-align:justify;font-family:verdana">
+                <b>Terms for Replication of Client’s Job Postings:</b> 
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            Client consents to the Company for replicating its job postings into Client’s Account in the foundit website. Client agrees and accepts that job posting to be replicated on foundit website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Client agrees to use only its names, logos or trademarks. 
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            The Company may not replicate any job posting of Client and/or delete the job postings from the foundit website which does not comply with applicable laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property.  
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            The advertisements for competitors of the Company or post jobs or other content that contains links to any site competitive with the Company shall not qualify for replication. Any such replicated postings will be immediately deleted / removed without notice. The Company reserves the right to remove any job posting or content from foundit website, which in the reasonable exercise of The Company’s discretion, does not comply with the above Terms, or if any content is posted that the Company believes is not in accordance with the Terms of Use &amp; Privacy of the foundit website and/or applicable laws and regulations. The Company shall not be liable for any conflict, in the event of replication of the Job Postings of Client’s competitor on the foundit site or vice versa or any disagreement between them in this connection. The replication of Client’s job posting will be only during the continuance of Service Agreement with The Company.  Client does not have any right to get its job Postings replicated on foundit website. The Company shall in its sole discretion may decide whether to assist the Client in replication or not without giving any reason thereof.  
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            <i>*Note: If not covered in the main Agreement </i> 
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            <b>Other terms:</b> 
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            Each of the Parties shall at all times use its best endeavors to keep confidential (and to ensure that its officers, directors, employees or representatives shall keep confidential) each other’s sensitive business or proprietary information, whether marked or otherwise indicated to be confidential or not, which it may acquire, have access to or obtain, whether directly or indirectly, in relation to this Agreement or in relation to their respective business or affairs of the other Party (or any of its respective affiliates) and shall not use or disclose such information except with the approval in writing of the other party or in accordance with the order of a court of competent jurisdiction or as contemplated under this Agreement.
+        </p>
+        
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            Each Party agrees to comply all the applicable Data Protection and Privacy laws and shall adhere to general principles of Personal Data processing; ensure the processing, use, transfer of the Personal Data in accordance with the applicable Data Protection and Privacy laws; adopt appropriate technical and security measures to protect the Personal Data from any potential misuse / unauthorized disclosures  and will indemnify and keep indemnified and defend at its own expense the other Party (Indemnified Party) against all costs, third party claims, direct damages, or proceedings which other Party may incur as a result of a breach solely by the Indemnifying Party’s of its obligations within the ambit of this Agreement.
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            Client shall use the foundit website data only for the recruitment purposes and not otherwise. Client shall not use foundit website data for any other purpose except as permitted under this Agreement. Client shall not use foundit website data for its storage purpose and shall not use it for making a database of its own by using it. Breach of this obligation will result in immediate suspension of the Agreement by the Company without any liability towards Client besides availing appropriate remedy under the process of law including but not limited to injunctive relief.
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            Each Party represents and warrants that it will not in connection with its obligations under this Agreement  give, offer, promise to offer, or authorize the offer, directly or indirectly (proxy bribing), anything of value (such as money, shares, goods or service, gifts or entertainment) to government officials, government customers, potential government customers or foreign government officials including officials of any public international organizations or officials of any political party either in India or abroad (“Officials” ) with an intent to influence any act or decision in his or her official capacity, induce the Official to do or omit to do any act in violation of his or her lawful duty to obtain any improper advantage, or induce to use such Official’s influence improperly to affect or influence an act or decision. Each Party understands and acknowledges that any non adherence to the warranty as stated hereinabove will violate the provisions of the U.S. Foreign Corrupt Practices Act, 1977, U.K. Bribery Act, 2010 and the India Prevention of Corruption Act, 1988 (“Anti- bribery Laws”). Each Party shall indemnify, save and hold harmless the other Party, its subsidiaries and affiliates, officers, directors and employees, against any and all losses, penalties and expense including court costs and reasonable attorney fees resulting from any breach of this warranty by it. Company shall have the right to terminate this Agreement with immediate effect, without any liability whatsoever, if Client is in breach of this warranty. 
+        </p>
+        
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            The Company's user's/job seeker's database, which also contains publicly available information of the users educational qualification, skills, employment history and relevant information. 
+            The Company provides to the Client the publicly available information of the users which is obtained from third-party data aggregators /service providers.
+            The Company has tech enabled unique search features on foundit website to search and find relevant candidates on foundit website as required by the Client.
+            Client may use these features to search the relevant candidates.
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            The Company services and all data and information obtained and provided the services are provided on an "as is," "as available" basis. To the fullest extent permissible under applicable law,
+            Company makes no warranty or guarantee, express or implied, relating to the services or Client's use of the services, or any data or information obtained via the services or provided under
+            this agreement and/or accuracy thereof, including but not limited to any implied warranties of merchantability, satisfactory quality, non-infringement, and/or fitness for a particular purpose.
+        </p>
+        <p style="font-size:14px;text-align:justify;font-family:verdana">
+            Company does not have any obligation to monitor the information included in the Product and it is not responsible for the availability,
+            accuracy, applicability, or legality of any information, data, or domain does not represent or warrant that the information provided under the Product shall be error-free or that
+            any errors will be corrected. Company shall not be liable for any damages or loss incurred to the Client, or any other third party as a result or in connection with the use of the Product
+            or in connection with use of or reliance on any information derived from the Product.
+        </p>
+        
+    </p>
+    <br/>
+    
+    <!--Guideline Start Here-->    
+    <apex:outputPanel rendered="{!showGuideLine}">
+        <div style="margin-left:35px; margin-right:30px; font-color:black;"> 
+            <apex:outputField value="{!guidelines.GuideLine_Details__c}"/>
+        </div>
+    </apex:outputPanel>
+    <!--Guideline End Here-->
+    
+    <div style="page-break-inside:avoid;">
+        <div>
+            <hr> </hr>
+        <p style="font-size:11px;font-family:Verdana;text-align:center;margin-top:-8px">
+            <b>ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BY THE CLIENT BEFORE ACTIVATION OF SERVICE CAN OCCUR</b>
+        </p>
+        <br/>
+        <div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black;">
+            1. Authorised Signature: _________________________________________________
+            <div align="right" style="margin:-15px 0px 0px 0px  ">2. Signing Date: ___/___/____<br/></div>
+            <div align="right" style = "margin:0px 0px 0px 0px">
+                (dd/mm/yyyy) </div>
+            <div align="right" style = "margin:10px 0px 0px 0px ">Total Price:     <b>{! QuotesN__c.currencyisocode}  
+                <apex:outputText value="{0, number, ###,###,###,###.00}">
+                    <apex:param value="{!QuotesN__c.Net_Total__c}"/>
+                </apex:outputText>
+                </b> </div>
+            <div align="left" style = "margin:    -20px 0px 0px 0px ">3. Printed Name: {!QuotesN__c.Posting_Contact__r.name } <br/></div><br/>
+            4. Job Title:  {! QuotesN__c.Posting_Contact__r.Title }   <br/><br/>
+            5. Company Name (as registered, if applicable): {!QuotesN__c.Account__r.name }<br/><br/>  
+            6. Registration Number (if applicable): {! QuotesN__c.Account__r.RegistrationNumber__c }  <br/>  <br/> 
+            7. Agreement Start Date:<apex:outputText value="{0,date,dd/M/yy}"> <apex:param value="{!QuotesN__c.CreatedDate}" /> </apex:outputText>
+            <div align="Right" style="margin: -14px 0px 0px 0px" > <i>The ‘Agreement Start Date’ will be the date nominated by the Purchaser. </i></div><br/>
+            <div align="Right" style="margin: -14px 0px 0px 0px" > <i>If left blank, the earliest product start date will be the nominated date.</i></div>  <br/>                              
+            8. Purchase Order Number:______________________ <div align ="right" style= "Margin:-12px 0px 0px 0px "><i>If this field is left blank the invoice will be issued 
+            without a PO number.</i></div>
+        </div>
+        <hr style="height:2.5px;border:none;color:#333;background-color:#333;" width="100%" /> <br/>
+    </div>
+    <div style="page-break-inside:avoid;">
+        <hr style="height:2.5px;border:none;color:#333;background-color:#333;" width="100%" /> <br/>
+        <div style="background-color: #ebebeb; font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px"><p><b> <center>Reserved for Monster.com (India) Private Limited</center> </b> <br/>
+            Manager Name:  {!ss.Manager.name}  
+            <div style="margin:-15px 0px 0px 430px;">Manager Designation: {!ss.Manager.title} </div><br/>
+            Office :Office No. 2204, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360
+            <br/>
+            City: Dubai
+            <div style="margin:-15px 0px 0px 290px;"> Country:UAE</div>
+            <br/>
+            Manager Email : {!ss.Manager.email} 
+            <div style="margin:-18px 0px 0px 480px;"> Manager Phone: {!ss.Manager.phone} 
+            </div> <br/>
+            Signature:_____________________________________________________
+            <div style="margin:-30px 0px 0px 480px;">Signing Date:_____/_____/________ </div> <br/>
+            <div style="margin:-10px 0px 0px 565px;"> (dd/mm/yyyy) </div><br/>
+        </p></div> 
+    <hr style="height:2.5px;border:none;color:#333;background-color:#333;" width="100%" /> <br/>
+</div>
+</div>
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black; margin: -10px 0px 0px 0px;">    
+    <center><b>
+        Sales Rep :{!ss.Name} &nbsp;&nbsp;&nbsp;&nbsp;     Email :{!ss.Email}   &nbsp;&nbsp;&nbsp;&nbsp;  Phone:{!ss.phone}
+        </b></center></div>
+<br/>
+<div style=" font-size:13px;margin-left:10px;margin-right:10px;font-color:black;">
+    <p align="Justify">
+        By signing this Renewal Agreement Purchaser agrees to purchase the products and services listed above.  Except amended herein Parties hereby agree that all the other terms and conditions of the Agreement shall remain in full force and effect. This Renewal Agreement shall be effective as of the date of execution by the Parties hereto.   
+    </p>
+    <p align="Justify">
+        Purchaser can write to Company at the email <a href="cr@founditgulf.com">cr@founditgulf.com</a> for any information, support and concerns.
+    </p>
+</div>
+</apex:form>  
+</apex:page>

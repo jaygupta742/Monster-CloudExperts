@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Disposition_Reason__c</fullName>
+    <label>Disposition Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Booked Through MGS</fullName>
+                <default>false</default>
+                <label>Booked Through MGS</label>
+            </value>
+            <value>
+                <fullName>Better Candidates</fullName>
+                <default>false</default>
+                <label>Better Candidates</label>
+            </value>
+            <value>
+                <fullName>Billing &amp; Contact Information</fullName>
+                <default>false</default>
+                <label>Billing &amp; Contact Information</label>
+            </value>
+            <value>
+                <fullName>Billing/Contract Terms</fullName>
+                <default>false</default>
+                <label>Billing/Contract Terms</label>
+            </value>
+            <value>
+                <fullName>Customer Budget Cut</fullName>
+                <default>false</default>
+                <label>Customer Budget Cut</label>
+            </value>
+            <value>
+                <fullName>Customer Out of Business</fullName>
+                <default>false</default>
+                <label>Customer Out of Business</label>
+            </value>
+            <value>
+                <fullName>Declined Online</fullName>
+                <default>false</default>
+                <label>Declined Online</label>
+            </value>
+            <value>
+                <fullName>Duplicate Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate Opportunity</label>
+            </value>
+            <value>
+                <fullName>Fulfilled Through Ecomm</fullName>
+                <default>false</default>
+                <label>Fulfilled Through Ecomm</label>
+            </value>
+            <value>
+                <fullName>International Teaming</fullName>
+                <default>false</default>
+                <label>International Teaming</label>
+            </value>
+            <value>
+                <fullName>Invalid Contact Information</fullName>
+                <default>false</default>
+                <label>Invalid Contact Information</label>
+            </value>
+            <value>
+                <fullName>No Response from Customer</fullName>
+                <default>false</default>
+                <label>No Response from Customer</label>
+            </value>
+            <value>
+                <fullName>Online Acceptance</fullName>
+                <default>false</default>
+                <label>Online Acceptance</label>
+            </value>
+            <value>
+                <fullName>Price</fullName>
+                <default>false</default>
+                <label>Price</label>
+            </value>
+            <value>
+                <fullName>Prior/Loyal Relationship</fullName>
+                <default>false</default>
+                <label>Prior/Loyal Relationship</label>
+            </value>
+            <value>
+                <fullName>Product (Jobs)</fullName>
+                <default>false</default>
+                <label>Product (Jobs)</label>
+            </value>
+            <value>
+                <fullName>Product (Resume)</fullName>
+                <default>false</default>
+                <label>Product (Resume)</label>
+            </value>
+            <value>
+                <fullName>Quote (Products &amp; Pricing)</fullName>
+                <default>false</default>
+                <label>Quote (Products &amp; Pricing)</label>
+            </value>
+            <value>
+                <fullName>Rejected by Finance</fullName>
+                <default>false</default>
+                <label>Rejected by Finance</label>
+            </value>
+            <value>
+                <fullName>Sales Channel Conflict</fullName>
+                <default>false</default>
+                <label>Sales Channel Conflict</label>
+            </value>
+            <value>
+                <fullName>Terms of Agreement</fullName>
+                <default>false</default>
+                <label>Terms of Agreement</label>
+            </value>
+            <value>
+                <fullName>To Be Provided By Rep</fullName>
+                <default>false</default>
+                <label>To Be Provided By Rep</label>
+            </value>
+            <value>
+                <fullName>Better Responses</fullName>
+                <default>false</default>
+                <label>Better Responses</label>
+            </value>
+            <value>
+                <fullName>Credit Risk</fullName>
+                <default>false</default>
+                <label>Credit Risk</label>
+            </value>
+            <value>
+                <fullName>Customer not hiring</fullName>
+                <default>false</default>
+                <label>Customer not hiring</label>
+            </value>
+            <value>
+                <fullName>Customer unresponsiviness</fullName>
+                <default>false</default>
+                <label>Customer unresponsiviness</label>
+            </value>
+            <value>
+                <fullName>Data Clean up</fullName>
+                <default>false</default>
+                <label>Data Clean up</label>
+            </value>
+            <value>
+                <fullName>Expired- Closed</fullName>
+                <default>false</default>
+                <label>Expired- Closed</label>
+            </value>
+            <value>
+                <fullName>No competitor</fullName>
+                <default>false</default>
+                <label>No competitor</label>
+            </value>
+            <value>
+                <fullName>No Interest/No need</fullName>
+                <default>false</default>
+                <label>No Interest/No need</label>
+            </value>
+            <value>
+                <fullName>No Longer Hiring</fullName>
+                <default>false</default>
+                <label>No Longer Hiring</label>
+            </value>
+            <value>
+                <fullName>Customer Unresponsive</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Expired - Closed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Expired - Closed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

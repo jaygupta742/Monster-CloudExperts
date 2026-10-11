@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>APAC - GST Registration Template</name>
+    <style>freeForm</style>
+    <subject>{!Account.SalesChannel__c} Account GST Registration# Update Request for Account: {!Account.AccountID__c}</subject>
+    <textOnly>India Telesales ACQ Users - MO-IN-SF Request TS ACQ 
+India Telesales RET Users - MO-IN-SF Request TS RET 
+India Fieldsales Users - MO-IN-SF Request Fieldsales 
+
+
+To ensure that your request is processed correctly, please DO NOT change the subject line of this message. Please do not delete any fields when filling out template. 
+
+Account ID - {!Account.AccountID__c} 
+Account Name - {!Account.Name} 
+Current Sales Rep Login - {!Account.Primary_Sales_Rep__c} 
+
+Change/Update GST Registration#{!Account.VATNumber__c} to:  
+
+Comments: 
+
+*Supporting Documents required: (if REGISTERED) GST Registration Certificate Else (UNREGISTERED) Signed declaration from Client. 
+
+Any Exceptions for the above needs to be approved by Managing Director, APAC Region.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

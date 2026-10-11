@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalClientApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>jaygupta742@outlook.com</contactEmail>
+    <distributionState>Local</distributionState>
+    <isProtected>false</isProtected>
+    <label>B2CIntegration</label>
+    <orgScopedExternalApp>00DC4000003ZhbR:B2CIntegration</orgScopedExternalApp>
+</ExternalClientApplication>

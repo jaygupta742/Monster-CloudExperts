@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member_Ids__c</fullName>
+    <externalId>false</externalId>
+    <formula>If(ISPICKVAL(Campaign__r.Campaign_Source__c,&quot;Contact&quot;),
+Campaign__r.Id +&quot;__&quot;+Id+&quot;__&quot;+Contact__r.Id , If(ISPICKVAL(Campaign__r.Campaign_Source__c,&quot;Lead&quot;),
+Campaign__r.Id +&quot;__&quot;+Id+&quot;__&quot;+ Leads__r.Id , null))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Member_Ids</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

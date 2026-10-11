@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>xcode – Inventory limit reached 90%</name>
+    <style>none</style>
+    <subject>xcode – Inventory limit reached 90%</subject>
+    <textOnly>Hallo xxx,  
+ 
+hier gibt es eine Info für Dich, dass der Vertrag für die Firma “Firmenname” “xcode” fast ausgeschöpft ist.  
+ 
+Liebe Grüße  
+ 
+Vorname Nachname</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

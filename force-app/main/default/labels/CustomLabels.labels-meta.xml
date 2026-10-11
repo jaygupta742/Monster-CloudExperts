@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>Email_ValidEndpoint</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email_ValidEndpoint</shortDescription>
+        <value>https://api.zerobounce.net/v2/validate?</value>
+    </labels>
+    <labels>
+        <fullName>Email_validate_apikey</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Email_validate_apikey</shortDescription>
+        <value>65a419e997b945c1a43f9e4adc353613</value>
+    </labels>
+    <labels>
+        <fullName>Seeker_Profile_Id</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Seeker Profile Id used in visualforce page for opportunity</shortDescription>
+        <value>00e7F000000uSSeQAM</value>
+    </labels>
+</CustomLabels>

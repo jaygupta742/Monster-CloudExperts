@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_on_Entity_code</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+ Order_Created__c==true,  OR(ISCHANGED( Account_Entity_Use_Code1__c),ISCHANGED( Shared_with_Person_1__c),ISCHANGED( Shared_with_Person_2__c),
+ISCHANGED( Shared_with_Person_3__c),
+ISCHANGED( Contribution_Person_1__c),
+ISCHANGED( Contribution_Person_2__c),
+ISCHANGED( Contribution_Person_3__c)
+))</errorConditionFormula>
+    <errorMessage>Entity Code, Shared with Person, Contribution Person are Note Editable Once the Order Is Created</errorMessage>
+</ValidationRule>

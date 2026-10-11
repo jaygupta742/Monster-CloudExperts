@@ -1,0 +1,19 @@
+.slds-modal__container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.SpinnerContainer{
+    position: relative;
+    text-align: center;
+    padding-top: 20%;
+}
+
+.RevampTableHead {
+    background-color: #8367d7;
+    color: #ffffff;
+}
+
+.destructive_button-icon {
+    color: red;
+}

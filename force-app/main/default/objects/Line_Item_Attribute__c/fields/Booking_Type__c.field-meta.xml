@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Booking_Type__c</fullName>
+    <label>Booking Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RDA</fullName>
+                <default>false</default>
+                <label>RDA</label>
+            </value>
+            <value>
+                <fullName>RDA and Jobs</fullName>
+                <default>false</default>
+                <label>RDA and Jobs</label>
+            </value>
+            <value>
+                <fullName>Jobs</fullName>
+                <default>false</default>
+                <label>Jobs</label>
+            </value>
+            <value>
+                <fullName>RDA and Jobs Branding</fullName>
+                <default>false</default>
+                <label>RDA and Jobs Branding</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

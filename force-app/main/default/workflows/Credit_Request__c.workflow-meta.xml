@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Email_Alert_for_Sujo_and_Tanesh</fullName>
+        <description>Email Alert for Sujo and Tanesh</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>sujo.john@1monster.com.sg</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/Approval_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_Alert_for_Vikram_and_Tanesh</fullName>
+        <ccEmails>tanesh.arora@monsterindia.com.invalid</ccEmails>
+        <ccEmails>crm@cloudexpertsindia.com</ccEmails>
+        <description>Email Alert for Vikram and Tanesh</description>
+        <protected>false</protected>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/Approval_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Email_alert_for_Tanesh</fullName>
+        <description>Email alert for Tanesh</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>vikram.kumar@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/Approval_Request</template>
+    </alerts>
+    <alerts>
+        <fullName>Rejected_from_2nd_level_approver</fullName>
+        <description>Rejected from 2nd level approver</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/rejection_template</template>
+    </alerts>
+    <alerts>
+        <fullName>approval_email_for_owner</fullName>
+        <description>approval email for owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/approval_template</template>
+    </alerts>
+    <alerts>
+        <fullName>email_for_approver</fullName>
+        <description>email for approver</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>srinivas.tadepally1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Old_Welcome_Letters_APAC/temp</template>
+    </alerts>
+    <alerts>
+        <fullName>rejection_email_to_cr_owne1r</fullName>
+        <description>rejection email to cr owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/rejection_template</template>
+    </alerts>
+    <alerts>
+        <fullName>rejection_email_to_cr_owneer</fullName>
+        <description>rejection email to cr owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/rejection_template</template>
+    </alerts>
+    <alerts>
+        <fullName>rejection_email_to_cr_owner</fullName>
+        <description>rejection email to cr owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/rejection_template</template>
+    </alerts>
+    <alerts>
+        <fullName>rejection_email_to_cre_owner</fullName>
+        <description>rejection email to cr owner</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/rejection_template</template>
+    </alerts>
+    <alerts>
+        <fullName>send_email_after_submit</fullName>
+        <description>send email after submit</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>abilash.nair@1monster.com.sg</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>akash.jain@foundit.ai</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>anurag.arora@1monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>deepank.jain@monster.com.ph</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>elaine.fortescue@monster.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>mahesh.iyer@1monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>nilesh.ghai@1monster.com.ph</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>randeep.bhatia@1monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>vikram.bhaskar@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Old_Welcome_Letters_APAC/temp</template>
+    </alerts>
+    <alerts>
+        <fullName>send_email_to_approval_to_approve</fullName>
+        <description>send email to approval to approve</description>
+        <protected>false</protected>
+        <recipients>
+            <type>accountOwner</type>
+        </recipients>
+        <recipients>
+            <recipient>vikram.bhaskar@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Old_Welcome_Letters_APAC/temp</template>
+    </alerts>
+    <alerts>
+        <fullName>to_create_credit_order</fullName>
+        <description>to create credit order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kiran.gunti1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kiran.madas@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kishorekumar.akkapalli1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>srinivas.gangisetty1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/sen_to_finance</template>
+    </alerts>
+    <alerts>
+        <fullName>to_create_credit_order1</fullName>
+        <description>to create credit order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kiran.gunti1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kiran.madas@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>srinivas.gangisetty1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/sen_to_finance</template>
+    </alerts>
+    <alerts>
+        <fullName>to_create_sales_order</fullName>
+        <description>to create sales order</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>kiran.gunti1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kiran.madas@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>kishorekumar.akkapalli1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>srinivas.gangisetty1@monsterindia.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Template_for_Credit_Requests_Approval/sen_to_finance</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Field_Update_Abilash_Nair</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Abilash Nair</literalValue>
+        <name>Field Update Abilash Nair</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Akash_Jain</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Akash Jain</literalValue>
+        <name>Field Update Akash Jain</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Anurag_Arora</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Anurag Arora</literalValue>
+        <name>Field Update Anurag Arora</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Deepank_Jain</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Deepank Jain</literalValue>
+        <name>Field Update Deepank Jain</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Elaine_Fortescue</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Elaine Fortescue</literalValue>
+        <name>Field Update Elaine Fortescue</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Mahesh_Iyer</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Mahesh Iyer</literalValue>
+        <name>Field Update Mahesh Iyer</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Nilesh_Ghai</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Nilesh Ghai</literalValue>
+        <name>Field Update Nilesh Ghai</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Randeep_Bhatia</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Randeep Bhatia</literalValue>
+        <name>Field Update Randeep Bhatia</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Vikram_Bhaskar</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Vikram Bhaskar</literalValue>
+        <name>Field Update Vikram Bhaskar</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_Update_Wajahath_Shareef</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Wajahath Shareef</literalValue>
+        <name>Field Update Wajahath Shareef</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Field_update_Arun_Karra</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Arun Karra</literalValue>
+        <name>Field update Arun Karra</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Approval_Pending</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Final Approval Pending</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Approval_Status_Update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Final Approval Status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_Approver_Name_Update</fullName>
+        <field>Final_Approver_Name__c</field>
+        <literalValue>Vikram Bhaskar</literalValue>
+        <name>Final Approver Name Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_approval_status</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Final approval status</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Final_approval_status_rejected</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Final approval status rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Vertical_Head_Approval_Status_Approved</fullName>
+        <description>Vertical Head Approval Status field to be changed to Approved.</description>
+        <field>Vertical_head_Approval_status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>Vertical Head Approval Status Approved</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Vertical_Head_Approval_Status_Reject</fullName>
+        <description>Vertical Head Approval Status value updated as Rejected</description>
+        <field>Vertical_head_Approval_status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Vertical Head Approval Status Reject</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Vertical_head_Approval_status_Rejected</fullName>
+        <description>Vertical head Approval status update as rejected</description>
+        <field>Vertical_head_Approval_status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>Vertical head Approval status Rejected</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Vertical_head_Approval_status_Update</fullName>
+        <description>update Vertical head Approval status as approval pending</description>
+        <field>Vertical_head_Approval_status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>Vertical head Approval status Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_approval</fullName>
+        <field>Vertical_head_Approval_status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>after approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_approval_update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>after approval update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_approval_updatee</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>after approval update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_rejection_update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>after rejection update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_rejection_updatee</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>after rejection update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>after_submission_update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>after submission update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>approver_name_update</fullName>
+        <field>Vertical_Head_Approver_Name__c</field>
+        <literalValue>Mahesh Iyer</literalValue>
+        <name>approver name update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>field_update</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Approved</literalValue>
+        <name>field update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>reject_update</fullName>
+        <field>Vertical_head_Approval_status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>reject update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>rejected_update1</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Rejected</literalValue>
+        <name>rejected update1</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>u2</fullName>
+        <field>Approver_Email__c</field>
+        <literalValue>vikram.bhaskar@monsterindia.com</literalValue>
+        <name>u2</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>u4</fullName>
+        <field>Approver_Email__c</field>
+        <literalValue>srinivas.tadepally@monsterindia.com</literalValue>
+        <name>u4</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update</fullName>
+        <field>Approver_name__c</field>
+        <literalValue>Vikram Bhaskar</literalValue>
+        <name>update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update3</fullName>
+        <field>Approver_name__c</field>
+        <literalValue>Srinivas Tadepally</literalValue>
+        <name>update3</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_after_submission_for_approval</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>update after submission for approval</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_after_submit</fullName>
+        <field>Vertical_head_Approval_status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>update after submit</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>update_field</fullName>
+        <field>Approval_Status__c</field>
+        <literalValue>Pending Approval</literalValue>
+        <name>update field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Approver name for sales team</fullName>
+        <actions>
+            <name>u2</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>User.Profile_Name__c</field>
+            <operation>equals</operation>
+            <value>Monster - Sales</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>update for collection team</fullName>
+        <actions>
+            <name>u4</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>update3</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>User.Profile_Name__c</field>
+            <operation>equals</operation>
+            <value>Monster - Collections</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>update vertical head name</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>User.Profile_Name__c</field>
+            <operation>equals</operation>
+            <value>Monster - Sales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>User.PositionSalesChannel__c</field>
+            <operation>equals</operation>
+            <value>Enterprise Business</value>
+        </criteriaItems>
+        <description>update vertical head name and email in reversal bad/debt request if  reversal bad/debt request owner is sales user.</description>
+        <triggerType>onCreateOnly</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Applies_David</fullName>
+    <columns>NAME</columns>
+    <columns>Subject__c</columns>
+    <columns>Status__c</columns>
+    <columns>Email__c</columns>
+    <columns>Received_To_String__c</columns>
+    <columns>Case_Arrived_Time__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Email__c</field>
+        <operation>contains</operation>
+        <value>jobapplies</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Closed</value>
+    </filters>
+    <label>Job Applies</label>
+</ListView>

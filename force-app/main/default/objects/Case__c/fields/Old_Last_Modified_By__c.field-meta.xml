@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Old_Last_Modified_By__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(Old_Last_Modified_User__c == NULL, NULL, 
+/* HYPERLINK(&quot;/&quot; &amp; LastModifiedBy.Id , LastModifiedBy.FirstName &amp;&quot; &quot;&amp; LastModifiedBy.LastName &amp;&quot; &quot;)&amp;&quot;,&quot;&amp; ( TEXT( DAY(DATEVALUE( LastModifiedDate )))&amp;&quot;/&quot;&amp; TEXT(MONTH(DATEVALUE(LastModifiedDate ) ) ) &amp;&quot;/&quot;&amp; TEXT(YEAR(DATEVALUE(LastModifiedDate ) ) ) ) &amp;&quot; &quot;&amp;(IF( 
+OR( 
+VALUE( MID( TEXT( LastModifiedDate+ (5.5/24)), 12, 2 ) ) = 0, 
+VALUE( MID( TEXT( LastModifiedDate+ (5.5/24) ), 12, 2 ) ) = 12 
+), 
+&quot;12&quot;, 
+TEXT( VALUE( MID( TEXT( LastModifiedDate+ (5.5/24) ), 12, 2 ) ) 
+- 
+IF( 
+VALUE( MID( TEXT( LastModifiedDate+ (5.5/24)), 12, 2 ) ) &lt; 12, 
+0, 
+12 
+) 
+) 
+) 
+&amp; &quot;:&quot; &amp; 
+MID( TEXT( LastModifiedDate+ (5.5/24) ), 15, 2 ) 
+&amp; &quot; &quot; &amp; 
+IF( 
+VALUE( MID( TEXT( LastModifiedDate+ (5.5 /24)), 12, 2 ) ) &lt; 12, 
+&quot;AM&quot;, 
+&quot;PM&quot; 
+)), */ 
+
+HYPERLINK(&quot;/&quot; &amp; Old_Last_Modified_User__r.Id , Old_Last_Modified_User__r.First_Name__c &amp;&quot; &quot;&amp; Old_Last_Modified_User__r.Name &amp;&quot;&quot;)&amp;&quot;,&quot;&amp; ( TEXT( DAY(DATEVALUE(Old_Last_Modified_Date__c)))&amp;&quot;/&quot;&amp; TEXT(MONTH(DATEVALUE(Old_Last_Modified_Date__c) ) ) &amp;&quot;/&quot;&amp; TEXT(YEAR(DATEVALUE(Old_Last_Modified_Date__c) ) ) ) &amp;&quot; &quot;&amp;IF( 
+OR( 
+VALUE( MID( TEXT( Old_Last_Modified_Date__c+ (5.5/24)), 12, 2 ) ) = 0, 
+VALUE( MID( TEXT( Old_Last_Modified_Date__c+ (5.5/24) ), 12, 2 ) ) = 12 
+), 
+&quot;12&quot;, 
+TEXT( VALUE( MID( TEXT( Old_Last_Modified_Date__c+ (5.5/24) ), 12, 2 ) ) 
+- 
+IF( 
+VALUE( MID( TEXT( Old_Last_Modified_Date__c+ (5.5/24)), 12, 2 ) ) &lt; 12, 
+0, 
+12 
+) 
+) 
+) 
+&amp; &quot;:&quot; &amp; 
+MID( TEXT( Old_Last_Modified_Date__c+ (5.5/24) ), 15, 2 ) 
+&amp; &quot; &quot; &amp; 
+IF( 
+VALUE( MID( TEXT( Old_Last_Modified_Date__c+ (5.5 /24)), 12, 2 ) ) &lt; 12, 
+&quot;AM&quot;, 
+&quot;PM&quot; 
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Old Last Modified By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,30 @@
+<apex:page controller="Accoteam" tabStyle="Account" lightningStylesheets="true">
+<apex:form >
+<apex:pageBlock mode="edit" >
+<apex:pageBlockButtons location="Top">
+
+
+
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection columns="3" >
+
+
+
+
+
+
+
+</apex:pageBlockSection>
+
+
+
+
+
+
+</apex:pageBlock>
+
+
+</apex:form>
+  
+</apex:page>

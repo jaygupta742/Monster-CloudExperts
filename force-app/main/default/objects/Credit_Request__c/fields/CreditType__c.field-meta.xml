@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CreditType__c</fullName>
+    <label>Credit Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Change in Standard Payment Terms</fullName>
+                <default>false</default>
+                <label>Change in Standard Payment Terms</label>
+            </value>
+            <value>
+                <fullName>Product Conversion</fullName>
+                <default>false</default>
+                <label>Product Conversion</label>
+            </value>
+            <value>
+                <fullName>Change in Non-Standard Payment Terms</fullName>
+                <default>false</default>
+                <label>Change in Non-Standard Payment Terms</label>
+            </value>
+            <value>
+                <fullName>Order Detail Correction</fullName>
+                <default>false</default>
+                <label>Order Detail Correction</label>
+            </value>
+            <value>
+                <fullName>Agency Commission</fullName>
+                <default>false</default>
+                <label>Agency Commission</label>
+            </value>
+            <value>
+                <fullName>Federal or State/Province/HST Tax Issue</fullName>
+                <default>false</default>
+                <label>Federal or State/Province/HST Tax Issue</label>
+            </value>
+            <value>
+                <fullName>Upgrade Services</fullName>
+                <default>false</default>
+                <label>Upgrade Services</label>
+            </value>
+            <value>
+                <fullName>Termination</fullName>
+                <default>false</default>
+                <label>Termination</label>
+            </value>
+            <value>
+                <fullName>Sales Concession</fullName>
+                <default>false</default>
+                <label>Sales Concession</label>
+            </value>
+            <value>
+                <fullName>Client Error</fullName>
+                <default>false</default>
+                <label>Client Error</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Site/Tech Issues</fullName>
+                <default>false</default>
+                <label>Site/Tech Issues</label>
+            </value>
+            <value>
+                <fullName>Test Order</fullName>
+                <default>false</default>
+                <label>Test Order</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

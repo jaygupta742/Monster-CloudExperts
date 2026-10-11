@@ -1,0 +1,260 @@
+<apex:page standardController="QuotesN__c" extensions="Quote_pdf_cls" renderAs="pdf" applyHtmlTag="false" showHeader="false" applyBodyTag="false">
+    <body>
+        <!----- Header section ------------->
+        <c:PDFHeaderFooterRunning value="header">
+            
+            <!---<apex:image value="{'Monster_Logo'}" width="170" height="30"/>---->
+            <apex:image value="{!$Resource.Monster_Logo}" width="170" height="30"/>
+            
+        </c:PDFHeaderFooterRunning>
+        
+        <!------- Footer Section ------------>
+        
+        <c:PDFRunningFooter value="footer">
+            <apex:stylesheet value="{'Monster_Logo'}"/>
+            <div style="text-align : right;">
+                {!quoteObj.Name}
+            </div>
+        </c:PDFRunningFooter>
+        
+        <table border="1 solid" cellspacing="0" cellpadding="3" width="90%" style=" font-size:14px;margin-left:30px;margin-right:30px;" >
+            
+            
+            <tr style="font-size:14px;color:#FFFFFF;" >
+                <th bgcolor="#800080">Prefilled Cart Data </th>
+            </tr>
+        </table>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Name Of Customer</b></div>         
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Contact__r.Name} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column>   
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Designation</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Contact__r.Title} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Company Name</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Account__r.Name} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Quote #</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Name} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Xcode</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Xcode__r.Name} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Industry</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Account__r.APAC_Industry__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Email</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Contact__r.Email} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Phone Number</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Contact__r.Phone} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Mobile Number</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Contact__r.MobilePhone} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>City, State, Pin Code</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+               <b> {!quoteObj.Billing_City__c} &nbsp; &nbsp; &nbsp;{!quoteObj.Billing_State__c}&nbsp; &nbsp; {!quoteObj.Billing_Pin_Code__c }   </b>
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Country</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Billing_Country__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Gst ID</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Account__r.GST_ID__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <br/>
+        <br/>
+        <br/>
+        <apex:variable value="{!1}" var="Slno"/>
+        
+        <table border="1 solid" cellspacing="0" cellpadding="3" width="90%" style=" font-size:14px;margin-left:30px;margin-right:30px;" >
+            <tr style="font-size:14px;color:#FFFFFF;" >
+                <th bgcolor="#800080">Item <br/>#</th>
+                <th width="40%" bgcolor="#800080">Product</th>
+                <th bgcolor="#800080">QTY</th>
+                <th bgcolor="#800080">Product Start <br/>
+                    Date</th>
+                <th bgcolor="#800080">Product End Date</th>
+                
+            </tr>
+            
+            <apex:repeat value="{!quoteLineItem}" var="p">
+                
+                <tr style="font-size:14px;color:black;margin-top:25px;page-break-inside:avoid;" width="90%">
+                    <td>
+                      &nbsp; &nbsp;    <apex:outputText value="{!Floor(Slno)}"/> 
+                     &nbsp; &nbsp;    <apex:variable var="Slno" value="{!Slno + 1}"/> 
+                        <br/><br/>
+                    </td>
+                    
+                    
+                    <td>{!p.Product__r.Product_Name__c} <br/>Selling Country = {!p.Product_Selling_Country__c}<br/>Product Country={!p.Product_Country__c} <br/>Alternative Price List={!p.Price_Master__r.Name}<br/>Alternative
+                        Product= <br/> Contract Duration</td>
+                    <td>&nbsp; &nbsp; {!p.Quantity_Unit__c}<br/><br/> </td>
+                    <td>&nbsp; &nbsp; {!DAY(p.Start_Date__c)}/{!MONTH(p.Start_Date__c)}/{!YEAR(p.Start_Date__c)} <br/><br/></td>
+                    <td>&nbsp; &nbsp; {!DAY(p.End_Date__c)}/{!MONTH(p.End_Date__c)}/{!YEAR(p.End_Date__c)}<br/><br/> </td>
+                </tr>
+                
+               <!-- <tr style="font-size:14px;">
+                    <td  colspan = "5">Comments: </td>
+                </tr>-->
+                <tr style="font-size:14px;">
+                    <td  colspan = "5">Comments:{!p.Comment__c}</td>
+                </tr>
+            </apex:repeat>
+              
+        </table>
+        <br/>
+        <br/>
+        <br/>
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Value of Services</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:30px; vertical-align:top" >
+                <apex:outputText value=" " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>  <br/>
+                <apex:outputText value=" " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>  <br/> 
+                <apex:outputText value="" style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Total Invoice Value</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Net_Total__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Order Type</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Order_Type__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Sale Executive Name</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Account__r.Primary_Sales_Rep__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Sale Executive Email</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Account__r.Sales_Rep_Email__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Branch Address</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:30px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Billing_Address__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Gst ID</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Account__r.GST_ID__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <apex:dataTable value="{!QuotesN__c}" var="quoteObj" border="1 solid" cellspacing="0" cellpadding="3" width="90%" columns="2" columnsWidth="50%,50%" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+            <apex:column style="border:0.5px solid; min-height:20px; vertical-align:top" >
+                <div style="margin-left:5px;margin-top:2px;font-size:13px;"><b>Sales Maneger Name</b></div>              
+            </apex:column>   
+            <apex:column style="border:0.5px solid; min-height:10px; vertical-align:top" >
+                <apex:outputText value="{!quoteObj.Account__r.PrimarySalesManager__c} " style="margin-left:5px; margin-top: 30px; font-size:12px; font-weight:bold;"></apex:outputText>             
+            </apex:column> 
+        </apex:dataTable>
+        
+        <p style="font-size:14px;margin-right:30px;margin-left:20px;"> It is responsibility of the Purchase to provide Valid TAX ID  relevent of credit of Goods and Services<br/>Tax under applicable acts and rules there of. </p>
+        
+    </body>
+    
+</apex:page>

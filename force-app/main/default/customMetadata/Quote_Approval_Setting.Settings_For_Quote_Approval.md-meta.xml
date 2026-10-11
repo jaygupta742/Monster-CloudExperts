@@ -1,0 +1,1194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Settings For Quote Approval</label>
+    <protected>false</protected>
+    <values>
+        <field>Approver_Settings__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;IN TS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Akash Jain&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Akash Jain&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 4
+  },
+  &quot;SEA TS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Akash Jain&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Rajender Yadav&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 4
+  },
+  &quot;ME TS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Akash Jain&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Akash Jain&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 4
+  },
+  &quot;ME FS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 4
+  },
+  &quot;SG FS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 3
+  },
+  &quot;MY FS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Elaine Fortescue&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 4
+  },
+  &quot;PH FS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 3
+  },
+  &quot;HK FS&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 3
+  },
+  &quot;SMB&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Arun Karra&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 5
+  },
+  &quot;fBS&quot;: {
+    &quot;approvers&quot;: [
+      null,
+      null,
+      &quot;Deal Desk&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Binita Agarwal&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 0
+  },
+  &quot;EA&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Manager&quot;,
+      &quot;Vineet George&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Vineet Deopujari&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Tarun Sinha&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 5
+  },
+  &quot;Strat&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Branch Manager&quot;,
+      &quot;Meha Sinha&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Binita Agarwal&quot;,
+      &quot;Binita Agarwal&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Vineet Deopujari&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 5
+  },
+  &quot;Growth&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Branch Manager&quot;,
+      &quot;Meha Sinha&quot;,
+      &quot;Deal Desk&quot;,
+      &quot;Anurag Arora&quot;,
+      &quot;Binita Agarwal&quot;,
+      &quot;Binita Agarwal&quot;,
+      &quot;Sujo John&quot;,
+      &quot;Ekta Poddar&quot;,
+      &quot;Dastur Rustom&quot;,
+      &quot;Saurabh Srivastav&quot;,
+      &quot;Vishesh Bhargava&quot;,
+      &quot;Sampath KP&quot;,
+      &quot;Vineet Deopujari&quot;
+    ],
+    &quot;maxLvlDiscountApprovers&quot;: 5
+  }
+}</value>
+    </values>
+    <values>
+        <field>Discount_Approval_Settings__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;IN TS&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 10,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;:40,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 40,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 4
+    }
+  ],
+  &quot;SEA TS&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 10,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;:40,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 40,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 4
+    }
+  ],
+  &quot;ME TS&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 10,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;:40,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 40,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 4
+    }
+  ],
+  &quot;ME FS&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 10,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;:40,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 40,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 4
+    }
+  ],
+  &quot;SG FS&quot;: [
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 3
+    }
+  ],
+  &quot;MY FS&quot;: [
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 4
+    }
+  ],
+  &quot;PH FS&quot;: [
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 3
+    }
+  ],
+  &quot;HK FS&quot;: [
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 3
+    }
+  ],
+  &quot;EA&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 10,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;: 40,
+      &quot;levelOfApprovalRequired&quot;: 4
+    },
+    {
+      &quot;minDiscount&quot;: 40,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 5
+    }
+  ],
+  &quot;Strat&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 10,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 20,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 20,
+      &quot;maxDiscount&quot;:30,
+      &quot;levelOfApprovalRequired&quot;: 4
+    },
+   {
+      &quot;minDiscount&quot;: 30,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 5
+    }
+  ],
+  &quot;Growth&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 10,
+      &quot;levelOfApprovalRequired&quot;: 1
+    },
+    {
+      &quot;minDiscount&quot;: 10,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 20,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 20,
+      &quot;maxDiscount&quot;: 30,
+      &quot;levelOfApprovalRequired&quot;: 4
+    },
+   {
+      &quot;minDiscount&quot;: 30,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 5
+    }
+  ],
+  &quot;SMB&quot;: [
+    {
+      &quot;minDiscount&quot;: null,
+      &quot;maxDiscount&quot;: 15,
+      &quot;levelOfApprovalRequired&quot;: 2
+    },
+    {
+      &quot;minDiscount&quot;: 15,
+      &quot;maxDiscount&quot;: 25,
+      &quot;levelOfApprovalRequired&quot;: 3
+    },
+    {
+      &quot;minDiscount&quot;: 25,
+      &quot;maxDiscount&quot;: 40,
+      &quot;levelOfApprovalRequired&quot;: 4
+    },
+    {
+      &quot;minDiscount&quot;: 40,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 5
+    }
+  ],
+  &quot;fBS&quot;: [
+    {
+      &quot;minDiscount&quot;: 5,
+      &quot;maxDiscount&quot;: 20,
+      &quot;levelOfApprovalRequired&quot;: 0
+    },
+    {
+      &quot;minDiscount&quot;: 20,
+      &quot;maxDiscount&quot;: null,
+      &quot;levelOfApprovalRequired&quot;: 2
+    }
+  ]
+}</value>
+    </values>
+    <values>
+        <field>Free_Trail_Approval_Settings__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;IN TS&quot;: {
+    &quot;approvers&quot;: [&quot;Arun Karra&quot;]
+  },
+  &quot;SEA TS&quot;: {
+    &quot;approvers&quot;: [&quot;Manager&quot;]
+  },
+  &quot;ME TS&quot;: {
+    &quot;approvers&quot;: [&quot;Sujo John&quot;]
+  },
+  &quot;ME FS&quot;: {
+    &quot;approvers&quot;: [&quot;Sujo John&quot;]
+  },
+  &quot;SG FS&quot;: {
+    &quot;approvers&quot;: [&quot;Sujo John&quot;]
+  },
+  &quot;MY FS&quot;: {
+    &quot;approvers&quot;: [&quot;Elaine Fortescue&quot;]
+  },
+  &quot;PH FS&quot;: {
+    &quot;approvers&quot;: [&quot;Sujo John&quot;]
+  },
+  &quot;HK FS&quot;: {
+    &quot;approvers&quot;: [&quot;Sujo John&quot;]
+  },
+  &quot;EA&quot;: {
+    &quot;approvers&quot;: [&quot;Manager&quot;,&quot;Branch Manager&quot;]
+  },
+  &quot;Strat&quot;: {
+    &quot;approvers&quot;: [&quot;Rahul Sharan&quot;, &quot;Anurag Arora&quot;]
+  },
+  &quot;Growth&quot;: {
+    &quot;approvers&quot;: [
+      &quot;Rahul Sharan&quot;, &quot;Anurag Arora&quot;]
+  },
+  &quot;SMB&quot;: {
+    &quot;approvers&quot;: [&quot;Akash Jain&quot;]
+  },
+  &quot;IND TS&quot;: {
+    &quot;approvers&quot;: [&quot;Arun Karra&quot;]
+  },
+  &quot;fBS&quot;: {
+    &quot;approvers&quot;: []
+  }
+}</value>
+    </values>
+    <values>
+        <field>Payment_Approval_Settings__c</field>
+        <value xsi:type="xsd:string">{
+  &quot;Non Enterprise&quot;: {
+    &quot;SY&quot;: [
+      {
+        &quot;minGrossTotal&quot;: null,
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 50000,
+          &quot;USD&quot;: 750,
+          &quot;MYR&quot;: 3500,
+          &quot;SGD&quot;: 1000,
+          &quot;PHP&quot;: 44000,
+          &quot;HKD&quot;: 5900,
+          &quot;AED&quot;: 2800,
+          &quot;THB&quot;: 2700,
+          &quot;IDR&quot;: 1200000,
+          &quot;VND&quot;: 20000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: 100,
+        &quot;installment&quot;: 1,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: null,
+        &quot;minDueDateDiff&quot;: 5
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 50000,
+          &quot;USD&quot;: 750,
+          &quot;MYR&quot;: 3500,
+          &quot;SGD&quot;: 1000,
+          &quot;PHP&quot;: 44000,
+          &quot;HKD&quot;: 5900,
+          &quot;AED&quot;: 2800,
+          &quot;THB&quot;: 2700,
+          &quot;IDR&quot;: 1200000,
+          &quot;VND&quot;: 20000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: 2,
+        &quot;Upfront&quot;: 100,
+        &quot;installment&quot;: 2,
+        &quot;minDueAmount&quot;: {
+          &quot;INR&quot;: 25000,
+          &quot;USD&quot;: 375,
+          &quot;MYR&quot;: 1767,
+          &quot;SGD&quot;: 507,
+          &quot;PHP&quot;: 21985,
+          &quot;HKD&quot;: 2929,
+          &quot;AED&quot;: 1377,
+          &quot;THB&quot;: 13790,
+          &quot;IDR&quot;: 6144948,
+          &quot;VND&quot;: 9534391
+        },
+        &quot;minMaxDueDateDiff&quot;: 30,
+        &quot;minDueDateDiff&quot;: 5
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 50000,
+          &quot;USD&quot;: 750,
+          &quot;MYR&quot;: 3500,
+          &quot;SGD&quot;: 1000,
+          &quot;PHP&quot;: 44000,
+          &quot;HKD&quot;: 5900,
+          &quot;AED&quot;: 2800,
+          &quot;THB&quot;: 2700,
+          &quot;IDR&quot;: 1200000,
+          &quot;VND&quot;: 20000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: 2,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: 4,
+        &quot;minDueAmount&quot;: {
+          &quot;INR&quot;: 25000,
+          &quot;USD&quot;: 375,
+          &quot;MYR&quot;: 1767,
+          &quot;SGD&quot;: 507,
+          &quot;PHP&quot;: 21985,
+          &quot;HKD&quot;: 2929,
+          &quot;AED&quot;: 1377,
+          &quot;THB&quot;: 13790,
+          &quot;IDR&quot;: 6144948,
+          &quot;VND&quot;: 9534391
+        },
+        &quot;minMaxDueDateDiff&quot;: 120,
+        &quot;minDueDateDiff&quot;: 5
+      }
+    ],
+    &quot;MY 1&quot;: [
+      {
+        &quot;minGrossTotal&quot;: null,
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 100000,
+          &quot;USD&quot;: 1500,
+          &quot;MYR&quot;: 7000,
+          &quot;SGD&quot;: 200,
+          &quot;PHP&quot;: 88000,
+          &quot;HKD&quot;: 11800,
+          &quot;AED&quot;: 5600,
+          &quot;THB&quot;: 5400,
+          &quot;IDR&quot;: 2400000,
+          &quot;VND&quot;: 40000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: 50,
+        &quot;installment&quot;: 1,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: null,
+        &quot;minDueDateDiff&quot;: 5
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 100000,
+          &quot;USD&quot;: 1500,
+          &quot;MYR&quot;: 7000,
+          &quot;SGD&quot;: 200,
+          &quot;PHP&quot;: 88000,
+          &quot;HKD&quot;: 11800,
+          &quot;AED&quot;: 5600,
+          &quot;THB&quot;: 5400,
+          &quot;IDR&quot;: 2400000,
+          &quot;VND&quot;: 40000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: 2,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: 2,
+        &quot;minDueAmount&quot;: {
+          &quot;INR&quot;: 25000,
+          &quot;USD&quot;: 375,
+          &quot;MYR&quot;: 1767,
+          &quot;SGD&quot;: 507,
+          &quot;PHP&quot;: 21985,
+          &quot;HKD&quot;: 2929,
+          &quot;AED&quot;: 1377,
+          &quot;THB&quot;: 13790,
+          &quot;IDR&quot;: 6144948,
+          &quot;VND&quot;: 9534391
+        },
+        &quot;minMaxDueDateDiff&quot;: 30,
+        &quot;minDueDateDiff&quot;: 5
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 100000,
+          &quot;USD&quot;: 1500,
+          &quot;MYR&quot;: 7000,
+          &quot;SGD&quot;: 200,
+          &quot;PHP&quot;: 88000,
+          &quot;HKD&quot;: 11800,
+          &quot;AED&quot;: 5600,
+          &quot;THB&quot;: 5400,
+          &quot;IDR&quot;: 2400000,
+          &quot;VND&quot;: 40000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: 2,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: 4,
+        &quot;minDueAmount&quot;: {
+          &quot;INR&quot;: 25000,
+          &quot;USD&quot;: 375,
+          &quot;MYR&quot;: 1767,
+          &quot;SGD&quot;: 507,
+          &quot;PHP&quot;: 21985,
+          &quot;HKD&quot;: 2929,
+          &quot;AED&quot;: 1377,
+          &quot;THB&quot;: 13790,
+          &quot;IDR&quot;: 6144948,
+          &quot;VND&quot;: 9534391
+        },
+        &quot;minMaxDueDateDiff&quot;: 120,
+        &quot;minDueDateDiff&quot;: 5
+      }
+    ],
+    &quot;MY 2&quot;: [
+      {
+        &quot;minGrossTotal&quot;: null,
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 150000,
+          &quot;USD&quot;: 2250,
+          &quot;MYR&quot;: 10000,
+          &quot;SGD&quot;: 3000,
+          &quot;PHP&quot;: 13200,
+          &quot;HKD&quot;: 17700,
+          &quot;AED&quot;: 8400,
+          &quot;THB&quot;: 81000,
+          &quot;IDR&quot;: 2600000,
+          &quot;VND&quot;: 60000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: 33.33,
+        &quot;installment&quot;: 1,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: null,
+        &quot;minDueDateDiff&quot;: 5
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 150000,
+          &quot;USD&quot;: 2250,
+          &quot;MYR&quot;: 10000,
+          &quot;SGD&quot;: 3000,
+          &quot;PHP&quot;: 13200,
+          &quot;HKD&quot;: 17700,
+          &quot;AED&quot;: 8400,
+          &quot;THB&quot;: 81000,
+          &quot;IDR&quot;: 2600000,
+          &quot;VND&quot;: 60000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: 2,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: 2,
+        &quot;minDueAmount&quot;: {
+          &quot;INR&quot;: 25000,
+          &quot;USD&quot;: 375,
+          &quot;MYR&quot;: 1767,
+          &quot;SGD&quot;: 507,
+          &quot;PHP&quot;: 21985,
+          &quot;HKD&quot;: 2929,
+          &quot;AED&quot;: 1377,
+          &quot;THB&quot;: 13790,
+          &quot;IDR&quot;: 6144948,
+          &quot;VND&quot;: 9534391
+        },
+        &quot;minMaxDueDateDiff&quot;: 30,
+        &quot;minDueDateDiff&quot;: 5
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 150000,
+          &quot;USD&quot;: 2250,
+          &quot;MYR&quot;: 10000,
+          &quot;SGD&quot;: 3000,
+          &quot;PHP&quot;: 13200,
+          &quot;HKD&quot;: 17700,
+          &quot;AED&quot;: 8400,
+          &quot;THB&quot;: 81000,
+          &quot;IDR&quot;: 2600000,
+          &quot;VND&quot;: 60000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: 2,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: 4,
+        &quot;minDueAmount&quot;: {
+          &quot;INR&quot;: 25000,
+          &quot;USD&quot;: 375,
+          &quot;MYR&quot;: 1767,
+          &quot;SGD&quot;: 507,
+          &quot;PHP&quot;: 21985,
+          &quot;HKD&quot;: 2929,
+          &quot;AED&quot;: 1377,
+          &quot;THB&quot;: 13790,
+          &quot;IDR&quot;: 6144948,
+          &quot;VND&quot;: 9534391
+        },
+        &quot;minMaxDueDateDiff&quot;: 120,
+        &quot;minDueDateDiff&quot;: 5
+      }
+    ]
+  },
+  &quot;Enterprise&quot;: {
+    &quot;SY&quot;: [
+      {
+        &quot;minGrossTotal&quot;: null,
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 500000,
+          &quot;USD&quot;: 7500,
+          &quot;MYR&quot;: 35000,
+          &quot;SGD&quot;: 10000,
+          &quot;PHP&quot;: 440000,
+          &quot;HKD&quot;: 59000,
+          &quot;AED&quot;: 28000,
+          &quot;THB&quot;: 270000,
+          &quot;IDR&quot;: 12000000,
+          &quot;VND&quot;: 200000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: 100,
+        &quot;installment&quot;: 1,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: null,
+        &quot;minDueDateDiff&quot;: 30
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 500000,
+          &quot;USD&quot;: 7500,
+          &quot;MYR&quot;: 35000,
+          &quot;SGD&quot;: 10000,
+          &quot;PHP&quot;: 440000,
+          &quot;HKD&quot;: 59000,
+          &quot;AED&quot;: 28000,
+          &quot;THB&quot;: 270000,
+          &quot;IDR&quot;: 12000000,
+          &quot;VND&quot;: 200000000
+        },
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 2500000,
+          &quot;USD&quot;: 37500,
+          &quot;MYR&quot;: 175000,
+          &quot;SGD&quot;: 50000,
+          &quot;PHP&quot;: 2200000,
+          &quot;HKD&quot;: 295000,
+          &quot;AED&quot;: 140000,
+          &quot;THB&quot;: 1350000,
+          &quot;IDR&quot;: 60000000,
+          &quot;VND&quot;: 1000000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 30,
+        &quot;minDueDateDiff&quot;: null
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 2500000,
+          &quot;USD&quot;: 37500,
+          &quot;MYR&quot;: 175000,
+          &quot;SGD&quot;: 50000,
+          &quot;PHP&quot;: 2200000,
+          &quot;HKD&quot;: 295000,
+          &quot;AED&quot;: 140000,
+          &quot;THB&quot;: 1350000,
+          &quot;IDR&quot;: 60000000,
+          &quot;VND&quot;: 1000000000
+        },
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 10000000,
+          &quot;USD&quot;: 150000,
+          &quot;MYR&quot;: 700000,
+          &quot;SGD&quot;: 200000,
+          &quot;PHP&quot;: 8800000,
+          &quot;HKD&quot;: 1180000,
+          &quot;AED&quot;: 560000,
+          &quot;THB&quot;: 5400000,
+          &quot;IDR&quot;: 240000000,
+          &quot;VND&quot;: 4000000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 45,
+        &quot;minDueDateDiff&quot;: null
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 10000000,
+          &quot;USD&quot;: 150000,
+          &quot;MYR&quot;: 700000,
+          &quot;SGD&quot;: 200000,
+          &quot;PHP&quot;: 8800000,
+          &quot;HKD&quot;: 1180000,
+          &quot;AED&quot;: 560000,
+          &quot;THB&quot;: 5400000,
+          &quot;IDR&quot;: 240000000,
+          &quot;VND&quot;: 4000000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 60,
+        &quot;minDueDateDiff&quot;: null
+      }
+    ],
+    &quot;MY 1&quot;: [
+      {
+        &quot;minGrossTotal&quot;: null,
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 1000000,
+          &quot;USD&quot;: 15000,
+          &quot;MYR&quot;: 70000,
+          &quot;SGD&quot;: 20000,
+          &quot;PHP&quot;: 880000,
+          &quot;HKD&quot;: 118000,
+          &quot;AED&quot;: 56000,
+          &quot;THB&quot;: 540000,
+          &quot;IDR&quot;: 24000000,
+          &quot;VND&quot;: 400000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: 50,
+        &quot;installment&quot;: 1,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: null,
+        &quot;minDueDateDiff&quot;: 30
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 1000000,
+          &quot;USD&quot;: 15000,
+          &quot;MYR&quot;: 70000,
+          &quot;SGD&quot;: 20000,
+          &quot;PHP&quot;: 880000,
+          &quot;HKD&quot;: 118000,
+          &quot;AED&quot;: 56000,
+          &quot;THB&quot;: 540000,
+          &quot;IDR&quot;: 24000000,
+          &quot;VND&quot;: 400000000
+        },
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 2500000,
+          &quot;USD&quot;: 37500,
+          &quot;MYR&quot;: 175000,
+          &quot;SGD&quot;: 50000,
+          &quot;PHP&quot;: 2200000,
+          &quot;HKD&quot;: 295000,
+          &quot;AED&quot;: 140000,
+          &quot;THB&quot;: 1350000,
+          &quot;IDR&quot;: 60000000,
+          &quot;VND&quot;: 1000000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 30,
+        &quot;minDueDateDiff&quot;: null
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 2500000,
+          &quot;USD&quot;: 37500,
+          &quot;MYR&quot;: 175000,
+          &quot;SGD&quot;: 50000,
+          &quot;PHP&quot;: 2200000,
+          &quot;HKD&quot;: 295000,
+          &quot;AED&quot;: 140000,
+          &quot;THB&quot;: 1350000,
+          &quot;IDR&quot;: 60000000,
+          &quot;VND&quot;: 1000000000
+        },
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 10000000,
+          &quot;USD&quot;: 150000,
+          &quot;MYR&quot;: 700000,
+          &quot;SGD&quot;: 200000,
+          &quot;PHP&quot;: 8800000,
+          &quot;HKD&quot;: 1180000,
+          &quot;AED&quot;: 560000,
+          &quot;THB&quot;: 5400000,
+          &quot;IDR&quot;: 240000000,
+          &quot;VND&quot;: 4000000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 45,
+        &quot;minDueDateDiff&quot;: null
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 10000000,
+          &quot;USD&quot;: 150000,
+          &quot;MYR&quot;: 700000,
+          &quot;SGD&quot;: 200000,
+          &quot;PHP&quot;: 8800000,
+          &quot;HKD&quot;: 1180000,
+          &quot;AED&quot;: 560000,
+          &quot;THB&quot;: 5400000,
+          &quot;IDR&quot;: 240000000,
+          &quot;VND&quot;: 4000000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 60,
+        &quot;minDueDateDiff&quot;: null
+      }
+    ],
+    &quot;MY 2&quot;: [
+      {
+        &quot;minGrossTotal&quot;: null,
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 1500000,
+          &quot;USD&quot;: 22500,
+          &quot;MYR&quot;: 105000,
+          &quot;SGD&quot;: 30000,
+          &quot;PHP&quot;: 1320000,
+          &quot;HKD&quot;: 177000,
+          &quot;AED&quot;: 84000,
+          &quot;THB&quot;: 810000,
+          &quot;IDR&quot;: 36000000,
+          &quot;VND&quot;: 600000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: 33.33,
+        &quot;installment&quot;: 1,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: null,
+        &quot;minDueDateDiff&quot;: 30
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 1500000,
+          &quot;USD&quot;: 22500,
+          &quot;MYR&quot;: 105000,
+          &quot;SGD&quot;: 30000,
+          &quot;PHP&quot;: 1320000,
+          &quot;HKD&quot;: 177000,
+          &quot;AED&quot;: 84000,
+          &quot;THB&quot;: 810000,
+          &quot;IDR&quot;: 36000000,
+          &quot;VND&quot;: 600000000
+        },
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 2500000,
+          &quot;USD&quot;: 37500,
+          &quot;MYR&quot;: 175000,
+          &quot;SGD&quot;: 50000,
+          &quot;PHP&quot;: 2200000,
+          &quot;HKD&quot;: 295000,
+          &quot;AED&quot;: 140000,
+          &quot;THB&quot;: 1350000,
+          &quot;IDR&quot;: 60000000,
+          &quot;VND&quot;: 1000000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 30,
+        &quot;minDueDateDiff&quot;: null
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 2500000,
+          &quot;USD&quot;: 37500,
+          &quot;MYR&quot;: 175000,
+          &quot;SGD&quot;: 50000,
+          &quot;PHP&quot;: 2200000,
+          &quot;HKD&quot;: 295000,
+          &quot;AED&quot;: 140000,
+          &quot;THB&quot;: 1350000,
+          &quot;IDR&quot;: 60000000,
+          &quot;VND&quot;: 1000000000
+        },
+        &quot;maxGrossTotal&quot;: {
+          &quot;INR&quot;: 10000000,
+          &quot;USD&quot;: 150000,
+          &quot;MYR&quot;: 700000,
+          &quot;SGD&quot;: 200000,
+          &quot;PHP&quot;: 8800000,
+          &quot;HKD&quot;: 1180000,
+          &quot;AED&quot;: 560000,
+          &quot;THB&quot;: 5400000,
+          &quot;IDR&quot;: 240000000,
+          &quot;VND&quot;: 4000000000
+        },
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 45,
+        &quot;minDueDateDiff&quot;: null
+      },
+      {
+        &quot;minGrossTotal&quot;: {
+          &quot;INR&quot;: 10000000,
+          &quot;USD&quot;: 150000,
+          &quot;MYR&quot;: 700000,
+          &quot;SGD&quot;: 200000,
+          &quot;PHP&quot;: 8800000,
+          &quot;HKD&quot;: 1180000,
+          &quot;AED&quot;: 560000,
+          &quot;THB&quot;: 5400000,
+          &quot;IDR&quot;: 240000000,
+          &quot;VND&quot;: 4000000000
+        },
+        &quot;maxGrossTotal&quot;: null,
+        &quot;minPaymentCount&quot;: null,
+        &quot;maxPaymentCount&quot;: null,
+        &quot;Upfront&quot;: null,
+        &quot;installment&quot;: null,
+        &quot;minDueAmount&quot;: null,
+        &quot;minMaxDueDateDiff&quot;: 60,
+        &quot;minDueDateDiff&quot;: null
+      }
+    ]
+  }
+}</value>
+    </values>
+</CustomMetadata>

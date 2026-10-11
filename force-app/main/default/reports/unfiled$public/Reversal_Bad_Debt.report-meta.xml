@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$OrderC__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>FK_$OrderC__c.AccountID__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Credit_Request__c.Credit_Comments__c</field>
+    </columns>
+    <columns>
+        <field>Credit_Request__c.Credit_Amount__c</field>
+    </columns>
+    <currency>INR</currency>
+    <format>Tabular</format>
+    <name>Reversal/Bad Debt</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Credit_Request__c@Credit_Request__c.Order_Custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2021-06-21</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2021-04-01</startDate>
+    </timeFrameFilter>
+</Report>

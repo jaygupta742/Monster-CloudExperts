@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>RT Pranay Kale - Veena SV</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>RT_Sekhar_Pranay_Kale</parentRole>
+</Role>

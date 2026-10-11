@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products__c</fullName>
+    <label>Products</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Avon</fullName>
+                <default>false</default>
+                <label>Avon</label>
+            </value>
+            <value>
+                <fullName>Cow</fullName>
+                <default>false</default>
+                <label>Cow</label>
+            </value>
+            <value>
+                <fullName>Spiffy</fullName>
+                <default>false</default>
+                <label>Spiffy</label>
+            </value>
+            <value>
+                <fullName>Hofincons</fullName>
+                <default>false</default>
+                <label>Hofincons</label>
+            </value>
+            <value>
+                <fullName>Pest Control</fullName>
+                <default>false</default>
+                <label>Pest Control</label>
+            </value>
+            <value>
+                <fullName>Mangaurding</fullName>
+                <default>false</default>
+                <label>Mangaurding</label>
+            </value>
+            <value>
+                <fullName>Tess</fullName>
+                <default>false</default>
+                <label>Tess</label>
+            </value>
+            <value>
+                <fullName>Terrier Business Solutions</fullName>
+                <default>false</default>
+                <label>Terrier Business Solutions</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

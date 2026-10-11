@@ -1,0 +1,1877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActivitySubType__c</fullName>
+    <label>Sub Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>24 Follow-up</fullName>
+                <default>false</default>
+                <label>24 Follow-up</label>
+            </value>
+            <value>
+                <fullName>AA Cross Check</fullName>
+                <default>false</default>
+                <label>AA Cross Check</label>
+            </value>
+            <value>
+                <fullName>Abandoned Cart</fullName>
+                <default>false</default>
+                <label>Abandoned Cart</label>
+            </value>
+            <value>
+                <fullName>Account Group Changed</fullName>
+                <default>false</default>
+                <label>Account Group Changed</label>
+            </value>
+            <value>
+                <fullName>Account Review</fullName>
+                <default>false</default>
+                <label>Account Review</label>
+            </value>
+            <value>
+                <fullName>Action Tracker</fullName>
+                <default>false</default>
+                <label>Action Tracker</label>
+            </value>
+            <value>
+                <fullName>Additional Activities to support Renewal</fullName>
+                <default>false</default>
+                <label>Additional Activities to support Renewal</label>
+            </value>
+            <value>
+                <fullName>Ad Hoc</fullName>
+                <default>false</default>
+                <label>Ad Hoc</label>
+            </value>
+            <value>
+                <fullName>Admin Set up</fullName>
+                <default>false</default>
+                <label>Admin Set up</label>
+            </value>
+            <value>
+                <fullName>Alliances</fullName>
+                <default>false</default>
+                <label>Alliances</label>
+            </value>
+            <value>
+                <fullName>ALL-OTHERS</fullName>
+                <default>false</default>
+                <label>ALL-OTHERS</label>
+            </value>
+            <value>
+                <fullName>Appointment</fullName>
+                <default>false</default>
+                <label>Appointment</label>
+            </value>
+            <value>
+                <fullName>Appreciation from Client</fullName>
+                <default>false</default>
+                <label>Appreciation from Client</label>
+            </value>
+            <value>
+                <fullName>Assessment</fullName>
+                <default>false</default>
+                <label>Assessment</label>
+            </value>
+            <value>
+                <fullName>Assigned</fullName>
+                <default>false</default>
+                <label>Assigned</label>
+            </value>
+            <value>
+                <fullName>AWM</fullName>
+                <default>false</default>
+                <label>AWM</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>Basho</fullName>
+                <default>false</default>
+                <label>Basho</label>
+            </value>
+            <value>
+                <fullName>BE_Prospectfinder</fullName>
+                <default>false</default>
+                <label>BE_Prospectfinder</label>
+            </value>
+            <value>
+                <fullName>Brainshark</fullName>
+                <default>false</default>
+                <label>Brainshark</label>
+            </value>
+            <value>
+                <fullName>Branding</fullName>
+                <default>false</default>
+                <label>Branding</label>
+            </value>
+            <value>
+                <fullName>Burn Rate Jobs</fullName>
+                <default>false</default>
+                <label>Burn Rate Jobs</label>
+            </value>
+            <value>
+                <fullName>Business Review</fullName>
+                <default>false</default>
+                <label>Business Review</label>
+            </value>
+            <value>
+                <fullName>Buy</fullName>
+                <default>false</default>
+                <label>Buy</label>
+            </value>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Call Back</fullName>
+                <default>false</default>
+                <label>Call Back</label>
+            </value>
+            <value>
+                <fullName>Call Inbound</fullName>
+                <default>false</default>
+                <label>Call Inbound</label>
+            </value>
+            <value>
+                <fullName>Call Outbound</fullName>
+                <default>false</default>
+                <label>Call Outbound</label>
+            </value>
+            <value>
+                <fullName>CAN</fullName>
+                <default>false</default>
+                <label>CAN</label>
+            </value>
+            <value>
+                <fullName>Career Booster</fullName>
+                <default>false</default>
+                <label>Career Booster</label>
+            </value>
+            <value>
+                <fullName>Career Card</fullName>
+                <default>false</default>
+                <label>Career Card</label>
+            </value>
+            <value>
+                <fullName>Career Card Beta Lead</fullName>
+                <default>false</default>
+                <label>Career Card Beta Lead</label>
+            </value>
+            <value>
+                <fullName>CC-AnyInbound</fullName>
+                <default>false</default>
+                <label>CC-AnyInbound</label>
+            </value>
+            <value>
+                <fullName>CC-AnyInformation</fullName>
+                <default>false</default>
+                <label>CC-AnyInformation</label>
+            </value>
+            <value>
+                <fullName>CC-AnyOutbound</fullName>
+                <default>false</default>
+                <label>CC-AnyOutbound</label>
+            </value>
+            <value>
+                <fullName>CC-Carecall</fullName>
+                <default>false</default>
+                <label>CC-Carecall</label>
+            </value>
+            <value>
+                <fullName>CC-CVDBSetup</fullName>
+                <default>false</default>
+                <label>CC-CVDBSetup</label>
+            </value>
+            <value>
+                <fullName>CC-Hits</fullName>
+                <default>false</default>
+                <label>CC-Hits</label>
+            </value>
+            <value>
+                <fullName>CC-Int-Others</fullName>
+                <default>false</default>
+                <label>CC-Int-Others</label>
+            </value>
+            <value>
+                <fullName>CC-Int-StatusBA</fullName>
+                <default>false</default>
+                <label>CC-Int-StatusBA</label>
+            </value>
+            <value>
+                <fullName>CC-JACancellation</fullName>
+                <default>false</default>
+                <label>CC-JACancellation</label>
+            </value>
+            <value>
+                <fullName>CC-JAChanges</fullName>
+                <default>false</default>
+                <label>CC-JAChanges</label>
+            </value>
+            <value>
+                <fullName>CC-JAdeleted</fullName>
+                <default>false</default>
+                <label>CC-JAdeleted</label>
+            </value>
+            <value>
+                <fullName>CC-OTHERS</fullName>
+                <default>false</default>
+                <label>CC-OTHERS</label>
+            </value>
+            <value>
+                <fullName>CC-PostingBA</fullName>
+                <default>false</default>
+                <label>CC-PostingBA</label>
+            </value>
+            <value>
+                <fullName>CC-PostingPackages</fullName>
+                <default>false</default>
+                <label>CC-PostingPackages</label>
+            </value>
+            <value>
+                <fullName>CC-StatusBA</fullName>
+                <default>false</default>
+                <label>CC-StatusBA</label>
+            </value>
+            <value>
+                <fullName>CC-StatusServerAlign</fullName>
+                <default>false</default>
+                <label>CC-StatusServerAlign</label>
+            </value>
+            <value>
+                <fullName>CEO Escalation</fullName>
+                <default>false</default>
+                <label>CEO Escalation</label>
+            </value>
+            <value>
+                <fullName>Check Attribute</fullName>
+                <default>false</default>
+                <label>Check Attribute</label>
+            </value>
+            <value>
+                <fullName>Check WebAdmin</fullName>
+                <default>false</default>
+                <label>Check WebAdmin</label>
+            </value>
+            <value>
+                <fullName>Client Development Meeting</fullName>
+                <default>false</default>
+                <label>Client Development Meeting</label>
+            </value>
+            <value>
+                <fullName>Closed Contract</fullName>
+                <default>false</default>
+                <label>Closed Contract</label>
+            </value>
+            <value>
+                <fullName>Cloud Search</fullName>
+                <default>false</default>
+                <label>Cloud Search</label>
+            </value>
+            <value>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Company</fullName>
+                <default>false</default>
+                <label>Company</label>
+            </value>
+            <value>
+                <fullName>Company website</fullName>
+                <default>false</default>
+                <label>Company website</label>
+            </value>
+            <value>
+                <fullName>Competition Insight</fullName>
+                <default>false</default>
+                <label>Competition Insight</label>
+            </value>
+            <value>
+                <fullName>Competitor website</fullName>
+                <default>false</default>
+                <label>Competitor website</label>
+            </value>
+            <value>
+                <fullName>Complaint</fullName>
+                <default>false</default>
+                <label>Complaint</label>
+            </value>
+            <value>
+                <fullName>Complaint from Client</fullName>
+                <default>false</default>
+                <label>Complaint from Client</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>Complete: Customized training</fullName>
+                <default>false</default>
+                <label>Complete: Customized training</label>
+            </value>
+            <value>
+                <fullName>Complete: Online learning</fullName>
+                <default>false</default>
+                <label>Complete: Online learning</label>
+            </value>
+            <value>
+                <fullName>Complete:OOB/NolongerMNSTclien</fullName>
+                <default>false</default>
+                <label>Complete:OOB/NolongerMNSTclien</label>
+            </value>
+            <value>
+                <fullName>Complete: Other</fullName>
+                <default>false</default>
+                <label>Complete: Other</label>
+            </value>
+            <value>
+                <fullName>Complete:Reprequestednocontact</fullName>
+                <default>false</default>
+                <label>Complete:Reprequestednocontact</label>
+            </value>
+            <value>
+                <fullName>Complete: Training declined</fullName>
+                <default>false</default>
+                <label>Complete: Training declined</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Complimentary Services</fullName>
+                <default>false</default>
+                <label>Complimentary Services</label>
+            </value>
+            <value>
+                <fullName>Conference call</fullName>
+                <default>false</default>
+                <label>Conference call</label>
+            </value>
+            <value>
+                <fullName>Confirmation</fullName>
+                <default>false</default>
+                <label>Confirmation</label>
+            </value>
+            <value>
+                <fullName>Confirmation package</fullName>
+                <default>false</default>
+                <label>Confirmation package</label>
+            </value>
+            <value>
+                <fullName>Confirmation phone conversatio</fullName>
+                <default>false</default>
+                <label>Confirmation phone conversatio</label>
+            </value>
+            <value>
+                <fullName>Contact Customer</fullName>
+                <default>false</default>
+                <label>Contact Customer</label>
+            </value>
+            <value>
+                <fullName>Contact Information</fullName>
+                <default>false</default>
+                <label>Contact Information</label>
+            </value>
+            <value>
+                <fullName>Contract Check</fullName>
+                <default>false</default>
+                <label>Contract Check</label>
+            </value>
+            <value>
+                <fullName>Contract Close/Signature</fullName>
+                <default>false</default>
+                <label>Contract Close/Signature</label>
+            </value>
+            <value>
+                <fullName>Contract startup</fullName>
+                <default>false</default>
+                <label>Contract startup</label>
+            </value>
+            <value>
+                <fullName>Corzen Lead</fullName>
+                <default>false</default>
+                <label>Corzen Lead</label>
+            </value>
+            <value>
+                <fullName>Credit Hold</fullName>
+                <default>false</default>
+                <label>Credit Hold</label>
+            </value>
+            <value>
+                <fullName>CR Feedback on the Account</fullName>
+                <default>false</default>
+                <label>CR Feedback on the Account</label>
+            </value>
+            <value>
+                <fullName>CRHead Escalation</fullName>
+                <default>false</default>
+                <label>CRHead Escalation</label>
+            </value>
+            <value>
+                <fullName>CRM Mktg List</fullName>
+                <default>false</default>
+                <label>CRM Mktg List</label>
+            </value>
+            <value>
+                <fullName>CS Buying Signal</fullName>
+                <default>false</default>
+                <label>CS Buying Signal</label>
+            </value>
+            <value>
+                <fullName>CSS</fullName>
+                <default>false</default>
+                <label>CSS</label>
+            </value>
+            <value>
+                <fullName>Current: Client</fullName>
+                <default>false</default>
+                <label>Current: Client</label>
+            </value>
+            <value>
+                <fullName>Current: Sales</fullName>
+                <default>false</default>
+                <label>Current: Sales</label>
+            </value>
+            <value>
+                <fullName>Customer Meeting</fullName>
+                <default>false</default>
+                <label>Customer Meeting</label>
+            </value>
+            <value>
+                <fullName>CV Search / Job Posting</fullName>
+                <default>false</default>
+                <label>CV Search / Job Posting</label>
+            </value>
+            <value>
+                <fullName>CV Search (MHX)</fullName>
+                <default>false</default>
+                <label>CV Search (MHX)</label>
+            </value>
+            <value>
+                <fullName>CV Search (MOhr)</fullName>
+                <default>false</default>
+                <label>CV Search (MOhr)</label>
+            </value>
+            <value>
+                <fullName>DataCleansing Lead</fullName>
+                <default>false</default>
+                <label>DataCleansing Lead</label>
+            </value>
+            <value>
+                <fullName>Demo</fullName>
+                <default>false</default>
+                <label>Demo</label>
+            </value>
+            <value>
+                <fullName>Dev Follow-Up</fullName>
+                <default>false</default>
+                <label>Dev Follow-Up</label>
+            </value>
+            <value>
+                <fullName>Dev Introduction 48 Hr</fullName>
+                <default>false</default>
+                <label>Dev Introduction 48 Hr</label>
+            </value>
+            <value>
+                <fullName>Dev Managing Results</fullName>
+                <default>false</default>
+                <label>Dev Managing Results</label>
+            </value>
+            <value>
+                <fullName>Direct Results</fullName>
+                <default>false</default>
+                <label>Direct Results</label>
+            </value>
+            <value>
+                <fullName>Disable Account</fullName>
+                <default>false</default>
+                <label>Disable Account</label>
+            </value>
+            <value>
+                <fullName>Disable Job Postings</fullName>
+                <default>false</default>
+                <label>Disable Job Postings</label>
+            </value>
+            <value>
+                <fullName>Disable Products</fullName>
+                <default>false</default>
+                <label>Disable Products</label>
+            </value>
+            <value>
+                <fullName>Discovery/Needs Assessment</fullName>
+                <default>false</default>
+                <label>Discovery/Needs Assessment</label>
+            </value>
+            <value>
+                <fullName>Discussion with Decision Maker</fullName>
+                <default>false</default>
+                <label>Discussion with Decision Maker</label>
+            </value>
+            <value>
+                <fullName>E-com</fullName>
+                <default>false</default>
+                <label>E-com</label>
+            </value>
+            <value>
+                <fullName>eCom-AnyInfo</fullName>
+                <default>false</default>
+                <label>eCom-AnyInfo</label>
+            </value>
+            <value>
+                <fullName>eCom call</fullName>
+                <default>false</default>
+                <label>eCom call</label>
+            </value>
+            <value>
+                <fullName>eCom-CVDB</fullName>
+                <default>false</default>
+                <label>eCom-CVDB</label>
+            </value>
+            <value>
+                <fullName>eCom-Int-IP</fullName>
+                <default>false</default>
+                <label>eCom-Int-IP</label>
+            </value>
+            <value>
+                <fullName>Ecomm - buy process</fullName>
+                <default>false</default>
+                <label>Ecomm - buy process</label>
+            </value>
+            <value>
+                <fullName>eCom-Others</fullName>
+                <default>false</default>
+                <label>eCom-Others</label>
+            </value>
+            <value>
+                <fullName>eCom Support</fullName>
+                <default>false</default>
+                <label>eCom Support</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+                <label>Email Inbound</label>
+            </value>
+            <value>
+                <fullName>Email Outbound</fullName>
+                <default>false</default>
+                <label>Email Outbound</label>
+            </value>
+            <value>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+                <label>Escalation</label>
+            </value>
+            <value>
+                <fullName>Establish Value</fullName>
+                <default>false</default>
+                <label>Establish Value</label>
+            </value>
+            <value>
+                <fullName>Exposure</fullName>
+                <default>false</default>
+                <label>Exposure</label>
+            </value>
+            <value>
+                <fullName>Express Resume</fullName>
+                <default>false</default>
+                <label>Express Resume</label>
+            </value>
+            <value>
+                <fullName>External Telemarketing</fullName>
+                <default>false</default>
+                <label>External Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>Feedback</fullName>
+                <default>false</default>
+                <label>Feedback</label>
+            </value>
+            <value>
+                <fullName>FIN-OrderCredit</fullName>
+                <default>false</default>
+                <label>FIN-OrderCredit</label>
+            </value>
+            <value>
+                <fullName>Follow Up</fullName>
+                <default>false</default>
+                <label>Follow Up</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Follow up activity</fullName>
+                <default>false</default>
+                <label>Follow up activity</label>
+            </value>
+            <value>
+                <fullName>Follow-up Meeting</fullName>
+                <default>false</default>
+                <label>Follow-up Meeting</label>
+            </value>
+            <value>
+                <fullName>Force Out User</fullName>
+                <default>false</default>
+                <label>Force Out User</label>
+            </value>
+            <value>
+                <fullName>Free Trial - CR Driven</fullName>
+                <default>false</default>
+                <label>Free Trial - CR Driven</label>
+            </value>
+            <value>
+                <fullName>Free Trials</fullName>
+                <default>false</default>
+                <label>Free Trials</label>
+            </value>
+            <value>
+                <fullName>FTP</fullName>
+                <default>false</default>
+                <label>FTP</label>
+            </value>
+            <value>
+                <fullName>Full</fullName>
+                <default>false</default>
+                <label>Full</label>
+            </value>
+            <value>
+                <fullName>General Jobseeker</fullName>
+                <default>false</default>
+                <label>General Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Generate Demand</fullName>
+                <default>false</default>
+                <label>Generate Demand</label>
+            </value>
+            <value>
+                <fullName>Group Training Onsite</fullName>
+                <default>false</default>
+                <label>Group Training Onsite</label>
+            </value>
+            <value>
+                <fullName>Group Training Webinar</fullName>
+                <default>false</default>
+                <label>Group Training Webinar</label>
+            </value>
+            <value>
+                <fullName>Helpline-Info</fullName>
+                <default>false</default>
+                <label>Helpline-Info</label>
+            </value>
+            <value>
+                <fullName>HelplineTraining</fullName>
+                <default>false</default>
+                <label>HelplineTraining</label>
+            </value>
+            <value>
+                <fullName>Inactive:3rdattempt-nocontact</fullName>
+                <default>false</default>
+                <label>Inactive:3rdattempt-nocontact</label>
+            </value>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>In-Home Business</fullName>
+                <default>false</default>
+                <label>In-Home Business</label>
+            </value>
+            <value>
+                <fullName>International deal</fullName>
+                <default>false</default>
+                <label>International deal</label>
+            </value>
+            <value>
+                <fullName>International LCS</fullName>
+                <default>false</default>
+                <label>International LCS</label>
+            </value>
+            <value>
+                <fullName>International RFI</fullName>
+                <default>false</default>
+                <label>International RFI</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+                <label>Introduction</label>
+            </value>
+            <value>
+                <fullName>Introduction/Introductory Call</fullName>
+                <default>false</default>
+                <label>Introduction/Introductory Call</label>
+            </value>
+            <value>
+                <fullName>IRS</fullName>
+                <default>false</default>
+                <label>IRS</label>
+            </value>
+            <value>
+                <fullName>Joblogo</fullName>
+                <default>false</default>
+                <label>Joblogo</label>
+            </value>
+            <value>
+                <fullName>Job Posting</fullName>
+                <default>false</default>
+                <label>Job Posting</label>
+            </value>
+            <value>
+                <fullName>Job Posting (MHX)</fullName>
+                <default>false</default>
+                <label>Job Posting (MHX)</label>
+            </value>
+            <value>
+                <fullName>Job Posting (MOhr)</fullName>
+                <default>false</default>
+                <label>Job Posting (MOhr)</label>
+            </value>
+            <value>
+                <fullName>Job Posting national</fullName>
+                <default>false</default>
+                <label>Job Posting national</label>
+            </value>
+            <value>
+                <fullName>Job Posting Support</fullName>
+                <default>false</default>
+                <label>Job Posting Support</label>
+            </value>
+            <value>
+                <fullName>Jobseeker Career Services (Combo)</fullName>
+                <default>false</default>
+                <label>Jobseeker Career Services (Combo)</label>
+            </value>
+            <value>
+                <fullName>Job Templates</fullName>
+                <default>false</default>
+                <label>Job Templates</label>
+            </value>
+            <value>
+                <fullName>KYC</fullName>
+                <default>false</default>
+                <label>KYC</label>
+            </value>
+            <value>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+                <label>Lapsed</label>
+            </value>
+            <value>
+                <fullName>Lapsed Account Feedback</fullName>
+                <default>false</default>
+                <label>Lapsed Account Feedback</label>
+            </value>
+            <value>
+                <fullName>Lead Follow up</fullName>
+                <default>false</default>
+                <label>Lead Follow up</label>
+            </value>
+            <value>
+                <fullName>Line Item Fulfillment</fullName>
+                <default>false</default>
+                <label>Line Item Fulfillment</label>
+            </value>
+            <value>
+                <fullName>List brokers</fullName>
+                <default>false</default>
+                <label>List brokers</label>
+            </value>
+            <value>
+                <fullName>Lite Reg</fullName>
+                <default>false</default>
+                <label>Lite Reg</label>
+            </value>
+            <value>
+                <fullName>Lite-Reg Lead Follow-up</fullName>
+                <default>false</default>
+                <label>Lite-Reg Lead Follow-up</label>
+            </value>
+            <value>
+                <fullName>Login information</fullName>
+                <default>false</default>
+                <label>Login information</label>
+            </value>
+            <value>
+                <fullName>Login issue</fullName>
+                <default>false</default>
+                <label>Login issue</label>
+            </value>
+            <value>
+                <fullName>Low Inventory</fullName>
+                <default>false</default>
+                <label>Low Inventory</label>
+            </value>
+            <value>
+                <fullName>Make It Right</fullName>
+                <default>false</default>
+                <label>Make It Right</label>
+            </value>
+            <value>
+                <fullName>Management Reporting</fullName>
+                <default>false</default>
+                <label>Management Reporting</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Mass Mails Support</fullName>
+                <default>false</default>
+                <label>Mass Mails Support</label>
+            </value>
+            <value>
+                <fullName>Media Product</fullName>
+                <default>false</default>
+                <label>Media Product</label>
+            </value>
+            <value>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+                <label>Meeting</label>
+            </value>
+            <value>
+                <fullName>Merge</fullName>
+                <default>false</default>
+                <label>Merge</label>
+            </value>
+            <value>
+                <fullName>MHX platform</fullName>
+                <default>false</default>
+                <label>MHX platform</label>
+            </value>
+            <value>
+                <fullName>Mitigate Fraud</fullName>
+                <default>false</default>
+                <label>Mitigate Fraud</label>
+            </value>
+            <value>
+                <fullName>MOhr platform</fullName>
+                <default>false</default>
+                <label>MOhr platform</label>
+            </value>
+            <value>
+                <fullName>Monster Talent Gateway</fullName>
+                <default>false</default>
+                <label>Monster Talent Gateway</label>
+            </value>
+            <value>
+                <fullName>Monster Twitter Cards</fullName>
+                <default>false</default>
+                <label>Monster Twitter Cards</label>
+            </value>
+            <value>
+                <fullName>Moved from me</fullName>
+                <default>false</default>
+                <label>Moved from me</label>
+            </value>
+            <value>
+                <fullName>MRP</fullName>
+                <default>false</default>
+                <label>MRP</label>
+            </value>
+            <value>
+                <fullName>MSJ</fullName>
+                <default>false</default>
+                <label>MSJ</label>
+            </value>
+            <value>
+                <fullName>Negotiation</fullName>
+                <default>false</default>
+                <label>Negotiation</label>
+            </value>
+            <value>
+                <fullName>News Alerts</fullName>
+                <default>false</default>
+                <label>News Alerts</label>
+            </value>
+            <value>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+                <label>Newspaper</label>
+            </value>
+            <value>
+                <fullName>New to me</fullName>
+                <default>false</default>
+                <label>New to me</label>
+            </value>
+            <value>
+                <fullName>New UI / Algo (v3) Related</fullName>
+                <default>false</default>
+                <label>New UI / Algo (v3) Related</label>
+            </value>
+            <value>
+                <fullName>NL_DM07</fullName>
+                <default>false</default>
+                <label>NL_DM07</label>
+            </value>
+            <value>
+                <fullName>NL_KvK info</fullName>
+                <default>false</default>
+                <label>NL_KvK info</label>
+            </value>
+            <value>
+                <fullName>NL_Prospectfinder</fullName>
+                <default>false</default>
+                <label>NL_Prospectfinder</label>
+            </value>
+            <value>
+                <fullName>NL_TM lead</fullName>
+                <default>false</default>
+                <label>NL_TM lead</label>
+            </value>
+            <value>
+                <fullName>Non-Buying Location</fullName>
+                <default>false</default>
+                <label>Non-Buying Location</label>
+            </value>
+            <value>
+                <fullName>Notify Fraud Task Force</fullName>
+                <default>false</default>
+                <label>Notify Fraud Task Force</label>
+            </value>
+            <value>
+                <fullName>Notify Sales Rep</fullName>
+                <default>false</default>
+                <label>Notify Sales Rep</label>
+            </value>
+            <value>
+                <fullName>NWB-Telemarketing</fullName>
+                <default>false</default>
+                <label>NWB-Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Onsite</fullName>
+                <default>false</default>
+                <label>Onsite</label>
+            </value>
+            <value>
+                <fullName>Onsite Visit</fullName>
+                <default>false</default>
+                <label>Onsite Visit</label>
+            </value>
+            <value>
+                <fullName>OOB</fullName>
+                <default>false</default>
+                <label>OOB</label>
+            </value>
+            <value>
+                <fullName>Optimizer</fullName>
+                <default>false</default>
+                <label>Optimizer</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>P1</fullName>
+                <default>false</default>
+                <label>P1</label>
+            </value>
+            <value>
+                <fullName>Password</fullName>
+                <default>false</default>
+                <label>Password</label>
+            </value>
+            <value>
+                <fullName>PCVS</fullName>
+                <default>false</default>
+                <label>PCVS</label>
+            </value>
+            <value>
+                <fullName>Performance Summary</fullName>
+                <default>false</default>
+                <label>Performance Summary</label>
+            </value>
+            <value>
+                <fullName>Post Refund</fullName>
+                <default>false</default>
+                <label>Post Refund</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>Pre-sales demo by CR team</fullName>
+                <default>false</default>
+                <label>Pre-sales demo by CR team</label>
+            </value>
+            <value>
+                <fullName>Private Label</fullName>
+                <default>false</default>
+                <label>Private Label</label>
+            </value>
+            <value>
+                <fullName>Proactive Chat</fullName>
+                <default>false</default>
+                <label>Proactive Chat</label>
+            </value>
+            <value>
+                <fullName>Product/Price information</fullName>
+                <default>false</default>
+                <label>Product/Price information</label>
+            </value>
+            <value>
+                <fullName>Product Demo</fullName>
+                <default>false</default>
+                <label>Product Demo</label>
+            </value>
+            <value>
+                <fullName>Product Mix</fullName>
+                <default>false</default>
+                <label>Product Mix</label>
+            </value>
+            <value>
+                <fullName>Product Pitch</fullName>
+                <default>false</default>
+                <label>Product Pitch</label>
+            </value>
+            <value>
+                <fullName>Product Review</fullName>
+                <default>false</default>
+                <label>Product Review</label>
+            </value>
+            <value>
+                <fullName>Professional Services</fullName>
+                <default>false</default>
+                <label>Professional Services</label>
+            </value>
+            <value>
+                <fullName>Profile Pages</fullName>
+                <default>false</default>
+                <label>Profile Pages</label>
+            </value>
+            <value>
+                <fullName>Project</fullName>
+                <default>false</default>
+                <label>Project</label>
+            </value>
+            <value>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+                <label>Proposal</label>
+            </value>
+            <value>
+                <fullName>ProspectFinder</fullName>
+                <default>false</default>
+                <label>ProspectFinder</label>
+            </value>
+            <value>
+                <fullName>PRS Demo</fullName>
+                <default>false</default>
+                <label>PRS Demo</label>
+            </value>
+            <value>
+                <fullName>PRS Upsell Promo</fullName>
+                <default>false</default>
+                <label>PRS Upsell Promo</label>
+            </value>
+            <value>
+                <fullName>PSE - Core Recruiting</fullName>
+                <default>false</default>
+                <label>PSE - Core Recruiting</label>
+            </value>
+            <value>
+                <fullName>PSE - Ed Xpo</fullName>
+                <default>false</default>
+                <label>PSE - Ed Xpo</label>
+            </value>
+            <value>
+                <fullName>PSE - Evolutions/OCC</fullName>
+                <default>false</default>
+                <label>PSE - Evolutions/OCC</label>
+            </value>
+            <value>
+                <fullName>PSE – PSW</fullName>
+                <default>false</default>
+                <label>PSE – PSW</label>
+            </value>
+            <value>
+                <fullName>PSE – RLI</fullName>
+                <default>false</default>
+                <label>PSE – RLI</label>
+            </value>
+            <value>
+                <fullName>PSE - Student Recruitment</fullName>
+                <default>false</default>
+                <label>PSE - Student Recruitment</label>
+            </value>
+            <value>
+                <fullName>Q2&apos;08 Leads - Send Book</fullName>
+                <default>false</default>
+                <label>Q2&apos;08 Leads - Send Book</label>
+            </value>
+            <value>
+                <fullName>QBR</fullName>
+                <default>false</default>
+                <label>QBR</label>
+            </value>
+            <value>
+                <fullName>Qhire</fullName>
+                <default>false</default>
+                <label>Qhire</label>
+            </value>
+            <value>
+                <fullName>Qualify</fullName>
+                <default>false</default>
+                <label>Qualify</label>
+            </value>
+            <value>
+                <fullName>Quinton</fullName>
+                <default>false</default>
+                <label>Quinton</label>
+            </value>
+            <value>
+                <fullName>Quote</fullName>
+                <default>false</default>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Quote Accepted</fullName>
+                <default>false</default>
+                <label>Quote Accepted</label>
+            </value>
+            <value>
+                <fullName>Quote Declined</fullName>
+                <default>false</default>
+                <label>Quote Declined</label>
+            </value>
+            <value>
+                <fullName>Recredit</fullName>
+                <default>false</default>
+                <label>Recredit</label>
+            </value>
+            <value>
+                <fullName>Recruiter Profile</fullName>
+                <default>false</default>
+                <label>Recruiter Profile</label>
+            </value>
+            <value>
+                <fullName>Recurring fortnighlty</fullName>
+                <default>false</default>
+                <label>Recurring fortnighlty</label>
+            </value>
+            <value>
+                <fullName>Recurring fortnightly</fullName>
+                <default>false</default>
+                <label>Recurring fortnightly</label>
+            </value>
+            <value>
+                <fullName>Recurring monthly</fullName>
+                <default>false</default>
+                <label>Recurring monthly</label>
+            </value>
+            <value>
+                <fullName>Recurring quartly</fullName>
+                <default>false</default>
+                <label>Recurring quartly</label>
+            </value>
+            <value>
+                <fullName>Recurring weekly</fullName>
+                <default>false</default>
+                <label>Recurring weekly</label>
+            </value>
+            <value>
+                <fullName>Recurring yearly</fullName>
+                <default>false</default>
+                <label>Recurring yearly</label>
+            </value>
+            <value>
+                <fullName>Re-enable Account</fullName>
+                <default>false</default>
+                <label>Re-enable Account</label>
+            </value>
+            <value>
+                <fullName>Refresher Product Training</fullName>
+                <default>false</default>
+                <label>Refresher Product Training</label>
+            </value>
+            <value>
+                <fullName>Refund Order</fullName>
+                <default>false</default>
+                <label>Refund Order</label>
+            </value>
+            <value>
+                <fullName>Relationship</fullName>
+                <default>false</default>
+                <label>Relationship</label>
+            </value>
+            <value>
+                <fullName>Remove Inventory</fullName>
+                <default>false</default>
+                <label>Remove Inventory</label>
+            </value>
+            <value>
+                <fullName>Renewal Discussion</fullName>
+                <default>false</default>
+                <label>Renewal Discussion</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Reset CV Search license</fullName>
+                <default>false</default>
+                <label>Reset CV Search license</label>
+            </value>
+            <value>
+                <fullName>Reset Password</fullName>
+                <default>false</default>
+                <label>Reset Password</label>
+            </value>
+            <value>
+                <fullName>Resume</fullName>
+                <default>false</default>
+                <label>Resume</label>
+            </value>
+            <value>
+                <fullName>Resume Highlighter</fullName>
+                <default>false</default>
+                <label>Resume Highlighter</label>
+            </value>
+            <value>
+                <fullName>Right Resume</fullName>
+                <default>false</default>
+                <label>Right Resume</label>
+            </value>
+            <value>
+                <fullName>RMT - Expired</fullName>
+                <default>false</default>
+                <label>RMT - Expired</label>
+            </value>
+            <value>
+                <fullName>RMT - Quarterly</fullName>
+                <default>false</default>
+                <label>RMT - Quarterly</label>
+            </value>
+            <value>
+                <fullName>RMT - Relational</fullName>
+                <default>false</default>
+                <label>RMT - Relational</label>
+            </value>
+            <value>
+                <fullName>RMT - Renewal</fullName>
+                <default>false</default>
+                <label>RMT - Renewal</label>
+            </value>
+            <value>
+                <fullName>RMT - Start Up</fullName>
+                <default>false</default>
+                <label>RMT - Start Up</label>
+            </value>
+            <value>
+                <fullName>RR Vendor</fullName>
+                <default>false</default>
+                <label>RR Vendor</label>
+            </value>
+            <value>
+                <fullName>Sale made</fullName>
+                <default>false</default>
+                <label>Sale made</label>
+            </value>
+            <value>
+                <fullName>Sales/Prices</fullName>
+                <default>false</default>
+                <label>Sales/Prices</label>
+            </value>
+            <value>
+                <fullName>Sales Follow up</fullName>
+                <default>false</default>
+                <label>Sales Follow up</label>
+            </value>
+            <value>
+                <fullName>Sales Meeting</fullName>
+                <default>false</default>
+                <label>Sales Meeting</label>
+            </value>
+            <value>
+                <fullName>Sales rep name change</fullName>
+                <default>false</default>
+                <label>Sales rep name change</label>
+            </value>
+            <value>
+                <fullName>SAP Review</fullName>
+                <default>false</default>
+                <label>SAP Review</label>
+            </value>
+            <value>
+                <fullName>Saved Searches Support</fullName>
+                <default>false</default>
+                <label>Saved Searches Support</label>
+            </value>
+            <value>
+                <fullName>Scrape Program</fullName>
+                <default>false</default>
+                <label>Scrape Program</label>
+            </value>
+            <value>
+                <fullName>SC-VIS-PRODUCT</fullName>
+                <default>false</default>
+                <label>SC-VIS-PRODUCT</label>
+            </value>
+            <value>
+                <fullName>Seeker Escalation</fullName>
+                <default>false</default>
+                <label>Seeker Escalation</label>
+            </value>
+            <value>
+                <fullName>SeeMore</fullName>
+                <default>false</default>
+                <label>SeeMore</label>
+            </value>
+            <value>
+                <fullName>Segmentation</fullName>
+                <default>false</default>
+                <label>Segmentation</label>
+            </value>
+            <value>
+                <fullName>S-Fraud-Phish/Spam/Privacy</fullName>
+                <default>false</default>
+                <label>S-Fraud-Phish/Spam/Privacy</label>
+            </value>
+            <value>
+                <fullName>S–Hiring Freeze/No Need</fullName>
+                <default>false</default>
+                <label>S–Hiring Freeze/No Need</label>
+            </value>
+            <value>
+                <fullName>Show Your Stripes</fullName>
+                <default>false</default>
+                <label>Show Your Stripes</label>
+            </value>
+            <value>
+                <fullName>S–License Reallocation</fullName>
+                <default>false</default>
+                <label>S–License Reallocation</label>
+            </value>
+            <value>
+                <fullName>Slot Value</fullName>
+                <default>false</default>
+                <label>Slot Value</label>
+            </value>
+            <value>
+                <fullName>SMS Support</fullName>
+                <default>false</default>
+                <label>SMS Support</label>
+            </value>
+            <value>
+                <fullName>S–None-per customer</fullName>
+                <default>false</default>
+                <label>S–None-per customer</label>
+            </value>
+            <value>
+                <fullName>Social Job Ad</fullName>
+                <default>false</default>
+                <label>Social Job Ad</label>
+            </value>
+            <value>
+                <fullName>S–Other</fullName>
+                <default>false</default>
+                <label>S–Other</label>
+            </value>
+            <value>
+                <fullName>Sourcing Solutions</fullName>
+                <default>false</default>
+                <label>Sourcing Solutions</label>
+            </value>
+            <value>
+                <fullName>Startup Contract</fullName>
+                <default>false</default>
+                <label>Startup Contract</label>
+            </value>
+            <value>
+                <fullName>S–Training</fullName>
+                <default>false</default>
+                <label>S–Training</label>
+            </value>
+            <value>
+                <fullName>Suspend Resume</fullName>
+                <default>false</default>
+                <label>Suspend Resume</label>
+            </value>
+            <value>
+                <fullName>TalentBin</fullName>
+                <default>false</default>
+                <label>TalentBin</label>
+            </value>
+            <value>
+                <fullName>Talent CRM</fullName>
+                <default>false</default>
+                <label>Talent CRM</label>
+            </value>
+            <value>
+                <fullName>Talent Fusion</fullName>
+                <default>false</default>
+                <label>Talent Fusion</label>
+            </value>
+            <value>
+                <fullName>Talent Gateway</fullName>
+                <default>false</default>
+                <label>Talent Gateway</label>
+            </value>
+            <value>
+                <fullName>Talent Management Suite</fullName>
+                <default>false</default>
+                <label>Talent Management Suite</label>
+            </value>
+            <value>
+                <fullName>Targetmail</fullName>
+                <default>false</default>
+                <label>Targetmail</label>
+            </value>
+            <value>
+                <fullName>Technical Issue - Client</fullName>
+                <default>false</default>
+                <label>Technical Issue - Client</label>
+            </value>
+            <value>
+                <fullName>Technical Issue - Overall</fullName>
+                <default>false</default>
+                <label>Technical Issue - Overall</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>TMS</fullName>
+                <default>false</default>
+                <label>TMS</label>
+            </value>
+            <value>
+                <fullName>Tradeshow</fullName>
+                <default>false</default>
+                <label>Tradeshow</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Training - Online</fullName>
+                <default>false</default>
+                <label>Training - Online</label>
+            </value>
+            <value>
+                <fullName>Training - Onsite</fullName>
+                <default>false</default>
+                <label>Training - Onsite</label>
+            </value>
+            <value>
+                <fullName>Training Request</fullName>
+                <default>false</default>
+                <label>Training Request</label>
+            </value>
+            <value>
+                <fullName>Twitter Cards</fullName>
+                <default>false</default>
+                <label>Twitter Cards</label>
+            </value>
+            <value>
+                <fullName>Update WebAdmin</fullName>
+                <default>false</default>
+                <label>Update WebAdmin</label>
+            </value>
+            <value>
+                <fullName>Usage Health</fullName>
+                <default>false</default>
+                <label>Usage Health</label>
+            </value>
+            <value>
+                <fullName>Validate Trust</fullName>
+                <default>false</default>
+                <label>Validate Trust</label>
+            </value>
+            <value>
+                <fullName>VC Funding Lead</fullName>
+                <default>false</default>
+                <label>VC Funding Lead</label>
+            </value>
+            <value>
+                <fullName>Virtual Job Fair</fullName>
+                <default>false</default>
+                <label>Virtual Job Fair</label>
+            </value>
+            <value>
+                <fullName>Visit-New Business Appointment</fullName>
+                <default>false</default>
+                <label>Visit-New Business Appointment</label>
+            </value>
+            <value>
+                <fullName>Visit - Renewal Appointment</fullName>
+                <default>false</default>
+                <label>Visit - Renewal Appointment</label>
+            </value>
+            <value>
+                <fullName>VOC</fullName>
+                <default>false</default>
+                <label>VOC</label>
+            </value>
+            <value>
+                <fullName>VSkills</fullName>
+                <default>false</default>
+                <label>VSkills</label>
+            </value>
+            <value>
+                <fullName>Walktrough</fullName>
+                <default>false</default>
+                <label>Walktrough</label>
+            </value>
+            <value>
+                <fullName>WantedTM</fullName>
+                <default>false</default>
+                <label>WantedTM</label>
+            </value>
+            <value>
+                <fullName>Webadmin</fullName>
+                <default>false</default>
+                <label>Webadmin</label>
+            </value>
+            <value>
+                <fullName>Webinar</fullName>
+                <default>false</default>
+                <label>Webinar</label>
+            </value>
+            <value>
+                <fullName>Welcome Letter</fullName>
+                <default>false</default>
+                <label>Welcome Letter</label>
+            </value>
+            <value>
+                <fullName>Whos Hiring</fullName>
+                <default>false</default>
+                <label>Whos Hiring</label>
+            </value>
+            <value>
+                <fullName>XS-Inbound-Others</fullName>
+                <default>false</default>
+                <label>XS-Inbound-Others</label>
+            </value>
+            <value>
+                <fullName>XS-Inbound-Quote</fullName>
+                <default>false</default>
+                <label>XS-Inbound-Quote</label>
+            </value>
+            <value>
+                <fullName>XS-Mail-Inbound</fullName>
+                <default>false</default>
+                <label>XS-Mail-Inbound</label>
+            </value>
+            <value>
+                <fullName>XS-Mail-Outbound</fullName>
+                <default>false</default>
+                <label>XS-Mail-Outbound</label>
+            </value>
+            <value>
+                <fullName>XS-Others</fullName>
+                <default>false</default>
+                <label>XS-Others</label>
+            </value>
+            <value>
+                <fullName>XS-Outbound-Acquisition</fullName>
+                <default>false</default>
+                <label>XS-Outbound-Acquisition</label>
+            </value>
+            <value>
+                <fullName>XS-Outbound-Care</fullName>
+                <default>false</default>
+                <label>XS-Outbound-Care</label>
+            </value>
+            <value>
+                <fullName>XS-Outbound-Others</fullName>
+                <default>false</default>
+                <label>XS-Outbound-Others</label>
+            </value>
+            <value>
+                <fullName>XS-Outbound-Quote</fullName>
+                <default>false</default>
+                <label>XS-Outbound-Quote</label>
+            </value>
+            <value>
+                <fullName>XS-Visit</fullName>
+                <default>false</default>
+                <label>XS-Visit</label>
+            </value>
+            <value>
+                <fullName>YMA-Adresscheck</fullName>
+                <default>false</default>
+                <label>YMA-Adresscheck</label>
+            </value>
+            <value>
+                <fullName>YMA-Adresskauf</fullName>
+                <default>false</default>
+                <label>YMA-Adresskauf</label>
+            </value>
+            <value>
+                <fullName>YMA-ECOM-PROMO</fullName>
+                <default>false</default>
+                <label>YMA-ECOM-PROMO</label>
+            </value>
+            <value>
+                <fullName>YMA-E-Mailing</fullName>
+                <default>false</default>
+                <label>YMA-E-Mailing</label>
+            </value>
+            <value>
+                <fullName>YMA-E-Mailing-Response</fullName>
+                <default>false</default>
+                <label>YMA-E-Mailing-Response</label>
+            </value>
+            <value>
+                <fullName>YMA-Event-Invitation</fullName>
+                <default>false</default>
+                <label>YMA-Event-Invitation</label>
+            </value>
+            <value>
+                <fullName>YMA-Event-No-Show</fullName>
+                <default>false</default>
+                <label>YMA-Event-No-Show</label>
+            </value>
+            <value>
+                <fullName>YMA-Event-Participant</fullName>
+                <default>false</default>
+                <label>YMA-Event-Participant</label>
+            </value>
+            <value>
+                <fullName>YMA-Exhibition Lead</fullName>
+                <default>false</default>
+                <label>YMA-Exhibition Lead</label>
+            </value>
+            <value>
+                <fullName>YMA-Info EMail NO</fullName>
+                <default>false</default>
+                <label>YMA-Info EMail NO</label>
+            </value>
+            <value>
+                <fullName>YMA-Info EMail YES</fullName>
+                <default>false</default>
+                <label>YMA-Info EMail YES</label>
+            </value>
+            <value>
+                <fullName>YMA-Info EVENT NO</fullName>
+                <default>false</default>
+                <label>YMA-Info EVENT NO</label>
+            </value>
+            <value>
+                <fullName>YMA-Info EVENT YES</fullName>
+                <default>false</default>
+                <label>YMA-Info EVENT YES</label>
+            </value>
+            <value>
+                <fullName>YMA-Mailingaktion</fullName>
+                <default>false</default>
+                <label>YMA-Mailingaktion</label>
+            </value>
+            <value>
+                <fullName>YMA-Mailing-Response</fullName>
+                <default>false</default>
+                <label>YMA-Mailing-Response</label>
+            </value>
+            <value>
+                <fullName>YTM-Hot-Lead</fullName>
+                <default>false</default>
+                <label>YTM-Hot-Lead</label>
+            </value>
+            <value>
+                <fullName>YTM-Potential</fullName>
+                <default>false</default>
+                <label>YTM-Potential</label>
+            </value>
+            <value>
+                <fullName>YTM-Terminvereinbarung</fullName>
+                <default>false</default>
+                <label>YTM-Terminvereinbarung</label>
+            </value>
+            <value>
+                <fullName>YTM-Warm-Lead</fullName>
+                <default>false</default>
+                <label>YTM-Warm-Lead</label>
+            </value>
+            <value>
+                <fullName>ZDS-INFO</fullName>
+                <default>false</default>
+                <label>ZDS-INFO</label>
+            </value>
+            <value>
+                <fullName>Ziprecruiter</fullName>
+                <default>false</default>
+                <label>Ziprecruiter</label>
+            </value>
+            <value>
+                <fullName>Training - Onsite (foundit2.0)</fullName>
+                <default>false</default>
+                <label>Training - Onsite (foundit2.0)</label>
+            </value>
+            <value>
+                <fullName>Training - Online (foundit2.0)</fullName>
+                <default>false</default>
+                <label>Training - Online (foundit2.0)</label>
+            </value>
+            <value>
+                <fullName>2.0 Migration Walkthru – TA Lead</fullName>
+                <default>false</default>
+                <label>2.0 Migration Walkthru – TA Lead</label>
+            </value>
+            <value>
+                <fullName>2.0 Migration Training – Recruiters</fullName>
+                <default>false</default>
+                <label>2.0 Migration Training – Recruiters</label>
+            </value>
+            <value>
+                <fullName>2.0 – VOC</fullName>
+                <default>false</default>
+                <label>2.0 – VOC</label>
+            </value>
+            <value>
+                <fullName>2.0 – No Training Required</fullName>
+                <default>false</default>
+                <label>2.0 – No Training Required</label>
+            </value>
+            <value>
+                <fullName>2.0 – Client Unreachable</fullName>
+                <default>false</default>
+                <label>2.0 – Client Unreachable</label>
+            </value>
+            <value>
+                <fullName>ATS Setup</fullName>
+                <default>false</default>
+                <label>ATS Setup</label>
+            </value>
+            <value>
+                <fullName>2.0 – Interested to upgrade</fullName>
+                <default>false</default>
+                <label>2.0 – Interested to upgrade</label>
+            </value>
+            <value>
+                <fullName>Not Renewed</fullName>
+                <default>false</default>
+                <label>Not Renewed</label>
+            </value>
+            <value>
+                <fullName>Renewed</fullName>
+                <default>false</default>
+                <label>Renewed</label>
+            </value>
+            <value>
+                <fullName>A/C Disabled</fullName>
+                <default>false</default>
+                <label>A/C Disabled</label>
+            </value>
+            <value>
+                <fullName>A/C Warning</fullName>
+                <default>false</default>
+                <label>A/C Warning</label>
+            </value>
+            <value>
+                <fullName>A/C Audit</fullName>
+                <default>false</default>
+                <label>A/C Audit</label>
+            </value>
+            <value>
+                <fullName>Recruit session</fullName>
+                <default>false</default>
+                <label>Recruit session</label>
+            </value>
+            <value>
+                <fullName>Recruiter Day</fullName>
+                <default>false</default>
+                <label>Recruiter Day</label>
+            </value>
+            <value>
+                <fullName>Floor walk -in</fullName>
+                <default>false</default>
+                <label>Floor walk -in</label>
+            </value>
+            <value>
+                <fullName>Q1</fullName>
+                <default>false</default>
+                <label>Q1</label>
+            </value>
+            <value>
+                <fullName>Q2</fullName>
+                <default>false</default>
+                <label>Q2</label>
+            </value>
+            <value>
+                <fullName>Q3</fullName>
+                <default>false</default>
+                <label>Q3</label>
+            </value>
+            <value>
+                <fullName>Q4</fullName>
+                <default>false</default>
+                <label>Q4</label>
+            </value>
+            <value>
+                <fullName>Customer</fullName>
+                <default>false</default>
+                <label>Customer</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>No Training</fullName>
+                <default>false</default>
+                <label>No Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

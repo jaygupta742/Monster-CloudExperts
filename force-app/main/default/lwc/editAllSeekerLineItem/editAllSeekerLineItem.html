@@ -1,0 +1,145 @@
+<!-- sldsValidatorIgnore -->
+<!--
+    Created By : Suraj Mahabudhe
+    Created Date : 26/11/2023
+-->
+<template>
+    <div class="slds-modal__header">
+        <h1 class="slds-text-heading_medium">Edit All Line Items</h1>
+    </div>
+    <div class="slds-modal__content slds-scrollable_y slds-var-p-around_medium" style="max-height: 450px;">
+        <div class="SpinnerContainer" if:true={spinnerStatus}>
+            <lightning-spinner alternative-text="Loading" size="medium" variant="brand"></lightning-spinner>
+        </div>
+
+        <div if:false={spinnerStatus}>
+            <div class="slds-p-vertical_x-small">
+                <span class="slds-text-color_destructive">*</span> = Required Information
+            </div>
+            <div class="slds-scrollable_x" style="width: 100%;">
+                <lightning-record-edit-form object-api-name="Seeker_Order_Line_Item__c" density="comfy">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered" style="width: 150%;">
+                        <thead>
+                            <tr class="slds-line-height_reset" style="width: 100%;">
+                                <th class="RevampTableHead" scope="col" style="width:4%;">
+                                    #
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    SOLI No
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 15%;">
+                                    Product Name
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    Tenure Month
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 10%;">
+                                    <span class="slds-text-color_destructive slds-m-horizontal_xx-small">*</span>
+                                    Start Date
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 10%;">
+                                    End Date
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    Unit Rate
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    Discount
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    Subvention Cost
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    Selling Fee
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    Commission
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 7%;">
+                                    Gross Total
+                                </th>
+                                <th class="RevampTableHead" scope="col" style="width: 5%;">
+                                    Action
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <template for:each={OrderItems} for:item="item" for:index="index">
+                                <tr class="slds-hint-parent" key={item.Id}>
+                                    <td data-label="Serial No">
+                                        <div class="slds-truncate" title={item.SlNo}>{item.SlNo}</div>
+                                    </td>
+                                    <td data-label="Seeker Order Line Items">
+                                        <div class="slds-truncate" title={item.Name}>
+                                            <lightning-formatted-url value={item.RecordURL} tooltip="Visit Line Item" label={item.Name} target="_blank"></lightning-formatted-url>
+                                        </div>
+                                    </td>
+                                    <td data-label="Product">
+                                        <div class="slds-truncate" title={item.Name}>
+                                            <lightning-formatted-url value={item.ProductURL} label={item.Product_Name__c} target="_blank" tooltip={item.Product_Name__c}></lightning-formatted-url>
+                                        </div>
+                                    </td>
+                                    <td data-label="Product Tenure">
+                                        <div class="slds-truncate" title={item.Product_Tenure__c}>
+                                            {item.Product_Tenure__c}
+                                        </div>
+                                    </td>
+                                    <td data-label="Start Date">
+                                        <div class="slds-truncate" title={item.Start_Date__c}>
+                                            <lightning-input-field data-index={index} field-name="Start_Date__c" value={item.Start_Date__c} variant="label-hidden" onchange={HandleChangeInput}></lightning-input-field>
+                                        </div>
+                                    </td>
+                                    <td data-label="End Date">
+                                        <div class="slds-truncate" title={item.End_Date__c}>
+                                            <lightning-input-field data-index={index} field-name="End_Date__c" value={item.End_Date__c} variant="label-hidden" read-only></lightning-input-field>
+                                        </div>
+                                    </td>
+                                    <td data-label="Unit Price">
+                                        <div class="slds-truncate" title={item.Unit_Price__c}>
+                                            <lightning-formatted-number value={item.Unit_Price__c} format-style="currency" currency-code={item.CurrencyIsoCode}></lightning-formatted-number>
+                                        </div>
+                                    </td>
+                                    <td data-label="Discount">
+                                        <div class="slds-truncate" title={item.Discount__c}>
+                                            <lightning-input-field data-index={index} field-name="Discount__c" value={item.Discount__c} variant="label-hidden" onchange={HandleChangeInput}></lightning-input-field>
+                                        </div>
+                                    </td>
+                                    <td data-label="Discount">
+                                        <div class="slds-truncate" title={item.Subvention_Cost__c}>
+                                            <lightning-input-field data-index={index} field-name="Subvention_Cost__c" value={item.Subvention_Cost__c} variant="label-hidden" onchange={HandleChangeInput}></lightning-input-field>
+                                        </div>
+                                    </td>
+                                    <td data-label="Selling_Fee__c">
+                                        <div class="slds-truncate" title={item.Selling_Fee__c}>
+                                            <lightning-formatted-number value={item.Selling_Fee__c} format-style="currency" currency-code={item.CurrencyIsoCode}></lightning-formatted-number>
+                                        </div>
+                                    </td>
+                                    <td data-label="Commission__c">
+                                        <div class="slds-truncate" title={item.Commission__c}>
+                                            <lightning-input-field data-index={index} field-name="Commission__c" value={item.Commission__c} variant="label-hidden" onchange={HandleChangeInput} readonly></lightning-input-field>
+                                        </div>
+                                    </td>
+                                    <td data-label="Gross_Total__c">
+                                        <div class="slds-truncate" title={item.Gross_Total__c}>
+                                            <lightning-formatted-number value={item.Gross_Total__c} format-style="currency" currency-code={item.CurrencyIsoCode}></lightning-formatted-number>
+                                        </div>
+                                    </td>
+                                    <td data-label="Actions">
+                                        <div class="slds-truncate slds-align_absolute-center" title="Delete">
+                                            <lightning-button-icon icon-name="utility:delete" alternative-text="Delete" class="slds-m-left_xx-small" icon-class="slds-text-color_destructive" variant="bare" size="large" title="Delete" data-index={index} onclick={HandleDeleteItems}></lightning-button-icon>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </template>
+                        </tbody>
+                    </table>
+                </lightning-record-edit-form>
+            </div>
+        </div>
+    </div>
+
+    <div class="slds-modal__footer">
+        <lightning-button label="Cancel" onclick={HandleCancelPage} class="slds-var-p-horizontal_small"></lightning-button>
+        <lightning-button label="Save" variant="brand" onclick={HandleSavePage} disabled={save_btn_status}></lightning-button>
+    </div>
+</template>

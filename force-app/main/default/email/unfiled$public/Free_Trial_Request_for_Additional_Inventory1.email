@@ -1,0 +1,12 @@
+Hello {!QuotesN__c.Approver_1__c},
+
+We kindly ask for your approval of the following free trial quote:
+
+Quote No: {!QuotesN__c.Name}
+Link: {!QuotesN__c.Link}
+
+Thank you.
+
+Best regards,
+Salesforce Admin
+Monster India Pvt. Ltd.

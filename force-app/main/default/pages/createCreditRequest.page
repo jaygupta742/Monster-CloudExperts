@@ -1,0 +1,60 @@
+<apex:page controller="CreditRequest" lightningStylesheets="true" tabStyle="Credit_Request__c" docType="xhtml-1.0-strict">
+    <apex:pageMessages />
+
+
+
+
+<apex:form >
+<apex:outputPanel rendered="{!IF(qwerty== false, TRUE, FALSE)}">
+<apex:pageBlock title="Reversal/Bad Debt Requests">
+
+
+<apex:pageBlockButtons location="top">
+<apex:commandButton value="save" action="{!Save}"  />
+<apex:commandButton value="Cancel" action="{!Cancel}" immediate="true"/>
+
+</apex:pageBlockButtons>
+
+
+
+
+<apex:pageBlockSection title="Edit Reversal/Bad Debt Requests" collapsible="false">
+
+
+<apex:outputfield label="Order number" value="{!lsto[0].name}"/>
+<apex:outputfield label="Order Date" value="{!lsto[0].OrderDate__c}"/>
+<apex:outputfield label="Account" value="{!lsto[0].Account__r.name}"/>
+<apex:inputField label="Reversed Amount" value="{!cr.Credit_Amount__c}" required="true"/>
+<apex:inputField label="Reversal/Bad Debt Reason" value="{!cr.Credit_Reason__c}" required="true" />
+<apex:inputField label=" Reversal/Bad Debt Comment" value="{!cr.Credit_Comments__c}"/>
+<apex:inputField label="Amount to be Credited As" value="{!cr.Credit_Type__c}" required="true"/>
+
+</apex:pageBlockSection>
+
+
+
+ 
+ 
+       <!-- <apex:commandButton id="uploadfile" value="Upload" action="{!upload}"/>-->
+
+
+</apex:pageBlock>
+</apex:outputPanel>
+
+
+<apex:outputPanel rendered="{!IF(qwerty== TRUE, TRUE, FALSE)}">
+<apex:pageBlock title="Generate Reversal/Bad Debt Requests">
+
+<div style="font-size:30px;" align="Center">  <br/>Reversed Credit amount cannot be greater than Gross Total</div>
+
+<div align="Center"><apex:commandButton value="Go Back" action="{!onCancel}"/> </div>
+
+
+</apex:pageBlock>
+
+</apex:outputPanel>
+
+
+</apex:form>
+
+</apex:page>

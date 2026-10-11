@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Free Trial/Zero Value Order</name>
+    <style>freeForm</style>
+    <subject>Free trial for {!Account.Name} : {!Apttus_Proposal__Proposal__c.Name}</subject>
+    <textOnly>Send Email to: MO-IN-Activation
+
+Hi, Please find attached the free trial request for:
+
+Quote Id: {!Apttus_Proposal__Proposal__c.Name}
+
+Order Type: {!Apttus_Proposal__Proposal__c.00NJ0000001WqAL}
+
+Account Name: {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Account__c}
+
+Account ID: {!Apttus_Proposal__Proposal__c.Account_ID__c}
+
+Sales Channel : {!Apttus_Proposal__Proposal__c.Sales_Channel__c}
+
+Account Sales Rep: {!Apttus_Proposal__Proposal__c.OwnerFullName}
+
+
+Free trial form and necessary approvals are attached.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

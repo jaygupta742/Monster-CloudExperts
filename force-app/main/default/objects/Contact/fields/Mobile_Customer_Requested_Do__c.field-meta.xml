@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mobile_Customer_Requested_Do__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Do not call MobilePhone per customer request</description>
+    <label>Mobile Phone Customer Req. Do Not Call</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

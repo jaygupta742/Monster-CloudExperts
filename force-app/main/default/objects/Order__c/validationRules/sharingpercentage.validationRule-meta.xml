@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>sharingpercentage</fullName>
+    <active>false</active>
+    <errorConditionFormula>OR(
+(Contribution_Person_1__c  +  Contribution_Person_2__c  +  Contribution_Person_3__c ) &lt;&gt; 1,(Contribution_Person_1__c  +  Contribution_Person_2__c  +  Contribution_Person_3__c ) &lt;&gt; 2,
+(Contribution_Person_1__c  +  Contribution_Person_2__c)&lt;&gt;1,
+(Contribution_Person_1__c  +  Contribution_Person_2__c)&lt;&gt;2
+
+)</errorConditionFormula>
+    <errorMessage>Sharing contribution 1,2 and 3 should be equal to and less than 100</errorMessage>
+</ValidationRule>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Quote Send Back Reason Template</name>
+    <style>none</style>
+    <subject>Sales Force Quote # {!apttus_proposal_proposal__c.Name} with {!apttus_proposal_proposal__c.Account__c} is Rejected as per the following reasons.</subject>
+    <textOnly>Please update us once you are done with the quote.
+With regards
+Order Processing Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

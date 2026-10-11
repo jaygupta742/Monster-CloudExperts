@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Description__c</fullName>
+    <label>Description</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>Articles</fullName>
+                <default>false</default>
+                <label>Articles</label>
+            </value>
+            <value>
+                <fullName>Articles in Section Incontournables</fullName>
+                <default>false</default>
+                <label>Articles in Section Incontournables</label>
+            </value>
+            <value>
+                <fullName>Care B/W</fullName>
+                <default>false</default>
+                <label>Care B/W</label>
+            </value>
+            <value>
+                <fullName>Care Color</fullName>
+                <default>false</default>
+                <label>Care Color</label>
+            </value>
+            <value>
+                <fullName>Featured Jobs on Job Access Section</fullName>
+                <default>false</default>
+                <label>Featured Jobs on Job Access Section</label>
+            </value>
+            <value>
+                <fullName>HP and Candidate Profile</fullName>
+                <default>false</default>
+                <label>HP and Candidate Profile</label>
+            </value>
+            <value>
+                <fullName>HP Carousel 3 slots</fullName>
+                <default>false</default>
+                <label>HP Carousel 3 slots</label>
+            </value>
+            <value>
+                <fullName>HP Complete Branding</fullName>
+                <default>false</default>
+                <label>HP Complete Branding</label>
+            </value>
+            <value>
+                <fullName>HP Top banner Branding</fullName>
+                <default>false</default>
+                <label>HP Top banner Branding</label>
+            </value>
+            <value>
+                <fullName>Mobile - Pop Up</fullName>
+                <default>false</default>
+                <label>Mobile - Pop Up</label>
+            </value>
+            <value>
+                <fullName>Nu.nl</fullName>
+                <default>false</default>
+                <label>Nu.nl</label>
+            </value>
+            <value>
+                <fullName>NuEntertainment.nl</fullName>
+                <default>false</default>
+                <label>NuEntertainment.nl</label>
+            </value>
+            <value>
+                <fullName>NuGeld.nl</fullName>
+                <default>false</default>
+                <label>NuGeld.nl</label>
+            </value>
+            <value>
+                <fullName>NuOverig</fullName>
+                <default>false</default>
+                <label>NuOverig</label>
+            </value>
+            <value>
+                <fullName>NuRegionaal</fullName>
+                <default>false</default>
+                <label>NuRegionaal</label>
+            </value>
+            <value>
+                <fullName>NuSport.nl</fullName>
+                <default>false</default>
+                <label>NuSport.nl</label>
+            </value>
+            <value>
+                <fullName>NuTech.nl</fullName>
+                <default>false</default>
+                <label>NuTech.nl</label>
+            </value>
+            <value>
+                <fullName>NuWerk.nl</fullName>
+                <default>false</default>
+                <label>NuWerk.nl</label>
+            </value>
+            <value>
+                <fullName>NuZakelijk.nl</fullName>
+                <default>false</default>
+                <label>NuZakelijk.nl</label>
+            </value>
+            <value>
+                <fullName>Physicians PG1</fullName>
+                <default>false</default>
+                <label>Physicians PG1</label>
+            </value>
+            <value>
+                <fullName>Physicians PG2</fullName>
+                <default>false</default>
+                <label>Physicians PG2</label>
+            </value>
+            <value>
+                <fullName>Physicians PG3</fullName>
+                <default>false</default>
+                <label>Physicians PG3</label>
+            </value>
+            <value>
+                <fullName>Physicians PG4</fullName>
+                <default>false</default>
+                <label>Physicians PG4</label>
+            </value>
+            <value>
+                <fullName>Pop Up Window Teo</fullName>
+                <default>false</default>
+                <label>Pop Up Window Teo</label>
+            </value>
+            <value>
+                <fullName>Profile</fullName>
+                <default>false</default>
+                <label>Profile</label>
+            </value>
+            <value>
+                <fullName>Side Banner Branding</fullName>
+                <default>false</default>
+                <label>Side Banner Branding</label>
+            </value>
+            <value>
+                <fullName>Zoom</fullName>
+                <default>false</default>
+                <label>Zoom</label>
+            </value>
+            <value>
+                <fullName>Monster and 1 Feed - 200 Jobs Max</fullName>
+                <default>false</default>
+                <label>Monster and 1 Feed - 200 Jobs Max</label>
+            </value>
+            <value>
+                <fullName>Monster and 2 To 5 Feeds - 200 Jobs Max</fullName>
+                <default>false</default>
+                <label>Monster and 2 To 5 Feeds - 200 Jobs Max</label>
+            </value>
+            <value>
+                <fullName>Monster and 6 To 9 Feeds - 100 Jobs Max</fullName>
+                <default>false</default>
+                <label>Monster and 6 To 9 Feeds - 100 Jobs Max</label>
+            </value>
+            <value>
+                <fullName>Accueil 100%</fullName>
+                <default>false</default>
+                <label>Accueil 100%</label>
+            </value>
+            <value>
+                <fullName>Accueil 25%</fullName>
+                <default>false</default>
+                <label>Accueil 25%</label>
+            </value>
+            <value>
+                <fullName>Accueil 50%</fullName>
+                <default>false</default>
+                <label>Accueil 50%</label>
+            </value>
+            <value>
+                <fullName>Entreprise Handi-Engagee 1 An</fullName>
+                <default>false</default>
+                <label>Entreprise Handi-Engagee 1 An</label>
+            </value>
+            <value>
+                <fullName>Entreprise Handi-Engagee 6 Mois</fullName>
+                <default>false</default>
+                <label>Entreprise Handi-Engagee 6 Mois</label>
+            </value>
+            <value>
+                <fullName>Envoi Newsletter Chartee</fullName>
+                <default>false</default>
+                <label>Envoi Newsletter Chartee</label>
+            </value>
+            <value>
+                <fullName>Espace Candidat 100%</fullName>
+                <default>false</default>
+                <label>Espace Candidat 100%</label>
+            </value>
+            <value>
+                <fullName>Espace Candidat 25%</fullName>
+                <default>false</default>
+                <label>Espace Candidat 25%</label>
+            </value>
+            <value>
+                <fullName>Espace Candidat 50%</fullName>
+                <default>false</default>
+                <label>Espace Candidat 50%</label>
+            </value>
+            <value>
+                <fullName>Option Accessibilite Numerique</fullName>
+                <default>false</default>
+                <label>Option Accessibilite Numerique</label>
+            </value>
+            <value>
+                <fullName>Option Creation</fullName>
+                <default>false</default>
+                <label>Option Creation</label>
+            </value>
+            <value>
+                <fullName>Push Offres Aux Candidats</fullName>
+                <default>false</default>
+                <label>Push Offres Aux Candidats</label>
+            </value>
+            <value>
+                <fullName>Rubriques Cibles 100%</fullName>
+                <default>false</default>
+                <label>Rubriques Cibles 100%</label>
+            </value>
+            <value>
+                <fullName>Rubriques Cibles 25%</fullName>
+                <default>false</default>
+                <label>Rubriques Cibles 25%</label>
+            </value>
+            <value>
+                <fullName>Rubriques Cibles 50%</fullName>
+                <default>false</default>
+                <label>Rubriques Cibles 50%</label>
+            </value>
+            <value>
+                <fullName>Sponsoring Newsletter</fullName>
+                <default>false</default>
+                <label>Sponsoring Newsletter</label>
+            </value>
+            <value>
+                <fullName>Select One</fullName>
+                <default>false</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>Front Page</fullName>
+                <default>false</default>
+                <label>Front Page</label>
+            </value>
+            <value>
+                <fullName>Job Search Results Page</fullName>
+                <default>false</default>
+                <label>Job Search Results Page</label>
+            </value>
+            <value>
+                <fullName>Graduates</fullName>
+                <default>false</default>
+                <label>Graduates</label>
+            </value>
+            <value>
+                <fullName>Rectangle</fullName>
+                <default>false</default>
+                <label>Rectangle</label>
+            </value>
+            <value>
+                <fullName>Small</fullName>
+                <default>false</default>
+                <label>Small</label>
+            </value>
+            <value>
+                <fullName>Half Page</fullName>
+                <default>false</default>
+                <label>Half Page</label>
+            </value>
+            <value>
+                <fullName>Homepage</fullName>
+                <default>false</default>
+                <label>Homepage</label>
+            </value>
+            <value>
+                <fullName>Employer Logo</fullName>
+                <default>false</default>
+                <label>Employer Logo</label>
+            </value>
+            <value>
+                <fullName>Exclusive</fullName>
+                <default>false</default>
+                <label>Exclusive</label>
+            </value>
+            <value>
+                <fullName>Top</fullName>
+                <default>false</default>
+                <label>Top</label>
+            </value>
+            <value>
+                <fullName>Tower</fullName>
+                <default>false</default>
+                <label>Tower</label>
+            </value>
+            <value>
+                <fullName>Vacancies</fullName>
+                <default>false</default>
+                <label>Vacancies</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

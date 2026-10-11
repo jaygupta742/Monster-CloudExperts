@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phone_Num_Should_Not_Be_More_Than_16_Dig</fullName>
+    <active>false</active>
+    <description>Phone_Num_Should_Not_Be_More_Than_16_Digit</description>
+    <errorConditionFormula>IF( Case_Accounts__c == False,len(Phone ) &gt;16|| CONTAINS(Phone , &apos;/&apos;) ||CONTAINS(Phone , &apos;,&apos;)  ||CONTAINS(Phone , &apos;*&apos;)||CONTAINS(Phone , &apos;-&apos;)||CONTAINS(Phone , &apos;.&apos;),false)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>Phone Number Should Not Be Equal to 16 Digits</errorMessage>
+</ValidationRule>

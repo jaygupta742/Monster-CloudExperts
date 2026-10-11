@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>GCS_Opp_Access_Raj</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>GCS Opp Access - Raj</label>
+        <sharedTo>
+            <group>Service_CR_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>GCS_Opps__c</field>
+            <operation>equals</operation>
+            <value>True</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Geetanjali</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Quote Type equals to Ecomm- rep or ecom to be shared with Geetanjali Upadhyay</description>
+        <label>Geetanjali</label>
+        <sharedTo>
+            <group>Geetanjali</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>OpportunityType__c</field>
+            <operation>equals</operation>
+            <value>Ecom,Ecom-Rep</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Opp_Access_Raj</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Opp Access - Raj</label>
+        <sharedTo>
+            <group>Service_CR_Team</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>GCS_Opps__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>swapnaOppAccess</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>swapnaOppAccess</label>
+        <sharedTo>
+            <group>Sales_Ops_LM</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>GCS_Opps__c</field>
+            <operation>equals</operation>
+            <value>False</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Share_Admin_Opp_With_All_User</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share Admin Opp With All User</label>
+        <sharedTo>
+            <group>All_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Admin</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Opp_with_all_users_in_that_profile</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>If opp owner is from B2C then it has to be shared with all users of that profile</description>
+        <label>Share Opp with all users in that profile</label>
+        <sharedTo>
+            <group>B2C_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>B2C_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>5/4: Category not currently in use</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>W2C_EU_SKR_DEGE_Email_Alerts_new</name>
+    <style>none</style>
+    <subject>Newsletter abbestellen - Case #: {!Case.CaseNumber} {!Case.Thread_Id}</subject>
+    <textOnly>Sehr geehrte(r) Monster-Nutzer /-in,
+
+vielen Dank für Ihre E-Mail.
+
+Ihrer Nachricht entnehmen wir, dass Sie Ihre Newsletter abbestellen möchten.
+
+Um Ihre Newsletter abzubestellen, führen Sie bitte folgende Schritte aus:
+
+Melden Sie sich in Ihrem Benutzerkonto mit Ihren Zugangsdaten an.
+Bewegen Sie Ihre Maus bitte über Ihren Namen rechts oben und wählen Sie „Einstellungen“.
+Auf der linken Seite befinden sich einige Links, unter anderem „Benachrichtigungen“. Sobald Sie auf diesen Link klicken, werden Sie zu Ihren Einstellungen weitergeleitet
+Bitte entfernen Sie die entsprechenden Häkchen und klicken Sie auf „Änderungen speichern“. Schon sind Sie von den gewünschten Newslettern abgemeldet.
+
+Sollten Sie weitere Unterstützung benötigen, zögern Sie bitte nicht, auf diese Nachricht zu antworten. Wir melden uns schnellstmöglich bei Ihnen.
+
+Monster legt hohen Wert auf Kundenzufriedenheit. Daher können Sie in Kürze eine Umfrage bezüglich Ihrer Erfahrungen mit unserem Kundenservice erhalten. Wir würden uns freuen, wenn Sie sich ein paar Minuten Ihrer Zeit für die Umfrage nehmen würden. Die Ergebnisse helfen uns, unseren Service stetig zu verbessern.
+
+Mit freundlichen Grüßen
+
+Ihr Team von Monster</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

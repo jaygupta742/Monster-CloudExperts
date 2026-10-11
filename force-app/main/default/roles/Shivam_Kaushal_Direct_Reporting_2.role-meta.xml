@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Shivam Kaushal (Direct Reporting 2)</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Shivam_Kausal_Under_Vineet_George</parentRole>
+</Role>

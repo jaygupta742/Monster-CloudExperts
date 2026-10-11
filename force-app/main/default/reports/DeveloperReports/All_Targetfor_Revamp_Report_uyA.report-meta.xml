@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>TargetN__c.User__c</field>
+    </columns>
+    <columns>
+        <field>TargetN__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>TargetN__c.End_Date__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>All Target(for Revamp) Report my team members wise</description>
+    <format>Tabular</format>
+    <name>All Target(for Revamp) Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$TargetN__c</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>TargetN__c.End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

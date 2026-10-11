@@ -1,0 +1,4 @@
+Case Number {!Case.CaseNumber} has been closed and the Account Lead Status has been set to {!Account.Lead_Account_Status__c}
+
+Account Name:  {!Account.Name}
+Link to Account:  {!Account.Link}

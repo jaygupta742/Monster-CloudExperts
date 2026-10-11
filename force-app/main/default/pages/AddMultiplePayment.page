@@ -1,0 +1,60 @@
+<apex:page standardController="apttus_proposal_proposal__c" extensions="AddMultiplePayment" sidebar="fales" lightningStylesheets="true">
+  <apex:pagemessages ></apex:pagemessages>
+  <apex:sectionHeader title="Payment Schedule Edit" subtitle="New Payment Schedule"/>
+  
+   
+ <apex:form id="abc">
+   <apex:pageBlock title="Payment Schedule Edit" id="PB">
+    <apex:variable value="{!0}" var="rowNumber" /> 
+   
+     <apex:pageBlockTable value="{!Pro}" var="p" >
+         <apex:column headerValue="No." style="width:20px; text-align:center;" >
+                                         <apex:outputText value="{0}" style="text-align:center;"> 
+                                             <apex:param value="{!rowNumber+1}" /> 
+                                           </apex:outputText>
+         </apex:column>
+        <apex:column headerValue="Quote">
+          <apex:outputField value="{!p.Proposal__c}"/>
+        </apex:column>
+       <apex:column headerValue="Due Date">
+           <apex:inputField value="{!p.Due_Date__c}" required="true"/>
+        </apex:column> 
+        <apex:column headerValue="Payment Type">
+            <apex:inputField value="{!p.APAC_Payment_Type__c}"/>
+        </apex:column>
+        <apex:column headerValue="Amount">
+            <apex:inputField value="{!p.Payment_Amount__c}" required="true"/>
+        </apex:column>
+        <apex:column HeaderValue="TDS Amount" >
+            <apex:inputField value="{!p.TDS_Amount_c__c}" required="true"/>
+        </apex:column>
+        <apex:column headerValue="Payment Received Amount">
+             <apex:inputField value="{!p.Payment_Received_Amount__c }" />
+         </apex:column>
+         <apex:column headerValue="TDS Payment Amount">
+             <apex:inputField value="{!p.TDS_Payment_Amount__c }" />
+         </apex:column>
+         <apex:column headerValue="Payment Date">
+             <apex:inputField value="{!p.Payment_Date__c }" />
+         </apex:column>
+         <apex:column headerValue="Finance Reference">
+             <apex:inputField value="{!p.Finance_Reference__c }" />
+         </apex:column>
+         <apex:column headerValue="Action">
+             <apex:commandButton value="Remove" action="{!removeLine}" reRender="PB" immediate="true">
+                  <apex:param name="p" value="{!rowNumber}" assignTo="{!numberOfRowToRemove}"/>
+             </apex:commandButton>
+             <apex:variable var="rowNumber" value="{!rowNumber+1}"/>     
+         </apex:column>  
+     </apex:pageBlockTable>  
+        <apex:pageBlockButtons location="Bottom">
+                        
+                          <apex:commandButton value="Add Rows" action="{!Addrows}" immediate="true" reRender="abc"/>
+                        <apex:commandButton value="Save" action="{!Save1}" disabled="{!IF(Pro.size>0,false,true)}" />
+                       <apex:commandButton value="Cancel" action="{!Cancel}"/> 
+                      
+              </apex:pageBlockButtons>
+     
+   </apex:pageBlock>
+ </apex:form>
+</apex:page>

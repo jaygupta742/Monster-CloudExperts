@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Commitment_Type__c</fullName>
+    <description>Used to signify whether there&apos;s a commitment for a contingent opportunity</description>
+    <inlineHelpText>Used to signify whether there&apos;s a commitment for a contingent opportunity</inlineHelpText>
+    <label>Commitment Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Commitment</fullName>
+                <default>false</default>
+                <label>Commitment</label>
+            </value>
+            <value>
+                <fullName>No Commitment</fullName>
+                <default>false</default>
+                <label>No Commitment</label>
+            </value>
+            <value>
+                <fullName>Agreement with Commitment</fullName>
+                <default>false</default>
+                <label>Agreement with Commitment</label>
+            </value>
+            <value>
+                <fullName>Agreement without Commitment</fullName>
+                <default>false</default>
+                <label>Agreement without Commitment</label>
+            </value>
+            <value>
+                <fullName>BIA/Usage with Commitment</fullName>
+                <default>false</default>
+                <label>BIA/Usage with Commitment</label>
+            </value>
+            <value>
+                <fullName>BIA/Usage without Commitment</fullName>
+                <default>false</default>
+                <label>BIA/Usage without Commitment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

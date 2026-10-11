@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due_Date_Can_not_be_less_than_Today</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+
+/*Due_Date__c &lt; Today()*/
+
+AND(
+ISNEW() ,
+Due_Date__c &lt; Today()
+)
+,
+AND(
+ISCHANGED( Due_Date__c ) ,
+Due_Date__c &lt; Today()
+)
+)</errorConditionFormula>
+    <errorMessage>Due Date can not be less than Today&apos;s Date</errorMessage>
+</ValidationRule>

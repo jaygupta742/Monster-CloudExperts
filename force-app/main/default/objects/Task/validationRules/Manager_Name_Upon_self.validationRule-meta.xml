@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Manager_Name_Upon_self</fullName>
+    <active>true</active>
+    <description>Manager name should be a blank field when they select the self value in accompanied by</description>
+    <errorConditionFormula>AND( $Profile.Name =&apos;Monster - Sales&apos;, 
+ISPICKVAL(Accompanied_By__c ,&apos;Self&apos;)
+,NOT(ISBLANK(Manager_Name__c)),ISPICKVAL( Status ,&apos;Completed&apos;)
+
+)</errorConditionFormula>
+    <errorDisplayField>Manager_Name__c</errorDisplayField>
+    <errorMessage>Please do not enter the manager when the accompanied by is &apos;Self&apos;</errorMessage>
+</ValidationRule>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Either_Mobile_Or_Email_Is_Mandatory</fullName>
+    <active>false</active>
+    <description>Either Mobile Or Email Is Mandatory To Create A Contact</description>
+    <errorConditionFormula>AND( ISBLANK( Email ), ISBLANK( MobilePhone ) )</errorConditionFormula>
+    <errorMessage>Either Mobile Or Email Is Mandatory To Create A Contact</errorMessage>
+</ValidationRule>

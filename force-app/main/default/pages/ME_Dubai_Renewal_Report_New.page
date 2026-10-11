@@ -1,0 +1,511 @@
+<!---Yam----->
+<apex:page standardController="QuotesN__c" extensions="ME_Dubai_Renewal_Report_New" renderAs="pdf"  cache="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false">
+    <apex:form >
+        <c:PDFHeaderFooter type="header" > 
+            
+            <div style="width:50px height:100px">
+                <apex:image url="{!URLFOR($Resource.Monster_Logo)}" width="200px" />
+                
+            </div>
+            
+            <apex:stylesheet value="{!$Resource.Repeat}"/> 
+        </c:PDFHeaderFooter>
+        <c:PDFHeaderFooter type="footer" > 
+        <apex:stylesheet value="{!$Resource.PageNo}"/>
+        <div style="text-align : right;">
+            <p style="text-align:right">{!QuotesN.name}</p> </div>
+            <apex:stylesheet value="{!$Resource.Repeat}"/> 
+            
+        </c:PDFHeaderFooter> 
+        
+        <p style="font-size:15px;text-align:center;font-family:verdana">
+            <b>RENEWAL AGREEMENT</b>
+        </p>
+        
+        <table style="border:1px solid black">
+            <tr>
+                <td>
+                    <p style="font-size:14px;text-align:justify;font-family:verdana">
+                        This RENEWALSERVICE AGREEMENT  is made and entered into between Monster.com India Private Limited, a company incorporated [in India] under the [Indian] Companies Act, 
+                        1956, having its Dubai Branch office at Office No. 2204, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360 (herein after referred to as 'Monster', 
+                        which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns) 
+                        AND
+                        <b><!--{!QuotesN.Posting_Contact__r.Account.name}-->{!QuotesN.Account__r.Name} </b>(hereinafter referred to as 'Purchaser', which expression shall, unless 
+                        repugnant to the context or meaning thereof, mean and include its successors and permitted assigns).
+                    </p>
+                    <p style="font-size:14px;text-align:justify;font-family:verdana">
+                        (Monster and Purchaser are hereinafter collectively referred to as "the Parties" and severally as "Party")</p>
+                    
+                    <p style="font-size:14px;text-align:justify;font-family:verdana">
+                        
+                        The Parties had signed  Service  Agreement  dated ..........................
+                        <!---<b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!pl[0].Product_Start_Date__c}"/></apex:outputText></b>--->
+                        (“Agreement”), the Term of the said Agreement expired by efflux of time and Purchaser hereby agrees to renew the Agreement to subscribe the below
+                        products and services from Monster for consideration as agreed between the Parties as under : 
+                    </p>
+                </td>
+                
+            </tr>
+        </table><br/>
+        <table  style="align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "-fs-table-paginate: paginate">
+            <tr>
+                <td style="border-bottom: 1px solid black;border-top: 1px solid black;border-right: 1px solid black; width:50%"><b>Date:<apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate}"/></apex:outputText></b> <br/>
+                    <b>Quote #:</b>{!QuotesN.name} <br/>
+                    <b>Quote Valid From:</b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!QuotesN.createddate}"/></apex:outputText> 
+                    <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}">
+                    <apex:param value="{!QuotesN.createddate+30}"/></apex:outputText><br/>
+                    
+                </td>
+                <td style="text-align:left;border-bottom: 1px solid black;border-top: 1px solid black;width:50% ">
+                    <b>Sales Rep:</b> {!u.Firstname} {!u.Lastname}<br/>
+                    <b>Email:</b> {!u.Email}<br/>
+                    <b>Tel:</b> {!u.phone}<br/>
+                    <b>Fax:</b> {!u.fax}<br/>
+                    <!--<b>Location:</b> {!ss.Location1__c }<br/>-->
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align:left;border-bottom: 1px solid black; border-right: 1px solid black;width:50%"><b>Purchaser:</b><br/>
+                    
+                    <b>Name :</b> {!QuotesN.Posting_Contact__r.name }<br/>
+                   <!-- <b>Account :</b> {!QuotesN.Posting_Contact__r.Account.name}<br/> -->
+                   <b> Account Name: </b>  {!QuotesN.Account__r.Name}<br/>
+
+                    <b>Mobile :</b> {!QuotesN.Posting_Contact__r.Phone}<br/>
+                    <b>Email :</b> {!QuotesN.Posting_Contact__r.email}<br/>
+                    
+                    <b>Address:</b> {!QuotesN.Posting_Street__c}<br/>
+                    {!QuotesN.Posting_City__c}<br/>
+                    {!QuotesN.Posting_State__c}<br/>
+                    {!QuotesN.Posting_Country__c}<br/>
+                    {!QuotesN.Posting_Pin_Code__c}<br/>
+                    <!--
+<b>
+GSTID : {!QuotesN.PostingContact__r.Account.GST_ID__c}
+</b>-->
+                </td>
+                
+                <td style="text-align:left;border-bottom: 1px solid black;width:50%;margin-top:-15px "><b>Bill To:</b><br/>
+                    <b>Name :</b>{!QuotesN.Bill_Contact__r.name }<br/>
+                    <b>Account :</b> {!QuotesN.Posting_Contact__r.Account.name }<br/>
+                    <b>Mobile :</b> {!QuotesN.Bill_Contact__r.Phone}<br/>
+                    <b>Email :</b> {!QuotesN.Bill_Contact__r.Email}<br/>
+                    <b>Address:</b> {!QuotesN.Billing_Street__c}<br/>
+                    {!QuotesN.Billing_City__c}<br/>
+                    {!QuotesN.Billing_State__c}<br/>
+                    {!QuotesN.Billing_Country__c}<br/>
+                    {!QuotesN.Billing_Pin_code__c}<br/><br/>
+                </td>
+                
+                
+            </tr>
+            <tr>
+                <td colspan="2" style="border-bottom: 1px solid black; text-align:center; font-size:14px; "><i>
+                    If any of the above information is incorrect please advise in the correction section on the next page</i>
+                </td>
+            </tr>
+            
+        </table>
+        
+        
+        <p style="font-size:13px;font-family:Verdana;"><b>SERVICE DETAILS:</b> The details of service that Purchaser has agreed to take from Monster are as follows (&#34;Service&#34;): </p>
+        <br/>
+        
+        <table style="border:1px solid black;border-collapse: collapse;">
+            <th style="">
+                <tr style="border:1px solid black;background-color:#800080; ">
+                    <td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Items<br/>#</td>
+                    <td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Product</td>
+                    <td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:13px">Qty</td>
+                    <td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+                    <td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product End Date</td>
+                    
+                </tr>
+            </th>
+            <apex:variable value="{!1}" var="rowNum"/>
+            <apex:repeat value="{!pli}" var="p">
+                
+                
+                <tr style="page-break-inside: avoid !important;">
+                    <td style="border:1px solid black;">
+                        
+                        <apex:outputLabel value="{!rowNum }"/>  
+                        <apex:variable var="rowNum" value="{!rowNum + 1}"/>   
+                        
+                        <br/></td>
+                    <td style="border:1px solid black;">{!p.Product__r.Product_Name__c} <br/>{!p.Product_Geo_Scope__c} <br/> {!p.Product_Industry__c} <br/> {!p.Product__r.Product_Country__c}<br/>{!p.Product__r.Tenure_Months__c}<br/></td>
+                    <td style="border:1px solid black;">{!p.Quantity_Unit__c}</td>
+                    <td style="border:1px solid black;">{!DAY(p.Start_Date__c)}/{!MONTH(p.Start_Date__c)}/{!YEAR(p.Start_Date__c)}</td>
+                    <td style="border:1px solid black;">{!DAY(p.End_Date__c)}/{!MONTH(p.End_Date__c)}/{!YEAR(p.End_Date__c)}</td>
+                </tr>
+                 <!--  /////////////////////////////////////////////////////////////////////Newly Added Anup/////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+          <!--  <tr>
+            <td style="border:1px solid black;" colspan="5">Services:
+            <apex:variable value="{!1}" var="cnt"/>
+                    <apex:repeat value="{!p.QULI_Accessories__r}" var="pp">
+                    
+                    <apex:outputPanel rendered="{!cnt!=1}">
+                    &#44;
+                    </apex:outputPanel>
+                    {!pp.Top_Ups__r.name}
+
+            <apex:variable value="{!cnt+1}" var="cnt"/>
+            </apex:repeat> </td>
+            </tr> -->
+            
+           <!-- /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+            
+                <tr style="page-break-inside: avoid !important;"><td style="border:1px solid black;" colspan="5"><b>Comments:</b>{!p.Comment__c}</td></tr>
+            </apex:repeat>
+        </table>
+        <div align="right" >
+            <table width="100%" ><!---style="page-break-before:always"-->
+                <tr >
+                    <td align="right">Value of Services:</td><td>{!QuotesN.CurrencyIsoCode }  
+                    <apex:outputText value="{0, number, ###,###,###,###.00}">
+                        <apex:param value="{!QuotesN.Quote_Value__c}" />
+                    </apex:outputText>
+                    </td>
+                    
+                </tr>
+                <tr >
+                    <td align="right">
+                     <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'United Arab Emirates' ||QuotesN.Selling_Country__c=='Philippines'}"
+                                value="Add: VAT@{!QuotesN.Tax__c} :"
+                            />
+                            
+                            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Singapore' || QuotesN.Selling_Country__c == 'India' }"
+                                value="Add: GST Levy@{!QuotesN.Tax__c}% :"
+                            />
+                            <apex:outputText rendered="{!QuotesN.Selling_Country__c == 'Malaysia'}"
+                                value="Add: SST Levy@{!QuotesN.Tax__c}% :"
+                            /> 
+
+                    </td>
+                    
+                    <td >
+                    {! QuotesN.CurrencyIsoCode } 
+                    <apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!QuotesN.Tax_Amount__c}"/> 
+</apex:outputText>
+                    </td>
+                    
+                </tr>
+                <tr >
+<td align="right">Total Invoice value (including Tax):</td><td>{! QuotesN.CurrencyIsoCode } 
+
+<apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!QuotesN.Net_Total__c}"/>
+</apex:outputText>
+</td>
+
+</tr>
+                
+            </table>
+        </div>   <br/><br/><br/>
+        
+        <p style="font-size:14px"><b>PAYMENT TERMS &amp; INVOICE DELIVERY
+            </b></p>
+        <!--<p style="font-size:14px;font-family:Verdana;">Purchaser has agreed to pay the total invoice value to Monster as per the following payment term (s):
+</p><br/>-->
+        <apex:outputPanel rendered="{!if(aap.size>0,true,false)}">
+           <!-- <table width="60%" border="0.8px" Style="border-collapse:collapse;">
+                <th>
+                    
+                    <tr>
+                        
+                        <td style="border:1px solid black; text-align:center; font-size:13px;width:33%">Payment Due Date </td>
+                        <td style="border:1px solid black; text-align:center;font-size:13px;width:33%">Payment Amount </td>
+                    </tr></th>
+                <apex:repeat value="{!aap}" var="py">
+                    <tr>
+                        <td > {!DAY(py.Due_Date__c)}/{!MONTH(py.Due_Date__c)}/{!YEAR(py.Due_Date__c)}
+                            
+                        </td>
+                        <td >{! QuotesN.CurrencyIsoCode } <apex:outputText value="{0, number, ###,###,###,###.00}">
+                            <apex:param value="{!py.Payment_Amount__c}"/>
+                            </apex:outputText>
+                            
+                            
+                            
+                        </td>
+                    </tr>
+                </apex:repeat>
+                
+            </table><br/> -->
+ <table border="0.8px" cellspacing="0" style="margin-right:30px;margin-left:30px;font-size:14px;page-break-inside:avoid;" width="90%">
+        <tr>
+            <td>Payment Due Date </td>
+            <td>Payment Amount </td>
+            <td>TDS Amount </td> 
+        </tr>
+        <apex:repeat value="{!aap}" var="ab">
+            <tr>
+                <td> {!DAY(ab.Due_Date__c)}/{!Month(ab.Due_Date__c)}/{!Year(ab.Due_Date__c)}   </td>
+                <td>{!QuotesN.CurrencyIsoCode}&nbsp;{!ab.Payment_Amount__c}  </td>
+                <td>  {!QuotesN.CurrencyIsoCode}&nbsp;{!ab.TDS_Payment_Amount__c}  </td> 
+            </tr>
+        </apex:repeat>
+        
+    </table>          
+            
+            
+        </apex:outputPanel>
+        <p style="font-size:14px;text-align:justify;font-family:verdana;"><b>
+            (All payments to be made in favour of “Monster.com India Private Limited” to Bank Account No. 10580518442001 Abu Dhabi Commercial Bank, 
+            2F Bay Gate Tower, Dubai, UAE, SWIFT Code ADCBAEAA, IBAN: AE400030010580518442001)
+            </b>
+        </p><br/>
+        <p style="font-size:15px;text-align:justify;font-family:verdana;margin-right:50px;">
+            Please circle your preferred method of invoice delivery:<i style="margin-left:65px">EMAIL</i> <i style="margin-left:80px">POST</i><!-- POST--> <br/>
+        </p>
+        <p style="font-size:15px;text-align:justify;font-family:verdana;margin-top:-10px;">
+            Please note that if you choose email, the invoice will be delivered to:   {!QuotesN.Contact__r.Email}<br/>
+            <b><i>If you opt for email and you wish to receive the invoice to a different email address please provide it in the &#34;change&#34; section further down this Agreement.</i></b>
+        </p>
+        
+        <p align="justify" style="font-size:14px;text-align:justify;font-family:verdana">
+            <b>*Terms for Replication of Purchaser’s Job Postings:</b>
+        </p>
+        
+        <p align="justify" style="font-size:14px;text-align:justify;font-family:verdana">
+            
+            Purchaser consents to Monster for replicating its job postings into its Monster Account in Monster website Purchaser agrees and accepts that job posting to be replicated on Monster website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Purchaser agrees to use only its names, logos or trademarks. 
+            
+        </p>
+        
+        <p align="justify" style="font-size:14px;text-align:justify;font-family:verdana">
+            Monster may not replicate any job posting of Purchaser and/or delete the job postings from Monster site which  does not comply with applicable local, national and international laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property.
+        </p>
+        
+        <p align="justify" style="font-size:14px;text-align:justify;font-family:verdana">
+            The advertisements for competitors of Monster or post jobs or other content that contains links to any site competitive with Monster shall not qualify for replication. 
+            Any such replicated postings will be immediately deleted / removed without notice. Monster reserves the right to remove any job posting or content from any Monster Site, 
+            which in the reasonable exercise of Monster’s discretion, does not comply with the above Terms, or if any content is posted that Monster believes is not in accordance with 
+            the Terms of Use &amp; Privacy of Monster website and/or applicable laws and regulations. Monster shall not be liable for any conflict, in the event of replication of the Job 
+            Postings of Purchaser’s competitor on Monster site or vice versa or any disagreement between them in this connection. The replication of Purchaser’s job posting will be only 
+            during the continuance of Service Agreement with Monster.  Purchaser does not have any right to get its job Postings replicated on Monster site. Monster shall in its sole
+            discretion may decide whether to assist the Purchaser in replication or not without giving any reason thereof.
+        </p>
+        
+        <p align="justify" style="font-size:14px;text-align:justify;font-family:verdana">
+            <i>*Note: If not covered in the main Agreement</i>
+        </p>
+        <br/>
+        
+        <!------------------------------------Other section starts here---------------------------------------------------------------------------------------------------------->
+    
+    <p align="justify" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+        <b>Other terms:</b>
+    </p>
+    
+    
+    <p align="justify" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+      <!--  Each of the Parties shall at all times use its best endeavors to keep confidential (and to ensure that its officers, directors, employees or representatives shall keep confidential) each other’s sensitive business or proprietary information, whether marked or otherwise indicated to be confidential or not, which it may acquire, have access to or obtain, whether directly or indirectly, in relation to this Agreement or in relation to their respective business or affairs of the other Party (or any of its respective affiliates) and shall not use or disclose such information except with the approval in writing of the other party or in accordance with the order of a court of competent jurisdiction or as contemplated under this Agreement. -->
+      Each of the Parties shall at all times use its best endeavors to keep confidential (and to ensure that its officers, directors, employees or representatives shall keep confidential) each other’s sensitive business or proprietary information, whether marked or otherwise indicated to be confidential or not, which it may acquire, have access to or obtain, whether directly or indirectly, in relation to this Agreement or in relation to their respective business or affairs of the other Party (or any of its respective affiliates) and shall not use or disclose such information except with the approval in writing of the other party or in accordance with the order of a court of competent jurisdiction or as contemplated under this Agreement.
+    </p>
+    
+    <p align="justify" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+       <!-- Each of the Parties shall at all times use its best endeavors to keep confidential (and to ensure that its officers, directors, employees or representatives shall keep confidential) each other’s sensitive business or proprietary information, whether marked or otherwise indicated to be confidential or not, which it may acquire, have access to or obtain, whether directly or indirectly, in relation to this Agreement or in relation to their respective business or affairs of the other Party (or any of its respective affiliates) and shall not use or disclose such information except with the approval in writing of the other party or in accordance with the order of a court of competent jurisdiction or as contemplated under this Agreement. -->
+       Each Party agrees to comply all the applicable Data Protection and Privacy laws and shall adhere to general principles of Personal Data processing; ensure the processing, use, transfer of the Personal Data in accordance with the applicable Data Protection and Privacy laws; adopt appropriate technical and security measures to protect the Personal Data from any potential misuse / unauthorized disclosures  and will indemnify and keep indemnified and defend at its own expense the other Party (Indemnified Party) against all costs, third party claims, direct damages, or proceedings which other Party may incur as a result of a breach solely by the Indemnifying Party’s of its obligations within the ambit of this Agreement.
+    </p>
+    
+    <p align="justify" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+       <!-- Purchaser shall use the Monster Website data only for the recruitment purposes and not otherwise. Purchaser shall not use the Monster website data for any other purpose except as permitted under this Agreement. Purchaser shall not use Monster website data for its storage purpose and shall not use it for making a database of its own by using it. Breach of this obligation will result in immediate suspension of the Agreement by Monster without any liability towards Purchaser besides availing appropriate remedy under the process of law including but not limited to injunctive relief.-->
+       Purchaser shall use the Monster Website data only for the recruitment purposes and not otherwise. Purchaser shall not use the Monster website data for any other purpose except as permitted under this Agreement. Purchaser shall not use Monster website data for its storage purpose and shall not use it for making a database of its own by using it. Breach of this obligation will result in immediate suspension of the Agreement by Monster without any liability towards Purchaser besides availing appropriate remedy under the process of law including but not limited to injunctive relief.
+    </p>
+    
+    <p align="justify" style=" font-size:14px;margin-left:30px;margin-right:30px;">
+      <!--  Purchaser shall use the Monster Website data only for the recruitment purposes and not otherwise. Purchaser shall not use the Monster website data for any other purpose except as permitted under this Agreement. Purchaser shall not use Monster website data for its storage purpose and shall not use it for making a database of its own by using it. Breach of this obligation will result in immediate suspension of the Agreement by Monster without any liability towards Purchaser besides availing appropriate remedy under the process of law including but not limited to injunctive relief. -->
+      Each Party represents and warrants that it will not in connection with its obligations under this Agreement  give, offer, promise to offer, or authorize the offer, directly or indirectly (proxy bribing), anything of value (such as money, shares, goods or service, gifts or entertainment) to government officials, government customers, potential government customers or foreign government officials including officials of any public international organizations or officials of any political party either in India or abroad (“Officials” ) with an intent to influence any act or decision in his or her official capacity, induce the Official to do or omit to do any act in violation of his or her lawful duty to obtain any improper advantage, or induce to use such Official’s influence improperly to affect or influence an act or decision. Each Party understands and acknowledges that any non adherence to the warranty as stated hereinabove will violate the provisions of the U.S. Foreign Corrupt Practices Act, 1977, U.K. Bribery Act, 2010 and the applicable Anti Bribery laws  (“Anti- bribery Laws”). Each Party shall indemnify, save and hold harmless the other Party, its subsidiaries and affiliates, officers, directors and employees, against any and all losses, penalties and expense including court costs and reasonable attorney fees resulting from any breach of this warranty by it. Monster shall have the right to terminate this Agreement with immediate effect, without any liability whatsoever, if Purchaser is in breach of this warranty.
+    </p>
+    
+    
+    <!-------------------------------------other section ends here----------------------------------------------------------------------------------------------------------------------->
+        
+        <div style="page-break-before:always"> 
+            
+            <hr> </hr>
+        <p style="font-size:12px;font-family:Verdana;text-align:center;margin-top:-8px">
+            <b>ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR</b>
+        </p>
+        <br/>
+        
+        <div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black;">
+            
+            1. Authorised Signature: _________________________________________________
+            <div align="right" style="margin:-15px 0px 0px 0px  ">2. Signing Date: ___/___/____<br/></div>
+            <div align="right" style = "margin:0px 0px 0px 0px">
+                
+                (dd/mm/yyyy) </div>
+            
+            <div align="right" style = "margin:10px 0px 0px 0px ">Total Price:     <b>{! QuotesN.CurrencyIsoCode } 
+                <apex:outputText value="{0, number, ###,###,###,###.00}">
+                    <apex:param value="{!QuotesN.Net_Total__c}"/>
+                </apex:outputText>
+                </b>      </div>
+            
+            
+            
+            <div align="left" style = "margin:-20px 0px 0px 0px ">3. Printed Name: {!QuotesN.Posting_Contact__r.name } <br/></div><br/>
+            
+            
+            
+            4. Job Title:  {! QuotesN.Posting_Contact__r.Title }   <br/><br/>
+            
+            5. Company Name (as registered, if applicable): {!QuotesN.Account__r.name }<br/><br/>  
+            
+            
+            
+            6. Registration Number (if applicable): {!QuotesN.Account__r.RegistrationNumber__c }  <br/>  <br/> 
+            
+            
+            
+            7. Agreement Start Date:<apex:outputText value="{0,date,dd/M/yy}"> <apex:param value="{!QuotesN.CreatedDate}" /> </apex:outputText>
+            
+            <div align="Right" style="margin: -14px 0px 0px 0px" > <i>The ‘Agreement Start Date’ will be the date nominated by the Purchaser.</i> </div><br/>
+            
+            <div align="Right" style="margin: -14px 0px 0px 0px" > <i>If left blank, the earliest product start date will be the nominated date.</i></div>  <br/>                              
+            
+            8. Purchase Order Number:______________________ <div align ="right" style= "Margin:-12px 0px 0px 0px "><i>If this field is left blank the invoice will be issued without a PO number.</i></div>
+            
+            
+        </div>
+        <b><hr color="black"> </hr></b>
+    
+    
+    <b><hr color="black"> </hr></b>
+<!-----
+<p style="font-size:11px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>
+PLEASE FILL THIS IN ONLY IF ONE OR MORE OF THE ‘PURCHASER’ COMPANY, ADDRESS, OR CONTACT DETAILS HAVE CHANGED</b>
+</p>
+<table width="100%">
+<tr>
+<td style="font-size:13px">Name:</td>
+</tr>
+
+<tr>
+<td style="font-size:13px">Company Registration No.: </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 1:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 2: </td>
+</tr>
+<tr >
+<td style="font-size:13px;align:left;">City:  </td><td style="font-size:13px;" > <center>Country:_____ </center></td><td style="font-size:13px;" align="right">PO Box No.:_____ </td>
+</tr>
+<tr>
+
+<td style="font-size:13px;">Purchaser Contact Name: </td> <td style="font-size:13px;"><center>Telephone No.:</center></td> 
+</tr>
+<tr>
+<td style="font-size:13px">Purchaser Email:   </td>
+
+</tr>
+</table>
+<b><hr color="black"> </hr></b>
+<b><hr color="black"> </hr></b>----->
+<!------
+<p style="font-size:11px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>
+PLEASE FILL THIS IN IF ‘BILL TO’ COMPANY, ADDRESS, OR CONTACT DETAILS HAVE CHANGED</b>
+</p>
+
+
+<table width="100%">
+<tr>
+<td style="font-size:13px">Company Name:</td>
+</tr>
+
+
+<tr>
+<td style="font-size:13px">Address Line 1:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 2: </td>
+</tr>
+<tr >
+<td style="font-size:13px;align:left;">City:</td><td style="font-size:13px" > <center>Country:_____ </center></td><td style="font-size:13px;" align="right">PO Box No.:_____ </td>
+</tr>
+<tr>
+<td style="font-size:13px">Bill To Contact Name: </td> <td style="font-size:13px"><center>Telephone No.:</center></td> 
+</tr>
+<tr>
+<td style="font-size:13px"> Bill To Contact Email:   </td><td style="font-size:13px">&nbsp; </td> <td style="font-size:13px" align="right">Fax No.:_______</td>
+
+</tr>
+</table>
+----->
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px"><p><b> <center>Reserved the Monster</center> </b> <br/>
+    
+    Name: {!u.name}   <!--{!QuotesN.Account__r.PrimarySalesManager__c} -->
+    
+    
+    <div style="margin:-15px 0px 0px 480px;">      Designation: {!u.Title} <!----{!QuotesN.Sales_Manager_Designation__c} ---></div><br/><br/>
+    Office :Office No. 2204, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360
+    <br/>
+    <br/>
+    City: Dubai
+    
+    <div style="margin:-15px 0px 0px 290px;"> Country: UAE</div>
+    
+    <!---<div style="margin:-16px 0px 0px 500px;"> PIN Code:500016 </div>--->
+    
+    <br/>
+    
+   <!-- Company Name: Monster.com India Private Limited<br/><br/> -->
+    <!---<apex:outputtext rendered="{!IF(qp.Tax_Percentage__c != 0.00,true,false)}">
+
+Branch Address:  {!ss.Street} {!ss.City} {!ss.State} {!ss.Country} {!ss.PostalCode}<br/>
+</apex:outputtext>
+
+<apex:outputtext rendered="{!IF(qp.Tax_Percentage__c == 0.00,true,false)}">
+Branch Address:  Plot 1024, Road No. 45, Jubilee Hills, Hyderabad - 500033, Telangana,       INDIA <br/>
+</apex:outputtext>----->
+    
+    Email : <!---{!ss.email}---->{!u.Email}
+    
+    
+    <div style="margin:-18px 0px 0px 480px;"> Phone: <!----{!ss.phone}---->{!u.phone}</div> <br/>
+    <div style="margin:0px 0px 0px 480px;">Signing Date:__/__/____ </div> <br/>
+    
+    
+    
+    
+    <div style="margin:-10px 0px 0px 535px;"> (dd/mm/yyyy) </div><br/>
+    
+    Signature:_____________________________________________________
+</p></div> 
+<br/>
+
+<hr style="height:2.5px;border:none;color:#333;background-color:#333;" width="90%" /> <br/>
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black; margin: -10px 0px 0px 0px;">    
+    <center><b>
+        <!---Sales Rep :{!ss.name} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Email:{!ss.email} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Phone:{!ss.Phone}--->
+        Sales Rep :<!--{!QuotesN.Account__r.PrimarySalesManager__c}-->{!u.Name} &nbsp;&nbsp;&nbsp;&nbsp;     Email :{!u.Email}   &nbsp;&nbsp;&nbsp;&nbsp;  Phone:{!u.Phone}
+        </b></center></div>
+
+
+<br/><br/>
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black;">
+    <p align="Justify">
+        By signing this Renewal Agreement Purchaser agrees to purchase the products and services listed above.  Except amended herein Parties hereby agree that all the other terms and conditions of the Agreement shall remain in full force and effect. This Renewal Agreement shall be effective as of the date of execution by the Parties hereto. </p>
+    
+    <p align="Justify"> 
+        Purchaser can write to Monster at the email <b>cr@monstergulf.com</b> for any information, support and concerns.
+    </p>
+</div>
+
+
+<br/>
+</div>
+
+
+
+</apex:form>
+</apex:page>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <classAccesses>
+        <apexClass>editalleventsswapnaapex</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <classAccesses>
+        <apexClass>editalleventsswapnaapex_test</apexClass>
+        <enabled>true</enabled>
+    </classAccesses>
+    <description>give access to swapna, yasmin suresh babu and sudha to edit event button on event</description>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>permission for swapna to edit events</label>
+    <pageAccesses>
+        <apexPage>editalleventsswapna</apexPage>
+        <enabled>true</enabled>
+    </pageAccesses>
+</PermissionSet>

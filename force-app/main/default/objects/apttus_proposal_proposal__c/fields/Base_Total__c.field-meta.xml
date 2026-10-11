@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_Total__c</fullName>
+    <label>Base Total</label>
+    <summarizedField>Proposal_Line_Item__c.Base_Price_Total_4_Roll_Up__c</summarizedField>
+    <summaryForeignKey>Proposal_Line_Item__c.Proposal_Locked__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

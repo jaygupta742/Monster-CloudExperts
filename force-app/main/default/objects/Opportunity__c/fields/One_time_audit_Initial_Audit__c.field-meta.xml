@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>One_time_audit_Initial_Audit__c</fullName>
+    <label>One-time audit/Initial Audit</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>One-time audit</fullName>
+                <default>false</default>
+                <label>One-time audit</label>
+            </value>
+            <value>
+                <fullName>Initial Audit</fullName>
+                <default>false</default>
+                <label>Initial Audit</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

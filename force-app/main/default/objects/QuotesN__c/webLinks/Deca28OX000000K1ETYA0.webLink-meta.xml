@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deca28OX000000K1ETYA0</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Sign Agreement</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>{!URLFOR(IF($Site.prefix == &apos;/s&apos;,&apos;/apex/dfsle__sending&apos;, $Site.Prefix +&apos;/apex/dfsle__sending&apos;), null, [sId = QuotesN__c.Id, sendingExperience = &apos;null&apos;, isEmbedded = false, templateId = &apos;a28OX000000K1ETYA0&apos;, recordId = QuotesN__c.Id, title = &apos;Send For Signature&apos;])}</url>
+</WebLink>

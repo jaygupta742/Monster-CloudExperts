@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <brand>
+        <headerColor>#6052A7</headerColor>
+        <shouldOverrideOrgTheme>true</shouldOverrideOrgTheme>
+    </brand>
+    <description>Service Team</description>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>true</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>true</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Monster Service/CR</label>
+    <navType>Standard</navType>
+    <setupExperience>all</setupExperience>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Case__c</tabs>
+    <tabs>Seeker__c</tabs>
+    <tabs>Marketing_Cases__c</tabs>
+    <tabs>CR_Tracker__c</tabs>
+    <tabs>Compliance__c</tabs>
+    <tabs>OrderC__c</tabs>
+    <tabs>Tracker__c</tabs>
+    <tabs>Credit_order__c</tabs>
+    <tabs>standard-Order</tabs>
+    <tabs>Quote_Line_Items__c</tabs>
+    <tabs>Order_Item_Services__c</tabs>
+    <tabs>Call_Disposition__c</tabs>
+    <tabs>Opp_Line_Item__c</tabs>
+    <tabs>Order_Item__c</tabs>
+    <tabs>Client_Validation_Request__c</tabs>
+    <tabs>Order__c</tabs>
+    <tabs>Activation__c</tabs>
+    <tabs>Guidelines__c</tabs>
+    <tabs>Debug_Compliance__c</tabs>
+    <tabs>Seeker_Order__c</tabs>
+    <tabs>Sample__c</tabs>
+    <tabs>Seeker_Account__c</tabs>
+    <tabs>Lead_Assignment_Settings__c</tabs>
+    <tabs>Lead_Assignment_State_Log__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Monster_Service_CR_UtilityBar</utilityBar>
+</CustomApplication>

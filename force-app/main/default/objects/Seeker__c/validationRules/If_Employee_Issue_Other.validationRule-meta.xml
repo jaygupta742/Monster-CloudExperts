@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_Employee_Issue_Other</fullName>
+    <active>true</active>
+    <errorConditionFormula>OR(
+IF( ISPICKVAL(Issue__c ,&quot;Other&quot;) ,ISBLANK( If_Employer_Issue_Other__c),false) ,
+IF( ISPICKVAL(Issue__c ,&quot;Other Employer Queries&quot;) ,ISBLANK( If_Employer_Issue_Other__c),false)
+)</errorConditionFormula>
+    <errorDisplayField>If_Employer_Issue_Other__c</errorDisplayField>
+    <errorMessage>Please mention Employer other Issue type</errorMessage>
+</ValidationRule>

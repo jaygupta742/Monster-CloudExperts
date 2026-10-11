@@ -1,0 +1,6 @@
+<p>Dear {!Client_Validation_Request__c.OwnerFullName}</p>
+
+<p>Your Request {!Client_Validation_Request__c.Name} is rejected. Correct the record and submit it again for approval .</p>
+
+Thanks,<br/>
+{!User.FirstName}

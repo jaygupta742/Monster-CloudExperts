@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>USEN: Customer Training – General</name>
+    <style>none</style>
+    <subject>Confirmation Receipt {!Case.Thread_Id}</subject>
+    <textOnly>To attend one of our Daily Training Sessions, you can find the schedule in the Resource Center of your Monster Account.  Otherwise we will respond to your request as soon as possible.
+
+Monster Customer Training Team
+customertraining@Monster.com</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

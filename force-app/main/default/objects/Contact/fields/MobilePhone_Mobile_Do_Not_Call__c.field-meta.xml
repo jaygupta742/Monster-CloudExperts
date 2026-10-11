@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MobilePhone_Mobile_Do_Not_Call__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Is MobilePhone a mobile phone per national registry?</description>
+    <label>MobilePhone Mobile Do Not Call</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

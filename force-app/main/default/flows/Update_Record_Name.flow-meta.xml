@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>57.0</apiVersion>
+    <description>Update Record Name</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Target Name = Target User Name_StartDate - Endate</description>
+        <name>TargetName</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.User__r.FirstName}+&apos; &apos;+ {!$Record.User__r.LastName} + &apos;_&apos; + TEXT({!$Record.Start_Date__c}) +&apos; - &apos;+ TEXT({!$Record.End_Date__c})</expression>
+    </formulas>
+    <interviewLabel>Update Record Name {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Update Record Name</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <description>Update Name</description>
+        <name>Update_Name</name>
+        <label>Update Name</label>
+        <locationX>176</locationX>
+        <locationY>323</locationY>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>TargetName</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>OwnerId</field>
+            <value>
+                <elementReference>$Record.User__c</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Update_Name</targetReference>
+        </connector>
+        <object>TargetN__c</object>
+        <recordTriggerType>Create</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

@@ -1,0 +1,640 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group__c</fullName>
+    <label>Group</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ADOPS</fullName>
+                <default>false</default>
+                <label>ADOPS</label>
+            </value>
+            <value>
+                <fullName>APAC India Inbound Team</fullName>
+                <default>false</default>
+                <label>APAC India Inbound Team</label>
+            </value>
+            <value>
+                <fullName>ASTech</fullName>
+                <default>false</default>
+                <label>ASTech</label>
+            </value>
+            <value>
+                <fullName>AT.EMP.ACT</fullName>
+                <default>false</default>
+                <label>AT.EMP.ACT</label>
+            </value>
+            <value>
+                <fullName>AT.EMP.AST</fullName>
+                <default>false</default>
+                <label>AT.EMP.AST</label>
+            </value>
+            <value>
+                <fullName>AT.EMP.CORE</fullName>
+                <default>false</default>
+                <label>AT.EMP.CORE</label>
+            </value>
+            <value>
+                <fullName>AT.SKR</fullName>
+                <default>false</default>
+                <label>AT.SKR</label>
+            </value>
+            <value>
+                <fullName>BE.EMP.Employer</fullName>
+                <default>false</default>
+                <label>BE.EMP.Employer</label>
+            </value>
+            <value>
+                <fullName>BE.EMP.Seeker</fullName>
+                <default>false</default>
+                <label>BE.EMP.Seeker</label>
+            </value>
+            <value>
+                <fullName>BEFR.EMP.CORE</fullName>
+                <default>false</default>
+                <label>BEFR.EMP.CORE</label>
+            </value>
+            <value>
+                <fullName>BEFR.SKR</fullName>
+                <default>false</default>
+                <label>BEFR.SKR</label>
+            </value>
+            <value>
+                <fullName>BENL.EMP CORE</fullName>
+                <default>false</default>
+                <label>BENL.EMP CORE</label>
+            </value>
+            <value>
+                <fullName>BENL.SKR</fullName>
+                <default>false</default>
+                <label>BENL.SKR</label>
+            </value>
+            <value>
+                <fullName>CA.EMP.French</fullName>
+                <default>false</default>
+                <label>CA.EMP.French</label>
+            </value>
+            <value>
+                <fullName>Catch All Queue</fullName>
+                <default>false</default>
+                <label>Catch All Queue</label>
+            </value>
+            <value>
+                <fullName>CH.EMP.ACT</fullName>
+                <default>false</default>
+                <label>CH.EMP.ACT</label>
+            </value>
+            <value>
+                <fullName>CH.EMP.AST</fullName>
+                <default>false</default>
+                <label>CH.EMP.AST</label>
+            </value>
+            <value>
+                <fullName>CHDE.EMP.CORE</fullName>
+                <default>false</default>
+                <label>CHDE.EMP.CORE</label>
+            </value>
+            <value>
+                <fullName>CHDE.SKR</fullName>
+                <default>false</default>
+                <label>CHDE.SKR</label>
+            </value>
+            <value>
+                <fullName>CHFR.EMP.CORE</fullName>
+                <default>false</default>
+                <label>CHFR.EMP.CORE</label>
+            </value>
+            <value>
+                <fullName>CHFR.SKR</fullName>
+                <default>false</default>
+                <label>CHFR.SKR</label>
+            </value>
+            <value>
+                <fullName>Cloud Support</fullName>
+                <default>false</default>
+                <label>Cloud Support</label>
+            </value>
+            <value>
+                <fullName>DACH.EMP.ACT</fullName>
+                <default>false</default>
+                <label>DACH.EMP.ACT</label>
+            </value>
+            <value>
+                <fullName>DACH.EMP.ADMIN</fullName>
+                <default>false</default>
+                <label>DACH.EMP.ADMIN</label>
+            </value>
+            <value>
+                <fullName>DACH.EMP.AST</fullName>
+                <default>false</default>
+                <label>DACH.EMP.AST</label>
+            </value>
+            <value>
+                <fullName>DACH.EMP.Core</fullName>
+                <default>false</default>
+                <label>DACH.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>DACH.EMP.CST</fullName>
+                <default>false</default>
+                <label>DACH.EMP.CST</label>
+            </value>
+            <value>
+                <fullName>DACH.OMT</fullName>
+                <default>false</default>
+                <label>DACH.OMT</label>
+            </value>
+            <value>
+                <fullName>DACH.SKR</fullName>
+                <default>false</default>
+                <label>DACH.SKR</label>
+            </value>
+            <value>
+                <fullName>DE.EMP.ACT</fullName>
+                <default>false</default>
+                <label>DE.EMP.ACT</label>
+            </value>
+            <value>
+                <fullName>DE.EMP.AST</fullName>
+                <default>false</default>
+                <label>DE.EMP.AST</label>
+            </value>
+            <value>
+                <fullName>DE.EMP.CORE</fullName>
+                <default>false</default>
+                <label>DE.EMP.CORE</label>
+            </value>
+            <value>
+                <fullName>DE.EMP.Golive</fullName>
+                <default>false</default>
+                <label>DE.EMP.Golive</label>
+            </value>
+            <value>
+                <fullName>DE.EMP.Platinum</fullName>
+                <default>false</default>
+                <label>DE.EMP.Platinum</label>
+            </value>
+            <value>
+                <fullName>DE.EMP.Premium</fullName>
+                <default>false</default>
+                <label>DE.EMP.Premium</label>
+            </value>
+            <value>
+                <fullName>DE.SKR</fullName>
+                <default>false</default>
+                <label>DE.SKR</label>
+            </value>
+            <value>
+                <fullName>DK.EMP.Core</fullName>
+                <default>false</default>
+                <label>DK.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>DK.SKR</fullName>
+                <default>false</default>
+                <label>DK.SKR</label>
+            </value>
+            <value>
+                <fullName>ES.EMP.Core</fullName>
+                <default>false</default>
+                <label>ES.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>ES.SKR</fullName>
+                <default>false</default>
+                <label>ES.SKR</label>
+            </value>
+            <value>
+                <fullName>EU.OMT.Catchall</fullName>
+                <default>false</default>
+                <label>EU.OMT.Catchall</label>
+            </value>
+            <value>
+                <fullName>EU.OST.TESTING</fullName>
+                <default>false</default>
+                <label>EU.OST.TESTING</label>
+            </value>
+            <value>
+                <fullName>EU.PRE.QUOTE</fullName>
+                <default>false</default>
+                <label>EU.PRE.QUOTE</label>
+            </value>
+            <value>
+                <fullName>EU.SKR.Campaign</fullName>
+                <default>false</default>
+                <label>EU.SKR.Campaign</label>
+            </value>
+            <value>
+                <fullName>EU.TB.Opt</fullName>
+                <default>false</default>
+                <label>EU.TB.Opt</label>
+            </value>
+            <value>
+                <fullName>EU.TB.SME</fullName>
+                <default>false</default>
+                <label>EU.TB.SME</label>
+            </value>
+            <value>
+                <fullName>FR.EMP.Core</fullName>
+                <default>false</default>
+                <label>FR.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>FR.EMP.Premium</fullName>
+                <default>false</default>
+                <label>FR.EMP.Premium</label>
+            </value>
+            <value>
+                <fullName>FR.SKR</fullName>
+                <default>false</default>
+                <label>FR.SKR</label>
+            </value>
+            <value>
+                <fullName>Gatekeeper</fullName>
+                <default>false</default>
+                <label>Gatekeeper</label>
+            </value>
+            <value>
+                <fullName>GCS.Admin</fullName>
+                <default>false</default>
+                <label>GCS.Admin</label>
+            </value>
+            <value>
+                <fullName>GLOBAL.OPS.Content</fullName>
+                <default>false</default>
+                <label>GLOBAL.OPS.Content</label>
+            </value>
+            <value>
+                <fullName>Global Privacy</fullName>
+                <default>false</default>
+                <label>Global Privacy</label>
+            </value>
+            <value>
+                <fullName>INT.EMP.GA</fullName>
+                <default>false</default>
+                <label>INT.EMP.GA</label>
+            </value>
+            <value>
+                <fullName>INT.EMP.RPM</fullName>
+                <default>false</default>
+                <label>INT.EMP.RPM</label>
+            </value>
+            <value>
+                <fullName>Integration Support</fullName>
+                <default>false</default>
+                <label>Integration Support</label>
+            </value>
+            <value>
+                <fullName>IT.EMP.Core</fullName>
+                <default>false</default>
+                <label>IT.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>IT.EMP.Premium</fullName>
+                <default>false</default>
+                <label>IT.EMP.Premium</label>
+            </value>
+            <value>
+                <fullName>IT.SKR</fullName>
+                <default>false</default>
+                <label>IT.SKR</label>
+            </value>
+            <value>
+                <fullName>LU.EMP.Premium</fullName>
+                <default>false</default>
+                <label>LU.EMP.Premium</label>
+            </value>
+            <value>
+                <fullName>LUDE.EMP.CORE</fullName>
+                <default>false</default>
+                <label>LUDE.EMP.CORE</label>
+            </value>
+            <value>
+                <fullName>LUDE.SKR</fullName>
+                <default>false</default>
+                <label>LUDE.SKR</label>
+            </value>
+            <value>
+                <fullName>LUFR.EMP.CORE</fullName>
+                <default>false</default>
+                <label>LUFR.EMP.CORE</label>
+            </value>
+            <value>
+                <fullName>LUFR.SKR</fullName>
+                <default>false</default>
+                <label>LUFR.SKR</label>
+            </value>
+            <value>
+                <fullName>NL.EMP.Core</fullName>
+                <default>false</default>
+                <label>NL.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>NL.EMP.Premium</fullName>
+                <default>false</default>
+                <label>NL.EMP.Premium</label>
+            </value>
+            <value>
+                <fullName>NL.SKR</fullName>
+                <default>false</default>
+                <label>NL.SKR</label>
+            </value>
+            <value>
+                <fullName>NO.EMP.Core</fullName>
+                <default>false</default>
+                <label>NO.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>NO.SKR</fullName>
+                <default>false</default>
+                <label>NO.SKR</label>
+            </value>
+            <value>
+                <fullName>North.OMT</fullName>
+                <default>false</default>
+                <label>North.OMT</label>
+            </value>
+            <value>
+                <fullName>PPC Owner</fullName>
+                <default>false</default>
+                <label>PPC Owner</label>
+            </value>
+            <value>
+                <fullName>Product HelpDesk</fullName>
+                <default>false</default>
+                <label>Product HelpDesk</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Sales Operations</fullName>
+                <default>false</default>
+                <label>Sales Operations</label>
+            </value>
+            <value>
+                <fullName>SE.EMP.Core</fullName>
+                <default>false</default>
+                <label>SE.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>SE.SKR</fullName>
+                <default>false</default>
+                <label>SE.SKR</label>
+            </value>
+            <value>
+                <fullName>South.OMT</fullName>
+                <default>false</default>
+                <label>South.OMT</label>
+            </value>
+            <value>
+                <fullName>Spam</fullName>
+                <default>false</default>
+                <label>Spam</label>
+            </value>
+            <value>
+                <fullName>SSUS - EU Escalations</fullName>
+                <default>false</default>
+                <label>SSUS - EU Escalations</label>
+            </value>
+            <value>
+                <fullName>SSUS - EU Orders</fullName>
+                <default>false</default>
+                <label>SSUS - EU Orders</label>
+            </value>
+            <value>
+                <fullName>SSUS - EU Report Resume</fullName>
+                <default>false</default>
+                <label>SSUS - EU Report Resume</label>
+            </value>
+            <value>
+                <fullName>SSUS - EU Seeker Concerns</fullName>
+                <default>false</default>
+                <label>SSUS - EU Seeker Concerns</label>
+            </value>
+            <value>
+                <fullName>SSUS - EU Trusted Orders</fullName>
+                <default>false</default>
+                <label>SSUS - EU Trusted Orders</label>
+            </value>
+            <value>
+                <fullName>SSUS - Global BeKnown</fullName>
+                <default>false</default>
+                <label>SSUS - Global BeKnown</label>
+            </value>
+            <value>
+                <fullName>SSUS - Global Catch All</fullName>
+                <default>false</default>
+                <label>SSUS - Global Catch All</label>
+            </value>
+            <value>
+                <fullName>SSUS - Global Monitor Alerts</fullName>
+                <default>false</default>
+                <label>SSUS - Global Monitor Alerts</label>
+            </value>
+            <value>
+                <fullName>SSUS - Global Monitors Trusted</fullName>
+                <default>false</default>
+                <label>SSUS - Global Monitors Trusted</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA FTF Backup</fullName>
+                <default>false</default>
+                <label>SSUS - NA FTF Backup</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA Orders</fullName>
+                <default>false</default>
+                <label>SSUS - NA Orders</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA Order Screening Emails</fullName>
+                <default>false</default>
+                <label>SSUS - NA Order Screening Emails</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA Orders Tier II</fullName>
+                <default>false</default>
+                <label>SSUS - NA Orders Tier II</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA Publisher</fullName>
+                <default>false</default>
+                <label>SSUS - NA Publisher</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA Report Resume</fullName>
+                <default>false</default>
+                <label>SSUS - NA Report Resume</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA Siteabuse</fullName>
+                <default>false</default>
+                <label>SSUS - NA Siteabuse</label>
+            </value>
+            <value>
+                <fullName>SSUS - NA Trusted Orders</fullName>
+                <default>false</default>
+                <label>SSUS - NA Trusted Orders</label>
+            </value>
+            <value>
+                <fullName>Techescalate</fullName>
+                <default>false</default>
+                <label>Techescalate</label>
+            </value>
+            <value>
+                <fullName>UKIE.EMP.Core</fullName>
+                <default>false</default>
+                <label>UKIE.EMP.Core</label>
+            </value>
+            <value>
+                <fullName>UKIE.EMP.Premium</fullName>
+                <default>false</default>
+                <label>UKIE.EMP.Premium</label>
+            </value>
+            <value>
+                <fullName>UKIE.SKR</fullName>
+                <default>false</default>
+                <label>UKIE.SKR</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Agency</fullName>
+                <default>false</default>
+                <label>US.EMP.Agency</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Customer Training</fullName>
+                <default>false</default>
+                <label>US.EMP.Customer Training</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Custom Implementations</fullName>
+                <default>false</default>
+                <label>US.EMP.Custom Implementations</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Employer Support</fullName>
+                <default>false</default>
+                <label>US.EMP.Employer Support</label>
+            </value>
+            <value>
+                <fullName>US.EMP.NAP</fullName>
+                <default>false</default>
+                <label>US.EMP.NAP</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Newspaper</fullName>
+                <default>false</default>
+                <label>US.EMP.Newspaper</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Preferred Support</fullName>
+                <default>false</default>
+                <label>US.EMP.Preferred Support</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Premium Support</fullName>
+                <default>false</default>
+                <label>US.EMP.Premium Support</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Product Implementation</fullName>
+                <default>false</default>
+                <label>US.EMP.Product Implementation</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Staffing</fullName>
+                <default>false</default>
+                <label>US.EMP.Staffing</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Supervisor</fullName>
+                <default>false</default>
+                <label>US.EMP.Supervisor</label>
+            </value>
+            <value>
+                <fullName>US.MGS.Tier 1</fullName>
+                <default>false</default>
+                <label>US.MGS.Tier 1</label>
+            </value>
+            <value>
+                <fullName>US.MGS.Tier 2</fullName>
+                <default>false</default>
+                <label>US.MGS.Tier 2</label>
+            </value>
+            <value>
+                <fullName>US.OMT.Billing Corrections</fullName>
+                <default>false</default>
+                <label>US.OMT.Billing Corrections</label>
+            </value>
+            <value>
+                <fullName>US.OMT.Canada Orders</fullName>
+                <default>false</default>
+                <label>US.OMT.Canada Orders</label>
+            </value>
+            <value>
+                <fullName>US.OMT.Newspaper Orders</fullName>
+                <default>false</default>
+                <label>US.OMT.Newspaper Orders</label>
+            </value>
+            <value>
+                <fullName>US.OMT.Setup Information</fullName>
+                <default>false</default>
+                <label>US.OMT.Setup Information</label>
+            </value>
+            <value>
+                <fullName>US.OMT.Tier 1</fullName>
+                <default>false</default>
+                <label>US.OMT.Tier 1</label>
+            </value>
+            <value>
+                <fullName>US.OMT.Tier 2</fullName>
+                <default>false</default>
+                <label>US.OMT.Tier 2</label>
+            </value>
+            <value>
+                <fullName>US.OPS.Quality</fullName>
+                <default>false</default>
+                <label>US.OPS.Quality</label>
+            </value>
+            <value>
+                <fullName>US.OPS.Service Admin</fullName>
+                <default>false</default>
+                <label>US.OPS.Service Admin</label>
+            </value>
+            <value>
+                <fullName>US.OPS.Training</fullName>
+                <default>false</default>
+                <label>US.OPS.Training</label>
+            </value>
+            <value>
+                <fullName>US.OPS.Workforce Management</fullName>
+                <default>false</default>
+                <label>US.OPS.Workforce Management</label>
+            </value>
+            <value>
+                <fullName>US.SKR.Seeker Support</fullName>
+                <default>false</default>
+                <label>US.SKR.Seeker Support</label>
+            </value>
+            <value>
+                <fullName>US.TEC.Core</fullName>
+                <default>false</default>
+                <label>US.TEC.Core</label>
+            </value>
+            <value>
+                <fullName>US.TEC.Premium</fullName>
+                <default>false</default>
+                <label>US.TEC.Premium</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

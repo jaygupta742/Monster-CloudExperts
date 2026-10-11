@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Type_Sales__c</fullName>
+    <label>Task -Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Subject__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Proposal Follow up</fullName>
+                <default>false</default>
+                <label>Proposal Follow up</label>
+            </value>
+            <value>
+                <fullName>Account Mapping</fullName>
+                <default>false</default>
+                <label>Account Mapping</label>
+            </value>
+            <value>
+                <fullName>Agreement Restructure</fullName>
+                <default>false</default>
+                <label>Agreement Restructure</label>
+            </value>
+            <value>
+                <fullName>Could not Connect</fullName>
+                <default>false</default>
+                <label>Could not Connect</label>
+            </value>
+            <value>
+                <fullName>Invalid Account</fullName>
+                <default>false</default>
+                <label>Invalid Account</label>
+            </value>
+            <value>
+                <fullName>Payment Follow-up</fullName>
+                <default>false</default>
+                <label>Payment Follow-up</label>
+            </value>
+            <value>
+                <fullName>Prospect</fullName>
+                <default>false</default>
+                <label>Prospect</label>
+            </value>
+            <value>
+                <fullName>Service/ Courtesy Call</fullName>
+                <default>false</default>
+                <label>Service/ Courtesy Call</label>
+            </value>
+            <value>
+                <fullName>Suspect/Uninterested</fullName>
+                <default>false</default>
+                <label>Suspect/Uninterested</label>
+            </value>
+            <value>
+                <fullName>Closure Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Closure Meeting</label>
+            </value>
+            <value>
+                <fullName>Cold Call</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cold Call</label>
+            </value>
+            <value>
+                <fullName>Demo - Assessment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demo - Assessment</label>
+            </value>
+            <value>
+                <fullName>Demo - Core Products</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demo - Core Products</label>
+            </value>
+            <value>
+                <fullName>Demo - Quinton</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demo - Quinton</label>
+            </value>
+            <value>
+                <fullName>Demo - TalentBin</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demo - TalentBin</label>
+            </value>
+            <value>
+                <fullName>Demonstration</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Demonstration</label>
+            </value>
+            <value>
+                <fullName>Follow-up Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Follow-up Meeting</label>
+            </value>
+            <value>
+                <fullName>Fresh Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fresh Meeting</label>
+            </value>
+            <value>
+                <fullName>H2F (Hunter to Farmer)</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>H2F (Hunter to Farmer)</label>
+            </value>
+            <value>
+                <fullName>Initial Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Initial Meeting</label>
+            </value>
+            <value>
+                <fullName>Introduction</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Introduction</label>
+            </value>
+            <value>
+                <fullName>Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Meeting</label>
+            </value>
+            <value>
+                <fullName>Need Analysis</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Need Analysis</label>
+            </value>
+            <value>
+                <fullName>Need Analysis Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Need Analysis Meeting</label>
+            </value>
+            <value>
+                <fullName>Negotiation Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Negotiation Meeting</label>
+            </value>
+            <value>
+                <fullName>New Products Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Products Meeting</label>
+            </value>
+            <value>
+                <fullName>Non-Prospect Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-Prospect Meeting</label>
+            </value>
+            <value>
+                <fullName>Not connected</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Not connected</label>
+            </value>
+            <value>
+                <fullName>Payment Follow Up</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Payment Follow Up</label>
+            </value>
+            <value>
+                <fullName>Payment Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Payment Meeting</label>
+            </value>
+            <value>
+                <fullName>Proposal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposal</label>
+            </value>
+            <value>
+                <fullName>Proposal Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposal Meeting</label>
+            </value>
+            <value>
+                <fullName>Proposal- Non Renewal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Proposal- Non Renewal</label>
+            </value>
+            <value>
+                <fullName>Renewal Discussion- Active Account</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Renewal Discussion- Active Account</label>
+            </value>
+            <value>
+                <fullName>Service Call</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Service Call</label>
+            </value>
+            <value>
+                <fullName>Service Email</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Service Email</label>
+            </value>
+            <value>
+                <fullName>Service Meeting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Service Meeting</label>
+            </value>
+            <value>
+                <fullName>Upsell</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Upsell</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Proposal Follow up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Account Mapping</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Agreement Restructure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Invalid Account</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Payment Follow-up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Prospect</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Service/ Courtesy Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Meeting</controllingFieldValue>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Suspect/Uninterested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Telecall</controllingFieldValue>
+            <valueName>Could not Connect</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

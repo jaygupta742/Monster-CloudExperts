@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pitched__c</fullName>
+    <label>Pitched</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Dispositions__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Interested</fullName>
+                <default>false</default>
+                <label>Not Interested</label>
+            </value>
+            <value>
+                <fullName>Prospect – Hot – Opportunity Pop up</fullName>
+                <default>false</default>
+                <label>Prospect – Hot – Opportunity Pop up</label>
+            </value>
+            <value>
+                <fullName>Prospect – Warm</fullName>
+                <default>false</default>
+                <label>Prospect – Warm</label>
+            </value>
+            <value>
+                <fullName>Prospect – Hot Cold</fullName>
+                <default>false</default>
+                <label>Prospect – Hot Cold</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Pitched</controllingFieldValue>
+            <valueName>Not Interested</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pitched</controllingFieldValue>
+            <valueName>Prospect – Hot – Opportunity Pop up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pitched</controllingFieldValue>
+            <valueName>Prospect – Warm</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Pitched</controllingFieldValue>
+            <valueName>Prospect – Hot Cold</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

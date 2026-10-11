@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_New__c</fullName>
+    <label>Product New</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Featured Profile</fullName>
+                <default>false</default>
+                <label>Featured Profile</label>
+            </value>
+            <value>
+                <fullName>Profile Highlighter</fullName>
+                <default>false</default>
+                <label>Profile Highlighter</label>
+            </value>
+            <value>
+                <fullName>Career Booster</fullName>
+                <default>false</default>
+                <label>Career Booster</label>
+            </value>
+            <value>
+                <fullName>Resume Writing</fullName>
+                <default>false</default>
+                <label>Resume Writing</label>
+            </value>
+            <value>
+                <fullName>Resume Builder</fullName>
+                <default>false</default>
+                <label>Resume Builder</label>
+            </value>
+            <value>
+                <fullName>Linkedin Makeover</fullName>
+                <default>false</default>
+                <label>Linkedin Makeover</label>
+            </value>
+            <value>
+                <fullName>Cover Letter</fullName>
+                <default>false</default>
+                <label>Cover Letter</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

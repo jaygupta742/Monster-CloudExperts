@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>JobPosition__c</fullName>
+    <label>Job Position</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Assistant</fullName>
+                <default>false</default>
+                <label>Assistant</label>
+            </value>
+            <value>
+                <fullName>Candidate</fullName>
+                <default>false</default>
+                <label>Candidate</label>
+            </value>
+            <value>
+                <fullName>Central 1-TX-Acquisition 01</fullName>
+                <default>false</default>
+                <label>Central 1-TX-Acquisition 01</label>
+            </value>
+            <value>
+                <fullName>Central 1-TX-Acquisition 02</fullName>
+                <default>false</default>
+                <label>Central 1-TX-Acquisition 02</label>
+            </value>
+            <value>
+                <fullName>Central 1-TX-Acquisition 03</fullName>
+                <default>false</default>
+                <label>Central 1-TX-Acquisition 03</label>
+            </value>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>CFO</fullName>
+                <default>false</default>
+                <label>CFO</label>
+            </value>
+            <value>
+                <fullName>CIO</fullName>
+                <default>false</default>
+                <label>CIO</label>
+            </value>
+            <value>
+                <fullName>Consultant</fullName>
+                <default>false</default>
+                <label>Consultant</label>
+            </value>
+            <value>
+                <fullName>Contract Recruiter</fullName>
+                <default>false</default>
+                <label>Contract Recruiter</label>
+            </value>
+            <value>
+                <fullName>Coordinator</fullName>
+                <default>false</default>
+                <label>Coordinator</label>
+            </value>
+            <value>
+                <fullName>CS Rep</fullName>
+                <default>false</default>
+                <label>CS Rep</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Director</fullName>
+                <default>false</default>
+                <label>Director</label>
+            </value>
+            <value>
+                <fullName>District Sales Manager</fullName>
+                <default>false</default>
+                <label>District Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Division Head</fullName>
+                <default>false</default>
+                <label>Division Head</label>
+            </value>
+            <value>
+                <fullName>Financial Manager</fullName>
+                <default>false</default>
+                <label>Financial Manager</label>
+            </value>
+            <value>
+                <fullName>General Manager</fullName>
+                <default>false</default>
+                <label>General Manager</label>
+            </value>
+            <value>
+                <fullName>Head Hunter</fullName>
+                <default>false</default>
+                <label>Head Hunter</label>
+            </value>
+            <value>
+                <fullName>Head of Campus</fullName>
+                <default>false</default>
+                <label>Head of Campus</label>
+            </value>
+            <value>
+                <fullName>Head of HR</fullName>
+                <default>false</default>
+                <label>Head of HR</label>
+            </value>
+            <value>
+                <fullName>Head of Recruiting</fullName>
+                <default>false</default>
+                <label>Head of Recruiting</label>
+            </value>
+            <value>
+                <fullName>Head of Sales</fullName>
+                <default>false</default>
+                <label>Head of Sales</label>
+            </value>
+            <value>
+                <fullName>HR Assistant</fullName>
+                <default>false</default>
+                <label>HR Assistant</label>
+            </value>
+            <value>
+                <fullName>HR Manager</fullName>
+                <default>false</default>
+                <label>HR Manager</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>IT Manager</fullName>
+                <default>false</default>
+                <label>IT Manager</label>
+            </value>
+            <value>
+                <fullName>Manager</fullName>
+                <default>false</default>
+                <label>Manager</label>
+            </value>
+            <value>
+                <fullName>Marketing Manager</fullName>
+                <default>false</default>
+                <label>Marketing Manager</label>
+            </value>
+            <value>
+                <fullName>Media Advisor</fullName>
+                <default>false</default>
+                <label>Media Advisor</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Overlay</fullName>
+                <default>false</default>
+                <label>Overlay</label>
+            </value>
+            <value>
+                <fullName>Owner</fullName>
+                <default>false</default>
+                <label>Owner</label>
+            </value>
+            <value>
+                <fullName>Partner Administrator</fullName>
+                <default>false</default>
+                <label>Partner Administrator</label>
+            </value>
+            <value>
+                <fullName>Partner Company Manager</fullName>
+                <default>false</default>
+                <label>Partner Company Manager</label>
+            </value>
+            <value>
+                <fullName>Partner Sales Rep</fullName>
+                <default>false</default>
+                <label>Partner Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Partner Service Rep</fullName>
+                <default>false</default>
+                <label>Partner Service Rep</label>
+            </value>
+            <value>
+                <fullName>POSITION_TYPE</fullName>
+                <default>false</default>
+                <label>POSITION_TYPE</label>
+            </value>
+            <value>
+                <fullName>President</fullName>
+                <default>false</default>
+                <label>President</label>
+            </value>
+            <value>
+                <fullName>Procurement Contact</fullName>
+                <default>false</default>
+                <label>Procurement Contact</label>
+            </value>
+            <value>
+                <fullName>Project Leader</fullName>
+                <default>false</default>
+                <label>Project Leader</label>
+            </value>
+            <value>
+                <fullName>Purchaser</fullName>
+                <default>false</default>
+                <label>Purchaser</label>
+            </value>
+            <value>
+                <fullName>Purchasing Manager</fullName>
+                <default>false</default>
+                <label>Purchasing Manager</label>
+            </value>
+            <value>
+                <fullName>Recruiter</fullName>
+                <default>false</default>
+                <label>Recruiter</label>
+            </value>
+            <value>
+                <fullName>Recruiter 1</fullName>
+                <default>false</default>
+                <label>Recruiter 1</label>
+            </value>
+            <value>
+                <fullName>Recruiter 2</fullName>
+                <default>false</default>
+                <label>Recruiter 2</label>
+            </value>
+            <value>
+                <fullName>Recruiter 3</fullName>
+                <default>false</default>
+                <label>Recruiter 3</label>
+            </value>
+            <value>
+                <fullName>Recruiting Consultant</fullName>
+                <default>false</default>
+                <label>Recruiting Consultant</label>
+            </value>
+            <value>
+                <fullName>Regional Sales Manager</fullName>
+                <default>false</default>
+                <label>Regional Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Removed from SQL</fullName>
+                <default>false</default>
+                <label>Removed from SQL</label>
+            </value>
+            <value>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+                <label>Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Sales Rep</fullName>
+                <default>false</default>
+                <label>Sales Rep</label>
+            </value>
+            <value>
+                <fullName>Telesales Manager</fullName>
+                <default>false</default>
+                <label>Telesales Manager</label>
+            </value>
+            <value>
+                <fullName>TM Rep</fullName>
+                <default>false</default>
+                <label>TM Rep</label>
+            </value>
+            <value>
+                <fullName>Vice President</fullName>
+                <default>false</default>
+                <label>Vice President</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

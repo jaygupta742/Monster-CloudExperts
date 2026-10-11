@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Read</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Prayag_Sangvi_DR_VD</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Prayag Sangvi DR VD</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Prayag_Sangvi_Under_Akash_Jain</parentRole>
+</Role>

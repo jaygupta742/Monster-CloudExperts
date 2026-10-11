@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Response</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Response</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/36.0/apex.js&quot;)}
+
+sforce.connection.sessionId = &quot;{!$Api.Session_ID}&quot;; 
+
+var ac = new sforce.SObject(&quot;Account&quot;); 
+
+if(&apos;{!Client_Validation_Request__c.Stage__c}&apos;==&apos;Submitted&apos; &amp;&amp; &apos;{!Client_Validation_Request__c.Status__c}&apos; ==&apos;Open&apos; &amp;&amp; &apos;{!JSINHTMLENCODE(Client_Validation_Request__c.Response__c)}&apos;==&apos;&apos;) 
+{ 
+alert(&apos;Please change status , Stage and provide some values in Response&apos;); 
+} else {
+
+var a=&apos;{!Client_Validation_Request__c.Id}&apos;; 
+//alert(&apos;see&apos;+a); 
+
+//sforce.apex.execute(&quot;cvrresponse&quot;,&quot;cvrmeth&quot;,{cvrid:a}); 
+var ex = sforce.apex.execute(&quot;cvrresponse&quot;,&quot;cvrmeth&quot;,{IDD:a});
+
+alert(&quot;Account updated successfully and sales rep notified&quot;); 
+location.reload();
+
+}</url>
+</WebLink>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsValidationRequest__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>If checked, it fires the trigger to create the Validation Request Case on the opportunity.</description>
+    <label>IsValidationRequest</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

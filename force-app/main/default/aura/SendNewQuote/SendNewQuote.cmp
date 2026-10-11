@@ -1,0 +1,180 @@
+<aura:component controller="SendQuoteNew" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+        <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+
+	<aura:attribute name="quote" type="QuotesN__c"/>
+    <aura:attribute name="to" type="String" />
+    <aura:attribute name="cc" type="String"  />
+    <aura:attribute name="subject" type="String" />
+    <aura:attribute name="body" type="String"/>
+    <aura:attribute name="next"  type="boolean" default="false"/>
+    
+    <aura:attribute name="temp" type="string"/>
+    <aura:attribute name="ctemp" type="Template__c[]"/>
+    <aura:attribute name="quotepdf" type="String"/>
+    <aura:attribute name="status" type="boolean" />
+    
+    <aura:attribute name="attachedId" type="string"/> 
+    <aura:attribute name="attachedId1" type="string"/> 
+    <aura:attribute name="attachedId2" type="string"/> 
+    
+    <aura:attribute name="showLoadingSpinner" type="boolean" default="false" />
+    <aura:attribute name="showLoadingSpinner1" type="boolean" default="false" />
+    <aura:attribute name="showLoadingSpinner2" type="boolean" default="false" />
+    <aura:attribute name="fileName" type="String" default="No File Selected.." />
+    <aura:attribute name="fileName1" type="String" default="No File Selected.." />
+    <aura:attribute name="fileName2" type="String" default="No File Selected.." />
+    <aura:attribute name="mailStatus" type="boolean" default="false"/>
+    
+    
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 90%;
+        max-width: 80rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        }
+    </aura:html>
+            <aura:if isTrue="{!v.status==false}">
+
+    <div class="slds-page-header" role="banner">
+        <h1 class="slds-page-header__title slds-m-right--small slds-align-middle slds-truncate" title="this should match">
+            Send Mail With Quote PDF.
+        </h1>
+        <div class="slds-text-color--weak">Sending mail with Quote </div>
+    </div><br/>
+    
+    <aura:if isTrue="{!v.mailStatus}">
+        <div role="alertdialog" tabindex="-1" aria-labelledby="prompt-heading-id" aria-describedby="prompt-message-wrapper" class="slds-modal slds-fade-in-open slds-modal--prompt">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header slds-theme--error slds-theme--alert-texture">
+                    <h2 class="slds-text-heading--medium" id="prompt-heading-id">Mail Status</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div>
+                        <p>Email Sent successfully to {!v.to}</p>
+                    </div>
+                </div>
+                <div class="slds-modal__footer slds-theme--default">
+                    <button class="slds-button slds-button--brand" onclick="{!c.closeMessage}">Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    
+    
+    <div class="slds-m-around--large" style="float:center;margin-left:200px;width:75%;">
+        <div class="slds-container--large">
+            <div class="slds-form--stacked">
+                
+                
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="TO">TO : </label>
+                    <div class="slds-form-element__control">
+                        <ui:inputEmail class="slds-input" aura:id="email"  value="{!v.to}" required="true" />
+                    </div>
+                </div>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="CC">CC : </label>
+                    <div class="slds-form-element__control">
+                        <ui:inputEmail class="slds-input" aura:id="ccmail"  value="{!v.cc}" required="true" />
+                    </div>
+                </div>
+                
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="CC">Subject</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputText class="slds-input" aura:id="subject"  value="{!v.subject}" placeholder="Subject"/>
+                    </div>
+                </div>
+                
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="textareaSample2">Mail Body</label>
+                    <div class="slds-form-element__control">
+                        <lightning:inputRichText aura:id="body" value="{!v.body}" />
+                    </div>
+                </div><br/>
+                <div class="slds-form-element">    
+                  <div  style ="text-align:center ">  <button class="slds-button slds-button--brand" onclick="{!c.sendMail}">Send</button> </div> 
+                    <lightning:layout >
+                        <lightning:layoutItem size="4">
+                            <lightning:input aura:id="fileId" onchange="{!c.handleFilesChange}" type="file" name="file" label="Upload Attachment" multiple="true"/>
+                            <div class="slds-text-body_small slds-text-color_error">{!v.fileName} </div>
+                            
+                            <!--use aura:if for show-hide the loading spinner image--> 
+                            <aura:if isTrue="{!v.showLoadingSpinner}">
+                                <div class="slds-text-body_small slds-text-color_error">Uploading... 
+                                    <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+                                </div>
+                            </aura:if>
+                            
+                            
+                            
+                            <button class="slds-button slds-button_brand" onclick="{!c.doSave}">Upload Attachment</button>
+                        </lightning:layoutItem>  
+                        
+                        
+                        
+                        <lightning:layoutItem size="4">
+                            <lightning:input aura:id="fileId1" onchange="{!c.handleFilesChange1}" type="file" name="file1" label="Upload Attachment" multiple="true"/>
+                            <div class="slds-text-body_small slds-text-color_error">{!v.fileName1} </div>
+                            
+                            <!--use aura:if for show-hide the loading spinner image--> 
+                            <aura:if isTrue="{!v.showLoadingSpinner1}">
+                                <div class="slds-text-body_small slds-text-color_error">Uploading... 
+                                    <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+                                </div>
+                            </aura:if>
+                            
+                            
+                            
+                            <button class="slds-button slds-button_brand" onclick="{!c.doSave1}">Upload Attachment</button>
+                        </lightning:layoutItem> 
+                        <lightning:layoutItem size="4">
+                            <lightning:input aura:id="fileId2" onchange="{!c.handleFilesChange2}" type="file" name="file2" label="Upload Attachment" multiple="true"/>
+                            <div class="slds-text-body_small slds-text-color_error">{!v.fileName2} </div>
+                            
+                            <!-- use aura:if for show-hide the loading spinner image-->
+                            <aura:if isTrue="{!v.showLoadingSpinner2}">
+                                <div class="slds-text-body_small slds-text-color_error">Uploading... 
+                                    <img src="/auraFW/resources/aura/images/spinner.gif" class="spinner-img" alt="Loading"/>'
+                                </div>
+                            </aura:if>
+                            <button class="slds-button slds-button_brand" onclick="{!c.doSave2}">Upload Attachment</button>
+                            <br/>
+                        </lightning:layoutItem> 
+                        
+                    </lightning:layout> 
+                    
+                </div><br/>
+                
+                
+            </div>
+        </div>
+    </div>
+       <!-- <div style="float:center;margin-left:200px;"><iframe src="{!'https://monsterindia-newone-c.sandbox.vf.force.com/apex/'+v.temp+'?Id=' + v.recordId }" width="90%" height="400px;" frameBorder="0"/></div> -->
+                
+                 <aura:set attribute="else">
+                            <div style="font-size:20px;text-align:center;font-weight:bold;height:100px;padding-top: 30px;">
+                       Please Generate Quote!! </div>
+            </aura:set>
+    </aura:if>
+
+</aura:component>

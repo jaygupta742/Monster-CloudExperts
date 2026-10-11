@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Feedback__c</fullName>
+    <label>Feedback</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Budget Constraint</fullName>
+                <default>false</default>
+                <label>Budget Constraint</label>
+            </value>
+            <value>
+                <fullName>Clicked by mistake</fullName>
+                <default>false</default>
+                <label>Clicked by mistake</label>
+            </value>
+            <value>
+                <fullName>Client Not Enquired</fullName>
+                <default>false</default>
+                <label>Client Not Enquired</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <label>Closed</label>
+            </value>
+            <value>
+                <fullName>Customer Not Hiring</fullName>
+                <default>false</default>
+                <label>Customer Not Hiring</label>
+            </value>
+            <value>
+                <fullName>Customer Out Of Business/Business Closed</fullName>
+                <default>false</default>
+                <label>Customer Out Of Business/Business Closed</label>
+            </value>
+            <value>
+                <fullName>Duplicate Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate Opportunity</label>
+            </value>
+            <value>
+                <fullName>Fulfilled Through Ecomm/Online Purchase</fullName>
+                <default>false</default>
+                <label>Fulfilled Through Ecomm/Online Purchase</label>
+            </value>
+            <value>
+                <fullName>In discussion with the client</fullName>
+                <default>false</default>
+                <label>In discussion with the client</label>
+            </value>
+            <value>
+                <fullName>International Teaming</fullName>
+                <default>false</default>
+                <label>International Teaming</label>
+            </value>
+            <value>
+                <fullName>Invalid Contact Information</fullName>
+                <default>false</default>
+                <label>Invalid Contact Information</label>
+            </value>
+            <value>
+                <fullName>Just Enquired For Pricing</fullName>
+                <default>false</default>
+                <label>Just Enquired For Pricing</label>
+            </value>
+            <value>
+                <fullName>Looking For Free Trail Services</fullName>
+                <default>false</default>
+                <label>Looking For Free Trail Services</label>
+            </value>
+            <value>
+                <fullName>Need Time To Decide</fullName>
+                <default>false</default>
+                <label>Need Time To Decide</label>
+            </value>
+            <value>
+                <fullName>No Longer Hiring</fullName>
+                <default>false</default>
+                <label>No Longer Hiring</label>
+            </value>
+            <value>
+                <fullName>No Response From Customer</fullName>
+                <default>false</default>
+                <label>No Response From Customer</label>
+            </value>
+            <value>
+                <fullName>Not Happy With The Services/Product</fullName>
+                <default>false</default>
+                <label>Not Happy With The Services/Product</label>
+            </value>
+            <value>
+                <fullName>Not Interest/No Need</fullName>
+                <default>false</default>
+                <label>Not Interest/No Need</label>
+            </value>
+            <value>
+                <fullName>Not Interested In Paid Services</fullName>
+                <default>false</default>
+                <label>Not Interested In Paid Services</label>
+            </value>
+            <value>
+                <fullName>Not Looking For Services</fullName>
+                <default>false</default>
+                <label>Not Looking For Services</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Pending for documents/proofs</fullName>
+                <default>false</default>
+                <label>Pending for documents/proofs</label>
+            </value>
+            <value>
+                <fullName>Potential lead to work</fullName>
+                <default>false</default>
+                <label>Potential lead to work</label>
+            </value>
+            <value>
+                <fullName>Pricing Issues</fullName>
+                <default>false</default>
+                <label>Pricing Issues</label>
+            </value>
+            <value>
+                <fullName>Proposal shared</fullName>
+                <default>false</default>
+                <label>Proposal shared</label>
+            </value>
+            <value>
+                <fullName>Purchased From Competition</fullName>
+                <default>false</default>
+                <label>Purchased From Competition</label>
+            </value>
+            <value>
+                <fullName>Sale Closed On Other City/Account Name</fullName>
+                <default>false</default>
+                <label>Sale Closed On Other City/Account Name</label>
+            </value>
+            <value>
+                <fullName>Sent Promotion Request</fullName>
+                <default>false</default>
+                <label>Sent Promotion Request</label>
+            </value>
+            <value>
+                <fullName>Single Posting Requirement</fullName>
+                <default>false</default>
+                <label>Single Posting Requirement</label>
+            </value>
+            <value>
+                <fullName>Start Up And Less Requirment</fullName>
+                <default>false</default>
+                <label>Start Up And Less Requirment</label>
+            </value>
+            <value>
+                <fullName>Suspended Account</fullName>
+                <default>false</default>
+                <label>Suspended Account</label>
+            </value>
+            <value>
+                <fullName>Taken Proposal Not Looking For Services</fullName>
+                <default>false</default>
+                <label>Taken Proposal Not Looking For Services</label>
+            </value>
+            <value>
+                <fullName>Demo follow up is on</fullName>
+                <default>false</default>
+                <label>Demo follow up is on</label>
+            </value>
+            <value>
+                <fullName>Demo done</fullName>
+                <default>false</default>
+                <label>Demo done</label>
+            </value>
+            <value>
+                <fullName>Demo Rescheduled</fullName>
+                <default>false</default>
+                <label>Demo Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Demo declined</fullName>
+                <default>false</default>
+                <label>Demo declined</label>
+            </value>
+            <value>
+                <fullName>Shared NDA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shared NDA</label>
+            </value>
+            <value>
+                <fullName>Signed NDA &amp; Onboarded</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Signed NDA &amp; Onboarded</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

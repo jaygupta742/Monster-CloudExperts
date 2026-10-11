@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Origin__c</fullName>
+    <label>Case Origin</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call Inbound</fullName>
+                <default>false</default>
+                <label>Call Inbound</label>
+            </value>
+            <value>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+                <label>Email Inbound</label>
+            </value>
+            <value>
+                <fullName>Call Outbound</fullName>
+                <default>false</default>
+                <label>Call Outbound</label>
+            </value>
+            <value>
+                <fullName>Email Outbound</fullName>
+                <default>false</default>
+                <label>Email Outbound</label>
+            </value>
+            <value>
+                <fullName>Training – Face to Face</fullName>
+                <default>false</default>
+                <label>Training – Face to Face</label>
+            </value>
+            <value>
+                <fullName>Training – Online</fullName>
+                <default>false</default>
+                <label>Training – Online</label>
+            </value>
+            <value>
+                <fullName>Text Chat</fullName>
+                <default>false</default>
+                <label>Text Chat</label>
+            </value>
+            <value>
+                <fullName>Face to Face</fullName>
+                <default>false</default>
+                <label>Face to Face</label>
+            </value>
+            <value>
+                <fullName>Fax</fullName>
+                <default>false</default>
+                <label>Fax</label>
+            </value>
+            <value>
+                <fullName>Dropped Chat</fullName>
+                <default>false</default>
+                <label>Dropped Chat</label>
+            </value>
+            <value>
+                <fullName>Dropped Call</fullName>
+                <default>false</default>
+                <label>Dropped Call</label>
+            </value>
+            <value>
+                <fullName>Social</fullName>
+                <default>false</default>
+                <label>Social</label>
+            </value>
+            <value>
+                <fullName>MayDay</fullName>
+                <default>false</default>
+                <label>MayDay</label>
+            </value>
+            <value>
+                <fullName>Seeker Help</fullName>
+                <default>false</default>
+                <label>Seeker Help</label>
+            </value>
+            <value>
+                <fullName>Internal - Sales</fullName>
+                <default>false</default>
+                <label>Internal - Sales</label>
+            </value>
+            <value>
+                <fullName>Outlook</fullName>
+                <default>false</default>
+                <label>Outlook</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

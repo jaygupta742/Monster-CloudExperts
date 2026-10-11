@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Birthday</name>
+    <style>none</style>
+    <subject>Best wishes for a bright future and a Very Happy Birthday {!Contact.FirstName} !!</subject>
+    <textOnly>Dear {!Contact.FirstName} {!Contact.LastName},  May this birthday bring happiness, joy and loads of success. May you achieve all your ambitions. A very Happy Birthday, dear friend.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

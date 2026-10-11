@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactSource__c</fullName>
+    <label>Contact Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>3rd Party (Phishlabs, etc)</fullName>
+                <default>false</default>
+                <label>3rd Party (Phishlabs, etc)</label>
+            </value>
+            <value>
+                <fullName>App User</fullName>
+                <default>false</default>
+                <label>App User</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>Fraud Query Tool</fullName>
+                <default>false</default>
+                <label>Fraud Query Tool</label>
+            </value>
+            <value>
+                <fullName>HJ Employer</fullName>
+                <default>false</default>
+                <label>HJ Employer</label>
+            </value>
+            <value>
+                <fullName>HJ Partner</fullName>
+                <default>false</default>
+                <label>HJ Partner</label>
+            </value>
+            <value>
+                <fullName>HJ Seeker</fullName>
+                <default>false</default>
+                <label>HJ Seeker</label>
+            </value>
+            <value>
+                <fullName>Honey Pots</fullName>
+                <default>false</default>
+                <label>Honey Pots</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>Internal Source</fullName>
+                <default>false</default>
+                <label>Internal Source</label>
+            </value>
+            <value>
+                <fullName>Investigation</fullName>
+                <default>false</default>
+                <label>Investigation</label>
+            </value>
+            <value>
+                <fullName>Job Search Agent</fullName>
+                <default>false</default>
+                <label>Job Search Agent</label>
+            </value>
+            <value>
+                <fullName>JS / Employer Concern</fullName>
+                <default>false</default>
+                <label>JS / Employer Concern</label>
+            </value>
+            <value>
+                <fullName>KIX-Employers</fullName>
+                <default>false</default>
+                <label>KIX-Employers</label>
+            </value>
+            <value>
+                <fullName>KIX-Seekers</fullName>
+                <default>false</default>
+                <label>KIX-Seekers</label>
+            </value>
+            <value>
+                <fullName>Letter Content Admin</fullName>
+                <default>false</default>
+                <label>Letter Content Admin</label>
+            </value>
+            <value>
+                <fullName>Monitor</fullName>
+                <default>false</default>
+                <label>Monitor</label>
+            </value>
+            <value>
+                <fullName>NAP</fullName>
+                <default>false</default>
+                <label>NAP</label>
+            </value>
+            <value>
+                <fullName>Newspaper</fullName>
+                <default>false</default>
+                <label>Newspaper</label>
+            </value>
+            <value>
+                <fullName>Order Screening</fullName>
+                <default>false</default>
+                <label>Order Screening</label>
+            </value>
+            <value>
+                <fullName>Other Alert</fullName>
+                <default>false</default>
+                <label>Other Alert</label>
+            </value>
+            <value>
+                <fullName>Other External</fullName>
+                <default>false</default>
+                <label>Other External</label>
+            </value>
+            <value>
+                <fullName>Other Internal</fullName>
+                <default>false</default>
+                <label>Other Internal</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Phone</fullName>
+                <default>false</default>
+                <label>Phone</label>
+            </value>
+            <value>
+                <fullName>Quality</fullName>
+                <default>false</default>
+                <label>Quality</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Seeker</fullName>
+                <default>false</default>
+                <label>Seeker</label>
+            </value>
+            <value>
+                <fullName>Voice Mail</fullName>
+                <default>false</default>
+                <label>Voice Mail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,16 @@
+.tableheader {
+    border: 0.5px solid #dddddd;
+    padding: 5px;
+    font-size: 12px;
+    background-color: #2E86C1;
+    color: white;
+}
+
+.tabledata {
+    border: 0.5px solid #dddddd;
+    padding: 5px;
+    font-size: 10px;
+    background: #f3f2f2;
+    word-wrap: break-word;
+    word-break: break-all;
+}

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OrderRejectionReason__c</fullName>
+    <label>Order Rejection Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>STD User Info</fullName>
+                <default>false</default>
+                <label>STD User Info</label>
+            </value>
+            <value>
+                <fullName>STD Contract documentation</fullName>
+                <default>false</default>
+                <label>STD Contract documentation</label>
+            </value>
+            <value>
+                <fullName>STD Date Discrepancy</fullName>
+                <default>false</default>
+                <label>STD Date Discrepancy</label>
+            </value>
+            <value>
+                <fullName>STD Account Discrepancy</fullName>
+                <default>false</default>
+                <label>STD Account Discrepancy</label>
+            </value>
+            <value>
+                <fullName>STD Credit &amp; Rebill</fullName>
+                <default>false</default>
+                <label>STD Credit &amp; Rebill</label>
+            </value>
+            <value>
+                <fullName>STD Product Issue</fullName>
+                <default>false</default>
+                <label>STD Product Issue</label>
+            </value>
+            <value>
+                <fullName>STD Price/Pricelist</fullName>
+                <default>false</default>
+                <label>STD Price/Pricelist</label>
+            </value>
+            <value>
+                <fullName>STD VAT / Registration Number</fullName>
+                <default>false</default>
+                <label>STD VAT / Registration Number</label>
+            </value>
+            <value>
+                <fullName>STD Xcode</fullName>
+                <default>false</default>
+                <label>STD Xcode</label>
+            </value>
+            <value>
+                <fullName>STD Comp Form</fullName>
+                <default>false</default>
+                <label>STD Comp Form</label>
+            </value>
+            <value>
+                <fullName>STD Payment Term/Payment Type</fullName>
+                <default>false</default>
+                <label>STD Payment Term/Payment Type</label>
+            </value>
+            <value>
+                <fullName>STD NSSA</fullName>
+                <default>false</default>
+                <label>STD NSSA</label>
+            </value>
+            <value>
+                <fullName>STD Sales Channel</fullName>
+                <default>false</default>
+                <label>STD Sales Channel</label>
+            </value>
+            <value>
+                <fullName>STD Purchase Order</fullName>
+                <default>false</default>
+                <label>STD Purchase Order</label>
+            </value>
+            <value>
+                <fullName>STD Order Type</fullName>
+                <default>false</default>
+                <label>STD Order Type</label>
+            </value>
+            <value>
+                <fullName>STD Sales Rep Clarification</fullName>
+                <default>false</default>
+                <label>STD Sales Rep Clarification</label>
+            </value>
+            <value>
+                <fullName>STD Resume License Already Exists</fullName>
+                <default>false</default>
+                <label>STD Resume License Already Exists</label>
+            </value>
+            <value>
+                <fullName>STD Missing MSA</fullName>
+                <default>false</default>
+                <label>STD Missing MSA</label>
+            </value>
+            <value>
+                <fullName>STD Product Conversion Setup Incorrectly</fullName>
+                <default>false</default>
+                <label>STD Product Conversion Setup Incorrectly</label>
+            </value>
+            <value>
+                <fullName>STD Internal System Issue - GCS tracking</fullName>
+                <default>false</default>
+                <label>STD Internal System Issue - GCS tracking</label>
+            </value>
+            <value>
+                <fullName>NP Discount: Agency disc. Missing/Incorr</fullName>
+                <default>false</default>
+                <label>NP Discount: Agency disc. Missing/Incorr</label>
+            </value>
+            <value>
+                <fullName>NP Discount: Approval Missing</fullName>
+                <default>false</default>
+                <label>NP Discount: Approval Missing</label>
+            </value>
+            <value>
+                <fullName>NP Discount: Discount Missing</fullName>
+                <default>false</default>
+                <label>NP Discount: Discount Missing</label>
+            </value>
+            <value>
+                <fullName>NP Discount: Incorrect Discounting</fullName>
+                <default>false</default>
+                <label>NP Discount: Incorrect Discounting</label>
+            </value>
+            <value>
+                <fullName>NP Email: &gt; 1 Order Per Incident</fullName>
+                <default>false</default>
+                <label>NP Email: &gt; 1 Order Per Incident</label>
+            </value>
+            <value>
+                <fullName>NP Email: Duplicate Order Submitted</fullName>
+                <default>false</default>
+                <label>NP Email: Duplicate Order Submitted</label>
+            </value>
+            <value>
+                <fullName>NP Email: Missing Attachment/Form</fullName>
+                <default>false</default>
+                <label>NP Email: Missing Attachment/Form</label>
+            </value>
+            <value>
+                <fullName>NP Form: Bottom pricing portion incomple</fullName>
+                <default>false</default>
+                <label>NP Form: Bottom pricing portion incomple</label>
+            </value>
+            <value>
+                <fullName>NP Form:Comp Name Doesnt Match Contract</fullName>
+                <default>false</default>
+                <label>NP Form:Comp Name Doesnt Match Contract</label>
+            </value>
+            <value>
+                <fullName>NP Form:Comp Name Missng/Karma Mismatch</fullName>
+                <default>false</default>
+                <label>NP Form:Comp Name Missng/Karma Mismatch</label>
+            </value>
+            <value>
+                <fullName>NP Form: Contract Price Doesnt match Kar</fullName>
+                <default>false</default>
+                <label>NP Form: Contract Price Doesnt match Kar</label>
+            </value>
+            <value>
+                <fullName>NP Form: Email Missing\Karma Mismatch</fullName>
+                <default>false</default>
+                <label>NP Form: Email Missing\Karma Mismatch</label>
+            </value>
+            <value>
+                <fullName>NP Form: Incorrect amounts for prod sel</fullName>
+                <default>false</default>
+                <label>NP Form: Incorrect amounts for prod sel</label>
+            </value>
+            <value>
+                <fullName>NP Form: Incorrect/Missing Information</fullName>
+                <default>false</default>
+                <label>NP Form: Incorrect/Missing Information</label>
+            </value>
+            <value>
+                <fullName>NP Form: Incorrec/Missing Start/End date</fullName>
+                <default>false</default>
+                <label>NP Form: Incorrec/Missing Start/End date</label>
+            </value>
+            <value>
+                <fullName>NP Form: Missing OO# for Mid-Contract</fullName>
+                <default>false</default>
+                <label>NP Form: Missing OO# for Mid-Contract</label>
+            </value>
+            <value>
+                <fullName>NP Form: Missing Terms &amp; Conditions</fullName>
+                <default>false</default>
+                <label>NP Form: Missing Terms &amp; Conditions</label>
+            </value>
+            <value>
+                <fullName>NP Form: Newspaper Addre Used as Bill-To</fullName>
+                <default>false</default>
+                <label>NP Form: Newspaper Addre Used as Bill-To</label>
+            </value>
+            <value>
+                <fullName>NP Form: Product not listed correctly</fullName>
+                <default>false</default>
+                <label>NP Form: Product not listed correctly</label>
+            </value>
+            <value>
+                <fullName>NP Form: Wrong Qnty of Products Selected</fullName>
+                <default>false</default>
+                <label>NP Form: Wrong Qnty of Products Selected</label>
+            </value>
+            <value>
+                <fullName>NP Form: Wrong/Unclear Bill-To Newspaper</fullName>
+                <default>false</default>
+                <label>NP Form: Wrong/Unclear Bill-To Newspaper</label>
+            </value>
+            <value>
+                <fullName>NP NSSA:  Missing Signatures/Incorrect</fullName>
+                <default>false</default>
+                <label>NP NSSA:  Missing Signatures/Incorrect</label>
+            </value>
+            <value>
+                <fullName>NP NSSA:  No approval/NSSA for discount</fullName>
+                <default>false</default>
+                <label>NP NSSA:  No approval/NSSA for discount</label>
+            </value>
+            <value>
+                <fullName>NP NSSA: Ttl/Cmpny Do Not Match Contract</fullName>
+                <default>false</default>
+                <label>NP NSSA: Ttl/Cmpny Do Not Match Contract</label>
+            </value>
+            <value>
+                <fullName>NP On Hold: Compliance</fullName>
+                <default>false</default>
+                <label>NP On Hold: Compliance</label>
+            </value>
+            <value>
+                <fullName>NP On Hold: Compliance and Finance</fullName>
+                <default>false</default>
+                <label>NP On Hold: Compliance and Finance</label>
+            </value>
+            <value>
+                <fullName>NP On Hold: Finance</fullName>
+                <default>false</default>
+                <label>NP On Hold: Finance</label>
+            </value>
+            <value>
+                <fullName>NP Other: Internal System Issue</fullName>
+                <default>false</default>
+                <label>NP Other: Internal System Issue</label>
+            </value>
+            <value>
+                <fullName>NP Other: Other (Define in Private Note)</fullName>
+                <default>false</default>
+                <label>NP Other: Other (Define in Private Note)</label>
+            </value>
+            <value>
+                <fullName>NP Other: PayGo x-code</fullName>
+                <default>false</default>
+                <label>NP Other: PayGo x-code</label>
+            </value>
+            <value>
+                <fullName>NP Renewal: Unable to Locate Account</fullName>
+                <default>false</default>
+                <label>NP Renewal: Unable to Locate Account</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

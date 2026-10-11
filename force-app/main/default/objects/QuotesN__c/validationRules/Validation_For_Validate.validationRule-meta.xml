@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_For_Validate</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL( Quote_Path__c , &apos;Ready For Validation&apos;),if( Finalised__c,false,true ) )</errorConditionFormula>
+    <errorMessage>Please First Finalised and then Validate</errorMessage>
+</ValidationRule>

@@ -1,0 +1,40 @@
+<apex:page standardController="QuotesN__c" action="{!UpadteOpp}" extensions="GeneratePdf" showHeader="true" lightningStylesheets="true" sidebar="true" applyHtmlTag="true" docType="html-5.0" cache="false" tabStyle="QuotesN__c">
+  <apex:sectionHeader title="Generate Proposal"  />
+
+    <apex:form >
+
+     <!--  <apex:pageBlock title="Options">
+                     
+                    <b>1. Select Output Format </b> 
+                     <apex:selectRadio value="{!type}">
+                          <apex:selectOptions value="{!Items}"/>
+                          
+                     </apex:selectRadio>
+                   
+                   
+                    <b> 2. Select template from the list below and click Generate  </b><br /><br />
+                 
+        </apex:pageBlock>-->
+        
+        <apex:pageblock mode="edit" title="Templates" >
+            <apex:pageblockButtons location="top">
+                    <apex:commandButton value="Generate"  id="abc" disabled="{!a}" action="{!Generate}" />
+                    <apex:commandButton value="cancel" action="{!cancel}"/>
+            </apex:pageblockButtons>
+        
+                  
+                <apex:selectRadio value="{!pdfdoc_val}" layout="pageDirection">
+                    
+                      <apex:selectOptions value="{!pdfdoc}" > 
+                      </apex:selectOptions>
+                      <apex:actionSupport action="{!selectcon}" event="onclick" reRender="abc">   
+                      </apex:actionsupport>
+                </apex:selectRadio>
+            
+              
+        </apex:pageblock>
+ 
+    </apex:form>
+   
+  
+</apex:page>

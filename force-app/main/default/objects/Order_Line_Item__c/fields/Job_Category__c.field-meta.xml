@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Job_Category__c</fullName>
+    <label>Job Category</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Purchasing</fullName>
+                <default>false</default>
+                <label>Purchasing</label>
+            </value>
+            <value>
+                <fullName>Architectural Services</fullName>
+                <default>false</default>
+                <label>Architectural Services</label>
+            </value>
+            <value>
+                <fullName>Computers, Hardware</fullName>
+                <default>false</default>
+                <label>Computers, Hardware</label>
+            </value>
+            <value>
+                <fullName>General/Other: Installation/Ma</fullName>
+                <default>false</default>
+                <label>General/Other: Installation/Ma</label>
+            </value>
+            <value>
+                <fullName>Tax Accounting</fullName>
+                <default>false</default>
+                <label>Tax Accounting</label>
+            </value>
+            <value>
+                <fullName>Bookkeeping</fullName>
+                <default>false</default>
+                <label>Bookkeeping</label>
+            </value>
+            <value>
+                <fullName>Visual/Display Merchandising</fullName>
+                <default>false</default>
+                <label>Visual/Display Merchandising</label>
+            </value>
+            <value>
+                <fullName>Building and Grounds Maintenan</fullName>
+                <default>false</default>
+                <label>Building and Grounds Maintenan</label>
+            </value>
+            <value>
+                <fullName>Facilities Management/Maintena</fullName>
+                <default>false</default>
+                <label>Facilities Management/Maintena</label>
+            </value>
+            <value>
+                <fullName>Nursing</fullName>
+                <default>false</default>
+                <label>Nursing</label>
+            </value>
+            <value>
+                <fullName>General/Other: Human Resources</fullName>
+                <default>false</default>
+                <label>General/Other: Human Resources</label>
+            </value>
+            <value>
+                <fullName>Truck Driving</fullName>
+                <default>false</default>
+                <label>Truck Driving</label>
+            </value>
+            <value>
+                <fullName>Photography and Videography</fullName>
+                <default>false</default>
+                <label>Photography and Videography</label>
+            </value>
+            <value>
+                <fullName>Data Entry/Order Processing</fullName>
+                <default>false</default>
+                <label>Data Entry/Order Processing</label>
+            </value>
+            <value>
+                <fullName>Guide (Tour)</fullName>
+                <default>false</default>
+                <label>Guide (Tour)</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Optical</fullName>
+                <default>false</default>
+                <label>Healthcare - Optical</label>
+            </value>
+            <value>
+                <fullName>Security/Protective Services</fullName>
+                <default>false</default>
+                <label>Security/Protective Services</label>
+            </value>
+            <value>
+                <fullName>Machining/CNC</fullName>
+                <default>false</default>
+                <label>Machining/CNC</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Social Services/M</fullName>
+                <default>false</default>
+                <label>Healthcare - Social Services/M</label>
+            </value>
+            <value>
+                <fullName>Retail/Counter Sales and Cashi</fullName>
+                <default>false</default>
+                <label>Retail/Counter Sales and Cashi</label>
+            </value>
+            <value>
+                <fullName>Operations/Plant Management</fullName>
+                <default>false</default>
+                <label>Operations/Plant Management</label>
+            </value>
+            <value>
+                <fullName>Early Childhood Care &amp; Develop</fullName>
+                <default>false</default>
+                <label>Early Childhood Care &amp; Develop</label>
+            </value>
+            <value>
+                <fullName>Filing/Records Management</fullName>
+                <default>false</default>
+                <label>Filing/Records Management</label>
+            </value>
+            <value>
+                <fullName>Marketing/Product</fullName>
+                <default>false</default>
+                <label>Marketing/Product</label>
+            </value>
+            <value>
+                <fullName>Site Superintendent</fullName>
+                <default>false</default>
+                <label>Site Superintendent</label>
+            </value>
+            <value>
+                <fullName>Call Center</fullName>
+                <default>false</default>
+                <label>Call Center</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Quality Assurance/Safety</fullName>
+                <default>false</default>
+                <label>Quality Assurance/Safety</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Laboratory/Pathol</fullName>
+                <default>false</default>
+                <label>Healthcare - Laboratory/Pathol</label>
+            </value>
+            <value>
+                <fullName>Dental Assistant/Hygienist</fullName>
+                <default>false</default>
+                <label>Dental Assistant/Hygienist</label>
+            </value>
+            <value>
+                <fullName>Flooring/Tiling/Painting/Wallp</fullName>
+                <default>false</default>
+                <label>Flooring/Tiling/Painting/Wallp</label>
+            </value>
+            <value>
+                <fullName>Medical/Health</fullName>
+                <default>false</default>
+                <label>Medical/Health</label>
+            </value>
+            <value>
+                <fullName>Hospitality/Tourism</fullName>
+                <default>false</default>
+                <label>Hospitality/Tourism</label>
+            </value>
+            <value>
+                <fullName>Creative/Design</fullName>
+                <default>false</default>
+                <label>Creative/Design</label>
+            </value>
+            <value>
+                <fullName>Telemarketing</fullName>
+                <default>false</default>
+                <label>Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Computer Services</fullName>
+                <default>false</default>
+                <label>Computer Services</label>
+            </value>
+            <value>
+                <fullName>Food Services/Hospitality</fullName>
+                <default>false</default>
+                <label>Food Services/Hospitality</label>
+            </value>
+            <value>
+                <fullName>EMT/Paramedic</fullName>
+                <default>false</default>
+                <label>EMT/Paramedic</label>
+            </value>
+            <value>
+                <fullName>General/Other: Production/Oper</fullName>
+                <default>false</default>
+                <label>General/Other: Production/Oper</label>
+            </value>
+            <value>
+                <fullName>Credit Review/Analysis</fullName>
+                <default>false</default>
+                <label>Credit Review/Analysis</label>
+            </value>
+            <value>
+                <fullName>Landscaping</fullName>
+                <default>false</default>
+                <label>Landscaping</label>
+            </value>
+            <value>
+                <fullName>Fitness &amp; Sports Training/Inst</fullName>
+                <default>false</default>
+                <label>Fitness &amp; Sports Training/Inst</label>
+            </value>
+            <value>
+                <fullName>Sewing and Tailoring</fullName>
+                <default>false</default>
+                <label>Sewing and Tailoring</label>
+            </value>
+            <value>
+                <fullName>Manufacturing/Production/Opera</fullName>
+                <default>false</default>
+                <label>Manufacturing/Production/Opera</label>
+            </value>
+            <value>
+                <fullName>Editing &amp; Proofreading</fullName>
+                <default>false</default>
+                <label>Editing &amp; Proofreading</label>
+            </value>
+            <value>
+                <fullName>Claims Processing</fullName>
+                <default>false</default>
+                <label>Claims Processing</label>
+            </value>
+            <value>
+                <fullName>Automotive/Motor Vehicle/Parts</fullName>
+                <default>false</default>
+                <label>Automotive/Motor Vehicle/Parts</label>
+            </value>
+            <value>
+                <fullName>Banking/Real Estate/Mortgage P</fullName>
+                <default>false</default>
+                <label>Banking/Real Estate/Mortgage P</label>
+            </value>
+            <value>
+                <fullName>Consulting Services</fullName>
+                <default>false</default>
+                <label>Consulting Services</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverage Serving</fullName>
+                <default>false</default>
+                <label>Food &amp; Beverage Serving</label>
+            </value>
+            <value>
+                <fullName>Carpentry/Framing</fullName>
+                <default>false</default>
+                <label>Carpentry/Framing</label>
+            </value>
+            <value>
+                <fullName>Editorial/Writing</fullName>
+                <default>false</default>
+                <label>Editorial/Writing</label>
+            </value>
+            <value>
+                <fullName>Layout, Prepress, Printing, &amp;</fullName>
+                <default>false</default>
+                <label>Layout, Prepress, Printing, &amp;</label>
+            </value>
+            <value>
+                <fullName>Environmental Services</fullName>
+                <default>false</default>
+                <label>Environmental Services</label>
+            </value>
+            <value>
+                <fullName>Food Preparation/Cooking</fullName>
+                <default>false</default>
+                <label>Food Preparation/Cooking</label>
+            </value>
+            <value>
+                <fullName>Food Safety and Inspection</fullName>
+                <default>false</default>
+                <label>Food Safety and Inspection</label>
+            </value>
+            <value>
+                <fullName>Social Service</fullName>
+                <default>false</default>
+                <label>Social Service</label>
+            </value>
+            <value>
+                <fullName>Transcription</fullName>
+                <default>false</default>
+                <label>Transcription</label>
+            </value>
+            <value>
+                <fullName>Agriculture, Forestry, &amp; Fishi</fullName>
+                <default>false</default>
+                <label>Agriculture, Forestry, &amp; Fishi</label>
+            </value>
+            <value>
+                <fullName>Business/Strategic Management</fullName>
+                <default>false</default>
+                <label>Business/Strategic Management</label>
+            </value>
+            <value>
+                <fullName>Computer/Electronics/Telecomm</fullName>
+                <default>false</default>
+                <label>Computer/Electronics/Telecomm</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Other</fullName>
+                <default>false</default>
+                <label>Healthcare - Other</label>
+            </value>
+            <value>
+                <fullName>Transportation and Warehousing</fullName>
+                <default>false</default>
+                <label>Transportation and Warehousing</label>
+            </value>
+            <value>
+                <fullName>Ironwork/Metal Fabrication</fullName>
+                <default>false</default>
+                <label>Ironwork/Metal Fabrication</label>
+            </value>
+            <value>
+                <fullName>Vehicle Repair and Maintenance</fullName>
+                <default>false</default>
+                <label>Vehicle Repair and Maintenance</label>
+            </value>
+            <value>
+                <fullName>IT/Software Development</fullName>
+                <default>false</default>
+                <label>IT/Software Development</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Audio/Video Broadcast &amp; Postpr</fullName>
+                <default>false</default>
+                <label>Audio/Video Broadcast &amp; Postpr</label>
+            </value>
+            <value>
+                <fullName>Accounts Payable/Receivable</fullName>
+                <default>false</default>
+                <label>Accounts Payable/Receivable</label>
+            </value>
+            <value>
+                <fullName>Advertising/Marketing/Public R</fullName>
+                <default>false</default>
+                <label>Advertising/Marketing/Public R</label>
+            </value>
+            <value>
+                <fullName>General/Other: Training/Instru</fullName>
+                <default>false</default>
+                <label>General/Other: Training/Instru</label>
+            </value>
+            <value>
+                <fullName>Sales/Retail/Business Developm</fullName>
+                <default>false</default>
+                <label>Sales/Retail/Business Developm</label>
+            </value>
+            <value>
+                <fullName>Engineering</fullName>
+                <default>false</default>
+                <label>Engineering</label>
+            </value>
+            <value>
+                <fullName>Banking</fullName>
+                <default>false</default>
+                <label>Banking</label>
+            </value>
+            <value>
+                <fullName>Building Construction/Skilled</fullName>
+                <default>false</default>
+                <label>Building Construction/Skilled</label>
+            </value>
+            <value>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+                <label>Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Healthcare - CNAs/Aides/MAs/Ho</fullName>
+                <default>false</default>
+                <label>Healthcare - CNAs/Aides/MAs/Ho</label>
+            </value>
+            <value>
+                <fullName>Plumbing/Pipefitting</fullName>
+                <default>false</default>
+                <label>Plumbing/Pipefitting</label>
+            </value>
+            <value>
+                <fullName>Equipment/Forklift/Crane Opera</fullName>
+                <default>false</default>
+                <label>Equipment/Forklift/Crane Opera</label>
+            </value>
+            <value>
+                <fullName>Store/Branch Management</fullName>
+                <default>false</default>
+                <label>Store/Branch Management</label>
+            </value>
+            <value>
+                <fullName>Car, Van and Bus Driving</fullName>
+                <default>false</default>
+                <label>Car, Van and Bus Driving</label>
+            </value>
+            <value>
+                <fullName>Healthcare Aid</fullName>
+                <default>false</default>
+                <label>Healthcare Aid</label>
+            </value>
+            <value>
+                <fullName>Travel Agent/Ticket Sales</fullName>
+                <default>false</default>
+                <label>Travel Agent/Ticket Sales</label>
+            </value>
+            <value>
+                <fullName>Airlines</fullName>
+                <default>false</default>
+                <label>Airlines</label>
+            </value>
+            <value>
+                <fullName>Veterinary Services</fullName>
+                <default>false</default>
+                <label>Veterinary Services</label>
+            </value>
+            <value>
+                <fullName>Electrician</fullName>
+                <default>false</default>
+                <label>Electrician</label>
+            </value>
+            <value>
+                <fullName>Hair Cutting/Styling</fullName>
+                <default>false</default>
+                <label>Hair Cutting/Styling</label>
+            </value>
+            <value>
+                <fullName>General/Other: Construction/Sk</fullName>
+                <default>false</default>
+                <label>General/Other: Construction/Sk</label>
+            </value>
+            <value>
+                <fullName>Building/Construction Inspecti</fullName>
+                <default>false</default>
+                <label>Building/Construction Inspecti</label>
+            </value>
+            <value>
+                <fullName>Wire and Cable Install/Maintai</fullName>
+                <default>false</default>
+                <label>Wire and Cable Install/Maintai</label>
+            </value>
+            <value>
+                <fullName>Logistics/Transportation</fullName>
+                <default>false</default>
+                <label>Logistics/Transportation</label>
+            </value>
+            <value>
+                <fullName>Host/Hostess</fullName>
+                <default>false</default>
+                <label>Host/Hostess</label>
+            </value>
+            <value>
+                <fullName>Insurance</fullName>
+                <default>false</default>
+                <label>Insurance</label>
+            </value>
+            <value>
+                <fullName>General/Other: Medical/Health</fullName>
+                <default>false</default>
+                <label>General/Other: Medical/Health</label>
+            </value>
+            <value>
+                <fullName>Waste Management Services</fullName>
+                <default>false</default>
+                <label>Waste Management Services</label>
+            </value>
+            <value>
+                <fullName>Nonprofit</fullName>
+                <default>false</default>
+                <label>Nonprofit</label>
+            </value>
+            <value>
+                <fullName>HVAC</fullName>
+                <default>false</default>
+                <label>HVAC</label>
+            </value>
+            <value>
+                <fullName>Laundry and Dry-Cleaning Opera</fullName>
+                <default>false</default>
+                <label>Laundry and Dry-Cleaning Opera</label>
+            </value>
+            <value>
+                <fullName>General/Other: Sales/Business</fullName>
+                <default>false</default>
+                <label>General/Other: Sales/Business</label>
+            </value>
+            <value>
+                <fullName>Energy/Utilities</fullName>
+                <default>false</default>
+                <label>Energy/Utilities</label>
+            </value>
+            <value>
+                <fullName>Front Desk/Reception</fullName>
+                <default>false</default>
+                <label>Front Desk/Reception</label>
+            </value>
+            <value>
+                <fullName>Retail Customer Service</fullName>
+                <default>false</default>
+                <label>Retail Customer Service</label>
+            </value>
+            <value>
+                <fullName>Hazardous Materials Handling</fullName>
+                <default>false</default>
+                <label>Hazardous Materials Handling</label>
+            </value>
+            <value>
+                <fullName>Heavy Equipment Operation</fullName>
+                <default>false</default>
+                <label>Heavy Equipment Operation</label>
+            </value>
+            <value>
+                <fullName>Equipment Operations</fullName>
+                <default>false</default>
+                <label>Equipment Operations</label>
+            </value>
+            <value>
+                <fullName>General/Other: Security/Protec</fullName>
+                <default>false</default>
+                <label>General/Other: Security/Protec</label>
+            </value>
+            <value>
+                <fullName>Messenger/Courier</fullName>
+                <default>false</default>
+                <label>Messenger/Courier</label>
+            </value>
+            <value>
+                <fullName>Locksmith</fullName>
+                <default>false</default>
+                <label>Locksmith</label>
+            </value>
+            <value>
+                <fullName>Janitorial &amp; Cleaning</fullName>
+                <default>false</default>
+                <label>Janitorial &amp; Cleaning</label>
+            </value>
+            <value>
+                <fullName>Guest Services/Concierge</fullName>
+                <default>false</default>
+                <label>Guest Services/Concierge</label>
+            </value>
+            <value>
+                <fullName>Payroll and Benefits Administr</fullName>
+                <default>false</default>
+                <label>Payroll and Benefits Administr</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Medical &amp; Dental</fullName>
+                <default>false</default>
+                <label>Healthcare - Medical &amp; Dental</label>
+            </value>
+            <value>
+                <fullName>Vehicle Dispatch, Routing and</fullName>
+                <default>false</default>
+                <label>Vehicle Dispatch, Routing and</label>
+            </value>
+            <value>
+                <fullName>Biotech/R&amp;D/Science</fullName>
+                <default>false</default>
+                <label>Biotech/R&amp;D/Science</label>
+            </value>
+            <value>
+                <fullName>Concrete and Masonry</fullName>
+                <default>false</default>
+                <label>Concrete and Masonry</label>
+            </value>
+            <value>
+                <fullName>Roofing</fullName>
+                <default>false</default>
+                <label>Roofing</label>
+            </value>
+            <value>
+                <fullName>Accounting/Finance/Insurance</fullName>
+                <default>false</default>
+                <label>Accounting/Finance/Insurance</label>
+            </value>
+            <value>
+                <fullName>Loan Officer/Originator</fullName>
+                <default>false</default>
+                <label>Loan Officer/Originator</label>
+            </value>
+            <value>
+                <fullName>Assembly/Assembly Line</fullName>
+                <default>false</default>
+                <label>Assembly/Assembly Line</label>
+            </value>
+            <value>
+                <fullName>Electronics</fullName>
+                <default>false</default>
+                <label>Electronics</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Events/Promotional Marketing</fullName>
+                <default>false</default>
+                <label>Events/Promotional Marketing</label>
+            </value>
+            <value>
+                <fullName>Waste Pick-up and Removal</fullName>
+                <default>false</default>
+                <label>Waste Pick-up and Removal</label>
+            </value>
+            <value>
+                <fullName>Human Resources</fullName>
+                <default>false</default>
+                <label>Human Resources</label>
+            </value>
+            <value>
+                <fullName>Administrative Support</fullName>
+                <default>false</default>
+                <label>Administrative Support</label>
+            </value>
+            <value>
+                <fullName>Administrative/Clerical</fullName>
+                <default>false</default>
+                <label>Administrative/Clerical</label>
+            </value>
+            <value>
+                <fullName>Equipment Install/Maintain/Rep</fullName>
+                <default>false</default>
+                <label>Equipment Install/Maintain/Rep</label>
+            </value>
+            <value>
+                <fullName>General/Other: Quality Assuran</fullName>
+                <default>false</default>
+                <label>General/Other: Quality Assuran</label>
+            </value>
+            <value>
+                <fullName>Installation/Maintenance/Repai</fullName>
+                <default>false</default>
+                <label>Installation/Maintenance/Repai</label>
+            </value>
+            <value>
+                <fullName>Inventory Planning and Managem</fullName>
+                <default>false</default>
+                <label>Inventory Planning and Managem</label>
+            </value>
+            <value>
+                <fullName>Sales - Account Management</fullName>
+                <default>false</default>
+                <label>Sales - Account Management</label>
+            </value>
+            <value>
+                <fullName>Healthcare - LPNs &amp; LVNs</fullName>
+                <default>false</default>
+                <label>Healthcare - LPNs &amp; LVNs</label>
+            </value>
+            <value>
+                <fullName>Operations Management</fullName>
+                <default>false</default>
+                <label>Operations Management</label>
+            </value>
+            <value>
+                <fullName>Merchandise Planning and Buyin</fullName>
+                <default>false</default>
+                <label>Merchandise Planning and Buyin</label>
+            </value>
+            <value>
+                <fullName>Research &amp; Development</fullName>
+                <default>false</default>
+                <label>Research &amp; Development</label>
+            </value>
+            <value>
+                <fullName>Security Guard</fullName>
+                <default>false</default>
+                <label>Security Guard</label>
+            </value>
+            <value>
+                <fullName>Restaurant Management</fullName>
+                <default>false</default>
+                <label>Restaurant Management</label>
+            </value>
+            <value>
+                <fullName>Computer, Software</fullName>
+                <default>false</default>
+                <label>Computer, Software</label>
+            </value>
+            <value>
+                <fullName>Healthcare - Therapy/Rehab Ser</fullName>
+                <default>false</default>
+                <label>Healthcare - Therapy/Rehab Ser</label>
+            </value>
+            <value>
+                <fullName>General/Other: Logistics/Trans</fullName>
+                <default>false</default>
+                <label>General/Other: Logistics/Trans</label>
+            </value>
+            <value>
+                <fullName>General/Other: Food Services</fullName>
+                <default>false</default>
+                <label>General/Other: Food Services</label>
+            </value>
+            <value>
+                <fullName>Graphic Arts/Illustration</fullName>
+                <default>false</default>
+                <label>Graphic Arts/Illustration</label>
+            </value>
+            <value>
+                <fullName>Education/Training</fullName>
+                <default>false</default>
+                <label>Education/Training</label>
+            </value>
+            <value>
+                <fullName>Secretary/Executive Assistant</fullName>
+                <default>false</default>
+                <label>Secretary/Executive Assistant</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Cost Estimating</fullName>
+                <default>false</default>
+                <label>Cost Estimating</label>
+            </value>
+            <value>
+                <fullName>Project/Program Management</fullName>
+                <default>false</default>
+                <label>Project/Program Management</label>
+            </value>
+            <value>
+                <fullName>Environmental Protection/Conse</fullName>
+                <default>false</default>
+                <label>Environmental Protection/Conse</label>
+            </value>
+            <value>
+                <fullName>Shipping and Receiving/Warehou</fullName>
+                <default>false</default>
+                <label>Shipping and Receiving/Warehou</label>
+            </value>
+            <value>
+                <fullName>Classroom Teaching</fullName>
+                <default>false</default>
+                <label>Classroom Teaching</label>
+            </value>
+            <value>
+                <fullName>Reservations/Ticketing</fullName>
+                <default>false</default>
+                <label>Reservations/Ticketing</label>
+            </value>
+            <value>
+                <fullName>Customer Support/Client Care</fullName>
+                <default>false</default>
+                <label>Customer Support/Client Care</label>
+            </value>
+            <value>
+                <fullName>Laboratory/Pathology</fullName>
+                <default>false</default>
+                <label>Laboratory/Pathology</label>
+            </value>
+            <value>
+                <fullName>Arts, Entertainment, and Media</fullName>
+                <default>false</default>
+                <label>Arts, Entertainment, and Media</label>
+            </value>
+            <value>
+                <fullName>Production Quality Assurance</fullName>
+                <default>false</default>
+                <label>Production Quality Assurance</label>
+            </value>
+            <value>
+                <fullName>General/Other: Creative/Design</fullName>
+                <default>false</default>
+                <label>General/Other: Creative/Design</label>
+            </value>
+            <value>
+                <fullName>Bank Teller</fullName>
+                <default>false</default>
+                <label>Bank Teller</label>
+            </value>
+            <value>
+                <fullName>Internet/E-Commerce</fullName>
+                <default>false</default>
+                <label>Internet/E-Commerce</label>
+            </value>
+            <value>
+                <fullName>Optical</fullName>
+                <default>false</default>
+                <label>Optical</label>
+            </value>
+            <value>
+                <fullName>General/Other: Administrative/</fullName>
+                <default>false</default>
+                <label>General/Other: Administrative/</label>
+            </value>
+            <value>
+                <fullName>Veterinary/Animal Care</fullName>
+                <default>false</default>
+                <label>Veterinary/Animal Care</label>
+            </value>
+            <value>
+                <fullName>Mathematical/Statistical Resea</fullName>
+                <default>false</default>
+                <label>Mathematical/Statistical Resea</label>
+            </value>
+            <value>
+                <fullName>Reception/Switchboard</fullName>
+                <default>false</default>
+                <label>Reception/Switchboard</label>
+            </value>
+            <value>
+                <fullName>Medical Therapy/Rehab Services</fullName>
+                <default>false</default>
+                <label>Medical Therapy/Rehab Services</label>
+            </value>
+            <value>
+                <fullName>General/Other: Accounting/Fina</fullName>
+                <default>false</default>
+                <label>General/Other: Accounting/Fina</label>
+            </value>
+            <value>
+                <fullName>Pharmacy</fullName>
+                <default>false</default>
+                <label>Pharmacy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

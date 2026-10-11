@@ -1,0 +1,107 @@
+<apex:page controller="Edit_Quote_Line_item" sidebar="false" lightningStylesheets="true">
+<apex:form >
+<apex:pagemessages ></apex:pagemessages>
+ <apex:pageblock >
+ <apex:pageblockButtons >
+ 
+ <apex:commandButton value="save" action="{!save}"/>
+
+ </apex:pageblockButtons>
+     
+     
+        <apex:pageblockTable value="{!ql}" var="j" id="o">
+         
+         <apex:column headerValue="Product" style="font-weight:700;" >
+        <apex:outputField value="{!j.Name}" style="width:40px;"/>
+        </apex:column>
+        
+        <apex:column headerValue="Product" style="font-weight:700;" >
+        <apex:outputField value="{!j.Product__c}" style="width:40px;"/>
+        </apex:column>
+        
+        <apex:column headerValue="Quantity" >
+        <apex:inputField value="{!j.Quantity__c}" style="width:60px;"/>
+        </apex:column>
+        
+        
+        
+         <apex:column headervalue="Start Date" >
+        <apex:inputField value="{!j.Start_Date__c}" required="true"/>
+        </apex:column>
+        
+         <apex:column headervalue="End Date">
+        <apex:inputField value="{!j.End_Date__c}"  required="true"/>
+        </apex:column>
+        
+       <apex:column headervalue="Contract Duration">
+        <apex:outputField value="{!j.Contract_Duration1__c}" />
+        </apex:column> <!----added by yam---->
+        
+             <apex:column headervalue="Comments">
+        <apex:inputField value="{!j.Comment__c}"/>
+            </apex:column>
+            
+             <apex:column headervalue="Discount Exception">
+        <apex:inputField value="{!j.Discount_Exception__c}"/>
+            </apex:column>
+        
+        
+        <apex:column headervalue="Adjustment type" >
+      <apex:inputField value="{!j.Adjustment_Type__c}" />  
+     <!--   <apex:inputField value="{!j.Adjustment_Type__c}" rendered="{!j.Product__r.No_Discount__c == false}"/>
+          <apex:outputText value="No Discount for this Product" rendered="{!j.Product__r.No_Discount__c == true}"/> -->
+          
+       
+        </apex:column>
+            
+        <apex:column headerValue="Adjustment Amount">
+        <apex:inputField value="{!j.Adjustment_Amount__c}" style="width:90px;"/> 
+        <!--  <apex:inputField value="{!j.Adjustment_Amount__c}" rendered="{!j.Product__r.No_Discount__c == false}" style="width:90px;"/>
+         <apex:outputText value=" " rendered="{!j.Product__r.No_Discount__c == true}"/> --->
+         
+        </apex:column>   
+        
+        
+         <apex:column headerValue="Price">
+        <apex:outputField value="{!j.Price__c}"/>
+        </apex:column> 
+        
+        
+           <apex:column headerValue="Price After Dis">
+        <apex:outputField value="{!j.Price_After_Discount__c}"/>
+        </apex:column> 
+        
+         <apex:column headerValue="Gross Total">
+        <apex:outputField value="{!j.Gross_Total__c}"/>
+        </apex:column>  
+        
+        <apex:column headerValue="Remove">
+       <apex:commandlink value="" action="{!remove}" reRender="o">
+      <center> <apex:image value="{!$Resource.remove}" width="20" height="20"/></center>
+       <apex:param name="ids" value="{!j.id}" assignTo="{!rem}"/>
+        </apex:commandlink>
+        </apex:column> 
+        
+        <apex:column headerValue="Approval status">
+       <apex:commandlink value="" action="{!check_approval}" reRender="o" target="_self" style="width:40px;">
+        <center><apex:image value="{!$Resource.Approval}" width="20" height="20"/></center>
+       <apex:param name="ids" value="{!j.id}" assignTo="{!rem}"/>
+        </apex:commandlink>
+        </apex:column> 
+        
+        
+          <apex:column headerValue="Action">
+       <apex:commandlink value="Re-Config" action="{!Recongif}" reRender="o" target="_self" style="width:60px;" immediate="true">
+    
+       <apex:param name="ids" value="{!j.id}" assignTo="{!rem}"/>
+        </apex:commandlink>
+        </apex:column>                      
+        </apex:pageblockTable> 
+         
+     
+     
+ 
+ 
+ </apex:pageblock>
+ </apex:form>
+</apex:page>

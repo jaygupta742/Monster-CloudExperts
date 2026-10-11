@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source1__c</fullName>
+    <label>LeadSource</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call Inbound</fullName>
+                <default>false</default>
+                <label>Call Inbound</label>
+            </value>
+            <value>
+                <fullName>Campus Hiring</fullName>
+                <default>false</default>
+                <label>Campus Hiring</label>
+            </value>
+            <value>
+                <fullName>Competitor</fullName>
+                <default>false</default>
+                <label>Competitor</label>
+            </value>
+            <value>
+                <fullName>CR</fullName>
+                <default>false</default>
+                <label>CR</label>
+            </value>
+            <value>
+                <fullName>Dun and Bradstreet</fullName>
+                <default>false</default>
+                <label>Dun and Bradstreet</label>
+            </value>
+            <value>
+                <fullName>ECOMM</fullName>
+                <default>false</default>
+                <label>ECOMM</label>
+            </value>
+            <value>
+                <fullName>EDM</fullName>
+                <default>false</default>
+                <label>EDM</label>
+            </value>
+            <value>
+                <fullName>Email Inbound</fullName>
+                <default>false</default>
+                <label>Email Inbound</label>
+            </value>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>INFO</fullName>
+                <default>false</default>
+                <label>INFO</label>
+            </value>
+            <value>
+                <fullName>Let us call you</fullName>
+                <default>false</default>
+                <label>Let us call you</label>
+            </value>
+            <value>
+                <fullName>Let Us call you Ecomm</fullName>
+                <default>false</default>
+                <label>Let Us call you Ecomm</label>
+            </value>
+            <value>
+                <fullName>MO-IN-CollegeSales</fullName>
+                <default>false</default>
+                <label>MO-IN-CollegeSales</label>
+            </value>
+            <value>
+                <fullName>NASSCOM</fullName>
+                <default>false</default>
+                <label>NASSCOM</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Product Enquiry</fullName>
+                <default>false</default>
+                <label>Product Enquiry</label>
+            </value>
+            <value>
+                <fullName>Prospect Lead</fullName>
+                <default>false</default>
+                <label>Prospect Lead</label>
+            </value>
+            <value>
+                <fullName>Recruiter Profile</fullName>
+                <default>false</default>
+                <label>Recruiter Profile</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Rep Generated</fullName>
+                <default>false</default>
+                <label>Rep Generated</label>
+            </value>
+            <value>
+                <fullName>Rozgar Duniya</fullName>
+                <default>false</default>
+                <label>Rozgar Duniya</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>SMS</fullName>
+                <default>false</default>
+                <label>SMS</label>
+            </value>
+            <value>
+                <fullName>Social Job Ads</fullName>
+                <default>false</default>
+                <label>Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>Start Up</fullName>
+                <default>false</default>
+                <label>Start Up</label>
+            </value>
+            <value>
+                <fullName>TeleMarketing</fullName>
+                <default>false</default>
+                <label>TeleMarketing</label>
+            </value>
+            <value>
+                <fullName>Tollfree</fullName>
+                <default>false</default>
+                <label>Tollfree</label>
+            </value>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

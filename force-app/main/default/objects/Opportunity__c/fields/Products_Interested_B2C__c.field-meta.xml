@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products_Interested_B2C__c</fullName>
+    <label>Products Interested</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Resume Highlighter</fullName>
+                <default>false</default>
+                <label>Resume Highlighter</label>
+            </value>
+            <value>
+                <fullName>Express Resume</fullName>
+                <default>false</default>
+                <label>Express Resume</label>
+            </value>
+            <value>
+                <fullName>Cover Letter</fullName>
+                <default>false</default>
+                <label>Cover Letter</label>
+            </value>
+            <value>
+                <fullName>Career Booster</fullName>
+                <default>false</default>
+                <label>Career Booster</label>
+            </value>
+            <value>
+                <fullName>Smart CV</fullName>
+                <default>false</default>
+                <label>Smart CV</label>
+            </value>
+            <value>
+                <fullName>Right Resume</fullName>
+                <default>false</default>
+                <label>Right Resume</label>
+            </value>
+            <value>
+                <fullName>LInkedin Makeover</fullName>
+                <default>false</default>
+                <label>LInkedin Makeover</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

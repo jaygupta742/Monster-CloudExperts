@@ -1,0 +1,828 @@
+<apex:page standardController="Account" tabStyle="Account" extensions="Account_create" lightningStylesheets="true">
+    <script>
+        function func() {
+
+            // alert('function call');
+            var d = '{!g}';
+            // alert(d);
+            this.parent.location.href = d;
+        }
+
+
+
+    </script>
+
+    <apex:outputText value="{!callfunc}" escape="false"></apex:outputText>
+
+    <apex:pagemessages />
+
+
+    <apex:form >
+        <!--@ jo to list existing list of similar account-->
+        <!--Not B2CProfile -->
+        <apex:outputPanel rendered="{!IF($User.ProfileId !='00e7F000000uSSeQAM',true,false)}">
+            <apex:pageBlock rendered="{!if(existing.size>0,true,false)}" title="Existing Accounts Found">
+
+                <apex:pageblockButtons >
+                    <apex:commandButton value="Merge And Save" action="{!merge_acc}" rendered="{!show_button}" />
+                    <apex:commandButton value="Save And Ignore" action="{!save_ignore}" rendered="{!showSaveButton}" />
+
+                </apex:pageblockButtons>
+                <apex:pageblockTable value="{!existing}" var="j">
+                    <apex:column >
+                        <apex:inputcheckbox value="{!j.b}" rendered="{!show_button}" />
+                    </apex:column>
+
+                    <apex:column value="{!j.j.name}" />
+                    <apex:column value="{!j.j.phone}" />
+                    <apex:column value="{!j.j.website}" />
+                    <apex:column value="{!j.j.Account_Sharing_Date__c}" />
+                </apex:pageblockTable>
+            </apex:pageBlock>
+        </apex:outputPanel>
+        <apex:outputPanel rendered="{!IF($User.ProfileId =='00e7F000000uSSeQAM',true,false)}">
+            <apex:pageBlock rendered="{!if(existing.size>0,true,false)}" title="Existing Accounts Found Please work on below lead">
+                <apex:pageblockTable value="{!existing}" var="j">
+
+                    <apex:column headerValue="Name">
+                        <apex:outputLink value="/{!j.j.id}" target="_blank">{!j.j.Name}</apex:outputLink>
+                    </apex:column>
+                    <apex:column value="{!j.j.Mobile__c}" />
+                    <apex:column value="{!j.j.Email__c}" />
+                </apex:pageblockTable>
+            </apex:pageBlock>
+        </apex:outputPanel>
+
+
+        <apex:outputPanel rendered="{!IF($User.ProfileId == '00eC5000000LvTpIAK',true,false)}">
+            <apex:sectionHeader title="New Account" subtitle="Account Edit" />
+            <apex:pageBlock title="Account Read">
+
+                <apex:pageblockButtons >
+
+                    <apex:commandButton value="save" action="{!save_custom}" />
+                    <apex:commandButton value="cancel" action="{!cancel}" />
+
+                </apex:pageblockButtons>
+
+                <apex:pageBlockSection title="Accounts Details" columns="2" collapsible="false">
+
+                    <apex:inputField value="{!Account.name}" />
+                    <apex:inputField value="{!Account.SalesChannel__c}" required="true" />
+                    <apex:inputField value="{!account.Phone}" />
+                    <apex:inputfield value="{!account.OtherPhone__c}" />
+                    <apex:inputField value="{!Account.Email__c}" /> 
+                    <apex:inputField value="{!Account.Dispositions__c}" />
+
+                </apex:pageBlockSection>
+
+                <apex:pageBlockSection title="Customer Profile" columns="2" collapsible="false">
+
+                    <apex:inputField value="{!Account.Gender__c}" required="true" />
+                    <apex:inputField value="{!Account.City__c}" required="true" />
+                    <apex:inputField value="{!Account.PA_State__c}" required="true" />
+                    <apex:inputField value="{!Account.Seeker_Lead_Source1__c}" />
+                    <apex:inputField value="{!Account.University_Dropdown__c}" required="true" />
+                    <apex:inputField value="{!Account.Selling_Stream__c}" />
+                    <apex:inputField value="{!Account.Seeker_Service__c}" required="true" />
+                    <apex:inputField value="{!Account.Customer_Experience__c}" />
+
+                </apex:pageBlockSection>
+
+                <apex:pageBlockSection title="Referral Details" columns="2" collapsible="false">
+
+                    <apex:inputField value="{!Account.Reference_Phone_Number__c}" />
+                    <apex:inputField value="{!Account.Reference_Email_ID__c}" />
+                    <apex:inputField value="{!Account.Reference_Proof__c}" />
+
+                </apex:pageBlockSection>
+            </apex:pageblock>
+        </apex:outputPanel>
+
+        <apex:outputPanel rendered="{!
+        AND(
+            $User.ProfileId != '00e7F000000uSSeQAM',
+            $User.ProfileId != '00eC5000000LvTpIAK'
+        )
+    }">
+
+            <apex:outputPanel rendered="{!IF((Account.Lead_Account_Status__c != 'Active'  && Account.Lead_Account_Status__c != '')||($User.ProfileId == '00e7F000000uSSlQAM'),true,false)||(Account.id == null)}">
+                <apex:sectionHeader title="New Account" subtitle="Account Edit" />
+                <apex:pageBlock title="Account Edit">
+
+                    <apex:pageblockButtons >
+
+                        <apex:commandButton value="save" action="{!save_custom}" />
+                        <apex:commandButton value="cancel" action="{!cancel}" />
+
+                    </apex:pageblockButtons>
+
+                    <apex:pageBlockSection title="Business Accounts Details" columns="2" collapsible="false">
+                        <apex:inputField value="{!Account.name}" />
+                        <apex:outputField value="{!Account.Ownerid}" />
+                        <apex:inputField value="{!Account.Trade_name__c}" />
+                        <apex:inputField value="{!Account.SalesChannel__c}" required="true" />
+                        <apex:inputField value="{!Account.AccountStatus__c}" required="true" />
+                        <apex:inputField value="{!Account.Segment__c}" />
+                        <apex:inputField value="{!Account.Sales_Play__c}" />
+                        <apex:inputField value="{!Account.Lead_Account_Status__c}" />
+                        <apex:inputField value="{!Account.Change_Segment__c}" />
+                        <apex:inputField value="{!Account.Import_Source__c}" required="{!coltmntreqfld}" />
+
+                        <apex:inputField value="{!Account.Comments__c}" />
+
+                        <apex:inputField value="{!Account.Lead_Source1__c}" required="{!coltmntreqfld}" />
+
+                        <apex:inputField value="{!Account.Entity_Use_Code__c}" />
+                        <apex:inputField value="{!Account.Organization__c}" />
+
+                    </apex:pageBlockSection>
+
+                    <apex:pageblockSection title="Address" collapsible="false">
+                        <apex:inputField value="{!Account.BillingStreet}" />
+                        <apex:inputField value="{!Account.ShippingStreet}" />
+                        <apex:inputField value="{!Account.BillingCity}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+                        <apex:inputField value="{!Account.ShippingCity}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+                        <apex:inputField value="{!Account.BillState__c}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+
+                        <apex:inputField value="{!Account.PostState__c}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+                        <apex:inputField value="{!Account.BillCountry__c}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+
+                        <apex:inputField value="{!Account.PostCountry__c}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+                        <apex:inputField value="{!Account.BillingPostalCode}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+                        <apex:inputField value="{!Account.ShippingPostalCode}" required="{!OR($Profile.Name=='Monster - Sales',$Profile.Name=='Monster - Sales Ops/LM')}"
+                        />
+                        <apex:inputField value="{!Account.Account_Category__c}" />
+                        <apex:inputField value="{!Account.Zone__c}" />
+                        <apex:inputField value="{!Account.Subsidiary_Sister_Concern_Branch_of__c}" />
+                    </apex:pageblockSection>
+
+
+                    <apex:pageBlockSection title="Payment Details" collapsible="false">
+                        <apex:inputField value="{!Account.Payment_Method__c}" />
+                        <apex:inputField value="{!Account.Payment_Term__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Additional Account Information" columns="2" collapsible="false">
+                        <apex:inputField value="{!Account.APAC_Industry__c}" />
+                        <apex:inputField value="{!Account.Industry}" required="true" />
+                        <apex:inputField value="{!Account.Summary_Industry__c}" required="true" />
+                        <apex:inputField value="{!Account.Global_Revenue__c}" />
+                        <apex:inputField value="{!Account.Country_HR_Team_Size__c}" />
+                        <apex:inputField value="{!Account.Employee_Size__c}" />
+                        <apex:inputField value="{!Account.Linkedin__c}" />
+                        <apex:inputField value="{!Account.No_of_Employees__c}" />
+                        <apex:inputField value="{!Account.Account_Type__c}" />
+                        <apex:inputField value="{!Account.CustEmplSize__c}" />
+                        <!---added by yam--{!($Profile.Name=='Monster - Sales')}"/> -->
+                        <apex:inputField value="{!Account.DoNotMerge__c}" />
+                        <apex:inputField value="{!Account.Account_Size__c}" />
+                        <apex:inputField value="{!Account.Region__c}" />
+                        <!--added by yam-->
+                        <apex:inputField value="{!Account.Active__c}" />
+                        <apex:outputField value="{!Account.Competitor__c}" />
+                        <apex:inputField value="{!Account.ServiceTier__c}" />
+                        <apex:inputField value="{!Account.Child_Type__c}" />
+
+                    </apex:pageBlockSection>
+
+
+                    <apex:pageBlockSection >
+                        <!--<apex:inputField value="{!Account.Case_Accounts__c}"/> -->
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Contact Details" collapsible="false">
+                        <apex:inputField value="{!Account.Location__c}" required="true" />
+                        <apex:inputField value="{!Account.Website}" required="true" />
+                        <apex:inputField value="{!Account.Phone}" required="true" />
+                        <apex:inputField value="{!Account.OtherPhone__c}" />
+                        <apex:inputField value="{!Account.PhoneExtension__c}" />
+                        <apex:inputField value="{!Account.PhoneDoNotCall__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Reference Details" collapsible="false">
+                        <apex:inputField value="{!Account.Reference_Phone_Number__c}" />
+                        <apex:inputField value="{!Account.Reference_Email_ID__c}" />
+                        <apex:inputField value="{!Account.Reference_Proof__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Customer Information" collapsible="false">
+                        <apex:inputField value="{!Account.ResumeExpires__c}" />
+                        <apex:inputField value="{!Account.CustomerNumber__c}" />
+                        <apex:inputField value="{!Account.JobPostzExpires__c}" />
+                        <apex:inputField value="{!Account.CustomerDate__c}" />
+                        <apex:inputField value="{!Account.PrimaryBillingContact__c}" />
+                        <apex:inputField value="{!Account.CustomerLapsedDate__c}" />
+                        <apex:inputField value="{!Account.PO_Required__c}" />
+                        <apex:inputField value="{!Account.Payment_Method__c}" />
+                        <apex:inputField value="{!Account.POComments__c  }" />
+                        <apex:inputField value="{!Account.Payment_Term__c}" />
+                        <!--<apex:inputField value="{!Account.CustEmplSize__c}"/>-->
+                        <apex:inputField value="{!Account.DateMerged__c}" />
+                        <apex:inputField value="{!Account.JobPost__c}" />
+                        <apex:inputField value="{!Account.Latest_Product_End_Date__c}" />
+                        <apex:inputField value="{!Account.Gender__c}" />
+                        <apex:inputField value="{!Account.University_Dropdown__c}" />
+                        <apex:inputField value="{!Account.Seeker_Lead_Source1__c}" />
+                        <apex:inputField value="{!Account.Selling_Stream__c}" />
+
+                    </apex:pageBlockSection>
+
+
+                    <apex:pageBlockSection title="Registration Details" collapsible="false">
+                        <apex:inputField value="{!Account.RegistrationNumber__c}" required="true" />
+
+                        <!---@Rj to give field level access onlyfor salesops ,finance,collection----->
+
+                        <apex:inputField value="{!Account.PAN__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.PAN__c}" rendered="{NOT(!fin)}" />
+
+                        <apex:inputField value="{!Account.PAN__c}" rendered="{!colt}" />
+                        <apex:outputField value="{!Account.PAN__c}" rendered="{NOT(!colt)}" />
+
+                        <apex:inputField value="{!Account.PAN__c}" rendered="{!salops}" />
+                        <apex:outputField value="{!Account.PAN__c}" rendered="{NOT(!salops)}" />
+
+
+                        <apex:inputField value="{!Account.VATNumber__c}" />
+
+                        <apex:inputField value="{!Account.Name_as_per_PAN__c}" />
+
+                        <!--- @ rj to give field level acess to salesops,finance,collection team--------->
+                        <apex:inputField value="{!Account.GST_ID__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.GST_ID__c}" rendered="{NOT(!fin)}" />
+
+                        <apex:inputField value="{!Account.GST_ID__c}" rendered="{!salops}" />
+                        <apex:outputField value="{!Account.GST_ID__c}" rendered="{NOT(!salops)}" />
+
+                        <apex:inputField value="{!Account.GST_ID__c}" rendered="{!colt}" />
+                        <apex:outputField value="{!Account.GST_ID__c}" rendered="{NOT(!colt)}" />
+
+                        <!---  <apex:outputText rendered="{!IF($User.ProfileId != '00e7F000000uSSh',true,false)}">
+<apex:inputField value="{!Account.GST_ID__c}" />
+</apex:outputText>
+<apex:outputText rendered="{!if($User.ProfileId == '00e7F000000uSSh',true,false)}">
+<apex:OutputField value="{!Account.GST_ID__c}" />
+</apex:outputText>---->
+
+                        <!--   <apex:inputField value="{!Account.GST_ID__c}"/>---->
+                        <apex:inputField value="{!Account.TAN__c}" />
+
+                        <!--- <apex:panelGrid >
+</apex:panelGrid>--->
+
+                        <apex:inputField value="{!Account.Name_as_per_TAN__c}" />
+                    </apex:pageBlockSection>
+
+
+                    <apex:pageblockSection title="Credit Information ( Read Permission Only ) " collapsible="false">
+                        <apex:inputField value="{!Account.CreditStatus__c}" />
+                        <apex:inputfield value="{!Account.Reasons_Picklist__c}" />
+                        <!-- added bby yamini--->
+                        <apex:inputfield value="{!Account.Kind_Of_Product_Issue_Picklist__c}" />
+                        <apex:inputField value="{!Account.CreditCheckReferenceNumber__c}" />
+                        <apex:inputField value="{!Account.CR_Status_Comment__c}" />
+                        <apex:inputField value="{!Account.CrRefComment__c}" />
+                        <apex:inputField value="{!Account.CreditLimit__c}" />
+                        <apex:inputField value="{!Account.CrHoldDate__c}" />
+                        <apex:panelGrid >
+                        </apex:panelGrid>
+                        <apex:inputField value="{!Account.CrHoldBy__c}" />
+                    </apex:pageblockSection>
+
+                    <apex:pageBlockSection title="Additional Information" collapsible="false">
+                        <apex:inputField value="{!Account.Description}" />
+                        <apex:inputField value="{!Account.MaxActivityDateOwner__c}" />
+
+                        <apex:panelGrid ></apex:panelGrid>
+                        <apex:inputField value="{!Account.MaxActivityDate__c}" />
+
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Hierarchical Information" collapsible="false">
+                        <apex:inputfield value="{!Account.ParentID}" />
+                        <apex:outputField value="{!Account.Parent_Account_Number__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Financial Information" collapsible="false">
+                        <apex:inputField value="{!Account.SpecialBillingInstructions__c}" />
+                        <apex:inputField value="{!Account.StateProvExempt__c}" />
+                        <apex:inputField value="{!Account.Tax_Exemption_Expiration_Date__c}" />
+                        <apex:inputField value="{!Account.Discount__c}" />
+                        <apex:inputField value="{!Account.PricingAccount__c}" />
+                        <br/>
+                        <apex:inputField value="{!Account.TDS_Credit_Status__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.TDS_Credit_Status__c}" rendered="{!fin1}" />
+                        <apex:inputField value="{!Account.TDS_Hold_Comment__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.TDS_Hold_Comment__c}" rendered="{!fin1}" />
+                        <apex:outputField value="{!Account.TDS_Credit_Status_Hold_By__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.TDS_Credit_Status_Hold_Date__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.TDS_Credit_Status_Hold_By__c}" rendered="{!fin1}" />
+                        <apex:outputField value="{!Account.TDS_Credit_Status_Hold_Date__c}" rendered="{!fin1}" />
+
+                        <!--    <apex:inputField value="{!Account.TDS_Credit_Status_Hold_By__c}" rendered="{!fin}"/> -->
+                        <!--  <apex:inputField value="{!Account.TDS_Credit_Status_Hold_Date__c}" rendered="{!fin}"/>-->
+                        <!--<apex:outputField value="{!Account.TDS_Credit_Status__c}" />--->
+                        <!--  <apex:outputField value="{!Account.TDS_Hold_Comment__c}" rendered="{!fin}"/>-->
+
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Historical Spend Information" collapsible="false">
+                        <apex:inputField value="{!Account.Last12MonthsSpend__c}" />
+                        <apex:inputField value="{!Account.Hierarchy12MonthSpend__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="National/Mobile Phone Registry" columns="2" collapsible="false">
+                        <apex:inputField value="{!Account.Other_Phone_Mobile_Do_Not_Call__c}" />
+                        <apex:inputField value="{!Account.Other_Phone_National_Do_Not_Call_Registr__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageblockSection title="D&B Information" collapsible="false">
+                        <apex:inputField value="{!Account.Ownership}" />
+                        <apex:inputField value="{!Account.DBEmployeeTotal__c}" />
+                        <apex:inputField value="{!Account.Jigsaw}" />
+
+                        <apex:inputField value="{!Account.SicDesc}" />
+                        <apex:inputField value="{!Account.AnnualRevenue}" />
+                        <apex:inputField value="{!Account.TickerSymbol}" />
+                        <apex:inputField value="{!Account.DatacomUpdateDate__c}" />
+                    </apex:pageblockSection>
+
+                    <apex:pageBlockSection title="Agency Account Information (Used only if this Account is an Agency)" collapsible="false">
+                        <apex:inputField value="{!Account.AgencyFlag__c}" />
+                        <apex:inputField value="{!Account.AgencyCommission__c}" />
+                        <apex:inputField value="{!Account.Agency_Comments__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="System Information" collapsible="false">
+
+                        <apex:inputField value="{!Account.LegacyKarmaId__c}" />
+
+                    </apex:pageBlockSection>
+
+                    <!-- <apex:pageBlockSection title="Agency Account Information(Used Only if this account is an agency)" collapsible="false">           
+<apex:inputField value="{!Account.AgencyFlag__c}"/> 
+<apex:inputField value="{!Account.AgencyCommission__c}"/>    
+
+<apex:inputField value="{!Account.Agency_Comments__c}"/>
+</apex:pageBlockSection>-->
+                </apex:pageBlock>
+            </apex:outputPanel>
+        </apex:outputpanel>
+        <!--  Read Only   Account Active fields   -->
+        <apex:outputPanel rendered="{!
+        AND(
+            $User.ProfileId != '00e7F000000uSSeQAM',
+            $User.ProfileId != '00eC5000000LvTpIAK'
+        )
+    }">
+            <apex:outputPanel rendered="{!IF((Account.Lead_Account_Status__c == 'Active' || Account.Lead_Account_Status__c == '')&&($User.ProfileId != '00e7F000000uSSlQAM'),true,false)&&(Account.id != null)}">
+                <apex:sectionHeader title="New Account" subtitle="Account Read" />
+                <apex:pageBlock title="Account Read">
+
+                    <apex:pageblockButtons >
+
+                        <apex:commandButton value="save" action="{!save_custom}" />
+                        <apex:commandButton value="cancel" action="{!cancel}" />
+
+                    </apex:pageblockButtons>
+
+                    <apex:pageBlockSection title="Business Accounts Details" columns="2" collapsible="false">
+
+
+                        <apex:outputField value="{!Account.name}" />
+                        <!---   <apex:outputField value="{!Account.Ownerid}" />  --->
+
+                        <!---@Rj modified the i/p and o/p to enable edit access to ajesh shyam and santhosh malga ------>
+
+                        <apex:inputField value="{!Account.Ownerid}" rendered="{!OR($User.Id == '0057F000003Sa56QAC',$User.Id == '0057F000003Sa4nQAC',$User.Id == '0057F000003RvIZQA0',$User.Id =='0057F000003Sa4KQAS',$User.Id=='0057F000003Sa4sQAC',$User.Id=='0057F000004SFhqQAG')}"
+                        />
+                        <apex:outputField value="{!Account.Ownerid}" rendered="{!AND($User.Id != '0057F000003Sa56QAC',$User.Id != '0057F000003Sa4nQAC',$User.Id != '0057F000003RvIZQA0',$User.Id !='0057F000003Sa4KQAS',$User.Id!='0057F000003Sa4sQAC')}"
+                        />
+
+
+                        <apex:outputField value="{!Account.Trade_name__c}" />
+
+                        <apex:inputField value="{!Account.SalesChannel__c}" rendered="{!OR($User.Id=='0057F000003Sa4KQAS',$User.Id =='0057F000003Sa4nQAC',$User.Id == '0057F000004SFhqQAG')}"
+                        />
+                        <apex:outputField value="{!Account.SalesChannel__c}" rendered="{!AND($User.Id !='0057F000003Sa4KQAS',$User.Id !='0057F000003Sa4nQAC',$User.Id != '0057F000004SFhqQAG')}"
+                        />
+
+                        <apex:outputField value="{!Account.AccountStatus__c}" />
+                        <apex:inputField value="{!Account.Segment__c}" />
+                        <apex:outputField value="{!Account.Lead_Account_Status__c}" id="accountStatus" />
+                        <apex:outputField value="{!Account.Import_Source__c}" />
+                        <apex:inputField value="{!Account.Comments__c}" />
+                        <apex:outputField value="{!Account.Lead_Source1__c}" />
+                        <apex:inputField value="{!Account.Entity_Use_Code__c}" />
+                        <apex:outputField value="{!Account.Organization__c}" />
+                        <apex:outputField value="{!Account.Primary_Xcode__c}" />
+                        <apex:outputField value="{!Account.Competitor__c}" />
+                        <apex:outputField value="{!Account.Primary_Sales_Rep__c}" />
+                        <apex:outputField value="{!Account.Number_of_Orders__c}" />
+                        <apex:outputField value="{!Account.AccountGroup__c}" />
+                        <apex:outputField value="{!Account.Account_Team_Members__c}" />
+                        <apex:outputField value="{!Account.PrimaryServiceRep__c}" rendered="{!$User.ProfileId != '00e7F000000uSSiQAM'}" />
+                        <apex:inputField value="{!Account.PrimaryServiceRep__c}" rendered="{!$User.ProfileId == '00e7F000000uSSiQAM'}" />
+                        <apex:outputField value="{!Account.PrimarySalesRepManager__c}" />
+                        <apex:outputField value="{!Account.AccountStrategy__c}" />
+                        <apex:inputField value="{!Account.Mini_EA_account__c}" />
+                        <apex:inputField value="{!Account.Linkedin__c}" />
+                        <apex:inputField value="{!Account.Crunchbase__c}" />
+                        <apex:inputField value="{!Account.Employee_Size__c}" />
+                        <apex:inputField value="{!Account.Account_Strategy__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageblockSection title="Address" collapsible="false">
+                        <apex:outputField value="{!Account.BillingStreet}" />
+                        <apex:outputField value="{!Account.ShippingStreet}" />
+                        <apex:outputField value="{!Account.BillingCity}" />
+                        <apex:outputField value="{!Account.ShippingCity}" />
+                        <!---  <apex:outputField value="{!Account.BillingState}"/>--->
+                        <apex:outputField value="{!Account.BillState__c}" />
+                        <!--<apex:outputField value="{!Account.ShippingState}"/>---->
+                        <apex:outputField value="{!Account.PostState__c}" />
+                        <!-- <apex:outputField value="{!Account.BillingCountry}"/>-->
+                        <apex:outputField value="{!Account.BillCountry__c}" />
+                        <!---<apex:outputField value="{!Account.ShippingCountry}"/>--->
+                        <apex:outputField value="{!Account.PostCountry__c}" />
+                        <apex:outputField value="{!Account.BillingPostalCode}" />
+                        <apex:outputField value="{!Account.ShippingPostalCode}" />
+
+                        <apex:inputField value="{!Account.Account_Category__c}" />
+                        <apex:inputField value="{!Account.Zone__c}" />
+                        <apex:inputField value="{!Account.Subsidiary_Sister_Concern_Branch_of__c}" />
+                    </apex:pageblockSection>
+
+
+                    <apex:pageBlockSection columns="1" title="Other Info">
+                        <apex:outputField value="{!Account.Case_Accounts__c}" />
+                        <apex:outputField value="{!Account.Lead__c}" />
+                        <apex:outputField value="{!Account.Person_Account__c}" />
+                        <apex:outputField value="{!Account.Service_Team__c}" />
+
+                        <apex:inputField value="{!Account.Suspect_Prospect__c}" />
+                        <apex:inputField value="{!Account.Budget_Month__c}" />
+                        <!--<apex:outputField value="{!Account.Old_Created_By__c}"/>
+
+<apex:outputField value="{!Account.Old_Last_Modified_By__c}"/>
+<!--   <apex:outputField value="{!Account.Number_of_Orders__c}"/>-->
+
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Payment Details" collapsible="false">
+                        <apex:outputField value="{!Account.Payment_Method__c}" />
+                        <apex:outputField value="{!Account.Payment_Term__c}" />
+                    </apex:pageBlockSection>
+
+
+                    <apex:pageBlockSection title="Additional Account Information" columns="2" collapsible="false">
+                        <!-- <apex:outputField value="{!Account.APAC_Industry__c}"  rendered="{!If($User.Id !='0057F000003Sc5wQAC',true,false)}"/>-->
+                        <apex:inputField value="{!Account.APAC_Industry__c}" />
+                        <apex:inputField value="{!Account.Industry}" required="true" />
+                        <apex:inputField value="{!Account.Summary_Industry__c}" required="true" />
+                        <apex:inputField value="{!Account.Global_Revenue__c}" />
+                        <apex:inputField value="{!Account.Country_HR_Team_Size__c}" />
+                        <apex:inputField value="{!Account.Employee_Size__c}" />
+                        <apex:inputField value="{!Account.Linkedin__c}" />
+                        <apex:inputField value="{!Account.No_of_Employees__c}" />
+                        <!--<apex:outputField value="{!Account.Account_Type__c}"  rendered="{!If($User.Id !='0057F000003Sc5wQAC',true,false)}"/>-->
+
+                        <apex:inputField value="{!Account.Account_Type__c}" />
+                        <apex:inputField value="{!Account.CustEmplSize__c}" />
+                        <!---- {!($Profile.Name=='Monster - Sales')}"/>-added by yam--->
+                        <apex:outputField value="{!Account.DoNotMerge__c}" />
+                        <apex:outputField value="{!Account.Account_Size__c}" />
+                        <apex:inputField value="{!Account.Region__c}" />
+                        <!--added by yam-->
+                        <apex:outputField value="{!Account.Active__c}" />
+                        <apex:outputField value="{!Account.Competitor__c}" />
+                        <apex:outputField value="{!Account.ServiceTier__c}" />
+                        <apex:inputField value="{!Account.Country_HR_Team_Size__c}" />
+                        <apex:inputField value="{!Account.Global_Revenue__c}" />
+                        <apex:inputField value="{!Account.Child_Type__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection >
+                        <!--<apex:outputField value="{!Account.Case_Accounts__c}"/> -->
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Contact Details" collapsible="false">
+                        <apex:outputField value="{!Account.Location__c}" />
+                        <apex:inputField value="{!Account.Website}" />
+                        <apex:outputField value="{!Account.Phone}" />
+                        <apex:outputField value="{!Account.OtherPhone__c}" />
+                        <apex:outputField value="{!Account.PhoneExtension__c}" />
+                        <apex:outputField value="{!Account.PhoneDoNotCall__c}" />
+                    </apex:pageBlockSection>
+
+
+
+                    <apex:pageBlockSection title="Customer Information" collapsible="false">
+                        <apex:outputField value="{!Account.ResumeExpires__c}" />
+                        <apex:outputField value="{!Account.CustomerNumber__c}" />
+                        <apex:outputField value="{!Account.JobPostzExpires__c}" />
+                        <apex:outputField value="{!Account.CustomerDate__c}" />
+                        <apex:outputField value="{!Account.PrimaryBillingContact__c}" />
+                        <apex:outputField value="{!Account.CustomerLapsedDate__c}" />
+                        <apex:outputField value="{!Account.PO_Required__c}" />
+                        <apex:outputField value="{!Account.Payment_Method__c}" />
+                        <apex:outputField value="{!Account.POComments__c  }" />
+                        <apex:outputField value="{!Account.Payment_Term__c}" />
+                        <!---<apex:inputField value="{!Account.CustEmplSize__c}"/>--->
+                        <apex:outputField value="{!Account.DateMerged__c}" />
+                        <apex:outputField value="{!Account.JobPost__c}" />
+                        <apex:outputField value="{!Account.Latest_Product_End_Date__c}" />
+                    </apex:pageBlockSection>
+
+
+                    <!--- @ Rj to give field level acess in edit page to salesops,finance,collection ---------->
+                    <apex:pageBlockSection title="Registration Details" collapsible="false" columns="2">
+                        <apex:outputField value="{!Account.RegistrationNumber__c}" />
+
+                        <apex:inputField value="{!Account.PAN__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.PAN__c}" rendered="{NOT(!fin)}" />
+
+
+                        <apex:inputField value="{!Account.PAN__c}" rendered="{!colt}" />
+                        <apex:outputField value="{!Account.PAN__c}" rendered="{NOT(!colt)}" />
+
+                        <apex:outputField value="{!Account.VATNumber__c}" />
+
+                        <apex:inputField value="{!Account.Name_as_per_PAN__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.Name_as_per_PAN__c}" rendered="{NOT(!fin)}" />
+
+                        <apex:inputField value="{!Account.Name_as_per_PAN__c}" rendered="{!colt}" />
+                        <apex:outputField value="{!Account.Name_as_per_PAN__c}" rendered="{NOT(!colt)}" />
+
+                        <apex:inputField value="{!Account.GST_ID__c}" rendered="{!salops}" />
+                        <apex:outputField value="{!Account.GST_ID__c}" rendered="{NOT(!salops)}" />
+
+                        <apex:inputField value="{!Account.GST_ID__c}" rendered="{!fin}" />
+                        <apex:outputField value="{!Account.GST_ID__c}" rendered="{NOT(!fin)}" />
+
+
+                        <apex:inputField value="{!Account.GST_ID__c}" rendered="{!colt}" />
+                        <apex:outputField value="{!Account.GST_ID__c}" rendered="{NOT(!colt)}" />
+
+
+                        <apex:inputField value="{!Account.TAN__c}" />
+                        <!--<apex:panelGrid >
+</apex:panelGrid>-->
+                        <apex:inputField value="{!Account.Name_as_per_TAN__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageblockSection title="Credit Information ( Read Permission Only ) " collapsible="false">
+
+                        <!--  PANKAJ  -->
+                        <apex:inputfield value="{!Account.CreditStatus__c}" rendered="{!b2}" />
+                        <apex:inputfield value="{!Account.Reasons_Picklist__c}" rendered="{!colt}" />
+                        <apex:inputfield value="{!Account.Kind_Of_Product_Issue_Picklist__c}" rendered="{!colt}" />
+
+                        <!--
+<apex:inputField value="{!Account.CreditCheckReferenceNumber__c}"  rendered="{!IF((Account.Lead_Account_Status__c == 'Active' || Account.Lead_Account_Status__c == '')&&($User.ProfileId == '00e7F000000uSSiQAM'),true,false)&&(Account.id != null)}"/>
+<apex:inputField value="{!Account.CR_Status_Comment__c}"   rendered="{!IF((Account.Lead_Account_Status__c == 'Active' || Account.Lead_Account_Status__c == '')&&($User.ProfileId == '00e7F000000uSSiQAM'),true,false)&&(Account.id != null)}"/>
+
+<apex:inputField value="{!Account.CrRefComment__c}"   rendered="{!IF((Account.Lead_Account_Status__c == 'Active' || Account.Lead_Account_Status__c == '')&&($User.ProfileId == '00e7F000000uSSiQAM'),true,false)&&(Account.id != null)}"/>
+<apex:inputField value="{!Account.CreditLimit__c}"  rendered="{!IF((Account.Lead_Account_Status__c == 'Active' || Account.Lead_Account_Status__c == '')&&($User.ProfileId == '00e7F000000uSSiQAM'),true,false)&&(Account.id != null)}"/>
+<apex:inputField value="{!Account.CrHoldDate__c}" rendered="{!IF((Account.Lead_Account_Status__c == 'Active' || Account.Lead_Account_Status__c == '')&&($User.ProfileId == '00e7F000000uSSiQAM'),true,false)&&(Account.id != null)}" />           
+<apex:inputField value="{!Account.CrHoldBy__c}" rendered="{!IF((Account.Lead_Account_Status__c == 'Active' || Account.Lead_Account_Status__c == '')&&($User.ProfileId == '00e7F000000uSSiQAM'),true,false)&&(Account.id != null)}"/>
+<!-- PANKAJ   -->
+                        <!-- commented by @imRam    
+<apex:outputField value="{!Account.CreditStatus__c}"  rendered="{!b1}"/>
+<apex:outputField value="{!Account.CreditCheckReferenceNumber__c}" />
+<apex:outputField value="{!Account.CR_Status_Comment__c}"  />
+<apex:outputField value="{!Account.CrRefComment__c}"  />
+<apex:outputField value="{!Account.CreditLimit__c}"  />
+<apex:outputField value="{!Account.CrHoldDate__c}"  />
+<apex:panelGrid >
+</apex:panelGrid>
+<apex:outputField value="{!Account.CrHoldBy__c}" />  --->
+                        <!-- @imRam making Credit Information ( Read Permission Only ) editable for Rizwan Team-->
+
+                        <!---   <apex:inputfield value="{!Account.CreditCheckReferenceNumber__c}" rendered="{!b4}"/> @ rj ---->
+
+                        <apex:inputfield value="{!Account.CreditCheckReferenceNumber__c}" rendered="{!fin}" />
+                        <apex:outputfield value="{!Account.CreditCheckReferenceNumber__c}" rendered="{NOT(!fin)}" />
+
+
+                        <apex:inputfield value="{!Account.CreditCheckReferenceNumber__c}" rendered="{!colt}" />
+                        <apex:outputfield value="{!Account.CreditCheckReferenceNumber__c}" rendered="{NOT(!colt)}" />
+
+
+
+
+
+                        <apex:inputfield value="{!Account.CR_Status_Comment__c}" rendered="{!b4}" />
+
+
+
+                        <apex:inputfield value="{!Account.CrRefComment__c}" rendered="{!fin}" />
+                        <apex:outputfield value="{!Account.CrRefComment__c}" rendered="{NOT(!fin)}" />
+
+
+                        <apex:inputfield value="{!Account.CrRefComment__c}" rendered="{!colt}" />
+                        <apex:outputfield value="{!Account.CrRefComment__c}" rendered="{NOT(!colt)}" />
+
+
+
+                        <apex:inputfield value="{!Account.CreditLimit__c}" rendered="{!b4}" />
+                        <apex:inputfield value="{!Account.CrHoldDate__c}" rendered="{!b4}" />
+                        <apex:inputfield value="{!Account.CrHoldBy__c}" rendered="{!b4}" />
+
+                        <!---<apex:outputField value="{!Account.CreditStatus__c}"  rendered="{!b1}"/>--->
+                        <apex:inputField value="{!Account.CreditStatus__c}" rendered="{!b1}" />
+
+                        <apex:inputfield value="{!Account.Reasons_Picklist__c}" rendered="{!b3}" />
+                        <apex:inputfield value="{!Account.Kind_Of_Product_Issue_Picklist__c}" rendered="{!b3}" />
+
+                        <!--  <apex:outputField value="{!Account.CreditCheckReferenceNumber__c}" rendered="{!b3}"/> @ rj-->
+
+                        <apex:outputField value="{!Account.CR_Status_Comment__c}" rendered="{!b3}" />
+                        <!----- <apex:outputField value="{!Account.CrRefComment__c}" rendered="{!b3}" />---->
+                        <apex:outputField value="{!Account.CreditLimit__c}" rendered="{!b3}" />
+                        <apex:outputField value="{!Account.CrHoldDate__c}" rendered="{!b3}" />
+                        <apex:panelGrid >
+                        </apex:panelGrid>
+                        <apex:outputField value="{!Account.CrHoldBy__c}" rendered="{!b3}" />
+
+                        <!-- Till here @imRam added-->
+
+                    </apex:pageblockSection>
+                    <!-- ------------------------------------------------   -->
+                    <apex:pageBlockSection title="Additional Information" collapsible="false">
+                        <apex:outputField value="{!Account.Description}" />
+                        <apex:outputField value="{!Account.MaxActivityDateOwner__c}" />
+                        <apex:panelGrid ></apex:panelGrid>
+                        <apex:outputField value="{!Account.MaxActivityDate__c}" />
+                    </apex:pageBlockSection>
+
+
+                    <apex:pageBlockSection title="Hierarchical Information" collapsible="false">
+                        <apex:inputField value="{!Account.ParentID}" />
+                        <apex:outputField value="{!Account.Parent_Account_Number__c}" />
+                    </apex:pageBlockSection>
+
+
+                    <apex:pageBlockSection title="Financial Information" collapsible="false">
+                        <apex:outputField value="{!Account.SpecialBillingInstructions__c}" rendered="{!b3}" />
+                        <apex:outputField value="{!Account.StateProvExempt__c}" rendered="{!b3}" />
+                        <apex:outputField value="{!Account.Tax_Exemption_Expiration_Date__c}" rendered="{!b3}" />
+                        <apex:outputField value="{!Account.Discount__c}" rendered="{!b3}" />
+                        <apex:outputField value="{!Account.PricingAccount__c}" rendered="{!b3}" />
+
+                        <!--changes done by chaitanya-->
+
+                        <apex:inputfield value="{!Account.TDS_Credit_Status__c}" rendered="{!fin}" />
+                        <apex:outputfield value="{!Account.TDS_Credit_Status__c}" rendered="{NOT(!fin)}" />
+                        <apex:inputfield value="{!Account.TDS_Hold_Comment__c}" rendered="{!fin}" />
+                        <apex:outputfield value="{!Account.TDS_Credit_Status_Hold_By__c}" rendered="{!b3}" />
+                        <apex:outputfield value="{!Account.TDS_Credit_Status_Hold_Date__c}" rendered="{!b3}" />
+
+                        <!--pankaj -->
+                        <!-- commente by @im Ram as Rizwan Team won't touch this 
+<apex:inputField value="{!Account.SpecialBillingInstructions__c}" rendered="{!b4}"/>
+<apex:inputField value="{!Account.StateProvExempt__c}" rendered="{!b4}"/>
+<apex:inputField value="{!Account.Tax_Exemption_Expiration_Date__c}" rendered="{!b4}"/>
+<apex:inputField value="{!Account.Discount__c}" rendered="{!b4}"/>
+<apex:inputField value="{!Account.PricingAccount__c}" rendered="{!b4}"/> --->
+                        <apex:outputField value="{!Account.SpecialBillingInstructions__c}" rendered="{!b4}" />
+                        <apex:outputField value="{!Account.StateProvExempt__c}" rendered="{!b4}" />
+                        <apex:outputField value="{!Account.Tax_Exemption_Expiration_Date__c}" rendered="{!b4}" />
+                        <apex:outputField value="{!Account.Discount__c}" rendered="{!b4}" />
+                        <apex:outputField value="{!Account.PricingAccount__c}" rendered="{!b4}" />
+
+
+                        <!--pankaj -->
+
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="Historical Spend Information" collapsible="false">
+                        <apex:outputField value="{!Account.Last12MonthsSpend__c}" />
+                        <apex:outputField value="{!Account.Hierarchy12MonthSpend__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageBlockSection title="National/Mobile Phone Registry" columns="2" collapsible="false">
+                        <apex:outputField value="{!Account.Other_Phone_Mobile_Do_Not_Call__c}" />
+                        <apex:outputField value="{!Account.Other_Phone_National_Do_Not_Call_Registr__c}" />
+                    </apex:pageBlockSection>
+
+                    <apex:pageblockSection title="D&B Information" collapsible="false">
+                        <apex:outputField value="{!Account.Ownership}" />
+                        <apex:outputField value="{!Account.DBEmployeeTotal__c}" />
+                        <apex:outputField value="{!Account.Industry}" />
+                        <apex:outputField value="{!Account.Jigsaw}" />
+                        <apex:outputField value="{!Account.SicDesc}" />
+                        <apex:outputField value="{!Account.AnnualRevenue}" />
+                        <apex:outputField value="{!Account.TickerSymbol}" />
+                        <apex:outputField value="{!Account.DatacomUpdateDate__c}" />
+                    </apex:pageblockSection>
+
+
+                    <apex:pageBlockSection title="Agency Account Information (Used only if this Account is an Agency)" collapsible="false">
+                        <apex:outputField value="{!Account.AgencyFlag__c}" />
+                        <apex:outputField value="{!Account.AgencyCommission__c}" />
+                        <apex:outputField value="{!Account.Agency_Comments__c}" />
+                    </apex:pageBlockSection>
+
+
+                    <apex:pageBlockSection title="System Information" collapsible="false">
+                        <apex:outputField value="{!Account.LegacyKarmaId__c}" />
+                    </apex:pageBlockSection>
+
+                    <!-- <apex:pageBlockSection title="Agency Account Information(Used Only if this account is an agency)" collapsible="false">
+<apex:outputField value="{!Account.AgencyFlag__c}"/>
+<apex:outputField value="{!Account.AgencyCommission__c}"/>
+<apex:outputField value="{!Account.Agency_Comments__c}"/>
+</apex:pageBlockSection>-->
+                </apex:pageBlock>
+            </apex:outputPanel>
+        </apex:outputPanel>
+
+        <!--    Read Only -->
+
+        <!-- B2C Account by Sushant -->
+        <apex:outputPanel rendered="{!IF(($User.ProfileId == '00e7F000000uSSeQAM'),true,false)}">
+            <apex:sectionHeader title="New Account" subtitle="Account Edit" />
+            <apex:pageBlock title="Account Edit">
+
+                <apex:pageblockButtons >
+
+                    <apex:commandButton value="save" action="{!save_custom}" disabled="{!if(existing.size>0,true,false)}" />
+                    <apex:commandButton value="cancel" action="{!cancel}" />
+                </apex:pageblockButtons>
+
+                <apex:pageblockSection title="Account Detail" collapsible="false" columns="2">
+                    <!-- <apex:outputField value="{!account.Integration__c}"/> -->
+                    <!-- <apex:inputfield value="{!account.Name}"/> -->
+                    <apex:outputField value="{!account.Ownerid}" />
+                    <apex:inputField value="{!account.First_Name__c}" />
+                    <!--   <apex:outputField value="{!acc.RecordTypeid}"/> -->
+                    <apex:inputfield value="{!account.Last_Name__c}" />
+                    <apex:inputfield value="{!account.Lead_Source1__c}" />
+                    <apex:inputfield value="{!account.Nationality__c}" />
+                    <apex:inputfield value="{!account.Lead__c}" />
+                    <apex:inputfield value="{!account.Dispositions__c}" />
+                    <apex:inputfield value="{!account.Pitched__c}" />
+                    <apex:outputField value="{!account.Used__c}" />
+                </apex:pageblockSection>
+
+                <apex:pageblocksection title="Contact Details" collapsible="false" columns="2">
+                    <apex:inputField value="{!account.Mobile__c}" />
+                    <apex:inputfield value="{!account.OtherPhone__c}" />
+                    <apex:inputfield value="{!account.Email__c}" />
+                    <apex:inputfield value="{!account.Alternate_Email__c}" />
+                </apex:pageblocksection>
+
+                <apex:pageblocksection title="Address Details" collapsible="False">
+
+                    <apex:inputfield value="{!account.PA_Address__c}" />
+                    <apex:inputfield value="{!account.PA_Country__c}" />
+                    <apex:inputfield value="{!account.PA_City__c}" />
+                    <apex:inputfield value="{!account.PA_CountryCode__c}" />
+                    <apex:inputfield value="{!account.PA_State__c}" />
+                    <apex:inputfield value="{!account.PA_StateCode__c}" />
+                </apex:pageblocksection>
+
+                <apex:pageblocksection title="Professional Informaton" collapsible="False">
+                    <apex:inputfield value="{!account.Experience__c}" />
+                    <apex:inputfield value="{!account.Salary__c}" />
+                    <apex:inputfield value="{!account.Update_Date__c}" />
+                    <apex:inputfield value="{!account.Resume__c}" />
+                    <apex:inputfield value="{!account.Registration_Date__c}" />
+                    <apex:inputfield value="{!account.APAC_Industry__c}" />
+                    <apex:inputfield value="{!account.Source_File__c}" />
+                    <apex:inputfield value="{!account.Role__c}" />
+                    <apex:inputfield value="{!account.Comments__c}" />
+                </apex:pageblocksection>
+
+                <apex:pageblocksection title="ID Information" Collapsible="False">
+                    <apex:inputfield value="{!account.Resume_ID__c}" />
+                    <apex:inputfield value="{!account.Parentid}" />
+                    <apex:inputfield value="{!account.AccountID__c}" />
+                    <apex:inputfield value="{!account.Suspect_Prospect__c}" />
+                    <apex:inputfield value="{!account.Budget_Month__c}" />
+                </apex:pageblocksection>
+
+                <apex:pageblocksection title="Lead Information" Collapsible="False">
+                    <apex:inputfield value="{!account.Campaign__c}" />
+                    <apex:inputfield value="{!account.Feedback__c}" />
+                    <apex:inputfield value="{!account.Marketing_Lead__c}" />
+                </apex:pageblocksection>
+
+                <apex:pageblocksection title="System Information" collapsible="False">
+                    <apex:outputField value="{!account.CreatedByid}" />
+                    <apex:outputField value="{!account.LastModifiedByid}" />
+                </apex:pageblocksection>
+            </apex:PageBlock>
+        </apex:outputPanel>
+    </apex:form>
+
+</apex:page>

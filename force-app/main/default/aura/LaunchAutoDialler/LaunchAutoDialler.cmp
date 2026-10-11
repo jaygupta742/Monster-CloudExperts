@@ -1,0 +1,42 @@
+<aura:component controller="Ameyoautodialler" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+<aura:attribute name="Diallerdate" type="Date" />
+<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>   
+<aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 90%;
+        max-width: 80rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        }
+    </aura:html>
+  <h1 style="text-align:center;color:white;background-color:black;padding-top:5px;padding-bottom:5px;">Please choose Date to start Auto-Dialler</h1>
+   <div style="padding-top:50px;"> 
+      <h1 style="text-align:center;color:Black;font-size:16px;">Select Date</h1> 
+       <div style="width:50%;margin-left:80px;"><ui:inputDate aura:id="EndDateField" value="{!v.Diallerdate}" displayDatePicker="true" format="MM/dd/yyyy"/></div>
+       
+       
+       </div>
+    <div style="text-align:center;padding-top:20px;">
+                            <lightning:button variant="label-hidden" class="button" aura:id="button" onclick="{!c.diallit}"  >              
+                                <lightning:icon iconName='utility:dialing' alternativeText='dialing' size='large' title='dialing'/>
+                                <span class="slds-assistive-text">dialing</span>
+                            </lightning:button>
+                        </div> 
+</aura:component>

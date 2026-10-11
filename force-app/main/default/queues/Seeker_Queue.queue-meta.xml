@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Seeker Queue</name>
+    <queueMembers>
+        <users>
+            <user>anupama.srinivas1@monsterindia.com</user>
+            <user>avinash.holkunde1@monstergulf.com</user>
+            <user>naveen.dayala1@monsterindia.com</user>
+            <user>bandii.pavani@monsterindia.com</user>
+            <user>rajendar.rekula1@monsterindia.com</user>
+            <user>rajender.yadav0023@foundit.ai</user>
+            <user>shivprasad.raju1@monsterindia.com</user>
+            <user>srinivasa.bommuluri1@monsterindia.com</user>
+            <user>vikas.konda1@monsterindia.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Seeker__c</sobjectType>
+    </queueSobject>
+</Queue>

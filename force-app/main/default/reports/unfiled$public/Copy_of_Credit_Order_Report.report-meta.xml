@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>FK_$OrderC__c.CreditAmount__c</field>
+    </columns>
+    <columns>
+        <field>FK_$OrderC__c.OrderDate__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Credit_order__c.Reversed_Amount__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_$OrderC__c.Account_Name__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$OrderC__c.AccountID__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>credit order</description>
+    <format>Tabular</format>
+    <name>Reversal FY22</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Credit_order__c@Credit_order__c.Order_Custom__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>false</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <sortColumn>FK_$OrderC__c.CreditAmount__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2022-03-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2021-04-01</startDate>
+    </timeFrameFilter>
+</Report>

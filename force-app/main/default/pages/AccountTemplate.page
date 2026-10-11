@@ -1,0 +1,17 @@
+<apex:page standardController="account" extensions="AccountTemplate" sidebar="false" lightningStylesheets="true">
+<apex:pageBlock rendered="{!if(b == false,true,false)}">
+
+
+
+<div style="  color: tomato;text-align: center;font-family: verdana;font-size: 20px;">oops!!!!!!!!!!  There should be atleast 1 Contact &amp; 1 Address for an Account</div>
+
+
+
+</apex:pageBlock>
+
+<apex:pageBlock rendered="{!if(b == true,true,false)}">
+
+
+</apex:pageBlock>
+  
+</apex:page>

@@ -1,0 +1,9 @@
+.slds-modal__container {
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.RevampTableHead {
+    background-color: #8367d7;
+    color: #ffffff;
+}

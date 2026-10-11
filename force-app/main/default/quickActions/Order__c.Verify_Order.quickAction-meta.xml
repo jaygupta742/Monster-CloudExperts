@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldOverrides>
+        <field>Order_Status__c</field>
+        <literalValue>Verified</literalValue>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Verified_By__c</field>
+        <formula>Order__c.Owner:User.FirstName +&apos; &apos;+Order__c.Owner:User.LastName</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Verified_Date__c</field>
+        <formula>Today()</formula>
+    </fieldOverrides>
+    <fieldOverrides>
+        <field>Verifified__c</field>
+        <formula>True</formula>
+    </fieldOverrides>
+    <label>Send For Verification</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <quickActionLayout>
+        <layoutSectionStyle>TwoColumnsLeftToRight</layoutSectionStyle>
+        <quickActionLayoutColumns/>
+        <quickActionLayoutColumns/>
+    </quickActionLayout>
+    <successMessage>Order Verified Succesfully!!!</successMessage>
+    <type>Update</type>
+</QuickAction>

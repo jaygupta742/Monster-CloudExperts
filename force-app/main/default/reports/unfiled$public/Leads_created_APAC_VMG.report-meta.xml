@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_LAST_UPDATE_NAME</field>
+    </columns>
+    <columns>
+        <field>Case__c.AccountSalesChannel__c</field>
+    </columns>
+    <columns>
+        <field>Case__c.Xcode__c</field>
+    </columns>
+    <columns>
+        <field>Case__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>Case__c.Account_Id_formula__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_LAST_UPDATE</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Leads created</description>
+    <filter>
+        <criteriaItems>
+            <column>Case__c.Keyword_Search__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Leads created APAC- VMG</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Case__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2021-05-13</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2021-04-22</startDate>
+    </timeFrameFilter>
+</Report>

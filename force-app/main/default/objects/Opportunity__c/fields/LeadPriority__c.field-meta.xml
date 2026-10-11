@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LeadPriority__c</fullName>
+    <description>Priority of the Lead</description>
+    <label>Lead Priority</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound</fullName>
+                <default>false</default>
+                <label>Inbound</label>
+            </value>
+            <value>
+                <fullName>1-ASAP</fullName>
+                <default>false</default>
+                <label>1-ASAP</label>
+            </value>
+            <value>
+                <fullName>2-High</fullName>
+                <default>false</default>
+                <label>2-High</label>
+            </value>
+            <value>
+                <fullName>3-Medium</fullName>
+                <default>false</default>
+                <label>3-Medium</label>
+            </value>
+            <value>
+                <fullName>4-Low</fullName>
+                <default>false</default>
+                <label>4-Low</label>
+            </value>
+            <value>
+                <fullName>SHD</fullName>
+                <default>false</default>
+                <label>SHD</label>
+            </value>
+            <value>
+                <fullName>Not Applicable</fullName>
+                <default>true</default>
+                <label>Not Applicable</label>
+            </value>
+            <value>
+                <fullName>High</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>High</label>
+            </value>
+            <value>
+                <fullName>Low</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Low</label>
+            </value>
+            <value>
+                <fullName>Normal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Normal</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

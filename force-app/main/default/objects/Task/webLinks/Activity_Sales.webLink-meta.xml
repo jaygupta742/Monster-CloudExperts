@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Activity_Sales</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Activity</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{! REQUIRESCRIPT(&quot;/soap/ajax/24.0/connection.js&quot;)} 
+try 
+{ 
+if(&apos;{!Account.Suspect_Prospect__c}&apos; == &apos;&apos; ){ 
+alert(&apos;Please Choose Suspect/Prospect&apos;); 
+} 
+else{ 
+/*if(&apos;{!Account.Suspect_Prospect__c}&apos; != &apos;Suspect&apos;) 
+{
+alert(&apos;Please Create an Opportunity after task&apos;); 
+} */
+window.open(&apos;/00T/e?what_id={!Account.Id}&amp;tsk12=Completed&apos;,&quot;_blank&quot;); 
+/*else{ 
+window.open(&apos;/apex/opportunityCreate?accID={!Account.Id}&amp;accOwner={!Account.OwnerId}&amp;toTask=/00T/e?what_id={!Account.Id}&amp;tsk12=Completed&apos;,&quot;_blank&quot;)
+} */
+}
+} 
+catch (ex) 
+{ 
+alert(ex); 
+}</url>
+</WebLink>

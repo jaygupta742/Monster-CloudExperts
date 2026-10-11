@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Division__c</fullName>
+    <label>Division</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>A-J Regional</fullName>
+                <default>false</default>
+                <label>A-J Regional</label>
+            </value>
+            <value>
+                <fullName>AP Fieldsales</fullName>
+                <default>false</default>
+                <label>AP Fieldsales</label>
+            </value>
+            <value>
+                <fullName>AP Seeker Sales</fullName>
+                <default>false</default>
+                <label>AP Seeker Sales</label>
+            </value>
+            <value>
+                <fullName>AP Seeker Support</fullName>
+                <default>false</default>
+                <label>AP Seeker Support</label>
+            </value>
+            <value>
+                <fullName>AP Telesales</fullName>
+                <default>false</default>
+                <label>AP Telesales</label>
+            </value>
+            <value>
+                <fullName>APAC eR</fullName>
+                <default>false</default>
+                <label>APAC eR</label>
+            </value>
+            <value>
+                <fullName>AT Fieldsales</fullName>
+                <default>false</default>
+                <label>AT Fieldsales</label>
+            </value>
+            <value>
+                <fullName>AT Member Services</fullName>
+                <default>false</default>
+                <label>AT Member Services</label>
+            </value>
+            <value>
+                <fullName>AT Sales</fullName>
+                <default>false</default>
+                <label>AT Sales</label>
+            </value>
+            <value>
+                <fullName>AT Telesales</fullName>
+                <default>false</default>
+                <label>AT Telesales</label>
+            </value>
+            <value>
+                <fullName>AU Fieldsales</fullName>
+                <default>false</default>
+                <label>AU Fieldsales</label>
+            </value>
+            <value>
+                <fullName>AU Finance</fullName>
+                <default>false</default>
+                <label>AU Finance</label>
+            </value>
+            <value>
+                <fullName>AU Inbound</fullName>
+                <default>false</default>
+                <label>AU Inbound</label>
+            </value>
+            <value>
+                <fullName>AU Marketing</fullName>
+                <default>false</default>
+                <label>AU Marketing</label>
+            </value>
+            <value>
+                <fullName>AU Member Services</fullName>
+                <default>false</default>
+                <label>AU Member Services</label>
+            </value>
+            <value>
+                <fullName>AU Telesales</fullName>
+                <default>false</default>
+                <label>AU Telesales</label>
+            </value>
+            <value>
+                <fullName>AdComms</fullName>
+                <default>false</default>
+                <label>AdComms</label>
+            </value>
+            <value>
+                <fullName>Apalachicola Times</fullName>
+                <default>false</default>
+                <label>Apalachicola Times</label>
+            </value>
+            <value>
+                <fullName>Appeal Democrat</fullName>
+                <default>false</default>
+                <label>Appeal Democrat</label>
+            </value>
+            <value>
+                <fullName>Asia Pacific</fullName>
+                <default>false</default>
+                <label>Asia Pacific</label>
+            </value>
+            <value>
+                <fullName>Asia Pacific Seeker</fullName>
+                <default>false</default>
+                <label>Asia Pacific Seeker</label>
+            </value>
+            <value>
+                <fullName>BE Fieldsales</fullName>
+                <default>false</default>
+                <label>BE Fieldsales</label>
+            </value>
+            <value>
+                <fullName>BE Member Services</fullName>
+                <default>false</default>
+                <label>BE Member Services</label>
+            </value>
+            <value>
+                <fullName>BE Sales</fullName>
+                <default>false</default>
+                <label>BE Sales</label>
+            </value>
+            <value>
+                <fullName>Beacon Journal Publishing Co.</fullName>
+                <default>false</default>
+                <label>Beacon Journal Publishing Co.</label>
+            </value>
+            <value>
+                <fullName>Bergen County Record</fullName>
+                <default>false</default>
+                <label>Bergen County Record</label>
+            </value>
+            <value>
+                <fullName>Brownsville Herald</fullName>
+                <default>false</default>
+                <label>Brownsville Herald</label>
+            </value>
+            <value>
+                <fullName>CA Fieldsales</fullName>
+                <default>false</default>
+                <label>CA Fieldsales</label>
+            </value>
+            <value>
+                <fullName>CA Member Services</fullName>
+                <default>false</default>
+                <label>CA Member Services</label>
+            </value>
+            <value>
+                <fullName>CH Sales</fullName>
+                <default>false</default>
+                <label>CH Sales</label>
+            </value>
+            <value>
+                <fullName>CPT - Regional</fullName>
+                <default>false</default>
+                <label>CPT - Regional</label>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>Central South America</fullName>
+                <default>false</default>
+                <label>Central South America</label>
+            </value>
+            <value>
+                <fullName>Cincinnati Jobmatch</fullName>
+                <default>false</default>
+                <label>Cincinnati Jobmatch</label>
+            </value>
+            <value>
+                <fullName>Clovis News Journal</fullName>
+                <default>false</default>
+                <label>Clovis News Journal</label>
+            </value>
+            <value>
+                <fullName>DE Sales</fullName>
+                <default>false</default>
+                <label>DE Sales</label>
+            </value>
+            <value>
+                <fullName>DK Jobline</fullName>
+                <default>false</default>
+                <label>DK Jobline</label>
+            </value>
+            <value>
+                <fullName>DK Sales</fullName>
+                <default>false</default>
+                <label>DK Sales</label>
+            </value>
+            <value>
+                <fullName>DM CSA Finance</fullName>
+                <default>false</default>
+                <label>DM CSA Finance</label>
+            </value>
+            <value>
+                <fullName>DM CSA Sales</fullName>
+                <default>false</default>
+                <label>DM CSA Sales</label>
+            </value>
+            <value>
+                <fullName>DM CSA Sales Manager</fullName>
+                <default>false</default>
+                <label>DM CSA Sales Manager</label>
+            </value>
+            <value>
+                <fullName>DM CSA Sales Support</fullName>
+                <default>false</default>
+                <label>DM CSA Sales Support</label>
+            </value>
+            <value>
+                <fullName>DM CSA Service</fullName>
+                <default>false</default>
+                <label>DM CSA Service</label>
+            </value>
+            <value>
+                <fullName>DM CSA Training</fullName>
+                <default>false</default>
+                <label>DM CSA Training</label>
+            </value>
+            <value>
+                <fullName>DM EU Finance</fullName>
+                <default>false</default>
+                <label>DM EU Finance</label>
+            </value>
+            <value>
+                <fullName>DM EU Sales</fullName>
+                <default>false</default>
+                <label>DM EU Sales</label>
+            </value>
+            <value>
+                <fullName>DM EU Sales Manager</fullName>
+                <default>false</default>
+                <label>DM EU Sales Manager</label>
+            </value>
+            <value>
+                <fullName>DM EU Sales Support</fullName>
+                <default>false</default>
+                <label>DM EU Sales Support</label>
+            </value>
+            <value>
+                <fullName>DM EU Service</fullName>
+                <default>false</default>
+                <label>DM EU Service</label>
+            </value>
+            <value>
+                <fullName>DM Europe</fullName>
+                <default>false</default>
+                <label>DM Europe</label>
+            </value>
+            <value>
+                <fullName>DO NOT USE</fullName>
+                <default>false</default>
+                <label>DO NOT USE</label>
+            </value>
+            <value>
+                <fullName>Default Organization</fullName>
+                <default>false</default>
+                <label>Default Organization</label>
+            </value>
+            <value>
+                <fullName>Desert Dispatch</fullName>
+                <default>false</default>
+                <label>Desert Dispatch</label>
+            </value>
+            <value>
+                <fullName>Directional Marketing</fullName>
+                <default>false</default>
+                <label>Directional Marketing</label>
+            </value>
+            <value>
+                <fullName>E-Business</fullName>
+                <default>false</default>
+                <label>E-Business</label>
+            </value>
+            <value>
+                <fullName>ECOMM.us</fullName>
+                <default>false</default>
+                <label>ECOMM.us</label>
+            </value>
+            <value>
+                <fullName>EE CC</fullName>
+                <default>false</default>
+                <label>EE CC</label>
+            </value>
+            <value>
+                <fullName>EE Fieldsales</fullName>
+                <default>false</default>
+                <label>EE Fieldsales</label>
+            </value>
+            <value>
+                <fullName>EE Finance</fullName>
+                <default>false</default>
+                <label>EE Finance</label>
+            </value>
+            <value>
+                <fullName>EE Mrkt</fullName>
+                <default>false</default>
+                <label>EE Mrkt</label>
+            </value>
+            <value>
+                <fullName>EE Product and Pricing</fullName>
+                <default>false</default>
+                <label>EE Product and Pricing</label>
+            </value>
+            <value>
+                <fullName>EE Sales Mgr</fullName>
+                <default>false</default>
+                <label>EE Sales Mgr</label>
+            </value>
+            <value>
+                <fullName>EE Sales Ops</fullName>
+                <default>false</default>
+                <label>EE Sales Ops</label>
+            </value>
+            <value>
+                <fullName>EE Sales Support</fullName>
+                <default>false</default>
+                <label>EE Sales Support</label>
+            </value>
+            <value>
+                <fullName>EE Telesales</fullName>
+                <default>false</default>
+                <label>EE Telesales</label>
+            </value>
+            <value>
+                <fullName>ERM AnonUser</fullName>
+                <default>false</default>
+                <label>ERM AnonUser</label>
+            </value>
+            <value>
+                <fullName>ES Jobline</fullName>
+                <default>false</default>
+                <label>ES Jobline</label>
+            </value>
+            <value>
+                <fullName>ES Member Services</fullName>
+                <default>false</default>
+                <label>ES Member Services</label>
+            </value>
+            <value>
+                <fullName>ES Sales</fullName>
+                <default>false</default>
+                <label>ES Sales</label>
+            </value>
+            <value>
+                <fullName>EU Finance</fullName>
+                <default>false</default>
+                <label>EU Finance</label>
+            </value>
+            <value>
+                <fullName>EU Inbound</fullName>
+                <default>false</default>
+                <label>EU Inbound</label>
+            </value>
+            <value>
+                <fullName>EU Marketing</fullName>
+                <default>false</default>
+                <label>EU Marketing</label>
+            </value>
+            <value>
+                <fullName>EU Member Services</fullName>
+                <default>false</default>
+                <label>EU Member Services</label>
+            </value>
+            <value>
+                <fullName>EU Sales Support</fullName>
+                <default>false</default>
+                <label>EU Sales Support</label>
+            </value>
+            <value>
+                <fullName>EU Telesales</fullName>
+                <default>false</default>
+                <label>EU Telesales</label>
+            </value>
+            <value>
+                <fullName>EU Telesales UK&amp;IE</fullName>
+                <default>false</default>
+                <label>EU Telesales UK&amp;IE</label>
+            </value>
+            <value>
+                <fullName>Emerald Coast - EAST Regional</fullName>
+                <default>false</default>
+                <label>Emerald Coast - EAST Regional</label>
+            </value>
+            <value>
+                <fullName>Emerald Coast - WEST Regional</fullName>
+                <default>false</default>
+                <label>Emerald Coast - WEST Regional</label>
+            </value>
+            <value>
+                <fullName>Europe</fullName>
+                <default>false</default>
+                <label>Europe</label>
+            </value>
+            <value>
+                <fullName>FR Jobline</fullName>
+                <default>false</default>
+                <label>FR Jobline</label>
+            </value>
+            <value>
+                <fullName>FR Member Services</fullName>
+                <default>false</default>
+                <label>FR Member Services</label>
+            </value>
+            <value>
+                <fullName>FR Sales</fullName>
+                <default>false</default>
+                <label>FR Sales</label>
+            </value>
+            <value>
+                <fullName>FR Sales2</fullName>
+                <default>false</default>
+                <label>FR Sales2</label>
+            </value>
+            <value>
+                <fullName>FastWeb</fullName>
+                <default>false</default>
+                <label>FastWeb</label>
+            </value>
+            <value>
+                <fullName>Fieldsales</fullName>
+                <default>false</default>
+                <label>Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Fieldsales-Staffing</fullName>
+                <default>false</default>
+                <label>Fieldsales-Staffing</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Florence Times Daily</fullName>
+                <default>false</default>
+                <label>Florence Times Daily</label>
+            </value>
+            <value>
+                <fullName>Gadsden Times</fullName>
+                <default>false</default>
+                <label>Gadsden Times</label>
+            </value>
+            <value>
+                <fullName>HK Finance</fullName>
+                <default>false</default>
+                <label>HK Finance</label>
+            </value>
+            <value>
+                <fullName>HK Marketing</fullName>
+                <default>false</default>
+                <label>HK Marketing</label>
+            </value>
+            <value>
+                <fullName>HK Member Services</fullName>
+                <default>false</default>
+                <label>HK Member Services</label>
+            </value>
+            <value>
+                <fullName>HK Sales</fullName>
+                <default>false</default>
+                <label>HK Sales</label>
+            </value>
+            <value>
+                <fullName>Henderson-Times News</fullName>
+                <default>false</default>
+                <label>Henderson-Times News</label>
+            </value>
+            <value>
+                <fullName>Highdesertjobs</fullName>
+                <default>false</default>
+                <label>Highdesertjobs</label>
+            </value>
+            <value>
+                <fullName>Honolulu Star Bulletin (HSB)</fullName>
+                <default>false</default>
+                <label>Honolulu Star Bulletin (HSB)</label>
+            </value>
+            <value>
+                <fullName>Houma Courier</fullName>
+                <default>false</default>
+                <label>Houma Courier</label>
+            </value>
+            <value>
+                <fullName>IE Member Services</fullName>
+                <default>false</default>
+                <label>IE Member Services</label>
+            </value>
+            <value>
+                <fullName>IE Sales</fullName>
+                <default>false</default>
+                <label>IE Sales</label>
+            </value>
+            <value>
+                <fullName>IN Finance</fullName>
+                <default>false</default>
+                <label>IN Finance</label>
+            </value>
+            <value>
+                <fullName>IN ME Telesales</fullName>
+                <default>false</default>
+                <label>IN ME Telesales</label>
+            </value>
+            <value>
+                <fullName>IN Marketing</fullName>
+                <default>false</default>
+                <label>IN Marketing</label>
+            </value>
+            <value>
+                <fullName>IN Member Services</fullName>
+                <default>false</default>
+                <label>IN Member Services</label>
+            </value>
+            <value>
+                <fullName>IN Sales</fullName>
+                <default>false</default>
+                <label>IN Sales</label>
+            </value>
+            <value>
+                <fullName>IN Sales Support</fullName>
+                <default>false</default>
+                <label>IN Sales Support</label>
+            </value>
+            <value>
+                <fullName>IT Jobline</fullName>
+                <default>false</default>
+                <label>IT Jobline</label>
+            </value>
+            <value>
+                <fullName>IT Member Services</fullName>
+                <default>false</default>
+                <label>IT Member Services</label>
+            </value>
+            <value>
+                <fullName>IT Sales</fullName>
+                <default>false</default>
+                <label>IT Sales</label>
+            </value>
+            <value>
+                <fullName>Inbound and Direct Mail</fullName>
+                <default>false</default>
+                <label>Inbound and Direct Mail</label>
+            </value>
+            <value>
+                <fullName>International Fieldsales</fullName>
+                <default>false</default>
+                <label>International Fieldsales</label>
+            </value>
+            <value>
+                <fullName>International Finance</fullName>
+                <default>false</default>
+                <label>International Finance</label>
+            </value>
+            <value>
+                <fullName>International Finance (FR)</fullName>
+                <default>false</default>
+                <label>International Finance (FR)</label>
+            </value>
+            <value>
+                <fullName>International Inbound</fullName>
+                <default>false</default>
+                <label>International Inbound</label>
+            </value>
+            <value>
+                <fullName>International Member Services</fullName>
+                <default>false</default>
+                <label>International Member Services</label>
+            </value>
+            <value>
+                <fullName>International Sales (AU)</fullName>
+                <default>false</default>
+                <label>International Sales (AU)</label>
+            </value>
+            <value>
+                <fullName>International Sales (IN)</fullName>
+                <default>false</default>
+                <label>International Sales (IN)</label>
+            </value>
+            <value>
+                <fullName>International Sales (UK)</fullName>
+                <default>false</default>
+                <label>International Sales (UK)</label>
+            </value>
+            <value>
+                <fullName>International Technology</fullName>
+                <default>false</default>
+                <label>International Technology</label>
+            </value>
+            <value>
+                <fullName>International Telesales</fullName>
+                <default>false</default>
+                <label>International Telesales</label>
+            </value>
+            <value>
+                <fullName>Journal Courier</fullName>
+                <default>false</default>
+                <label>Journal Courier</label>
+            </value>
+            <value>
+                <fullName>Karma Administration</fullName>
+                <default>false</default>
+                <label>Karma Administration</label>
+            </value>
+            <value>
+                <fullName>Karma Administration--Asia Pacific</fullName>
+                <default>false</default>
+                <label>Karma Administration--Asia Pacific</label>
+            </value>
+            <value>
+                <fullName>Karma Administration--Europe</fullName>
+                <default>false</default>
+                <label>Karma Administration--Europe</label>
+            </value>
+            <value>
+                <fullName>Karma Administration--North America</fullName>
+                <default>false</default>
+                <label>Karma Administration--North America</label>
+            </value>
+            <value>
+                <fullName>LU Member Services</fullName>
+                <default>false</default>
+                <label>LU Member Services</label>
+            </value>
+            <value>
+                <fullName>LU Sales</fullName>
+                <default>false</default>
+                <label>LU Sales</label>
+            </value>
+            <value>
+                <fullName>Lakeland Ledger</fullName>
+                <default>false</default>
+                <label>Lakeland Ledger</label>
+            </value>
+            <value>
+                <fullName>Laurie Test</fullName>
+                <default>false</default>
+                <label>Laurie Test</label>
+            </value>
+            <value>
+                <fullName>Laurie Test2</fullName>
+                <default>false</default>
+                <label>Laurie Test2</label>
+            </value>
+            <value>
+                <fullName>Lexington Dispatch</fullName>
+                <default>false</default>
+                <label>Lexington Dispatch</label>
+            </value>
+            <value>
+                <fullName>Lima News</fullName>
+                <default>false</default>
+                <label>Lima News</label>
+            </value>
+            <value>
+                <fullName>MHB - Regional</fullName>
+                <default>false</default>
+                <label>MHB - Regional</label>
+            </value>
+            <value>
+                <fullName>MTS Sales</fullName>
+                <default>false</default>
+                <label>MTS Sales</label>
+            </value>
+            <value>
+                <fullName>MY Fieldsales</fullName>
+                <default>false</default>
+                <label>MY Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>Mid-Valley Town Crier</fullName>
+                <default>false</default>
+                <label>Mid-Valley Town Crier</label>
+            </value>
+            <value>
+                <fullName>Military Advantage</fullName>
+                <default>false</default>
+                <label>Military Advantage</label>
+            </value>
+            <value>
+                <fullName>Monster Campus</fullName>
+                <default>false</default>
+                <label>Monster Campus</label>
+            </value>
+            <value>
+                <fullName>Monster Moving</fullName>
+                <default>false</default>
+                <label>Monster Moving</label>
+            </value>
+            <value>
+                <fullName>Monster.com (North America)</fullName>
+                <default>false</default>
+                <label>Monster.com (North America)</label>
+            </value>
+            <value>
+                <fullName>NA Inbound</fullName>
+                <default>false</default>
+                <label>NA Inbound</label>
+            </value>
+            <value>
+                <fullName>NL Jobline</fullName>
+                <default>false</default>
+                <label>NL Jobline</label>
+            </value>
+            <value>
+                <fullName>NL Member Services</fullName>
+                <default>false</default>
+                <label>NL Member Services</label>
+            </value>
+            <value>
+                <fullName>NL Sales</fullName>
+                <default>false</default>
+                <label>NL Sales</label>
+            </value>
+            <value>
+                <fullName>NO Jobline</fullName>
+                <default>false</default>
+                <label>NO Jobline</label>
+            </value>
+            <value>
+                <fullName>NO Sales</fullName>
+                <default>false</default>
+                <label>NO Sales</label>
+            </value>
+            <value>
+                <fullName>NZ Fieldsales</fullName>
+                <default>false</default>
+                <label>NZ Fieldsales</label>
+            </value>
+            <value>
+                <fullName>New York Times</fullName>
+                <default>false</default>
+                <label>New York Times</label>
+            </value>
+            <value>
+                <fullName>Newspapers</fullName>
+                <default>false</default>
+                <label>Newspapers</label>
+            </value>
+            <value>
+                <fullName>Newspapers.csa</fullName>
+                <default>false</default>
+                <label>Newspapers.csa</label>
+            </value>
+            <value>
+                <fullName>Newspapers.eu</fullName>
+                <default>false</default>
+                <label>Newspapers.eu</label>
+            </value>
+            <value>
+                <fullName>North America</fullName>
+                <default>false</default>
+                <label>North America</label>
+            </value>
+            <value>
+                <fullName>Northwest Florida Daily News</fullName>
+                <default>false</default>
+                <label>Northwest Florida Daily News</label>
+            </value>
+            <value>
+                <fullName>Ocala Star-Banner</fullName>
+                <default>false</default>
+                <label>Ocala Star-Banner</label>
+            </value>
+            <value>
+                <fullName>Odessa</fullName>
+                <default>false</default>
+                <label>Odessa</label>
+            </value>
+            <value>
+                <fullName>Outbound Business Development</fullName>
+                <default>false</default>
+                <label>Outbound Business Development</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Portales News-Tribune</fullName>
+                <default>false</default>
+                <label>Portales News-Tribune</label>
+            </value>
+            <value>
+                <fullName>Porterville Recorder</fullName>
+                <default>false</default>
+                <label>Porterville Recorder</label>
+            </value>
+            <value>
+                <fullName>Portland. ME (Press Herald)</fullName>
+                <default>false</default>
+                <label>Portland. ME (Press Herald)</label>
+            </value>
+            <value>
+                <fullName>ReadOnly EU AdComms</fullName>
+                <default>false</default>
+                <label>ReadOnly EU AdComms</label>
+            </value>
+            <value>
+                <fullName>SE Jobline</fullName>
+                <default>false</default>
+                <label>SE Jobline</label>
+            </value>
+            <value>
+                <fullName>SEA Finance</fullName>
+                <default>false</default>
+                <label>SEA Finance</label>
+            </value>
+            <value>
+                <fullName>SEA Marketing</fullName>
+                <default>false</default>
+                <label>SEA Marketing</label>
+            </value>
+            <value>
+                <fullName>SG Fieldsales</fullName>
+                <default>false</default>
+                <label>SG Fieldsales</label>
+            </value>
+            <value>
+                <fullName>SG Member Services</fullName>
+                <default>false</default>
+                <label>SG Member Services</label>
+            </value>
+            <value>
+                <fullName>SG Telesales</fullName>
+                <default>false</default>
+                <label>SG Telesales</label>
+            </value>
+            <value>
+                <fullName>Sales Support</fullName>
+                <default>false</default>
+                <label>Sales Support</label>
+            </value>
+            <value>
+                <fullName>Santa Rosa Press Democrat</fullName>
+                <default>false</default>
+                <label>Santa Rosa Press Democrat</label>
+            </value>
+            <value>
+                <fullName>Sarasota Herald-Tribune</fullName>
+                <default>false</default>
+                <label>Sarasota Herald-Tribune</label>
+            </value>
+            <value>
+                <fullName>Scottsdale Mesa Tribune (SCT)</fullName>
+                <default>false</default>
+                <label>Scottsdale Mesa Tribune (SCT)</label>
+            </value>
+            <value>
+                <fullName>Sedalia Democrat</fullName>
+                <default>false</default>
+                <label>Sedalia Democrat</label>
+            </value>
+            <value>
+                <fullName>Seeker Support</fullName>
+                <default>false</default>
+                <label>Seeker Support</label>
+            </value>
+            <value>
+                <fullName>Seminars</fullName>
+                <default>false</default>
+                <label>Seminars</label>
+            </value>
+            <value>
+                <fullName>Shelby Star</fullName>
+                <default>false</default>
+                <label>Shelby Star</label>
+            </value>
+            <value>
+                <fullName>Siebel Administration</fullName>
+                <default>false</default>
+                <label>Siebel Administration</label>
+            </value>
+            <value>
+                <fullName>Spartanburg Herald Journal</fullName>
+                <default>false</default>
+                <label>Spartanburg Herald Journal</label>
+            </value>
+            <value>
+                <fullName>Sun Journal</fullName>
+                <default>false</default>
+                <label>Sun Journal</label>
+            </value>
+            <value>
+                <fullName>TMP Canada</fullName>
+                <default>false</default>
+                <label>TMP Canada</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Telesales</fullName>
+                <default>false</default>
+                <label>Telesales</label>
+            </value>
+            <value>
+                <fullName>Telesales-Staffing</fullName>
+                <default>false</default>
+                <label>Telesales-Staffing</label>
+            </value>
+            <value>
+                <fullName>Temp</fullName>
+                <default>false</default>
+                <label>Temp</label>
+            </value>
+            <value>
+                <fullName>The Boston Globe</fullName>
+                <default>false</default>
+                <label>The Boston Globe</label>
+            </value>
+            <value>
+                <fullName>The Daily News</fullName>
+                <default>false</default>
+                <label>The Daily News</label>
+            </value>
+            <value>
+                <fullName>The Destin Log</fullName>
+                <default>false</default>
+                <label>The Destin Log</label>
+            </value>
+            <value>
+                <fullName>The Gainsville Sun</fullName>
+                <default>false</default>
+                <label>The Gainsville Sun</label>
+            </value>
+            <value>
+                <fullName>The Gaston Gazette</fullName>
+                <default>false</default>
+                <label>The Gaston Gazette</label>
+            </value>
+            <value>
+                <fullName>The Gazette</fullName>
+                <default>false</default>
+                <label>The Gazette</label>
+            </value>
+            <value>
+                <fullName>The Island Breeze</fullName>
+                <default>false</default>
+                <label>The Island Breeze</label>
+            </value>
+            <value>
+                <fullName>The Kinston Free Press</fullName>
+                <default>false</default>
+                <label>The Kinston Free Press</label>
+            </value>
+            <value>
+                <fullName>The Monitor</fullName>
+                <default>false</default>
+                <label>The Monitor</label>
+            </value>
+            <value>
+                <fullName>The News Herald</fullName>
+                <default>false</default>
+                <label>The News Herald</label>
+            </value>
+            <value>
+                <fullName>The Orange County Register</fullName>
+                <default>false</default>
+                <label>The Orange County Register</label>
+            </value>
+            <value>
+                <fullName>The Philadelphia Enquirer and Daily News</fullName>
+                <default>false</default>
+                <label>The Philadelphia Enquirer and Daily News</label>
+            </value>
+            <value>
+                <fullName>The St. Petersburg Times</fullName>
+                <default>false</default>
+                <label>The St. Petersburg Times</label>
+            </value>
+            <value>
+                <fullName>The Star</fullName>
+                <default>false</default>
+                <label>The Star</label>
+            </value>
+            <value>
+                <fullName>The Telegraph</fullName>
+                <default>false</default>
+                <label>The Telegraph</label>
+            </value>
+            <value>
+                <fullName>The Tribune</fullName>
+                <default>false</default>
+                <label>The Tribune</label>
+            </value>
+            <value>
+                <fullName>Thibodaux Daily Comet</fullName>
+                <default>false</default>
+                <label>Thibodaux Daily Comet</label>
+            </value>
+            <value>
+                <fullName>Times-News</fullName>
+                <default>false</default>
+                <label>Times-News</label>
+            </value>
+            <value>
+                <fullName>Tucumcari-Quay County Sun</fullName>
+                <default>false</default>
+                <label>Tucumcari-Quay County Sun</label>
+            </value>
+            <value>
+                <fullName>Tuscoloosa News</fullName>
+                <default>false</default>
+                <label>Tuscoloosa News</label>
+            </value>
+            <value>
+                <fullName>UK AdComms</fullName>
+                <default>false</default>
+                <label>UK AdComms</label>
+            </value>
+            <value>
+                <fullName>UK Member Services</fullName>
+                <default>false</default>
+                <label>UK Member Services</label>
+            </value>
+            <value>
+                <fullName>UK Sales</fullName>
+                <default>false</default>
+                <label>UK Sales</label>
+            </value>
+            <value>
+                <fullName>US Commercial</fullName>
+                <default>false</default>
+                <label>US Commercial</label>
+            </value>
+            <value>
+                <fullName>US Government</fullName>
+                <default>false</default>
+                <label>US Government</label>
+            </value>
+            <value>
+                <fullName>US Healthcare</fullName>
+                <default>false</default>
+                <label>US Healthcare</label>
+            </value>
+            <value>
+                <fullName>US Inside Sales</fullName>
+                <default>false</default>
+                <label>US Inside Sales</label>
+            </value>
+            <value>
+                <fullName>US Member Services</fullName>
+                <default>false</default>
+                <label>US Member Services</label>
+            </value>
+            <value>
+                <fullName>US Skilled/Hourly</fullName>
+                <default>false</default>
+                <label>US Skilled/Hourly</label>
+            </value>
+            <value>
+                <fullName>US Staffing</fullName>
+                <default>false</default>
+                <label>US Staffing</label>
+            </value>
+            <value>
+                <fullName>US Telemarketing</fullName>
+                <default>false</default>
+                <label>US Telemarketing</label>
+            </value>
+            <value>
+                <fullName>Valley Morning Star</fullName>
+                <default>false</default>
+                <label>Valley Morning Star</label>
+            </value>
+            <value>
+                <fullName>Victorville Daily Press</fullName>
+                <default>false</default>
+                <label>Victorville Daily Press</label>
+            </value>
+            <value>
+                <fullName>WS - Regional</fullName>
+                <default>false</default>
+                <label>WS - Regional</label>
+            </value>
+            <value>
+                <fullName>Walton Sun</fullName>
+                <default>false</default>
+                <label>Walton Sun</label>
+            </value>
+            <value>
+                <fullName>Wilkes-Barre Times Leader (WBTL)</fullName>
+                <default>false</default>
+                <label>Wilkes-Barre Times Leader (WBTL)</label>
+            </value>
+            <value>
+                <fullName>Wilmington-Star News</fullName>
+                <default>false</default>
+                <label>Wilmington-Star News</label>
+            </value>
+            <value>
+                <fullName>Worcester Telegram &amp; Gazette</fullName>
+                <default>false</default>
+                <label>Worcester Telegram &amp; Gazette</label>
+            </value>
+            <value>
+                <fullName>Yuma Sun</fullName>
+                <default>false</default>
+                <label>Yuma Sun</label>
+            </value>
+            <value>
+                <fullName>ZZZ_EE Sales Mng DO NOT USE</fullName>
+                <default>false</default>
+                <label>ZZZ_EE Sales Mng DO NOT USE</label>
+            </value>
+            <value>
+                <fullName>encjobs - Regional</fullName>
+                <default>false</default>
+                <label>encjobs - Regional</label>
+            </value>
+            <value>
+                <fullName>ncpiedmontjobs</fullName>
+                <default>false</default>
+                <label>ncpiedmontjobs</label>
+            </value>
+            <value>
+                <fullName>AP Support Function</fullName>
+                <default>false</default>
+                <label>AP Support Function</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

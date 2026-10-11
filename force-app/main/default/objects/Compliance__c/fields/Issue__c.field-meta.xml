@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Issue__c</fullName>
+    <label>Issue</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Category__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Inbound Welcome Letter</fullName>
+                <default>false</default>
+                <label>Inbound Welcome Letter</label>
+            </value>
+            <value>
+                <fullName>Database</fullName>
+                <default>false</default>
+                <label>Database</label>
+            </value>
+            <value>
+                <fullName>Job posting</fullName>
+                <default>false</default>
+                <label>Job posting</label>
+            </value>
+            <value>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+                <label>Outreach</label>
+            </value>
+            <value>
+                <fullName>Site</fullName>
+                <default>false</default>
+                <label>Site</label>
+            </value>
+            <value>
+                <fullName>Feature Enhancement Request</fullName>
+                <default>false</default>
+                <label>Feature Enhancement Request</label>
+            </value>
+            <value>
+                <fullName>Inventory Releated / Limits</fullName>
+                <default>false</default>
+                <label>Inventory Releated / Limits</label>
+            </value>
+            <value>
+                <fullName>Account Related Information</fullName>
+                <default>false</default>
+                <label>Account Related Information</label>
+            </value>
+            <value>
+                <fullName>Account Activation /Ecomm Orders</fullName>
+                <default>false</default>
+                <label>Account Activation /Ecomm Orders</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>VOC / Escalation</fullName>
+                <default>false</default>
+                <label>VOC / Escalation</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Collections/Payment/Invoice</fullName>
+                <default>false</default>
+                <label>Collections/Payment/Invoice</label>
+            </value>
+            <value>
+                <fullName>Compliance Misc. –Others</fullName>
+                <default>false</default>
+                <label>Compliance Misc. –Others</label>
+            </value>
+            <value>
+                <fullName>Seeker Inquiry</fullName>
+                <default>false</default>
+                <label>Seeker Inquiry</label>
+            </value>
+            <value>
+                <fullName>Escalations</fullName>
+                <default>false</default>
+                <label>Escalations</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Fraud Report</fullName>
+                <default>false</default>
+                <label>Fraud Report</label>
+            </value>
+            <value>
+                <fullName>Resume Upload -New</fullName>
+                <default>false</default>
+                <label>Resume Upload -New</label>
+            </value>
+            <value>
+                <fullName>Seeker Account (Update/deactivate etc)</fullName>
+                <default>false</default>
+                <label>Seeker Account (Update/deactivate etc)</label>
+            </value>
+            <value>
+                <fullName>Phishing email</fullName>
+                <default>false</default>
+                <label>Phishing email</label>
+            </value>
+            <value>
+                <fullName>LEAD</fullName>
+                <default>false</default>
+                <label>LEAD</label>
+            </value>
+            <value>
+                <fullName>Delete A/C</fullName>
+                <default>false</default>
+                <label>Delete A/C</label>
+            </value>
+            <value>
+                <fullName>FRAUD OFFERS</fullName>
+                <default>false</default>
+                <label>FRAUD OFFERS</label>
+            </value>
+            <value>
+                <fullName>OTP ISSUE</fullName>
+                <default>false</default>
+                <label>OTP ISSUE</label>
+            </value>
+            <value>
+                <fullName>REGULAR SEEKER QUERY</fullName>
+                <default>false</default>
+                <label>Regular Seeker Query</label>
+            </value>
+            <value>
+                <fullName>Escalation</fullName>
+                <default>false</default>
+                <label>Escalation</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Inbound Welcome Letter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Database</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Job posting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Outreach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Site</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Feature Enhancement Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Inventory Releated / Limits</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Account Related Information</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Account Activation /Ecomm Orders</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Training</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>VOC / Escalation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <valueName>Renewal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <controllingFieldValue>Collection</controllingFieldValue>
+            <valueName>Collections/Payment/Invoice</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Employer</controllingFieldValue>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <controllingFieldValue>Seeker (Free Seeker)</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance</controllingFieldValue>
+            <valueName>Compliance Misc. –Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Paid Seeker)</controllingFieldValue>
+            <valueName>Seeker Inquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Paid Seeker)</controllingFieldValue>
+            <valueName>Escalations</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Paid Seeker)</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Paid Seeker)</controllingFieldValue>
+            <valueName>Fraud Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Paid Seeker)</controllingFieldValue>
+            <valueName>Resume Upload -New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Paid Seeker)</controllingFieldValue>
+            <valueName>Seeker Account (Update/deactivate etc)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Free Seeker)</controllingFieldValue>
+            <valueName>LEAD</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Free Seeker)</controllingFieldValue>
+            <valueName>Delete A/C</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Free Seeker)</controllingFieldValue>
+            <valueName>FRAUD OFFERS</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Free Seeker)</controllingFieldValue>
+            <valueName>OTP ISSUE</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Free Seeker)</controllingFieldValue>
+            <valueName>REGULAR SEEKER QUERY</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker (Free Seeker)</controllingFieldValue>
+            <valueName>Escalation</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

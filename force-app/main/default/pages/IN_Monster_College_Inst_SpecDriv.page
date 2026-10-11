@@ -1,0 +1,723 @@
+<apex:page controller="IN_Monster_College_Inst_SpecDriv" renderAs="pdf" cache="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false" >
+<apex:form >
+
+
+<c:PDFHeaderFooter type="header" > 
+
+<div style="width:50px height:100px;color:#8A8888;padding-bottom:120px;margin-bottom:150px;">
+<apex:image url="{!URLFOR($Resource.Monster_Logo)}" width="200px" /><br/>
+Plot No.1024 &amp; 1024/1, Road No 45,<br/>
+Jubilee Hills, Hyderabad 500033, India
+</div>
+
+<apex:stylesheet value="{!$Resource.Repeat1}"/> 
+</c:PDFHeaderFooter>
+<c:PDFHeaderFooter type="footer" > 
+<apex:stylesheet value="{!$Resource.Repeat1}"/> 
+<p style="font-size:14px"><b>NOTED AND ACCEPTED: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Q-04897479 20180424022701Z</b></p>
+</c:PDFHeaderFooter> 
+
+<h4 style="text-align:center;font-size:14px"><b><u>SERVICE AGREEMENT</u></b></h4>
+<table style=" border: 1px  solid;font-size:14px;  align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px;margin-top:-16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+ <tr>
+ <td >
+ <p style="font-size:14px;margin-bottom:0px;" align="justify">
+ This <b>SERVICE AGREEMENT</b> is made and entered into this 22/8/2016 date/month/year Mumbai, Maharashtra at Place.
+("AGREEMENT")</p>
+<p style="font-size:14px" align="center">BY AND BETWEEN</p>
+
+
+<p style="font-size:14px;font-family:arial" align="justify">
+<b>Monster.com India Private Limited</b>, having PAN-AACCM3695G a company incorporated under the [Indian]
+Companies Act, 1956, having its registered office at Plot No.1024 &amp; 1024/1, Road No. 45, Jubilee Hills, Hyderabad – 500
+033, India (hereinafter referred to as &#39;Monster&#39;, which expression shall, unless repugnant to the context or meaning
+thereof, mean and include its successors and assigns) of the FIRST PART; 
+</p>
+ </td>
+ </tr>
+ 
+ 
+ <tr>
+ <td >
+ <p style="font-size:14px;margin-top:-15px" align="center">AND</p>
+ <hr style="margin-top:-12px;margin-bottom:0px"></hr>
+ <p style="font-size:14px;" align="justify">
+ <b>Globeop Financial Services Technologies India Private Limited</b> organized under the Indian Laws having its
+principal place of business at <b>5th floor, Building 16, Interface, Malad (West) Mumbai, Maharashtra 400064</b>
+India (hereinafter referred to as &#39;Member&#39;, which expression shall, unless repugnant to the context or meaning thereof,
+mean and include its successors and permitted assigns) of the SECOND PART. 
+</p>
+ <p style="font-size:14px;" align="justify">
+ (Monster and Member are hereinafter collectively referred to as "the Parties" and severally as "Party")
+ </p>
+ <p style="font-size:14px;" align="justify">
+ WHEREAS Monster is inter alia in the business of e-recruitment solutions and is responsible for the functioning of its
+websites www.monsterindia.com, <b>Error! Bookmark not defined.</b>, www.rozgarduniya.com and
+www.monstercollege.in
+ </p>
+ <p style="font-size:14px;" align="justify">
+WHEREAS Member is in the business of ‘Education Provider’ and is desirous of taking service from Monster as described
+here under, on the terms agreed and contained herein; 
+ </p>
+ <p style="font-size:14px;" align="justify">
+ WHEREAS the Parties intend to facilitate Monster’s online recruitment solution by bringing the Member’s placement
+activities online thereby attracting more corporate and other entities for recruitment of registered users (“users") of
+Monstercollege.in.
+ </p>
+ </td>
+ 
+ </tr>
+ 
+</table>
+<br/>
+<p style="font-size:11px;" align="justify">
+<b><u>NOW, THEREFORE, IN CONSIDERATION OF THE PROMISES AND THE MUTUAL COVENANTS, AGREEMENT HEREINAFTER
+SET FORTH, THE PARTIES INTENDING TO BE LEGALLY BOUND, HEREBY AGREE AS FOLLOWS: </u></b>
+</p>
+<p style="font-size:14px;" align="justify"><b><u>1. SERVICE DETAILS:</u></b></p>
+
+<p style="font-size:14px;" align="justify">
+The details of the service that Member has agreed to take from Monster are as follows (<b>"Service"</b>): 
+</p>
+<div>
+<table style=" font-size:14px;  align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:0px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+<tr style="border:1px solid" colspan="2">
+<td style="width:25%; border:1px solid;font-size:14px">Member Name:</td>
+<td style="width:75%;border:1px solid;font-size:14px">Globeop Financial Services Technologies India Private Limited</td>
+</tr>
+
+<tr style="border:1px solid" colspan="2">
+<td style="width:25%; border:1px solid;font-size:14px">Service:</td>
+<td style="width:75%;border:1px solid;font-size:14px"></td>
+</tr>
+
+<tr style="border:0px " colspan="2">
+<td style="width:25%; border:1px solid;font-size:14px">Quote No.:</td>
+<td style="width:75%;border:1px solid;font-size:14px">Q-04897479  </td>
+</tr>
+
+<tr style="border:1px solid" colspan="2">
+<td style="width:25%; border:1px solid ;font-size:14px">Start Date :</td>
+<td style="width:75%;border:1px solid;font-size:14px">8/23/2016 </td>
+</tr>
+
+<tr style="border:1px solid" colspan="2">
+<td style="width:25%; border:1px solid;font-size:14px">End Date:</td>
+<td style="width:75%;border:1px solid;font-size:14px">8/23/2016</td>
+</tr>
+
+<tr style="border:1px solid" colspan="2">
+<td style="width:25%; border:1px solid;font-size:14px">Session:</td>
+<td style="width:75%;border:1px solid;font-size:14px"> </td>
+</tr>
+</table>
+</div>
+<br/>
+<table style=" font-size:14px;  align:left; height:-100px;width:100%; margin-top:-20px; border:1 px; margin-left:-8px; margin-right:30px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+
+<th style="">
+<tr style="border:1px solid black;background-color:#FE2EF7; ">
+<td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:14px" >Items<br/>#</td>
+<td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:14px">Product</td>
+<td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:14px">Qty</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:14px">Price Per Drive</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:14px">Product Start Date</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:14px">Product End Date</td>
+</tr>
+</th>
+<tr >
+<td style="border:1px solid black;">1</td>
+<td style="border:1px solid black;">TestWith Product</td>
+<td style="border:1px solid black;">11</td>
+<td style="border:1px solid black;">22222222</td>
+<td style="border:1px solid black;">22-1-2018</td>
+<td style="border:1px solid black;">22-9-2019</td>
+</tr>
+
+
+</table><br/><br/>
+<div>
+<table style=" border: 1px  solid;font-size:14px;  align:left; height:-100px;width:100%; margin-top:-18px; border:1 px; margin-left:0px; margin-right:30px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+<tr>
+<td style="border:1px solid black; text-align:right; font-size:14px"><b>Value of Services</b></td>
+<td style="border:1px solid black; text-align:right;font-size:14px">INR 360,000.00 </td>
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:right;font-size:14px"><b>Add: Service Tax (14.00%) &amp; SBC (0.50%) &amp;KKC(0.50%) </b></td>
+<td style="border:1px solid black; text-align:right; font-size:14px;width:33%">2555555555555555</td>
+
+</tr>
+<tr>
+<td style="border:1px solid black; text-align:right; font-size:14px;width:33%"><b>Total Invoice value (Including tax)</b></td>
+<td style="border:1px solid black; text-align:right; font-size:14px;width:33%">2555555555555555</td>
+
+</tr>
+
+</table><br/>
+</div>
+<div>
+<p style="font-size:14px;" align="left">
+
+<b>2. PRICE:</b>
+</p>
+<p style="font-size:14px;" align="justify">
+In consideration of the Service as per Clause 1 above, the Member agrees to pay to Monster a sum
+of <b>INR 360,000.00 </b>("<b>Price</b>") for the aforesaid agreed Campus Drives . Parties agree that the Price is exclusive of
+any applicable service tax or any other applicable taxes / tariffs, which taxes / tariffs shall be paid by the Member to
+Monster in addition to the Price ("<b>Total Price</b>").
+
+</p>
+<p style="font-size:14px;" align="left">
+
+<b>3. Term :</b>
+</p>
+<p style="font-size:14px;" align="justify">
+This Agreement shall be valid and be in force from the Start Date<b> 23/8/2016 </b>till the End Date <b>21/8/2017</b>
+("Term"), The Member is bound to make the full payment for the Term, irrespective of whether they use the
+service(s) or not. Member shall also be liable to pay the legal costs which may be incurred by Monster towards
+recovery of any of the dues from Member.
+</p>
+
+
+<p style="font-size:14px;" align="left">
+<b>4.Payments Terms :</b>
+</p>
+<p style="font-size:14px;" align="justify">
+The Member shall pay the Total Price to Monster, as per the following payment terms: Invoice - <b>Invoice - Net 30 -</b>
+</p>
+</div>
+<div style="margin: 5px 50px 0px 0px;">
+<table  style="margin-left:250px">
+<th><tr>
+<td style="border:1px solid black; text-align:center; font-size:14px"><b>Payment Due Date </b></td>
+<td style="border:1px solid black; text-align:center;font-size:14px"><b>Payment Amount</b> </td>
+<td style="border:1px solid black; text-align:center;font-size:14px"><b>TDS Amount </b></td>
+</tr></th>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:14px;width:33%">22-12-2018</td>
+<td style="border:1px solid black; text-align:center; font-size:14px;width:33%">2555555555555555</td>
+<td style="border:1px solid black; text-align:center; font-size:14px;width:33%">INR.</td>
+</tr>
+
+</table><br/>
+</div>
+<p style="font-size:14px;" align="left">
+
+
+<b>(All payments to be made in favour of “Monster.com India Private Limited")</b>
+</p>
+<div  style="font-size:14px;margin-left:25px;margin-top:0px" align="justify" class="test" width="100%">
+<apex:stylesheet value="{!$Resource.Point_PA}"/>
+
+<ol>
+<li>
+  An invoice for the Total Price will be issued (<b>"Invoice Issue Date"</b>) by Monster to the Member after execution of
+this Agreement at the abovementioned address unless otherwise a different address for billing is specified1 by
+Member under section “Member&#39;s Address for Invoicing / correspondence" herein below and shall be payable as
+per the aforesaid payment terms. <b>All invoices are payable to Monster in full, on or before the due
+date of the invoice</b> as per the said payment terms. In the event any payment is not made within the said
+period, Monster shall, without prejudice to its other rights under this Agreement or in law, have the right to
+terminate this Agreement and / or deactivate Member&#39;s account without any liability to Member.
+</li>
+</ol>
+ </div>
+ 
+ 
+ 
+ <div style="font-size:14px;margin-top:0px">
+ 
+<b> Member’s Address for Invoicing / correspondence:</b><br/>
+<b>Contact Name :</b> Devarajan R Mr<br/>
+<b>Name of the organization :></b> Globeop Financial Services Technologies India Private Limited<br/>
+<b>Address :</b> 5th floor, Building 16, Interface, Malad (West)<br/>
+<b>City &amp; PIN Code:</b> Mumbai, Maharashtra 400064<br/>
+<b>Email :</b> devaraja@sscinc.com.training<br/>
+<b>Tel:</b> +1234567<br/><b> Fax:</b><br/> 
+ 
+ </div>
+ <p style="font-size:14px;" align="left">
+ <b><u>5. IMPLEMENTATION AND TRAINING :</u></b>
+ </p>
+ <div  style="font-size:14px;margin-left:25px;margin-top:0px;margin-right:5px" align="justify" class="test" width="100%">
+ <ol>
+<li>
+Training on Monster products and services, wherever applicable, will be scheduled by Monster&#39;s Client Relations
+Contact appointed for the Member. The said training will take approximately 1-2 hours and the concerned
+authorized staff of the Member will be provided with a training manual.
+</li>
+<li>
+Monster may either through its officials or authorized representative formally visit the Member&#39;s office premises
+for implementation and / or for any other purpose.
+
+
+</li>
+ </ol>
+ </div>
+ 
+ <p style="font-size:14px;" align="left">
+<b><u>6. MONSTER’S OBLIGATION: </u></b>
+</p>
+
+
+<div style="font-size:14px;margin-left:25px;margin-top:0px" align="justify" class="test" width="100%">
+ <ol>
+<li>
+To provide online customized platform to the Member on www.monstercollege.in (website) for conducting the agreed
+Campus Drives. In the event any agreed Campus Drive(s) is not happened/ conducted within the stipulated
+agreed timelines due to any reason except the reason of non participation of the Member in offered Campus
+Drives, Monster shall provide the balance agreed Drives in subsequent immediate Drives which will be conducted
+immediate subsequent period on mutual agreement with Member. Monster acts only as a facilitator/ medium for
+conducting Campus Drives and shall neither be responsible for selection criteria, selection process nor be liable for
+non-selection of candidates by Employers under any circumstances. Member agrees that only eligible candidates
+who met the specific criteria of employer for agreed Campus Drives, shall be eligible for participation in the agreed
+specific Campus Drives for which Member has agreed under this Agreement.  
+</li>
+
+<li>
+To assist Member for online recruitment solution of registered users. 
+</li>
+
+
+<li>
+Enhance visibility of the Member as a brand among corporate and other business entities.
+</li>
+<li>
+Placement Process Management including 24*7 online profiles to attract companies; SMS enabled online platform,
+Inviting companies and other entities to view users profiles online and providing access to its website
+www.monstercollege.in who have subscribed for the website services.
+</li>
+
+<li>
+Provide the following opportunities to registered users&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+i).&nbsp;Participation in agreed campus drives.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+         
+ii).&nbsp;Monster&#39;s dedicated corporate sales team will endeavour to help Member by making available opportunities from
+&nbsp;companies as well as small &amp; medium enterprises through the agreed Campus Drives.
+ </li>        
+
+         
+
+<li>
+To provide awareness through various means thereby resulting into increased chances of employment of users:
+</li>
+
+i).&nbsp;To provide informative articles and content delivered through platform and to improve chances of users employability&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+ii).&nbsp; Assist in industry awareness&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+iii).&nbsp; To conduct mock practice tests as per Industry specification along with comprehensive performance report of the users.
+   This shall help the Member to identify skill gaps of the users and take proactive measures.
+
+</ol>
+
+
+ 
+ </div>
+ <p style="font-size:14px;" align="left">
+ <b><u>7. MEMBER’S OBLIGATION :</u></b>
+ </p>
+ <div style="font-size:14px;margin-left:25px;margin-top:0px" align="justify" class="test" width="100%">
+
+<ol>
+<li>
+Member shall provide Monster the name of its authorized representative who shall serve as single point of contact
+with Monster. 
+</li>
+<li>
+Ensure submission of users&#39; data online on Monster&#39;s website i.e. www.monstercollege.in for registration within 20
+days of signing of this Agreement.
+</li>
+<li>
+Verification of the users&#39; data by an authorized representative of Member. Users&#39; data shall include education
+qualification, roll number, stream and name. Inability of Member to register and verify the users&#39; data shall not
+entitle the users in availing the services under this Agreement. Member shall be solely responsible for the
+submission of any wrong, incomplete or incorrect users’ data or profile in the Monstercollege.in website.
+</li>
+<li>
+The authorized representative of Member shall be responsible for incorporating the users data on the Monster
+website and make changes from time to time in the event of any change in the users data and profile.
+</li>
+<li>
+The Member shall be responsible for appropriate use of the Services subscribed under this Agreement
+</li>
+<li>
+Member agrees to appropriate the subscribed Services as per the terms and conditions stipulated for the Services
+on Monster College Website and shall not offer to the candidate(s) and / or users of such subscribed services at a
+price more than the price as stipulated by Monster for the Career Services on the relevant Monster website.
+</li>
+<li>
+Member shall be solely responsible for the Monster College Services appropriated by it under this Agreement to
+users and / or candidates. Member further undertakes that the Services subscribed by it under this Agreement is
+solely for the purpose of its proper appropriation to the users and/or candidates and not for its commercial use /
+purpose. Any breach of this clause will lead to immediate termination of Agreement without compensation /
+refund.
+</li>
+<li>
+By posting user data (“User Content") to Monstercollege.in OR any Monster Site, User / Candidate and Member
+automatically grant, and represent and warrant that they have the right to grant, to Monster an irrevocable,
+perpetual, non-exclusive, fully paid, worldwide license to use, copy, perform, display, and distribute such User
+Content and to prepare derivative works of, or incorporate into other works, such User Content, and to grant and
+authorize sublicenses thereof.
+
+</li>
+<li>
+No unauthorised / fraudulent use of user content : Member shall ensure the usage of content for lawful purposes
+and only for the purposes as permitted under the scope of this Agreement. Promotion of any illegal activity or
+marketing of products and other service purposes or spamming of the content by it except for the facilitation of
+services under this Agreement are also prohibited. Monster shall have the sole right to decide as to what
+constitute as a breach of these requirements by Member.
+</li>
+<li>
+Member (college /institute) undertakes and warrants that the Mobile No. of the candidates provided/uploaded by
+it//Monster to Monster&#39;s website ( www.monstercollege.in) for communicating them for the career/tests related
+information/communication is verified by Member (college /institute) before submission and is correct. 
+
+</li>
+<li>
+Member (college /institute) further warrants that the candidates have consented to use their Mobile No.
+provided/uploaded by it to Monster&#39;s website ( www.monstercollege.in) for communicating them through SMS by
+Monster and/or its service providers for the career/tests related information/communication. In the event of any
+complaint at the end of candidates with respect to DND and other issues, Member (college /institute) shall provide
+all the relevant details desired by Monster for resolving any such issues. 
+</li>
+
+</ol>
+  </div>
+  
+  
+   <p style="font-size:14px;" align="left">
+ <b><u>8. MISCELLANEOUS PROVISIONS</u></b>
+ </p>
+ <div style="font-size:14px;margin-left:25px;margin-top:0px" align="justify" class="test" width="100%">
+
+<ol>
+<li>
+Monster does not guarantee or offer any warranty for any response from any employer or recruitment
+consultants to Member after the Services commenced by Monster under this Agreement. 
+
+</li>
+<li>
+Monster neither guarantees nor offers any warranty about the credentials of the prospective
+employer/organisation, which would receive the information and subsequently contact the Member
+and/or candidates.
+</li>
+<li>
+The amount paid for the services by the Member is not refundable under any circumstances. 
+</li>
+<li>
+Monster reserves its right to reject any insertion or information/data provided by the Member in the
+Monstercollege.in without assigning any reason,
+</li>
+<li>
+Monster will endeavor to maintain its Monstercollege.in website in a fully operative and error free
+condition, except for unavailability and errors which may result from unavailability or insufficient
+information and details from the Member in providing the Service; bring- downs in the ordinary course
+that are necessary to maintain, update or refresh the website; any “hacking" or “denial of service"
+activity by a third party and any other reason beyond Monster&#39;s reasonable control.
+</li>
+<li>
+Breach any provision of this Agreement by the Member may lead to discontinuance of subscribed service
+by Monster and /or pursue all other available remedies under applicable laws. 
+</li>
+
+</ol>
+</div>
+ <p style="font-size:14px;" align="left">
+ <b><u>9. DISPUTE RESOLUTION:</u></b>
+ </p>
+  <p style="font-size:14px;margin-left:30px" align="Justify">
+ Every Dispute, difference or question which may at any time arise between the parties hereto or any person
+claiming under them, touching or arising out of or in respect of this agreement or the subject matter thereof shall
+be referred to the Sole Arbitrator nominated by the First Part, the award passed by the Arbitrator shall be final
+and binding on the parties hereto. The venue of Arbitration shall be Hyderabad. All and any disputes shall be
+subject to the exclusive jurisdiction of the Courts at Hyderabad, India. 
+</p>
+
+<p style="font-size:14px;margin-left:30px" align="Justify">
+<b>MEMBER’S ACKNOWLEDGEMENTS:</b> This Agreement constitutes the entire Agreement between the Parties
+with respect to the subject matter hereof and supersedes any previous oral or written arrangements and is
+binding upon the Parties. 
+</p>
+
+<p style="font-size:14px;margin-left:30px" align="Justify">
+<b>IN WITNESS WHEREOF, the Parties have caused this Agreement to be executed by their duly
+authorised representatives in one or more counterparts, each of which shall constitute an original
+effective as of the day and year set forth above.</b>
+</p>
+<br/><br/>
+<table style=" font-size:14px;  align:left; height:-100px;width:50%; margin-top:-20px; border:1 px; margin-left:-8px; margin-right:30px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+
+<th style="">
+<tr style="border:1px solid black; ">
+<td style="border:1px solid black;width:5%; text-align:center;font-size:14px" ><b><span style="background-color: #FFFF00"><u>SIGNED ON BEHALF OF THE MEMBER:</u></span></b></td>
+<td style="border:1px solid black;width:5%; text-align:center;font-size:14px" ><b><span style="background-color: #FFFF00"><u>SIGNED ON BEHALF OF MONSTER:</u></span></b></td>
+</tr>
+</th>
+<tr style="border:1px solid black; ">
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">Name:</span></b></td>
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">Name:</span></b></td>
+</tr>
+<tr style="border:1px solid black; ">
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">Title / Designation:</span> </b></td>
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" rowspan="3"><span style="background-color: #FFFF00"><b>Designation: </b></span></td>
+
+</tr>
+<tr style="border:1px solid black; ">
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">Member :</span> </b></td>
+</tr>
+<tr style="border:1px solid black; ">
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">*CIN:</span></b></td>
+</tr>
+<tr style="border:1px solid black; ">
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">Address:</span></b></td>
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">Phone:</span></b></td>
+</tr>
+<tr style="border:1px solid black; ">
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">City &amp; Pin code:</span></b></td>
+<td style="border:1px solid black;width:5%; text-align:left;font-size:14px" ><b><span style="background-color: #FFFF00">Fax:</span></b></td>
+</tr>
+
+
+</table>
+
+<br/><br/>
+<table style=" font-size:14px;border:1px solid  align:left; height:-100px;width:80%; margin-top:-20px; border:1 px;  margin-right:30px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+<tr style="border:1px solid black;">
+<td style="border:1px solid black;width:100%; text-align:left;font-size:14px" ><b>Address:</b>
+
+<b>Signature: </b>__________________________________ <br/>
+<b>Date : </b><br/>
+The person listed above is authorized to sign for our organization.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</td>
+</tr>
+</table>
+<p style="font-size:14px;margin-left:30px" align="Justify">
+<b>*Notes:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+<b>1. In case of the Member (Institute) is a Ltd. / Pvt Ltd. Company CIN No.is Mandatory and Agreement should be rubber stamped.</b> </b><br/>
+</p>
+
+<div style="page-break-before:always;">
+<p style="font-size:13px;" align="left">
+ TERMS OF AGREEMENT:<br/>
+</p>
+
+<table width="100%" >
+<tr>
+<td width="50%" align="left" cell-padding="90px">
+<p style="font-size:13px;" align="justify">
+
+This Agreement is between your Institution or company or organization
+(“You") and Monster.com India Pvt. Ltd. (“Monster") and governs use of the
+Monster website or websites in which services are subscribed under this
+Agreement (each a “Site" and, together, the “Sites"). This agreement shall
+continue and be effective till the validity period of the product and services
+subscribed by you. If you breach any provision of this Agreement, Monster
+may (i) discontinue Your service and/or (ii) pursue all other available
+remedies to enforce this Agreement and obtain payment hereunder. In
+such event, Monster shall be entitled to collect and recover from You all of
+its costs and attorneys’ fees incurred. Monster may assign to a third party
+the right to trace and/or collect and receive payment on its behalf but in
+that event also all Payments shall be made in favor of “Monster.com India
+Private Limited".
+</p>
+<p style="font-size:13px;" align="justify">
+In the event service is not commenced / activated on the Start Date
+mentioned in the Service Agreement due to any reason whatsoever, the
+service will be provided from the date of commencement / activation of
+service for the period for which service is subscribed by Member and the
+Start date and End date above will deemed to be construed accordingly.
+Any postponement of services covered under the scope of the Service
+Agreement shall be at the sole discretion of Monster. In such events the
+Term of the agreement shall be deemed to have amended accordingly.
+
+</p>
+<p style="font-size:13px;" align="justify">
+Monster may, in its sole discretion, impose a late fee equal to 1.5% per
+month on all overdue accounts. In addition, you shall be liable for any
+collection or enforcement costs of collection in the event of late payment.
+You shall also liable to pay to Monster any charges for dishonor of payments
+instruments, by cheque, ECS electronic payment, or any other method of
+payment instructions by you. Any re-activation of a deleted or expired job
+posting and any refreshing of any job posting constitutes use of an
+additional job posting hereunder. This Agreement shall not apply to, and
+you shall have no rights with respect to, any website not listed at the end of
+this Agreement.
+
+</p>
+<p style="font-size:13px;" align="justify">
+Each webSite’s Resume database (each a “Resume Database") is a private
+database for use by licensed members only. A licensed member is defined
+as one unique user with one unique password. If You (including any or Your
+employees or consultants) are found to share passwords with any nonlicensed
+users, Monster may revoke all login &amp; passwords deactivate your
+account and no refund will be given. You agree to notify Monster promptly
+after the departure of any person to whom a password was provided &amp; 
+failure of your notification in this regard shall not make monster liable under
+any circumstances and Monster reserves the right to cancel such password
+or issue a new password in lieu thereof. Monster reserves the right to
+periodically change the issued passwords. You agree not to resell any of the
+products and services subscribed by You from Monster including but not
+limited to any job postings or any database access or the unique services
+stated above to any third party. Amounts paid for use of the Services are
+non refundable. The services may be /suspended deactivated if the
+payment is not made by the due date(s) mentioned in the agreement /
+invoice. Any suspension of Services by reason of your breach of provisions
+of this Agreement, Terms of Use, and / or Terms and Conditions of
+website in which services subscribed, Privacy Policy and third party rights
+shall not absolve you from the liability of making payment for the product
+and services subscribed.
+
+</p>
+<p style="font-size:13px;" align="justify">
+
+You agree to comply with all the applicable local, national and international
+laws, including but not limited to the laws relating to contracts, labour and
+employment laws, data privacy laws, cyber laws and law relating to
+intellectual property.
+</p>
+<p style="font-size:13px;" align="justify">
+Navigation/Search Engines: Notwithstanding anything to the contrary
+contained herein, You shall not use or attempt to use, and shall cause each
+party under your control not to use or attempt to use, any engine, software,
+tool, agent or other device or mechanism (including without limitation
+browsers, spiders, avatars or intelligent agents) to navigate or search any
+Monster Site other than the search engine and search agents available on
+such Site.
+
+</p>
+<p style="font-size:13px;" align="justify">
+
+The contents of the website (including without limitation all job postings and
+all resumes), and all elements, which are a part of the foregoing, and all 
+
+</p>
+</td>
+<td  align="right" cell-padding="90px">
+<p style="font-size:13px;"  align="justify">
+intellectual and other proprietary rights therein, are the property of
+Monster. Neither you nor any of your employees shall do anything, which
+would in any way damage, injure or impair the validity of Monster’s rights in
+the contents of the web Site. Notwithstanding the above, any job postings
+placed on any Site, if any, by You hereunder, and all elements which are a
+part of the foregoing, and all intellectual and other proprietary rights
+therein, are and shall at all times remain Your property.
+
+</p>
+<p style="font-size:13px;"  align="justify">
+To the extent permitted by law Monster makes no warranties, express or
+implied, including the warranties of merchantability, fitness for a particular
+purpose, or non-infringement with respect to its services or any site, or
+results of use thereof and all warranties and conditions, express or implied
+are hereby excluded.
+
+</p>
+<p style="font-size:13px;"  align="justify">
+You agree to indemnify Monster, its officers, directors, employees and
+agents, from and against any claims, actions or demands, including without
+limitation reasonable legal and accounting fees, arising or resulting from
+Your breach of this Agreement or from Your provision of any material to
+any Site, including but not limited to claims of breach of third party
+intellectual property rights. 
+
+</p>
+<p style="font-size:13px;"  align="justify">
+Notwithstanding anything to the contrary contained herein, except as may
+arise under the immediately preceding paragraph, neither party will be
+liable to the other party (nor to any person claiming rights derived from the
+other party's rights) for incidental, indirect, consequential, special, punitive
+or exemplary damages of any kind - including lost revenues or profits, loss
+of business or loss of data - arising out of this agreement (including without
+limitation as a result of any breach of any warranty, or other term of this
+agreement), regardless of whether the party liable or allegedly liable was
+advised, had other reason to know, or in fact knew of the possibility thereof.
+Moreover, Monster's maximum liability arising out of or relating to the
+transaction, which is the subject matter of this agreement, regardless of the
+cause of action (whether in contract, tort, breach of warranty or otherwise),
+will not exceed the amount paid by You to Monster.com India Pvt. Ltd
+hereunder.
+</p>
+<p style="font-size:13px;"  align="justify">
+Notwithstanding anything to the contrary contained herein, Your use of the
+Site is subject to the Terms of Use, and / or Terms and Conditions of
+relevant website in which services subscribed, &amp; Privacy Policy available
+from such web Site&#39;s homepage. By your execution hereof you hereby
+agree to abide by such Terms of Use and / or Terms and Conditions of
+relevant website in which services subscribed, &amp; Privacy Policy, as they may
+be amended from time to time. 
+</p>
+<p style="font-size:13px;"  align="justify">
+This Agreement (i) constitutes the entire Agreement between the parties
+with respect to the subject matter hereof and supersedes any previous oral
+or written arrangements or understandings relating thereto as well as any
+purchase orders not supplied by Monster that have been or may from time
+to time be submitted by you, (ii) may be signed in counterparts, (iii) shall
+be governed by the laws of India. The Courts of Hyderabad have the
+exclusive jurisdiction to try and entertain any dispute arising out of the
+Agreement. (iv) may not be amended, terminated or waived orally, and (v)
+may not be assigned, in whole or in part, directly or indirectly, by operation
+law or otherwise, by you and only comes into existence when signed by You
+and Monster. Monster will be entitled to assign all or any of its rights and
+obligations hereunder. Any terms of this Agreement that may be invalid
+shall not affect the validity of enforcement of the remaining valid terms of
+this Agreement. The terms and conditions of this Agreement may not be
+amended without the affirmative written consent of Monster.com India Pvt.
+Ltd.
+
+</p>
+<p style="font-size:13px;"  align="justify">
+TERM OF AGREEMENT: Any Extension/ Up-gradation / renewal of the
+Services of the Member after the date of expiry of this Agreement shall be
+given effect only after executing a fresh / renewal Agreement between
+Monster and Member. Monster will accordingly raise a fresh Invoice for a
+price as agreed by the Monster and Member for the aforesaid extension/upgradation/renewal
+period.
+
+</p>
+<p style="font-size:13px;"  align="justify">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</p>
+</td>
+</tr>
+</table>
+</div>
+</apex:form>
+</apex:page>

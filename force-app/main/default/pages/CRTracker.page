@@ -1,0 +1,159 @@
+<apex:page standardController="CR_Tracker__c" extensions="CRTracker" lightningStylesheets="true">
+ <apex:sectionHeader title="CR Tracker Edit" subtitle="New CR Tracker" help="https://help.salesforce.com/articleView?id=co_edit.htm&type=5"/>
+ 
+ <apex:form >
+
+ 
+     <apex:pageblock mode="edit"  >
+          <apex:pageBlockButtons >
+              <apex:commandButton action="{!save}" value="Save"/>
+              <apex:commandButton action="{!cancel}" value="cancel"/>
+          </apex:pageBlockButtons>
+  
+   <!------------------------------ GENERAL FORM ----------------------------------> 
+          <apex:outputPanel rendered="{!IF(rtid  == rec,true,false)}">
+          
+          <apex:pageblockSection title="General Information" >
+              <apex:outputField value="{!CR_Tracker__c.RecordTypeId}"/>
+              <apex:outputField value="{!CR_Tracker__c.Subject__c}"/>
+              <apex:outputField value="{!CR_Tracker__c.Account__c}"/>
+              <apex:inputField value="{!CR_Tracker__c.Contact__c}" required="true"/>
+           
+          </apex:pageblockSection>
+         
+             <apex:pageBlockSection title="General Details Edit"  columns="1">
+             
+              <apex:inputField value="{!CR_Tracker__c.Rate_Monster_database_performance__c}"  required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Rate_Job_posting_performance__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Did_you_hire_candidates_through_Monster__c}" required="true"/>
+             
+             <apex:inputField value="{!CR_Tracker__c.Products_helped_to_close_requirements__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Problems_faced_with_Monster_database__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Problems_faced_with_job_postings__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Challenges_related_to_Monster__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Comments__c}"/>
+              
+              </apex:pageBlockSection>
+    
+     </apex:outputPanel>
+     <!---------------------- Lapsed Accounts Feedback Section -------------------->
+     
+     <apex:outputPanel rendered="{!IF(rtid  == Lapsed,true,false)}">
+          
+          <apex:pageblockSection title="General Information">
+              <apex:outputField value="{!CR_Tracker__c.RecordTypeId}"/>
+               <apex:outputField value="{!CR_Tracker__c.Account__c}"/>
+              <apex:outputField value="{!CR_Tracker__c.Subject__c}"/>
+             
+              <apex:inputField value="{!CR_Tracker__c.Contact__c}" required="true"/>
+           
+          </apex:pageblockSection>
+          
+          
+             <apex:pageBlockSection title="Lapsed Accounts Feedback Edit" columns="1"> 
+              <apex:inputField value="{!CR_Tracker__c.Reasons_for_not_Renewing__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Comments__c}"/>
+              </apex:pageBlockSection>
+              
+           </apex:outputPanel>    
+      <!-------------------------- Quarter  --------------------------->  
+      
+      <apex:outputPanel rendered="{!IF(rtid  == Quarter,true,false)}">   
+      
+      <apex:pageblockSection title=" General Information">
+              <apex:outputField value="{!CR_Tracker__c.RecordTypeId}"/>
+              <apex:outputField value="{!CR_Tracker__c.Account__c}"/>
+              <apex:outputField value="{!CR_Tracker__c.Subject__c}"/>
+              
+              <apex:inputField value="{!CR_Tracker__c.Contact__c}" required="true"/>
+           
+          </apex:pageblockSection>
+             <apex:pageBlockSection title="Quarter Details Edit" columns="1" >
+              <apex:inputField value="{!CR_Tracker__c.Rate_Monster_database_performance__c}"  required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Rate_Job_posting_performance__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Did_you_hire_candidates_through_Monster__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Will_Customer_renew__c}" required="true"/>
+             
+             <apex:inputField value="{!CR_Tracker__c.Products_helped_to_close_requirements__c}" required="true"/>
+               <apex:inputField value="{!CR_Tracker__c.Problems_faced_with_Monster_database__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Problems_faced_with_job_postings__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Challenges_related_to_Monster__c}" required="true"/>
+               
+             
+              <apex:inputField value="{!CR_Tracker__c.Comments__c}"/>
+              </apex:pageBlockSection> 
+              
+               </apex:outputPanel>
+              <!-------------------------- 90 Days--------------------------->  
+              
+              <apex:outputPanel rendered="{!IF(rtid  == days90,true,false)}">   
+      
+      <apex:pageblockSection title="General Information ">
+              <apex:outputField value="{!CR_Tracker__c.RecordTypeId}"/>
+              <apex:outputField value="{!CR_Tracker__c.Account__c}"/>
+              <apex:outputField value="{!CR_Tracker__c.Subject__c}"/>
+              
+              <apex:inputField value="{!CR_Tracker__c.Contact__c}" required="true"/>
+           
+          </apex:pageblockSection>
+             <apex:pageBlockSection title="90 Days Section Edit" columns="1">
+             <apex:inputField value="{!CR_Tracker__c.Rate_Job_posting_performance__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Rate_Monster_database_performance__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Did_you_hire_candidates_through_Monster__c}" required="true"/>
+             
+             <apex:inputField value="{!CR_Tracker__c.Products_helped_to_close_requirements__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Problems_faced_with_job_postings__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Problems_faced_with_Monster_database__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Challenges_related_to_Monster__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Comments__c}"/>
+              </apex:pageBlockSection> 
+               </apex:outputPanel>
+              
+              <!-------------------------- Complaints---------------------------> 
+              
+              <apex:outputPanel rendered="{!IF(rtid  == Complaints,true,false)}">    
+      
+      <apex:pageblockSection title=" General Information">
+              <apex:outputField value="{!CR_Tracker__c.RecordTypeId}"/>
+               <apex:outputField value="{!CR_Tracker__c.Account__c}"/>
+              <apex:outputField value="{!CR_Tracker__c.Subject__c}"/>
+             
+              <apex:inputField value="{!CR_Tracker__c.Contact__c}" required="true"/>
+           
+          </apex:pageblockSection>
+             <apex:pageBlockSection title="Complaints Section Edit"  columns="1">
+             <apex:inputField value="{!CR_Tracker__c.Type_of_Complaint__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Comments__c}"/>
+              </apex:pageBlockSection> 
+      
+       </apex:outputPanel>
+       
+       <!----------------------------------Low usage accounts Tracker---------------------------------->
+       
+          <apex:outputPanel rendered="{!IF(rtid  == LowusageaccountsTracker,true,false)}">    
+      
+      <apex:pageblockSection title="Information">
+              <apex:outputField value="{!CR_Tracker__c.RecordTypeId}"/>
+               <apex:outputField value="{!CR_Tracker__c.Account__c}"/>
+              <apex:outputField value="{!CR_Tracker__c.Subject__c}"/>
+             
+              <apex:inputField value="{!CR_Tracker__c.Contact__c}" required="true"/>
+           
+          </apex:pageblockSection>
+             <apex:pageBlockSection title="Low Usage Accounts Tracker Edit"  columns="1">
+             <apex:inputField value="{!CR_Tracker__c.No_open_positions_hiring_freeze__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Using_competitor__c}" required="true"/>
+             <apex:inputField value="{!CR_Tracker__c.Is_Monster_helping_you_in_your_requireme__c}" required="true"/>
+              <apex:inputField value="{!CR_Tracker__c.Comments__c}"/>
+              </apex:pageBlockSection> 
+      
+       </apex:outputPanel>
+        
+              
+     </apex:pageblock>
+     
+     
+     
+ 
+ </apex:form>
+</apex:page>

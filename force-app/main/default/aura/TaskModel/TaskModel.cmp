@@ -1,0 +1,25 @@
+<!--
+  @Component Name     : TaskModel.cmp
+  @Description        : 
+  @Author             : phUser@phDomain.com
+  @Group              : 
+  @Last Modified By   : phUser@phDomain.com
+  @Last Modified On   : 2/3/2019, 12:36:47 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    19/2/2019, 5:10:34 PM   phUser@phDomain.com     Initial Version
+-->
+<aura:component controller="AccountStatforStatus" implements="force:lightningQuickActionWithoutHeader,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+        
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>    
+    <aura:attribute name="showAccount" type="Boolean"/>
+    <aura:attribute name="recordId" type="Id"/>
+    
+    
+    <aura:if isTrue="{!v.showAccount}">
+      <c:accountProspectSuspectUpdate accountRecordId="{!v.recordId}"/>
+    </aura:if>
+    
+</aura:component>

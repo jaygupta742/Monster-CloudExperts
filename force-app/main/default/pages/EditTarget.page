@@ -1,0 +1,38 @@
+<apex:page standardController="Target__c" extensions="EditTargets" lightningStylesheets="true">
+  <apex:sectionHeader title="Target Edit" subtitle="New Target" help="https://help.salesforce.com/articleView?id=co_edit.htm&type=5"/>
+  
+  <apex:form >
+      <apex:pageBlock title="Target Edit" mode="edit" >
+      <apex:pageblockButtons >
+          <apex:commandButton value="Save" action="{!save}"/>
+          <apex:commandButton value="Cancel" action="{!Cancel}"/>
+      </apex:pageblockButtons>
+      
+      <apex:pageblockSection title="Information">
+          <apex:outputtext label="Target Name" value="{!t.Name}" />
+          <apex:outputField label="Owner" value="{!t.OwnerId}" />
+          <apex:outputField label="Start Date" value="{!t.Start_Date__c}" />
+          <apex:outputField label="End Date" value="{!t.End_Date__c}" />
+          
+      </apex:pageblockSection>
+      
+      <apex:pageblockSection title="Reps Input">
+          <apex:inputField label="New Account" value="{!t.Unique_Account__c}"/>
+          <apex:inputfield label="Free Trial" value="{!t.Free_Trail__c}"/>
+          <apex:inputField label="Demonstration" value="{!t.Demonstration__c}"/>
+          <apex:inputfield label="New Opportunity" value="{!t.Unique_Opportunity__c}"/>
+          <apex:inputfield label="Unique Connects" value="{!t.Unique_Connects__c}"/>
+      </apex:pageblockSection>
+      
+      <apex:pageblockSection title="Revenue Target" columns="2" rendered="{!b}">
+          <apex:inputfield label="Opportunity Won Target" value="{!t.Opportunity_Won_Target__c}"/>
+        <!--  <apex:inputfield label="Opportunity Created- Achieved" value="{!t.Opportunity_Created_Achieved__c}"/>
+          <apex:outputtext />
+          <apex:inputfield label="Opportunity Won - Achieved" value="{!t.Opportunity_Won_Achieved__c}"/> -->
+          
+      </apex:pageblockSection>
+      </apex:pageBlock>
+      
+      
+  </apex:form>
+</apex:page>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Generate_Quote_Pdf</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>page</linkType>
+    <masterLabel>Generate Quote Pdf</masterLabel>
+    <openType>replace</openType>
+    <page>Generatepdf</page>
+    <protected>false</protected>
+</WebLink>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Net_Total_equals_to_Net_Total</fullName>
+    <active>false</active>
+    <errorConditionFormula>IF(Payment_count__c &lt;&gt;   0 ,Payment_Net_Total__c   &lt;&gt;  Net_Total__c, false)</errorConditionFormula>
+    <errorMessage>Payment Net Total should be equals to Net Total</errorMessage>
+</ValidationRule>

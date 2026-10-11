@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Expected_Revenue_NON_APAC__c</fullName>
+    <externalId>false</externalId>
+    <formula>TEXT(Currency_NON_APAC__c) +&quot; &quot;+TEXT(IF(ISPICKVAL( Probability__c , &apos;0&apos;) , ( Estimated_Revenue_Non_APAC__c *0) , 
+IF(ISPICKVAL( Probability__c , &apos;10&apos;) , (Estimated_Revenue_Non_APAC__c*0.10) , 
+IF(ISPICKVAL( Probability__c , &apos;25&apos;) , (Estimated_Revenue_Non_APAC__c*0.25) , 
+IF(ISPICKVAL( Probability__c , &apos;50&apos;) , (Estimated_Revenue_Non_APAC__c*0.50) , 
+IF(ISPICKVAL( Probability__c , &apos;75&apos;) , (Estimated_Revenue_Non_APAC__c*0.75) , 
+IF(ISPICKVAL( Probability__c , &apos;100&apos;) , (Estimated_Revenue_Non_APAC__c*1) , 
+0 
+) 
+) 
+) 
+) 
+) 
+)
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Expected Revenue (NON - APAC)</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

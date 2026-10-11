@@ -1,0 +1,528 @@
+<template>
+    <div class="slds-modal__content" style="width: 100%;" if:true={isQuoteObject}>
+        <div class="slds-section slds-is-open" if:true={QuoteDetails}>
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="Order Details">Quote Details</span>
+            </h3>
+            <div class="slds-section__content">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Quote No</p>
+                            <p>
+                                <lightning-formatted-url value={QuoteDetails.RecordURL} label={QuoteDetails.Name}
+                                    tooltip="Click To Open" target="_blank"></lightning-formatted-url>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Deal Type</p>
+                            <p class="slds-text-color_success" if:true={QuoteDetails.isSingleYear}>
+                                {QuoteDetails.Deal__c}</p>
+                            <p class="slds-text-color_destructive" if:false={QuoteDetails.isSingleYear}>
+                                {QuoteDetails.Deal__c}</p>
+                        </div>
+                    </lightning-layout-item>
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Account Id</p>
+                            <p> {QuoteDetails.Agency_ID__c}</p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Gross Total</p>
+                            <p>
+                                <lightning-formatted-number value={QuoteDetails.Gross_Total1__c} format-style="currency"
+                                    currency-code={QuoteDetails.CurrencyIsoCode} currency-display-as="code"
+                                    minimum-fraction-digits="0"
+                                    maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Base Total</p>
+                            <p>
+                                <lightning-formatted-number value={QuoteDetails.Base_Total1__c} format-style="currency"
+                                    currency-code={QuoteDetails.CurrencyIsoCode} currency-display-as="code"
+                                    minimum-fraction-digits="0"
+                                    maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Start Date </p>
+                            <p>
+                                <lightning-formatted-date-time value={QuoteDetails.Start_Date__c} year="numeric"
+                                    month="numeric" day="numeric"></lightning-formatted-date-time>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Discount %</p>
+                            <p class="slds-text-color_destructive">
+                                <lightning-formatted-number value={QuoteDetails.DiscountPercentage}
+                                    format-style="percent" maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">End Date</p>
+                            <p>
+                                <lightning-formatted-date-time value={QuoteDetails.End_Date__c} year="numeric"
+                                    month="numeric" day="numeric"></lightning-formatted-date-time>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small"># Installments </p>
+                            <p class="slds-text-color_destructive">{QuoteDetails.Payment_count__c}</p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Upfront Payment </p>
+                            <p class="slds-text-color_success">
+                                <lightning-formatted-number value={QuoteDetails.UpfrontPayment} format-style="percent"
+                                    maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+
+        <div class="slds-section slds-is-open" if:true={BaseOrderId}>
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="Base Order Details">Base Order
+                    Details</span>
+            </h3>
+            <div class="slds-section__content">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p>Base Order</p>
+                            <p>
+                                <lightning-formatted-url value={BaseOrderDetails.RecordURL}
+                                    label={BaseOrderDetails.Name} tooltip="Click To Open"
+                                    target="_blank"></lightning-formatted-url>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p>Gross Total</p>
+                            <p>
+                                <lightning-formatted-number value={BaseOrderDetails.Gross_Total1__c}
+                                    format-style="currency" currency-code={BaseOrderDetails.CurrencyIsoCode}
+                                    currency-display-as="code" minimum-fraction-digits="0"
+                                    maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p>Upliftment</p>
+                            <!-- <p>{BaseOrderDetails.Upliftment} % -->
+                            <lightning-formatted-number value={BaseOrderDetails.Upliftment} format-style="percent"
+                                maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p>Start Date</p>
+                            <p>
+                                <lightning-formatted-date-time value={BaseOrderDetails.Revised_Service_End_Date__c}
+                                    year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p>Deal Type </p>
+                            <p>{BaseOrderDetails.Deal__c}</p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p>End Date</p>
+                            <p>
+                                <lightning-formatted-date-time value={BaseOrderDetails.Order_Service_End_Date__c}
+                                    year="numeric" month="numeric" day="numeric"></lightning-formatted-date-time>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+
+                    <lightning-layout-item size="12" large-device-size="6" padding="horizontal-small">
+                        <div class="data-container">
+                            <p class="slds-text-body_small">Rev-Out</p>
+                            <p>
+                                <lightning-formatted-number value="100" format-style="currency"
+                                    currency-code={BaseOrderDetails.CurrencyIsoCode} currency-display-as="code"
+                                    minimum-fraction-digits="0"
+                                    maximum-fraction-digits="0"></lightning-formatted-number>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </div>
+        </div>
+
+        <div class="slds-section slds-is-open" if:true={APACPayments}>
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="APAC Payments(Revamp)">
+                    Payment Details({APACPaymentsCount})
+                </span>
+            </h3>
+            <div class="slds-section__content slds-var-m-horizontal_small" style=" overflow: scroll;">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Due Date">Due Date</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Amount">Amount</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={APACPayments} for:item="item" for:index="index">
+                            <tr key={item.Id} class="slds-hint-parent">
+                                <td data-label="Due Date">
+                                    <div class="slds-truncate" title={item.Due_Date__c}>
+                                        <lightning-formatted-date-time value={item.Due_Date__c} year="numeric"
+                                            month="numeric" day="numeric"></lightning-formatted-date-time>
+                                    </div>
+                                </td>
+                                <td data-label="Amount">
+                                    <div class="slds-truncate" title={item.Payment_Amount__c}>
+                                        <lightning-formatted-number value={item.Payment_Amount__c}
+                                            format-style="currency" currency-code={item.CurrencyIsoCode}
+                                            currency-display-as="code" minimum-fraction-digits="0"
+                                            maximum-fraction-digits="0"></lightning-formatted-number>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slds-section slds-is-open" if:true={BaseOrderId}>
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="APAC Payments(Revamp)">
+                    Base Order Payment Details({BaseOrderAPACPaymentsCount})
+                </span>
+            </h3>
+            <div class="slds-section__content slds-var-m-horizontal_small" style="overflow: scroll;">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Due Date">Due Date</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Amount">Amount</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={BaseOrderAPACPayments} for:item="item" for:index="index">
+                            <tr key={item.Id} class="slds-hint-parent">
+                                <td data-label="Due Date">
+                                    <div class="slds-truncate" title={item.Due_Date__c}>
+                                        <lightning-formatted-date-time value={item.Due_Date__c} year="numeric"
+                                            month="numeric" day="numeric"></lightning-formatted-date-time>
+                                    </div>
+                                </td>
+                                <td data-label="Amount">
+                                    <div class="slds-truncate" title={item.Payment_Amount__c}>
+                                        <lightning-formatted-number value={item.Payment_Amount__c}
+                                            format-style="currency" currency-code={item.CurrencyIsoCode}
+                                            currency-display-as="code" minimum-fraction-digits="0"
+                                            maximum-fraction-digits="0"></lightning-formatted-number>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="Approval Details">Approval Details</span>
+            </h3>
+            <div class="slds-section__content slds-var-m-horizontal_small" style="overflow: scroll;">
+                <lightning-layout multiple-rows="true">
+                    <lightning-layout-item size="12" large-device-size="12">
+                        <div class="data-container">
+                            <p>
+                                Level of Approvals Required
+                                <span
+                                    class="slds-text-heading_small slds-text-color_success slds-var-m-left_medium">{QuoteDetails.Level_of_Approval_Required__c}</span>
+                            </p>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+
+                <table class="slds-table slds-table_cell-buffer slds-no-row-hover slds-table_bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Step Name">Label</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Approver">Approver</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Comments">Comments</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={ApprovalHistory} for:item="item" for:index="index">
+                            <tr key={item.Id} class="slds-hint-parent">
+                                <td data-label="Label">
+                                    <div class="slds-truncate" title={item.Id}>
+                                        {item.Label}
+                                    </div>
+                                </td>
+                                <td data-label="Approver">
+                                    <div class="slds-truncate" title={item.Actor.Name}>
+                                        {item.Actor.Name}
+                                    </div>
+                                </td>
+                                <td data-label="Comments">
+                                    <div class="slds-truncate" title={item.Comments}>{item.Comments}</div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slds-section slds-is-open" style="width: 100%">
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="Service Details">Service Details</span>
+            </h3>
+            <div class="slds-section__content slds-var-m-horizontal_small" style="overflow: scroll;">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="#Item">#Item</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Product">Product</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Qty">Qty</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Base Total">Base Total</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Gross Total">Gross Total</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Discount%">Discount%</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={QuoteItems} for:item="item" for:index="index">
+                            <tr key={item.Id} class="slds-hint-parent">
+                                <td data-label="Index">
+                                    <div class="slds-truncate" title={item.SrNo}>{item.SrNo}</div>
+                                </td>
+                                <td data-label="Products">
+                                    <div class="slds-truncate" title="Products">
+                                        <div if:true={item.Classification1}>
+                                            {item.Product_Name__c}<br />
+                                            Country: {item.Product_Country__c}<br />
+                                            Industry: {item.Product_Industry__c}<br />
+                                            Scope: {item.Product_Geo_Scope__c}<br />
+                                            {item.Product_Tenure_Months__c}<br />
+                                            <span if:true={item.Product_Text__c}>{item.Product_Text__c}</span><br />
+                                            {item.Product_No__c}<br />
+                                        </div>
+                                        <div if:true={item.Classification2}>
+                                            {item.Product_Name__c}<br />
+                                            Country: {item.Product_Country__c}<br />
+                                            {item.Product_Tenure_Months__c}<br />
+                                            {item.Product_No__c}<br />
+                                        </div>
+                                        <div if:true={item.Classification3}>
+                                            {item.Product_Name__c}<br />
+                                            Industry: {item.Product_Industry__c}<br />
+                                            {item.Product_Tenure_Months__c}<br />
+                                            <span if:true={item.Product_Text__c}>{item.Product_Text__c}</span><br />
+                                            {item.Product_No__c}<br />
+                                            Add Desc: {item.Comment__c}<br />
+                                        </div>
+                                        <div if:true={item.Classification4}>
+                                            {item.Product_Name__c}<br />
+                                            <span if:true={item.Product_Text__c}>{item.Product_Text__c}</span><br />
+                                            {item.Product_No__c}<br />
+                                        </div>
+                                        <div if:true={item.Classification5}>
+                                            {item.Product_Name__c}<br />
+                                            Country: {item.Product_Country__c}<br />
+                                            {item.Product_No__c}<br />
+                                        </div>
+                                        <div if:true={item.Classification6}>
+                                            {item.Product_Name__c}<br />
+                                            Country: {item.Product_Country__c}<br />
+                                            Industry: {item.Product_Industry__c}<br />
+                                            {item.Product_Tenure_Months__c}<br />
+                                            <span if:true={item.Product_Text__c}>{item.Product_Text__c}</span><br />
+                                            {item.Product_No__c}<br />
+                                        </div>
+                                        <div if:true={item.Classification7}>
+                                            {item.Product_Name__c}<br />
+                                            {item.Product_No__c}<br />
+                                            Add Desc: {item.Comment__c}<br />
+                                        </div>
+                                        <div if:true={item.Classification8}>
+                                            {item.Product_Name__c}<br />
+                                            Industry: {item.Product_Industry__c}<br />
+                                            <span if:true={item.ScopeS1NS2}>Scope: {item.Product_Geo_Scope__c}</span>
+                                            <span if:false={item.ScopeS1NS2}>Scope: {item.Product_Location__c}</span>
+                                            <br />
+                                            {item.Product_Tenure_Months__c}<br />
+                                            <span if:true={item.Product_Text__c}>{item.Product_Text__c}</span><br />
+                                            {item.Product_No__c}<br />
+                                        </div>
+                                    </div>
+                                </td>
+                                <td data-label="Quantity" class="slds-text-align_right">
+                                    <div class="slds-truncate" title={item.Quantity_Unit__c}>{item.Quantity_Unit__c}
+                                    </div>
+                                </td>
+                                <td data-label="Base Total">
+                                    <div class="slds-truncate" title={item.Base_Total1__c}>
+                                        <lightning-formatted-number value={item.Base_Total1__c} format-style="currency"
+                                            currency-code={item.CurrencyIsoCode}
+                                            currency-display-as="code"></lightning-formatted-number>
+                                    </div>
+                                </td>
+                                <td data-label="Gross Total">
+                                    <div class="slds-truncate" title={item.Gross_Total1__c}>
+                                        <lightning-formatted-number value={item.Gross_Total1__c} format-style="currency"
+                                            currency-code={item.CurrencyIsoCode}
+                                            currency-display-as="code"></lightning-formatted-number>
+                                    </div>
+                                </td>
+                                <td data-label="Discount %">
+                                    <div class="slds-truncate" title="Discount %">
+                                        <lightning-formatted-number value={item.Discount} format-style="percent"
+                                            maximum-fraction-digits="0"></lightning-formatted-number>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="slds-section slds-is-open" if:true={quoteFiles}>
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="APAC Payments(Revamp)">
+                    Quote Attachments({quoteFiles.length})
+                </span>
+            </h3>
+            <div class="slds-section__content slds-var-m-horizontal_small" style=" overflow: scroll;">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="title">Title</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Created By">Created By</div>
+                            </th>
+                            <th class="Revamp-Section" scope="col">
+                                <div class="slds-truncate" title="Last Modified Date">Last Modified</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={quoteFiles} for:item="item" for:index="index">
+                            <tr key={item.Id} class="slds-hint-parent">
+                                <td data-label="Amount">
+                                    <div class="slds-truncate">
+                                        <lightning-icon icon-name={item.fileTypeLogo} alternative-text='psd'
+                                            class="slds-m-right_xx-small" size='medium' title='psd'></lightning-icon>
+                                        <span style="color: blue; text-decoration: underline; cursor: pointer;"
+                                            onclick={previewDocument} data-id={item.ContentDocumentId}>
+                                            {item.ContentDocument.Title}
+                                        </span>
+                                        <lightning-icon icon-name='utility:download' alternative-text='download'
+                                            class="slds-m-left_xx-small slds-float_right" size='small' title='download'
+                                            onclick={previewAndDownloadDocument} data-id={item.ContentDocumentId}>
+                                        </lightning-icon>
+
+                                    </div>
+                                </td>
+                                <td data-label="Amount">
+                                    <div class="slds-truncate">
+                                        {item.ContentDocument.Owner.Name}
+                                    </div>
+                                </td>
+                                <td data-label="Due Date">
+                                    <div class="slds-truncate">
+                                        <lightning-formatted-date-time value={item.ContentDocument.ContentModifiedDate}
+                                            year="numeric" month="numeric"
+                                            day="numeric"></lightning-formatted-date-time>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <p class="slds-text-color_error slds-text-body_small" data-id="error-text" hidden></p>
+    </div>
+
+
+    <div class="slds-modal__content" style="width: 100%;" if:false={isQuoteObject}>
+        <div class="slds-section slds-is-open">
+            <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                <span class="slds-truncate slds-var-p-horizontal_small" title="Approval Details">Approval Details</span>
+            </h3>
+            <div class="slds-section__content slds-var-p-horizontal_small">
+                <lightning-record-form columns={DefaultLayoutColumns} layout-type="Full" object-api-name={TargetApiName}
+                    record-id={TargetRecordId} mode="readonly"></lightning-record-form>
+            </div>
+        </div>
+    </div>
+</template>

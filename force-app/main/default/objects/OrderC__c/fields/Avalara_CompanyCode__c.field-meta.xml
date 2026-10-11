@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Avalara_CompanyCode__c</fullName>
+    <description>I-213632 - Denmark, Norway need to call Sweden</description>
+    <externalId>false</externalId>
+    <formula>CASE( 
+Selling_Country__c, 
+&quot;United Kingdom&quot;, &quot;UK&quot;, 
+&quot;Austria&quot;,&quot;AT&quot;, 
+&quot;Belgium&quot;,&quot;BE&quot;, 
+&quot;Switzerland&quot;,&quot;CH&quot;, 
+&quot;Spain&quot;,&quot;ES&quot;, 
+&quot;France&quot;,&quot;FR&quot;, 
+&quot;Germany&quot;,&quot;DE&quot;, 
+&quot;Ireland&quot;,&quot;IE&quot;, 
+&quot;Italy&quot;,&quot;IT&quot;, 
+&quot;Luxembourg&quot;,&quot;LU&quot;, 
+&quot;Czech Republic&quot;,&quot;CZ&quot;, 
+&quot;Netherlands&quot;,&quot;NL&quot;, 
+&quot;Norway&quot;,&quot;SE&quot;, 
+&quot;Sweden&quot;,&quot;SE&quot;, 
+&quot;India&quot;,&quot;IN&quot;, 
+&quot;Singapore&quot;,&quot;SG&quot;, 
+&quot;Canada&quot;,&quot;CA&quot;, 
+&quot;Hong Kong&quot;,&quot;HK&quot;, 
+&quot;Malaysia&quot;,&quot;MY&quot;, 
+&quot;Russia&quot;,&quot;RU&quot;, 
+&quot;Philippines&quot;,&quot;PH&quot;, 
+&quot;Denmark&quot;,&quot;SE&quot;, 
+&quot;United Arab Emirates&quot;,&quot;AE&quot;, 
+&quot;Saudi Arabia&quot;,&quot;SA&quot;, 
+&quot;MWW&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Avalara CompanyCode</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Rejection_Reason__c</fullName>
+    <description>Reason Lead Status has been set to Rejected</description>
+    <label>Rejection Reason</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Clean-up</fullName>
+                <default>false</default>
+                <label>Clean-up</label>
+            </value>
+            <value>
+                <fullName>Client budget cut</fullName>
+                <default>false</default>
+                <label>Client budget cut</label>
+            </value>
+            <value>
+                <fullName>Client has active Monster oppt</fullName>
+                <default>false</default>
+                <label>Client has active Monster oppt</label>
+            </value>
+            <value>
+                <fullName>Client has Monster contract</fullName>
+                <default>false</default>
+                <label>Client has Monster contract</label>
+            </value>
+            <value>
+                <fullName>Client loyal to competitor</fullName>
+                <default>false</default>
+                <label>Client loyal to competitor</label>
+            </value>
+            <value>
+                <fullName>Client need has been fulfilled</fullName>
+                <default>false</default>
+                <label>Client need has been fulfilled</label>
+            </value>
+            <value>
+                <fullName>Client unhappy with Monster</fullName>
+                <default>false</default>
+                <label>Client unhappy with Monster</label>
+            </value>
+            <value>
+                <fullName>Non Buying Child Location</fullName>
+                <default>false</default>
+                <label>Non Buying Child Location</label>
+            </value>
+            <value>
+                <fullName>Missing functionalities</fullName>
+                <default>false</default>
+                <label>Missing functionalities</label>
+            </value>
+            <value>
+                <fullName>No additional budget</fullName>
+                <default>false</default>
+                <label>No additional budget</label>
+            </value>
+            <value>
+                <fullName>Price is too high</fullName>
+                <default>false</default>
+                <label>Price is too high</label>
+            </value>
+            <value>
+                <fullName>Product value is too low</fullName>
+                <default>false</default>
+                <label>Product value is too low</label>
+            </value>
+            <value>
+                <fullName>Too hard to change habits</fullName>
+                <default>false</default>
+                <label>Too hard to change habits</label>
+            </value>
+            <value>
+                <fullName>No budget</fullName>
+                <default>false</default>
+                <label>No budget</label>
+            </value>
+            <value>
+                <fullName>No interest in service</fullName>
+                <default>false</default>
+                <label>No interest in service</label>
+            </value>
+            <value>
+                <fullName>No need identified</fullName>
+                <default>false</default>
+                <label>No need identified</label>
+            </value>
+            <value>
+                <fullName>Unqualified Lead</fullName>
+                <default>false</default>
+                <label>Unqualified Lead</label>
+            </value>
+            <value>
+                <fullName>Duplicate Opportunity</fullName>
+                <default>false</default>
+                <label>Duplicate Opportunity</label>
+            </value>
+            <value>
+                <fullName>Sourcing-No budget</fullName>
+                <default>false</default>
+                <label>Sourcing-No budget</label>
+            </value>
+            <value>
+                <fullName>Sourcing-No interest in service</fullName>
+                <default>false</default>
+                <label>Sourcing-No interest in service</label>
+            </value>
+            <value>
+                <fullName>Sourcing-No need identified</fullName>
+                <default>false</default>
+                <label>Sourcing-No need identified</label>
+            </value>
+            <value>
+                <fullName>Sourcing-Not decision maker</fullName>
+                <default>false</default>
+                <label>Sourcing-Not decision maker</label>
+            </value>
+            <value>
+                <fullName>PCVS-Missing functionalities</fullName>
+                <default>false</default>
+                <label>PCVS-Missing functionalities</label>
+            </value>
+            <value>
+                <fullName>PCVS-No additional budget</fullName>
+                <default>false</default>
+                <label>PCVS-No additional budget</label>
+            </value>
+            <value>
+                <fullName>PCVS-Prefers classic CVDB</fullName>
+                <default>false</default>
+                <label>PCVS-Prefers classic CVDB</label>
+            </value>
+            <value>
+                <fullName>PCVS-Price is too high</fullName>
+                <default>false</default>
+                <label>PCVS-Price is too high</label>
+            </value>
+            <value>
+                <fullName>PCVS-Product value is too low</fullName>
+                <default>false</default>
+                <label>PCVS-Product value is too low</label>
+            </value>
+            <value>
+                <fullName>PCVS-Too hard to change habits</fullName>
+                <default>false</default>
+                <label>PCVS-Too hard to change habits</label>
+            </value>
+            <value>
+                <fullName>PCVS-Too many CV are excluded</fullName>
+                <default>false</default>
+                <label>PCVS-Too many CV are excluded</label>
+            </value>
+            <value>
+                <fullName>Client unresponsive</fullName>
+                <default>false</default>
+                <label>Client unresponsive</label>
+            </value>
+            <value>
+                <fullName>Bad lead data</fullName>
+                <default>false</default>
+                <label>Bad lead data</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

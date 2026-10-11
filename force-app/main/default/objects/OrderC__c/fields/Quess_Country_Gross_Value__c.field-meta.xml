@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quess_Country_Gross_Value__c</fullName>
+    <label>Quess Country Gross Value</label>
+    <summarizedField>Order_Line_Item__c.Gross_Total__c</summarizedField>
+    <summaryFilterItems>
+        <field>Order_Line_Item__c.Country_Value__c</field>
+        <operation>equals</operation>
+        <value>Quess Country</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Order_Line_Item__c.Order__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

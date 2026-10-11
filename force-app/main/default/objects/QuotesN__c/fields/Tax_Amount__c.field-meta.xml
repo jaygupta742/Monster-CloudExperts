@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tax_Amount__c</fullName>
+    <formula>IF(
+    ISPICKVAL(Quote_Type__c, &quot;Recontract&quot;),
+    IF(
+        ISPICKVAL(Payment_Type__c, &quot;Due Payment&quot;),
+        (Gross_Total1__c + Amount__c) * Tax__c,
+        (Gross_Total1__c - Amount__c) * Tax__c
+    ),
+    Gross_Total1__c * Tax__c
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>This formula calculates the adjusted gross total based on the type of quote and payment type, applying tax accordingly.</inlineHelpText>
+    <label>Tax Amount</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Currency</type>
+</CustomField>

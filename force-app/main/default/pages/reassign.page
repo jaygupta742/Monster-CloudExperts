@@ -1,0 +1,21 @@
+<apex:page controller="reassign" tabStyle="apttus_proposal_proposal__c" showHeader="false" lightningStylesheets="true" >
+{!re}
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons >
+<apex:commandButton value="Reassign" action="{!reassign_to_user}" rendered="{!b}"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Choose Next Approver" rendered="{!b}">
+<apex:inputField value="{!hh.User_to_Reassign__c}"/>
+
+</apex:pageBlockSection>
+
+
+<apex:outputText rendered="{!not(b)}">
+
+<b> Your Approval Has Been Re Assigned.. please Refresh Quote Page ..</B>
+
+</apex:outputText>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

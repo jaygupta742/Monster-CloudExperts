@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Account Reassignment Request</name>
+    <style>freeForm</style>
+    <subject>{!Account.SalesChannel__c} Account Reassignment Request Account-{!Account.AccountID__c} (Account Reassignment Request)</subject>
+    <textOnly>Send Email To:
+India &amp; Gulf Telesales ACQ Users - MO-IN-SF Request TS ACQ
+India &amp; Gulf Telesales RET Users - MO-IN-SF Request TS RET
+India &amp; Gulf Fieldsales Users - MO-IN-SF Request Fieldsales
+SEA Users - MO-SEA-SF Request
+
+
+Subject: Account Reassignment Request {!Account.Id}:
+
+To ensure that your request is processed correctly, please DO NOT change the subject line of this message
+
+Please do not delete any fields when filling out template.
+
+Please enter the following, all the fields are mandatory to process this request:
+Account Name - {!Account.Name}
+Account Industry - {!Account.Industry}
+Account Employee Size - {!Account.No_of_Employees__c}
+Current Sales Rep Login - {!Account.Primary_Sales_Rep__c}
+Current Sales Channel and Group - {!Account.SalesChannel__c} / {!Account.AccountGroup__c}
+
+New Sales Rep Login -
+New Sales Channel -
+New Account Group -
+My Foregoing Account -
+
+Reason for Reassignment:</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

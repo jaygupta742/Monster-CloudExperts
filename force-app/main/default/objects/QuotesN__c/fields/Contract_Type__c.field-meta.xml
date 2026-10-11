@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Type__c</fullName>
+    <label>Contract Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Manual Std Offline</fullName>
+                <default>true</default>
+                <label>Manual Std Offline</label>
+            </value>
+            <value>
+                <fullName>Manual Amended Offline</fullName>
+                <default>false</default>
+                <label>Manual Amended Offline</label>
+            </value>
+            <value>
+                <fullName>Docusign</fullName>
+                <default>false</default>
+                <label>Docusign</label>
+            </value>
+            <value>
+                <fullName>Client&apos;s Mail Approval</fullName>
+                <default>false</default>
+                <label>Client&apos;s Mail Approval</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

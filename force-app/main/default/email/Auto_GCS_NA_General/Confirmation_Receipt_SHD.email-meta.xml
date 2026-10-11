@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Confirmation Receipt - SHD</name>
+    <style>none</style>
+    <subject>Confirmation Receipt SHD {!Case.CaseNumber}</subject>
+    <textOnly>You have sent your email to an unmonitored email address.   To reach Monster Customer Service, please email us at customerservice@monster.com
+Thank you,
+Monster Customer Service
+
+Case #: {!Case.CaseNumber} {!Case.Thread_Id}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MyContacts</fullName>
+    <columns>FULL_NAME</columns>
+    <columns>CONTACT.PHONE3</columns>
+    <columns>CONTACT.EMAIL</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>ACCOUNT.NAME</columns>
+    <columns>Account_Unique_ID__c</columns>
+    <columns>AccountStatus__c</columns>
+    <columns>PrimaryBillingContact__c</columns>
+    <columns>PrimarySalesContact__c</columns>
+    <filterScope>Mine</filterScope>
+    <label>My Contacts</label>
+</ListView>

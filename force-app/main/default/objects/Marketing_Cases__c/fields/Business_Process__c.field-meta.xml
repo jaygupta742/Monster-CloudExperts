@@ -1,0 +1,1375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Process__c</fullName>
+    <label>Business Process</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>APAC India Employer Email</fullName>
+                <default>false</default>
+                <label>APAC India Employer Email</label>
+            </value>
+            <value>
+                <fullName>AT.DE.DCN.DACH.IE</fullName>
+                <default>false</default>
+                <label>AT.DE.DCN.DACH.IE</label>
+            </value>
+            <value>
+                <fullName>AT.DE.EMP.DACHSD.CS</fullName>
+                <default>false</default>
+                <label>AT.DE.EMP.DACHSD.CS</label>
+            </value>
+            <value>
+                <fullName>AT.DE.EMP.DACHSD.IE</fullName>
+                <default>false</default>
+                <label>AT.DE.EMP.DACHSD.IE</label>
+            </value>
+            <value>
+                <fullName>AT.DE.OFO.DACH.CS</fullName>
+                <default>false</default>
+                <label>AT.DE.OFO.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>AT.DE.OMT.DACH.IE</fullName>
+                <default>false</default>
+                <label>AT.DE.OMT.DACH.IE</label>
+            </value>
+            <value>
+                <fullName>AT.DE.SKR.DACHSD.CS</fullName>
+                <default>false</default>
+                <label>AT.DE.SKR.DACHSD.CS</label>
+            </value>
+            <value>
+                <fullName>BE.EN.ECO.SOUTH.IC</fullName>
+                <default>false</default>
+                <label>BE.EN.ECO.SOUTH.IC</label>
+            </value>
+            <value>
+                <fullName>BE.EN.EMP.FRSD.CS</fullName>
+                <default>false</default>
+                <label>BE.EN.EMP.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>BE.EN.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>BE.EN.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>BE.EN.SAL</fullName>
+                <default>false</default>
+                <label>BE.EN.SAL</label>
+            </value>
+            <value>
+                <fullName>BE.EN.SKR.NLSD.CS</fullName>
+                <default>false</default>
+                <label>BE.EN.SKR.NLSD.CS</label>
+            </value>
+            <value>
+                <fullName>BE.FR.DCN.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>BE.FR.DCN.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>BE.FR.EMP.FRSD.CS</fullName>
+                <default>false</default>
+                <label>BE.FR.EMP.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>BE.FR.EMP.FRSD.IE</fullName>
+                <default>false</default>
+                <label>BE.FR.EMP.FRSD.IE</label>
+            </value>
+            <value>
+                <fullName>BE.FR.EMP.PREF.CS</fullName>
+                <default>false</default>
+                <label>BE.FR.EMP.PREF.CS</label>
+            </value>
+            <value>
+                <fullName>BE.FR.EMP.PREF.IC</fullName>
+                <default>false</default>
+                <label>BE.FR.EMP.PREF.IC</label>
+            </value>
+            <value>
+                <fullName>BE.FR.EMP.PREF.IE</fullName>
+                <default>false</default>
+                <label>BE.FR.EMP.PREF.IE</label>
+            </value>
+            <value>
+                <fullName>BE.FR.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>BE.FR.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>BE.FR.OMT.SOUTH.IE</fullName>
+                <default>false</default>
+                <label>BE.FR.OMT.SOUTH.IE</label>
+            </value>
+            <value>
+                <fullName>BE.FR.SKR.FRSD.CS</fullName>
+                <default>false</default>
+                <label>BE.FR.SKR.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>BE.NL.EMP.NLSD.CS</fullName>
+                <default>false</default>
+                <label>BE.NL.EMP.NLSD.CS</label>
+            </value>
+            <value>
+                <fullName>BE.NL.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>BE.NL.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>BE.NL.SKR.NLSD.CS</fullName>
+                <default>false</default>
+                <label>BE.NL.SKR.NLSD.CS</label>
+            </value>
+            <value>
+                <fullName>CH.CH.DCN.DACH.CS</fullName>
+                <default>false</default>
+                <label>CH.CH.DCN.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>CH.CH.ECO.DACH.IC</fullName>
+                <default>false</default>
+                <label>CH.CH.ECO.DACH.IC</label>
+            </value>
+            <value>
+                <fullName>CH.CH.EMP.DACHSD.CS</fullName>
+                <default>false</default>
+                <label>CH.CH.EMP.DACHSD.CS</label>
+            </value>
+            <value>
+                <fullName>CH.CH.SKR.DACHSD.CS</fullName>
+                <default>false</default>
+                <label>CH.CH.SKR.DACHSD.CS</label>
+            </value>
+            <value>
+                <fullName>CH.DE.EMP.DACHSD.CS</fullName>
+                <default>false</default>
+                <label>CH.DE.EMP.DACHSD.CS</label>
+            </value>
+            <value>
+                <fullName>CH.DE.EMP.DACHSD.IC</fullName>
+                <default>false</default>
+                <label>CH.DE.EMP.DACHSD.IC</label>
+            </value>
+            <value>
+                <fullName>CH.DE.EMP.DACHSD.IE</fullName>
+                <default>false</default>
+                <label>CH.DE.EMP.DACHSD.IE</label>
+            </value>
+            <value>
+                <fullName>CH.DE.OFO.DACH.CS</fullName>
+                <default>false</default>
+                <label>CH.DE.OFO.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>CH.DE.OMT.DACH.IE</fullName>
+                <default>false</default>
+                <label>CH.DE.OMT.DACH.IE</label>
+            </value>
+            <value>
+                <fullName>CH.FR.DCN.SOUTH.IE</fullName>
+                <default>false</default>
+                <label>CH.FR.DCN.SOUTH.IE</label>
+            </value>
+            <value>
+                <fullName>CH.FR.EMP.FRSD.CS</fullName>
+                <default>false</default>
+                <label>CH.FR.EMP.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>CH.FR.SKR.FRSD.CS</fullName>
+                <default>false</default>
+                <label>CH.FR.SKR.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>CNT.Int.KB.Dutch</fullName>
+                <default>false</default>
+                <label>CNT.Int.KB.Dutch</label>
+            </value>
+            <value>
+                <fullName>CNT.Int.KB.English</fullName>
+                <default>false</default>
+                <label>CNT.Int.KB.English</label>
+            </value>
+            <value>
+                <fullName>CNT.Int.KB.French</fullName>
+                <default>false</default>
+                <label>CNT.Int.KB.French</label>
+            </value>
+            <value>
+                <fullName>CNT.Int.KB.German</fullName>
+                <default>false</default>
+                <label>CNT.Int.KB.German</label>
+            </value>
+            <value>
+                <fullName>CNT.Int.KB.Italian</fullName>
+                <default>false</default>
+                <label>CNT.Int.KB.Italian</label>
+            </value>
+            <value>
+                <fullName>CNT.Int.Order.Management.Content</fullName>
+                <default>false</default>
+                <label>CNT.Int.Order.Management.Content</label>
+            </value>
+            <value>
+                <fullName>CNT.MAY.Content Requests</fullName>
+                <default>false</default>
+                <label>CNT.MAY.Content Requests</label>
+            </value>
+            <value>
+                <fullName>CNT.MAY.Content Suggestions</fullName>
+                <default>false</default>
+                <label>CNT.MAY.Content Suggestions</label>
+            </value>
+            <value>
+                <fullName>CNT.MAY.Translation Requests</fullName>
+                <default>false</default>
+                <label>CNT.MAY.Translation Requests</label>
+            </value>
+            <value>
+                <fullName>CZ.CZ.DCN.DACH.CS</fullName>
+                <default>false</default>
+                <label>CZ.CZ.DCN.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>CZ.CZ.OFO.DACH.CS</fullName>
+                <default>false</default>
+                <label>CZ.CZ.OFO.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>DE.DE.DCN.DACH.CS</fullName>
+                <default>false</default>
+                <label>DE.DE.DCN.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>DE.DE.ECO.DACH.IC</fullName>
+                <default>false</default>
+                <label>DE.DE.ECO.DACH.IC</label>
+            </value>
+            <value>
+                <fullName>DE.DE.EMP.DACHPS.CS</fullName>
+                <default>false</default>
+                <label>DE.DE.EMP.DACHPS.CS</label>
+            </value>
+            <value>
+                <fullName>DE.DE.EMP.DACHSD.CS</fullName>
+                <default>false</default>
+                <label>DE.DE.EMP.DACHSD.CS</label>
+            </value>
+            <value>
+                <fullName>DE.DE.EMP.DACHSD.IC</fullName>
+                <default>false</default>
+                <label>DE.DE.EMP.DACHSD.IC</label>
+            </value>
+            <value>
+                <fullName>DE.DE.EMP.DACHSD.IE</fullName>
+                <default>false</default>
+                <label>DE.DE.EMP.DACHSD.IE</label>
+            </value>
+            <value>
+                <fullName>DE.DE.EMP.PREF.CS</fullName>
+                <default>false</default>
+                <label>DE.DE.EMP.PREF.CS</label>
+            </value>
+            <value>
+                <fullName>DE.DE.EMP.PREF.IE</fullName>
+                <default>false</default>
+                <label>DE.DE.EMP.PREF.IE</label>
+            </value>
+            <value>
+                <fullName>DE.DE.OFO.DACH.CS</fullName>
+                <default>false</default>
+                <label>DE.DE.OFO.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>DE.DE.OMT.DACH.IE</fullName>
+                <default>false</default>
+                <label>DE.DE.OMT.DACH.IE</label>
+            </value>
+            <value>
+                <fullName>DE.DE.SKR.DACHSD.CS</fullName>
+                <default>false</default>
+                <label>DE.DE.SKR.DACHSD.CS</label>
+            </value>
+            <value>
+                <fullName>Default - Manual</fullName>
+                <default>false</default>
+                <label>Default - Manual</label>
+            </value>
+            <value>
+                <fullName>Default - Manual EU</fullName>
+                <default>false</default>
+                <label>Default - Manual EU</label>
+            </value>
+            <value>
+                <fullName>DK.DK.EMP.DKSD.CS</fullName>
+                <default>false</default>
+                <label>DK.DK.EMP.DKSD.CS</label>
+            </value>
+            <value>
+                <fullName>DK.DK.OFO.NORTH.CS</fullName>
+                <default>false</default>
+                <label>DK.DK.OFO.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>DK.DK.SKR.DKSD.CS</fullName>
+                <default>false</default>
+                <label>DK.DK.SKR.DKSD.CS</label>
+            </value>
+            <value>
+                <fullName>ES.EN.SAL</fullName>
+                <default>false</default>
+                <label>ES.EN.SAL</label>
+            </value>
+            <value>
+                <fullName>ES.ES.ECO.SOUTH.IC</fullName>
+                <default>false</default>
+                <label>ES.ES.ECO.SOUTH.IC</label>
+            </value>
+            <value>
+                <fullName>ES.ES.EMP.ESSD.CS</fullName>
+                <default>false</default>
+                <label>ES.ES.EMP.ESSD.CS</label>
+            </value>
+            <value>
+                <fullName>ES.ES.EMP.ESSD.IE</fullName>
+                <default>false</default>
+                <label>ES.ES.EMP.ESSD.IE</label>
+            </value>
+            <value>
+                <fullName>ES.ES.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>ES.ES.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>ES.ES.OMT.SOUTH.IE</fullName>
+                <default>false</default>
+                <label>ES.ES.OMT.SOUTH.IE</label>
+            </value>
+            <value>
+                <fullName>ES.ES.SKR.ESSD.CS</fullName>
+                <default>false</default>
+                <label>ES.ES.SKR.ESSD.CS</label>
+            </value>
+            <value>
+                <fullName>EU.EN.TB</fullName>
+                <default>false</default>
+                <label>EU.EN.TB</label>
+            </value>
+            <value>
+                <fullName>EU.EN.TB.SME</fullName>
+                <default>false</default>
+                <label>EU.EN.TB.SME</label>
+            </value>
+            <value>
+                <fullName>FI.FI.OFO.NORTH.CS</fullName>
+                <default>false</default>
+                <label>FI.FI.OFO.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>FR.FR.ECO.SOUTH.IC</fullName>
+                <default>false</default>
+                <label>FR.FR.ECO.SOUTH.IC</label>
+            </value>
+            <value>
+                <fullName>FR.FR.EMP.FRSD.CS</fullName>
+                <default>false</default>
+                <label>FR.FR.EMP.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>FR.FR.EMP.FRSD.IE</fullName>
+                <default>false</default>
+                <label>FR.FR.EMP.FRSD.IE</label>
+            </value>
+            <value>
+                <fullName>FR.FR.EMP.PREF.CS</fullName>
+                <default>false</default>
+                <label>FR.FR.EMP.PREF.CS</label>
+            </value>
+            <value>
+                <fullName>FR.FR.EMP.Premium.CS</fullName>
+                <default>false</default>
+                <label>FR.FR.EMP.Premium.CS</label>
+            </value>
+            <value>
+                <fullName>FR.FR.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>FR.FR.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>FR.FR.OMT.SOUTH.IE</fullName>
+                <default>false</default>
+                <label>FR.FR.OMT.SOUTH.IE</label>
+            </value>
+            <value>
+                <fullName>FR.FR.SKR.FRSD.CS</fullName>
+                <default>false</default>
+                <label>FR.FR.SKR.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>GA.EN.OMT.GA.CS</fullName>
+                <default>false</default>
+                <label>GA.EN.OMT.GA.CS</label>
+            </value>
+            <value>
+                <fullName>HU.HU.OFO.DACH.CS</fullName>
+                <default>false</default>
+                <label>HU.HU.OFO.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>IE.EN.EMP.UKIESD.CS</fullName>
+                <default>false</default>
+                <label>IE.EN.EMP.UKIESD.CS</label>
+            </value>
+            <value>
+                <fullName>IE.EN.EMP.UKPREM.IC</fullName>
+                <default>false</default>
+                <label>IE.EN.EMP.UKPREM.IC</label>
+            </value>
+            <value>
+                <fullName>IE.EN.SAL</fullName>
+                <default>false</default>
+                <label>IE.EN.SAL</label>
+            </value>
+            <value>
+                <fullName>IE.EN.SKR.UKIESD.CS</fullName>
+                <default>false</default>
+                <label>IE.EN.SKR.UKIESD.CS</label>
+            </value>
+            <value>
+                <fullName>IT.IT.DCN.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>IT.IT.DCN.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>IT.IT.ECO.SOUTH.IC</fullName>
+                <default>false</default>
+                <label>IT.IT.ECO.SOUTH.IC</label>
+            </value>
+            <value>
+                <fullName>IT.IT.EMP.ITSD.CS</fullName>
+                <default>false</default>
+                <label>IT.IT.EMP.ITSD.CS</label>
+            </value>
+            <value>
+                <fullName>IT.IT.EMP.ITSD.IE</fullName>
+                <default>false</default>
+                <label>IT.IT.EMP.ITSD.IE</label>
+            </value>
+            <value>
+                <fullName>IT.IT.EMP.Premium.CS</fullName>
+                <default>false</default>
+                <label>IT.IT.EMP.Premium.CS</label>
+            </value>
+            <value>
+                <fullName>IT.IT.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>IT.IT.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>IT.IT.OMT.SOUTH.IE</fullName>
+                <default>false</default>
+                <label>IT.IT.OMT.SOUTH.IE</label>
+            </value>
+            <value>
+                <fullName>IT.IT.SAL</fullName>
+                <default>false</default>
+                <label>IT.IT.SAL</label>
+            </value>
+            <value>
+                <fullName>IT.IT.SKR.ITSD.CS</fullName>
+                <default>false</default>
+                <label>IT.IT.SKR.ITSD.CS</label>
+            </value>
+            <value>
+                <fullName>LU.DE.SKR.FRSD.CS</fullName>
+                <default>false</default>
+                <label>LU.DE.SKR.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>LU.EN.SKR.FRSD.CS</fullName>
+                <default>false</default>
+                <label>LU.EN.SKR.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>LU.FR.DCN.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>LU.FR.DCN.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>LU.FR.EMP.FRSD.CS</fullName>
+                <default>false</default>
+                <label>LU.FR.EMP.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>LU.FR.EMP.FRSD.IE</fullName>
+                <default>false</default>
+                <label>LU.FR.EMP.FRSD.IE</label>
+            </value>
+            <value>
+                <fullName>LU.FR.EMP.PREF.CS</fullName>
+                <default>false</default>
+                <label>LU.FR.EMP.PREF.CS</label>
+            </value>
+            <value>
+                <fullName>LU.FR.EMP.PREF.IE</fullName>
+                <default>false</default>
+                <label>LU.FR.EMP.PREF.IE</label>
+            </value>
+            <value>
+                <fullName>LU.FR.EMP.Premium.CS</fullName>
+                <default>false</default>
+                <label>LU.FR.EMP.Premium.CS</label>
+            </value>
+            <value>
+                <fullName>LU.FR.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>LU.FR.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>LU.FR.OMT.SOUTH.IE</fullName>
+                <default>false</default>
+                <label>LU.FR.OMT.SOUTH.IE</label>
+            </value>
+            <value>
+                <fullName>LU.FR.SAL</fullName>
+                <default>false</default>
+                <label>LU.FR.SAL</label>
+            </value>
+            <value>
+                <fullName>LU.FR.SKR.FRSD.CS</fullName>
+                <default>false</default>
+                <label>LU.FR.SKR.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>LU.LU.ECO.SOUTH.IC</fullName>
+                <default>false</default>
+                <label>LU.LU.ECO.SOUTH.IC</label>
+            </value>
+            <value>
+                <fullName>NA</fullName>
+                <default>false</default>
+                <label>NA</label>
+            </value>
+            <value>
+                <fullName>NA.CA.EMP.Canada Tier 1</fullName>
+                <default>false</default>
+                <label>NA.CA.EMP.Canada Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.CA.EMP.Preferred Support</fullName>
+                <default>false</default>
+                <label>NA.CA.EMP.Preferred Support</label>
+            </value>
+            <value>
+                <fullName>NA.CA.EMP.Tier 1</fullName>
+                <default>false</default>
+                <label>NA.CA.EMP.Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.CA.FIN.Credit Request</fullName>
+                <default>false</default>
+                <label>NA.CA.FIN.Credit Request</label>
+            </value>
+            <value>
+                <fullName>NA.CA.OMT.Canadian Order</fullName>
+                <default>false</default>
+                <label>NA.CA.OMT.Canadian Order</label>
+            </value>
+            <value>
+                <fullName>NA.CA.OMT.French Order</fullName>
+                <default>false</default>
+                <label>NA.CA.OMT.French Order</label>
+            </value>
+            <value>
+                <fullName>NA.CA.SKR.Account</fullName>
+                <default>false</default>
+                <label>NA.CA.SKR.Account</label>
+            </value>
+            <value>
+                <fullName>NA.CA.SKR.Cancel</fullName>
+                <default>false</default>
+                <label>NA.CA.SKR.Cancel</label>
+            </value>
+            <value>
+                <fullName>NA.CA.SKR.Fraud</fullName>
+                <default>false</default>
+                <label>NA.CA.SKR.Fraud</label>
+            </value>
+            <value>
+                <fullName>NA.CA.SKR.Job Apply</fullName>
+                <default>false</default>
+                <label>NA.CA.SKR.Job Apply</label>
+            </value>
+            <value>
+                <fullName>NA.CA.SKR.Job Search</fullName>
+                <default>false</default>
+                <label>NA.CA.SKR.Job Search</label>
+            </value>
+            <value>
+                <fullName>NA.CA.SKR.Login / Password</fullName>
+                <default>false</default>
+                <label>NA.CA.SKR.Login / Password</label>
+            </value>
+            <value>
+                <fullName>NA.CA.SKR.Seeker Tier 1</fullName>
+                <default>false</default>
+                <label>NA.CA.SKR.Seeker Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.OMT.Catchall</fullName>
+                <default>false</default>
+                <label>NA.OMT.Catchall</label>
+            </value>
+            <value>
+                <fullName>NA.US.CNT.English Content Request</fullName>
+                <default>false</default>
+                <label>NA.US.CNT.English Content Request</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Afterhours Employer Tier 1</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Afterhours Employer Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Agency</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Agency</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Core Feed Failure</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Core Feed Failure</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Credit Request</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Credit Request</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Customer Training</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Customer Training</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Custom Implementation</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Custom Implementation</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Employer Tier 1</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Employer Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Integration Support</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Integration Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Job Posting</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Job Posting</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.OFCCP Request</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.OFCCP Request</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Opt Out</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Opt Out</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Preferred Support</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Preferred Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Preferred Support - Adecco</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Preferred Support - Adecco</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Product Implementation</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Product Implementation</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Tier 1</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.US.EMP.Twitter Cards</fullName>
+                <default>false</default>
+                <label>NA.US.EMP.Twitter Cards</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Approved Credit</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Approved Credit</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Billing Dispute</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Billing Dispute</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Credit / Rebill</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Credit / Rebill</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Credit Request</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Credit Request</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Dispute Tier 2</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Dispute Tier 2</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Partner Credit Request</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Partner Credit Request</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Payment Term Change</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Payment Term Change</label>
+            </value>
+            <value>
+                <fullName>NA.US.FIN.Rejected Order</fullName>
+                <default>false</default>
+                <label>NA.US.FIN.Rejected Order</label>
+            </value>
+            <value>
+                <fullName>NA.US.MBO.EQA Order</fullName>
+                <default>false</default>
+                <label>NA.US.MBO.EQA Order</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.BOP Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.BOP Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.BOR Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.BOR Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.CFTC Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.CFTC Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.DC Courts Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.DC Courts Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.DOC Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.DOC Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.DOL Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.DOL Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.DOS Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.DOS Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.DOT Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.DOT Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.EDU Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.EDU Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.FBI Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.FBI Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.FDIC Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.FDIC Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.FERC Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.FERC Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.GSA Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.GSA Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.LOC Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.LOC Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.NBC Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.NBC Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.NSF Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.NSF Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.Ohio Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.Ohio Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.OMJ Recruiter</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.OMJ Recruiter</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.OMJ Seeker</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.OMJ Seeker</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.OSM Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.OSM Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.PBGC Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.PBGC Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.Tier 1</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.Treasury Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.Treasury Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.TSA Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.TSA Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.USCG Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.USCG Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.USHMM Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.USHMM Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.MGS.VA Support</fullName>
+                <default>false</default>
+                <label>NA.US.MGS.VA Support</label>
+            </value>
+            <value>
+                <fullName>NA.US.NWP.After Hours</fullName>
+                <default>false</default>
+                <label>NA.US.NWP.After Hours</label>
+            </value>
+            <value>
+                <fullName>NA.US.NWP.Boston Tier 1</fullName>
+                <default>false</default>
+                <label>NA.US.NWP.Boston Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.US.NWP.Boston Tier 2</fullName>
+                <default>false</default>
+                <label>NA.US.NWP.Boston Tier 2</label>
+            </value>
+            <value>
+                <fullName>NA.US.NWP.Tier 1</fullName>
+                <default>false</default>
+                <label>NA.US.NWP.Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Career One Order</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Career One Order</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Customer First</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Customer First</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.DC Special Projects</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.DC Special Projects</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Ecomm Processing</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Ecomm Processing</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Ecomm Rebill</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Ecomm Rebill</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Ecomm WebOrder</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Ecomm WebOrder</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Enterprise CS</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Enterprise CS</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.EQA Exception</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.EQA Exception</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.InfoCoor</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.InfoCoor</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.InfoCoor Tier 2</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.InfoCoor Tier 2</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Inventory Request</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Inventory Request</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.MGS Order</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.MGS Order</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.MSA</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.MSA</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Newspaper Boston Order</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Newspaper Boston Order</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Newspaper Standard Order</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Newspaper Standard Order</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.OA Escalated</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.OA Escalated</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.OFCCP</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.OFCCP</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Offline Order</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Offline Order</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Order Correction</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Order Correction</label>
+            </value>
+            <value>
+                <fullName>NA.US.OMT.Order Services</fullName>
+                <default>false</default>
+                <label>NA.US.OMT.Order Services</label>
+            </value>
+            <value>
+                <fullName>NA.US.OPS.Training</fullName>
+                <default>false</default>
+                <label>NA.US.OPS.Training</label>
+            </value>
+            <value>
+                <fullName>NA.US.OPS.Training Mock Employer</fullName>
+                <default>false</default>
+                <label>NA.US.OPS.Training Mock Employer</label>
+            </value>
+            <value>
+                <fullName>NA.US.OPS.Training Mock Seeker</fullName>
+                <default>false</default>
+                <label>NA.US.OPS.Training Mock Seeker</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Account</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Account</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.BeKnown</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.BeKnown</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Browser Issue</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Browser Issue</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Cancel</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Cancel</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Career Advice</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Career Advice</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Email Alerts</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Email Alerts</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Error Message</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Error Message</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Fraud</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Fraud</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Job Apply</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Job Apply</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Job Search</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Job Search</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Login / Password</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Login / Password</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Malware</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Malware</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Privacy</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Privacy</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Privacy - Cancel</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Privacy - Cancel</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Privacy - Delete Resume</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Privacy - Delete Resume</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Privacy - Unsubscribe</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Privacy - Unsubscribe</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Publisher</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Publisher</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Resume</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Resume</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Seeker Tier 1</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Seeker Tier 1</label>
+            </value>
+            <value>
+                <fullName>NA.US.SKR.Virtual Career Fair</fullName>
+                <default>false</default>
+                <label>NA.US.SKR.Virtual Career Fair</label>
+            </value>
+            <value>
+                <fullName>NA.US.SOP.Account Name Change</fullName>
+                <default>false</default>
+                <label>NA.US.SOP.Account Name Change</label>
+            </value>
+            <value>
+                <fullName>NA.US.SOP.Out of Business Request</fullName>
+                <default>false</default>
+                <label>NA.US.SOP.Out of Business Request</label>
+            </value>
+            <value>
+                <fullName>NL.EN.SAL</fullName>
+                <default>false</default>
+                <label>NL.EN.SAL</label>
+            </value>
+            <value>
+                <fullName>NL.NL.DCN.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>NL.NL.DCN.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>NL.NL.ECO.SOUTH.IC</fullName>
+                <default>false</default>
+                <label>NL.NL.ECO.SOUTH.IC</label>
+            </value>
+            <value>
+                <fullName>NL.NL.EMP.NLSD.CS</fullName>
+                <default>false</default>
+                <label>NL.NL.EMP.NLSD.CS</label>
+            </value>
+            <value>
+                <fullName>NL.NL.EMP.NLSD.IC</fullName>
+                <default>false</default>
+                <label>NL.NL.EMP.NLSD.IC</label>
+            </value>
+            <value>
+                <fullName>NL.NL.EMP.PREM.IC</fullName>
+                <default>false</default>
+                <label>NL.NL.EMP.PREM.IC</label>
+            </value>
+            <value>
+                <fullName>NL.NL.EMP.Premium.CS</fullName>
+                <default>false</default>
+                <label>NL.NL.EMP.Premium.CS</label>
+            </value>
+            <value>
+                <fullName>NL.NL.OFO.SOUTH.CS</fullName>
+                <default>false</default>
+                <label>NL.NL.OFO.SOUTH.CS</label>
+            </value>
+            <value>
+                <fullName>NL.NL.SKR.NLSD.CS</fullName>
+                <default>false</default>
+                <label>NL.NL.SKR.NLSD.CS</label>
+            </value>
+            <value>
+                <fullName>NO.NO.ECO.NORTH.IC</fullName>
+                <default>false</default>
+                <label>NO.NO.ECO.NORTH.IC</label>
+            </value>
+            <value>
+                <fullName>NO.NO.ECO.NORTH.IE</fullName>
+                <default>false</default>
+                <label>NO.NO.ECO.NORTH.IE</label>
+            </value>
+            <value>
+                <fullName>NO.NO.EMP.NOSD.CS</fullName>
+                <default>false</default>
+                <label>NO.NO.EMP.NOSD.CS</label>
+            </value>
+            <value>
+                <fullName>NO.NO.OFO.NORTH.IE</fullName>
+                <default>false</default>
+                <label>NO.NO.OFO.NORTH.IE</label>
+            </value>
+            <value>
+                <fullName>NO.NO.OMT.NORTH.IE</fullName>
+                <default>false</default>
+                <label>NO.NO.OMT.NORTH.IE</label>
+            </value>
+            <value>
+                <fullName>NO.NO.SKR.NOSD.CS</fullName>
+                <default>false</default>
+                <label>NO.NO.SKR.NOSD.CS</label>
+            </value>
+            <value>
+                <fullName>PL.PL.OFO.DACH.CS</fullName>
+                <default>false</default>
+                <label>PL.PL.OFO.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>RU.RU.DCN.DACH.CS</fullName>
+                <default>false</default>
+                <label>RU.RU.DCN.DACH.CS</label>
+            </value>
+            <value>
+                <fullName>RU.RU.SKR.FRSD.CS</fullName>
+                <default>false</default>
+                <label>RU.RU.SKR.FRSD.CS</label>
+            </value>
+            <value>
+                <fullName>SE.EN.SAL</fullName>
+                <default>false</default>
+                <label>SE.EN.SAL</label>
+            </value>
+            <value>
+                <fullName>SE.SE.DCN.NORTH.CS</fullName>
+                <default>false</default>
+                <label>SE.SE.DCN.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>SE.SE.EMP.SESD.CS</fullName>
+                <default>false</default>
+                <label>SE.SE.EMP.SESD.CS</label>
+            </value>
+            <value>
+                <fullName>SE.SE.EMP.SESD.IE</fullName>
+                <default>false</default>
+                <label>SE.SE.EMP.SESD.IE</label>
+            </value>
+            <value>
+                <fullName>SE.SE.OFO.NORTH.CS</fullName>
+                <default>false</default>
+                <label>SE.SE.OFO.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>SE.SE.OMT.NORTH.IE</fullName>
+                <default>false</default>
+                <label>SE.SE.OMT.NORTH.IE</label>
+            </value>
+            <value>
+                <fullName>SE.SE.SKR.SESD.CS</fullName>
+                <default>false</default>
+                <label>SE.SE.SKR.SESD.CS</label>
+            </value>
+            <value>
+                <fullName>SPAM/JUNK</fullName>
+                <default>false</default>
+                <label>SPAM/JUNK</label>
+            </value>
+            <value>
+                <fullName>SSUS.Process</fullName>
+                <default>false</default>
+                <label>SSUS.Process</label>
+            </value>
+            <value>
+                <fullName>UK.EN.EMP.UKIESD.CS</fullName>
+                <default>false</default>
+                <label>UK.EN.EMP.UKIESD.CS</label>
+            </value>
+            <value>
+                <fullName>UK.EN.EMP.UKIESD.IE</fullName>
+                <default>false</default>
+                <label>UK.EN.EMP.UKIESD.IE</label>
+            </value>
+            <value>
+                <fullName>UK.EN.EMP.UKPREM.IC</fullName>
+                <default>false</default>
+                <label>UK.EN.EMP.UKPREM.IC</label>
+            </value>
+            <value>
+                <fullName>UK.EN.SAL</fullName>
+                <default>false</default>
+                <label>UK.EN.SAL</label>
+            </value>
+            <value>
+                <fullName>UK.EN.SKR.UKIESD.CS</fullName>
+                <default>false</default>
+                <label>UK.EN.SKR.UKIESD.CS</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.DCN.NORTH.CS</fullName>
+                <default>false</default>
+                <label>UKIE.EN.DCN.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.DCN.NORTH.IE</fullName>
+                <default>false</default>
+                <label>UKIE.EN.DCN.NORTH.IE</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.ECO.NORTH.IC</fullName>
+                <default>false</default>
+                <label>UKIE.EN.ECO.NORTH.IC</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.ECO.NORTH.IE</fullName>
+                <default>false</default>
+                <label>UKIE.EN.ECO.NORTH.IE</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.EMP.NORTH.CS</fullName>
+                <default>false</default>
+                <label>UKIE.EN.EMP.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.OFO.NORTH.CS</fullName>
+                <default>false</default>
+                <label>UKIE.EN.OFO.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.OMT.NORTH.CS</fullName>
+                <default>false</default>
+                <label>UKIE.EN.OMT.NORTH.CS</label>
+            </value>
+            <value>
+                <fullName>UKIE.EN.OMT.NORTH.IE</fullName>
+                <default>false</default>
+                <label>UKIE.EN.OMT.NORTH.IE</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Adecco</fullName>
+                <default>false</default>
+                <label>US.EMP.Adecco</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Florence Job Posting</fullName>
+                <default>false</default>
+                <label>US.EMP.Florence Job Posting</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Randstad</fullName>
+                <default>false</default>
+                <label>US.EMP.Randstad</label>
+            </value>
+            <value>
+                <fullName>US.EMP.Voicemail</fullName>
+                <default>false</default>
+                <label>US.EMP.Voicemail</label>
+            </value>
+            <value>
+                <fullName>US.MGS.WAEmployer</fullName>
+                <default>false</default>
+                <label>US.MGS.WAEmployer</label>
+            </value>
+            <value>
+                <fullName>US.MGS.WASeeker</fullName>
+                <default>false</default>
+                <label>US.MGS.WASeeker</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

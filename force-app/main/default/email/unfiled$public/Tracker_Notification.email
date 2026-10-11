@@ -1,0 +1,22 @@
+Dear {!Tracker__c.OwnerFullName}, 
+
+Greetings from Cloud Experts Service team. 
+
+Thank you for writing to us. We acknowledge the receipt of your email and our team will resolve your issue within 2 Business Hours. 
+
+Please find Your Tracker details as below:
+
+Tracker No: {!Tracker__c.Name}
+Department: {!Tracker__c.Department__c}
+Email: {!Tracker__c.Email__c}
+Phone: {!Tracker__c.Phone__c}
+Remarks: {!Tracker__c.Remarks__c}
+Related Object: {!Tracker__c.Related_Object__c}
+Status: {!Tracker__c.Status__c}
+Issue Description: {!Tracker__c.Issue_Description__c}
+
+ 
+
+Best Regards, 
+Cloud Experts Team
+Email: crm@cloudexpertsindia.com

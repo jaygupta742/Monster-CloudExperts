@@ -1,0 +1,206 @@
+<aura:component controller="EditOPLIAccessories" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+	
+    <aura:attribute name="oppList" type="OPLI_Accessories__c[]" default="{'sobject':'OPLI_Accessories__c',
+                                                                          'Id':'',
+                                                                          'Name':'',
+                                                                          'Product__c':'',
+                                                                          'Top_Ups__c':'',
+                                                                          'Quantity_Unit__c':'',
+                                                                          'Unit_Price__c':''
+                                                                                  }"/>
+                                                                          
+    
+    <aura:attribute name="successMsg" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 80rem;
+        }
+         .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+          .slds-p-around--medium {
+        padding: 0rem !important;
+        }   
+        
+            
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+background-color: white;
+
+}
+    </aura:html>
+    
+    <div class="mod slds-scrollable">
+      <div class="slds-page-header" style="text-align:center;background-color:#2E86C1;color:white;background-color:#8467D7;">
+        <h1 class="slds-page-header_title">Edit OPLI Services</h1>
+      </div>
+        <div class="slds-table--header-fixed_container">
+     <div class="slds-scrollable" style="height:550Px;width:100%">
+        <table style="table-layout:fixed;padding:20px;font-size:1px;width:100%;"  class="slds-table slds-table_bordered slds-table_cell-buffer" >
+        <lightning:recordEditForm objectApiName="OpportunityN__c" recordId="{!v.recordId}">
+           
+                
+                <lightning:recordEditForm objectApiName="OPLI_Accessories__c">
+                    <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate">S.No </div>
+                        </th>
+                        
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate" title="Name">Product Name </div>
+                        </th>
+                        
+                        <!--<th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate" title="Product">Product SKU</div>
+                        </th>-->
+                        
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate" title="Accessories">Service Name </div>
+                        </th>
+                        
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate" title="Quantity">Inventory Count </div>
+                        </th>
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate" title="Quantity">Quantity </div>
+                        </th>
+                                 <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                          <div class="slds-truncate" title="Unit Rate">Unit Rate</div>
+                        </th>
+                      <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                          <div class="slds-truncate" title="Discount Type">Adjustment <br/>Type</div>
+                        </th>
+                        
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate" title="Discount Value">Adjustment<br/> Value</div>
+                        </th>
+                       <!-- <th scope="col" style="width:7%;font-size:12px;background-color:#2E86C1;color:white;">
+                         <b>Base<br/>Total</b>
+                </th>
+                        <th scope="col" style="width:7%;font-size:12px;background-color:#2E86C1;color:white;">
+                         <b>Discount<br/>Amount</b>
+                </th>
+                        <th scope="col" style="width:7%;font-size:12px;background-color:#2E86C1;color:white;">
+                    <b>Gross<br/> Total</b>
+                </th>-->
+               
+                        
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                            <div class="slds-truncate" title="Inventory Quota(Tenure)">Inventory <br/>Quota<br/>(Tenure)</div>
+                        </th>
+                        <th scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                         <div class="slds-truncate" title="Delete"></div>
+                         </th>
+                        
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.oppList}" var="opp" indexVar="rowIndex">
+                            <tr class="slds-text-title_caps" style="width:100%;font-size:12px;">
+                        <td style="width:5%;font-size:12px;">
+                            {!rowIndex+1}
+                                </td>
+                   
+                                <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;width:20%;height:10px">
+                                    <lightning:inputField fieldName="Product_Name__c" variant="label-hidden" value="{!opp.opli.Product_Name__c}" disabled="true" />
+                                    
+                                </td>
+                                <!--<td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;width:20%">
+                                    <lightning:inputField fieldName="Product_SKU__c" variant="label-hidden" value="{!opp.opli.Product_SKU__c}" disabled="true" />
+                                    
+                                </td>-->
+                                <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;width:20%">
+                                    <lightning:inputField fieldName="Top_Up_Name__c" variant="label-hidden" value="{!opp.opli.Top_Up_Name__c}" disabled="true" />
+                                </td>
+                                
+                                <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;width:20%">
+                                    <lightning:inputField fieldName="Quantity_Unit__c"  variant="label-hidden"  value="{!opp.opli.Quantity_Unit__c}" onchange="{!c.validateqty}"/>
+                                </td>
+                      <aura:if isTrue="{!opp.invtenure!='Per Month'}">
+                             
+                        <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:20px;width:20%">
+                          <lightning:input type="number" value="{!opp.opli.Quantity__c}" style="width:100%;" Default="1" />
+                        </td>
+                        </aura:if>
+                        
+                         <aura:if isTrue="{!opp.invtenure=='Per Month'}">
+
+                        <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:20px;width:20%">
+                          <lightning:input type="number" value="{!opp.opli.Quantity__c}" style="width:100%;" disabled="true" />
+                        </td>
+                         </aura:if>
+                                <!-- <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;width:20%">
+                                    <lightning:inputField fieldName="Quantity__c"  variant="label-hidden"  value="{!opp.opli.Quantity__c}"  required="true" onchange="{!c.validateqty}" />
+                                </td>-->
+                                <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;width:20%">
+                                    <lightning:inputField fieldName="Unit_Price__c"  variant="label-hidden"  value="{!opp.Unit_Price__c}"  required="true"  />
+                                </td>
+                               
+                             
+                                <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;width:20%">
+                           <lightning:select value="{!opp.opli.Adjustment_Type__c}" label="" >
+                           <option value="%" label="%" ></option>
+                           <option value="Amount" label="Amount" ></option>
+                            <option value="Price Override" label="Price Override" ></option>
+                             <option value="Base Price Override" label="Base Price Override" ></option>
+                           </lightning:select>
+                        </td>
+                        
+                     
+                        
+                        <td  style="width:20%;border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                          <lightning:input type="number" value="{!opp.opli.Adjustment_Value__c}" style="width:50%;" onchange="{!c.checkdiscount}" />
+                        </td>
+                        <!--<td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                          {!opp.opli.Base_Total__c}
+                        </td>
+                        <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                          {!opp.opli.Discount_Amount__c}
+                        </td>
+                        
+							<td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                          {!opp.opli.Gross_Total__c}
+                        </td>-->
+                                
+                               
+                                <td style="width:7%;font-size:12px;">
+                                    <lightning:inputField fieldName="Inventory_Quota_Tenure1__c" variant="label-hidden" value="{!opp.opli.Inventory_Quota_Tenure1__c}" disabled="true" />
+                                </td>
+                               
+                                
+                                
+                                <td style="width:5%; font-size:12px;">
+                                    <a onclick="{!c.removeDeletedRow}" data-value="{!rowIndex}">
+                                        <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon" />
+                                        <span class="slds-assistive-text">Delete Icon</span>
+                                    </a>
+                                </td>
+                                
+                            
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </lightning:recordEditForm>
+            <!--</lightning:card>-->
+        </lightning:recordEditForm>
+        </table>
+            </div>
+        </div>
+    </div>
+    <br/>
+   <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+    <lightning:button aura:id="button" class="button" label="Save" onclick="{!c.onSave}" variant="brand"/>
+    </div>
+</aura:component>

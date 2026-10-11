@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>lock_rec</fullName>
+    <active>false</active>
+    <description>if status is completed</description>
+    <errorConditionFormula>ISPICKVAL(Status , &apos;Completed&apos;)</errorConditionFormula>
+    <errorMessage>Record is locked</errorMessage>
+</ValidationRule>

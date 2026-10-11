@@ -1,0 +1,5 @@
+Opportunity Name:{!Opportunity__c.Name}
+Account Name: {!Opportunity__c.Account__c}
+
+Thanks & Regards,
+Salesforce Support

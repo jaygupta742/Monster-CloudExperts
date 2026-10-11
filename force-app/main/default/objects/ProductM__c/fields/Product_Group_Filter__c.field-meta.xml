@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Group_Filter__c</fullName>
+    <label>Product Group Filter</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Career Sites</fullName>
+                <default>false</default>
+                <label>Career Sites</label>
+            </value>
+            <value>
+                <fullName>Major Sales Group</fullName>
+                <default>false</default>
+                <label>Major Sales Group</label>
+            </value>
+            <value>
+                <fullName>MTR User Group</fullName>
+                <default>false</default>
+                <label>MTR User Group</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>Premium Job Ads</fullName>
+                <default>false</default>
+                <label>Premium Job Ads</label>
+            </value>
+            <value>
+                <fullName>Pricing Team</fullName>
+                <default>false</default>
+                <label>Pricing Team</label>
+            </value>
+            <value>
+                <fullName>Super Search</fullName>
+                <default>false</default>
+                <label>Super Search</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

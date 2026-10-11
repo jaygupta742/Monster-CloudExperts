@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>BFSI, Business &amp; Strategy(Under Namita)</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Vertical_Head_BFSI_Business_Strategy_Namita_Agarwal</parentRole>
+</Role>

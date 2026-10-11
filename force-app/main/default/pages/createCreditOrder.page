@@ -1,0 +1,77 @@
+<apex:page controller="CreditOrder" lightningStylesheets="true" tabStyle="Credit_Request__c" docType="xhtml-1.0-strict">
+<apex:pageMessages >
+</apex:pageMessages>
+
+
+<apex:form >
+<apex:outputPanel rendered="{!(Approval == true || Approvalsales ==true)}">
+<apex:pageBlock title="Generate Reversal/Bad Debt Order">
+
+
+<apex:pageBlockButtons location="top">
+<apex:commandButton value="Save" action="{!Save}" />
+<apex:commandButton value="Cancel" action="{!Cancel}" immediate="true"/>
+
+</apex:pageBlockButtons>
+
+
+
+
+<apex:pageBlockSection title="Edit Reversal/Bad Debt Order" >
+
+<apex:outputfield label="Order number" value="{!lsto[0].Order_Custom__c}"/>
+
+<apex:outputfield label="Account" value="{!cr.Account__c}"/>
+<apex:OutputText label="Reversed Amount" value="{!rt}"/>
+<apex:inputField label="Reversal/Bad Debt Reason" value="{!cr.Credit_Reason__c}" required="true" />
+<!--<apex:inputField label="Credit Comment" value="{!lsto[0].Credit_Comments__c}"/>-->
+<apex:inputField label="Reversal/Bad Debt type" value="{!cr.Credit_type__c}" required="true"/>
+
+</apex:pageBlockSection>
+
+
+
+
+</apex:pageBlock>
+
+</apex:outputPanel>
+
+<apex:outputPanel rendered="{!(lsto[0].Created_By_Users_Profile__c=='Monster - Collections'  && lsto[0].Approval_Status__c !='Approved')}">
+<apex:pageBlock title="Generate Reversal/Bad Debt Order">
+
+<div style="font-size:30px;" align="Center">  <br/>Reversal/Bad Debt Order can only be created once Reversal/Bad Debt request is Approved</div>
+
+<div style="font-size:20px;" align="Center"> 
+<br/>Reversal/Bad Debt Request Approval Request approver status is <b>{!lsto[0].Approval_Status__c}</b><br/><br/>
+</div>
+
+<div align="Center"><apex:commandButton value="Go Back" action="{!onCancel}"/> </div>
+
+
+</apex:pageBlock>
+
+</apex:outputPanel>
+<apex:outputPanel rendered="{!(lsto[0].Created_By_Users_Profile__c=='Monster - Sales' && (lsto[0].Approval_Status__c !='Approved' || lsto[0].Vertical_head_Approval_Status__c !='Approved'))}">
+<apex:pageBlock title="Generate Reversal/Bad Debt Order">
+
+<div style="font-size:30px;" align="Center">  <br/>Reversal/Bad Debt Order can only be created once Reversal/Bad Debt request is Approved by Vertical Head and Final Approver</div>
+
+<div style="font-size:20px;" align="Center"> 
+<br/>Reversal/Bad Debt Request Vertical head approver status is <b>{!lsto[0].Approval_Status__c}</b><br/>
+<br/>Reversal/Bad Debt Request Final Approver Status  is <b>{!lsto[0].Vertical_head_Approval_Status__c}</b><br/>
+</div>
+<div align="Center"><apex:commandButton value="Go Back" action="{!onCancel}"/> </div>
+
+
+</apex:pageBlock>
+
+</apex:outputPanel>
+
+
+
+
+
+
+</apex:form>
+
+</apex:page>

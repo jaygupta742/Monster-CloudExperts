@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ContactType__c</fullName>
+    <label>Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Main Contact</fullName>
+                <default>false</default>
+                <label>Main Contact</label>
+            </value>
+            <value>
+                <fullName>Decision Maker</fullName>
+                <default>false</default>
+                <label>Decision Maker</label>
+            </value>
+            <value>
+                <fullName>Buyer/Procurement</fullName>
+                <default>false</default>
+                <label>Buyer/Procurement</label>
+            </value>
+            <value>
+                <fullName>Billing/Finance</fullName>
+                <default>false</default>
+                <label>Billing/Finance</label>
+            </value>
+            <value>
+                <fullName>User</fullName>
+                <default>false</default>
+                <label>User</label>
+            </value>
+            <value>
+                <fullName>Super User</fullName>
+                <default>false</default>
+                <label>Super User</label>
+            </value>
+            <value>
+                <fullName>Coordinator</fullName>
+                <default>false</default>
+                <label>Coordinator</label>
+            </value>
+            <value>
+                <fullName>Technical</fullName>
+                <default>false</default>
+                <label>Technical</label>
+            </value>
+            <value>
+                <fullName>Franchisee/Owner-Operator</fullName>
+                <default>false</default>
+                <label>Franchisee/Owner-Operator</label>
+            </value>
+            <value>
+                <fullName>Third Party Vendor</fullName>
+                <default>false</default>
+                <label>Third Party Vendor</label>
+            </value>
+            <value>
+                <fullName>FTP Contact</fullName>
+                <default>false</default>
+                <label>FTP Contact</label>
+            </value>
+            <value>
+                <fullName>EEO Offline Reports</fullName>
+                <default>false</default>
+                <label>EEO Offline Reports</label>
+            </value>
+            <value>
+                <fullName>Influencer</fullName>
+                <default>false</default>
+                <label>Influencer</label>
+            </value>
+            <value>
+                <fullName>Initiator</fullName>
+                <default>false</default>
+                <label>Initiator</label>
+            </value>
+            <value>
+                <fullName>Posting Performance</fullName>
+                <default>false</default>
+                <label>Posting Performance</label>
+            </value>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Seeker</fullName>
+                <default>false</default>
+                <label>Seeker</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Fraud</fullName>
+                <default>false</default>
+                <label>Fraud</label>
+            </value>
+            <value>
+                <fullName>MGS</fullName>
+                <default>false</default>
+                <label>MGS</label>
+            </value>
+            <value>
+                <fullName>Internal</fullName>
+                <default>false</default>
+                <label>Internal</label>
+            </value>
+            <value>
+                <fullName>Challenger</fullName>
+                <default>false</default>
+                <label>Challenger</label>
+            </value>
+            <value>
+                <fullName>Billing Contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Billing Contact</label>
+            </value>
+            <value>
+                <fullName>Contract</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contract</label>
+            </value>
+            <value>
+                <fullName>Contract Contact</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Contract Contact</label>
+            </value>
+            <value>
+                <fullName>Customer Relations / MS</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Customer Relations / MS</label>
+            </value>
+            <value>
+                <fullName>Fieldsales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Learning System</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Learning System</label>
+            </value>
+            <value>
+                <fullName>NULL</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>NULL</label>
+            </value>
+            <value>
+                <fullName>Telesales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telesales</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

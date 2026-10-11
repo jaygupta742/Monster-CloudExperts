@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Weightage1__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+    Gross_Total__c &lt;= 10000, 0,
+    IF(
+        Gross_Total__c &lt;= 20000, 0.2,
+        IF(
+            Gross_Total__c &lt;= 30000, 0.4,
+            IF(
+                Gross_Total__c &lt;= 40000, 0.6,
+                IF(
+                    Gross_Total__c &lt;= 50000, 0.8,
+                    IF(
+                        Gross_Total__c &lt;= 60000, 1,
+                        IF(
+                            Gross_Total__c &lt;= 75000, 1.2,
+                            IF(
+                                Gross_Total__c &lt;= 100000, 1.5,
+                                IF(
+                                    Gross_Total__c &lt;= 150000, 2,
+                                    3
+                                )
+                            )
+                        )
+                    )
+                )
+            )
+        )
+    )
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Weightage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

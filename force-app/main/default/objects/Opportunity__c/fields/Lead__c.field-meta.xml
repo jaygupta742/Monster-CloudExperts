@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field is used for reporting, this is used to designate if an opportunity is a Lead or not. A workflow rule will populate this field to True when a record is created in Stage 0</description>
+    <label>Lead</label>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

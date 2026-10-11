@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Assign_Validation</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Assign Validation</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&apos;/soap/ajax/28.0/connection.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js&apos;)} 
+{!REQUIRESCRIPT(&apos;//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js&apos;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+
+function appendTags(){ 
+if(jQuery(&apos;[id=start-theme-css]&apos;).length==0){ 
+jQuery(&apos;head&apos;).append( 
+&apos;&lt;link &apos; + 
+&apos;id=&quot;start-theme-css&quot;&apos; + 
+&apos;rel=&quot;stylesheet&quot;&apos; + 
+&apos;href=&quot;https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/themes/start/jquery-ui.min.css&quot;&apos; + 
+&apos;type=&quot;text/css&quot; /&gt;&apos; 
+); 
+
+jQuery(&apos;body&apos;).append( 
+
+&apos;&lt;div id=&quot;dialog-confirm&quot; title=&quot;Change validation owner &quot; style=&quot;height:10px&quot;&gt;&apos; + 
+&apos;&lt;p style=&quot;text-align:justify&quot;&gt;&apos; + 
+&apos;&lt;img src=&quot;/s.gif&quot; alt=&quot;validationowner&quot; class=&quot;pageTitleIcon&quot; title=&quot;validationowner&quot; style=&quot;margin: 0 7px 30px 0&quot;/&gt;&apos; + 
+&apos;Please select a User To Change The validation Owner.&apos; + 
+&apos;&lt;br/&gt;&lt;br/&gt;Users:&apos; + 
+&apos;&lt;select id=&quot;userId&quot; style=&quot;width:300px&quot;&gt;&lt;/select&gt;&apos; + 
+&apos;&lt;/p&gt;&apos; + 
+&apos;&lt;/div&gt;&apos; 
+); 
+jQuery(&apos;body&apos;).append( 
+&apos;&lt;div id=&quot;dialog-sent&quot; title=&quot;Change validation Owner&quot;&gt;&apos; + 
+&apos;&lt;p style=&quot;text-align:justify&quot;&gt;&apos; + 
+&apos;&lt;img src=&quot;/s.gif&quot; alt=&quot;validationowner&quot; class=&quot;pageTitleIcon&quot; title=&quot;validationowner&quot; style=&quot;margin: 0 7px 30px 0&quot;/&gt;&apos; + 
+&apos;Change validation owner Successful&apos; + 
+&apos;&lt;/p&gt;&apos; + 
+&apos;&lt;/div&gt;&apos; 
+); 
+jQuery(&apos;body&apos;).append( 
+&apos;&lt;div id=&quot;Less&quot; title=&quot;Insufficient privilege&quot;&gt;&apos; + 
+&apos;&lt;p style=&quot;text-align:justify&quot;&gt;&apos; + 
+&apos;&lt;img src=&quot;/s.gif&quot; alt=&quot;validationowner&quot; class=&quot;pageTitleIcon&quot; title=&quot;validationowner&quot; style=&quot;margin: 0 7px 30px 0&quot;/&gt;&apos; + 
+&apos;You Dont Have privilege to change validation owner&apos; + 
+&apos;&lt;/p&gt;&apos; + 
+&apos;&lt;/div&gt;&apos; 
+); 
+} 
+} 
+
+function createPopupWindow(){ 
+jQuery(function() { 
+jQuery( &quot;#dialog-confirm&quot; ).dialog({ 
+autoOpen: true, 
+width : &quot;420px&quot;, 
+show: { 
+effect: &quot;Bounce&quot;, 
+duration:1000 
+
+
+}, 
+
+hide: { 
+effect: &quot;Explode&quot;, 
+duration: 1000 
+}, 
+buttons: { 
+&quot;Change Owner&quot;: 
+function() { 
+changeowner(); 
+}, 
+
+Cancel: 
+function() { 
+jQuery( this ).dialog( &quot;close&quot; ); 
+window.location.reload(); 
+} 
+} 
+}); 
+}); 
+} 
+function ownerchanged(){ 
+jQuery(function() { 
+jQuery( &quot;#dialog-sent&quot; ).dialog({ 
+autoOpen: true, 
+show: { 
+effect: &quot;Bounce&quot;, 
+duration:1000 
+
+
+}, 
+
+hide: { 
+effect: &quot;Explode&quot;, 
+duration: 1000 
+}, 
+buttons: { 
+OK: 
+function() { 
+jQuery( this ).dialog( &quot;close&quot; ); 
+window.location.reload(); 
+} 
+} 
+}); 
+}); 
+} 
+function fetchusers(){ 
+var users = 
+sforce.connection.query( 
+&apos;SELECT Id,Name,IsActive FROM User where IsActive = true AND (profileid = \&apos;00e7F000000uSSj\&apos; OR profileid=\&apos;00e7F000000uSSk\&apos;) order by Name&apos;, 
+{ 
+onSuccess: 
+function(result){ 
+var records = result.getArray(&apos;records&apos;); 
+var innerHtml = &apos;&lt;option value=&quot;&quot;&gt;--Select--&lt;/option&gt;&apos;; 
+for(var i=0; i&lt;records.length; i++) 
+innerHtml += 
+&apos;&lt;option value=&quot;&apos; + records[i].Id + &apos;&quot;&gt;&apos; + 
+records[i].Name + 
+&apos;&lt;/option&gt;&apos;; 
+
+jQuery(&apos;[id=userId]&apos;).html(innerHtml); 
+}, 
+onFailure: 
+function(error){ 
+alert(&apos;An Error has Occurred. Error: &apos; + error); 
+} 
+} 
+); 
+} 
+
+function changeowner(){ 
+var cvrIds = {!GETRECORDIDS( $ObjectType.Client_Validation_Request__c )}; 
+var userId = jQuery(&apos;[id=userId]&apos;).val(); 
+var result = sforce.apex.execute(&quot;validationChange&quot;, &quot;userchange&quot;,{ cvr : cvrIds , uid : userId } ); 
+ownerchanged(); 
+
+} 
+function Noaccess(){ 
+jQuery(function() { 
+jQuery( &quot;#Less&quot; ).dialog({ 
+autoOpen: true, 
+show: { 
+effect: &quot;Bounce&quot;, 
+duration:1000 
+
+
+}, 
+
+hide: { 
+effect: &quot;Explode&quot;, 
+duration: 1000 
+}, 
+buttons: { 
+OK: 
+function() { 
+jQuery( this ).dialog( &quot;close&quot; ); 
+window.location.reload(); 
+} 
+} 
+}); 
+}); 
+} 
+
+function test(){ 
+
+var acids = {!GETRECORDIDS( $ObjectType.Client_Validation_Request__c )}; 
+
+if(acids.length === 0) 
+alert(&apos;Please select atleast one record&apos;); 
+else{ 
+if(&apos;{!$User.Id}&apos;!=&apos;0057F000003Sa4x&apos; &amp;&amp; &apos;{!$User.Id}&apos;!=&apos;0057F000003RvIZ&apos; &amp;&amp; &apos;{!$User.Id}&apos;!=&apos;0057F000003SflQ&apos;&amp;&amp;&apos;{!$User.Id}&apos;!=&apos;0057F000003Sa4P&apos;){ 
+appendTags(); 
+Noaccess(); 
+
+} 
+else{ 
+appendTags(); 
+fetchusers(); 
+createPopupWindow(); 
+} 
+} 
+} 
+test();</url>
+</WebLink>

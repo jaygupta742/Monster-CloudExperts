@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Payment_Method1__c</fullName>
+    <label>Payment Method</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Credit Card</fullName>
+                <default>false</default>
+                <label>Credit Card</label>
+            </value>
+            <value>
+                <fullName>Invoice</fullName>
+                <default>false</default>
+                <label>Invoice</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>PayPal</fullName>
+                <default>false</default>
+                <label>PayPal</label>
+            </value>
+            <value>
+                <fullName>WorldPay (PPC Only)</fullName>
+                <default>false</default>
+                <label>WorldPay (PPC Only)</label>
+            </value>
+            <value>
+                <fullName>EU Credit Card</fullName>
+                <default>false</default>
+                <label>EU Credit Card</label>
+            </value>
+            <value>
+                <fullName>EU Invoice</fullName>
+                <default>false</default>
+                <label>EU Invoice</label>
+            </value>
+            <value>
+                <fullName>PDC/ECS</fullName>
+                <default>false</default>
+                <label>PDC/ECS</label>
+            </value>
+            <value>
+                <fullName>Debit / Credit Card Payment</fullName>
+                <default>false</default>
+                <label>Debit / Credit Card Payment</label>
+            </value>
+            <value>
+                <fullName>Wire Transfer</fullName>
+                <default>false</default>
+                <label>Wire Transfer</label>
+            </value>
+            <value>
+                <fullName>NEFT/RTGS</fullName>
+                <default>false</default>
+                <label>NEFT/RTGS</label>
+            </value>
+            <value>
+                <fullName>Demand Draft</fullName>
+                <default>false</default>
+                <label>Demand Draft</label>
+            </value>
+            <value>
+                <fullName>Direct Deposit-Cash</fullName>
+                <default>false</default>
+                <label>Direct Deposit-Cash</label>
+            </value>
+            <value>
+                <fullName>Non-Standard</fullName>
+                <default>false</default>
+                <label>Non-Standard</label>
+            </value>
+            <value>
+                <fullName>Direct Debit</fullName>
+                <default>false</default>
+                <label>Direct Debit</label>
+            </value>
+            <value>
+                <fullName>Zero Value</fullName>
+                <default>false</default>
+                <label>Zero Value</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>APAC_Purple_Monster_Logo</letterhead>
+    <name>KEY R WL</name>
+    <style>formalLetter</style>
+    <subject>Welcome to Monster - {!Account.Name}</subject>
+    <textOnly>Dear Customer,
+Welcome back to Monster!
+
+We thank you for renewing the Monster services with us. I will be your main point of contact for any customer service related queries and will assist you in using the monster recruiter account.
+
+For security reasons, we have sent the login details in a separate auto-generated mailer, which you must have received by now. Please log on to http://recruiter.monsterindia.com and enter your login details to access Monster Recruiter account.
+
+
+You can refer to our product demo available on Monster recruiter account by clicking on “Take a Tour” icon which is placed on top right hand side of your Monster Home page.
+
+Your contract covers the following products / services.
+
+
+
+Products/Service Country/Website Quantity Validity Amount
+
+
+
+If you have any queries on the above products / service description, please do let us know within 7 working days of receipt of this mail.
+
+You can contact me through email from Monday to Friday between 9.30 AM to 6.30PM for any queries.
+
+You can also contact Monster helpline on the following numbers, which works from 8 AM to 8 PM, Monday to Friday and 9.30 AM to 6.30 PM on Saturday’s and public holidays.
+
+Toll Free: 1-800-4196666* / Toll No - 91 40 66116611*
+* Press 2 when the IVR message comes up
+Email: cr@monsterindia.com
+
+Assuring you the best of our services.
+
+
+
+In view of our experience of Clients’ request for the inclusion of their jobs on Monster Platform for better visibility, outreach and result, we are enabling job scrapping / job replication feature as default for select customers including your organization. Please note, jobs that are scrapped from your career site will not be consuming inventory that you have purchased.
+
+
+SIGNATURE
+Note: Please change your password after you login to the account for the first time and do not share your account details with anyone to ensure security of your account.
+
+
+
+Escalation of any Customer Service matter
+In the unlikely event of your query or complaint not being resolved promptly to your satisfaction, please write a mail to crhead@monsterindia.com as a first level of escalation and to ceo@monsterindia.com for second level escalation. The matter will be directly investigated by the senior management of our Customer Service team.
+
+Terms of Use
+We thank you for using Monster. For uninterrupted access to our services, it is important for you to read and understand our Terms of Use . For your convenience, we are emphasizing on some of the Prohibited Uses of Monster listed and we look forward to your cooperation in adhering to the same.
+
+Mass mailing/Spamming/Non-career related mailing is strictly prohibited
+We are committed to preventing any form of misuse of our jobseeker database. If any user indulges in:
+
+Mass-mailing messages about job openings without having adequately narrowed the list of jobseekers to whom it is being sent
+
+OR spamming
+OR sending any mail with contents that are not strictly jobs/careers oriented
+
+Monster at its own discretion may deactivate the user’s account in any such case, without further notice.
+
+Posting or refreshing the same job multiple times
+We have noticed some users have been posting several jobs and refreshing them at an unusual frequency. Monster Terms of Use strictly prohibit such use of our job posting facility and if any user continues to refresh multiple jobs periodically, we may choose to deactivate the account.
+
+Posting jobs with external links
+We do not permit any external links to other websites from any of our job postings, unless the same has been explicitly approved by Monster.
+
+Posting jobs that are discriminatory
+We do not permit posting of jobs that specifically restrict applications from jobseekers based on religion, caste, gender etc. Any such postings may be deleted without notice and account deactivated.
+
+Posting jobs that seek payments from jobseekers
+We do not permit any posting which requires an upfront or periodic payment from jobseekers.
+
+Mass download of resumes
+If any user downloads resumes at an unusual pace or by using any software or spider programs, the account will be instantly deactivated.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

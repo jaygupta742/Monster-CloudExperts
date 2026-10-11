@@ -1,0 +1,11 @@
+<img src="https://monster--dev--c.cs21.content.force.com/servlet/servlet.ImageServer?id=015q0000000T4BR&oid=00Dq0000000BLIl&lastMod=1438155982000" align="left" width="220" >
+<br/><br/><br/>
+Hi {!Order__c.BillingContact__c},
+<br /><br />
+<b>Account Name : </b> {!Order__c.Account__c}<br />
+<b>Order ID : </b> {!delete__c.Name} <br />
+<b>Order Status: </b>{!Order__c.OrderStatus__c}<br />
+<b>Order Amount : </b> {!Order__c.NetTotalAmount__c}<br />
+<br />
+Please click the link below to pay by credit card:<br />
+<a href="{!Order__c.PaypalURL__c}">Paypal URL</a>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Base_Total1__c</fullName>
+    <label>Base Total</label>
+    <summarizedField>Opp_Line_Item__c.Base_Total1__c</summarizedField>
+    <summaryForeignKey>Opp_Line_Item__c.Opportunities__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

@@ -1,0 +1,17 @@
+<apex:page standardController="apttus_proposal_proposal__c" renderAs="pdf" lightningStylesheets="true"> 
+    
+    <c:PDFHeaderFooterRunning value="header">
+        <apex:image url="{!URLFOR($Resource.Monster_Logo)}" width="200px" />
+</c:PDFHeaderFooterRunning>
+    <c:PDFRunningFooter value="footer">
+<apex:stylesheet value="{!$Resource.PageNo}"/>
+<div style="text-align : right;">
+
+<br/>{!apttus_proposal_proposal__c.name} 
+{!YEAR(TODAY())}{!MONTH(TODAY())}{!DAY(TODAY())}
+</div>
+</c:PDFRunningFooter>
+    <apex:stylesheet value="{!$Resource.PageNo}"/>
+    
+        
+</apex:page>

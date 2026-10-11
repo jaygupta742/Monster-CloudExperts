@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Order__c.Account__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.Account_Id__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Order__c.Gross_Total1__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Order__c.Sales_Credit__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.Rep_Location__c</field>
+    </columns>
+    <columns>
+        <field>Order__c.Sales_Channel__c</field>
+    </columns>
+    <currency>INR</currency>
+    <format>Tabular</format>
+    <name>Sales File</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Order__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2025-04-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2025-04-01</startDate>
+    </timeFrameFilter>
+</Report>

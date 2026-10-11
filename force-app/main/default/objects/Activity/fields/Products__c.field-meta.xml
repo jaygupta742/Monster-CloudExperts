@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Products__c</fullName>
+    <label>Products</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Core Product</fullName>
+                <default>false</default>
+                <label>Core Product</label>
+            </value>
+            <value>
+                <fullName>AS - PPI</fullName>
+                <default>false</default>
+                <label>AS - PPI</label>
+            </value>
+            <value>
+                <fullName>AS - PPO</fullName>
+                <default>false</default>
+                <label>AS - PPO</label>
+            </value>
+            <value>
+                <fullName>AS - PPJ</fullName>
+                <default>false</default>
+                <label>AS - PPJ</label>
+            </value>
+            <value>
+                <fullName>AS - Skillyst</fullName>
+                <default>false</default>
+                <label>AS - Skillyst</label>
+            </value>
+            <value>
+                <fullName>AS - Koyo</fullName>
+                <default>false</default>
+                <label>AS - Koyo</label>
+            </value>
+            <value>
+                <fullName>VCF</fullName>
+                <default>false</default>
+                <label>VCF</label>
+            </value>
+            <value>
+                <fullName>Branding</fullName>
+                <default>false</default>
+                <label>Branding</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

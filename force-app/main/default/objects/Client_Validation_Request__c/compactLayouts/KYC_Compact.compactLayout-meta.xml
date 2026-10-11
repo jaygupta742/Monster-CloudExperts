@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KYC_Compact</fullName>
+    <fields>Name</fields>
+    <fields>Account__c</fields>
+    <fields>CRM_Account_ID__c</fields>
+    <fields>KYCLead_Account_Status__c</fields>
+    <fields>Reference__c</fields>
+    <fields>Stage__c</fields>
+    <fields>Status__c</fields>
+    <fields>RecordTypeId</fields>
+    <fields>KYC_Request_Owner__c</fields>
+    <label>KYC Compact</label>
+</CompactLayout>

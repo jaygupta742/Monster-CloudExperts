@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>this permission set is used to give accesss to only swapna for changing the Account segment
+
+by rj
+
+Added By Yamini
+Permission for the swapna only to change the feedback field.
+by soni--
+Added sudha, suresh babu and yasmin to change feedback field.</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Change_Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Segment__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Event.Feedback__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Task.Feedback__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>permissiontoSWapnaforchangesegment</label>
+    <license>Salesforce Platform</license>
+</PermissionSet>

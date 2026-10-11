@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monster_Phone_Mobile_Validation</fullName>
+    <active>false</active>
+    <errorConditionFormula>/*
+IF( RecordTypeId == &apos;0120k0000001jHZ&apos; &amp;&amp; NOT(isblank(MobilePhone)) ,len(  MobilePhone ) &lt;&gt;13 || CONTAINS(MobilePhone , &apos;/&apos;) ||CONTAINS(MobilePhone , &apos;,&apos;) ||CONTAINS(MobilePhone , &apos;*&apos;)||CONTAINS(MobilePhone , &apos;-&apos;)||CONTAINS(MobilePhone , &apos;.&apos;),null)
+*/
+
+/*IF(NOT(ISBLANK( MobilePhone)) &amp;&amp; (RecordTypeId == &apos;0127F000000mhAa&apos;) &amp;&amp; ( ISPICKVAL(Account.Location__c, &apos;India&apos;)), LEN(MobilePhone) &lt;&gt; 13,FALSE)*/
+
+/*
+IF(NOT(ISBLANK( MobilePhone)), IF( (RecordTypeId == &apos;0127F000000mhAa&apos;) &amp;&amp; 
+(ISPICKVAL(Account.Location__c, &apos;India&apos;)), LEN(MobilePhone) &lt;&gt; 13 || NOT(ISNUMBER(MID(MobilePhone,2, LEN(MobilePhone)))), NOT(ISNUMBER(MID(MobilePhone,2, LEN(MobilePhone))))) ,false)
+*/
+
+IF( Case_Contact__c == False, 
+IF((RecordType.Name == &apos;For Monster RT&apos; || RecordType.Name == &apos;Monster Read Only RT&apos;), 
+IF( NOT(ISBLANK(  MobilePhone )) , 
+IF( ISPICKVAL(  Account.Location__c , &quot;India&quot;), 
+LEN(MobilePhone ) &lt;&gt; 13 || NOT(ISNUMBER(RIGHT(MobilePhone ,(LEN(MobilePhone ) - 1)))) || NOT( BEGINS(MobilePhone , &quot;+&quot;) ), 
+NOT(ISNUMBER(RIGHT(MobilePhone ,(LEN(MobilePhone ) - 1)))) || NOT( BEGINS(MobilePhone , &quot;+&quot;) ) ) 
+,false 
+), 
+false), 
+false)</errorConditionFormula>
+    <errorDisplayField>MobilePhone</errorDisplayField>
+    <errorMessage>If Account Location is India,Mobile Number Should Be Equal to 13 Digits Only And It should be prefixed with &apos;+&apos; OR If Account Location is other countries, It should be prefixed with &apos;+&apos;</errorMessage>
+</ValidationRule>

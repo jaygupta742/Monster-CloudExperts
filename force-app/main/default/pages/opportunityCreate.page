@@ -1,0 +1,98 @@
+<apex:page standardController="Opportunity__c" extensions="opportunityCreate" lightningStylesheets="true">
+<apex:pageMessages id="RE1"></apex:pageMessages>
+<apex:pageMessage detail="Please note the credit status of the account is Negative and it must be removed to successfully proceed with quote and sale processing." rendered="{!creditStatusDisplayMsg}" severity="info">
+</apex:pageMessage>
+
+    <apex:form >
+        <apex:pageBlock rendered="{!AND((errorMsg),NOT(freeTrail))}" Title="Opportunity Exists">
+            <apex:pageblockTable value="{!DupRec}" var="dp">
+                <apex:column headerValue="Opportunity Name"><apex:outputLink value="/{!dp}" target="_blank" >{!DupRec[dp]}</apex:outputLink></apex:column>
+            </apex:pageBlockTable>
+        </apex:pageBlock>
+        <apex:pageBlock Title="Opportunity" id="Re">
+        
+            <div align="center">
+                <apex:commandButton action="{!Save}" value="Save"/>
+            </div><br/>
+            <apex:pageblockSection Title="Opportunity Information">
+                <apex:inputField value="{!Opportunity__c.Account__c}"/>
+                <apex:inputField value="{!Opportunity__c.Contact__c}"/>
+                <apex:inputField value="{!Opportunity__c.Close_Date__c}"/>
+                
+                <apex:inputField value="{!Opportunity__c.Opportunity_Vertical__c}"/>
+                <apex:inputField value="{!Opportunity__c.Closure_Week__c}"/>
+                <apex:inputField value="{!Opportunity__c.OpportunityType__c}"/>
+                <apex:inputField value="{!Opportunity__c.Closure_Probability__c}" required="{! IF($User.ProfileId ='00e7F000000uSShQAM',true,false)}"/>
+                    
+                <apex:inputField value="{!Opportunity__c.MultiYearDeal__c}"/>
+                <apex:inputField value="{!Opportunity__c.CurrencyIsoCode}"/>
+                <apex:inputField value="{!Opportunity__c.Currency_NON_APAC__c}"/>
+                <apex:outputField value="{!Opportunity__c.Amount__c}"/>
+                
+                
+                <apex:inputField value="{!Opportunity__c.Estimated_Revenue_Non_APAC__c}"/>
+                <apex:inputField value="{!Opportunity__c.Expected_Revenue_NON_APAC__c}"/>
+               
+                <apex:inputField value="{!Opportunity__c.Expected_Revenue__c}"/>
+                <apex:outputField value="{!Opportunity__c.Actual_Revenue__c}"/>
+                <apex:inputField value="{!Opportunity__c.OpportunitySource__c}"/>
+                
+                <!--<apex:outputField value="{!Opportunity__c.Stage__c}"/>
+                <apex:outputField value="{!Opportunity__c.Probability__c}"/>-->
+                <apex:inputField value="{!Opportunity__c.Stage__c}" rendered="{!NOT(spclPerm)}" required="{! IF($User.ProfileId ='00e7F000000uSShQAM',true,false)}"/>
+                <apex:inputField value="{!Opportunity__c.Stage__c}" rendered="{!spclPerm}" />                 
+                <apex:inputField value="{!Opportunity__c.Xcode_Account__c}"/>
+                <apex:outputField value="{!Opportunity__c.Previous_Stage__c}" rendered="{IF($User.ProfileId ='00e7F000002zNys',true,false)}"/>
+                <apex:inputField value="{!Opportunity__c.Probability__c}" rendered="{!NOT(spclPerm)}" required="{! IF($User.ProfileId ='00e7F000000uSShQAM',true,false)}"/>
+                <apex:inputField value="{!Opportunity__c.Probability__c}" rendered="{!spclPerm}"/> 
+                <apex:inputField value="{!Opportunity__c.Opportunity_Lost_deferred__c}"/>
+                <apex:inputField value="{!Opportunity__c.Description__c}"/>
+                <apex:inputField value="{!Opportunity__c.DispositionReason__c}" />
+                
+            </apex:pageblockSection>
+            <apex:pageblockSection Title="Product Information" columns="1" rendered="{!NOT(seeker)}">
+                <apex:inputField value="{!Opportunity__c.Products_Interested__c}" required="true">
+                    <apex:actionSupport event="onchange" reRender="Re" action="{!sumOfAmount}"/>
+                </apex:inputField>
+            </apex:pageblockSection>
+            <apex:pageblockSection Title="Product Information" columns="1" rendered="{!seeker}">
+                <apex:inputField value="{!Opportunity__c.Products_Interested_B2C__c}" required="true">
+                    <apex:actionSupport event="onchange" reRender="Re" action="{!sumOfAmount}"/>
+                </apex:inputField>
+            </apex:pageblockSection>
+            <apex:pageblockSection Title="Revenue Information" rendered="{!AND(NOT(Opportunity__c.Products_Interested__c == null),(NOT(Opportunity__c.OpportunityType__c == 'Free Trail')))}">   
+                <apex:inputField value="{!Opportunity__c.Branding_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Branding")}" required="true" />
+                <apex:inputField value="{!Opportunity__c.Custom_Job_Template_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Custom Job Template")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Custom_Sponsorship_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Custom Sponsorship")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Custom_International_Sponsorship_Reven__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Custom International Sponsorship")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Job_Postings_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Job Postings")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Logo_on_Job_Postings_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Logo on Job Postings")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Monster_Assessments_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Monster Assessments")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Monster_Mirror_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Monster Mirror")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Monster_Widget_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Monster Widget")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Premium_Resume_Search_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Premium Resume Search")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Promotional_Offer_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Promotional Offer")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Short_Message_Service_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Short Message Service")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.QHire_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"QHire")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Social_Job_Ads_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Social Job Ads")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.TalentBin_by_Monster_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"TalentBin by Monster")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Target_Mailers_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Target Mailers")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Walk_in_Pro_Event_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Walk-in-Pro Event")}" required="true"/>
+                <apex:inputField value="{!Opportunity__c.Quinton_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested__c,"Quinton")}" required="true"/>
+                </apex:pageblockSection>
+                <apex:pageblockSection Title="Revenue Information" rendered="{!NOT(Opportunity__c.Products_Interested_B2C__c== null)}">   
+                <!-- Seeker Products -->
+                    <apex:inputField value="{!Opportunity__c.Resume_Highlighter_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested_B2C__c,"Resume Highlighter")}" required="true"/>
+                    <apex:inputField value="{!Opportunity__c.Express_Resume_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested_B2C__c,"Express Resume")}" required="true"/>
+                    <apex:inputField value="{!Opportunity__c.Cover_Letter_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested_B2C__c,"Cover Letter")}" required="true"/>
+                    <apex:inputField value="{!Opportunity__c.Career_Booster_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested_B2C__c,"Career Booster")}" required="true"/>
+                    <apex:inputField value="{!Opportunity__c.Smart_CV_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested_B2C__c,"Smart CV")}" required="true"/>
+                    <apex:inputField value="{!Opportunity__c.Right_Resume_Revenue__c}" rendered="{!CONTAINS(Opportunity__c.Products_Interested_B2C__c,"Right Resume")}" required="true"/>
+                <!-- Seeker Products -->
+            </apex:pageblockSection>
+            <div align="center">
+                <apex:commandButton action="{!Save}" value="Save"/>
+            </div>
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

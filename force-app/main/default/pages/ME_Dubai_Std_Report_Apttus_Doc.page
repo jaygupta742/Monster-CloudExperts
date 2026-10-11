@@ -1,0 +1,591 @@
+<apex:page standardController="apttus_proposal_proposal__c" extensions="ME_Dubai_Std_Report_Apttus" lightningStylesheets="true" contentType="application/msword#{!apttus_proposal_proposal__c.Account__r.name}-{!apttus_proposal_proposal__c.name}-ME_Dubai_Std_Report_Apttus-{!today()}.doc" cache="false" applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <apex:form >
+        <c:PDFHeaderFooter type="header" > 
+            <apex:image value="{!imgsrc}" height="70" width="200"/>
+            <apex:stylesheet value="{!$Resource.Repeat}"/> 
+        </c:PDFHeaderFooter>
+        <c:PDFHeaderFooter type="footer" > 
+            <p style="text-align:right">{!apttus_proposal_proposal__c.name}</p>
+            <apex:stylesheet value="{!$Resource.Repeat}"/> 
+        </c:PDFHeaderFooter> 
+        <p style="font-size:15px;text-align:center;font-family:verdana">
+            <b>SERVICE AGREEMENT</b>
+        </p>
+
+        <table style="border:1px solid black">
+        <tr><td>
+            <p style="font-size:14px;text-align:justify;font-family:verdana">
+            This SERVICE AGREEMENT &#40;&#34;Agreement&#34;&#41;
+             is made and entered into between Monster.com (India) Private Limited,a company incorporated [in India] under the [Indian] Companies Act, 1956, 
+             having its Dubai Branch office at Office No. 2203, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360(hereinafter referred to as 
+             'Monster', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns) AND  
+             <b>{!apttus_proposal_proposal__c.Account__r.Name}</b> (hereinafter referred to as 'Purchaser', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and permitted assigns).
+            </p>
+             <p style="font-size:14px;text-align:justify;font-family:verdana">
+              (Monster and Purchaser are hereinafter collectively referred to as "the Parties" and severally as &#34;Party&#34;)
+            </p>
+            <p style="font-size:14px;text-align:justify;font-family:verdana">  
+              Monster is inter alia in the business of online /web solutions, online public networking, web designing and online access services to the customers through its website www.monstergulf.com. Purchaseris desirous of   taking the Service  from Monster for the purpose of gaining access to Monster Service on the terms agreed and contained herein;  
+            </p>
+         </td></tr>
+        </table><br/>
+
+        <div style="margin-left: 1em;">
+            <p style="font-size:13px;"><b>1.DETAILS OF  PARTIES</b></p></div>
+            <table style="   align:left; height:-100px;width:100%; margin-top:-8px; border:1 px; margin-left:-8px; margin-right:16px" cellpadding="2px"   width="775px" cellspacing="0px" border-collapse= "collapse">
+                <tr><td style="border-bottom: 1px solid black;border-top: 1px solid black;border-right: 1px solid black; width:50%"><b>Date:<apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate}"/></apex:outputText></b> <br/>
+                <b>Quote #:</b>{!apttus_proposal_proposal__c.name} <br/>
+                <b>Quote Valid From:</b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate}"/></apex:outputText> 
+                <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate+30}"/></apex:outputText><br/>
+                </td>
+                <td style="text-align:left;border-bottom: 1px solid black;border-top: 1px solid black;width:50% ">
+                <b>Sales Rep:</b> {!ss.Firstname} {!ss.Lastname}<br/>
+                <b>Email:</b> {!ss.Email}<br/>
+                <b>Tel:</b> {!ss.phone}<br/>
+                <b>Location:</b> {!ss.Location1__c }<br/>
+                </td>
+                </tr>
+                <tr>
+                <td style="text-align:left;border-bottom: 1px solid black; border-right: 1px solid black;width:50%"><b>Purchaser:<br/>
+
+                Name : {!apttus_proposal_proposal__c.PostingContact__r.name }<br/>
+                Account : {!apttus_proposal_proposal__c.PostingContact__r.Account.name}<br/>
+                Mobile : {!apttus_proposal_proposal__c.PostingContact__r.Phone}<br/>
+                Email : {!apttus_proposal_proposal__c.PostingContact__r.email}<br/>
+
+                </b>
+                Address: {!apttus_proposal_proposal__c.Posting_Street__c}<br/>
+                 {!apttus_proposal_proposal__c.Posting_City__c}<br/>
+                 {!apttus_proposal_proposal__c.Posting_State__c}<br/>
+                 {!apttus_proposal_proposal__c.Posting_Country__c}<br/>
+                 {!apttus_proposal_proposal__c.Posting_Pin_Code__c}<br/>
+                <!--
+                <b>
+                GSTID : {!apttus_proposal_proposal__c.PostingContact__r.Account.GST_ID__c}
+                </b>-->
+                </td>
+
+<td style="text-align:left;border-bottom: 1px solid black;width:50%;margin-top:-15px "><b>Bill To:</b><br/>
+<b>Name :{!apttus_proposal_proposal__c.BillContact__r.name }<br/>
+Account : {!apttus_proposal_proposal__c.PostingContact__r.Account.name }<br/>
+Mobile : {!apttus_proposal_proposal__c.BillContact__r.Phone}<br/>
+Email : {!apttus_proposal_proposal__c.BillContact__r.Email}<br/>
+</b>
+Address: {!apttus_proposal_proposal__c.Billing_Street__c}<br/>
+  {!apttus_proposal_proposal__c.Billing_City__c}<br/>
+   {!apttus_proposal_proposal__c.Billing_State__c}<br/>
+   {!apttus_proposal_proposal__c.Billing_Country__c}<br/>
+  {!apttus_proposal_proposal__c.Billing_Pin_code__c}<br/><br/>
+</td>
+
+
+</tr>
+<tr>
+<td colspan="2" style="border-bottom: 1px solid black; text-align:center; font-size:14px; "><i>
+If any of the above information is incorrect please advise in the correction section on the next page.</i>
+</td>
+</tr>
+
+</table>
+<br/>
+<p style="font-size:13px;font-family:Verdana;">2.<b>SERVICE DETAILS:</b> The details of service that Purchaser has agreed to take from Monster are as follows (&#34;Service&#34;): </p>
+<br/>
+
+<table style="border:1px solid black;border-collapse: collapse;width:100%;">
+
+<tr style="border:1px solid black;background-color:#800080; ">
+<td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Items<br/>#</td>
+<td style="border:1px solid black; width:25%;text-align:center;color:white;font-size:13px">Product</td>
+<td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Qty</td>
+<td style="border:1px solid black;width:25%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+<td style="border:1px solid black;width:25%;text-align:center;color:white;font-size:13px">Product End Date</td>
+
+</tr>
+
+<apex:variable value="{!1}" var="rowNum"/>
+<apex:repeat value="{!pl}" var="p">
+
+             
+<tr >
+<td style="border:1px solid black;">
+            
+            <apex:outputLabel value="{!rowNum }"/>  
+        <apex:variable var="rowNum" value="{!rowNum + 1}"/>   
+          
+            <br/></td>
+<td style="border:1px solid black;">{!p.Product__r.name}<br/>{!p.APTS_Attribute_Display__c}</td>
+<td style="border:1px solid black;">{!p.Quantity__c}</td>
+<td style="border:1px solid black;">{!DAY(p.Product_Start_Date__c)}/{!MONTH(p.Product_Start_Date__c)}/{!YEAR(p.Product_Start_Date__c)}</td>
+<td style="border:1px solid black;">{!DAY(p.Product_End_Date__c)}/{!MONTH(p.Product_End_Date__c)}/{!YEAR(p.Product_End_Date__c)}</td>
+</tr>
+<tr><td style="border:1px solid black;" colspan="5"><b>Comments: {!p.Comment__c}</b></td></tr>
+</apex:repeat>
+</table><br/>
+<div align="right">
+<table width="100%" ><!----style="page-break-before:always"---->
+<tr >
+<td align="right">Value of Services:</td><td>{!apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode }  
+
+ <apex:outputText value="{0, number, ###,###,###,###.00}">
+  <apex:param value="{!apttus_proposal_proposal__c.Gross_Total__c}" />
+  </apex:outputText></td>
+
+</tr>
+<tr >
+<td align="right">Add:{!apttus_proposal_proposal__c.Tax_Name__c}@{!apttus_proposal_proposal__c.Tax_Percentage__c}:</td><td >
+{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode } 
+<apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!apttus_proposal_proposal__c.Tax_Amount__c}"/> 
+</apex:outputText>
+</td>
+
+</tr>
+<tr >
+<td align="right">Total Invoice value (including Tax):</td><td>{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode }
+   <apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!apttus_proposal_proposal__c.Net_Total__c}"/>
+</apex:outputText>
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+<p style="font-size:14px">3.<b>PAYMENT TERMS &amp; INVOICE DELIVERY
+</b></p>
+<p style="font-size:14px;font-family:Verdana;">Purchaser has agreed to pay the total invoice value to Monster as per the following payment term (s):
+</p><br/>
+<apex:outputPanel rendered="{!if(ap.size>0,true,false)}">
+<table width="100%" style="border-collapse:collapse;">
+<th>
+
+<tr>
+
+<td style="border:1px solid black; text-align:center; font-size:13px;width:33%">Payment Due Date </td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:33%">Payment Amount </td>
+
+</tr></th>
+<apex:repeat value="{!ap}" var="py">
+
+
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:25%"> {!DAY(py.Due_Date__c)}/{!MONTH(py.Due_Date__c)}/{!YEAR(py.Due_Date__c)}
+
+</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:40%">{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode }  
+
+<apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!py.Payment_Amount__c}"/>
+</apex:outputText>
+
+</td>
+
+</tr>
+</apex:repeat>
+
+</table><br/>
+</apex:outputPanel>
+
+<p style="font-size:14px;text-align:justify;font-family:verdana">(All payments to be made in favour of “Monster.com India Private Limited”to 10580518442001, Abu Dhabi Commercial Bank, 2F Bay Gate Tower, Dubai, UAE, SWIFT Code ADCBAEAA, IBAN: AE400030010580518442001
+
+
+
+</p><br/>
+ <p style="font-size:15px;text-align:justify;font-family:verdana;margin-right:50px;">
+Please circle your preferred method of invoice delivery:<b style="margin-left:65px">EMAIL</b> <b style="margin-left:200px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;POST</b><!-- POST--> <br/>
+</p>
+<p style="font-size:15px;text-align:justify;font-family:verdana;margin-top:-10px;margin-right:20px">
+Please note that if you choose email, the invoice will be delivered to:   {!apttus_proposal_proposal__c.Primary_Contact__r.Email}<br/>
+</p>
+<p style="font-size:15px;text-align:justify;font-family:verdana;margin-top:-10px;margin-right:20px">
+<b>If you opt for email and you wish to receive the invoice to a different email address please provide it in the &#34;change&#34; section further down this Agreement.</b>
+ 
+ 
+</p>
+
+
+
+<p style="font-size:13px;font-family:Verdana;">4.<b>DISPUTE RESOLUTION:</b></p>
+<p style="text-align:justify">Every dispute, difference or question which may at any time arise between the Parties, touching or arising out of or in respect of this Agreement shall, at the first instance, be settled by the Parties by mutual negotiations and if the such dispute, difference or question cannot be resolved as in this manner, then such disputes, difference or question shall be referred to the Courts at Dubai, UAE. This Agreement shall be governed by the laws of Dubai, UAE.</p>
+<div >
+
+<p style="font-size:13px;font-family:Verdana;">5.<b>COMPLETE AGREEMENT:</b></p>
+<p style="text-align:justify">The Agreement including these terms constitutes the entire understanding between Monster &amp; Purchaser with respect to the subject matter hereof and supersedes any previous oral or written arrangements or understandings relating thereto and governs use of the Monster website or websites in which services are subscribed under the Agreement and may not be amended, terminated or waived unless agreed in writing by the Parties, and shall not be assigned, in whole or in part, directly or indirectly, by Purchaser except by operation law and only comes into existence when signed by the Parties.  Any terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid terms of the Agreement. The Agreement shall not be amended without the affirmative written consent of Parties in writing.</p>
+<p style="text-align:justify">IN WITNESS WHEREOF the Parties hereto have caused this Agreement to be executed by their authorized representatives on the day, date and year mentioned hereinabove.</p>
+<hr> </hr>
+<p style="font-size:12px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR</b>
+</p>
+<br/>
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;font-color:black;">
+
+<sup>1</sup>Authorised Signature: _________________________________________________
+<div align="right" style="margin:-15px 0px 0px 0px  "><sup>2</sup>Signing Date: ___/___/____<br/></div>
+    <div align="right" style = "margin:0px 0px 0px 0px">
+
+  (dd/mm/yyyy) </div>
+  
+     <div align="right" style = "margin:10px 0px 0px 0px ">Total Price:     <b>{! apttus_proposal_proposal__c.PriceList__r.CurrencyIsoCode }  
+     <apex:outputText value="{0, number, ###,###,###,###.00}">
+<apex:param value="{!apttus_proposal_proposal__c.Net_Total__c}"/>
+</apex:outputText>
+     
+</b>      </div>
+ 
+   
+
+   <div align="left" style = "margin:    -20px 0px 0px 0px "><sup>3</sup>Printed Name: {!apttus_proposal_proposal__c.PostingContact__r.name } <br/></div><br/>
+
+   
+
+   <sup>4</sup>Job Title:  {! apttus_proposal_proposal__c.PostingContact__r.Title }   <br/><br/>
+
+   
+
+   <sup>5</sup>Company Name (as registered, if applicable): {!apttus_proposal_proposal__c.Account__r.name }<br/><br/>  
+
+   
+
+   <sup>6</sup> Registration Number (if applicable): {! apttus_proposal_proposal__c.Account__r.RegistrationNumber__c }  <br/>  <br/> 
+
+  
+
+    <sup>8</sup>Agreement Start Date:<apex:outputText value="{0,date,dd/M/yy}"> <apex:param value="{!apttus_proposal_proposal__c.CreatedDate}" /> </apex:outputText>
+                        
+  <div align="Right" style="margin: -14px 0px 0px 0px" > The &#39;Agreement Start Date&#39; will be the date nominated by the Purchaser. </div><br/>
+
+      <div align="Right" style="margin: -14px 0px 0px 0px" > If left blank, the earliest product start date will be the nominated date.</div>  <br/>                              
+
+<sup>11</sup>Purchase Order Number:______________________ <div align ="right" style= "Margin:-12px 0px 0px 0px ">If this field is left blank the invoice will be issued without a PO number.</div>
+
+    
+    </div>
+<b><hr color="black"> </hr></b>
+<br/>
+<b><hr color="black"> </hr></b>
+<p align="center" style="font-size:13px;margin-top:-8px"><b>Reserved for Monster</b> </p>
+
+<table style="margin-left:40px"  width="100%" >
+<tr>
+<td align="left" width="50%">
+Name:<!----{!ss.Name}--->{!apttus_proposal_proposal__c.Account__r.PrimarySalesManager__c} 
+</td>
+<td width="50%">
+Designation:<!---  {!ss.Title}--->{!apttus_proposal_proposal__c.Sales_Manager_Designation__c}
+</td>
+</tr>
+
+<tr>
+<td>
+Regd. Office :Office No. 2203, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360
+</td>
+</tr>
+
+<tr>
+<td>
+City :  Dubai
+</td>
+
+<td>
+Country : UAE
+</td>
+
+</tr>
+<tr >
+<td  >
+Email : <!----- {!apttus_proposal_proposal__c.Account__r.Owner.Email} --->  {!apttus_proposal_proposal__c.Sales_Manager_Email__c}
+</td>
+
+
+<td  >
+Phone:  <!---- {!apttus_proposal_proposal__c.Account__r.Owner.Phone}---->{!apttus_proposal_proposal__c.Sales_Manager_Phone__c}
+</td>
+
+</tr>
+
+<tr >
+<td  >
+Signature:
+</td>
+
+
+<td  >
+Signing Date:___/___/_____
+<div style="margin:0px 0px 0px 90px;">(DD/MM/YYYY)</div>
+</td>
+</tr>
+</table>
+<b><hr color="black"> </hr></b>
+<p style="font-size:14px;font-family:Verdana;text-align:justify">
+<b>
+<!-----Sales Rep :  {!ss.Name}  Email : {!ss.Email} Phone:{!ss.Phone} ---->
+Sales Manager :{!apttus_proposal_proposal__c.Account__r.PrimarySalesManager__c} &nbsp;&nbsp;&nbsp;&nbsp;     Email :{!apttus_proposal_proposal__c.Sales_Manager_Email__c}   &nbsp;&nbsp;&nbsp;&nbsp;  Phone:{!apttus_proposal_proposal__c.Sales_Manager_Phone__c}
+</b>
+</p>
+<p style="font-size:13px;font-family:Verdana;text-align:justify">
+
+By signing this Agreement Purchaser is agreeing to purchase the products and services listed above subject to the attached standard Services “TERMS AND CONDITIONS” and 
+product terms, a copy of which was sent to the Purchaser with this Agreement. Please return this Agreement to the Monster sales representative. 
+
+</p>
+<br/>
+
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px;page-break-inside:avoid;"> For and on behalf of within named </div><br/>
+ 
+
+ <!--------------------------------------------------------------------------------extra info--------------------------------------------------------------->
+ 
+ 
+ <div style=" font-size:13px;margin-left:30px;margin-right:30px;margin:-25px 0px 0px 400px;">    For and on behalf of within named  </div><br/>
+
+<b>Monster.com (India) Private Limited.</b><br/> 
+<div style="margin:-15px 0px 0px 400px;"> <b> {!apttus_proposal_proposal__c.PostingContact__r.Account.name} </b> </div><br/><br/>
+
+<!--- <div style="margin:-16px 0px 0px 600px;"> PIN Code: 189702</div>  ---->
+
+ 
+Authorised Signatory
+
+
+<div style="margin:-18px 0px 0px 400px;"> Authorised Signatory </div> <br/> 
+<div style="margin:-16px 0px 0px 400px;">Name &amp;Designation:  </div> <br/>
+
+<div style="margin:-16px 0px 0px 400px;">Company Seal:  </div> <br/> 
+
+<br/>
+<br/><br/>
+
+
+<!--<p style="page-break-after: always;">&nbsp;</p>
+
+
+<p style="font-size:11px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>
+PLEASE FILL THIS IN ONLY IF ONE OR MORE OF THE &#39;PURCHASER&#39; COMPANY, ADDRESS, OR CONTACT DETAILS HAVE CHANGED</b>
+</p>
+<table width="100%">
+<tr>
+<td style="font-size:13px">Name:</td>
+</tr>
+
+<tr>
+<td style="font-size:13px">Company Registration No.: </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 1:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 2: </td>
+</tr>
+<tr >
+<td style="font-size:13px;align:left">City: </td><td style="font-size:13px" ><center>Country:</center></td><td style="font-size:13px;align:right;">PO Box No.:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Purchaser Contact Name:  </td> <td style="font-size:13px"><center>Telephone No.:</center></td> 
+</tr>
+<tr>
+<td style="font-size:13px">Purchaser Email:   </td>
+
+</tr>
+</table>
+<b><hr color="black"> </hr></b>
+<b><hr color="black"> </hr></b>
+<p style="font-size:11px;font-family:Verdana;text-align:center;margin-top:-8px">
+<b>
+PLEASE FILL THIS IN IF &#39;BILL TO&#39; COMPANY, ADDRESS, OR CONTACT DETAILS HAVE CHANGED</b>
+</p>
+
+
+<table width="100%">
+<tr>
+<td style="font-size:13px">Company Name:</td>
+</tr>
+
+
+<tr>
+<td style="font-size:13px">Address Line 1:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Address Line 2: </td>
+</tr>
+<tr >
+<td style="font-size:13px;align:left">City: </td><td style="font-size:13px" ><center>Country:------</center></td><td style="font-size:13px;align:right;">PO Box No.:  </td>
+</tr>
+<tr>
+<td style="font-size:13px">Bill To Contact Name:  </td> <td style="font-size:13px"><center>Telephone No.:</center></td> 
+</tr>
+<tr>
+<td style="font-size:13px"> Bill To Contact Email:   </td><td style="font-size:13px"> </td> <td style="font-size:13px">Fax No.:</td>
+
+</tr>
+</table>
+
+
+<b><hr color="black"> </hr></b>
+<b><hr color="black"> </hr></b>
+<p align="center" style="font-size:13px;margin-top:-8px"><b>Reserved for Monster</b> </p>
+
+<table style="margin-left:40px"  width="100%" >
+<tr>
+<td align="left" width="50%">
+Name:{!ss.Name}
+</td>
+<td width="50%">
+Designation:{!ss.Title}
+</td>
+</tr>
+
+<tr>
+<td>
+Regd. Office :Millenium Tower, Office 801, Khalid Al
+Attar Hotel And Office Tower, Plot No. 335-349, Sheik
+Zayed Road,
+</td>
+</tr>
+
+<tr>
+<td>
+City :Dubai
+</td>
+
+<td>
+Country : UAE
+</td>
+
+</tr>
+<tr >
+<td  >
+Email :{!apttus_proposal_proposal__c.Account__r.Owner.Email} 
+</td>
+
+
+<td  >
+Phone:{!apttus_proposal_proposal__c.Account__r.Owner.Phone}
+</td>
+
+</tr>
+
+<tr >
+<td  >
+Signature:
+</td>
+
+
+<td  >
+Signing Date:___/___/_____
+<div style="margin:0px 0px 0px 90px;">(DD/MM/YYYY)</div>
+</td>
+</tr>
+</table>
+<b><hr color="black"> </hr></b>
+
+<p style="font-size:14px;font-family:Verdana;text-align:justify">
+<b>
+Sales Rep :  {!ss.Name}  Email : {!ss.Email} Phone:{!ss.Phone} </b>
+</p>
+<p style="font-size:13px;font-family:Verdana;text-align:justify">
+
+By signing this Addendum Agreement Purchaser agrees to purchase the products and services listed above. 
+ Except amended herein Parties hereby agree that all the other terms and conditions of the Agreement shall 
+ remain in full force and effect. This Addendum Agreement shall be effective as of the date of execution by the Parties hereto. 
+
+</p>-->
+
+</div>
+<div style="font-size:14px;font-family:Verdana;text-align:justify;margin-top:-8px">
+              <p align="center"><b>TERMS AND CONDITIONS</b></p>
+              
+              
+   <p>Monster will raise the invoice upon execution of the Agreement by Purchaser and shall be payable on or before the payment due date. 
+   In the event any payment is not made within the due date, Monster may, without prejudice to its other rights under this Agreement or in law, 
+   have the right to deactivate Purchaser's account and / or terminate this Agreement without any liability to Purchaser. Purchaser is bound to make the full payment for the 
+   Term, irrespective of whether they use the service(s) or not.  Purchaser shall also be liable to pay the legal costs which may be incurred by Monster towards recovery of any
+    of the dues from Purchaser.</p>
+    
+    
+              
+       <p>Training on Monster products and services, wherever applicable, will be scheduled by Monster's Relationship Contact. The said training will take approximately 1-2 hours. On receipt of Username and Password from Monster’s Relationship Contact, Purchaser can use the subscribed Service onto the concerned website of Monster to which the Service relates. Purchaser’s profile / Banners / Logo title if subscribed by Purchaser, would be uploaded on the concerned website of Monster and/ or applicable Monster sites   wherever applicable, within a reasonable period from the day Monster receives all the relevant information/approval from the Purchaser for the design / Banners / Logo title of any profile required to be uploaded, as may be applicable. Release schedule to be worked out after confirming the availability of inventory on the Monster website. Monster may either through its officials or authorized representative formally visit the Purchaser's office premises for implementation.
+       </p>
+       
+            
+        <p>
+        If Purchaser (including any of Purchaser employees) are found to share passwords with any third party, Monster may revoke all login &amp; passwords deactivate Purchaser’s account and no refund will be given.  Purchaser agrees not to resell any of the products and services subscribed by Purchaser from Monster including but not limited to any job postings or any database access to any third party.  Amounts paid for Services are non-refundable. The services may be deactivated if the payment is not made by the due date(s) mentioned in the agreement / invoice. Purchaser shall also be liable to pay to Monster  for dishonor of each payment instruments, which includes either by cheque, ECS electronic payment, or any other method of payment instructions by Purchaser. Purchaser represents and warrants that all Purchaser use of data shall be lawful and shall comply with all the applicable local, national and international laws, including but not limited to the laws relating to contracts, labour and employment laws, data privacy laws, cyber laws and law relating to intellectual property. Purchaser further represents and warrants that all and any materials or information provided to Monster to be uploaded to any Site or otherwise used by Monster in the provision of the Service, complies with all applicable laws, and its use in connection with the Service does not infringe the rights of any third parties.
+
+        
+        </p>
+        
+             
+         <p>
+         Navigation/Search Engines: Notwithstanding anything to the contrary contained herein, Purchaser shall not use or attempt to use, and shall cause each party under your control not to use or attempt to use, any engine, software, tool, agent or other device or mechanism (including without limitation browsers, spiders, avatars or intelligent agents) to navigate or search any Site other than the search engine and search agents available on such Site and other than generally acceptable third party web browsers. 
+
+
+         
+         </p> 
+         
+             
+          <p>
+          The contents of each Site (including without limitation all job postings and all resumes), and all elements, which are a part of the foregoing, and all intellectual and other proprietary rights therein, are the property of Monster. Neither Purchaser nor any of its employees shall do anything, which would in any way damage, injure or impair the validity of Monster’s rights in the contents of each Site. Notwithstanding the above, any job postings placed on any Site by Purchaser, and all elements which are a part of the foregoing, and all intellectual and other proprietary rights therein, are and shall at all times remain Purchaser’s property. To the extent permitted by law Monster makes no warranties, express or implied, including the warranties of merchantability, fitness for a particular purpose, or non-infringement with respect to its services or any site, or results of use thereof and all warranties and conditions, express or implied are hereby excluded.
+
+
+          
+          </p> 
+          
+              
+           <p>
+           Purchaser consents to Monster for replicating its job postings into its Monster Account in Monster website Purchaser agrees and accepts that job posting to be replicated on Monster website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Purchaser agrees to use only its names, logos or trademarks. 
+</p>
+
+           
+              
+            <p>
+            Monster may not replicate any job posting of Purchaser and/or delete the job postings from Monster site which  does not comply with applicable local, national and international laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property. 
+
+
+
+            </p>     
+             <p>
+             The advertisements for competitors of Monster or post jobs or other content that contains links to any site competitive with Monster shall not  qualify for replication. Any such replicated postings will be immediately deleted / removed without notice. Monster reserves the right to remove any job posting or content from any Monster Site, which in the reasonable exercise of Monster’s discretion, does not comply with the above Terms, or if any content is posted that Monster believes is not in accordance with the Terms of Use &amp; Privacy of Monster website and/or applicable laws and regulations. Monster shall not be liable for any conflict, in the event of replication of the Job Postings of Purchaser’s competitor on Monster site or vice versa or any disagreement between them in this connection. The replication of Purchaser’s job posting will be only during the continuance of Service Agreement with Monster.  Purchaser does not have any right to get its job Postings replicated on Monster site. Monster shall in its sole discretion may decide whether to assist the Purchaser in replication or not without giving any reason thereof.
+</p>
+
+              <p>
+             Neither party will be liable to the other party (nor to any person claiming rights derived from the other party's rights) for incidental, indirect, consequential, special, punitive or exemplary damages of any kind   including lost revenues or profits, loss of business or loss of data   arising out of this agreement (including without limitation as a result of any breach of any warranty, or other term of this agreement), regardless of whether the party liable or allegedly liable was advised, had other reason to know, or in fact knew of the possibility thereof. Moreover, Monster's maximum liability arising out of or relating to the transaction, which is the subject matter of the agreement, regardless of the cause of action (whether in contract, tort, breach of warranty or otherwise), will not exceed the amount paid by Purchaser to Monster.
+              </p>
+               <p>
+               In case of conflict of any term(s) of this Agreement with any subsequent Purchase Order / written document executed post the signing of this
+                Agreement in relation to this Agreement, the term(s) of this Agreement shall prevail. 
+              </p>
+              <p>If Purchaser breaches any provision of the Agreement, Monster may (i) discontinue the service and/or (ii) pursue all other available remedies to enforce the Agreement and obtain payment due thereof. Purchaser agrees to comply with all the applicable laws, including but not limited to the laws relating to contracts, labor and employment laws, data privacy laws, cyber laws and law relating to intellectual property. Purchaser agrees to indemnify Monster, its officers, directors, employees and agents, from and against any claims, actions or demands, including without limitation reasonable legal and accounting fees, arising or resulting from Purchaser’s breach of the Agreement  terms including but not limited to claims of breach of third party intellectual property rights. Purchaser agrees to hold harmless and indemnify Monster for any and all claims that arise from or allege unlawful collection or use of data provided to the Purchaser by Monster. </p>
+              <p>
+              Notwithstanding anything to the contrary contained herein, Purchaser’s use of the Site is subject to the Terms of Use 
+              (i.e. http://www.monstergulf.com/terms_of_use.html) &amp; Privacy Policy (i.e. http://www.monstergulf.com/privacy.html) available from such
+               Site's homepage and/or Terms of Use &amp; Privacy of the applicable Monster site in which the Service subscribed.  By Your execution hereof 
+               Purchaser hereby agrees to abide by such Terms of Use &amp; Privacy Policy, as they may be amended from time to time. 
+              </p>     
+              <p>
+              Any Extension/ Up-gradation / renewal of the Services of the Purchaser after the date of expiry of the Agreement shall be given effect only after executing a 
+              fresh / renewal Agreement between Monster and Purchaser. Monster will accordingly raise a fresh Invoice for a price as agreed by the Monster and 
+              Purchaser for the aforesaid extension/up-gradation/renewal period.</p>
+               <p>
+               The Agreement including these terms constitutes the entire understanding between Monster &amp; Purchaser with respect to the subject matter hereof and supersedes any previous oral or written arrangements or understandings relating thereto and governs use of the Monster website or websites in which services are subscribed under the Agreement and may not be amended, terminated or waived unless agreed in writing by the Parties, and shall not be assigned, in whole or in part, directly or indirectly, by Purchaser except by operation law and only comes into existence when signed by the Parties.  Any terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid terms of the Agreement. The Agreement shall not be amended without the affirmative written consent of Parties in writing.
+
+
+               </p>   
+               
+                <p>
+               Monster has devised a dedicated nodal email ID i.e. cr@monstergulf.com  for its Purchasers. Purchaser can write to Monster at the said email for any information, support and concerns.
+
+                </p>   
+                 
+                   
+              
+</div>
+
+
+
+
+</apex:form>
+</apex:page>

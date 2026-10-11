@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BeKnown Admin needed</name>
+    <style>none</style>
+    <subject>BeKnown Admin needed</subject>
+    <textOnly>Vielen Dank für Ihre Bestellung des BeKnown-Firmenprofils. Ich habe es soeben für Sie erstellt. Bitte senden Sie mir Ihre E-Mail-Adresse zu, die auf Ihr BeKnown-Nutzerprofil registriert ist, damit ich Sie als Administrator eingeben kann.
+
+Ihr BeKnown-Nutzerprofil:
+
+Vielen Dank im Voraus für Ihre Unterstützung.
+
+INSERT RELEVANTE SIGNATUR</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

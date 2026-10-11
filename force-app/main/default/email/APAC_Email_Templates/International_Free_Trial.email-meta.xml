@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>International Free Trial</name>
+    <style>freeForm</style>
+    <subject>International Free Trial (International Free Trial APAC)</subject>
+    <textOnly>Hi,
+
+
+SEND THIS EMAIL TO MO-IN-ACTIVATION MAILBOX
+
+
+Please activate the Complimentary Services. Also, I am attaching Business Head approval email.
+
+Quote Number - {!Apttus_Proposal__Proposal__c.Name}
+Account Name - {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Account__c}
+Sales Channel - {!Apttus_Proposal__Proposal__c.Sales_Channel__c}
+Account Sales Rep - {!Apttus_Proposal__Proposal__c.OwnerFullName}
+
+
+Customer Contact Information:
+Name - {!Contact.FirstName} {!Contact.LastName}
+Email - {!Contact.AlternateEmail__c}
+Phone - {!Contact.PrimaryPhoneNumber__c}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reasons_Picklist__c</fullName>
+    <label>Credit Status Reasons</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>CreditStatus__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Product Issue</fullName>
+                <default>false</default>
+                <label>Product Issue</label>
+            </value>
+            <value>
+                <fullName>Service Issue</fullName>
+                <default>false</default>
+                <label>Service Issue</label>
+            </value>
+            <value>
+                <fullName>Financial Issue</fullName>
+                <default>false</default>
+                <label>Financial Issue</label>
+            </value>
+            <value>
+                <fullName>Business Decision</fullName>
+                <default>false</default>
+                <label>Business Decision</label>
+            </value>
+            <value>
+                <fullName>Compliance Issue</fullName>
+                <default>false</default>
+                <label>Compliance Issue</label>
+            </value>
+            <value>
+                <fullName>Documents Submission</fullName>
+                <default>false</default>
+                <label>Documents Submission</label>
+            </value>
+            <value>
+                <fullName>False Promise to Pay</fullName>
+                <default>false</default>
+                <label>False Promise to Pay</label>
+            </value>
+            <value>
+                <fullName>Non- Responsive Client</fullName>
+                <default>false</default>
+                <label>Non- Responsive Client</label>
+            </value>
+            <value>
+                <fullName>Non-Contactable Client</fullName>
+                <default>false</default>
+                <label>Non-Contactable Client</label>
+            </value>
+            <value>
+                <fullName>Other Issue</fullName>
+                <default>false</default>
+                <label>Other Issue</label>
+            </value>
+            <value>
+                <fullName>Settlement/Refund</fullName>
+                <default>false</default>
+                <label>Settlement/Refund</label>
+            </value>
+            <value>
+                <fullName>After-Sales Service Issue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>After-Sales Service Issue</label>
+            </value>
+            <value>
+                <fullName>False Promises to Pay</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>False Promises to Pay</label>
+            </value>
+            <value>
+                <fullName>Financial Crisis</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Financial Crisis</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Product Performance</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Product Performance</label>
+            </value>
+            <value>
+                <fullName>Shut Shop</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Shut Shop</label>
+            </value>
+            <value>
+                <fullName>Technical Issue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Technical Issue</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Product Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Service Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Financial Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Business Decision</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <controllingFieldValue>On Hold - Compliance</controllingFieldValue>
+            <valueName>Compliance Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Documents Submission</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>False Promise to Pay</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Non- Responsive Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Non-Contactable Client</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Other Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspend</controllingFieldValue>
+            <controllingFieldValue>On Hold - Finance</controllingFieldValue>
+            <valueName>Settlement/Refund</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

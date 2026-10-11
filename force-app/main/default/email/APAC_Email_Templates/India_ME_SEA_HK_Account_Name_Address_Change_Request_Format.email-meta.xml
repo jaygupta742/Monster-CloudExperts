@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>India/ME/SEA&amp; HK Account Name/Address Change Request Format</name>
+    <style>freeForm</style>
+    <subject>{!Account.SalesChannel__c} Account Name/Address Change Request for Account: {!Account.AccountID__c}</subject>
+    <textOnly>Send Email To:
+
+India Telesales ACQ Users  - MO-IN-SF Request TS ACQ
+India Telesales RET Users  -  MO-IN-SF Request TS RET
+India Fieldsales Users  - MO-IN-SF Request Fieldsales
+Monster College - MO-IN-SF Request
+&amp; IAF Users -
+Gulf Users  - MO-ME-SF Request
+SEA &amp; HK Users - MO-SEA-SF Request
+
+To ensure that your request is processed correctly, please DO NOT
+change the subject line of this message
+please do not delete any fields when filling out template.
+Requests to update Account Name and/or Primary Address will not be processed
+without any one of the required Supporting Documents.*
+
+Current Primary Account Rep:
+Subject: Account Name/Address Change Request for Account:
+
+The following field is required for account name change:
+
+Change Account name to:
+
+One of the following fields is required for an address change:
+
+Change primary address to:
+Add secondary address:
+Remove secondary address:
+
+Comments:
+
+
+
+
+
+
+*Supporting Documents:
+
+
+
+
+
+
+Registered legal entity to
+Registered legal entity Un-Registered entity to
+Un-Registered entity
+Documents to be submitted Name change certificate issued by concerned registration authority (example: MCA India, SEC Philippines, Government of Dubai -Department of Economic Development, etc.) Request letter on new client letter head/email. The contact person requesting for name change shall be same for both old entity and new entity
+Examples Registered legal entities mean clients on MCA in India or clients registered with relevant registration authority like ACRA in Singapore, Department of Economic Development in Dubai etc. Un - Registered legal entities means clients not on MCA, ACRA etc, however registered on some local registration firms
+
+
+
+For all the other categories like (Un-Registered entity to Registered legal entity, vice versa and One category of registered client to other category of registered client) new account should be creating instead of changing the name, hence the promotion request to be submitted instead of name change.
+
+
+
+Address proof may include the following:
+
+
+
+Any document containing client name and new address to be updated. Such documents includes but not limited to CIN screenshot/VAT registration/Service tax registration/Bank Passbook or statement/Electricity Bill/Telephone Bill/ Adhar Card/Lease Deed with Photo, e-stamp and notarized/Webpage Contact address/Address mentioned on the client letter head/Business Card etc.
+
+Note: Any address change in Tally will be effective for invoice purpose, for future invoices only, however address change can happen in customer master.
+
+
+
+Any Exceptions apart from the above needs to be approved by Managing Director.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

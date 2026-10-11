@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>3rd Party</fullName>
+        <default>false</default>
+        <label>3rd Party</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Abandoned Cart</fullName>
+        <default>false</default>
+        <label>Abandoned Cart</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advertisement</fullName>
+        <default>false</default>
+        <label>Advertisement</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Advertising (Media, Newspaper)</fullName>
+        <default>false</default>
+        <label>Advertising (Media, Newspaper)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call Inbound</fullName>
+        <default>false</default>
+        <label>Call Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Campus Hiring</fullName>
+        <default>false</default>
+        <label>Campus Hiring</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Click To Call</fullName>
+        <default>false</default>
+        <label>Click To Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Competitor</fullName>
+        <default>false</default>
+        <label>Competitor</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CR</fullName>
+        <default>false</default>
+        <label>CR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>CS Buying Signal</fullName>
+        <default>false</default>
+        <label>CS Buying Signal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Dun and Bradstreet</fullName>
+        <default>false</default>
+        <label>Dun and Bradstreet</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ECOMM</fullName>
+        <default>false</default>
+        <label>ECOMM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EDM</fullName>
+        <default>false</default>
+        <label>EDM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email Inbound</fullName>
+        <default>false</default>
+        <label>Email Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Employee Referral</fullName>
+        <default>false</default>
+        <label>Employee Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ETC</fullName>
+        <default>false</default>
+        <label>ETC</label>
+    </standardValue>
+    <standardValue>
+        <fullName>EU Sales</fullName>
+        <default>false</default>
+        <label>EU Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Event (Trade Show, PRW)</fullName>
+        <default>false</default>
+        <label>Event (Trade Show, PRW)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>External Referral</fullName>
+        <default>false</default>
+        <label>External Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>GCS</fullName>
+        <default>false</default>
+        <label>GCS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound</fullName>
+        <default>false</default>
+        <label>Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Inbound Sales</fullName>
+        <default>false</default>
+        <label>Inbound Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>INFO</fullName>
+        <default>false</default>
+        <label>INFO</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lead Follow - up</fullName>
+        <default>false</default>
+        <label>Lead Follow - up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Let us call you</fullName>
+        <default>false</default>
+        <label>Let us call you</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Let Us call you Ecomm</fullName>
+        <default>false</default>
+        <label>Let Us call you Ecomm</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lists (DNB, others)</fullName>
+        <default>false</default>
+        <label>Lists (DNB, others)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Marketing Cloud</fullName>
+        <default>false</default>
+        <label>Marketing Cloud</label>
+    </standardValue>
+    <standardValue>
+        <fullName>MO-IN-CollegeSales</fullName>
+        <default>false</default>
+        <label>MO-IN-CollegeSales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Newspaper</fullName>
+        <default>false</default>
+        <label>Newspaper</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Online Campaigns (UNICA)</fullName>
+        <default>false</default>
+        <label>Online Campaigns (UNICA)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Partner</fullName>
+        <default>false</default>
+        <label>Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PayRight-Inbound</fullName>
+        <default>false</default>
+        <label>PayRight-Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Proactive GCS Lead</fullName>
+        <default>false</default>
+        <label>Proactive GCS Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Enquiry</fullName>
+        <default>false</default>
+        <label>Product Enquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Program Follow - up</fullName>
+        <default>false</default>
+        <label>Program Follow - up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospect Lead</fullName>
+        <default>false</default>
+        <label>Prospect Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Prospect List (Purchased, Scored)</fullName>
+        <default>false</default>
+        <label>Prospect List (Purchased, Scored)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Public Relations</fullName>
+        <default>false</default>
+        <label>Public Relations</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Reactive GCS Lead</fullName>
+        <default>false</default>
+        <label>Reactive GCS Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Recruiter Profile</fullName>
+        <default>false</default>
+        <label>Recruiter Profile</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Referral</fullName>
+        <default>false</default>
+        <label>Referral</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rep Generated</fullName>
+        <default>false</default>
+        <label>Rep Generated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>RightNow</fullName>
+        <default>false</default>
+        <label>RightNow</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Rozgar Duniya</fullName>
+        <default>false</default>
+        <label>Rozgar Duniya</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Sales</fullName>
+        <default>false</default>
+        <label>Sales</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Seminar - Internal</fullName>
+        <default>false</default>
+        <label>Seminar - Internal</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Seminar - Partner</fullName>
+        <default>false</default>
+        <label>Seminar - Partner</label>
+    </standardValue>
+    <standardValue>
+        <fullName>SMS</fullName>
+        <default>false</default>
+        <label>SMS</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Job Ads</fullName>
+        <default>false</default>
+        <label>Social Job Ads</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Social Media(Facebook,Twitter,Instagram)</fullName>
+        <default>false</default>
+        <label>Social Media(Facebook,Twitter,Instagram)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Start Up</fullName>
+        <default>false</default>
+        <label>Start Up</label>
+    </standardValue>
+    <standardValue>
+        <fullName>TeleMarketing</fullName>
+        <default>false</default>
+        <label>TeleMarketing</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Tollfree</fullName>
+        <default>false</default>
+        <label>Tollfree</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Trade Show</fullName>
+        <default>false</default>
+        <label>Trade Show</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Voicemail</fullName>
+        <default>false</default>
+        <label>Voicemail</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web</fullName>
+        <default>false</default>
+        <label>Web</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Webinar</fullName>
+        <default>false</default>
+        <label>Webinar</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web to Lead</fullName>
+        <default>false</default>
+        <label>Web to Lead</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Word of mouth</fullName>
+        <default>false</default>
+        <label>Word of mouth</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Lusha</fullName>
+        <default>false</default>
+        <label>Lusha</label>
+    </standardValue>
+    <standardValue>
+        <fullName>LinkedIn Sales Navigator</fullName>
+        <default>false</default>
+        <label>LinkedIn Sales Navigator</label>
+    </standardValue>
+</StandardValueSet>

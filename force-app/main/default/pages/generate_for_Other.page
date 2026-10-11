@@ -1,0 +1,17 @@
+<apex:page controller="generate_for_Other" tabStyle="Account" lightningStylesheets="true" >
+   <apex:form >
+    <apex:pageBlock title="Choose No Of Months" id="out">
+    <center>  
+ 
+
+         
+       <b>Months</b>&nbsp;&nbsp;&nbsp;
+            <apex:selectList value="{!selectedCountry1}" multiselect="false" size="1">
+                <apex:selectOptions value="{!countriesOptions}"/>
+            </apex:selectList><br/><br/><br/>
+             <apex:commandButton value="Add To Cart" action="{!Addtocart}"/>
+          </center>  
+        
+    </apex:pageblock>
+  </apex:form>
+</apex:page>

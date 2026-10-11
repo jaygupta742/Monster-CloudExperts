@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>S-430130</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>APAC_Monster_Logo_letterhead</letterhead>
+    <name>Quote Send Back Reason Template - APAC</name>
+    <style>formalLetter</style>
+    <subject>Sales Force Quote # {!Apttus_Proposal__Proposal__c.Name} is Rejected</subject>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

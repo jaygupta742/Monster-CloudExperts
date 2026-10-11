@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Send_to_Order</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send to Order</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>/*
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+//alert(&apos;hai&apos;);
+var a=&apos;{!apttus_proposal_proposal__c.Id}&apos;;
+//alert(&apos;see&apos;+a);
+
+var ord = sforce.apex.execute(&quot;Send_to_Order&quot;,&quot;myMethod&quot;,{ids:a});
+alert(&quot;Quote Send To Order Sucessfully &quot;);
+//location.reload();
+window.open(&quot;/&quot; + ord);
+
+*/
+
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+var con = sforce.connection.query( &quot;SELECT id,name FROM OrderC__c WHERE QuoteProposal__c = &apos;{!apttus_proposal_proposal__c.Id}&apos;&quot;); 
+
+var records = con.getArray(&quot;records&quot;); 
+var cCount = records.length;
+
+if(&apos;{!$Profile.Id}&apos; != &apos;00e7F000000uSSh&apos; || &apos;{!$Profile.Id}&apos; != &apos;00e0o000001QKyF&apos;){
+if(cCount == 0 ){
+
+//alert(&apos;hai&apos;);
+var a=&apos;{!apttus_proposal_proposal__c.Id}&apos;;
+//alert(&apos;see&apos;+a);
+
+
+
+var ord = sforce.apex.execute(&quot;Send_to_Order&quot;,&quot;myMethod&quot;,{ids:a});
+alert(&quot;Quote Send To Order Sucessfully &quot;);
+//location.reload();
+window.open(&quot;/&quot; + ord);
+
+
+}else
+{
+alert(&apos;You cannot create more than one order&apos;);
+location.reload();
+}
+}else if(&apos;{!$Profile.Id}&apos; == &apos;00e7F000000uSSh&apos; || &apos;{!$Profile.Id}&apos; == &apos;00e0o000001QKyF&apos;){
+alert(&apos;ORDER will be created by &quot;FINANCE TEAM&quot;&apos;);
+
+}</url>
+</WebLink>

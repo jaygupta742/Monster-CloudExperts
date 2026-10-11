@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Geetanjali</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>all the quotes of Quote Type equals to Ecomm- rep or ecom share to Geetanjali Upadhay</description>
+        <label>Geetanjali</label>
+        <sharedTo>
+            <group>Geetanjali</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>APTS_Quote_Type__c</field>
+            <operation>equals</operation>
+            <value>Ecom-Rep,Ecom</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>false</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>Collections</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>saleem team to rizwan team</description>
+        <label>Collections</label>
+        <sharedTo>
+            <group>Collection_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Sales_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quote_Access_for_Raj</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Quote Access for Raj</label>
+        <sharedTo>
+            <group>Service_CR_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Sales_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Quote_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Only read level permission Suhas team will get</description>
+        <label>Quote Sharing</label>
+        <sharedTo>
+            <group>Finance_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Sales_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Raj_To_Suhas</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Raj To Suhas</label>
+        <sharedTo>
+            <group>Finance_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Service_CR_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Raj_To_saleem</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Raj To saleem</label>
+        <sharedTo>
+            <group>Sales_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Service_CR_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Raj_to_Rizwan</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Raj to Rizwan</label>
+        <sharedTo>
+            <group>Collection_Team</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Service_CR_Team</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+    <sharingOwnerRules>
+        <fullName>Share_Admin_Quotes_With_All_User</fullName>
+        <accessLevel>Read</accessLevel>
+        <label>Share Admin Quotes With All User</label>
+        <sharedTo>
+            <group>All_Users</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Admin</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

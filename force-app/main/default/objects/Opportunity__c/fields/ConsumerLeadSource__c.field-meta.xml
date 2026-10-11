@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ConsumerLeadSource__c</fullName>
+    <description>Lead Source field for Consumer Opptys (APAC)</description>
+    <label>Consumer Lead Source</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>India Site</fullName>
+                <default>false</default>
+                <label>India Site</label>
+            </value>
+            <value>
+                <fullName>Gulf Site</fullName>
+                <default>false</default>
+                <label>Gulf Site</label>
+            </value>
+            <value>
+                <fullName>SG Site</fullName>
+                <default>false</default>
+                <label>SG Site</label>
+            </value>
+            <value>
+                <fullName>MY Site</fullName>
+                <default>false</default>
+                <label>MY Site</label>
+            </value>
+            <value>
+                <fullName>Career Page</fullName>
+                <default>false</default>
+                <label>Career Page</label>
+            </value>
+            <value>
+                <fullName>Ecom Unsucc</fullName>
+                <default>false</default>
+                <label>Ecom Unsucc</label>
+            </value>
+            <value>
+                <fullName>Inbound-Call</fullName>
+                <default>false</default>
+                <label>Inbound-Call</label>
+            </value>
+            <value>
+                <fullName>Inbound-Email</fullName>
+                <default>false</default>
+                <label>Inbound-Email</label>
+            </value>
+            <value>
+                <fullName>Referral</fullName>
+                <default>false</default>
+                <label>Referral</label>
+            </value>
+            <value>
+                <fullName>Rep Generated</fullName>
+                <default>false</default>
+                <label>Rep Generated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

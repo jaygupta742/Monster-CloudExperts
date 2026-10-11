@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Candidate_Search_Number_of_View__c</fullName>
+    <label>Candidate Search Number of View</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1,000</fullName>
+                <default>false</default>
+                <label>1,000</label>
+            </value>
+            <value>
+                <fullName>1,500</fullName>
+                <default>false</default>
+                <label>1,500</label>
+            </value>
+            <value>
+                <fullName>5,000</fullName>
+                <default>false</default>
+                <label>5,000</label>
+            </value>
+            <value>
+                <fullName>10,000</fullName>
+                <default>false</default>
+                <label>10,000</label>
+            </value>
+            <value>
+                <fullName>20,000</fullName>
+                <default>false</default>
+                <label>20,000</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

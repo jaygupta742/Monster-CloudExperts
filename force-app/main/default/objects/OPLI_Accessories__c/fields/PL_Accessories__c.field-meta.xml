@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PL_Accessories__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>PL &amp; Accessories</label>
+    <referenceTo>PL_Accessories__c</referenceTo>
+    <relationshipName>OPLI_Accessories</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>GCS_Opportunities</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>GCS Opportunities</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+
+
+
+var a1=&apos;{!Account.Id}&apos;; 
+
+/*var addr = sforce.connection.query(&quot;SELECT id,name FROM Address1__c WHERE Account__c =&apos;{!Account.Id}&apos; LIMIT 1&quot;); 
+var addr1 = addr.getArray(&apos;records&apos;); */
+
+var xcod = sforce.connection.query(&quot;SELECT id,name,Xcode__r.id FROM Xcode_Account__c WHERE Account__c=&apos;{!Account.Id}&apos; AND Is_Primary__c = True LIMIT 1&quot;); 
+var xcod1 = xcod.getArray(&apos;records&apos;); 
+
+var con = sforce.connection.query(&quot;SELECT id,name FROM Contact WHERE Accountid =&apos;{!Account.Id}&apos; AND PrimarySalesContact__c = True LIMIT 1&quot;); 
+var con1 = con.getArray(&apos;records&apos;);	
+
+var u= sforce.connection.query(&quot;SELECT id,name,Price_List__c FROM USER WHERE id=&apos;{!$User.X18DigitUserId__c}&apos;&quot;); 
+var u1 = u.getArray(&apos;records&apos;); 
+
+var u2 = u1[0].Price_List__c; 
+
+var pp =sforce.connection.query(&quot;SELECT id,name FROM Product_PriceList__c WHERE name =&apos;u2&apos; LIMIT 1&quot;); 
+var pp1 = pp.getArray(&apos;records&apos;); 
+
+/*if(addr1[0] == null) 
+{ 
+alert(&apos;Address Not Found&apos;); 
+} 
+else */
+if(xcod1[0] == null) 
+{ 
+alert(&apos;Please Make Sure The Xcode Account you have added is Primary and then try again&apos;); 
+} 
+else if(con1[0] == null) 
+{ 
+alert(&apos;Please Make Sure The Contact You have added is Primary and then try again&apos;); 
+} 
+else if(u2 == null) 
+{ 
+alert(u1); 
+alert(u2); 
+alert(pp1); 
+alert(pp1[0]); 
+alert(&apos;User has Either more than One Price List or does not have any&apos;); 
+} 
+else 
+{ 
+var opp = sforce.apex.execute(&quot;GCS_Opportunity&quot;,&quot;Methodpa&quot;,{ids:a1}); 
+alert(&quot;Account Send To Opportunity Sucessfully &quot;); 
+// location.reload(); 
+window.open(&quot;/&quot; + opp); 
+}</url>
+</WebLink>

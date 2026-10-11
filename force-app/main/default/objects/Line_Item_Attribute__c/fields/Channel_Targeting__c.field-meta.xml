@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel_Targeting__c</fullName>
+    <label>Channel Targeting</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Benefits</fullName>
+                <default>false</default>
+                <label>Benefits</label>
+            </value>
+            <value>
+                <fullName>Career Center</fullName>
+                <default>false</default>
+                <label>Career Center</label>
+            </value>
+            <value>
+                <fullName>DA/Eng/Sec/Gov Career Center</fullName>
+                <default>false</default>
+                <label>DA/Eng/Sec/Gov Career Center</label>
+            </value>
+            <value>
+                <fullName>Deals &amp; Discounts</fullName>
+                <default>false</default>
+                <label>Deals &amp; Discounts</label>
+            </value>
+            <value>
+                <fullName>Defense &amp; Aero Career Center</fullName>
+                <default>false</default>
+                <label>Defense &amp; Aero Career Center</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Engineering Center</fullName>
+                <default>false</default>
+                <label>Engineering Center</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Finance &amp; Benefits</fullName>
+                <default>false</default>
+                <label>Finance &amp; Benefits</label>
+            </value>
+            <value>
+                <fullName>Fitness</fullName>
+                <default>false</default>
+                <label>Fitness</label>
+            </value>
+            <value>
+                <fullName>Gov. &amp; Law Enforcement Center</fullName>
+                <default>false</default>
+                <label>Gov. &amp; Law Enforcement Center</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Nursing Career Center</fullName>
+                <default>false</default>
+                <label>Health &amp; Nursing Career Center</label>
+            </value>
+            <value>
+                <fullName>Homepage</fullName>
+                <default>false</default>
+                <label>Homepage</label>
+            </value>
+            <value>
+                <fullName>Job Search Section</fullName>
+                <default>false</default>
+                <label>Job Search Section</label>
+            </value>
+            <value>
+                <fullName>Maintenance Career Center</fullName>
+                <default>false</default>
+                <label>Maintenance Career Center</label>
+            </value>
+            <value>
+                <fullName>News</fullName>
+                <default>false</default>
+                <label>News</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Off Duty</fullName>
+                <default>false</default>
+                <label>Off Duty</label>
+            </value>
+            <value>
+                <fullName>Off Duty (or Entertainment)</fullName>
+                <default>false</default>
+                <label>Off Duty (or Entertainment)</label>
+            </value>
+            <value>
+                <fullName>Procurement</fullName>
+                <default>false</default>
+                <label>Procurement</label>
+            </value>
+            <value>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+                <label>Recruiting</label>
+            </value>
+            <value>
+                <fullName>Retail Career Center</fullName>
+                <default>false</default>
+                <label>Retail Career Center</label>
+            </value>
+            <value>
+                <fullName>Run of Mobile</fullName>
+                <default>false</default>
+                <label>Run of Mobile</label>
+            </value>
+            <value>
+                <fullName>Run of Network</fullName>
+                <default>false</default>
+                <label>Run of Network</label>
+            </value>
+            <value>
+                <fullName>Security Clearance Center</fullName>
+                <default>false</default>
+                <label>Security Clearance Center</label>
+            </value>
+            <value>
+                <fullName>Spouse Channel</fullName>
+                <default>false</default>
+                <label>Spouse Channel</label>
+            </value>
+            <value>
+                <fullName>Spouse Network</fullName>
+                <default>false</default>
+                <label>Spouse Network</label>
+            </value>
+            <value>
+                <fullName>Teaching &amp; Education</fullName>
+                <default>false</default>
+                <label>Teaching &amp; Education</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

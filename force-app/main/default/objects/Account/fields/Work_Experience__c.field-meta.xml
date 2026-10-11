@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Work_Experience__c</fullName>
+    <label>Work Experience</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-3 years exp</fullName>
+                <default>false</default>
+                <label>0-3 years exp</label>
+            </value>
+            <value>
+                <fullName>3-6 years exp</fullName>
+                <default>false</default>
+                <label>3-6 years exp</label>
+            </value>
+            <value>
+                <fullName>6+ years exp</fullName>
+                <default>false</default>
+                <label>6+ years exp</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

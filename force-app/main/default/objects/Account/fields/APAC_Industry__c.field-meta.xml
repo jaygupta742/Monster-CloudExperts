@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APAC_Industry__c</fullName>
+    <label>APAC Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agriculture</fullName>
+                <default>false</default>
+                <label>Agriculture</label>
+            </value>
+            <value>
+                <fullName>Apparel</fullName>
+                <default>false</default>
+                <label>Apparel</label>
+            </value>
+            <value>
+                <fullName>Automobile &amp; Ancillaries</fullName>
+                <default>false</default>
+                <label>Automobile &amp; Ancillaries</label>
+            </value>
+            <value>
+                <fullName>Aviation &amp; Aerospace</fullName>
+                <default>false</default>
+                <label>Aviation &amp; Aerospace</label>
+            </value>
+            <value>
+                <fullName>BFSI</fullName>
+                <default>false</default>
+                <label>BFSI</label>
+            </value>
+            <value>
+                <fullName>BPO/KPO</fullName>
+                <default>false</default>
+                <label>BPO/KPO</label>
+            </value>
+            <value>
+                <fullName>Business Services</fullName>
+                <default>false</default>
+                <label>Business Services</label>
+            </value>
+            <value>
+                <fullName>Chemicals, Metals, Mining</fullName>
+                <default>false</default>
+                <label>Chemicals, Metals, Mining</label>
+            </value>
+            <value>
+                <fullName>Construction &amp; Engineering</fullName>
+                <default>false</default>
+                <label>Construction &amp; Engineering</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Electronic &amp; Communication equipment</fullName>
+                <default>false</default>
+                <label>Electronic &amp; Communication equipment</label>
+            </value>
+            <value>
+                <fullName>Energy, Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Energy, Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Environment</fullName>
+                <default>false</default>
+                <label>Environment</label>
+            </value>
+            <value>
+                <fullName>Export and Import</fullName>
+                <default>false</default>
+                <label>Export and Import</label>
+            </value>
+            <value>
+                <fullName>FMCG &amp; Consumer Durables</fullName>
+                <default>false</default>
+                <label>FMCG &amp; Consumer Durables</label>
+            </value>
+            <value>
+                <fullName>Food &amp; Beverage</fullName>
+                <default>false</default>
+                <label>Food &amp; Beverage</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Healthcare &amp; Pharma</fullName>
+                <default>false</default>
+                <label>Healthcare &amp; Pharma</label>
+            </value>
+            <value>
+                <fullName>Hotels, Travel &amp; Tourism</fullName>
+                <default>false</default>
+                <label>Hotels, Travel &amp; Tourism</label>
+            </value>
+            <value>
+                <fullName>HR, Staffing &amp; Placement Agencies</fullName>
+                <default>false</default>
+                <label>HR, Staffing &amp; Placement Agencies</label>
+            </value>
+            <value>
+                <fullName>Immigration Services</fullName>
+                <default>false</default>
+                <label>Immigration Services</label>
+            </value>
+            <value>
+                <fullName>Internet</fullName>
+                <default>false</default>
+                <label>Internet</label>
+            </value>
+            <value>
+                <fullName>IT/Computer Hardware &amp; Peripherals</fullName>
+                <default>false</default>
+                <label>IT/Computer Hardware &amp; Peripherals</label>
+            </value>
+            <value>
+                <fullName>IT/Computer Software</fullName>
+                <default>false</default>
+                <label>IT/Computer Software</label>
+            </value>
+            <value>
+                <fullName>IT Services</fullName>
+                <default>false</default>
+                <label>IT Services</label>
+            </value>
+            <value>
+                <fullName>Machinery</fullName>
+                <default>false</default>
+                <label>Machinery</label>
+            </value>
+            <value>
+                <fullName>Manufacturing</fullName>
+                <default>false</default>
+                <label>Manufacturing</label>
+            </value>
+            <value>
+                <fullName>Marine Services</fullName>
+                <default>false</default>
+                <label>Marine Services</label>
+            </value>
+            <value>
+                <fullName>Media &amp; Entertainment</fullName>
+                <default>false</default>
+                <label>Media &amp; Entertainment</label>
+            </value>
+            <value>
+                <fullName>Not For Profit</fullName>
+                <default>false</default>
+                <label>Not For Profit</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Real Estate</fullName>
+                <default>false</default>
+                <label>Real Estate</label>
+            </value>
+            <value>
+                <fullName>Recreation</fullName>
+                <default>false</default>
+                <label>Recreation</label>
+            </value>
+            <value>
+                <fullName>Retail</fullName>
+                <default>false</default>
+                <label>Retail</label>
+            </value>
+            <value>
+                <fullName>Semi Conductor</fullName>
+                <default>false</default>
+                <label>Semi Conductor</label>
+            </value>
+            <value>
+                <fullName>Telecommunications</fullName>
+                <default>false</default>
+                <label>Telecommunications</label>
+            </value>
+            <value>
+                <fullName>Trading</fullName>
+                <default>false</default>
+                <label>Trading</label>
+            </value>
+            <value>
+                <fullName>Transportation &amp; Shipping</fullName>
+                <default>false</default>
+                <label>Transportation &amp; Shipping</label>
+            </value>
+            <value>
+                <fullName>Utilities</fullName>
+                <default>false</default>
+                <label>Utilities</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

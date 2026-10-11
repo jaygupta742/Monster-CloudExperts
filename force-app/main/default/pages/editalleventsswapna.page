@@ -1,0 +1,55 @@
+<apex:page controller="editalleventsswapnaapex" lightningStylesheets="true" sidebar="false" tabStyle="Account">
+ 
+ 
+ <apex:form >
+ <apex:sectionHeader title="Edit Events" subtitle="Edit Events"/>
+ 
+ <apex:pageBlock title="Events Related To This Account">
+ 
+ <apex:pageblockButtons location="Top">
+            <apex:commandButton value="Update" action="{!Save}"/>
+            <apex:commandButton value="Cancel" action="{!Cancel}"/>
+        </apex:pageblockButtons>
+        
+   
+ 
+ 
+ <apex:pageBlockSection columns="2" collapsible="false" title="Edit Selected Event">
+ <apex:repeat value="{!events}" var="qw">
+ 
+   <apex:inputField value="{!qw.subject}"/>
+                           
+                    
+                              <apex:inputField value="{!qw.Ownerid}" label="Assigned to"/>
+                                <apex:inputField value="{!qw.whatid}" label="Account"/>  
+ 
+                                 <apex:inputField value="{!qw.whoid}" label="Name"/>
+                                  <apex:inputField value="{!qw.StartDateTime}" label="Start Date Time" />
+                               <apex:inputField value="{!qw.EndDateTime}" label="End Date Time" />
+                        
+                          <apex:inputField value="{!qw.IsAllDayEvent}" label="All day Event"/>
+                                <apex:inputField value="{!qw.IsPrivate}" label="Private"/>
+                                  <apex:inputField value="{!qw.EventStatus__c}" label="Event Status"/>
+                                    <apex:inputField value="{!qw.Remarks__c}" label="Remarks"/>
+                                      <apex:inputField value="{!qw.ActivityGroup__c}" label="Activity Group"/>
+                                    <apex:inputField value="{!qw.CurrencyIsoCode}" label="Activity Currency"/>
+                                        <apex:inputField value="{!qw.N_ExternalID__c}" label="N External ID"/>
+
+                                            <apex:inputField value="{!qw.Assigned_To_C__c}" label="Assigned To(C)"/>
+                                            <apex:outputField value="{!qw.Task_Created_by_s_Manager__c}" label="Task Created by's Manager"/>
+                                            <apex:inputField value="{!qw.Feedback__c}" label="Feedback"/>
+                                            <apex:inputField value="{!qw.location}" label="Location"/>
+                                            <apex:inputField value="{!qw.ShowAs}" label="Show Time As"/>
+                                              <apex:inputField value="{!qw.Description__c}" label="Description"/>
+                                                <apex:inputField value="{!qw.Products__c}" label="Products"/>
+                                                  <apex:inputField value="{!qw.ShowAs}" label="Show Time As"/>
+                            <apex:outputField value="{!qw.CreatedById}" label="Created by"/>
+                              <apex:outputField value="{!qw.lastmodifiedbyId}" label="Created by"/>
+ 
+</apex:repeat>
+ 
+ </apex:pageBlockSection>
+
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

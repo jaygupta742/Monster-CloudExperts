@@ -1,0 +1,31 @@
+<apex:page controller="reconfigure" lightningStylesheets="true">
+  <apex:form >
+    <apex:pageMessages id="rr"></apex:pageMessages>
+    <!--<apex:inputText value="{!Amount}"/><apex:commandButton value="Gencod" action="{!Add_to_cart}"/>
+   {!pbkey}-->
+  
+        <apex:pageBlock id="re" title="Configure Product" > 
+      <apex:outputText rendered="{!cshow}">{!currencytype}:{!amount}</apex:outputText>
+      <!--Debug : --------Product Attribute : {!paid}----- Quantity : {!quantity}---------->
+        <apex:pageblockButtons location="top">
+         <apex:commandButton action="{!cancelling}" value="Cancel"/>
+    <apex:commandButton action="{!Add_to_cart}" value="Update Cart" disabled="{!(!cshow)}"/>
+        <apex:commandButton action="{!Get_Price}" value="Get Price" disabled="{!price}" reRender="re,rr"/>
+        <apex:commandButton action="{!Configure_Product_Attribute}" value="Reset"  reRender="re,rr"/>
+        
+        </apex:pageblockButtons>
+             <center>
+            Quantity : <apex:inputText value="{!quantity}" label="Quantity"/>
+             <Table>
+                    <apex:repeat value="{!law}" var="v">
+                        <tr><td>{!v.sol}</td>
+                        <td><apex:selectList value="{!v.socv}" size="1" disabled="{!v.show}">
+                            <apex:selectOptions value="{!v.sov}"/>
+                           <apex:actionSupport action="{!configchange}" event="onchange"/>
+                        </apex:selectList></td></tr>
+                    </apex:repeat>
+                </Table></center>
+                
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BeKnown erstellung</name>
+    <style>none</style>
+    <subject>BeKnown erstellung</subject>
+    <textOnly>Sehr geehrte/r Anrede,
+ 
+Wir freuen uns, dass Sie sich für BeKnown entschieden haben.
+ 
+Ihr Profil auf BeKnown präsentiert Ihr Unternehmen als Arbeitgeber und dehnt die Reichweite Ihrer Stellenangebote auf das größte soziale Netzwerk Facebook aus.
+ 
+Über Ihr Unternehmensprofil auf BeKnown lernen Jobsuchende Ihre Firma als Arbeitgeber kennen und erhalten Zugriff auf Ihre Stellenanzeigen auf Monster. Zudem sehen Jobsuchende über das Unternehmensprofil, welche BeKnown-Nutzer Mitarbeiter in Ihrem Unternehmen sind und können mit Ihnen in Kontakt treten. Ihre Mitarbeiter werden auf diese Weise zu Unternehmensbotschaftern
+ 
+Gerne übernehmen wir für Sie die Erstellung Ihres Profils. Senden Sie uns hierzu bitte das angehängte Formular vollständig ausgefüllt zurück.
+ 
+Nachdem wir Ihr BeKnown Profil erstellt haben, erhalten Sie eine vom System generierte Email. Nachfolgend werden wir Ihnen eine zusätzliche Bestätigungsemail mit weiterführenden Informationen zur Verwaltung Ihres Profils zusenden.
+ 
+Haben Sie noch Fragen? Zögern Sie bitte nicht, uns zu kontaktieren.
+ 
+Vielen Dank und mit freundlichen Grüßen,
+
+INSERT RELEVANTE SIGNATUR</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

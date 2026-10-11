@@ -1,0 +1,784 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SalesRegion__c</fullName>
+    <label>Sales Region</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Acq</fullName>
+                <default>false</default>
+                <label>Acq</label>
+            </value>
+            <value>
+                <fullName>Admin</fullName>
+                <default>false</default>
+                <label>Admin</label>
+            </value>
+            <value>
+                <fullName>Ahmedabad</fullName>
+                <default>false</default>
+                <label>Ahmedabad</label>
+            </value>
+            <value>
+                <fullName>Atlantic</fullName>
+                <default>false</default>
+                <label>Atlantic</label>
+            </value>
+            <value>
+                <fullName>Bangalore</fullName>
+                <default>false</default>
+                <label>Bangalore</label>
+            </value>
+            <value>
+                <fullName>Baroda</fullName>
+                <default>false</default>
+                <label>Baroda</label>
+            </value>
+            <value>
+                <fullName>Big Corporate</fullName>
+                <default>false</default>
+                <label>Big Corporate</label>
+            </value>
+            <value>
+                <fullName>CNHI</fullName>
+                <default>false</default>
+                <label>CNHI</label>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>Central</fullName>
+                <default>false</default>
+                <label>Central</label>
+            </value>
+            <value>
+                <fullName>Central 1</fullName>
+                <default>false</default>
+                <label>Central 1</label>
+            </value>
+            <value>
+                <fullName>Central 2</fullName>
+                <default>false</default>
+                <label>Central 2</label>
+            </value>
+            <value>
+                <fullName>Central 2 Plains</fullName>
+                <default>false</default>
+                <label>Central 2 Plains</label>
+            </value>
+            <value>
+                <fullName>Central 3</fullName>
+                <default>false</default>
+                <label>Central 3</label>
+            </value>
+            <value>
+                <fullName>Central 4</fullName>
+                <default>false</default>
+                <label>Central 4</label>
+            </value>
+            <value>
+                <fullName>Central 4 Houston</fullName>
+                <default>false</default>
+                <label>Central 4 Houston</label>
+            </value>
+            <value>
+                <fullName>Central 5</fullName>
+                <default>false</default>
+                <label>Central 5</label>
+            </value>
+            <value>
+                <fullName>Central 5 Dallas FW</fullName>
+                <default>false</default>
+                <label>Central 5 Dallas FW</label>
+            </value>
+            <value>
+                <fullName>Central 6</fullName>
+                <default>false</default>
+                <label>Central 6</label>
+            </value>
+            <value>
+                <fullName>Central 7</fullName>
+                <default>false</default>
+                <label>Central 7</label>
+            </value>
+            <value>
+                <fullName>Central 8</fullName>
+                <default>false</default>
+                <label>Central 8</label>
+            </value>
+            <value>
+                <fullName>Central 9</fullName>
+                <default>false</default>
+                <label>Central 9</label>
+            </value>
+            <value>
+                <fullName>Chandigarh</fullName>
+                <default>false</default>
+                <label>Chandigarh</label>
+            </value>
+            <value>
+                <fullName>Chennai</fullName>
+                <default>false</default>
+                <label>Chennai</label>
+            </value>
+            <value>
+                <fullName>Coimbatore</fullName>
+                <default>false</default>
+                <label>Coimbatore</label>
+            </value>
+            <value>
+                <fullName>Corporate Expansion</fullName>
+                <default>false</default>
+                <label>Corporate Expansion</label>
+            </value>
+            <value>
+                <fullName>Dallas Hybrid</fullName>
+                <default>false</default>
+                <label>Dallas Hybrid</label>
+            </value>
+            <value>
+                <fullName>Delhi</fullName>
+                <default>false</default>
+                <label>Delhi</label>
+            </value>
+            <value>
+                <fullName>East</fullName>
+                <default>false</default>
+                <label>East</label>
+            </value>
+            <value>
+                <fullName>East - Great Lakes</fullName>
+                <default>false</default>
+                <label>East - Great Lakes</label>
+            </value>
+            <value>
+                <fullName>East - New York</fullName>
+                <default>false</default>
+                <label>East - New York</label>
+            </value>
+            <value>
+                <fullName>East - Northeast</fullName>
+                <default>false</default>
+                <label>East - Northeast</label>
+            </value>
+            <value>
+                <fullName>East - Southeast</fullName>
+                <default>false</default>
+                <label>East - Southeast</label>
+            </value>
+            <value>
+                <fullName>East 1</fullName>
+                <default>false</default>
+                <label>East 1</label>
+            </value>
+            <value>
+                <fullName>East 10</fullName>
+                <default>false</default>
+                <label>East 10</label>
+            </value>
+            <value>
+                <fullName>East 11</fullName>
+                <default>false</default>
+                <label>East 11</label>
+            </value>
+            <value>
+                <fullName>East 2</fullName>
+                <default>false</default>
+                <label>East 2</label>
+            </value>
+            <value>
+                <fullName>East 3</fullName>
+                <default>false</default>
+                <label>East 3</label>
+            </value>
+            <value>
+                <fullName>East 4</fullName>
+                <default>false</default>
+                <label>East 4</label>
+            </value>
+            <value>
+                <fullName>East 5</fullName>
+                <default>false</default>
+                <label>East 5</label>
+            </value>
+            <value>
+                <fullName>East 6</fullName>
+                <default>false</default>
+                <label>East 6</label>
+            </value>
+            <value>
+                <fullName>East 7</fullName>
+                <default>false</default>
+                <label>East 7</label>
+            </value>
+            <value>
+                <fullName>East 7 Ohio</fullName>
+                <default>false</default>
+                <label>East 7 Ohio</label>
+            </value>
+            <value>
+                <fullName>East 8</fullName>
+                <default>false</default>
+                <label>East 8</label>
+            </value>
+            <value>
+                <fullName>East 9</fullName>
+                <default>false</default>
+                <label>East 9</label>
+            </value>
+            <value>
+                <fullName>East Dallas Hybrid</fullName>
+                <default>false</default>
+                <label>East Dallas Hybrid</label>
+            </value>
+            <value>
+                <fullName>Ecomm</fullName>
+                <default>false</default>
+                <label>Ecomm</label>
+            </value>
+            <value>
+                <fullName>Empire</fullName>
+                <default>false</default>
+                <label>Empire</label>
+            </value>
+            <value>
+                <fullName>Faridabad</fullName>
+                <default>false</default>
+                <label>Faridabad</label>
+            </value>
+            <value>
+                <fullName>Florence</fullName>
+                <default>false</default>
+                <label>Florence</label>
+            </value>
+            <value>
+                <fullName>Freedom</fullName>
+                <default>false</default>
+                <label>Freedom</label>
+            </value>
+            <value>
+                <fullName>GLNC</fullName>
+                <default>false</default>
+                <label>GLNC</label>
+            </value>
+            <value>
+                <fullName>Great Lakes</fullName>
+                <default>false</default>
+                <label>Great Lakes</label>
+            </value>
+            <value>
+                <fullName>Gulf</fullName>
+                <default>false</default>
+                <label>Gulf</label>
+            </value>
+            <value>
+                <fullName>Gurgaon</fullName>
+                <default>false</default>
+                <label>Gurgaon</label>
+            </value>
+            <value>
+                <fullName>Healthcare US</fullName>
+                <default>false</default>
+                <label>Healthcare US</label>
+            </value>
+            <value>
+                <fullName>Healthcare1</fullName>
+                <default>false</default>
+                <label>Healthcare1</label>
+            </value>
+            <value>
+                <fullName>Healthcare2</fullName>
+                <default>false</default>
+                <label>Healthcare2</label>
+            </value>
+            <value>
+                <fullName>Hyderabad</fullName>
+                <default>false</default>
+                <label>Hyderabad</label>
+            </value>
+            <value>
+                <fullName>IAF</fullName>
+                <default>false</default>
+                <label>IAF</label>
+            </value>
+            <value>
+                <fullName>IN-ME-SEA</fullName>
+                <default>false</default>
+                <label>IN-ME-SEA</label>
+            </value>
+            <value>
+                <fullName>India</fullName>
+                <default>false</default>
+                <label>India</label>
+            </value>
+            <value>
+                <fullName>India 1</fullName>
+                <default>false</default>
+                <label>India 1</label>
+            </value>
+            <value>
+                <fullName>Indy</fullName>
+                <default>false</default>
+                <label>Indy</label>
+            </value>
+            <value>
+                <fullName>Jaipur</fullName>
+                <default>false</default>
+                <label>Jaipur</label>
+            </value>
+            <value>
+                <fullName>Kochi</fullName>
+                <default>false</default>
+                <label>Kochi</label>
+            </value>
+            <value>
+                <fullName>Kolkata</fullName>
+                <default>false</default>
+                <label>Kolkata</label>
+            </value>
+            <value>
+                <fullName>Large Staffing</fullName>
+                <default>false</default>
+                <label>Large Staffing</label>
+            </value>
+            <value>
+                <fullName>MGS</fullName>
+                <default>false</default>
+                <label>MGS</label>
+            </value>
+            <value>
+                <fullName>Malaysia</fullName>
+                <default>false</default>
+                <label>Malaysia</label>
+            </value>
+            <value>
+                <fullName>Market Atlanta</fullName>
+                <default>false</default>
+                <label>Market Atlanta</label>
+            </value>
+            <value>
+                <fullName>Market Boston</fullName>
+                <default>false</default>
+                <label>Market Boston</label>
+            </value>
+            <value>
+                <fullName>Market Chicago</fullName>
+                <default>false</default>
+                <label>Market Chicago</label>
+            </value>
+            <value>
+                <fullName>Market Cincy</fullName>
+                <default>false</default>
+                <label>Market Cincy</label>
+            </value>
+            <value>
+                <fullName>Market Dallas</fullName>
+                <default>false</default>
+                <label>Market Dallas</label>
+            </value>
+            <value>
+                <fullName>Market Indy</fullName>
+                <default>false</default>
+                <label>Market Indy</label>
+            </value>
+            <value>
+                <fullName>Market Phoenix</fullName>
+                <default>false</default>
+                <label>Market Phoenix</label>
+            </value>
+            <value>
+                <fullName>Market SanDiego</fullName>
+                <default>false</default>
+                <label>Market SanDiego</label>
+            </value>
+            <value>
+                <fullName>Maynard</fullName>
+                <default>false</default>
+                <label>Maynard</label>
+            </value>
+            <value>
+                <fullName>Midwest</fullName>
+                <default>false</default>
+                <label>Midwest</label>
+            </value>
+            <value>
+                <fullName>Milwaukee</fullName>
+                <default>false</default>
+                <label>Milwaukee</label>
+            </value>
+            <value>
+                <fullName>Mumbai</fullName>
+                <default>false</default>
+                <label>Mumbai</label>
+            </value>
+            <value>
+                <fullName>Mumbai-Pune</fullName>
+                <default>false</default>
+                <label>Mumbai-Pune</label>
+            </value>
+            <value>
+                <fullName>NY Times</fullName>
+                <default>false</default>
+                <label>NY Times</label>
+            </value>
+            <value>
+                <fullName>Navi Mumbai</fullName>
+                <default>false</default>
+                <label>Navi Mumbai</label>
+            </value>
+            <value>
+                <fullName>New England</fullName>
+                <default>false</default>
+                <label>New England</label>
+            </value>
+            <value>
+                <fullName>Newspapers</fullName>
+                <default>false</default>
+                <label>Newspapers</label>
+            </value>
+            <value>
+                <fullName>North California</fullName>
+                <default>false</default>
+                <label>North California</label>
+            </value>
+            <value>
+                <fullName>North Central</fullName>
+                <default>false</default>
+                <label>North Central</label>
+            </value>
+            <value>
+                <fullName>Northeast</fullName>
+                <default>false</default>
+                <label>Northeast</label>
+            </value>
+            <value>
+                <fullName>Northern</fullName>
+                <default>false</default>
+                <label>Northern</label>
+            </value>
+            <value>
+                <fullName>Northern BE</fullName>
+                <default>false</default>
+                <label>Northern BE</label>
+            </value>
+            <value>
+                <fullName>Northern LU</fullName>
+                <default>false</default>
+                <label>Northern LU</label>
+            </value>
+            <value>
+                <fullName>Northern NL</fullName>
+                <default>false</default>
+                <label>Northern NL</label>
+            </value>
+            <value>
+                <fullName>Northern SE</fullName>
+                <default>false</default>
+                <label>Northern SE</label>
+            </value>
+            <value>
+                <fullName>Northwest</fullName>
+                <default>false</default>
+                <label>Northwest</label>
+            </value>
+            <value>
+                <fullName>PA-Delhi</fullName>
+                <default>false</default>
+                <label>PA-Delhi</label>
+            </value>
+            <value>
+                <fullName>PSE</fullName>
+                <default>false</default>
+                <label>PSE</label>
+            </value>
+            <value>
+                <fullName>Pacific</fullName>
+                <default>false</default>
+                <label>Pacific</label>
+            </value>
+            <value>
+                <fullName>Philippines</fullName>
+                <default>false</default>
+                <label>Philippines</label>
+            </value>
+            <value>
+                <fullName>Pune</fullName>
+                <default>false</default>
+                <label>Pune</label>
+            </value>
+            <value>
+                <fullName>RNW</fullName>
+                <default>false</default>
+                <label>RNW</label>
+            </value>
+            <value>
+                <fullName>Rest of India</fullName>
+                <default>false</default>
+                <label>Rest of India</label>
+            </value>
+            <value>
+                <fullName>SMB Metro Expansion</fullName>
+                <default>false</default>
+                <label>SMB Metro Expansion</label>
+            </value>
+            <value>
+                <fullName>SMB Non-Metro Expansion</fullName>
+                <default>false</default>
+                <label>SMB Non-Metro Expansion</label>
+            </value>
+            <value>
+                <fullName>Sales</fullName>
+                <default>false</default>
+                <label>Sales</label>
+            </value>
+            <value>
+                <fullName>Singapore</fullName>
+                <default>false</default>
+                <label>Singapore</label>
+            </value>
+            <value>
+                <fullName>South</fullName>
+                <default>false</default>
+                <label>South</label>
+            </value>
+            <value>
+                <fullName>South California</fullName>
+                <default>false</default>
+                <label>South California</label>
+            </value>
+            <value>
+                <fullName>South East Asia</fullName>
+                <default>false</default>
+                <label>South East Asia</label>
+            </value>
+            <value>
+                <fullName>Southeast</fullName>
+                <default>false</default>
+                <label>Southeast</label>
+            </value>
+            <value>
+                <fullName>Southern</fullName>
+                <default>false</default>
+                <label>Southern</label>
+            </value>
+            <value>
+                <fullName>Southern ES</fullName>
+                <default>false</default>
+                <label>Southern ES</label>
+            </value>
+            <value>
+                <fullName>Southern FR</fullName>
+                <default>false</default>
+                <label>Southern FR</label>
+            </value>
+            <value>
+                <fullName>Southern IT</fullName>
+                <default>false</default>
+                <label>Southern IT</label>
+            </value>
+            <value>
+                <fullName>Southwest</fullName>
+                <default>false</default>
+                <label>Southwest</label>
+            </value>
+            <value>
+                <fullName>Staffing - Inbound</fullName>
+                <default>false</default>
+                <label>Staffing - Inbound</label>
+            </value>
+            <value>
+                <fullName>Staffing - Outbound</fullName>
+                <default>false</default>
+                <label>Staffing - Outbound</label>
+            </value>
+            <value>
+                <fullName>Staffing 1</fullName>
+                <default>false</default>
+                <label>Staffing 1</label>
+            </value>
+            <value>
+                <fullName>Staffing Expansion</fullName>
+                <default>false</default>
+                <label>Staffing Expansion</label>
+            </value>
+            <value>
+                <fullName>Stand Alone</fullName>
+                <default>false</default>
+                <label>Stand Alone</label>
+            </value>
+            <value>
+                <fullName>T25</fullName>
+                <default>false</default>
+                <label>T25</label>
+            </value>
+            <value>
+                <fullName>Tempe</fullName>
+                <default>false</default>
+                <label>Tempe</label>
+            </value>
+            <value>
+                <fullName>Texas 1 Dallas</fullName>
+                <default>false</default>
+                <label>Texas 1 Dallas</label>
+            </value>
+            <value>
+                <fullName>UK/IE</fullName>
+                <default>false</default>
+                <label>UK/IE</label>
+            </value>
+            <value>
+                <fullName>UK_IE - IE</fullName>
+                <default>false</default>
+                <label>UK_IE - IE</label>
+            </value>
+            <value>
+                <fullName>UK_IE - UK</fullName>
+                <default>false</default>
+                <label>UK_IE - UK</label>
+            </value>
+            <value>
+                <fullName>WNW</fullName>
+                <default>false</default>
+                <label>WNW</label>
+            </value>
+            <value>
+                <fullName>West</fullName>
+                <default>false</default>
+                <label>West</label>
+            </value>
+            <value>
+                <fullName>West - Chicago</fullName>
+                <default>false</default>
+                <label>West - Chicago</label>
+            </value>
+            <value>
+                <fullName>West - Los Angeles</fullName>
+                <default>false</default>
+                <label>West - Los Angeles</label>
+            </value>
+            <value>
+                <fullName>West - San Francisco</fullName>
+                <default>false</default>
+                <label>West - San Francisco</label>
+            </value>
+            <value>
+                <fullName>West - Texas</fullName>
+                <default>false</default>
+                <label>West - Texas</label>
+            </value>
+            <value>
+                <fullName>West 1</fullName>
+                <default>false</default>
+                <label>West 1</label>
+            </value>
+            <value>
+                <fullName>West 1 Chicago</fullName>
+                <default>false</default>
+                <label>West 1 Chicago</label>
+            </value>
+            <value>
+                <fullName>West 10</fullName>
+                <default>false</default>
+                <label>West 10</label>
+            </value>
+            <value>
+                <fullName>West 11</fullName>
+                <default>false</default>
+                <label>West 11</label>
+            </value>
+            <value>
+                <fullName>West 12</fullName>
+                <default>false</default>
+                <label>West 12</label>
+            </value>
+            <value>
+                <fullName>West 2</fullName>
+                <default>false</default>
+                <label>West 2</label>
+            </value>
+            <value>
+                <fullName>West 2 Central Plains</fullName>
+                <default>false</default>
+                <label>West 2 Central Plains</label>
+            </value>
+            <value>
+                <fullName>West 3</fullName>
+                <default>false</default>
+                <label>West 3</label>
+            </value>
+            <value>
+                <fullName>West 3 Phoenix</fullName>
+                <default>false</default>
+                <label>West 3 Phoenix</label>
+            </value>
+            <value>
+                <fullName>West 4</fullName>
+                <default>false</default>
+                <label>West 4</label>
+            </value>
+            <value>
+                <fullName>West 4 North West</fullName>
+                <default>false</default>
+                <label>West 4 North West</label>
+            </value>
+            <value>
+                <fullName>West 5</fullName>
+                <default>false</default>
+                <label>West 5</label>
+            </value>
+            <value>
+                <fullName>West 5 SanFran</fullName>
+                <default>false</default>
+                <label>West 5 SanFran</label>
+            </value>
+            <value>
+                <fullName>West 6</fullName>
+                <default>false</default>
+                <label>West 6</label>
+            </value>
+            <value>
+                <fullName>West 6 Los Angeles</fullName>
+                <default>false</default>
+                <label>West 6 Los Angeles</label>
+            </value>
+            <value>
+                <fullName>West 7</fullName>
+                <default>false</default>
+                <label>West 7</label>
+            </value>
+            <value>
+                <fullName>West 8</fullName>
+                <default>false</default>
+                <label>West 8</label>
+            </value>
+            <value>
+                <fullName>West 9</fullName>
+                <default>false</default>
+                <label>West 9</label>
+            </value>
+            <value>
+                <fullName>ict</fullName>
+                <default>false</default>
+                <label>ict</label>
+            </value>
+            <value>
+                <fullName>mcc</fullName>
+                <default>false</default>
+                <label>mcc</label>
+            </value>
+            <value>
+                <fullName>partner</fullName>
+                <default>false</default>
+                <label>partner</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

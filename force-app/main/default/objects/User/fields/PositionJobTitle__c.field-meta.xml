@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PositionJobTitle__c</fullName>
+    <label>Position Job Title</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Manager</fullName>
+                <default>false</default>
+                <label>Account Manager</label>
+            </value>
+            <value>
+                <fullName>Account Manager - CR</fullName>
+                <default>false</default>
+                <label>Account Manager - CR</label>
+            </value>
+            <value>
+                <fullName>Assistant Manager - Client Relations</fullName>
+                <default>false</default>
+                <label>Assistant Manager - Client Relations</label>
+            </value>
+            <value>
+                <fullName>Assistant Manager - Sales</fullName>
+                <default>false</default>
+                <label>Assistant Manager - Sales</label>
+            </value>
+            <value>
+                <fullName>Associated Manager Litigation</fullName>
+                <default>false</default>
+                <label>Associated Manager Litigation</label>
+            </value>
+            <value>
+                <fullName>Associate Manager - Finance</fullName>
+                <default>false</default>
+                <label>Associate Manager - Finance</label>
+            </value>
+            <value>
+                <fullName>Associate Manager - Sales</fullName>
+                <default>false</default>
+                <label>Associate Manager - Sales</label>
+            </value>
+            <value>
+                <fullName>Associate Manager - Training</fullName>
+                <default>false</default>
+                <label>Associate Manager - Training</label>
+            </value>
+            <value>
+                <fullName>Asst Manager - Client Relation</fullName>
+                <default>false</default>
+                <label>Asst Manager - Client Relation</label>
+            </value>
+            <value>
+                <fullName>AVP - Client Relations</fullName>
+                <default>false</default>
+                <label>AVP - Client Relations</label>
+            </value>
+            <value>
+                <fullName>AVP - Sales</fullName>
+                <default>false</default>
+                <label>AVP - Sales</label>
+            </value>
+            <value>
+                <fullName>Branch Manager</fullName>
+                <default>false</default>
+                <label>Branch Manager</label>
+            </value>
+            <value>
+                <fullName>Business Analyst</fullName>
+                <default>false</default>
+                <label>Business Analyst</label>
+            </value>
+            <value>
+                <fullName>Business Development Manager</fullName>
+                <default>false</default>
+                <label>Business Development Manager</label>
+            </value>
+            <value>
+                <fullName>Cash Application Analyst</fullName>
+                <default>false</default>
+                <label>Cash Application Analyst</label>
+            </value>
+            <value>
+                <fullName>Chief Product Officer</fullName>
+                <default>false</default>
+                <label>Chief Product Officer</label>
+            </value>
+            <value>
+                <fullName>Chief Revenue Officer</fullName>
+                <default>false</default>
+                <label>Chief Revenue Officer</label>
+            </value>
+            <value>
+                <fullName>Cloud Support</fullName>
+                <default>false</default>
+                <label>Cloud Support</label>
+            </value>
+            <value>
+                <fullName>Consumer Sales Advisor</fullName>
+                <default>false</default>
+                <label>Consumer Sales Advisor</label>
+            </value>
+            <value>
+                <fullName>Country Sales Head</fullName>
+                <default>false</default>
+                <label>Country Sales Head</label>
+            </value>
+            <value>
+                <fullName>Customer Success Manager</fullName>
+                <default>false</default>
+                <label>Customer Success Manager</label>
+            </value>
+            <value>
+                <fullName>Customer Success Manager - Mumbai</fullName>
+                <default>false</default>
+                <label>Customer Success Manager - Mumbai</label>
+            </value>
+            <value>
+                <fullName>Deputy Manager - Client Relations</fullName>
+                <default>false</default>
+                <label>Deputy Manager - Client Relations</label>
+            </value>
+            <value>
+                <fullName>Deputy Manager - Sales</fullName>
+                <default>false</default>
+                <label>Deputy Manager - Sales</label>
+            </value>
+            <value>
+                <fullName>Executive - Client Relations</fullName>
+                <default>false</default>
+                <label>Executive - Client Relations</label>
+            </value>
+            <value>
+                <fullName>Executive - Lead Management</fullName>
+                <default>false</default>
+                <label>Executive - Lead Management</label>
+            </value>
+            <value>
+                <fullName>Executive Sales</fullName>
+                <default>false</default>
+                <label>Executive Sales</label>
+            </value>
+            <value>
+                <fullName>Executive - Sales</fullName>
+                <default>false</default>
+                <label>Executive - Sales</label>
+            </value>
+            <value>
+                <fullName>Finance Controller - APAC &amp; Gulf</fullName>
+                <default>false</default>
+                <label>Finance Controller - APAC &amp; Gulf</label>
+            </value>
+            <value>
+                <fullName>Finance Executive</fullName>
+                <default>false</default>
+                <label>Finance Executive</label>
+            </value>
+            <value>
+                <fullName>General Manager- Sales Operations</fullName>
+                <default>false</default>
+                <label>General Manager- Sales Operations</label>
+            </value>
+            <value>
+                <fullName>Graduate - Trainee</fullName>
+                <default>false</default>
+                <label>Graduate - Trainee</label>
+            </value>
+            <value>
+                <fullName>Head - Business Finance</fullName>
+                <default>false</default>
+                <label>Head - Business Finance</label>
+            </value>
+            <value>
+                <fullName>Head of Client Relations - APAC &amp; Middle East</fullName>
+                <default>false</default>
+                <label>Head of Client Relations - APAC &amp; Middle East</label>
+            </value>
+            <value>
+                <fullName>Key Account Manager</fullName>
+                <default>false</default>
+                <label>Key Account Manager</label>
+            </value>
+            <value>
+                <fullName>Key Accounts Manager</fullName>
+                <default>false</default>
+                <label>Key Accounts Manager</label>
+            </value>
+            <value>
+                <fullName>Lead Analyst</fullName>
+                <default>false</default>
+                <label>Lead Analyst</label>
+            </value>
+            <value>
+                <fullName>Management Trainee</fullName>
+                <default>false</default>
+                <label>Management Trainee</label>
+            </value>
+            <value>
+                <fullName>Manager - Application Support &amp; Projects</fullName>
+                <default>false</default>
+                <label>Manager - Application Support &amp; Projects</label>
+            </value>
+            <value>
+                <fullName>Manager - Client Relations</fullName>
+                <default>false</default>
+                <label>Manager - Client Relations</label>
+            </value>
+            <value>
+                <fullName>Manager - Collections</fullName>
+                <default>false</default>
+                <label>Manager - Collections</label>
+            </value>
+            <value>
+                <fullName>Manager - Finance</fullName>
+                <default>false</default>
+                <label>Manager - Finance</label>
+            </value>
+            <value>
+                <fullName>Manager - Sales (New Product)</fullName>
+                <default>false</default>
+                <label>Manager - Sales (New Product)</label>
+            </value>
+            <value>
+                <fullName>Principal Credit/Collections Analyst</fullName>
+                <default>false</default>
+                <label>Principal Credit/Collections Analyst</label>
+            </value>
+            <value>
+                <fullName>Regional Head Sales</fullName>
+                <default>false</default>
+                <label>Regional Head Sales</label>
+            </value>
+            <value>
+                <fullName>Regional Head - Sales</fullName>
+                <default>false</default>
+                <label>Regional Head - Sales</label>
+            </value>
+            <value>
+                <fullName>Regional Head Sales (Singapore &amp; Philippines)</fullName>
+                <default>false</default>
+                <label>Regional Head Sales (Singapore &amp; Philippines)</label>
+            </value>
+            <value>
+                <fullName>Regional Manager, Credit &amp; Collections -India, ME, SEA</fullName>
+                <default>false</default>
+                <label>Regional Manager, Credit &amp; Collections -India, ME, SEA</label>
+            </value>
+            <value>
+                <fullName>Regional Manager - Sales</fullName>
+                <default>false</default>
+                <label>Regional Manager - Sales</label>
+            </value>
+            <value>
+                <fullName>Sales Executive</fullName>
+                <default>false</default>
+                <label>Sales Executive</label>
+            </value>
+            <value>
+                <fullName>Sales Manager</fullName>
+                <default>false</default>
+                <label>Sales Manager</label>
+            </value>
+            <value>
+                <fullName>Sales Operations - Executive</fullName>
+                <default>false</default>
+                <label>Sales Operations - Executive</label>
+            </value>
+            <value>
+                <fullName>Senior Account Manager</fullName>
+                <default>false</default>
+                <label>Senior Account Manager</label>
+            </value>
+            <value>
+                <fullName>Senior Business Development Manager</fullName>
+                <default>false</default>
+                <label>Senior Business Development Manager</label>
+            </value>
+            <value>
+                <fullName>Senior Consumer Sales Advisor</fullName>
+                <default>false</default>
+                <label>Senior Consumer Sales Advisor</label>
+            </value>
+            <value>
+                <fullName>Senior Credit/Collections Analyst</fullName>
+                <default>false</default>
+                <label>Senior Credit/Collections Analyst</label>
+            </value>
+            <value>
+                <fullName>Senior Data Analyst</fullName>
+                <default>false</default>
+                <label>Senior Data Analyst</label>
+            </value>
+            <value>
+                <fullName>Senior Executive - Client Relations</fullName>
+                <default>false</default>
+                <label>Senior Executive - Client Relations</label>
+            </value>
+            <value>
+                <fullName>Senior Executive - Ecommerce</fullName>
+                <default>false</default>
+                <label>Senior Executive - Ecommerce</label>
+            </value>
+            <value>
+                <fullName>Senior Executive - Finance</fullName>
+                <default>false</default>
+                <label>Senior Executive - Finance</label>
+            </value>
+            <value>
+                <fullName>Senior Executive Sales</fullName>
+                <default>false</default>
+                <label>Senior Executive Sales</label>
+            </value>
+            <value>
+                <fullName>Senior Executive - Sales</fullName>
+                <default>false</default>
+                <label>Senior Executive - Sales</label>
+            </value>
+            <value>
+                <fullName>Senior Manager - Client Relations</fullName>
+                <default>false</default>
+                <label>Senior Manager - Client Relations</label>
+            </value>
+            <value>
+                <fullName>Senior Manager -  Lead Management</fullName>
+                <default>false</default>
+                <label>Senior Manager -  Lead Management</label>
+            </value>
+            <value>
+                <fullName>Senior Manager - Legal</fullName>
+                <default>false</default>
+                <label>Senior Manager - Legal</label>
+            </value>
+            <value>
+                <fullName>Senior Sales - Manager</fullName>
+                <default>false</default>
+                <label>Senior Sales - Manager</label>
+            </value>
+            <value>
+                <fullName>Senior Strategic Account Manager</fullName>
+                <default>false</default>
+                <label>Senior Strategic Account Manager</label>
+            </value>
+            <value>
+                <fullName>Sr. Account Manager</fullName>
+                <default>false</default>
+                <label>Sr. Account Manager</label>
+            </value>
+            <value>
+                <fullName>Sr. Client Relations Representative</fullName>
+                <default>false</default>
+                <label>Sr. Client Relations Representative</label>
+            </value>
+            <value>
+                <fullName>Sr. Consumer Sales Advisor</fullName>
+                <default>false</default>
+                <label>Sr. Consumer Sales Advisor</label>
+            </value>
+            <value>
+                <fullName>Sr. Manager - Client Relations</fullName>
+                <default>false</default>
+                <label>Sr. Manager - Client Relations</label>
+            </value>
+            <value>
+                <fullName>Strategic Account Manager</fullName>
+                <default>false</default>
+                <label>Strategic Account Manager</label>
+            </value>
+            <value>
+                <fullName>Team Leader</fullName>
+                <default>false</default>
+                <label>Team Leader</label>
+            </value>
+            <value>
+                <fullName>VP Sales - SEA &amp; HK</fullName>
+                <default>false</default>
+                <label>VP Sales - SEA &amp; HK</label>
+            </value>
+            <value>
+                <fullName>Regional Head – SG and PH</fullName>
+                <default>false</default>
+                <label>Regional Head – SG and PH</label>
+            </value>
+            <value>
+                <fullName>Head of Sales - Middle East</fullName>
+                <default>false</default>
+                <label>Head of Sales - Middle East</label>
+            </value>
+            <value>
+                <fullName>General Manager</fullName>
+                <default>false</default>
+                <label>General Manager</label>
+            </value>
+            <value>
+                <fullName>Senior Executive - Customer Success</fullName>
+                <default>false</default>
+                <label>Senior Executive - Customer Success</label>
+            </value>
+            <value>
+                <fullName>Senior Key Account Manager</fullName>
+                <default>false</default>
+                <label>Senior Key Account Manager</label>
+            </value>
+            <value>
+                <fullName>VP-Marketing</fullName>
+                <default>false</default>
+                <label>VP-Marketing</label>
+            </value>
+            <value>
+                <fullName>LeadGen</fullName>
+                <default>false</default>
+                <label>LeadGen</label>
+            </value>
+            <value>
+                <fullName>Regional Manager - North</fullName>
+                <default>false</default>
+                <label>Regional Manager - North</label>
+            </value>
+            <value>
+                <fullName>Inside Sales - India</fullName>
+                <default>false</default>
+                <label>Inside Sales - India</label>
+            </value>
+            <value>
+                <fullName>Enterprise Business - PH</fullName>
+                <default>false</default>
+                <label>Enterprise Business - PH</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

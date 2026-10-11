@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Potential_mandatory_for_B2C_profile_user</fullName>
+    <active>false</active>
+    <description>Potential field mandatory for B2C profile users</description>
+    <errorConditionFormula>AND( $Profile.Id = &apos;00e7F000000uSSe&apos;,
+ ISBLANK(TEXT( Potential__c ))
+   )</errorConditionFormula>
+    <errorDisplayField>Potential__c</errorDisplayField>
+    <errorMessage>Please enter the value for potentiality</errorMessage>
+</ValidationRule>

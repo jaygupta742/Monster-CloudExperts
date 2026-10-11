@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monster_Phone_Validation_rule</fullName>
+    <active>false</active>
+    <errorConditionFormula>/*
+IF( RecordTypeId == &apos;0120k0000001jHZ&apos; ,len( Phone ) &lt;&gt;13|| CONTAINS( Phone , &apos;/&apos;) ||CONTAINS(Phone , &apos;,&apos;) ||CONTAINS(Phone , &apos;*&apos;)||CONTAINS(Phone , &apos;-&apos;)||CONTAINS(Phone , &apos;.&apos;),null) 
+*/
+
+IF(NOT(ISBLANK( Phone)), IF( (RecordTypeId == &apos;0127F000000mhAa&apos;) &amp;&amp; 
+(ISPICKVAL(Account.Location__c, &apos;India&apos;)), LEN(Phone) &lt;&gt; 13 || NOT(ISNUMBER(MID(Phone,2, LEN(Phone)))), NOT(ISNUMBER(MID(Phone,2, LEN(Phone))))) ,false)</errorConditionFormula>
+    <errorDisplayField>Phone</errorDisplayField>
+    <errorMessage>IFAccount Location is INDIA Mobile Number Should Be 13 Digits Only or else Mobile Number should start with +</errorMessage>
+</ValidationRule>

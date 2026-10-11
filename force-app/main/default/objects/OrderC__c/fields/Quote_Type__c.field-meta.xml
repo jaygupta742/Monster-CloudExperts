@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Type__c</fullName>
+    <label>Quote Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+                <label>Adjustment</label>
+            </value>
+            <value>
+                <fullName>Barter Deal</fullName>
+                <default>false</default>
+                <label>Barter Deal</label>
+            </value>
+            <value>
+                <fullName>Bridge Deal</fullName>
+                <default>false</default>
+                <label>Bridge Deal</label>
+            </value>
+            <value>
+                <fullName>Consumer Posting</fullName>
+                <default>false</default>
+                <label>Consumer Posting</label>
+            </value>
+            <value>
+                <fullName>Conversion</fullName>
+                <default>false</default>
+                <label>Conversion</label>
+            </value>
+            <value>
+                <fullName>CPA Upsell</fullName>
+                <default>false</default>
+                <label>CPA Upsell</label>
+            </value>
+            <value>
+                <fullName>Free Trial</fullName>
+                <default>false</default>
+                <label>Free Trial</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Intro Offer</fullName>
+                <default>false</default>
+                <label>Intro Offer</label>
+            </value>
+            <value>
+                <fullName>Lapsed Customer</fullName>
+                <default>false</default>
+                <label>Lapsed Customer</label>
+            </value>
+            <value>
+                <fullName>Late Renewal</fullName>
+                <default>false</default>
+                <label>Late Renewal</label>
+            </value>
+            <value>
+                <fullName>Make Good</fullName>
+                <default>false</default>
+                <label>Make Good</label>
+            </value>
+            <value>
+                <fullName>Manual Conversion</fullName>
+                <default>false</default>
+                <label>Manual Conversion</label>
+            </value>
+            <value>
+                <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+                <label>Marketing Campaign</label>
+            </value>
+            <value>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+                <label>New Customer</label>
+            </value>
+            <value>
+                <fullName>New Revenue</fullName>
+                <default>false</default>
+                <label>New Revenue</label>
+            </value>
+            <value>
+                <fullName>Non-Revenue</fullName>
+                <default>false</default>
+                <label>Non-Revenue</label>
+            </value>
+            <value>
+                <fullName>Order Correction</fullName>
+                <default>false</default>
+                <label>Order Correction</label>
+            </value>
+            <value>
+                <fullName>Partner Feed</fullName>
+                <default>false</default>
+                <label>Partner Feed</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>Quote</fullName>
+                <default>false</default>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Re-Bill</fullName>
+                <default>false</default>
+                <label>Re-Bill</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Renewal Upgrade</fullName>
+                <default>false</default>
+                <label>Renewal Upgrade</label>
+            </value>
+            <value>
+                <fullName>Renewal with Upsell</fullName>
+                <default>false</default>
+                <label>Renewal with Upsell</label>
+            </value>
+            <value>
+                <fullName>Single Job Posting</fullName>
+                <default>false</default>
+                <label>Single Job Posting</label>
+            </value>
+            <value>
+                <fullName>Slippage</fullName>
+                <default>false</default>
+                <label>Slippage</label>
+            </value>
+            <value>
+                <fullName>Starterpack</fullName>
+                <default>false</default>
+                <label>Starterpack</label>
+            </value>
+            <value>
+                <fullName>Telemarketing EU</fullName>
+                <default>false</default>
+                <label>Telemarketing EU</label>
+            </value>
+            <value>
+                <fullName>Transfer Order</fullName>
+                <default>false</default>
+                <label>Transfer Order</label>
+            </value>
+            <value>
+                <fullName>Trial</fullName>
+                <default>false</default>
+                <label>Trial</label>
+            </value>
+            <value>
+                <fullName>Upsell</fullName>
+                <default>false</default>
+                <label>Upsell</label>
+            </value>
+            <value>
+                <fullName>Upsell/Addendum</fullName>
+                <default>false</default>
+                <label>Upsell/Addendum</label>
+            </value>
+            <value>
+                <fullName>Usage Billing</fullName>
+                <default>false</default>
+                <label>Usage Billing</label>
+            </value>
+            <value>
+                <fullName>Winback</fullName>
+                <default>false</default>
+                <label>Winback</label>
+            </value>
+            <value>
+                <fullName>Yahoo Media</fullName>
+                <default>false</default>
+                <label>Yahoo Media</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

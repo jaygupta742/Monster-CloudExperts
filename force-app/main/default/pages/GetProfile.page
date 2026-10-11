@@ -1,0 +1,12 @@
+<apex:page controller="getProfile" sidebar="false" showHeader="true" lightningStylesheets="true">
+<apex:form >
+<apex:pageBlock >
+<apex:pageblockButtons >
+                <apex:commandButton value="Go Back" action="{!goback}"  />
+                
+                 
+                </apex:pageblockButtons>
+<apex:outputText value="{!sst}" escape="false" style="width:150%"/>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

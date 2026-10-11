@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Price_Master__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Price Master</label>
+    <referenceTo>Price_Master__c</referenceTo>
+    <relationshipLabel>Seeker Order</relationshipLabel>
+    <relationshipName>Seeker_Order</relationshipName>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

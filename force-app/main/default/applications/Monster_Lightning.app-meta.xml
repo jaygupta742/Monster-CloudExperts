@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>View</actionName>
+        <comment>Action override created by Lightning App Builder during activation.</comment>
+        <content>Seeker_Record_Page</content>
+        <formFactor>Large</formFactor>
+        <skipRecordTypeSelect>false</skipRecordTypeSelect>
+        <type>Flexipage</type>
+        <pageOrSobjectType>Seeker__c</pageOrSobjectType>
+    </actionOverrides>
+    <formFactors>Large</formFactors>
+    <isNavAutoTempTabsDisabled>false</isNavAutoTempTabsDisabled>
+    <isNavPersonalizationDisabled>false</isNavPersonalizationDisabled>
+    <isNavTabPersistenceDisabled>false</isNavTabPersistenceDisabled>
+    <isOmniPinnedViewEnabled>false</isOmniPinnedViewEnabled>
+    <label>Monster Lightning</label>
+    <navType>Standard</navType>
+    <tabs>standard-home</tabs>
+    <tabs>standard-Account</tabs>
+    <tabs>standard-Contact</tabs>
+    <tabs>Opportunity__c</tabs>
+    <tabs>apttus_proposal_proposal__c</tabs>
+    <tabs>OrderC__c</tabs>
+    <tabs>Target__c</tabs>
+    <tabs>Tracker__c</tabs>
+    <tabs>standard-report</tabs>
+    <tabs>standard-Dashboard</tabs>
+    <tabs>Client_Validation_Request__c</tabs>
+    <tabs>Recycle_Bin</tabs>
+    <tabs>TestObject1__c</tabs>
+    <tabs>Credit_order__c</tabs>
+    <tabs>Marketing_Cases__c</tabs>
+    <tabs>Quote_Line_Items__c</tabs>
+    <tabs>Order_Item_Services__c</tabs>
+    <tabs>Call_Disposition__c</tabs>
+    <tabs>Opp_Line_Item__c</tabs>
+    <tabs>Order_Item__c</tabs>
+    <tabs>Activation__c</tabs>
+    <tabs>Developer_Helper__c</tabs>
+    <tabs>Guidelines__c</tabs>
+    <tabs>Debug_Compliance__c</tabs>
+    <tabs>Seeker_Order__c</tabs>
+    <tabs>Sample__c</tabs>
+    <tabs>Seeker_Account__c</tabs>
+    <tabs>Lead_Assignment_Settings__c</tabs>
+    <tabs>Lead_Assignment_State_Log__c</tabs>
+    <uiType>Lightning</uiType>
+    <utilityBar>Monster_Lightning_UtilityBar</utilityBar>
+</CustomApplication>

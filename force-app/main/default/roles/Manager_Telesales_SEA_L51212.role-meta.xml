@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Manager-Telesales-SEA - L5</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Manager-Telesales-SEA - L5 (Santosh Yadav)</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Manager_Telesales_SEA</parentRole>
+</Role>

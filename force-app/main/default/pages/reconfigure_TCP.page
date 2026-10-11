@@ -1,0 +1,37 @@
+<apex:page controller="reconfigure_TCP" lightningStylesheets="true">
+  <apex:form > 
+    <apex:pageMessages id="rr"></apex:pageMessages>
+    <!--<apex:inputText value="{!Amount}"/><apex:commandButton value="Gencod" action="{!Add_to_cart}"/>
+   {!pbkey}-->
+  
+        <apex:pageBlock id="re" title="Configure Product" > 
+      <apex:outputText rendered="{!cshow}">{!currencytype}:{!amount}</apex:outputText>
+      
+        <apex:pageblockButtons location="top">
+         <apex:commandButton action="{!cancelling}" value="Cancel"/>
+    <apex:commandButton action="{!Add_to_cart}" value="Update Cart" disabled="{!(!cshow)}"/>
+        <apex:commandButton action="{!Get_Price_TCP}" value="Get Price" disabled="{!price}" reRender="re,rr"/>
+        <apex:commandButton action="{!Configure_Product_Attribute}" value="Reset"  reRender="re,rr"/>
+        
+        </apex:pageblockButtons>
+             <center>
+            <apex:PageBlockSection >
+             <apex:inputText value="{!quantity}" label="Quantity"/>
+             <apex:inputField value="{!hh.Product_Name__c}"/>
+             <apex:inputField value="{!hh.Product_Details__c}"/>
+             <apex:inputtext value="{!amount1}" label="Price"/>
+             </apex:PageBlockSection>
+             <br/><br/>
+             <Table>
+                    <apex:repeat value="{!law}" var="v">
+                        <tr><td>{!v.sol}</td>
+                        <td><apex:selectList value="{!v.socv}" size="1" disabled="{!v.show}">
+                            <apex:selectOptions value="{!v.sov}"/>
+                           <apex:actionSupport action="{!chk}"/>
+                        </apex:selectList></td></tr>
+                    </apex:repeat>
+                </Table></center>
+                
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

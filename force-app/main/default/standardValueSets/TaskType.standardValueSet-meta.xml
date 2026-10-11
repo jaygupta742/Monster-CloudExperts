@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Call</fullName>
+        <default>false</default>
+        <label>Call</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Meeting</fullName>
+        <default>false</default>
+        <label>Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Other</fullName>
+        <default>false</default>
+        <label>Other</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call - Inbound</fullName>
+        <default>false</default>
+        <label>Call - Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Call - Outbound</fullName>
+        <default>false</default>
+        <label>Call - Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Inbound</fullName>
+        <default>false</default>
+        <label>Email - Inbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Email - Outbound</fullName>
+        <default>false</default>
+        <label>Email - Outbound</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FYI</fullName>
+        <default>false</default>
+        <label>FYI</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Product Implementation</fullName>
+        <default>false</default>
+        <label>Product Implementation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Action Tracker</fullName>
+        <default>false</default>
+        <label>Action Tracker</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Monster Analysis</fullName>
+        <default>false</default>
+        <label>Monster Analysis</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Client Analysis</fullName>
+        <default>false</default>
+        <label>Client Analysis</label>
+    </standardValue>
+</StandardValueSet>

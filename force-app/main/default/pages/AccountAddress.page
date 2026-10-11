@@ -1,0 +1,31 @@
+<apex:page standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="Edit Billing & Shipping Address">
+
+            <!-- Billing Address -->
+            <apex:pageBlockSection title="Billing Address" columns="2">
+                <apex:inputField value="{!Account.BillingStreet}"/>
+                <apex:inputField value="{!Account.BillingCity}"/>
+                <apex:inputField value="{!Account.BillingState}"/>
+                <apex:inputField value="{!Account.BillingPostalCode}"/>
+                <apex:inputField value="{!Account.BillingCountry}"/>
+            </apex:pageBlockSection>
+            
+            <!-- Shipping Address -->
+            <apex:pageBlockSection title="Shipping Address" columns="2">
+                <apex:inputField value="{!Account.ShippingStreet}"/>
+                <apex:inputField value="{!Account.ShippingCity}"/>
+                <apex:inputField value="{!Account.ShippingState}"/>
+                <apex:inputField value="{!Account.ShippingPostalCode}"/>
+                <apex:inputField value="{!Account.ShippingCountry}"/>
+            </apex:pageBlockSection>
+            
+            <!-- Save Button -->
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

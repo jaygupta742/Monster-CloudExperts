@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Go_To_Re_Process</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Go To Re-Process</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+var a=&apos;{!apttus_proposal_proposal__c.Id}&apos;;
+var ord = sforce.apex.execute(&quot;ReProcessedQuote&quot;,&quot;ReProcessedQuoteSent&quot;,{ids:a}); 
+alert(&quot;Your Quote Has been Successfully Re - Processed&quot;); 
+window.open(&quot;/&quot; + ord);
+location.reload(true);</url>
+</WebLink>

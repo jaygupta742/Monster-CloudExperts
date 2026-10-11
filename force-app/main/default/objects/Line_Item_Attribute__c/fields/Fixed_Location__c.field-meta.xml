@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fixed_Location__c</fullName>
+    <label>Fixed Location</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>US</fullName>
+                <default>false</default>
+                <label>US</label>
+            </value>
+            <value>
+                <fullName>AsiaPac-except Korea</fullName>
+                <default>false</default>
+                <label>AsiaPac-except Korea</label>
+            </value>
+            <value>
+                <fullName>AsiaPac-except Korea and China</fullName>
+                <default>false</default>
+                <label>AsiaPac-except Korea and China</label>
+            </value>
+            <value>
+                <fullName>Australia</fullName>
+                <default>false</default>
+                <label>Australia</label>
+            </value>
+            <value>
+                <fullName>Australia-CareerOne</fullName>
+                <default>false</default>
+                <label>Australia-CareerOne</label>
+            </value>
+            <value>
+                <fullName>Central Eastern Europe</fullName>
+                <default>false</default>
+                <label>Central Eastern Europe</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe</fullName>
+                <default>false</default>
+                <label>Eastern Europe</label>
+            </value>
+            <value>
+                <fullName>Eastern Europe Non-Monster countries</fullName>
+                <default>false</default>
+                <label>Eastern Europe Non-Monster countries</label>
+            </value>
+            <value>
+                <fullName>Eastern Norway</fullName>
+                <default>false</default>
+                <label>Eastern Norway</label>
+            </value>
+            <value>
+                <fullName>Eastern Sweden</fullName>
+                <default>false</default>
+                <label>Eastern Sweden</label>
+            </value>
+            <value>
+                <fullName>England</fullName>
+                <default>false</default>
+                <label>England</label>
+            </value>
+            <value>
+                <fullName>Europe</fullName>
+                <default>false</default>
+                <label>Europe</label>
+            </value>
+            <value>
+                <fullName>Europe Excluding Germany</fullName>
+                <default>false</default>
+                <label>Europe Excluding Germany</label>
+            </value>
+            <value>
+                <fullName>Italy</fullName>
+                <default>false</default>
+                <label>Italy</label>
+            </value>
+            <value>
+                <fullName>Italy Lombardia</fullName>
+                <default>false</default>
+                <label>Italy Lombardia</label>
+            </value>
+            <value>
+                <fullName>Italy Other</fullName>
+                <default>false</default>
+                <label>Italy Other</label>
+            </value>
+            <value>
+                <fullName>Luxembourg</fullName>
+                <default>false</default>
+                <label>Luxembourg</label>
+            </value>
+            <value>
+                <fullName>Luxembourg Grande Region</fullName>
+                <default>false</default>
+                <label>Luxembourg Grande Region</label>
+            </value>
+            <value>
+                <fullName>Mälaren Valley</fullName>
+                <default>false</default>
+                <label>Mälaren Valley</label>
+            </value>
+            <value>
+                <fullName>Northern Ireland</fullName>
+                <default>false</default>
+                <label>Northern Ireland</label>
+            </value>
+            <value>
+                <fullName>Northern Sweden</fullName>
+                <default>false</default>
+                <label>Northern Sweden</label>
+            </value>
+            <value>
+                <fullName>Norway</fullName>
+                <default>false</default>
+                <label>Norway</label>
+            </value>
+            <value>
+                <fullName>Scotland</fullName>
+                <default>false</default>
+                <label>Scotland</label>
+            </value>
+            <value>
+                <fullName>Southern Italy</fullName>
+                <default>false</default>
+                <label>Southern Italy</label>
+            </value>
+            <value>
+                <fullName>Southern Sweden</fullName>
+                <default>false</default>
+                <label>Southern Sweden</label>
+            </value>
+            <value>
+                <fullName>Sweden</fullName>
+                <default>false</default>
+                <label>Sweden</label>
+            </value>
+            <value>
+                <fullName>Trøndelag and Northern Norway</fullName>
+                <default>false</default>
+                <label>Trøndelag and Northern Norway</label>
+            </value>
+            <value>
+                <fullName>United Kingdom</fullName>
+                <default>false</default>
+                <label>United Kingdom</label>
+            </value>
+            <value>
+                <fullName>Wales</fullName>
+                <default>false</default>
+                <label>Wales</label>
+            </value>
+            <value>
+                <fullName>Western and Southern Norway</fullName>
+                <default>false</default>
+                <label>Western and Southern Norway</label>
+            </value>
+            <value>
+                <fullName>Western Europe</fullName>
+                <default>false</default>
+                <label>Western Europe</label>
+            </value>
+            <value>
+                <fullName>Western Europe Non-Monster countries</fullName>
+                <default>false</default>
+                <label>Western Europe Non-Monster countries</label>
+            </value>
+            <value>
+                <fullName>Western Sweden</fullName>
+                <default>false</default>
+                <label>Western Sweden</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Order</fullName>
+    <availability>online</availability>
+    <description>/a0A/e?CF00N0k0000016SQ4= {!apttus_proposal_proposal__c.Name} &amp;CF00N0k0000016SQ4_lkid=
+
+{!apttus_proposal_proposal__c.QuoteProposalId__c}
+
+&amp;CF00N0k000001J09p= {!apttus_proposal_proposal__c.Account__c}
+ &amp;CF00N0k000001J09p_lkid= {!apttus_proposal_proposal__c.AccountId__c}&amp;CF00N0k0000016SHM=
+
+{!apttus_proposal_proposal__c.Opportunity__c} 
+
+&amp;CF00N0k0000016SHM_lkid=
+
+{!apttus_proposal_proposal__c.OpportunityId__c}</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Order(Custom)</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/a0l/e?CF00N7F00000QM24e={!apttus_proposal_proposal__c.Name}&amp;CF00N7F00000QM24e_lkid={!apttus_proposal_proposal__c.QuoteProposalId__c}
+&amp;
+CF00N7F00000PTTsA={!apttus_proposal_proposal__c.Account__c}&amp;CF00N7F00000PTTsA_lkid= {!apttus_proposal_proposal__c.AccountId__c}
+&amp;
+CF00N7F00000QM23U={!apttus_proposal_proposal__c.Opportunity__c} &amp;CF00N7F00000QM23U_lkid={!apttus_proposal_proposal__c.OpportunityId__c}</url>
+</WebLink>

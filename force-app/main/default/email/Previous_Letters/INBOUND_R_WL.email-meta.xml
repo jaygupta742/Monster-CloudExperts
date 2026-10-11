@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>APAC_Purple_Monster_Logo</letterhead>
+    <name>INBOUND R WL</name>
+    <style>freeForm</style>
+    <subject>Welcome back to Monster - {!Account.Name}</subject>
+    <textOnly>Dear Valued Customer,
+
+Welcome to Monster.com, the world’s largest online career site.
+
+Thank you for subscribing Monster.com products/services.  A copy of the Service Agreement executed is attached herewith for your ready reference and record.  We request you to go through the Agreement to verify products/services subscribed and payment terms. It is our endeavor to fulfill therecruitment &amp; hiring needs of our customers as per their requirement.  With your continuous unstinted support, we are confident that we will be able to serve you in a better way.
+
+For security reasons, we have sent the login details in a separate auto-generated mailer, which you must have received by now. Please log on to http://recruiter.monsterindia.com/ and enter your login details to access Monster Recruiter account.
+
+You can also refer to our product demo available on Monster recruiter account by clicking on “Take a Tour” icon which is placed on top right hand side of your Monster Home page.
+We will be your main point of contact for customer service related queries and will assist you in using the Monster recruiter account.
+
+You can contact Monster helpline by dialing toll free number - 1 800 4196666 (press 2 and again select 2 when the IVR message comes up), which works from 8:00AM to 8:00 PM Monday to Friday and 9:30 AM to 6:30 PM on Saturday’s and public holidays.
+
+For any queries / clarifications, please contact us within 7 working days.
+
+Thanks &amp; Regards,
+Client Relations Team
+Toll Free: 1-800-4196666*
+Toll - 91-40-66116611*
+* Press 2 and again select 2 when IVR message comes up.
+Email: cr@monsterindia.com  Note: Please change your password after you login to the account for the first time and do not share your account details with anyone to ensure security of your account.
+
+Escalation of any Customer Service matter
+In the unlikely event of your query or complaint not being resolved promptly to your satisfaction, please write a mail to crhead@monsterindia.com as a first level of escalation and to ceo@monsterindia.com for second level escalation. The matter will be directly investigated by the senior management of our Customer Service team.
+
+Terms of Use
+We thank you for using Monster. For uninterrupted access to our services, it is important for you to read and understand our Terms of Use . For your convenience, we are emphasizing on some of the Prohibited Uses of Monster listed and we look forward to your cooperation in adhering to the same.
+
+Mass mailing/Spamming/Non-career related mailing is strictly prohibited
+We are committed to preventing any form of misuse of our jobseeker database. If any user indulges in:
+
+Mass-mailing messages about job openings without having adequately narrowed the list of jobseekers to whom it is being sent
+
+OR spamming
+OR sending any mail with contents that are not strictly jobs/careers oriented
+
+Monster at its own discretion may deactivate the user’s account in any such case, without further notice.
+
+Posting or refreshing the same job multiple times
+We have noticed some users have been posting several jobs and refreshing them at an unusual frequency. Monster Terms of Use strictly prohibit such use of our job posting facility and if any user continues to refresh multiple jobs periodically, we may choose to deactivate the account.
+
+Posting jobs with external links
+We do not permit any external links to other websites from any of our job postings, unless the same has been explicitly approved by Monster.
+
+Posting jobs that are discriminatory
+We do not permit posting of jobs that specifically restrict applications from jobseekers based on religion, caste, gender etc.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

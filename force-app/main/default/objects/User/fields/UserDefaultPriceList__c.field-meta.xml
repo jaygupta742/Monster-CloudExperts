@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UserDefaultPriceList__c</fullName>
+    <label>User Default Price List</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AED Price List</fullName>
+                <default>false</default>
+                <label>AED Price List</label>
+            </value>
+            <value>
+                <fullName>ALL Price List</fullName>
+                <default>false</default>
+                <label>ALL Price List</label>
+            </value>
+            <value>
+                <fullName>ARS Price List</fullName>
+                <default>false</default>
+                <label>ARS Price List</label>
+            </value>
+            <value>
+                <fullName>AUD Price List</fullName>
+                <default>false</default>
+                <label>AUD Price List</label>
+            </value>
+            <value>
+                <fullName>BDT Price List</fullName>
+                <default>false</default>
+                <label>BDT Price List</label>
+            </value>
+            <value>
+                <fullName>BRL Price List</fullName>
+                <default>false</default>
+                <label>BRL Price List</label>
+            </value>
+            <value>
+                <fullName>CAD Price List</fullName>
+                <default>false</default>
+                <label>CAD Price List</label>
+            </value>
+            <value>
+                <fullName>CHF Price List</fullName>
+                <default>false</default>
+                <label>CHF Price List</label>
+            </value>
+            <value>
+                <fullName>CLP Price List</fullName>
+                <default>false</default>
+                <label>CLP Price List</label>
+            </value>
+            <value>
+                <fullName>CNY Price List</fullName>
+                <default>false</default>
+                <label>CNY Price List</label>
+            </value>
+            <value>
+                <fullName>COP Price List</fullName>
+                <default>false</default>
+                <label>COP Price List</label>
+            </value>
+            <value>
+                <fullName>CZ Price List</fullName>
+                <default>false</default>
+                <label>CZ Price List</label>
+            </value>
+            <value>
+                <fullName>CZK Price List</fullName>
+                <default>false</default>
+                <label>CZK Price List</label>
+            </value>
+            <value>
+                <fullName>DEM Price List</fullName>
+                <default>false</default>
+                <label>DEM Price List</label>
+            </value>
+            <value>
+                <fullName>DKK Price List</fullName>
+                <default>false</default>
+                <label>DKK Price List</label>
+            </value>
+            <value>
+                <fullName>DZD Price List</fullName>
+                <default>false</default>
+                <label>DZD Price List</label>
+            </value>
+            <value>
+                <fullName>EGP Price List</fullName>
+                <default>false</default>
+                <label>EGP Price List</label>
+            </value>
+            <value>
+                <fullName>ESP Price List</fullName>
+                <default>false</default>
+                <label>ESP Price List</label>
+            </value>
+            <value>
+                <fullName>EUR Price List</fullName>
+                <default>false</default>
+                <label>EUR Price List</label>
+            </value>
+            <value>
+                <fullName>FRF Price List</fullName>
+                <default>false</default>
+                <label>FRF Price List</label>
+            </value>
+            <value>
+                <fullName>GBP Price List</fullName>
+                <default>false</default>
+                <label>GBP Price List</label>
+            </value>
+            <value>
+                <fullName>HKD Price List</fullName>
+                <default>false</default>
+                <label>HKD Price List</label>
+            </value>
+            <value>
+                <fullName>HUF Price List</fullName>
+                <default>false</default>
+                <label>HUF Price List</label>
+            </value>
+            <value>
+                <fullName>IDR Price List</fullName>
+                <default>false</default>
+                <label>IDR Price List</label>
+            </value>
+            <value>
+                <fullName>IEP Price List</fullName>
+                <default>false</default>
+                <label>IEP Price List</label>
+            </value>
+            <value>
+                <fullName>ILS Price List</fullName>
+                <default>false</default>
+                <label>ILS Price List</label>
+            </value>
+            <value>
+                <fullName>INR Price List</fullName>
+                <default>false</default>
+                <label>INR Price List</label>
+            </value>
+            <value>
+                <fullName>IRR Price List</fullName>
+                <default>false</default>
+                <label>IRR Price List</label>
+            </value>
+            <value>
+                <fullName>ISK Price List</fullName>
+                <default>false</default>
+                <label>ISK Price List</label>
+            </value>
+            <value>
+                <fullName>JPY Price List</fullName>
+                <default>false</default>
+                <label>JPY Price List</label>
+            </value>
+            <value>
+                <fullName>KRW Price List</fullName>
+                <default>false</default>
+                <label>KRW Price List</label>
+            </value>
+            <value>
+                <fullName>MAD Price List</fullName>
+                <default>false</default>
+                <label>MAD Price List</label>
+            </value>
+            <value>
+                <fullName>MXN Price List</fullName>
+                <default>false</default>
+                <label>MXN Price List</label>
+            </value>
+            <value>
+                <fullName>MYR Price List</fullName>
+                <default>false</default>
+                <label>MYR Price List</label>
+            </value>
+            <value>
+                <fullName>NGN Price List</fullName>
+                <default>false</default>
+                <label>NGN Price List</label>
+            </value>
+            <value>
+                <fullName>NLG Price List</fullName>
+                <default>false</default>
+                <label>NLG Price List</label>
+            </value>
+            <value>
+                <fullName>NOK Price List</fullName>
+                <default>false</default>
+                <label>NOK Price List</label>
+            </value>
+            <value>
+                <fullName>NZD Price List</fullName>
+                <default>false</default>
+                <label>NZD Price List</label>
+            </value>
+            <value>
+                <fullName>PEN Price List</fullName>
+                <default>false</default>
+                <label>PEN Price List</label>
+            </value>
+            <value>
+                <fullName>PHP Price List</fullName>
+                <default>false</default>
+                <label>PHP Price List</label>
+            </value>
+            <value>
+                <fullName>PKR Price List</fullName>
+                <default>false</default>
+                <label>PKR Price List</label>
+            </value>
+            <value>
+                <fullName>PLN Price List</fullName>
+                <default>false</default>
+                <label>PLN Price List</label>
+            </value>
+            <value>
+                <fullName>ROL Price List</fullName>
+                <default>false</default>
+                <label>ROL Price List</label>
+            </value>
+            <value>
+                <fullName>RUB Price List</fullName>
+                <default>false</default>
+                <label>RUB Price List</label>
+            </value>
+            <value>
+                <fullName>RUR Price List</fullName>
+                <default>false</default>
+                <label>RUR Price List</label>
+            </value>
+            <value>
+                <fullName>SAR Price List</fullName>
+                <default>false</default>
+                <label>SAR Price List</label>
+            </value>
+            <value>
+                <fullName>SEK Price List</fullName>
+                <default>false</default>
+                <label>SEK Price List</label>
+            </value>
+            <value>
+                <fullName>SGD Price List</fullName>
+                <default>false</default>
+                <label>SGD Price List</label>
+            </value>
+            <value>
+                <fullName>THB Price List</fullName>
+                <default>false</default>
+                <label>THB Price List</label>
+            </value>
+            <value>
+                <fullName>TRL Price List</fullName>
+                <default>false</default>
+                <label>TRL Price List</label>
+            </value>
+            <value>
+                <fullName>TRY Price List</fullName>
+                <default>false</default>
+                <label>TRY Price List</label>
+            </value>
+            <value>
+                <fullName>TWD Price List</fullName>
+                <default>false</default>
+                <label>TWD Price List</label>
+            </value>
+            <value>
+                <fullName>UAH Price List</fullName>
+                <default>false</default>
+                <label>UAH Price List</label>
+            </value>
+            <value>
+                <fullName>USD Price List</fullName>
+                <default>false</default>
+                <label>USD Price List</label>
+            </value>
+            <value>
+                <fullName>VEB Price List</fullName>
+                <default>false</default>
+                <label>VEB Price List</label>
+            </value>
+            <value>
+                <fullName>VND Price List</fullName>
+                <default>false</default>
+                <label>VND Price List</label>
+            </value>
+            <value>
+                <fullName>ZAR Price List</fullName>
+                <default>false</default>
+                <label>ZAR Price List</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

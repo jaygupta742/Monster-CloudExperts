@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Only_Admin_Can_Change_User_Information</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(ISCHANGED(FirstName),ISCHANGED(LastName),ISCHANGED(Alias),ISCHANGED(Email),ISCHANGED(CommunityNickname),ISCHANGED(Phone),ISCHANGED(Extension),ISCHANGED(Fax),ISCHANGED(MobilePhone),ISCHANGED(Address),ISCHANGED(CompanyName),ISCHANGED(Title),ISCHANGED(Department),ISCHANGED(Division),ISCHANGED(EmployeeNumber),ISCHANGED(StartDay),ISCHANGED(EndDay)), NOT(OR($Profile.Name = &quot;System Administrator&quot;, $Profile.Name = &quot;System Admin&quot; )))</errorConditionFormula>
+    <errorMessage>Kindly Contact System Admin To Change Your Personal Information.</errorMessage>
+</ValidationRule>

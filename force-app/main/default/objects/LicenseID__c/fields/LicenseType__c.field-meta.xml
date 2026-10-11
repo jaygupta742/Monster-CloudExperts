@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LicenseType__c</fullName>
+    <label>License Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Apply Scoring ReScore</fullName>
+                <default>false</default>
+                <label>Apply Scoring ReScore</label>
+            </value>
+            <value>
+                <fullName>Apply Scoring Single Score</fullName>
+                <default>false</default>
+                <label>Apply Scoring Single Score</label>
+            </value>
+            <value>
+                <fullName>AreaWidePosting</fullName>
+                <default>false</default>
+                <label>AreaWidePosting</label>
+            </value>
+            <value>
+                <fullName>AutoRefresh ala carte</fullName>
+                <default>false</default>
+                <label>AutoRefresh ala carte</label>
+            </value>
+            <value>
+                <fullName>Bolding ala carte</fullName>
+                <default>false</default>
+                <label>Bolding ala carte</label>
+            </value>
+            <value>
+                <fullName>Candidate Check Option</fullName>
+                <default>false</default>
+                <label>Candidate Check Option</label>
+            </value>
+            <value>
+                <fullName>Candidate Check Package</fullName>
+                <default>false</default>
+                <label>Candidate Check Package</label>
+            </value>
+            <value>
+                <fullName>Candidate Spotlight</fullName>
+                <default>false</default>
+                <label>Candidate Spotlight</label>
+            </value>
+            <value>
+                <fullName>Job Posting Inventory</fullName>
+                <default>false</default>
+                <label>Job Posting Inventory</label>
+            </value>
+            <value>
+                <fullName>JobLevelCAO</fullName>
+                <default>false</default>
+                <label>JobLevelCAO</label>
+            </value>
+            <value>
+                <fullName>Local Jobs</fullName>
+                <default>false</default>
+                <label>Local Jobs</label>
+            </value>
+            <value>
+                <fullName>Logo ala carte</fullName>
+                <default>false</default>
+                <label>Logo ala carte</label>
+            </value>
+            <value>
+                <fullName>Media CAN</fullName>
+                <default>false</default>
+                <label>Media CAN</label>
+            </value>
+            <value>
+                <fullName>Media CAN Premium</fullName>
+                <default>false</default>
+                <label>Media CAN Premium</label>
+            </value>
+            <value>
+                <fullName>MonsterOnDemand</fullName>
+                <default>false</default>
+                <label>MonsterOnDemand</label>
+            </value>
+            <value>
+                <fullName>MonsterVideo</fullName>
+                <default>false</default>
+                <label>MonsterVideo</label>
+            </value>
+            <value>
+                <fullName>ReserveJobPost</fullName>
+                <default>false</default>
+                <label>ReserveJobPost</label>
+            </value>
+            <value>
+                <fullName>Result Logo ala carte</fullName>
+                <default>false</default>
+                <label>Result Logo ala carte</label>
+            </value>
+            <value>
+                <fullName>Resume</fullName>
+                <default>false</default>
+                <label>Resume</label>
+            </value>
+            <value>
+                <fullName>ReversePublishing</fullName>
+                <default>false</default>
+                <label>ReversePublishing</label>
+            </value>
+            <value>
+                <fullName>Standard Slot</fullName>
+                <default>false</default>
+                <label>Standard Slot</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

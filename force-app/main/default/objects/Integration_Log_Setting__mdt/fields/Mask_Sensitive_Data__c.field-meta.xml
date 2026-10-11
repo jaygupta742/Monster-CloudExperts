@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mask_Sensitive_Data__c</fullName>
+    <defaultValue>true</defaultValue>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Partially mask the JSON keys listed in Sensitive Fields and the record keys (emails) before saving.</inlineHelpText>
+    <label>Mask Sensitive Data</label>
+    <type>Checkbox</type>
+</CustomField>

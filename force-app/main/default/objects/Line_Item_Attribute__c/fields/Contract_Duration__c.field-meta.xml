@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contract_Duration__c</fullName>
+    <label>Contract Duration</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Select One</fullName>
+                <default>false</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>1 Week</fullName>
+                <default>false</default>
+                <label>1 Week</label>
+            </value>
+            <value>
+                <fullName>2 Weeks</fullName>
+                <default>false</default>
+                <label>2 Weeks</label>
+            </value>
+            <value>
+                <fullName>1 Month</fullName>
+                <default>false</default>
+                <label>1 Month</label>
+            </value>
+            <value>
+                <fullName>2 Months</fullName>
+                <default>false</default>
+                <label>2 Months</label>
+            </value>
+            <value>
+                <fullName>3 Months</fullName>
+                <default>false</default>
+                <label>3 Months</label>
+            </value>
+            <value>
+                <fullName>4 Months</fullName>
+                <default>false</default>
+                <label>4 Months</label>
+            </value>
+            <value>
+                <fullName>5 Months</fullName>
+                <default>false</default>
+                <label>5 Months</label>
+            </value>
+            <value>
+                <fullName>6 Months</fullName>
+                <default>false</default>
+                <label>6 Months</label>
+            </value>
+            <value>
+                <fullName>7 Months</fullName>
+                <default>false</default>
+                <label>7 Months</label>
+            </value>
+            <value>
+                <fullName>8 Months</fullName>
+                <default>false</default>
+                <label>8 Months</label>
+            </value>
+            <value>
+                <fullName>9 Months</fullName>
+                <default>false</default>
+                <label>9 Months</label>
+            </value>
+            <value>
+                <fullName>10 Months</fullName>
+                <default>false</default>
+                <label>10 Months</label>
+            </value>
+            <value>
+                <fullName>11 Months</fullName>
+                <default>false</default>
+                <label>11 Months</label>
+            </value>
+            <value>
+                <fullName>12 Months</fullName>
+                <default>false</default>
+                <label>12 Months</label>
+            </value>
+            <value>
+                <fullName>13 Months</fullName>
+                <default>false</default>
+                <label>13 Months</label>
+            </value>
+            <value>
+                <fullName>14 Months</fullName>
+                <default>false</default>
+                <label>14 Months</label>
+            </value>
+            <value>
+                <fullName>15 Months</fullName>
+                <default>false</default>
+                <label>15 Months</label>
+            </value>
+            <value>
+                <fullName>16 Months</fullName>
+                <default>false</default>
+                <label>16 Months</label>
+            </value>
+            <value>
+                <fullName>17 Months</fullName>
+                <default>false</default>
+                <label>17 Months</label>
+            </value>
+            <value>
+                <fullName>18 Months</fullName>
+                <default>false</default>
+                <label>18 Months</label>
+            </value>
+            <value>
+                <fullName>19 Months</fullName>
+                <default>false</default>
+                <label>19 Months</label>
+            </value>
+            <value>
+                <fullName>20 Months</fullName>
+                <default>false</default>
+                <label>20 Months</label>
+            </value>
+            <value>
+                <fullName>21 Months</fullName>
+                <default>false</default>
+                <label>21 Months</label>
+            </value>
+            <value>
+                <fullName>22 Months</fullName>
+                <default>false</default>
+                <label>22 Months</label>
+            </value>
+            <value>
+                <fullName>23 Months</fullName>
+                <default>false</default>
+                <label>23 Months</label>
+            </value>
+            <value>
+                <fullName>48 Months</fullName>
+                <default>false</default>
+                <label>48 Months</label>
+            </value>
+            <value>
+                <fullName>30 Days</fullName>
+                <default>false</default>
+                <label>30 Days</label>
+            </value>
+            <value>
+                <fullName>60 Days</fullName>
+                <default>false</default>
+                <label>60 Days</label>
+            </value>
+            <value>
+                <fullName>90 Days</fullName>
+                <default>false</default>
+                <label>90 Days</label>
+            </value>
+            <value>
+                <fullName>1 Day</fullName>
+                <default>false</default>
+                <label>1 Day</label>
+            </value>
+            <value>
+                <fullName>2 Days</fullName>
+                <default>false</default>
+                <label>2 Days</label>
+            </value>
+            <value>
+                <fullName>25 Days</fullName>
+                <default>false</default>
+                <label>25 Days</label>
+            </value>
+            <value>
+                <fullName>24 Months</fullName>
+                <default>false</default>
+                <label>24 Months</label>
+            </value>
+            <value>
+                <fullName>36 Months</fullName>
+                <default>false</default>
+                <label>36 Months</label>
+            </value>
+            <value>
+                <fullName>1 Year</fullName>
+                <default>false</default>
+                <label>1 Year</label>
+            </value>
+            <value>
+                <fullName>2 Years</fullName>
+                <default>false</default>
+                <label>2 Years</label>
+            </value>
+            <value>
+                <fullName>5 Years</fullName>
+                <default>false</default>
+                <label>5 Years</label>
+            </value>
+            <value>
+                <fullName>6 Years</fullName>
+                <default>false</default>
+                <label>6 Years</label>
+            </value>
+            <value>
+                <fullName>7 Years</fullName>
+                <default>false</default>
+                <label>7 Years</label>
+            </value>
+            <value>
+                <fullName>8 Years</fullName>
+                <default>false</default>
+                <label>8 Years</label>
+            </value>
+            <value>
+                <fullName>9 Years</fullName>
+                <default>false</default>
+                <label>9 Years</label>
+            </value>
+            <value>
+                <fullName>10 Years</fullName>
+                <default>false</default>
+                <label>10 Years</label>
+            </value>
+            <value>
+                <fullName>1-12 Months</fullName>
+                <default>false</default>
+                <label>1-12 Months</label>
+            </value>
+            <value>
+                <fullName>3 Days</fullName>
+                <default>false</default>
+                <label>3 Days</label>
+            </value>
+            <value>
+                <fullName>7 Days</fullName>
+                <default>false</default>
+                <label>7 Days</label>
+            </value>
+            <value>
+                <fullName>13 Weeks</fullName>
+                <default>false</default>
+                <label>13 Weeks</label>
+            </value>
+            <value>
+                <fullName>26 Weeks</fullName>
+                <default>false</default>
+                <label>26 Weeks</label>
+            </value>
+            <value>
+                <fullName>39 Weeks</fullName>
+                <default>false</default>
+                <label>39 Weeks</label>
+            </value>
+            <value>
+                <fullName>52 Weeks</fullName>
+                <default>false</default>
+                <label>52 Weeks</label>
+            </value>
+            <value>
+                <fullName>8 Weeks</fullName>
+                <default>false</default>
+                <label>8 Weeks</label>
+            </value>
+            <value>
+                <fullName>9 Weeks</fullName>
+                <default>false</default>
+                <label>9 Weeks</label>
+            </value>
+            <value>
+                <fullName>10 Weeks</fullName>
+                <default>false</default>
+                <label>10 Weeks</label>
+            </value>
+            <value>
+                <fullName>11 Weeks</fullName>
+                <default>false</default>
+                <label>11 Weeks</label>
+            </value>
+            <value>
+                <fullName>12 Weeks</fullName>
+                <default>false</default>
+                <label>12 Weeks</label>
+            </value>
+            <value>
+                <fullName>14 Weeks</fullName>
+                <default>false</default>
+                <label>14 Weeks</label>
+            </value>
+            <value>
+                <fullName>15 Weeks</fullName>
+                <default>false</default>
+                <label>15 Weeks</label>
+            </value>
+            <value>
+                <fullName>16 Weeks</fullName>
+                <default>false</default>
+                <label>16 Weeks</label>
+            </value>
+            <value>
+                <fullName>17 Weeks</fullName>
+                <default>false</default>
+                <label>17 Weeks</label>
+            </value>
+            <value>
+                <fullName>18 Weeks</fullName>
+                <default>false</default>
+                <label>18 Weeks</label>
+            </value>
+            <value>
+                <fullName>19 Weeks</fullName>
+                <default>false</default>
+                <label>19 Weeks</label>
+            </value>
+            <value>
+                <fullName>20 Weeks</fullName>
+                <default>false</default>
+                <label>20 Weeks</label>
+            </value>
+            <value>
+                <fullName>21 Weeks</fullName>
+                <default>false</default>
+                <label>21 Weeks</label>
+            </value>
+            <value>
+                <fullName>22 Weeks</fullName>
+                <default>false</default>
+                <label>22 Weeks</label>
+            </value>
+            <value>
+                <fullName>23 Weeks</fullName>
+                <default>false</default>
+                <label>23 Weeks</label>
+            </value>
+            <value>
+                <fullName>24 Weeks</fullName>
+                <default>false</default>
+                <label>24 Weeks</label>
+            </value>
+            <value>
+                <fullName>25 Weeks</fullName>
+                <default>false</default>
+                <label>25 Weeks</label>
+            </value>
+            <value>
+                <fullName>27 Weeks</fullName>
+                <default>false</default>
+                <label>27 Weeks</label>
+            </value>
+            <value>
+                <fullName>28 Weeks</fullName>
+                <default>false</default>
+                <label>28 Weeks</label>
+            </value>
+            <value>
+                <fullName>29 Weeks</fullName>
+                <default>false</default>
+                <label>29 Weeks</label>
+            </value>
+            <value>
+                <fullName>30 Weeks</fullName>
+                <default>false</default>
+                <label>30 Weeks</label>
+            </value>
+            <value>
+                <fullName>31 Weeks</fullName>
+                <default>false</default>
+                <label>31 Weeks</label>
+            </value>
+            <value>
+                <fullName>32 Weeks</fullName>
+                <default>false</default>
+                <label>32 Weeks</label>
+            </value>
+            <value>
+                <fullName>33 Weeks</fullName>
+                <default>false</default>
+                <label>33 Weeks</label>
+            </value>
+            <value>
+                <fullName>34 Weeks</fullName>
+                <default>false</default>
+                <label>34 Weeks</label>
+            </value>
+            <value>
+                <fullName>35 Weeks</fullName>
+                <default>false</default>
+                <label>35 Weeks</label>
+            </value>
+            <value>
+                <fullName>36 Weeks</fullName>
+                <default>false</default>
+                <label>36 Weeks</label>
+            </value>
+            <value>
+                <fullName>37 Weeks</fullName>
+                <default>false</default>
+                <label>37 Weeks</label>
+            </value>
+            <value>
+                <fullName>38 Weeks</fullName>
+                <default>false</default>
+                <label>38 Weeks</label>
+            </value>
+            <value>
+                <fullName>40 Weeks</fullName>
+                <default>false</default>
+                <label>40 Weeks</label>
+            </value>
+            <value>
+                <fullName>41 Weeks</fullName>
+                <default>false</default>
+                <label>41 Weeks</label>
+            </value>
+            <value>
+                <fullName>42 Weeks</fullName>
+                <default>false</default>
+                <label>42 Weeks</label>
+            </value>
+            <value>
+                <fullName>43 Weeks</fullName>
+                <default>false</default>
+                <label>43 Weeks</label>
+            </value>
+            <value>
+                <fullName>44 Weeks</fullName>
+                <default>false</default>
+                <label>44 Weeks</label>
+            </value>
+            <value>
+                <fullName>45 Weeks</fullName>
+                <default>false</default>
+                <label>45 Weeks</label>
+            </value>
+            <value>
+                <fullName>46 Weeks</fullName>
+                <default>false</default>
+                <label>46 Weeks</label>
+            </value>
+            <value>
+                <fullName>47 Weeks</fullName>
+                <default>false</default>
+                <label>47 Weeks</label>
+            </value>
+            <value>
+                <fullName>48 Weeks</fullName>
+                <default>false</default>
+                <label>48 Weeks</label>
+            </value>
+            <value>
+                <fullName>49 Weeks</fullName>
+                <default>false</default>
+                <label>49 Weeks</label>
+            </value>
+            <value>
+                <fullName>50 Weeks</fullName>
+                <default>false</default>
+                <label>50 Weeks</label>
+            </value>
+            <value>
+                <fullName>51 Weeks</fullName>
+                <default>false</default>
+                <label>51 Weeks</label>
+            </value>
+            <value>
+                <fullName>15 Days</fullName>
+                <default>false</default>
+                <label>15 Days</label>
+            </value>
+            <value>
+                <fullName>5 Days</fullName>
+                <default>false</default>
+                <label>5 Days</label>
+            </value>
+            <value>
+                <fullName>10 Days</fullName>
+                <default>false</default>
+                <label>10 Days</label>
+            </value>
+            <value>
+                <fullName>14 Days</fullName>
+                <default>false</default>
+                <label>14 Days</label>
+            </value>
+            <value>
+                <fullName>4 Weeks</fullName>
+                <default>false</default>
+                <label>4 Weeks</label>
+            </value>
+            <value>
+                <fullName>6 Weeks</fullName>
+                <default>false</default>
+                <label>6 Weeks</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

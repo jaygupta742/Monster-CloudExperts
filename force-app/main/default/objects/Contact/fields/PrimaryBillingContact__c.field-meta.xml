@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrimaryBillingContact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>#0989 Ability to tag Account Contact as the primary billing contact</description>
+    <label>Primary Billing Contact</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

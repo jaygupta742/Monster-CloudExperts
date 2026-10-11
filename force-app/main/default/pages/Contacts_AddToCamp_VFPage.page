@@ -1,0 +1,43 @@
+<!--
+/* 
+         * @ VFPage Name: Contacts_AddToCamp_VFPage
+         * @ Description: This Page Used For Custom List Button Opertaion Throgh LWC in Custom Contact ListView.
+         * @ Developed By : Shahid Sangolli
+		 * @ Controller : Contacts_AddToCampaign_Page_Controller
+         * @ Modified By: 
+         *     User Name      |     Modified Date     |     Reason
+         * ---------------------------------------------------------------
+         *     Shahid               ----------               Intial Creation
+		 *     Shahid               ----------               Added Cancel Button if No Record Selected Window.
+*/
+-->
+
+
+<apex:page standardController="Contact" sidebar="false" showHeader="true"  extensions="Contacts_AddToCampaign_Page_Controller" lightningStylesheets="true"    recordSetVar="contact" >
+	<apex:form style="width: 50%;margin-left: 25%;">
+    
+    <apex:outputPanel rendered="{!renderMe}" >
+        
+        <apex:includeLightning />
+            <script>
+                var compDefinition = { 
+                "componentDef" : "c:createCampaign", 
+                "attributes" :{ 
+                      "contacts" : {!json_val}
+                 } 
+                };
+        
+            var encodedCompDef = btoa(JSON.stringify(compDefinition));
+            window.parent.location = "/one/one.app#"+encodedCompDef;  
+        </script> 
+        </apex:outputPanel> 
+ 		<br/>
+         <apex:outputPanel >
+                <apex:pageMessages />
+            </apex:outputPanel>
+         <apex:commandButton action="{!Cancel}" value="Back" style="margin-left: 90%;font-weight: bold;"/>
+        
+    </apex:form>
+    
+
+</apex:page>

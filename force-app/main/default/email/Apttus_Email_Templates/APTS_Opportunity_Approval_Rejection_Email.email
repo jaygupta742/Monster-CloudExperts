@@ -1,0 +1,21 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"></head>
+<body>
+[[USERNAME]]:
+<br><br>
+Approval Request for Opportunity "[[OPPNAME]]" has been cancelled.
+<br><br>Opportunity Name: <span id="j_id0:emailTemplate:j_id3:j_id4:j_id24:j_id25:j_id45">[[OPPNAME]]</span>
+<br>Owner Full Name: <span id="j_id0:emailTemplate:j_id3:j_id4:j_id24:j_id25:j_id48">[[OWNERNAME]]</span>
+<br>Account Name: <span id="j_id0:emailTemplate:j_id3:j_id4:j_id24:j_id25:j_id51">[[ACCOUNTNAME]]</span>
+<br>Amount: [[AMOUNT]]
+<br>Rejection Reason: [[REJECTIONREASON]]
+<br>
+<br>
+<br>Click on the link below to access the Opportunity:
+<br><a href="[[OPPURL]]">[[OPPNAME]]</a>
+<br>
+<br>
+<br>
+</body>
+</html>

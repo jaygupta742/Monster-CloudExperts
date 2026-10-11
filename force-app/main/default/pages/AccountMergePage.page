@@ -1,0 +1,56 @@
+<apex:page controller="MergeClass" tabStyle="contact" lightningStylesheets="true">
+
+<script>
+function func()
+
+  {
+
+ // alert('function call');
+  var d='{!link}';
+  //alert(d);
+  window.open(d);
+  }
+</script>
+
+  <apex:outputText value="{!callfunc}" escape="false"></apex:outputText>
+
+
+ <apex:form >
+<apex:pageBlock id="fd" title=" Merge Multiple By ID">
+
+  <b style="font-Size:20;left-margin:30%"> Enter Account ID:</b>    <apex:inputtext value="{!acIds}" />
+
+<apex:pageblockbuttons location="top">
+    <apex:commandButton value="Add" action="{!addrow}" reRender="fd"/>
+   <apex:commandButton value="Go To Merge" action="{!goToMerge}"/>
+
+</apex:pageblockbuttons>
+
+ 
+
+<apex:pageBlockTable id="row" value="{!accountIds}" var="ids">
+    <apex:variable value="{!0}" var="colNo" />
+    <apex:column headerValue="Account To Be Merge">
+      
+        <apex:outputText value="{!ids}"></apex:outputText>
+             
+             
+             
+             
+    </apex:column>
+    
+    
+    <apex:column headerValue="Remove action">
+        <apex:commandButton action="{!RemoveMoreAccount}" value="Remove Row"  reRender="row">
+                          
+                         <apex:param name="p" value="{!colNo}" assignTo="{!rowIndexN}"/>
+                  </apex:commandButton>
+                    <apex:variable var="colNo" value="{!colNo+ 1}" />
+    </apex:column>
+    
+    
+    
+ </apex:pageBlockTable> 
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Current_Cost__c</fullName>
+    <description>Current cost for INEDGE Page(KYC)</description>
+    <inlineHelpText>Current cost for INEDGE Page</inlineHelpText>
+    <label>Current Cost</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Currency</type>
+</CustomField>

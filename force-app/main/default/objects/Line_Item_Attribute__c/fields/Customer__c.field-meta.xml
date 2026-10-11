@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer__c</fullName>
+    <label>Customer</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Adecco</fullName>
+                <default>false</default>
+                <label>Adecco</label>
+            </value>
+            <value>
+                <fullName>Adecco - RPO</fullName>
+                <default>false</default>
+                <label>Adecco - RPO</label>
+            </value>
+            <value>
+                <fullName>Advantage</fullName>
+                <default>false</default>
+                <label>Advantage</label>
+            </value>
+            <value>
+                <fullName>Allegis</fullName>
+                <default>false</default>
+                <label>Allegis</label>
+            </value>
+            <value>
+                <fullName>AlliedBarton</fullName>
+                <default>false</default>
+                <label>AlliedBarton</label>
+            </value>
+            <value>
+                <fullName>Ametek</fullName>
+                <default>false</default>
+                <label>Ametek</label>
+            </value>
+            <value>
+                <fullName>Aramark</fullName>
+                <default>false</default>
+                <label>Aramark</label>
+            </value>
+            <value>
+                <fullName>Aramark Hourly</fullName>
+                <default>false</default>
+                <label>Aramark Hourly</label>
+            </value>
+            <value>
+                <fullName>Aramark Salary</fullName>
+                <default>false</default>
+                <label>Aramark Salary</label>
+            </value>
+            <value>
+                <fullName>Comcast</fullName>
+                <default>false</default>
+                <label>Comcast</label>
+            </value>
+            <value>
+                <fullName>Consulate Health Care</fullName>
+                <default>false</default>
+                <label>Consulate Health Care</label>
+            </value>
+            <value>
+                <fullName>CyberCoders</fullName>
+                <default>false</default>
+                <label>CyberCoders</label>
+            </value>
+            <value>
+                <fullName>DTE Energy</fullName>
+                <default>false</default>
+                <label>DTE Energy</label>
+            </value>
+            <value>
+                <fullName>Emerson</fullName>
+                <default>false</default>
+                <label>Emerson</label>
+            </value>
+            <value>
+                <fullName>George S. May</fullName>
+                <default>false</default>
+                <label>George S. May</label>
+            </value>
+            <value>
+                <fullName>HMSHost</fullName>
+                <default>false</default>
+                <label>HMSHost</label>
+            </value>
+            <value>
+                <fullName>Howroyd Group</fullName>
+                <default>false</default>
+                <label>Howroyd Group</label>
+            </value>
+            <value>
+                <fullName>JobTarget</fullName>
+                <default>false</default>
+                <label>JobTarget</label>
+            </value>
+            <value>
+                <fullName>Kaye Bassman</fullName>
+                <default>false</default>
+                <label>Kaye Bassman</label>
+            </value>
+            <value>
+                <fullName>Kelly</fullName>
+                <default>false</default>
+                <label>Kelly</label>
+            </value>
+            <value>
+                <fullName>Kelly RPO</fullName>
+                <default>false</default>
+                <label>Kelly RPO</label>
+            </value>
+            <value>
+                <fullName>Kenan Advantage Group</fullName>
+                <default>false</default>
+                <label>Kenan Advantage Group</label>
+            </value>
+            <value>
+                <fullName>Kenexa</fullName>
+                <default>false</default>
+                <label>Kenexa</label>
+            </value>
+            <value>
+                <fullName>Manpower</fullName>
+                <default>false</default>
+                <label>Manpower</label>
+            </value>
+            <value>
+                <fullName>Masco</fullName>
+                <default>false</default>
+                <label>Masco</label>
+            </value>
+            <value>
+                <fullName>Masco Corporation</fullName>
+                <default>false</default>
+                <label>Masco Corporation</label>
+            </value>
+            <value>
+                <fullName>Mindfield</fullName>
+                <default>false</default>
+                <label>Mindfield</label>
+            </value>
+            <value>
+                <fullName>Mindfield Group</fullName>
+                <default>false</default>
+                <label>Mindfield Group</label>
+            </value>
+            <value>
+                <fullName>MP-Abbott</fullName>
+                <default>false</default>
+                <label>MP-Abbott</label>
+            </value>
+            <value>
+                <fullName>MP-Assurant</fullName>
+                <default>false</default>
+                <label>MP-Assurant</label>
+            </value>
+            <value>
+                <fullName>MP-Boardwalk Pipeline</fullName>
+                <default>false</default>
+                <label>MP-Boardwalk Pipeline</label>
+            </value>
+            <value>
+                <fullName>MP-Culligan</fullName>
+                <default>false</default>
+                <label>MP-Culligan</label>
+            </value>
+            <value>
+                <fullName>MP-Dana Corp</fullName>
+                <default>false</default>
+                <label>MP-Dana Corp</label>
+            </value>
+            <value>
+                <fullName>MP-Furniture Brands</fullName>
+                <default>false</default>
+                <label>MP-Furniture Brands</label>
+            </value>
+            <value>
+                <fullName>MP-Hobart Services</fullName>
+                <default>false</default>
+                <label>MP-Hobart Services</label>
+            </value>
+            <value>
+                <fullName>MP-Honeywell</fullName>
+                <default>false</default>
+                <label>MP-Honeywell</label>
+            </value>
+            <value>
+                <fullName>MP-Jefferson Wells</fullName>
+                <default>false</default>
+                <label>MP-Jefferson Wells</label>
+            </value>
+            <value>
+                <fullName>MP-Johns Manville</fullName>
+                <default>false</default>
+                <label>MP-Johns Manville</label>
+            </value>
+            <value>
+                <fullName>MP-KB Homes</fullName>
+                <default>false</default>
+                <label>MP-KB Homes</label>
+            </value>
+            <value>
+                <fullName>MP-KeySafetySystems</fullName>
+                <default>false</default>
+                <label>MP-KeySafetySystems</label>
+            </value>
+            <value>
+                <fullName>MPS Group</fullName>
+                <default>false</default>
+                <label>MPS Group</label>
+            </value>
+            <value>
+                <fullName>MP-Touch Commerce</fullName>
+                <default>false</default>
+                <label>MP-Touch Commerce</label>
+            </value>
+            <value>
+                <fullName>MP-Verigy</fullName>
+                <default>false</default>
+                <label>MP-Verigy</label>
+            </value>
+            <value>
+                <fullName>MP-Visteon</fullName>
+                <default>false</default>
+                <label>MP-Visteon</label>
+            </value>
+            <value>
+                <fullName>MP-Wachovia</fullName>
+                <default>false</default>
+                <label>MP-Wachovia</label>
+            </value>
+            <value>
+                <fullName>Randstad</fullName>
+                <default>false</default>
+                <label>Randstad</label>
+            </value>
+            <value>
+                <fullName>Randstad New RPO</fullName>
+                <default>false</default>
+                <label>Randstad New RPO</label>
+            </value>
+            <value>
+                <fullName>Randstad RPO</fullName>
+                <default>false</default>
+                <label>Randstad RPO</label>
+            </value>
+            <value>
+                <fullName>Robert Half</fullName>
+                <default>false</default>
+                <label>Robert Half</label>
+            </value>
+            <value>
+                <fullName>Sava Senior Care</fullName>
+                <default>false</default>
+                <label>Sava Senior Care</label>
+            </value>
+            <value>
+                <fullName>Select One</fullName>
+                <default>false</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>SmartRecruiters</fullName>
+                <default>false</default>
+                <label>SmartRecruiters</label>
+            </value>
+            <value>
+                <fullName>Sodexo, Inc</fullName>
+                <default>false</default>
+                <label>Sodexo, Inc</label>
+            </value>
+            <value>
+                <fullName>Spherion</fullName>
+                <default>false</default>
+                <label>Spherion</label>
+            </value>
+            <value>
+                <fullName>TAC</fullName>
+                <default>false</default>
+                <label>TAC</label>
+            </value>
+            <value>
+                <fullName>Talent Tree</fullName>
+                <default>false</default>
+                <label>Talent Tree</label>
+            </value>
+            <value>
+                <fullName>Uber</fullName>
+                <default>false</default>
+                <label>Uber</label>
+            </value>
+            <value>
+                <fullName>UHS Delaware</fullName>
+                <default>false</default>
+                <label>UHS Delaware</label>
+            </value>
+            <value>
+                <fullName>Walmart</fullName>
+                <default>false</default>
+                <label>Walmart</label>
+            </value>
+            <value>
+                <fullName>Wells Fargo</fullName>
+                <default>false</default>
+                <label>Wells Fargo</label>
+            </value>
+            <value>
+                <fullName>WillStaff</fullName>
+                <default>false</default>
+                <label>WillStaff</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

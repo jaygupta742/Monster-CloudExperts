@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OpportunityN__c.Closure_probablity__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>OpportunityN__c.Close_Date__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>OpportunityN__c.Remarks__c</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Account.PrimarySalesManager__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>OpportunityN__c.Expected_Revenue__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>VB Q4 Opportunity Report</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OpportunityN__c.Opportunity_Type__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>VB Q4 Opportunity Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$OpportunityN__c@OpportunityN__c.Account__c</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>false</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>OpportunityN__c.Close_Date__c</dateColumn>
+        <endDate>2025-03-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2024-12-15</startDate>
+    </timeFrameFilter>
+</Report>

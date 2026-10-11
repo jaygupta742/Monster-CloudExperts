@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Service_Type__c</fullName>
+    <label>Service Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AMC</fullName>
+                <default>false</default>
+                <label>AMC</label>
+            </value>
+            <value>
+                <fullName>APPS</fullName>
+                <default>false</default>
+                <label>APPS</label>
+            </value>
+            <value>
+                <fullName>CLOUD</fullName>
+                <default>false</default>
+                <label>CLOUD</label>
+            </value>
+            <value>
+                <fullName>DCIMS</fullName>
+                <default>false</default>
+                <label>DCIMS</label>
+            </value>
+            <value>
+                <fullName>EUSS</fullName>
+                <default>false</default>
+                <label>EUSS</label>
+            </value>
+            <value>
+                <fullName>OTHERS</fullName>
+                <default>false</default>
+                <label>OTHERS</label>
+            </value>
+            <value>
+                <fullName>IMS</fullName>
+                <default>false</default>
+                <label>IMS</label>
+            </value>
+            <value>
+                <fullName>FMS</fullName>
+                <default>false</default>
+                <label>FMS</label>
+            </value>
+            <value>
+                <fullName>SECURITY</fullName>
+                <default>false</default>
+                <label>SECURITY</label>
+            </value>
+            <value>
+                <fullName>ONE TIME</fullName>
+                <default>false</default>
+                <label>ONE TIME</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

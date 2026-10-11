@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Date_Rollup__c</fullName>
+    <inlineHelpText>Roll Up of Max End Date From Order Item , where Order Item&apos;s Renewal Eligibility is True</inlineHelpText>
+    <label>⁠Renewal Date</label>
+    <summarizedField>Order_Item__c.End_Date__c</summarizedField>
+    <summaryFilterItems>
+        <field>Order_Item__c.Renewal_Eligibility__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Order_Item__c.Order__c</summaryForeignKey>
+    <summaryOperation>max</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

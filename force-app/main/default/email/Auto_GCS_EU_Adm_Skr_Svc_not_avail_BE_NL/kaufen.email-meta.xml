@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>kaufen</name>
+    <style>none</style>
+    <subject>kaufen</subject>
+    <textOnly>Hallo zusammen,
+Bitte den Kunden/die Kundin zurückrufen.
+Name:
+Firmenname:
+Kontakt Telefon:
+Kontakt Email Adresse:
+Produkte:
+Vielen Dank und LG,
+INSERT RELEVANTE SIGNATUR
+
+]]&gt;</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

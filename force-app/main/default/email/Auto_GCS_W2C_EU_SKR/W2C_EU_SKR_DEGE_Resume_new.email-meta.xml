@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>5/4: Category not currently in use</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>W2C_EU_SKR_DEGE_Resume_new</name>
+    <style>none</style>
+    <subject>Lebenslauf (anlegen / bearbeiten / entfe - Case #: {!Case.CaseNumber} {!Case.Thread_Id}</subject>
+    <textOnly>Sehr geehrte(r) Monster-Nutzer /-in,
+
+vielen Dank für Ihre E-Mail.
+
+Ihrer Nachricht entnehmen wir, dass Sie Fragen zu Ihrem Lebenslauf haben. Gerne stellen wir Ihnen Lösungsmöglichkeiten zur Verfügung.
+
+Auf monster.de können Sie bis zu fünf Lebensläufe hochladen oder aus Ihren Profilinformationen erstellen.
+Einer davon kann für Unternehmen sichtbar und damit auffindbar sein. Alle Lebensläufe in Ihrem Benutzerkonto können Sie verwenden, um sich auf Stellenangebote auf monster.de zu bewerben.
+
+Um Ihren Lebenslauf Ihrem Konto hinzuzufügen, gehen Sie bitte wie folgt vor:
+
+Melden Sie sich in Ihrem Benutzerkonto mit Ihren Zugangsdaten ein.
+Klicken Sie im Hauptmenü auf „Lebenslauf“.
+Geben Sie Ihrem Lebenslauf bitte einen aussagekräftigen Namen und einen gängigen Jobtitel.
+Nun wählen Sie bitte aus, ob Sie entweder einen Lebenslauf erstellen oder hochladen möchten.
+Bitte folgen Sie den Anweisungen auf der Seite, um Ihren Lebenslauf zu erstellen.
+
+
+Unter „Lebenslaufeinstellungen“ können Sie Ihrem Lebenslauf nach dem Onlinestellen noch einen neuen Namen geben, die Sichtbarkeit anpassen und auch den Status ändern.
+
+PDF beschädigt:
+Sollten Sie die Systemnachricht erhalten, dass Ihr Lebenslauf keinen Text enthält, stellen Sie bitte sicher, dass es sich bei Ihrer Datei um keinen komplett eingescannten Lebenslauf im Bild-Format handelt. Dateien im Bild-Format können nicht auf Suchbegriffe durchsucht werden. Diese Suchbegriffe sind jedoch wichtig, damit Ihr Lebenslauf gefunden werden kann, da Unternehmen zum Finden von Lebensläufen z. B. Jobtitel oder gewünschte Qualifikationen in eine Suchmaske eingeben. Verwenden Sie daher bitte einen von MS Word in PDF konvertierten Lebenslauf.
+
+Falls Sie Anregungen für die Gestaltung Ihres Lebenslaufs suchen, finden Sie unter „Ratgeber &amp; Foren“ Lebenslaufvorlagen, Tipps und auch Experten-Foren. Hier können Sie auch konkrete Fragen stellen: http://karriere-journal.monster.de/lebenslauf-anschreiben/careers.aspx
+
+Lebenslauf ändern:
+Um Änderungen an Ihrem hochgeladenen Lebenslauf-Dokument vorzunehmen, laden Sie bitte unter „Meine Lebensläufe: (Verwaltung)“ Ihren Lebenslauf herunter, um die Änderungen im Dokument direkt durchzuführen und die neue Version erneut hochzuladen.
+
+Um Änderungen an Ihrem Lebenslauf, der durch Ihr Profil erstellt wurde, vorzunehmen, gehen Sie bitte auf die Lebenslaufübersicht „Meine Lebensläufe: (Verwaltung)“ und öffnen Sie den Lebenslauf. Sie können dann dort auf die jeweiligen Punkte klicken und die gewünschten Änderungen vornehmen.
+
+Lebenslauf entfernen:
+In der Lebenslauf-Übersicht unter „Lebenslauf“ – „Meine Lebensläufe: (Verwaltung)“ befindet sich die Option „Löschen“. Diese Funktion entfernt Ihren Lebenslauf unwiderruflich aus Ihrem Benutzerkonto.
+
+Wir hoffen, dass Ihnen diese Schritte weiterhelfen konnten.
+
+Rechts oben auf monster.de finden Sie unter „Hilfe &amp; Sicherheit“ – „FAQ“ weitere Informationen zu Ihrem Konto zum Thema Lebenslauf.
+
+Sollten Sie weitere Unterstützung benötigen, zögern Sie bitte nicht, auf diese Nachricht zu antworten. Wir melden uns schnellstmöglich bei Ihnen.
+
+Monster legt hohen Wert auf Kundenzufriedenheit. Daher können Sie in Kürze eine Umfrage bezüglich Ihrer Erfahrungen mit unserem Kundenservice erhalten. Wir würden uns freuen, wenn Sie sich ein paar Minuten Ihrer Zeit für die Umfrage nehmen würden. Die Ergebnisse helfen uns, unseren Service stetig zu verbessern.
+
+
+Vielen Dank und mit freundlichen Grüßen
+
+Ihr Team von Monster</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

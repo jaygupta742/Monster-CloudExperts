@@ -1,0 +1,70 @@
+<apex:page extensions="CustomApprovalProcessController" standardController="apttus_proposal_proposal__c" showHeader="false" showChat="false" sidebar="true" lightningStylesheets="true">
+   <style>
+       
+      .hoverTable tr.overAllStatusRow{font-weight:700;background-color:#ddb929}.whiteHead,td.whiteHead{color:#fff!important;padding-left:10px}.hoverTable tr.dataRow:hover{background-color:#e3f3ff}.hoverTable #overAllStatusRow:hover{background-color:#ddb929}.Approved{background-color:#a1f78d}.Rejected{background-color:#fb8a8c}.Removed{background-color: #c0bebc}.Pending{background-color:#ffd74b}.approval_btn{-webkit-border-radius:4;-moz-border-radius:4;border-radius:4px;font-family:Arial;color:#fff!important;font-size:10.8px;background:#ddb929;padding:5px 10px;margin-left:5px;text-decoration:none}.approval_btn:hover{background:#ebca44;background-image:-webkit-linear-gradient(top,#ebca44,#d1ad1b);background-image:-moz-linear-gradient(top,#ebca44,#d1ad1b);background-image:-ms-linear-gradient(top,#ebca44,#d1ad1b);background-image:-o-linear-gradient(top,#ebca44,#d1ad1b);background-image:linear-gradient(to bottom,#ebca44,#d1ad1b);text-decoration:none}.hoverTable tr#headerRow,.hoverTable tr#headerRow:hover{background:#f2f3f3;border-color:#e0e3e5}.hoverTable tr#headerRow td{padding:11px 0}
+   </style>
+       <apex:pageBlock title="Quote Approvals Details">
+        
+       <div class="pbBody">
+           <table class="list hoverTable" border="0" cellpadding="0" cellspacing="0">
+               <tbody>
+                   <tr class="dataRow" id="headerRow">
+                   <td class="dataCell"></td>
+                   <td class="dataCell"></td>                  
+                   <td class="dataCell" colspan="3">
+                       <apex:outputLink rendered="{!aSW.isSubmitForApproval}" styleClass="approval_btn" title="Submit For Quote Approval" target="_parent" value="{!URLFOR($Action.apttus_proposal_proposal__c.Submit,$CurrentPage.Parameters.ID)}">
+                           Submit For Quote Approval
+                       </apex:outputLink>
+                       <apex:outputLink rendered="{! !aSW.isSubmitForApproval}" styleClass="approval_btn" title="Recall Quote Approval Request" target="_parent" value="{!aSW.recallApprovalProcessLink}">
+                           Recall Quote Approval Request
+                       </apex:outputLink>
+                       
+                    
+                   </td>
+
+                   <td class="dataCell"></td>
+                   <td class="dataCell"></td>                                                        
+                   </tr>
+                   <tr class="headerRow" style="display:{!IF(aSW.isSubmitForApproval,'none;','')}">
+                       <th>Action</th>
+                       <th>Date</th>
+                       <th>Status</th>
+                       <th>Assigned To</th>
+                       <th>Comments</th>
+                       <th>Actual Approver</th>
+                       <th>Overall Status</th>
+                   </tr>                   
+                   <apex:repeat value="{!aSW.approvals}" var="s">
+                       <tr class="overAllStatusRow dataRow" id="overAllStatusRow">
+                           <td colspan="6" class="dataCell whiteHead">
+                               {!IF(AND(s['listOfSteps'][0].stepstatus != 'Started', s['listOfSteps'][0].ProcessNode.Name != NULL),IF( s['listOfSteps'][0].stepstatus !='Removed','Step : '+s['listOfSteps'][0].ProcessNode.Name + IF(s['listOfSteps'][0].stepstatus=='Pending',' (Pending for first approval) ',''),'Approval Request Recalled'), 'Approval Request Submitted')}
+                           </td>
+                           <td class="dataCell {!s['listOfSteps'][0].stepstatus}">
+                                {!IF(AND(s['listOfSteps'][0].stepstatus != 'Started',s['listOfSteps'][0].stepstatus != 'NoResponse'),IF( s['listOfSteps'][0].stepstatus !='Removed',s['listOfSteps'][0].stepstatus,'Recalled'), '')}
+                           </td>
+                       </tr>
+                           <apex:repeat var="step" value="{!s.listOfSteps}">
+                               <tr class="dataRow">
+                                   <td class="dataCell">
+                                       <apex:outputText rendered="{!step.stepstatus == 'Pending'}">
+                                               <a href="{!s.workItemReassignLink}" target="_parent">Reassign</a> | <a href="{!s.workItemApproveOrRejectLink}" target="_parent"> Approve / Reject</a>
+                                       </apex:outputText>
+                                   </td>
+                                   <td class="dataCell">
+                                       <apex:outputText value="{0,date,dd/MM/YYYY HH:mm:ss}">
+                                           <apex:param value="{!step.CreatedDate}"/>
+                                       </apex:outputText> 
+                                   </td>
+                                   <td class="dataCell">{!IF(step.Stepstatus!='NoResponse',step.Stepstatus,'')}</td>
+                                   <td class="dataCell"><a href="/{!step.OriginalActorID}" target='_parent'>{!step.OriginalActor.Name}</a></td>
+                                   <td class="dataCell">{!step.comments}</td>
+                                   <td class="dataCell"><a href="/{!step.ActorId}" target='_parent'>{!step.Actor.Name}</a></td>
+                                   <td></td>
+                               </tr>
+                           </apex:repeat>
+                </apex:repeat>
+               </tbody>
+           </table>
+       </div>
+       </apex:pageBlock>
+</apex:page>

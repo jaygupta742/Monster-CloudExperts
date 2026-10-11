@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Contact_Type__c</fullName>
+    <description>S-500342</description>
+    <inlineHelpText>Type of action that set the First Contact Date</inlineHelpText>
+    <label>First Contact Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call</fullName>
+                <default>false</default>
+                <label>Call</label>
+            </value>
+            <value>
+                <fullName>Email</fullName>
+                <default>false</default>
+                <label>Email</label>
+            </value>
+            <value>
+                <fullName>Chatter Post</fullName>
+                <default>false</default>
+                <label>Chatter Post</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Balance_Months__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE(Deployment_Month__c, 
+&quot;January&quot;, 3,
+&quot;February&quot;, 2,
+&quot;March&quot;, 1,
+&quot;April&quot;, 12,
+&quot;May&quot;, 11,
+&quot;June&quot;, 10,
+&quot;July&quot;, 9,
+&quot;August&quot;, 8,
+&quot;September&quot;, 7,
+&quot;October&quot;, 6,
+&quot;November&quot;, 5,
+4)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Balance Months</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

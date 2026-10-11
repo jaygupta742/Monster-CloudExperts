@@ -1,0 +1,136 @@
+<aura:component controller="sendQuote_cls" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global">	
+    <aura:attribute name="quote" type="QuotesN__c"/>
+    <aura:attribute name="to" type="String" />
+    <aura:attribute name="cc" type="String"  />
+    <aura:attribute name="subject" type="String" />
+    <aura:attribute name="body" type="String"/>
+    <aura:attribute name="next"  type="boolean" default="false"/>
+    
+    <aura:attribute name="temp" type="Template__c[]"/>
+    <aura:attribute name="ctemp" type="Template__c[]"/>
+    <aura:attribute name="quotepdf" type="String"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 90%;
+        max-width: 80rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        }
+    </aura:html>
+    
+    <aura:if isTrue="{!v.next==false}">
+        <br/>
+        <div class="slds-modal__header"> 
+            <h1 class="slds-page-header__title"  style=" width:100%; background-color: #2E86C1; color: white; height: 35px;text-align: center;margin-top:50px">Select Template</h1>
+        </div> 
+        
+        <div class="slds-modal__content slds-p-around_medium width:30px" >
+            
+            <div  >
+                <table style=" width:400px;margin-left:370px;height:200px "> 
+                    
+                    <thead>
+                        <tr style=" width:100px; background-color: #2E86C1; color: white; height: 35px; ">
+                            <th style="width:2%; border: 1px solid #2E86C1; text-align: center">Select</th>
+                            <th style="width:10%; border: 1px solid #2E86C1;text-align: center">Template Name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.temp}" var="item" indexVar="rowIndex">
+                            <tr class="tableRow" style="height: 40px; ">
+                                <td style="border: 1px solid #C1C1C1; text-align: center;padding-left:40px" >
+                                  <ui:inputCheckbox value="{!item.isChecked}" change="{!c.selectAllCheckbox}" name="{!rowIndex}" />
+                                </td>
+                                <td style="border: 1px solid #C1C1C1; text-align: center;">{!item.Name}</td>
+                                
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div>  
+            
+            
+            <div  style="text-align: center">
+                <div style="padding-top: 23px; margin-left:50px">
+                    <button class="slds-button slds-button_brand" onclick="{!c.gonext}">Proceed</button>
+                </div>
+            </div>
+        </div>
+        <aura:set attribute="else">
+            <div class="slds-page-header" role="banner">
+                <div style="display: flex; flex-direction: row">
+                    <div style="margin-right: 10px">
+                        <lightning:icon iconName="custom:custom20"  size="large"/>
+                    </div>
+                    <div>
+                        <div class="slds-page-header__title slds-truncate">Send Mail With Quote PDF.</div>        
+                        <div class="slds-page-header__name-meta slds-text-color--weak">Sending mail with Quote PDF</div>
+                    </div>
+                </div>
+            </div>
+            <br></br>
+            
+            <div class="slds-m-around--large" style="margin-left:15%; width: 70%;">
+                <div class="slds-container--large">
+                    <div class="slds-form--stacked">
+                        <ui:inputEmail class="slds-input"  label="TO:" aura:id="TO"  value="{!v.to}" placeholder="aaa@bbb.com" />
+                        <!--<ui:inputText class="slds-input" label="TO:" aura:id="to" value="{!v.to}" placeholder="aaa@bbb.com"/>-->
+                        <br></br>                
+                        <ui:inputText class="slds-input" label="CC:" aura:id="from" value="{!v.cc}" placeholder="ddd@fff.com"/>
+                        <br></br>
+                        <ui:inputText class="slds-input" label="Subject" aura:id="subject" value="{!v.subject}" placeholder="Subject goes here"/>
+                        <br></br>
+                        <label class="slds-form-element__label" for="textareaSample2">Mail Body</label>
+                        <lightning:inputRichText aura:id="body" value="{!v.body}"/>                
+                        <br></br>
+                        
+                        <div style="text-align:center;">
+                            <lightning:button variant="label-hidden" class="button" aura:id="button" onclick="{!c.sendit}"  >              
+                                <lightning:icon iconName='action:email' alternativeText='email' size='large' title='email'/>
+                                <span class="slds-assistive-text">Email Icon</span>
+                            </lightning:button>
+                        </div>                            
+                    </div>
+                    <br></br>
+                    
+                    <aura:iteration items="{!v.ctemp}" var="item" indexVar="row">
+                        <div style="float:center;margin-left:1px;"><iframe src="{!'https://monsterindia--newone.lightning.force.com/apex/'+item.PDF__c+'?Id='+ v.recordId}" width="100%" height="800px;" frameBorder="0"/></div>
+                    </aura:iteration>
+                    
+                    
+                    <aura:if isTrue="{!v.quote.Attach_Service_Agreement__c}">
+                        <div style="float:center;margin-left:1px;"><iframe src="{!'https://monsterindia--newone.lightning.force.com/apex/Quote_pdf?Id=' + v.recordId }" width="100%" height="800px;" frameBorder="0"/></div>         
+                    </aura:if>
+                    
+                    <aura:if isTrue="{!v.quote.Attach_Prefilled_Cart_Report__c}">   
+                        <div style="float:center;margin-left:1px;"><iframe src="{!'https://monsterindia--newone.lightning.force.com/apex/QuoteNewPDF?Id=' + v.recordId }" width="100%" height="800px;" frameBorder="0"/></div> 
+                    </aura:if>
+                    
+                    <aura:if isTrue="{!and((v.quote.Attach_Prefilled_Cart_Report__c) ,(v.quote.Attach_Prefilled_Cart_Report__c))}" >   
+                        <div style="float:center;margin-left:1px;"><iframe src="{!'https://monsterindia--newone.lightning.force.com/apex/QuoteNewPDF?Id=' + v.recordId }" width="100%" height="800px;" frameBorder="0"/></div> 
+                        <div style="float:center;margin-left:1px;"><iframe src="{!'https://monsterindia--newone.lightning.force.com/apex/Quote_pdf?Id=' + v.recordId }" width="100%" height="800px;" frameBorder="0"/></div>
+                    </aura:if>
+                </div>
+            </div>
+        </aura:set>
+    </aura:if>
+</aura:component>

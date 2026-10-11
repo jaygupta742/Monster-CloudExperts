@@ -1,0 +1,41 @@
+<apex:page standardController="QuotesN__c" action="{!UpadteOpp}" extensions="Generate_Foundit_PDF" showHeader="true" lightningStylesheets="true" sidebar="true" applyHtmlTag="true" docType="html-5.0" cache="false" tabStyle="QuotesN__c">
+    <apex:sectionHeader title="Generate Proposal"/>
+    <apex:form >
+        <apex:pageblock mode="edit" title="Templates" rendered="{!Quote.Quote_Type__c != 'Recontract'}">
+            <apex:pageblockButtons location="top">
+                <apex:commandButton value="Generate"  id="abc" disabled="{!a}" action="{!Generate}" />
+                <apex:commandButton value="cancel" action="{!cancel}"/>
+            </apex:pageblockButtons>
+            <apex:selectRadio value="{!pdfdoc_val}" layout="pageDirection">
+                <apex:selectOptions value="{!pdfdoc}" ></apex:selectOptions>
+                <apex:actionSupport action="{!selectcon}" event="onclick" reRender="abc"></apex:actionSupport>
+            </apex:selectRadio>
+            <div>{!pdfdoc_val}</div>
+            
+            <div>
+                <apex:inputCheckbox value="{!showAccessories}" id="showAccessoriesId"/>
+                <apex:outputLabel value="Check the box, to display the Services in the Agreement PDF" for="showAccessoriesId"/>
+            </div> 
+            
+            <br />
+            <apex:outputPanel rendered="{!Quote.Selling_Country__c == 'India'}">
+                <div>
+                    <apex:inputCheckbox value="{!showindiachecked}" id="showindiacheckedId"/>
+                    <apex:outputLabel value="Half Yearly PPI Guidelines" for="showindiacheckedId"/>
+                </div>
+            </apex:outputPanel>
+        </apex:pageblock>
+        <!-- ***************************** Templates for Recontract ***************************** -->
+        <apex:pageblock mode="edit" title="Templates" rendered="{!Quote.Quote_Type__c == 'Recontract'}">
+            <apex:pageblockButtons location="top">
+                <apex:commandButton value="Generate" id="GenerateButton" disabled="{!a}" action="{!Generate}" />
+                <apex:commandButton value="cancel" action="{!cancel}"/>
+            </apex:pageblockButtons>
+
+            <apex:selectRadio value="{!pdfdoc_val}" layout="pageDirection">
+                <apex:selectOptions value="{!RecontractOptions}" ></apex:selectOptions>
+                <apex:actionSupport action="{!selectcon}" event="onclick" reRender="GenerateButton"></apex:actionSupport>
+            </apex:selectRadio>
+        </apex:pageblock>
+    </apex:form>
+</apex:page>

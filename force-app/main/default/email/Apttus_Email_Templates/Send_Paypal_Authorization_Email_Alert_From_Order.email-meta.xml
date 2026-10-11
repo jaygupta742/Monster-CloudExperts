@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Send Paypal Authorization Email Alert From Order</name>
+    <style>none</style>
+    <subject>Credit Card Authorization</subject>
+    <textOnly>Hi {!Order__c.BillingContact__c},
+
+Account Name :  {!Order__c.Account__c}
+Order ID :  {!delete__c.Name}
+Order Status: {!Order__c.OrderStatus__c}
+Order Amount :  {!Order__c.NetTotalAmount__c}
+
+Please click the link below to pay by credit card:
+Paypal URL</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

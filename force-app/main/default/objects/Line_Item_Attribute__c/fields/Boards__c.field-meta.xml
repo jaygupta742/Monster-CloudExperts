@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Boards__c</fullName>
+    <label>Boards</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Diversity US</fullName>
+                <default>false</default>
+                <label>Diversity US</label>
+            </value>
+            <value>
+                <fullName>Core</fullName>
+                <default>false</default>
+                <label>Core</label>
+            </value>
+            <value>
+                <fullName>Diversity</fullName>
+                <default>false</default>
+                <label>Diversity</label>
+            </value>
+            <value>
+                <fullName>Veteran</fullName>
+                <default>false</default>
+                <label>Veteran</label>
+            </value>
+            <value>
+                <fullName>Complete</fullName>
+                <default>false</default>
+                <label>Complete</label>
+            </value>
+            <value>
+                <fullName>Monster</fullName>
+                <default>false</default>
+                <label>Monster</label>
+            </value>
+            <value>
+                <fullName>US Veteran Careers</fullName>
+                <default>false</default>
+                <label>US Veteran Careers</label>
+            </value>
+            <value>
+                <fullName>ActeursPublique</fullName>
+                <default>false</default>
+                <label>ActeursPublique</label>
+            </value>
+            <value>
+                <fullName>JobsAhead</fullName>
+                <default>false</default>
+                <label>JobsAhead</label>
+            </value>
+            <value>
+                <fullName>Monster.fr - Formation zone</fullName>
+                <default>false</default>
+                <label>Monster.fr - Formation zone</label>
+            </value>
+            <value>
+                <fullName>Springer Health Care</fullName>
+                <default>false</default>
+                <label>Springer Health Care</label>
+            </value>
+            <value>
+                <fullName>Public Jobs in Switzerland (CH)</fullName>
+                <default>false</default>
+                <label>Public Jobs in Switzerland (CH)</label>
+            </value>
+            <value>
+                <fullName>Campus-FR</fullName>
+                <default>false</default>
+                <label>Campus-FR</label>
+            </value>
+            <value>
+                <fullName>Premier Emploi</fullName>
+                <default>false</default>
+                <label>Premier Emploi</label>
+            </value>
+            <value>
+                <fullName>Hanploi.com</fullName>
+                <default>false</default>
+                <label>Hanploi.com</label>
+            </value>
+            <value>
+                <fullName>Weblaw</fullName>
+                <default>false</default>
+                <label>Weblaw</label>
+            </value>
+            <value>
+                <fullName>Alumni Commerce</fullName>
+                <default>false</default>
+                <label>Alumni Commerce</label>
+            </value>
+            <value>
+                <fullName>Alumni Engineering</fullName>
+                <default>false</default>
+                <label>Alumni Engineering</label>
+            </value>
+            <value>
+                <fullName>Blue Collar</fullName>
+                <default>false</default>
+                <label>Blue Collar</label>
+            </value>
+            <value>
+                <fullName>Campus</fullName>
+                <default>false</default>
+                <label>Campus</label>
+            </value>
+            <value>
+                <fullName>Core/Diversity</fullName>
+                <default>false</default>
+                <label>Core/Diversity</label>
+            </value>
+            <value>
+                <fullName>Diversity BullHorn</fullName>
+                <default>false</default>
+                <label>Diversity BullHorn</label>
+            </value>
+            <value>
+                <fullName>Diversity UK</fullName>
+                <default>false</default>
+                <label>Diversity UK</label>
+            </value>
+            <value>
+                <fullName>Franchise</fullName>
+                <default>false</default>
+                <label>Franchise</label>
+            </value>
+            <value>
+                <fullName>Free Job Board</fullName>
+                <default>false</default>
+                <label>Free Job Board</label>
+            </value>
+            <value>
+                <fullName>Humo.be</fullName>
+                <default>false</default>
+                <label>Humo.be</label>
+            </value>
+            <value>
+                <fullName>MonsterPublicFr</fullName>
+                <default>false</default>
+                <label>MonsterPublicFr</label>
+            </value>
+            <value>
+                <fullName>MonsterTrak</fullName>
+                <default>false</default>
+                <label>MonsterTrak</label>
+            </value>
+            <value>
+                <fullName>MonsterVillage</fullName>
+                <default>false</default>
+                <label>MonsterVillage</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Private Board</fullName>
+                <default>false</default>
+                <label>Private Board</label>
+            </value>
+            <value>
+                <fullName>Select One</fullName>
+                <default>false</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>Talenteo</fullName>
+                <default>false</default>
+                <label>Talenteo</label>
+            </value>
+            <value>
+                <fullName>Weblaw Job</fullName>
+                <default>false</default>
+                <label>Weblaw Job</label>
+            </value>
+            <value>
+                <fullName>Weblaw Job Campus</fullName>
+                <default>false</default>
+                <label>Weblaw Job Campus</label>
+            </value>
+            <value>
+                <fullName>Weiterbildung</fullName>
+                <default>false</default>
+                <label>Weiterbildung</label>
+            </value>
+            <value>
+                <fullName>Core &amp; Diversity</fullName>
+                <default>false</default>
+                <label>Core &amp; Diversity</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

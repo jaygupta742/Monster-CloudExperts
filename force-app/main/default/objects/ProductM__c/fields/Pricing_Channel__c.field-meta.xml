@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pricing_Channel__c</fullName>
+    <label>Pricing Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Commercial</fullName>
+                <default>false</default>
+                <label>Commercial</label>
+            </value>
+            <value>
+                <fullName>ECOMM</fullName>
+                <default>false</default>
+                <label>ECOMM</label>
+            </value>
+            <value>
+                <fullName>Fortune 100</fullName>
+                <default>false</default>
+                <label>Fortune 100</label>
+            </value>
+            <value>
+                <fullName>Fortune 1000</fullName>
+                <default>false</default>
+                <label>Fortune 1000</label>
+            </value>
+            <value>
+                <fullName>Fortune 500</fullName>
+                <default>false</default>
+                <label>Fortune 500</label>
+            </value>
+            <value>
+                <fullName>Franchise Level 1</fullName>
+                <default>false</default>
+                <label>Franchise Level 1</label>
+            </value>
+            <value>
+                <fullName>Franchise Level 2</fullName>
+                <default>false</default>
+                <label>Franchise Level 2</label>
+            </value>
+            <value>
+                <fullName>Franchise Level 3</fullName>
+                <default>false</default>
+                <label>Franchise Level 3</label>
+            </value>
+            <value>
+                <fullName>Government</fullName>
+                <default>false</default>
+                <label>Government</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>MRI Franchisees</fullName>
+                <default>false</default>
+                <label>MRI Franchisees</label>
+            </value>
+            <value>
+                <fullName>NAP</fullName>
+                <default>false</default>
+                <label>NAP</label>
+            </value>
+            <value>
+                <fullName>Oil &amp; Gas</fullName>
+                <default>false</default>
+                <label>Oil &amp; Gas</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Public Sector</fullName>
+                <default>false</default>
+                <label>Public Sector</label>
+            </value>
+            <value>
+                <fullName>SME</fullName>
+                <default>false</default>
+                <label>SME</label>
+            </value>
+            <value>
+                <fullName>Staffing</fullName>
+                <default>false</default>
+                <label>Staffing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reference</fullName>
+    <booleanFilter>1 OR 2</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Request_Date__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Reference__c</columns>
+    <columns>Stage__c</columns>
+    <columns>Status__c</columns>
+    <columns>Owner_Name__c</columns>
+    <columns>Validation_Owner__c</columns>
+    <columns>Validated_BY__c</columns>
+    <columns>Validated_Date_Time__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Reference__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Reference__c</field>
+        <operation>equals</operation>
+    </filters>
+    <label>Reference</label>
+    <sharedTo>
+        <group>Collection_Team</group>
+    </sharedTo>
+</ListView>

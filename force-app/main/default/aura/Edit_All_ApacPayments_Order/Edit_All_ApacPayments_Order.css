@@ -1,0 +1,31 @@
+.THIS {
+}
+
+.THIS .table-thead-tr {
+    height: 30px;
+    border-top: 2px solid #C1C1C1;
+    border-bottom: 2px solid #C1C1C1;
+    background-color: #F3F2F2;
+}
+
+.THIS .table-thead-th {
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.THIS .table-tbody-tr {
+    height: 40px;
+    border-top: 1px solid #C1C1C1;
+    border-bottom: 1px solid #C1C1C1;
+}
+
+.THIS .table-tbody-tr:hover {
+    background-color: #F3F2F2;
+}
+
+.THIS .table-tbody-td {
+    text-align: center;
+}

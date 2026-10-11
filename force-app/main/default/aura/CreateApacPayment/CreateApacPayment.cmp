@@ -1,0 +1,139 @@
+<aura:component controller="CreateApacPayment" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+    <aura:attribute name="task" type="APAC_Payments__c[]" /> 
+    <aura:attribute name="status" type="string" />
+    <aura:attribute name="Validationstatus" type="Boolean" default="false"/>
+    <aura:attribute name="gross" type="decimal" />
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 180rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        }
+    </aura:html>
+    
+    <!--  <aura:if isTrue="{!v.status!='Approved'}">-->
+    <aura:if isTrue="{!OR(v.status=='Approved',v.Validationstatus)}">
+        <div style="font-size:20px;text-align:center;font-weight:bold;height:100px;padding-top: 30px;">
+            You Cannot Add APAC PAYMENT Once it is Approved Or Validated !!! </div>
+        
+        <aura:set attribute="else">
+            
+            <div class="slds-modal__header">
+                <h1 class="slds-page-header__title">Add APAC Payments</h1>
+            </div>
+            
+            <div class="slds-modal__content slds-p-around_medium" >
+                <div style="border: 1px solid #c1c1c1; padding: 5px; border-radius: 5px;">            
+                    <div style="text-align: center; margin: 10px">
+                        <button class="slds-button slds-button_brand" onclick="{!c.addrows}">Add Rows</button>        
+                        <button class="slds-button slds-button_brand" onclick="{!c.addfiverows}">Add 5 Rows</button>        
+                        <button class="slds-button slds-button_success" onclick="{!c.saveit}">Save APAC Payment</button>        
+                    </div> <!-- button section -->
+                    
+                    <div class="slds-scrollable_x" style="width: 120%; height: auto; font-weight: normal;table-layout:fixed;">
+                        <div style="width: 100%">
+                            <lightning:recordEditForm objectApiName="APAC_Payments__c">
+                                <table>
+                                    <thead>
+                                        <tr class="table-head">
+                                            <th class="table-head-th" style="width: 2%;">No</th>	
+                                            <th class="table-head-th" style="width: 7%">Quote</th>
+                                            <!--<th class="table-head-th" style="width: 15%">Contact </th>-->
+                                            <th class="table-head-th" style="width: 5%">Due Date<b style="color:red;">*</b></th>
+                                            <th class="table-head-th" style="width: 5%">Payment Type</th>
+                                            <th class="table-head-th" style="width: 5%">Amount<b style="color:red;">*</b></th>
+                                            <th class="table-head-th" style="width: 5%">TDS Amount<b style="color:red;">*</b></th>
+                                            <!--<th class="table-head-th" style="width: 5%">Payment Received Amount</th>
+                                <th class="table-head-th" style="width: 5%">TDS Payment Amount</th>-->
+                                            <!-- <th class="table-head-th" style="width: 5%">GST%<b style="color:red;">*</b></th> -->
+                                            <!--<th class="table-head-th" style="width: 5%">Payment Date</th>
+                                <th class="table-head-th" style="width: 5%">Finance Reference</th>-->
+                                            <th class="table-head-th" style="width: 5%">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!v.task}" var="i" indexVar="row">
+                                            <tr class="table-body">
+                                                <td style="text-align: left;">{!row+1}</td>
+                                                <td >
+                                                    <lightning:inputField fieldName="Quotes__c" variant="label-hidden" value="{!i.Quotes__c}" disabled="true"></lightning:inputField>
+                                                </td>
+                                                <!--<td style="padding: 0px 5px 0px 5px">
+                                     <lightning:inputField fieldName="Contact__c" variant="label-hidden" value="{!i.Contact__c}" ></lightning:inputField>
+                                    </td>-->
+                                                
+                                                <td >
+                                                    <lightning:inputField fieldName="Due_Date__c" variant="label-hidden"  value="{!i.Due_Date__c}" required="true"></lightning:inputField>                                    	
+                                                    
+                                                    <!--
+                                        <lightning:select value="{!i.Client_Confirmation_Required__c}">
+                                         <option value="">None</option>
+                                            <option value="Yes">Yes</option>
+                                            <option value="No">No</option>
+                                        </lightning:select>
+          -->
+                                                </td>
+                                                <td >
+                                                    <lightning:inputField fieldName="APAC_Payment_Name__c" variant="label-hidden" value="{!i.APAC_Payment_Name__c}" ></lightning:inputField>                                    	
+                                                </td>
+                                                <td >
+                                                    <lightning:inputField fieldName="Payment_Amount__c" variant="label-hidden" value="{!i.Payment_Amount__c}" required="true"></lightning:inputField>                                    	
+                                                </td>
+                                                <td >
+                                                    <lightning:inputField fieldName="TDS_Payment_Amount__c" variant="label-hidden" value="{!i.TDS_Payment_Amount__c}" required="true"></lightning:inputField>                                    	
+                                                </td>
+                                                <!--<td >
+                                     <lightning:inputField fieldName="Payment_Received_Amount__c" variant="label-hidden" value="{!i.Payment_Received_Amount__c}"></lightning:inputField>                                    	
+                                    </td>
+                                    <td >
+                                     <lightning:inputField fieldName="TDS_Payment_Amount__c" variant="label-hidden" value="{!i.TDS_Payment_Amount__c}"></lightning:inputField>                                    	
+                                    </td>-->
+                                                <!-- <td >
+                                     <lightning:inputField fieldName="GST__c" variant="label-hidden" value="{!i.GST__c}"></lightning:inputField>                                    	
+                                    </td> -->
+                                                <!--<td >
+                                     <lightning:inputField fieldName="Payment_Date__c" variant="label-hidden" value="{!i.Payment_Date__c}"></lightning:inputField>                                    	
+                                    </td>
+                                    <td >
+                                     <lightning:inputField fieldName="Finance_Reference__c" variant="label-hidden" value="{!i.Finance_Reference__c}"></lightning:inputField>                                    	
+                                    </td>-->
+                                                
+                                                <td style="text-align: left">
+                                                    <lightning:button label="Delete" variant="destructive" value="{!row}" onclick="{!c.deleteit}"></lightning:button>
+                                                </td>
+                                            </tr>
+                                        </aura:iteration>
+                                    </tbody>
+                                </table>
+                            </lightning:recordEditForm>
+                        </div>
+                    </div>  <!-- table section --> 
+                    
+                </div> <!-- container div -->
+                
+                
+            </div>	
+        </aura:set>
+    </aura:if>
+    
+</aura:component>

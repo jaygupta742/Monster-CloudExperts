@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>No answer – issue not resolved</name>
+    <style>none</style>
+    <subject>No answer – issue not resolved</subject>
+    <textOnly>Guten Tag [Anrede] [Nachname],
+
+Sie haben den Monster Kundendienst zum Thema (INSERT Thema der Anfrage oder Betreff) kontaktiert.
+          
+Um Sie optimal zu unterstützen, habe ich Sie in meiner letzten E-Mail um INSERT gebeten. Da ich bisher noch keine Rückmeldung von Ihnen erhalten haben, möchte ich Sie fragen, ob INSERT ODER THEMA bereits gelöst ist. 
+
+Falls nicht, bitte ich Sie, mir die benötigten Informationen zukommen zu lassen, damit ich mich so schnell wie möglich darum kümmern kann. 
+
+Sollten Sie die Kommunikation per E-Mail vorziehen, bitte ich Sie um eine kurze schriftliche Rückmeldung und ich werde mich umgehend bei Ihnen melden.
+
+Ich freue mich auf Ihre Antwort und bedanke mich mit freundlichen Grüßen,
+SIGNATUR</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

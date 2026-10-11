@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>USEN: Newspaper InfoPath Order Receipt</name>
+    <style>none</style>
+    <subject>Newspaper Order Receipt {!Case.Thread_Id}</subject>
+    <textOnly>Thank you for your order.    This automated response confirms we have received your completed Order Form.
+
+We will process your order within 1 business day &amp; contact you with any questions.
+Should you have additional information or questions, please reply to this email.
+Thank you.</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

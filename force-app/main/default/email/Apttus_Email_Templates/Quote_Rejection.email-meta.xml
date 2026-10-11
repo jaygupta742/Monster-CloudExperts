@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Quote Rejection Notification</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Monster_Blank_Letterhead</letterhead>
+    <name>Quote Rejection</name>
+    <style>freeForm</style>
+    <subject>Quote {!Apttus_Proposal__Proposal__c.Name} Rejected</subject>
+    <textOnly>This is a notification that the following quote has been rejected by your Manager :
+
+Quote:{!Apttus_Proposal__Proposal__c.Name}
+Opportunity:{!Apttus_Proposal__Proposal__c.Apttus_Proposal__Opportunity__c}
+
+For details, please use the following link:
+{!Apttus_Proposal__Proposal__c.Link}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

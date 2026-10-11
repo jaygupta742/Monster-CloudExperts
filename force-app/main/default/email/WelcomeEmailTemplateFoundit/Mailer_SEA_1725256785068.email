@@ -1,0 +1,133 @@
+<html>
+<head>
+	<title></title>
+</head>
+<body style="margin: 0px; padding: 0px; min-width: 100%; font-family: Poppins, sans-serif; color: rgb(29, 30, 31); background: rgb(249, 250, 255) !important; height: auto; min-height: auto;">
+<table bgcolor="#fafafa" border="0" cellpadding="0" cellspacing="0" style="background:#fafafa;" width="100%">
+	
+		<tr>
+			<td>
+			<table align="center" border="0" cellpadding="0" cellspacing="0" style="width:100%; max-width:800px !important; padding:0;font-family: 'Poppins', sans-serif; table-layout:fixed; background: #fff;" width="800">
+				
+					<tr>
+						<td style="margin: 0px; padding: 0px; text-align: center;"><img alt="banner-img9" src="" style="max-width: 1140.1662963867186px" title="banner-img9" /></td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF" class="padng" style="padding:15px 20px 5px 20px; font-size:15px;font-family: 'Poppins', sans-serif;">Dear {{{Recipient.FirstName}}},</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF" class="padng" style="padding:10px 20px 0 20px; font-size:14px;font-family: 'Poppins', sans-serif;">Welcome to foundit, your partner in finding top talent efficiently and effectively.<br />
+						<br />
+						I am {{{Sender.Name}}}, from the Customer Success team and am here to help you with your foundit 2.0 Free Trial service. We're excited to have you on board to try out our product. We look forward to helping you streamline your recruitment process with our specialized tools and expansive reach.<br />
+						<br />
+						Here's what the foundit platform offers :</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 20px">
+						<table border="0" style="border:1px solid #f0dcff; border-radius: 6px; color: #000;font-size:14px; font-family: 'Poppins', sans-serif; padding: 10px; background: #f9f1ff;" width="100%">
+							
+								<tr>
+									<td>First off, <strong style="color: #612997;">Datasets !</strong> Now, you can access over 40+ million profiles, both tech and non-tech talent, whether they're actively looking for jobs or not. It's all about making sourcing way more efficient, all in one place.</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 20px">
+						<table border="0" style="border:1px solid #fad8a0; border-radius: 6px; background:#fde8de;  color: #000;font-size:14px; font-family: 'Poppins', sans-serif; padding: 10px;" width="100%">
+							
+								<tr>
+									<td>Then, there's the <strong style="color: #ea6a2b;">Super Profile</strong>. It's like a supercharged snapshot of a candidate's career - you get insights, contact details, skills, work history, even their GitHub links and job preferences. It's designed to make hiring decisions smarter and easier.</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 20px">
+						<table border="0" style="border:1px solid #c1e0ff;  border-radius: 6px; color: #000;font-size:14px; font-family: 'Poppins', sans-serif; padding: 10px; background:#e1eefb;" width="100%">
+							
+								<tr>
+									<td>Now, check out <strong style="color: #48a0f8;">Magic Search</strong> - it's AI-powered, that comes with contextual and adoptive synonyms. Also it comes with 35+ smart filters/insights. Meaning it gets you candidates that match what you're looking for, tailored just for your search.</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 20px">
+						<table border="0" style="border:1px solid  #fdd8f1; border-radius: 6px; color: #000;font-size:14px; font-family: 'Poppins', sans-serif; padding: 10px; background: #fbebf6;" width="100%">
+							
+								<tr>
+									<td>And <strong style="color: #ce349d;">Smart Reach ?</strong> That's the AI doing some serious work. It automates candidate outreach, sends follow-ups, and keeps that personal touch intact. It's all about reaching thousands of candidates while keeping things super personal and boosting your brand.</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td style="padding: 5px 20px">
+						<table border="0" style="border:1px solid #ffe3bd; border-radius: 6px; color: #000;font-size:14px; font-family: 'Poppins', sans-serif; padding: 10px; background: #fff4e6;" width="100%">
+							
+								<tr>
+									<td>Lastly, <strong style="color: #f2a43a;">Network Effects! </strong>It's all about seamless collaboration between recruiters for more effective hiring.</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+					<tr>
+						<td bgcolor="#FFFFFF" class="padng" style="padding:10px 20px; font-size:14px; font-family: 'Poppins', sans-serif;">Exciting times, right?<br />
+						<br />
+						During your trial, I will work closely with you to ensure your experience with Foundit is a success. We're here to provide all the necessary support and guidance you need to maximize the value of our platform for your hiring needs.<br />
+						<br />
+						To get started, log onto <strong><a href="https://recruiter.foundit.sg/" target="_blank">https://recruiter.foundit.sg/</a> </strong>and login with the login credentials emailed to you separately.<br />
+						<br />
+						Should you have any questions or need assistance during your trial, feel free to write or call me on the contact number mentioned in my signature.<br />
+						<br />
+						Thank you for choosing foundit to enhance your hiring process. We''e committed to helping you find the best talent for your team.</td>
+					</tr>
+					<tr>
+						<td>
+						<table border="0" cellpadding="20" cellspacing="0" style="background:#f0f0f0;" width="100%">
+							
+								<tr>
+									<td bgcolor="#f0f0f0" style="padding:0px; background:url(images/bg.jpg);">
+									<table border="0" cellpadding="0" cellspacing="0" width="100%">
+										
+											<tr>
+												<td class="padng" style="padding:0px 20px"><img alt="footer-logo" src="" style="max-width: 1153.8819213867187px" title="footer-logo" /></td>
+												<td align="right" class="padng" style="padding:20px;">
+												<table border="0" cellpadding="3" cellspacing="0" width="100">
+													
+														<tr>
+															<td align="center"><a href="https://www.facebook.com/founditIN/"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-facebook.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+															<td align="center"><a href="https://www.instagram.com/foundit_india/"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-insta.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+															<td align="center"><a href="https://twitter.com/foundit_india"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-twitter.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+															<td align="center"><a href="https://www.linkedin.com/company/monster-india/"><img height="30" src="https://media.monsterindia.com/newsletter/211122_va_Launc-154716738_MI//icon-linkedin.png" style="display:block; border-radius:22px;" width="30" /></a></td>
+														</tr>
+													
+												</table>
+												</td>
+											</tr>
+										
+									</table>
+									</td>
+								</tr>
+							
+						</table>
+						</td>
+					</tr>
+				
+			</table>
+			</td>
+		</tr>
+	
+</table>
+
+<div id="" style="left: 249.6px; top: 0px;">&nbsp;</div>
+
+<div id="" style="left: 249.6px; top: 0px;">&nbsp;</div>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>NewWelcomeLetterHead</letterhead>
+    <name>Welcome-Letter-Malaysia</name>
+    <style>freeForm</style>
+    <subject>Welcome to Monster.com! Let’s get started</subject>
+    <textOnly>Congrats!
+
+We&apos;re glad you&apos;re here
+
+
+
+
+Hi {!Contact.FirstName} {!Contact.LastName},
+
+Welcome to Monster. We hope you and your loved ones are safe and healthy in these uncertain times.
+
+Congrats on your first step! You now have the most powerful tool in recruiting.
+
+Monster&apos;s cutting-edge hiring solutions help you find the most relevant candidates -
+
+fast!
+
+I am {!User.Name}, from the Customer Relations team and I&apos;ll be happy to help you.
+
+Let&apos;s get started!
+
+We&apos;ve sent your login details to your registered email
+
+
+
+Login at https://recruiter.monster.com.my
+
+
+
+
+Change your password immediately
+
+
+Yes, it&apos;s that easy!
+
+Your contract covers the following products/services
+
+Products/Services
+
+Country/Website
+
+Quantity
+
+Validity
+
+Amount
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+If you need help, please get in touch with:
+
+
+Yasmin Maideen
+Customer Service Representative
++65 6718 2355 | yasmin.maideen@monster.com.sg
+
+
+Amira Ibrahim
+Sales Representative
++65 9185 8366 | Amira.Ibrahim@monster.com.sg
+
+
+Nilesh Ghai
+Sales Manager
++65 6718 2357 | nilesh.ghai@monster.com.sg
+
+Facebook | Twitter | Linkedin
+
+
+Escalation of any Customer Service matter
+
+In the unlikely event of your query or complaint not being resolved promptly to your satisfaction, please write a mail to
+
+Rajender.Yadav@monsterindia.com as a first level of escalation and to  crhead-sea@monster.com.sg  for second level
+
+escalation. The matter will be directly investigated by the senior management of our Customer Service team.
+
+Terms of Use
+We thank you for using Monster. For uninterrupted access to our services, it is important for you to read and understand our Terms of Use. For your convenience, we are emphasizing on some of the Prohibited Uses of Monster listed and we look forward to your cooperation in adhering to the same.
+
+In view of our experience of Clients&apos; request for the inclusion of their jobs on Monster Platform for better visibility, outreach
+
+and result, we are enabling job scrapping / job replication feature as default for select customers including  your
+
+organization. Please note, jobs that are scrapped from your career site will not be consuming inventory that you have purchased.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

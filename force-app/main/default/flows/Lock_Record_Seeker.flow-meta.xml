@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>65.0</apiVersion>
+    <customErrors>
+        <name>Cant_Edit</name>
+        <label>Cant Edit</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <customErrorMessages>
+            <errorMessage>This Account Is Locked For Editing And Can Only Be Edited By {!$Record.Account_Owner__c} Till {!unLockDate}</errorMessage>
+            <isFieldError>false</isFieldError>
+        </customErrorMessages>
+    </customErrors>
+    <environments>Default</environments>
+    <formulas>
+        <name>unLockDate</name>
+        <dataType>Date</dataType>
+        <expression>{!$Record.First_Activity_Date__c} + 7</expression>
+    </formulas>
+    <interviewLabel>Lock Record {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Lock Record Seeker</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Cant_Edit</targetReference>
+        </connector>
+        <filterFormula>AND(
+  OR(
+    {!$Profile.Name} = &apos;Seeker-Edsales&apos;,
+    {!$Profile.Name} = &apos;Monster - Seeker Certification Sales&apos;
+  ),
+  {!$Record.Account_Locked__c} = TRUE,
+  {!$Record.OwnerId} &lt;&gt; {!$User.Id}
+)</filterFormula>
+        <object>Account</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

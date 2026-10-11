@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Seeker-Manager - L5</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Seeker-Manager - L5(Jayanth Muthyala)</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Seeker_Manager_L5_Tanesh_Arora</parentRole>
+</Role>

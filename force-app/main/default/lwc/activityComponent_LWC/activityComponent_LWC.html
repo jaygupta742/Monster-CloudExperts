@@ -1,0 +1,393 @@
+<template>
+    <template if:true={suspectfalse}>
+        <div class="slds-modal__header" style="text-align:center;font-size:20px;">
+            <h1>Choose Suspect/Prospect</h1>
+        </div>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-2">
+            <lightning-record-edit-form object-api-name="Account" style="width: 100%;">
+                <div class="slds-align_absolute-center" style="width: 50%;">
+                    <lightning-input-field field-name="Suspect_Prospect__c" style="width: 100%;"
+                        onchange={handlesuspect}></lightning-input-field>
+                </div>
+            </lightning-record-edit-form>
+        </div>
+        <div class="slds-modal__footer" style="display:flex;gap:20px;">
+
+            <lightning-button variant="brand" label="Update" onclick={handleUpdate}></lightning-button>
+            <lightning-button variant="neutral" label="Cancel" onclick={Handlecancel}></lightning-button>
+
+        </div>
+    </template>
+
+    <template if:false={suspectfalse}>
+        <div class="slds-modal__header" style="text-align:center;font-size:20px;">
+            <h1>New Task</h1>
+        </div>
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1" lwc:if={isSeekerChannel}>
+            <div class="demo-only" style="padding:0.5rem;background:#F3F3F3;color:black;">
+                <div style="color:black;" class="slds-text-color_inverse">Task Information</div>
+            </div>
+            <div class="slds-p-left_x-large">
+                <div class="slds-grid slds-wrap">
+
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input type="text" label="Subject" name="Subject" style="width: 80%;"
+                            onchange={handleInputChange} value={inputValues.Subject} required></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="QuotesN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Assigned To</p>
+                            </div>
+                            <lightning-input-field field-name="Approver_1__c" style="width: 50%;" variant="label-hidden"
+                                value={userId} onchange={handleAssigned}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Activity Task Type" name="Task_Type__c" value={selectedCategory}
+                            options={categoryOptions} onchange={handleCategoryChange} style="width: 80%;" required>
+                        </lightning-combobox>
+                    </div>
+
+                    <!-- <div class="slds-col slds-size_6-of-12">
+                        <lightning-combobox label="Priority" name="Priority" value={priority} options={priorityOptions}
+                            onchange={handlePriorityChange} style="width: 80%;" required></lightning-combobox>
+                    </div> -->
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Activity Sub Type" name="Task_Sub_Type1__c"
+                            value={selectedSubcategory} options={filteredSubcategoryOptions}
+                            onchange={handleSubcategoryChange} disabled={isSubcategoryDisabled} style="width: 80%;"
+                            required></lightning-combobox>
+                    </div>
+                    <!-- <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="OpportunityN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Related To</p>
+                            </div>
+                            <lightning-input-field field-name="Account__c" style="width: 50%;" variant="label-hidden"
+                                value={recordId} onchange={handleRelated}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div> -->
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Status" value={status} options={optionstatus}
+                            onchange={handleStatusChange} name="Status" style="width: 80%;" required>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input type="textarea" name="Description__c" label="Description" style="width: 80%;"
+                            onchange={handleInputChange}></lightning-input>
+                    </div>
+
+            <!-- Region: replace existing textarea with this -->
+<div class="slds-col slds-size_6-of-12 slds-p-top_x-small" lwc:if={showIfConnected}>
+    <lightning-combobox 
+        label="Region" 
+        name="Region__c" 
+        value={inputValues.Region__c}
+        options={regionOptions} 
+        onchange={handleInputChange} 
+        style="width: 80%;" 
+        required>
+    </lightning-combobox>
+</div>
+
+<!-- Product: replace existing combobox with this (multiselect uses dual-listbox) -->
+<div class="slds-col slds-size_6-of-12 slds-p-top_x-small" lwc:if={showIfConnected}>
+    <lightning-dual-listbox
+        label="Product"
+        name="Product_New__c"
+        source-label="Available"
+        selected-label="Selected"
+        field-level-help="Select one or more products"
+        options={productNewOptions}
+        value={inputValues.Product_New__c}
+        onchange={handleProductNewChange}
+        style="width: 90%;"
+        required>
+    </lightning-dual-listbox>
+</div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small" lwc:if={showIfConnected}>
+                        <lightning-input type="textarea" required name="Product_Value__c" label="Product Value"
+                            style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small" lwc:if={showIfConnected}>
+                        <lightning-input type="textarea" required name="Currency__c" label="Currency"
+                            style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small" lwc:if={showIfConnected}>
+                        <lightning-input required type="date" label="Follow Up Date" name="Follow_Up_Date__c"
+                            style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input required type="date" label="Due Date" name="ActivityDate" style="width: 80%;"
+                            onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                    <!-- <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="QuotesN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Accompany by</p>
+                            </div>
+                            <lightning-input-field field-name="Approver_1__c" style="width: 50%;" variant="label-hidden"
+                                onchange={handleAccompany}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div> -->
+
+                    <!-- <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="Sample__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Name</p>
+                            </div>
+                            <lightning-input-field field-name="Contact__c" style="width: 50%;" variant="label-hidden"
+                                onchange={handleName}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div> -->
+
+                    <!-- <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input required type="date" label="Due Date" name="ActivityDate" style="width: 80%;"
+                            onchange={handleInputChange}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input class="slds-p-top_medium" type="checkbox" name="IsReminderSet"
+                            label="Reminder Set" style="width: 80%;" onchange={handleCheckboxChange}></lightning-input>
+                        <template if:true={isReminderSet}>
+                            <lightning-input type="datetime" name="ReminderDateTime" onchange={handleInputChange} style="width: 80%;"></lightning-input>
+
+                        </template>
+                    </div> -->
+                    <!-- 
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="QuotesN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Related Opportunity</p>
+                            </div>
+                            <lightning-input-field field-name="Opportunities__c" style="width: 50%;"
+                                value={opportunityId} variant="label-hidden" onchange={handleOpportunity}
+                                disabled={opportunityDisabled}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div> -->
+
+                    <!-- <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input class="slds-p-top_medium" type="checkbox" name="Not Related To Opportunity"
+                            label="Not Related To Opportunity" style="width: 80%;" checked={opportunityDisabled}
+                            onchange={handleNotRelatedToCheckBoxChange}></lightning-input>
+                    </div> -->
+
+                    <!-- <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Product Intrested" value={productInterested} options={productInterestedOptions}
+                            onchange={handleOptionProductInterestedChange} name="Product_Interested__c"
+                            style="width: 80%;"></lightning-combobox>
+                    </div> -->
+                </div>
+            </div><br />
+            <!-- <div class="demo-only" style="padding:0.5rem;background:#F3F3F3;color:black;">
+                <div style="color:black;" class="slds-text-color_inverse">Task Information</div>
+            </div>
+            <div class="slds-p-left_x-large">
+                <div class="slds-grid slds-wrap">
+                    <template if:true={monsterSales}>
+                        <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                            <lightning-input type="textarea" name="Disposition_Type__c" label="Disposition_Type"
+                                style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                        </div>
+                    </template>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input type="textarea" name="Remarks__c" label="Remark" style="width: 80%;"
+                            onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                    <template if:true={monsterSales}>
+                        <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                            <lightning-input type="textarea" name="Sub_Disposition_Type__c" label="Sub_Disposition_Type"
+                                style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                        </div>
+                    </template>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Feedback By Sales" value={feedback} options={optionfeedback}
+                            onchange={handleOptionFeedbackChange} name="Feedback_By_Sales__c"
+                            style="width: 80%;"></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input type="textarea" name="recording_url__c" maxlength="244" label="recording_url"
+                            style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                </div>
+            </div> -->
+        </div>
+
+        <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-10" lwc:else>
+            <div class="demo-only" style="padding:0.5rem;background:#F3F3F3;color:black;">
+                <div style="color:black;" class="slds-text-color_inverse">Task Information</div>
+            </div>
+            <div class="slds-p-left_x-large">
+                <div class="slds-grid slds-wrap">
+
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-input type="text" label="Subject" name="Subject" style="width: 80%;"
+                            onchange={handleInputChange} required></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="QuotesN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Assigned To</p>
+                            </div>
+                            <lightning-input-field field-name="Approver_1__c" style="width: 50%;" variant="label-hidden"
+                                value={userId} onchange={handleAssigned}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Activity Task Type" name="Task_Type__c" value={selectedCategory}
+                            options={categoryOptions} onchange={handleCategoryChange} style="width: 80%;" required>
+                        </lightning-combobox>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12">
+                        <lightning-combobox label="Priority" name="Priority" value={priority} options={priorityOptions}
+                            onchange={handlePriorityChange} style="width: 80%;" required></lightning-combobox>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Activity Sub Type" name="Task_Sub_Type1__c"
+                            value={selectedSubcategory} options={filteredSubcategoryOptions}
+                            onchange={handleSubcategoryChange} disabled={isSubcategoryDisabled} style="width: 80%;"
+                            required></lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="OpportunityN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Related To</p>
+                            </div>
+                            <lightning-input-field field-name="Account__c" style="width: 50%;" variant="label-hidden"
+                                value={recordId} onchange={handleRelated}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Status" value={status} options={optionstatus}
+                            onchange={handleStatusChange} name="Status" style="width: 80%;" required>
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input type="textarea" name="Description__c" label="Description" style="width: 80%;"
+                            onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="QuotesN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Accompany by</p>
+                            </div>
+                            <lightning-input-field field-name="Approver_1__c" style="width: 50%;" variant="label-hidden"
+                                onchange={handleAccompany}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="Sample__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Name</p>
+                            </div>
+                            <lightning-input-field field-name="Contact__c" style="width: 50%;" variant="label-hidden"
+                                onchange={handleName}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input required type="date" label="Due Date" name="ActivityDate" style="width: 80%;"
+                            onchange={handleInputChange}></lightning-input>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input class="slds-p-top_medium" type="checkbox" name="IsReminderSet"
+                            label="Reminder Set" style="width: 80%;" onchange={handleCheckboxChange}></lightning-input>
+                        <template if:true={isReminderSet}>
+                            <lightning-input type="datetime" name="ReminderDateTime" onchange={handleInputChange}
+                                style="width: 80%;"></lightning-input>
+
+                        </template>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small"
+                        style="display: flex; flex-direction: row;">
+                        <lightning-record-edit-form object-api-name="QuotesN__c" style="width: 80%;">
+                            <div class="slds-p-bottom_xxx-small slds-p-top_xxx-small">
+                                <p style="width: 50%;">Related Opportunity</p>
+                            </div>
+                            <lightning-input-field field-name="Opportunities__c" style="width: 50%;"
+                                value={opportunityId} variant="label-hidden" onchange={handleOpportunity}
+                                disabled={opportunityDisabled}></lightning-input-field>
+                        </lightning-record-edit-form>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input class="slds-p-top_medium" type="checkbox" name="Not Related To Opportunity"
+                            label="Not Related To Opportunity" style="width: 80%;" checked={opportunityDisabled}
+                            onchange={handleNotRelatedToCheckBoxChange}></lightning-input>
+                    </div>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Product Intrested" value={productInterested}
+                            options={productInterestedOptions} onchange={handleOptionProductInterestedChange}
+                            name="Product_Interested__c" style="width: 80%;"></lightning-combobox>
+                    </div>
+                </div>
+            </div><br />
+            <div class="demo-only" style="padding:0.5rem;background:#F3F3F3;color:black;">
+                <div style="color:black;" class="slds-text-color_inverse">Task Information</div>
+            </div>
+            <div class="slds-p-left_x-large">
+                <div class="slds-grid slds-wrap">
+                    <template if:true={monsterSales}>
+                        <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                            <lightning-input type="textarea" name="Disposition_Type__c" label="Disposition_Type"
+                                style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                        </div>
+                    </template>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input type="textarea" name="Remarks__c" label="Remark" style="width: 80%;"
+                            onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                    <template if:true={monsterSales}>
+                        <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                            <lightning-input type="textarea" name="Sub_Disposition_Type__c" label="Sub_Disposition_Type"
+                                style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                        </div>
+                    </template>
+
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-combobox label="Feedback By Sales" value={feedback} options={optionfeedback}
+                            onchange={handleOptionFeedbackChange} name="Feedback_By_Sales__c" style="width: 80%;">
+                        </lightning-combobox>
+                    </div>
+                    <div class="slds-col slds-size_6-of-12 slds-p-top_x-small">
+                        <lightning-input type="textarea" name="recording_url__c" maxlength="244" label="recording_url"
+                            style="width: 80%;" onchange={handleInputChange}></lightning-input>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="slds-modal__footer" style="text-align:left;display:flex;gap:15px;">
+            <lightning-button variant="brand" label="Save" onclick={saveIt_Helper}></lightning-button>
+            <lightning-button variant="neutral" label="Cancel" onclick={Handlecancel}></lightning-button>
+        </div>
+    </template>
+
+</template>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SitePlatform__c</fullName>
+    <label>Site Platform</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>BGW</fullName>
+                <default>false</default>
+                <label>BGW</label>
+            </value>
+            <value>
+                <fullName>Both</fullName>
+                <default>false</default>
+                <label>Both</label>
+            </value>
+            <value>
+                <fullName>CV Search</fullName>
+                <default>false</default>
+                <label>CV Search</label>
+            </value>
+            <value>
+                <fullName>eSend</fullName>
+                <default>false</default>
+                <label>eSend</label>
+            </value>
+            <value>
+                <fullName>FX</fullName>
+                <default>false</default>
+                <label>FX</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>MHX</fullName>
+                <default>false</default>
+                <label>MHX</label>
+            </value>
+            <value>
+                <fullName>MOHQ</fullName>
+                <default>false</default>
+                <label>MOHQ</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

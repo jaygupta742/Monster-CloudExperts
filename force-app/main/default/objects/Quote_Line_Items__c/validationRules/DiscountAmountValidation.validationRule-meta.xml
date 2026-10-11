@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>DiscountAmountValidation</fullName>
+    <active>false</active>
+    <description>Discount Amount should not exceed Cap Amount</description>
+    <errorConditionFormula>Total_Discount_Amount__c &gt; ( Quantity_Unit__c * Product__r.Discount_Cap_Amount__c)</errorConditionFormula>
+    <errorDisplayField>Adjusted_Value__c</errorDisplayField>
+    <errorMessage>Discount Amount Exceeded Cap Amount</errorMessage>
+</ValidationRule>

@@ -1,0 +1,37 @@
+<!-- sldsValidatorIgnore -->
+<template>
+    <div class="slds-modal__header">
+        <h1 class="slds-modal__title slds-hyphenate">Add Products</h1>
+    </div>
+    <div class="slds-modal__content slds-var-p-around_medium slds-scrollable_y" style="max-height: 450px;">
+        <!-- Container for all filters -->
+        <div>
+            <div class="slds-text-align_right">
+                <span class="slds-text-color_destructive">*</span> = Required Information
+            </div>
+            <lightning-layout multiple-rows="true">
+                <lightning-layout-item size="12" large-device-size="3" medium-device-size="2" small-device-size="12" padding="around-small">
+                    <!-- <lightning-combobox label="Product Country" name="Country" options={FetchProductCountry} value={ProductFilters.Country} onchange={HandleChangeFilters} required></lightning-combobox> -->
+                </lightning-layout-item>
+                <lightning-layout-item size="12" large-device-size="3" medium-device-size="2" small-device-size="12" padding="around-small">
+                    <!-- <lightning-combobox label="Product Tenure" name="Tenure" options={FetchProductTenure} value={ProductFilters.Tenure} onchange={HandleChangeFilters}></lightning-combobox> -->
+                </lightning-layout-item>
+                <lightning-layout-item size="12" large-device-size="3" medium-device-size="2" small-device-size="12" padding="around-small">
+                    <lightning-combobox label="Product Name" name="Name" options={FetchProductName} value={ProductFilters.Name} onchange={HandleChangeFilters} required></lightning-combobox>
+                </lightning-layout-item>
+                <lightning-layout-item size="12" large-device-size="3" medium-device-size="2" small-device-size="12" padding="around-small">
+                    <lightning-combobox label="SKU Type" name="SKUType" options={FetchProductSkuType} value={ProductFilters.SKUType} onchange={HandleChangeFilters} required></lightning-combobox>
+                </lightning-layout-item>
+            </lightning-layout>
+        </div>
+
+        <!-- Product Data table -->
+        <div class="ProductDataTable">
+            <lightning-datatable key-field="Id" data={ProductTableData} columns={ProductTableColumns} show-row-number-column onrowselection={HandleGetSelectedProduct} max-row-selection="1"></lightning-datatable>
+        </div>
+    </div>
+    <div class="slds-modal__footer">
+        <lightning-button label="Cancel" class="slds-m-right_small" onclick={HandleCancel}></lightning-button>
+        <lightning-button label="Next" variant="brand" onclick={HandleNextClick}></lightning-button>
+    </div>
+</template>

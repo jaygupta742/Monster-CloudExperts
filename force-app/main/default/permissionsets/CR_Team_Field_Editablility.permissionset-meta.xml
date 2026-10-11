@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PermissionSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Only giving the extra permission to the Neeraj , Bhagya , David to edit credit status ,reason and kind of product issue by Monster - CR Service team added by yamini</description>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.CreditStatus__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Kind_Of_Product_Issue_Picklist__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <fieldPermissions>
+        <editable>true</editable>
+        <field>Account.Reasons_Picklist__c</field>
+        <readable>true</readable>
+    </fieldPermissions>
+    <hasActivationRequired>false</hasActivationRequired>
+    <label>CR Team Field Editablility</label>
+    <license>Salesforce Platform</license>
+</PermissionSet>

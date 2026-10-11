@@ -1,0 +1,24 @@
+Hi, 
+
+Recently CR team spoke to this customer and pitched in a few products. There could be an upsell opportunity. Request you to take this forward and update this task with sought outcome.
+
+  Subject                               : {!Task.Subject}
+
+  Due date                            : {!Task.ActivityDate}
+  
+  Task Type                          : {!Task.Task_Type__c}
+
+  Description                        : {!Task.Description__c}
+
+  Status                                : {!Task.Status}
+
+  Product Pitch Status         : {!Task.Product_Pitch_Feedback_Status__c}
+
+  Product Pitch Action          : {!Task.Product_Pitch_Action__c}
+
+  Product Pitch Comment    : {!Task.Product_Pitch_Comment__c}
+
+  Task Created by                 : {!Task.CreatedBy}
+
+
+Thanks & Regards

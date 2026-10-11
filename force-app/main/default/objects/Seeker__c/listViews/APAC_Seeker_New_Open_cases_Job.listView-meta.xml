@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APAC_Seeker_New_Open_cases_Job</fullName>
+    <booleanFilter>1 AND 2 AND 3</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Subject__c</columns>
+    <columns>Status__c</columns>
+    <columns>If_Others__c</columns>
+    <columns>Email__c</columns>
+    <columns>Received_To__c</columns>
+    <columns>Case_Arrived_Time__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Queue</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>New,Open,Reopen</value>
+    </filters>
+    <filters>
+        <field>Email__c</field>
+        <operation>notContain</operation>
+        <value>@foundit</value>
+    </filters>
+    <filters>
+        <field>Received_To__c</field>
+        <operation>contains</operation>
+        <value>jobseeker</value>
+    </filters>
+    <label>APAC Seeker - New / Open cases--Job</label>
+    <queue>Seeker_Queue</queue>
+</ListView>

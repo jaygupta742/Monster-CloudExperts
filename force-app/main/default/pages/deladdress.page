@@ -1,0 +1,7 @@
+<apex:page lightningStylesheets="true" > <!---------sidebar="false" standardController="Address1__c">  Deleting the address reference to map to the account ----------->
+<!--
+  
+  <br/><div style="font-size:16px;"><b>Insufficient Privileges </b><br/><br/></div>
+You do not have the level of access necessary to perform the operation you requested. Please contact the owner of the record or your administrator if access is necessary.
+-->
+</apex:page>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Created_by_This_Month</fullName>
+    <columns>NAME</columns>
+    <columns>Account__c</columns>
+    <columns>Order_For_Revamp__c</columns>
+    <columns>CR_Name__c</columns>
+    <columns>Gross_Total__c</columns>
+    <columns>No_of_Job_Postings__c</columns>
+    <columns>Account_Type__c</columns>
+    <columns>Order_Type__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CREATED_DATE</field>
+        <operation>equals</operation>
+        <value>THIS_MONTH</value>
+    </filters>
+    <label>Created by : This Month</label>
+</ListView>

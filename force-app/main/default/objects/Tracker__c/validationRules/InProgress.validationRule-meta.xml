@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InProgress</fullName>
+    <active>true</active>
+    <description>@imRam
+If status is inprogress,
+
+Developer name &amp; mobile mandatory</description>
+    <errorConditionFormula>IF( ISPICKVAL( Status__c ,&apos;Open&apos;),
+false,
+OR(ISBLANK( Developer_Mobile__c ), ISBLANK( Developer_Name__c))
+ )</errorConditionFormula>
+    <errorMessage>If you want to change status any apart from Open, you must enter Developer Name &amp; Mobile</errorMessage>
+</ValidationRule>

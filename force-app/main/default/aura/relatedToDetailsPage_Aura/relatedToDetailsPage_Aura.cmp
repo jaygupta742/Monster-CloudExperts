@@ -1,0 +1,475 @@
+<!-- Last Modified By : Suraj , Last Modified date : 16/10/2023, Need add padding on lightning cart and in QLI and QAss there should be show lables -->
+<aura:component
+                implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader"
+                access="global" controller="approvalHighlightsController">
+    <aura:handler name="init" value="{!this}" action="{!c.onInit}" />
+    <aura:attribute name="relatedTo" type="String" />
+    <aura:attribute name="relatedObjectApiName" type="String" />
+    <aura:attribute name="isQuotesObject" type="Boolean" default="false" />
+    <aura:attribute name="fields" type="List" />
+    <aura:attribute name="relatedToLabel" type="String" default="Related To Information" />
+    <aura:attribute name="relatedListLabel" type="String" default="Line Items" />
+    <aura:attribute name="relatedListLabelService" type="String" default="QULI Accessories" />
+    <aura:attribute name="datatableColums" type="List" />
+    <aura:attribute name="datatableData" type="object" />
+    <aura:attribute name="datatableColumset" type="List" />
+    <aura:attribute name="datatableDataset" type="object" />
+    <aura:attribute name="datatableColumsetforservice" type="List" />
+    <aura:attribute name="datatableDatasetforservice" type="object" />
+    <aura:attribute name="wrapperList" type="object" />
+    <aura:attribute name="wrapperApprovalHistory" type="object" />
+    <aura:attribute name="wrapperListQItem" type="object" />
+    
+    <div class="slds-modal__content" style="width: 100%;">
+        <aura:if isTrue="{!v.isQuotesObject}">
+            <!-- <aura:iteration items="{!v.wrapperList}" var="wrapper">-->
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                    <span class="slds-truncate slds-var-p-horizontal_small" title="Order Details">Quote Details</span>
+                </h3>
+                <div class="slds-section__content">
+                    <lightning:layout multipleRows="true">
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Quote No 1</p>
+                                <p>
+                                    <lightning:formattedUrl value="{!'/'+v.wrapperList.QId}" label="{!v.wrapperList.name}" tooltip="Click To Open" target="_blank" />
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Pre-renewal</p>
+                                <lightning:input type="checkbox" label="Basic option" variant="label-hidden" disabled="true" checked="{!v.wrapperList.prerenewal}"/>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Quote Type </p>
+                                <p> {!v.wrapperList.quotetype}</p>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Deal Type</p>
+                                <aura:if isTrue="{!v.wrapperList.YearCount == 0}">
+                                    <p class="slds-text-color_success">{!v.wrapperList.dealType}</p>
+                                    <aura:set attribute="else">
+                                        <p class="slds-text-color_destructive">{!v.wrapperList.dealType}</p>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Gross Total </p>
+                                <p>
+                                    <lightning:formattedNumber value="{!v.wrapperList.grosstotal}" style="currency" currencyCode="{!v.wrapperList.quoteCurrency}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0" />
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Base Total</p>
+                                <p>
+                                    <lightning:formattedNumber value="{!v.wrapperList.baseTotal}" style="currency" currencyCode="{!v.wrapperList.quoteCurrency}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0"/>
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Discount %</p>
+                                <aura:if isTrue="{!v.wrapperList.discountpercent &lt;= 20}">
+                                    <p class="slds-text-color_success">{!v.wrapperList.discountpercent}%</p>
+                                    <aura:set attribute="else">
+                                        <aura:if isTrue="{!v.wrapperList.discountpercent &lt;= 30}">
+                                            <p class="Revamp-Warning-Text">{!v.wrapperList.discountpercent}%</p>
+                                            <aura:set attribute="else">
+                                                <p class="slds-text-color_destructive">{!v.wrapperList.discountpercent}%</p>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Total Discount</p>
+                                <p>
+                                    <lightning:formattedNumber value="{!v.wrapperList.totalDiscount}" style="currency" currencyCode="{!v.wrapperList.quoteCurrency}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0" />
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Upfront Payment </p>
+                                <aura:if isTrue="{!v.wrapperList.upfrontPayment &gt;= 60}">
+                                    <p class="slds-text-color_success">{!v.wrapperList.upfrontPayment}% </p>
+                                    <aura:set attribute="else">
+                                        <aura:if isTrue="{!v.wrapperList.upfrontPayment &gt;= 30}">
+                                            <p class="Revamp-Warning-Text">{!v.wrapperList.upfrontPayment}% </p>
+                                            <aura:set attribute="else">
+                                                <p class="slds-text-color_destructive">{!v.wrapperList.upfrontPayment}% </p>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </lightning:layoutItem>
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Start Date </p>
+                                <p>
+                                    <lightning:formattedDateTime value="{!v.wrapperList.startDate}" year="numeric" month="numeric" day="numeric" />
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">End Date</p>
+                                <p>
+                                    <lightning:formattedDateTime value="{!v.wrapperList.endDate}" year="numeric" month="numeric" day="numeric" />
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small"># Installments </p>
+                                <aura:if isTrue="{!v.wrapperList.Installments == 1}">
+                                    <p class="slds-text-color_success">{!v.wrapperList.Installments}</p>
+                                    <aura:set attribute="else">
+                                        <aura:if isTrue="{!v.wrapperList.Installments &lt;= 5}">
+                                            <p class="Revamp-Warning-Text">{!v.wrapperList.Installments}</p>
+                                            <aura:set attribute="else">
+                                                <p class="slds-text-color_destructive">{!v.wrapperList.Installments}</p>
+                                            </aura:set>
+                                        </aura:if>
+                                    </aura:set>
+                                </aura:if>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Rev-Out </p>
+                                <p>
+                                    <lightning:formattedNumber value="{!v.wrapperList.revout}" style="currency" currencyCode="{!v.wrapperList.quoteCurrency}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0" />
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                            <div class="data-container">
+                                <p class="slds-text-body_small">Foundit Total</p>
+                                <p>
+                                    <lightning:formattedNumber value="{!v.wrapperList.founditTotal}" style="currency" currencyCode="{!v.wrapperList.quoteCurrency}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0" />
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                        
+                        <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                </div>
+            </div>
+            
+            <aura:if isTrue="{!v.wrapperList.displayOrderDetails == true}">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                        <span class="slds-truncate slds-var-p-horizontal_small" title="Base Order Details">Base Order Details</span>
+                    </h3>
+                    <div class="slds-section__content slds-var-m-horizontal_small">
+                        <lightning:layout multipleRows="true">
+                            <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                                <div class="data-container">
+                                    <p>Base Order Gross Total</p>
+                                    <p>
+                                        <lightning:formattedNumber value="{!v.wrapperList.ordBaseOrderValue}" style="currency" currencyCode="{!v.wrapperList.quoteCurrency}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0"/>
+                                    </p>
+                                </div>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                                <div class="data-container">
+                                    <p>Base Order</p>
+                                    <p>
+                                        <lightning:formattedUrl value="{!'/'+v.wrapperList.BaseOrderId}" label="{!v.wrapperList.ordBaseOrderName}" tooltip="Click To Open" target="_blank" />
+                                    </p>
+                                </div>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                                <div class="data-container">
+                                    <p>Upliftment</p>
+                                    <p>{!v.wrapperList.Upliftment} %</p>
+                                </div>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                                <div class="data-container">
+                                    <p>Start Date</p>
+                                    <p>
+                                        <lightning:formattedDateTime value="{!v.wrapperList.ordStartDate}" year="numeric" month="numeric" day="numeric" />
+                                    </p>
+                                </div>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                                <div class="data-container">
+                                    <p>Base Order Deal Type </p>
+                                    <p>{!v.wrapperList.ordBaseOrderDealType}</p>
+                                </div>
+                            </lightning:layoutItem>
+                            
+                            <lightning:layoutItem size="12" largeDeviceSize="6" padding="horizontal-small">
+                                <div class="data-container">
+                                    <p>End Date</p>
+                                    <p>
+                                        <lightning:formattedDateTime value="{!v.wrapperList.ordEndDate}" year="numeric" month="numeric" day="numeric" />
+                                    </p>
+                                </div>
+                            </lightning:layoutItem>
+                        </lightning:layout>
+                    </div>
+                </div>
+            </aura:if>
+            
+            <aura:if isTrue="{!v.wrapperList.Installments > 0}">
+                <div class="slds-section slds-is-open">
+                    <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                        <span class="slds-truncate slds-var-p-horizontal_small" title="APAC Payments(Revamp)">
+                            APAC Payments(Revamp)({!v.wrapperList.Installments})
+                        </span>
+                    </h3>
+                    <div class="slds-section__content slds-var-m-horizontal_small" style="width: 100%; overflow-x: scroll;">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                            <thead>
+                                <tr class="slds-line-height_reset">
+                                    <th class="Revamp-Section" scope="col">
+                                        <div class="slds-truncate" title="Payment Due Date">Payment Due Date</div>
+                                    </th>
+                                    <th class="Revamp-Section" scope="col">
+                                        <div class="slds-truncate" title="Payment Amount">Payment Amount</div>
+                                    </th>
+                                    <th class="Revamp-Section" scope="col">
+                                        <div class="slds-truncate" title="Net Amount">Net Amount</div>
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.wrapperList.apac}" var="ap" indexVar="index">
+                                    <tr class="slds-hint-parent">
+                                        <td data-label="Account Name">
+                                            <div class="slds-truncate" title="{!ap.Due_Date__c}">
+                                                <lightning:formattedDateTime value="{!ap.Due_Date__c}" year="numeric"
+                                                                             month="numeric" day="numeric" />
+                                            </div>
+                                        </td>
+                                        <td data-label="Close Date">
+                                            <div class="slds-truncate" title="{!ap.Payment_Amount__c}">
+                                                <lightning:formattedNumber value="{!ap.Payment_Amount__c}" style="currency" currencyCode="{!ap.CurrencyIsoCode}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0"/>
+                                            </div>
+                                        </td>
+                                        <td data-label="Prospecting">
+                                            <div class="slds-truncate" title="{!ap.Net_Total__c}">
+                                                <lightning:formattedNumber value="{!ap.Net_Total__c}" style="currency" currencyCode="{!ap.CurrencyIsoCode}" currencyDisplayAs="code" minimumFractionDigits="0" maximumFractionDigits="0"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </aura:if>
+            
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                    <span class="slds-truncate slds-var-p-horizontal_small" title="Approval Details">Approval Details</span>
+                </h3>
+                <div class="slds-section__content slds-var-m-horizontal_small" style="width: 100%; overflow-x: scroll;">
+                    <lightning:layout multipleRows="true">
+                        <lightning:layoutItem size="12" largeDeviceSize="12">
+                            <div class="data-container">
+                                <p>
+                                    Level of Approvals Required 
+                                    <span class="slds-text-heading_small slds-text-color_success slds-var-m-left_medium">{!v.wrapperList.levelofapproval}</span>
+                                </p>
+                            </div>
+                        </lightning:layoutItem>
+                    </lightning:layout>
+                    
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Step Name">Step Name</div>
+                                </th>
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Approver">Approver</div>
+                                </th>
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Comments">Comments</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.wrapperApprovalHistory}" var="wrapper">
+                                <tr class="slds-hint-parent">
+                                    <td data-label="Account Name">
+                                        <div class="slds-truncate" title="{!wrapper.approvalStepName}">
+                                            {!wrapper.approvalStepName}</div>
+                                    </td>
+                                    <td data-label="Confidence">
+                                        <div class="slds-truncate" title="{!wrapper.nameofAppproval}">
+                                            {!wrapper.nameofAppproval}</div>
+                                    </td>
+                                    <td data-label="Amount">
+                                        <div class="slds-truncate" title="{!wrapper.comments}">{!wrapper.comments}</div>
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="slds-section slds-is-open" style="width: 100%">
+                <h3 class="slds-section__title slds-theme_shade Revamp-Section">
+                    <span class="slds-truncate slds-var-p-horizontal_small" title="Service Details">Service Details</span>
+                </h3>
+                <div class="slds-section__content slds-var-m-horizontal_small" style="width: 100%; overflow-x: scroll;">
+                    <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                        <thead>
+                            <tr class="slds-line-height_reset">
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="#Item">#Item</div>
+                                </th>
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Product">Product</div>
+                                </th>
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Qty">Qty</div>
+                                </th>
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Base Total">Base Total</div>
+                                </th>
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Gross Total">Gross Total</div>
+                                </th>
+                                <th class="Revamp-Section" scope="col">
+                                    <div class="slds-truncate" title="Discount%">Discount%</div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.wrapperListQItem}" var="wrapper">
+                                <tr class="slds-hint-parent">
+                                    <td data-label="Index">
+                                        <div class="slds-truncate" title="{!wrapper.index}">{!wrapper.index}</div>
+                                    </td>
+                                    <td data-label="Products">
+                                        <div class="slds-truncate" title="Products">
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '1'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                Country: {!wrapper.qitem.Product_Country__c}<br />
+                                                Industry: {!wrapper.qitem.Product_Industry__c}<br />
+                                                Scope: {!wrapper.qitem.Product_Geo_Scope__c }<br />
+                                                {!wrapper.qitem.Product_Tenure_Months__c}<br />
+                                                <aura:if isTrue="{!not(empty(wrapper.qitem.Product_Text__c))}">
+                                                    {!wrapper.qitem.Product_Text__c}<br /> </aura:if>
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                                
+                                            </aura:if>
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '2'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                Country: {!wrapper.qitem.Product_Country__c}<br />
+                                                {!wrapper.qitem.Product_Tenure_Months__c}<br />
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                            </aura:if>
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '3'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                Industry: {!wrapper.qitem.Product_Industry__c}<br />
+                                                {!wrapper.qitem.Product_Tenure_Months__c}<br />
+                                                <aura:if isTrue="{!not(empty(wrapper.qitem.Product_Text__c))}">
+                                                    {!wrapper.qitem.Product_Text__c}<br /> </aura:if>
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                                Add Desc: {!wrapper.qitem.Comment__c}<br />
+                                            </aura:if>
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '4'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                <aura:if isTrue="{!not(empty(wrapper.qitem.Product_Text__c))}">
+                                                    {!wrapper.qitem.Product_Text__c}<br /> </aura:if>
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                                
+                                            </aura:if>
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '5'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                Country: {!wrapper.qitem.Product_Country__c}<br />
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                            </aura:if>
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '6'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                Country: {!wrapper.qitem.Product_Country__c}<br />
+                                                Industry: {!wrapper.qitem.Product_Industry__c}<br />
+                                                {!wrapper.qitem.Product_Tenure_Months__c}<br />
+                                                <aura:if isTrue="{!not(empty(wrapper.qitem.Product_Text__c))}">
+                                                    {!wrapper.qitem.Product_Text__c}<br /> </aura:if>
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                            </aura:if>
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '7'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                                Add Desc: {!wrapper.qitem.Comment__c}
+                                            </aura:if>
+                                            <aura:if isTrue="{!wrapper.qitem.Product_Classification__c == '8'}">
+                                                {!wrapper.qitem.Product_Name__c}<br />
+                                                Industry: {!wrapper.qitem.Product_Industry__c}<br />
+                                                <aura:if
+                                                         isTrue="{!and(wrapper.qitem.Product_Geo_Scope__c != 'S1', wrapper.qitem.Product_Geo_Scope__c != 'S2')}">
+                                                    Scope: {!wrapper.qitem.Product_Geo_Scope__c}<br />
+                                                </aura:if>
+                                                <aura:if
+                                                         isTrue="{!or(wrapper.qitem.Product_Geo_Scope__c == 'S1', wrapper.qitem.Product_Geo_Scope__c == 'S2')}">
+                                                    Scope: {!wrapper.qitem.Product_Location__c}<br />
+                                                </aura:if>
+                                                {!wrapper.qitem.Product_Tenure_Months__c}<br />
+                                                <aura:if isTrue="{!not(empty(wrapper.qitem.Product_Text__c))}">
+                                                    {!wrapper.qitem.Product_Text__c}<br /> </aura:if>
+                                                {!wrapper.qitem.Product_No__c}<br />
+                                            </aura:if>
+                                            
+                                        </div>
+                                    </td>
+                                    <td data-label="Quantity">
+                                        <div class="slds-truncate" title="{!wrapper.qitem.Quantity_Unit__c}">{!wrapper.qitem.Quantity_Unit__c}</div>
+                                    </td>
+                                    <td data-label="Base Total">
+                                        <div class="slds-truncate" title="{!wrapper.qitem.Base_Total1__c}">
+                                            <lightning:formattedNumber value="{!wrapper.qitem.Base_Total1__c}" style="currency" currencyCode="{!wrapper.qitem.CurrencyIsoCode}" currencyDisplayAs="code"/>
+                                        </div>
+                                    </td>
+                                    <td data-label="Gross Total">
+                                        <div class="slds-truncate" title="{!wrapper.qitem.Gross_Total1__c}">
+                                            <lightning:formattedNumber value="{!wrapper.qitem.Gross_Total1__c}" style="currency" currencyCode="{!wrapper.qitem.CurrencyIsoCode}" currencyDisplayAs="code"/>
+                                        </div>
+                                    </td>
+                                    <td data-label="Discount %">
+                                        <div class="slds-truncate" title="{!wrapper.discountpercent}">{!wrapper.discountpercent}%</div>
+                                    </td>
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </aura:if>
+    </div>
+</aura:component>

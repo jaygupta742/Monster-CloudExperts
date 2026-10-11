@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Pitch_section_mandate</fullName>
+    <active>false</active>
+    <errorConditionFormula>AND(
+  $User.X18DigitProfileId__c  == &apos;00e7F000000uSSiQAM&apos;,
+   ISPICKVAL( Status ,&apos;Open&apos;),
+OR(
+ISPICKVAL(Product_Pitch_Action__c ,&apos;&apos;),
+ISBLANK( Product_Pitch_Comment__c )
+)
+
+)</errorConditionFormula>
+    <errorMessage>Fatal Error. System Exception has been Thrown!!</errorMessage>
+</ValidationRule>

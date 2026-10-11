@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingOwnerRules>
+        <fullName>Case_CR_Access</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Case CR Access</label>
+        <sharedTo>
+            <group>Monster_Service_CR</group>
+        </sharedTo>
+        <sharedFrom>
+            <group>Monster_Service_CR</group>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

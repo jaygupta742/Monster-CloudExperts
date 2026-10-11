@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Report_template__c</fullName>
+    <label>Report template</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Mid Contract Quote (Addendum in EU)</fullName>
+                <default>false</default>
+                <label>Mid Contract Quote (Addendum in EU)</label>
+            </value>
+            <value>
+                <fullName>Conversion Quote (same as MCQ in EU)</fullName>
+                <default>false</default>
+                <label>Conversion Quote (same as MCQ in EU)</label>
+            </value>
+            <value>
+                <fullName>Bridge Deal Quote</fullName>
+                <default>false</default>
+                <label>Bridge Deal Quote</label>
+            </value>
+            <value>
+                <fullName>Resume Upgrade Quote</fullName>
+                <default>false</default>
+                <label>Resume Upgrade Quote</label>
+            </value>
+            <value>
+                <fullName>International Quote</fullName>
+                <default>false</default>
+                <label>International Quote</label>
+            </value>
+            <value>
+                <fullName>Zero Value Quote</fullName>
+                <default>false</default>
+                <label>Zero Value Quote</label>
+            </value>
+            <value>
+                <fullName>Contingent Deal Quote</fullName>
+                <default>false</default>
+                <label>Contingent Deal Quote</label>
+            </value>
+            <value>
+                <fullName>Provisioning</fullName>
+                <default>false</default>
+                <label>Provisioning</label>
+            </value>
+            <value>
+                <fullName>Billing only</fullName>
+                <default>false</default>
+                <label>Billing only</label>
+            </value>
+            <value>
+                <fullName>Partner Quote</fullName>
+                <default>false</default>
+                <label>Partner Quote</label>
+            </value>
+            <value>
+                <fullName>Rebill Quote</fullName>
+                <default>false</default>
+                <label>Rebill Quote</label>
+            </value>
+            <value>
+                <fullName>Upgrades (same as MCQ in EU)</fullName>
+                <default>false</default>
+                <label>Upgrades (same as MCQ in EU)</label>
+            </value>
+            <value>
+                <fullName>Standard Quote</fullName>
+                <default>false</default>
+                <label>Standard Quote</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Non Revenue</fullName>
+                <default>false</default>
+                <label>Non Revenue</label>
+            </value>
+            <value>
+                <fullName>TMS Quote</fullName>
+                <default>false</default>
+                <label>TMS Quote</label>
+            </value>
+            <value>
+                <fullName>MCS Quote</fullName>
+                <default>false</default>
+                <label>MCS Quote</label>
+            </value>
+            <value>
+                <fullName>Agency Only Quote</fullName>
+                <default>false</default>
+                <label>Agency Only Quote</label>
+            </value>
+            <value>
+                <fullName>Agency Quote (Dual Signature)</fullName>
+                <default>false</default>
+                <label>Agency Quote (Dual Signature)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

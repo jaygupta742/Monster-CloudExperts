@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.AccountID__c</field>
+    </columns>
+    <columns>
+        <field>Account.AccountStatus__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_BY</field>
+    </columns>
+    <columns>
+        <field>Activity.Task_Created_by_s_Manager__c</field>
+    </columns>
+    <columns>
+        <field>Activity.Task_Type__c</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Activity.Task_Type_Sales__c</field>
+    </columns>
+    <columns>
+        <field>Activity.Description__c</field>
+    </columns>
+    <currency>INR</currency>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>A Joshanraj,Aedma Harish,Ajit Datir,Akshay Kammar,Ankit Kumar,Ankit Tyagi,Arun Bhattacharjee,Balaji Pobbati,Bhanumurthi Gannoju,Bhupendra Singh,Chandrasekaran S,Deepika Jain,Farheen Ahmed,Franklin Poulose,Gaurav Singh,Gururaj Moger,Jayesh Gujrathi,Kagada Aakash Singh,Kairav Vyasa,Kamal Aasal,Khaliq Masood,Kumarappan AR,Kunal Chatterjee,Kunal Sinha,M Srinivas,Mukhtar Ahmed,Muralidharan PR,Muyeen F,Naveen Kumar,Navitha M,Niran Joy,Poorva Jain</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Prakash Chandola,Prateek Singh,Rahul Chaudhary,Rajdeep Das,Rajesh Gawde,Sachin Sasane,SanthoshKumaran K,Satyendra Mishra,Shailendra Kumar,Sharath S,Shiv Bhardwaj,Shivanand Hosur,Shraddha Pawar,Sreenath Kizhake,Srikanth Bukka,Subhanjan Ray,Sujitha OK,Sumeet Singh,Sumit Shukla,Swapnil Jadhav,Syed Hussain Khader,Tarun Nassa,Thirumalai Bakirathan,Varun Teja Gannavarapu,Vasanta Reddy,Venkatesh Selvaraj,Vinayak Jorapure,Vipul Rai,Vyankatesh Ugwekar,Yogesh Bhosale,Yogesh Pillai</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Activity.Subject__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Demonstration,Email,Free Trial,Meeting,Telecall</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Activity Report - SMB - FTM</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

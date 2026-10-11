@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Order_Item_Services__c$Name</field>
+    </columns>
+    <columns>
+        <field>Order_Item_Services__c$Services__c</field>
+    </columns>
+    <columns>
+        <field>Order_Item_Services__c$Order_Item__c</field>
+    </columns>
+    <columns>
+        <field>Order_Item_Services__c$Order__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>Order_Item_Services__c$Quantity__c</field>
+    </columns>
+    <columns>
+        <field>Order_Item_Services__c$Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Order_Item_Services__c$End_Date__c</field>
+    </columns>
+    <currency>INR</currency>
+    <format>Tabular</format>
+    <name>Order Item Service Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Order_Item_Service_Report_Type__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>Order_Item_Services__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

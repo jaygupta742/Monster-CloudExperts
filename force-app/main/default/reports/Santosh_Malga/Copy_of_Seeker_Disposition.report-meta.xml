@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.AccountID__c</field>
+    </columns>
+    <columns>
+        <field>Account.AccountStatus__c</field>
+    </columns>
+    <columns>
+        <field>Account.SalesChannel__c</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.PrimarySalesManager__c</field>
+    </columns>
+    <columns>
+        <field>Account.Dispositions__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Seeker Disposition Report</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Person_Account__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Dispositions__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Invalid Number,DND,Not Reachable,Busy,Ringing/ No Response,Call Waiting,Call Back – Spoke but did not pitch,Pitched</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>Copy of Seeker Disposition</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2020-07-20</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2020-07-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,343 @@
+<apex:page standardController="apttus_proposal_proposal__c" extensions="MY_Std_Report" renderAs="pdf" cache="false"  applyHtmlTag="false" applyBodyTag="false" standardStylesheets="false" showHeader="false" sidebar="false">
+
+ <!----- Header section ------------->
+<c:PDFHeaderFooterRunning value="header">
+
+<apex:image value="{!$Resource.Monster_Logo}" width="170" height="30"/>
+
+</c:PDFHeaderFooterRunning>
+
+<c:PDFRunningFooter value="footer">
+<apex:stylesheet value="{!$Resource.PageNo}"/>
+<div style="text-align : right;">
+
+
+Proposal_Quote_DocNo
+</div>
+</c:PDFRunningFooter>
+
+<!--  service aggrement  -->
+  <center><b>SERVICE AGREEMENT</b></center>
+  <p style="border-style:groove;padding:05px;border-width:1px;font-size:14px;font-family:verdana;" align="justify">
+      This SERVICE AGREEMENT ("Agreement") is made and entered into between Monster Malaysia Sdn Bhd, (herein after referred to as 'Monster', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and assigns) 
+     <b></b> (hereinafter referred to as 'Purchaser', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and permitted assigns).&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br/>
+    (Monster and Purchaser are hereinafter collectively referred to as "the Parties" and severally as "Party")
+
+  </p>
+  <div style="font-size:14px;font-family:verdana;">
+      <table border="1" cellspacing = "0" width = "100%" >
+
+<tr>
+<td width="50%" >
+    <div style="margin-top:-10px">
+<b >Date :</b>   <br/>
+<b>Quote #:</b> {!apttus_proposal_proposal__c.name} <br/>
+<b>Quote Valid From:</b> <apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate}"/></apex:outputText> 
+                                            <b> to </b><apex:outputText value="{0,date, dd'/'MM'/'yyyy}"><apex:param value="{!apttus_proposal_proposal__c.createddate+30}"/></apex:outputText><br/>
+ </div>
+</td>
+
+<td>
+<b>Sales Rep:{!u.lastname}</b>  <br/>
+<b>Email:{!u.Email}</b>  <br/>
+<b>Tel: {!u.phone} </b><br/>
+<b>Location:{!u.Location1__c } </b> <br/>
+</td>
+</tr>
+
+<tr>
+<td>
+<div style="margin-top:-30px">
+<b>Purchaser:</b>
+Name : {!apttus_proposal_proposal__c.PostingContact__r.name }<br/>
+Account : {!apttus_proposal_proposal__c.PostingContact__r.Account.name}<br/>
+Email : {!apttus_proposal_proposal__c.PostingContact__r.email}<br/>
+Mobile : {!apttus_proposal_proposal__c.PostingContact__r.MobilePhone}<br/><br/><br/>
+Address : {!apttus_proposal_proposal__c.Posting_Street__c}<br/>
+{!apttus_proposal_proposal__c.Posting_City__c}<br/>
+ {!apttus_proposal_proposal__c.Posting_State__c}<br/>
+ {!apttus_proposal_proposal__c.Posting_Country__c}<br/>
+ {!apttus_proposal_proposal__c.Posting_Pin_Code__c}<br/>
+
+<b>
+GSTID : {!apttus_proposal_proposal__c.PostingContact__r.Account.GST_ID__c}
+</b>
+</div>
+</td>
+
+<td style="text-align:left;border-bottom: 1px solid black;width:50%;margin-top:-10px "><b>Bill To:</b><br/>
+<b>Name :{!apttus_proposal_proposal__c.BillContact__r.name }<br/>
+Account : {!apttus_proposal_proposal__c.Billing_Account__r.name }<br/>
+Mobile : {!apttus_proposal_proposal__c.BillContact__r.MobilePhone}<br/>
+Email : {!apttus_proposal_proposal__c.BillContact__r.Email}<br/><br/>
+</b>
+Address : {!apttus_proposal_proposal__c.Billing_Street__c}<br/>
+  {!apttus_proposal_proposal__c.Billing_City__c}<br/>
+  {!apttus_proposal_proposal__c.Billing_State__c}<br/>
+   {!apttus_proposal_proposal__c.Billing_Country__c}<br/>
+      {!apttus_proposal_proposal__c.Billing_Pin_code__c}<br/>
+</td>
+
+</tr>
+
+<tr>
+<td colspan="2"><center><i>If any of the above information is incorrect please advise in the correction section on the next page</i></center> </td>
+</tr>
+
+</table>
+  </div>
+  
+  <!------------------ Service detail ----------------->
+  <div style="font-family:verdana;font-size:14px">
+  <br/>    <b>SERVICE DETAILS: </b>The details of service that Purchaser has agreed to take from Monster are as follows (“Service”): 
+            
+
+<table style="border:1px solid black;border-collapse: collapse;">
+<th style="">
+<tr style="border:1px solid black;background-color:#800080; ">
+<td style="border:1px solid black;width:5%; text-align:center;color:white;font-size:13px" >Items<br/>#</td>
+<td style="border:1px solid black; width:20%;text-align:center;color:white;font-size:13px">Product</td>
+<td style="border:1px solid black; width:5%;text-align:center;color:white;font-size:13px">Qty</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product Start Date</td>
+<td style="border:1px solid black;width:10%;text-align:center;color:white;font-size:13px">Product End Date</td>
+
+</tr>
+</th>
+<apex:variable value="{!1}" var="rowNum"/>
+<apex:repeat value="{!pli}" var="p">
+
+             
+<tr >
+<td style="border:1px solid black;">
+            
+            <apex:outputLabel value="{!rowNum }"/>  
+        <apex:variable var="rowNum" value="{!rowNum + 1}"/>   
+          
+            <br/></td>
+<td style="border:1px solid black;">{!p.Product__r.name}<br/>{!p.APTS_Attribute_Display__c}<br/></td>
+<td style="border:1px solid black;">{!p.Quantity__c}</td>
+<td style="border:1px solid black;">{!DAY(p.Product_Start_Date__c)}/{!MONTH(p.Product_Start_Date__c)}/{!YEAR(p.Product_Start_Date__c)}</td>
+<td style="border:1px solid black;">{!DAY(p.Product_End_Date__c)}/{!MONTH(p.Product_End_Date__c)}/{!YEAR(p.Product_End_Date__c)}</td>
+</tr>
+<tr><td style="border:1px solid black;" colspan="5"><b>Comments:</b></td></tr>
+</apex:repeat>
+</table><br/>
+  «Apttus_Proposal__Proposal_Line_Item_sect»
+      <div style="margin-left:30px;margin-right:30px;font-size:14px;font-family:verdana;margin-top:30px">
+  
+  <div style="margin:3px 0px 0px 228px;">Total Package </div>
+  <div style="margin-top:-22px;text-align:right">
+      «Proposal_CurrencyIsoCode»<br/> «Proposal_Gross_total_Decimal»<br/>
+«Proposal_CurrencyIsoCode»<br/> «Proposal_Tax_Total_Decimal»<br/>
+«Proposal_CurrencyIsoCode» <br/>«Proposal_Gross_Total_with_tax»<br/>
+
+
+  </div>
+   <br/>
+<div style="margin:-70px 0px 0px 208px;">  Service Tax (6%) </div>
+<br/>
+<div style="margin:1px 0px 0px 210px;">GRAND TOTAL </div><br/>
+</div>
+
+  </div>
+  
+  
+  <!------------------- Payment terms & invoice delivery --------------->
+  <div>
+      <p>    
+          <b>PAYMENT TERMS &amp; Invoice delivery</b>
+      </p>
+      Purchaser has agreed to pay the total invoice value to Monster as per the following payment term (s) : <br/><br/>
+     <table width="80%" >
+<th><tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:50%">Payment Due Date </td>
+<td style="border:1px solid black; text-align:center;font-size:13px;width:50%">Payment Amount </td>
+</tr></th>
+<tr>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:50%">" {!DAY(aap.Due_Date__c)}/{!MONTH(aap.Due_Date__c)}/{!YEAR(aap.Due_Date__c)}"
+
+</td>
+<td style="border:1px solid black; text-align:center; font-size:13px;width:70%">{!apttus_proposal_proposal__c.Payment_Amount__c}
+
+</td>
+</tr>
+
+</table><br/>
+    All payments to be made in favour of <b>“Monster Malaysia Sdn Bhd”</b>.  
+  </div>
+  
+  <!--------------- Page change ------------------>
+  <div style=" page-break-after: always;">
+  </div>
+  <hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+  
+  
+  <div style=" font-size:13px;font-family:verdana;font-color:black;">    
+         <center><b>ALL FIELDS BELOW ARE <U>REQUIRED</U> TO BE COMPLETED IN FULL BEFORE ACTIVATION OF SERVICE CAN OCCUR  </b></center></div>
+         <br/>
+         <br/>
+  <div style=" font-size:13px;font-color:black;">
+<sup>1</sup>Authorised Signature: _________________________________________________
+
+
+<div style="margin:-15px 0px 0px 450px;text-align:right"><sup>2</sup>Signing Date: ______/_______/________ </div>
+<div style="margin:02px 0px 0px 595px;"> (dd/mm/yyyy) </div>
+<sup>3</sup>Printed Name:{!apttus_proposal_proposal__c.Primary_Contact__r.LastName} <br/>
+ 
+ <div style="margin:-10px 0px -10px 499px;"> <i>Total Price:  </i>   <b>INR {!apttus_proposal_proposal__c.net_total__c}    <br/><br/>
+</b>
+ «Proposal_CurrencyIsoCode» 
+ «Proposal_Gross_Total_with_tax»
+
+ </div> 
+ 
+    <!--<sup>3</sup>Printed Name: <br/><br/>      -->
+   <sup>4</sup>Job Title:      <br/><br/>
+   
+   <sup>5</sup>Company Name (as registered, if applicable) <br/><br/>  
+   
+   <sup>6</sup> Registration Number (if applicable): <br/>
+   «Proposal_CompanyRegistrationNumber» 
+  
+    <br/><br/>
+    <sup>8</sup>Agreement Start Date:      
+     <div style=" text-align:left"> «Proposal_Earliest_Start_Date_EU» </div>                       
+ <div style="margin:-30px 0px 0px 280px;"><i> The ‘Agreement Start Date’ will be the date nominated by the Purchaser. </i> </div>
+   
+ <div style="margin:0px 0px 0px 280px;">    If left blank,
+the earliest product start date will be the nominated date.</div> <br/><Br/>
+
+<sup>9</sup>Purchase Order Number:_______________________________If this field is left blank the invoice will be issued without a PO number.
+    
+</div>
+
+<br/>
+
+<hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+<hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+
+<!--- Section Reserve for monster ---------------->
+<div style=" font-size:13px;margin-left:30px;margin-right:30px;margin: -25px 0px 0px 0px"><p><b> <center><i>Reversed for Monster</i></center> </b> <br/>
+ 
+ Name: «ProposalOwner_FirstName» «ProposalOwner_LastName»  
+ 
+ 
+ <div style="margin:-15px 0px 0px 370px;">      Designation: «ProposalOwner_Title» </div><br/><br/>
+
+Regd. Office : Level 15.01, 1 First Avenue, 2A Dataran Utama Damansara, 47800 Petaling Jaya, <br/><br/>
+City: Selangor 
+
+ <div style="margin:-15px 0px 0px 290px;"> Country: Malaysia</div>
+
+ <br/>
+ Email : «ProposalOwner_Email»
+ 
+<div style="margin:-13px 0px 0px 480px;"> Phone: </div> <br/> <br/>
+
+ Signature:_____________________________________________________
+ 
+ <div style="margin:-30px 0px 0px 480px;">Signing Date:_____/_____/________ </div> <br/>
+ 
+ <div style="margin:-10px 0px 0px 565px;"> (dd/mm/yyyy) </div><br/>
+ 
+ 
+ 
+</p></div> 
+
+<hr style="height:2px;border:none;color:#333;background-color:#333;" width="100%" />
+<div style="font-size:14px;font-family:verdana;">
+    <b>Sales Rep : </b>«ProposalOwner_FirstName» «ProposalOwner_LastName» <b>Email :</b>«ProposalOwner_Email» <b>Phone :</b>«ProposalOwner_Phone»
+    <p style="text-align:justify;">
+        By signing this Agreement Purchaser is agreeing to purchase the products and services listed above subject to the standard terms and conditions and product terms, a copy of which was sent to the Purchaser with this Agreement. Please return this Agreement to the Monster sales representative. Please note Purchaser is not required to return to Monster the Terms and Conditions below, which is for purchaser’s information and record.
+    </p>
+</div>
+
+<!------------- Page Change ---------------------->
+<div style=" page-break-after: always;">
+</div>
+
+<!-------------- Terms & Conditions --------------->
+<div style="font-family:verdana;font-size:14px;text-align:justify">
+    <center><b>TERMS AND CONDITIONS</b></center>
+    <p>
+        Monster will raise the invoice upon execution of the Agreement by Purchaser.  Purchaser shall pay the total invoice value to Monster on or before the payment due date as per the agreed payment term(s).  In the event any payment is not made within the due date, Monster may, without prejudice to its other rights under this Agreement or in law, have the right to deactivate Purchaser's account and / or terminate this Agreement without any liability to Purchaser. Purchaser is bound to make the full payment for the Term, irrespective of whether they use the service(s) or not.  Purchaser shall also be liable to pay the legal costs which may be incurred by Monster towards recovery of any of the dues from Purchaser. Except as otherwise provided hereunder, any termination of the Agreement by either Party prior to the Term of Agreement, except due to the reason of breach of the terms and conditions of the Agreement by other Party, shall be void, and this Agreement may not be terminated by either You or Monster. Monster may terminate this Agreement immediately on written notice if: (a) Monster receives an unsatisfactory credit check against You; (b) You  initiate any proceeding under any bankruptcy or insolvency law or makes an assignment for the benefit of creditors; or apply for or consent to the appointment of any receiver, trustee, liquidator, administrator or similar officer for it or for all or any material part of its property; or any receiver, trustee, liquidator, administrator or similar officer is appointed; or any proceeding under any insolvency or bankruptcy law relating to you or to all or any material part of Your property is instituted.
+    </p>
+    <p>
+        Training on Monster products and services, wherever applicable, will be scheduled by Monster's Relationship Contact. The said training will take approximately 1-2 hours. On receipt of Username and Password from Monster’s Relationship Contact, Purchaser can use the subscribed Service onto the concerned website of Monster to which the Service relates. Purchaser’s profile / Banners / Logo title if subscribed by Purchaser, would be uploaded on the concerned website of Monster and/ or applicable Monster sites   wherever applicable, within a reasonable period from the day Monster receives all the relevant information/approval from the Purchaser for the design / Banners / Logo title of any profile required to be uploaded, as may be applicable. Release schedule to be worked out after confirming the availability of inventory on the Monster website. Monster may either through its officials or authorized representative formally visit the Purchaser's office premises for implementation.
+    </p>
+    <p>
+        Purchaser shall provide to Monster the artwork and profile page information, wherever applicable,, as designed and submitted by Monster to the Purchaser, if subscribed by Purchaser, as soon as possible and shall be responsible to use the Service including Job Postings, if subscribed under this Agreement to post job vacancies on the concerned Website of Monster.  Purchaser should immediately intimate to Monster on any change in its address, name, shifting of its office. Monster will allow the Purchaser’s job postings, as subscribed, on the concerned website(s) of Monster, with each job posting having a validity of 60 (sixty) days.
+    </p>
+    <p>
+        Monster will endeavor to maintain its websites (each a “site”  or  “sites”)  in a fully operating condition and error free, except for unavailability and errors which may result from (i) insufficient or inadequate customer bandwidth or technology, (ii) general Internet brown-outs, black-outs and slowdowns, (iii) bring- downs in the ordinary course that are necessary to maintain, update or refresh Monster.com.my  or any other applicable relevant website, (iv) any “hacking” or “denial of service” activity by a third party and (v) any other reason beyond Monster's  reasonable control.
+    </p>
+    <p>
+        If Purchaser (including any of Purchaser employees) are found to share passwords with any third party, Monster may revoke all login &amp; passwords deactivate Purchaser’s account and no refund will be given.  Purchaser agrees not to resell any of the products and services subscribed by Purchaser from Monster including but not limited to any job postings or any database access to any third party.  Amounts paid for Services are non-refundable. The services may be deactivated if the payment is not made by the due date(s) mentioned in the agreement / invoice. Purchaser shall also be liable to pay to Monster  for dishonor of each payment instruments, which includes either by cheque, ECS electronic payment, or any other method of payment instructions by Purchaser. Purchaser represents and warrants that Purchaser use of data shall be lawful and shall comply with all the applicable local, national and international laws, including but not limited to the laws relating to contracts, labour and employment laws, data privacy laws, cyber laws and law relating to intellectual property. Purchaser further represents and warrants that all and any materials or information provided to Monster to be uploaded to any Site or otherwise used by Monster in the provision of the Service, complies with all applicable laws, and its use in connection with the Service does not infringe the rights of any third parties.
+    </p>
+    <p>
+        Navigation/Search Engines: Notwithstanding anything to the contrary contained herein, Purchaser shall not use or attempt to use, and shall cause each party under your control not to use or attempt to use, any engine, software, tool, agent or other device or mechanism (including without limitation browsers, spiders, avatars or intelligent agents) to navigate or search any Site other than the search engine and search agents available on such Site and other than generally acceptable third party web browsers. To the extent permitted by law Monster makes no warranties, express or implied, including the warranties of merchantability, fitness for a particular purpose, or non-infringement with respect to its services or any site, or results of use thereof and all warranties and conditions, express or implied are hereby excluded.
+    </p>
+    <p>
+        The contents of each Site (including without limitation all job postings and all resumes), and all elements, which are a part of the foregoing, and all intellectual and other proprietary rights therein, are the property of Monster. Neither Purchaser nor any of its employees shall do anything, which would in any way damage, injure or impair the validity of Monster’s rights in the contents of each Site. Notwithstanding the above, any job postings placed on any Site by Purchaser, and all elements which are a part of the foregoing, and all intellectual and other proprietary rights therein, are and shall at all times remain Purchaser’s property. 
+    </p>
+     <p>
+         In the event Purchaser consents to Monster for replicating its job postings into its Monster Account in Monster website Purchaser agrees and accepts that job posting to be replicated on Monster website(s) shall be for lawful purposes by individuals seeking employment and career information and employers seeking employees; the said Job postings shall not be misleading, inaccurate, false, or misleading and material or links to material that exploits people in a sexual, violent or other manner, or unlawful or irrelevant to the job opportunity being presented. Purchaser agrees to use only its names, logos or trademarks. 
+    </p>
+     <p>
+         Monster may not replicate any job posting of Purchaser and/or delete the job postings from Monster site which  does not comply with applicable local, national and international laws, including but not limited to laws relating to labor and employment, equal employment opportunity and employment eligibility requirements, data privacy, data access and use, and intellectual property.
+    </p>
+     <p>
+         The advertisements for competitors of Monster or post jobs or other content that contains links to any site competitive with Monster shall not  qualify for replication. Any such replicated postings will be immediately deleted / removed without notice. Monster reserves the right to remove any job posting or content from any Monster Site, which in the reasonable exercise of Monster’s discretion, does not comply with the above Terms, or if any content is posted that Monster believes is not in accordance with the Terms of Use &amp; Privacy of Monster website and/or applicable laws and regulations. Monster shall not be liable for any conflict, in the event of replication of the Job Postings of Purchaser’s competitor on Monster site or vice versa or any disagreement between them in this connection. The replication of Purchaser’s job posting will be only during the continuance of Service Agreement with Monster.  Purchaser does not have any right to get its job Postings replicated on Monster site. Monster shall in its sole discretion may decide whether to assist the Purchaser in replication or not without giving any reason thereof.
+    </p>
+     <p>
+         Monster Referral Widget is a Search &amp; Match Referral interface deployed on Purchaser’s Career Site/ATS or on a URL shared with their employees. It helps their employees to search through their company’s hiring requirements listed on the widget, and accordingly refer a matching candidate’s profile.
+    </p>
+     <p>
+         Monster does not have any role in the Purchaser’s referral programs &amp; Policy, or in promoting the widget to their employees, or in the process that follows the candidate referral. Any resulting outcome of Service; the quality and quantity of the referred candidates by its employees or otherwise; financial/commercial arrangement between Purchaser and its employees/users shall be at sole risk, cost &amp; consequences of the purchaser, and Monster shall not be held liable thereof under any circumstances.
+    </p>
+     <p>
+         Monster Referral Widget and its elements, which are a part of the foregoing, and all intellectual and other proprietary rights therein, are the property of Monster. Neither Purchaser nor any of its employees shall do anything, which would in any way damage, injure or impair the validity of Monster’s rights on the widget. Notwithstanding the above, any content like jobs &amp; referred resumes,  placed on the Monster Widget by Purchasers or their employees, and all intellectual and other proprietary rights therein, are and shall at all times remain Purchaser’s property. The Purchasers shall use the service solely for the purpose of attaining their own recruitment needs and shall not use the Service for any unlawful purposes or spamming or for any purpose not authorized for use otherwise. Monster may, at its sole discretion do away with this service at any time, without giving any reason thereof, without notice.
+    </p>
+     <p>
+         Notwithstanding anything to the contrary contained herein, neither party will be liable to the other party (nor to any person claiming rights derived from the other party's rights) for incidental, indirect, consequential, special, punitive or exemplary damages of any kind including lost revenues or profits, loss of business  arising out of this agreement (including without limitation as a result of any breach of any warranty, or other term of this agreement), regardless of whether the party liable or allegedly liable was advised, had other reason to know, or in fact knew of the possibility thereof. Moreover, Monster's maximum liability arising out of or relating to the transaction, which is the subject matter of the agreement, regardless of the cause of action (whether in contract, tort, breach of warranty or otherwise), will not exceed the amount paid by Purchaser to Monster.
+    </p>
+     <p>
+         In case of conflict of any term(s) of this Agreement with any subsequent Purchase Order / written document executed post the signing of this Agreement in relation to this Agreement, the term(s) of this Agreement shall prevail.
+    </p>
+     <p>
+         If Purchaser breaches any provision of the Agreement, Monster may (i) discontinue the service and/or (ii) pursue all other available remedies to enforce the Agreement and obtain payment due thereof. Purchaser agrees to comply with all the applicable laws, including but not limited to the laws relating to contracts, labor and employment laws, data privacy laws, cyber laws and law relating to intellectual property. Purchaser agrees to indemnify Monster, its officers, directors, employees and agents, from and against any claims, actions or demands, including without limitation reasonable legal and accounting fees, arising or resulting from Purchaser’s breach of the Agreement  terms including but not limited to claims of breach of third party intellectual property rights. Notwithstanding anything to the contrary contained herein, Purchaser’s use of the Monster website and Career Services is subject to the Terms of Use http://www.monster.com.my/terms_of_use.html  &amp; Privacy Policy http://www.monster.com.my/privacy.html available from such Monster website's homepage in which the Service subscribed. By Purchaser’s execution of the Agreement, the Purchaser agree to abide by such Terms of Use &amp; Privacy Policy of Monster’s relevant website in which services are subscribed, as they may be amended from time to time and these Terms and Conditions.
+    </p>
+     <p>
+         Any Extension/ Up-gradation / renewal of the Services of the Purchaser after the date of expiry of the Agreement shall be given effect only after executing a fresh / renewal Agreement between Monster and Purchaser. Monster will accordingly raise a fresh Invoice for a price as agreed by the Monster and Purchaser for the aforesaid extension/up-gradation/renewal period.
+    </p>
+    <p>
+        Every dispute, difference or question which may at any time arise between the parties hereto or any person claiming under them, touching or arising out of or in respect of this agreement or the subject matter thereof shall be referred to and finally resolved by arbitration under the Malaysian Kuala Lumpur Regional Centre of Arbitration Rules  (“KLRCA Rules”) as in force at the time of the dispute, which Rules shall be deemed to be a part of this Agreement by reference. The arbitration shall be conducted by one arbitrator mutually appointed by the Parties. The arbitration shall be conducted in the English language. The award passed by the Arbitrator shall be final and binding on the parties hereto. The venue of the arbitration shall be Malaysia. This Agreement shall be governed and construed in accordance with the laws of Malaysia and subject to Arbitration clause above, the courts of Malaysia shall have the exclusive jurisdiction to settle any disputes that may arise between the Parties out of or in connection with this Agreement.
+    </p>
+    <p>
+        The Agreement including these terms constitutes the entire understanding between Monster &amp; Purchaser with respect to the subject matter hereof and supersedes any previous oral or written arrangements or understandings relating thereto and governs use of the Monster website or websites in which services are subscribed under the Agreement and may not be amended, terminated or waived unless agreed in writing by the Parties, and shall not be assigned, in whole or in part, directly or indirectly, by Purchaser except by operation law and only comes into existence when signed by the Parties.  Any terms of the Agreement that may be invalid shall not affect the validity of enforcement of the remaining valid terms of the Agreement. The Agreement shall not be amended without the affirmative written consent of Parties in writing.
+    </p>
+    <p>
+        Monster has devised a dedicated nodal email ID i.e.<b> cr@monster.com.my </b> for its Purchasers. Purchaser can write to Monster at the said email for any information, support and concerns.
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+    <p>
+    </p>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  
+  
+  </apex:page>

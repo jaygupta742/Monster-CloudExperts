@@ -1,0 +1,1654 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Detail_Offered__c</fullName>
+    <label>Product Detail Offered</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>30 Day Premium Annual Bundle</fullName>
+                <default>false</default>
+                <label>30 Day Premium Annual Bundle</label>
+            </value>
+            <value>
+                <fullName>30 Day SMB Premium Annual Bundle</fullName>
+                <default>false</default>
+                <label>30 Day SMB Premium Annual Bundle</label>
+            </value>
+            <value>
+                <fullName>AFLAC View Resume Bundle</fullName>
+                <default>false</default>
+                <label>AFLAC View Resume Bundle</label>
+            </value>
+            <value>
+                <fullName>Agency Accounts Bundle</fullName>
+                <default>false</default>
+                <label>Agency Accounts Bundle</label>
+            </value>
+            <value>
+                <fullName>All Job Pilot</fullName>
+                <default>false</default>
+                <label>All Job Pilot</label>
+            </value>
+            <value>
+                <fullName>Alma Job Postings Bundle</fullName>
+                <default>false</default>
+                <label>Alma Job Postings Bundle</label>
+            </value>
+            <value>
+                <fullName>Annual College Subscription</fullName>
+                <default>false</default>
+                <label>Annual College Subscription</label>
+            </value>
+            <value>
+                <fullName>APAC Branding</fullName>
+                <default>false</default>
+                <label>APAC Branding</label>
+            </value>
+            <value>
+                <fullName>APAC Classic Resume Search</fullName>
+                <default>false</default>
+                <label>APAC Classic Resume Search</label>
+            </value>
+            <value>
+                <fullName>APAC Classic Resume Search-Trial</fullName>
+                <default>false</default>
+                <label>APAC Classic Resume Search-Trial</label>
+            </value>
+            <value>
+                <fullName>APAC Monster Media Works</fullName>
+                <default>false</default>
+                <label>APAC Monster Media Works</label>
+            </value>
+            <value>
+                <fullName>APAC Monster Standard Job Ad</fullName>
+                <default>false</default>
+                <label>APAC Monster Standard Job Ad</label>
+            </value>
+            <value>
+                <fullName>APAC Promotional Offer</fullName>
+                <default>false</default>
+                <label>APAC Promotional Offer</label>
+            </value>
+            <value>
+                <fullName>APAC Social Job Ads</fullName>
+                <default>false</default>
+                <label>APAC Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>BBSI Bronze Package</fullName>
+                <default>false</default>
+                <label>BBSI Bronze Package</label>
+            </value>
+            <value>
+                <fullName>BBSI Gold Package</fullName>
+                <default>false</default>
+                <label>BBSI Gold Package</label>
+            </value>
+            <value>
+                <fullName>BBSI Silver Package</fullName>
+                <default>false</default>
+                <label>BBSI Silver Package</label>
+            </value>
+            <value>
+                <fullName>Branding</fullName>
+                <default>false</default>
+                <label>Branding</label>
+            </value>
+            <value>
+                <fullName>Candidate Spotlight</fullName>
+                <default>false</default>
+                <label>Candidate Spotlight</label>
+            </value>
+            <value>
+                <fullName>Chamber of Commerce--$100 Off a Single Job</fullName>
+                <default>false</default>
+                <label>Chamber of Commerce--$100 Off a Single Job</label>
+            </value>
+            <value>
+                <fullName>Child Allocation Bundle</fullName>
+                <default>false</default>
+                <label>Child Allocation Bundle</label>
+            </value>
+            <value>
+                <fullName>Child Allocation Slot Bundle</fullName>
+                <default>false</default>
+                <label>Child Allocation Slot Bundle</label>
+            </value>
+            <value>
+                <fullName>Clear Channel Show Your Stripes Bundle</fullName>
+                <default>false</default>
+                <label>Clear Channel Show Your Stripes Bundle</label>
+            </value>
+            <value>
+                <fullName>Client Apply Online</fullName>
+                <default>false</default>
+                <label>Client Apply Online</label>
+            </value>
+            <value>
+                <fullName>Client Training</fullName>
+                <default>false</default>
+                <label>Client Training</label>
+            </value>
+            <value>
+                <fullName>Company Profile</fullName>
+                <default>false</default>
+                <label>Company Profile</label>
+            </value>
+            <value>
+                <fullName>Comp Jobs Bundle</fullName>
+                <default>false</default>
+                <label>Comp Jobs Bundle</label>
+            </value>
+            <value>
+                <fullName>Comp Jobs Bundle--Fixed Location</fullName>
+                <default>false</default>
+                <label>Comp Jobs Bundle--Fixed Location</label>
+            </value>
+            <value>
+                <fullName>Complimentary Monster Search License</fullName>
+                <default>false</default>
+                <label>Complimentary Monster Search License</label>
+            </value>
+            <value>
+                <fullName>Counter Correction no limit</fullName>
+                <default>false</default>
+                <label>Counter Correction no limit</label>
+            </value>
+            <value>
+                <fullName>Custom Apply Link</fullName>
+                <default>false</default>
+                <label>Custom Apply Link</label>
+            </value>
+            <value>
+                <fullName>Custom Apply Link - Inventory</fullName>
+                <default>false</default>
+                <label>Custom Apply Link - Inventory</label>
+            </value>
+            <value>
+                <fullName>Custom International Sponsorship</fullName>
+                <default>false</default>
+                <label>Custom International Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Custom Job Mapping</fullName>
+                <default>false</default>
+                <label>Custom Job Mapping</label>
+            </value>
+            <value>
+                <fullName>Custom Job Template</fullName>
+                <default>false</default>
+                <label>Custom Job Template</label>
+            </value>
+            <value>
+                <fullName>Custom Sponsorship</fullName>
+                <default>false</default>
+                <label>Custom Sponsorship</label>
+            </value>
+            <value>
+                <fullName>CV Search Agents</fullName>
+                <default>false</default>
+                <label>CV Search Agents</label>
+            </value>
+            <value>
+                <fullName>Diversity: DLP</fullName>
+                <default>false</default>
+                <label>Diversity: DLP</label>
+            </value>
+            <value>
+                <fullName>Email Inventory</fullName>
+                <default>false</default>
+                <label>Email Inventory</label>
+            </value>
+            <value>
+                <fullName>EMEA Resume Access Bundle</fullName>
+                <default>false</default>
+                <label>EMEA Resume Access Bundle</label>
+            </value>
+            <value>
+                <fullName>Employer Branding Bundle</fullName>
+                <default>false</default>
+                <label>Employer Branding Bundle</label>
+            </value>
+            <value>
+                <fullName>Employer Branding Package</fullName>
+                <default>false</default>
+                <label>Employer Branding Package</label>
+            </value>
+            <value>
+                <fullName>Enhanced Job Ad</fullName>
+                <default>false</default>
+                <label>Enhanced Job Ad</label>
+            </value>
+            <value>
+                <fullName>Enhanced Job Branding</fullName>
+                <default>false</default>
+                <label>Enhanced Job Branding</label>
+            </value>
+            <value>
+                <fullName>Express Personnel Gold Posting Package</fullName>
+                <default>false</default>
+                <label>Express Personnel Gold Posting Package</label>
+            </value>
+            <value>
+                <fullName>Express Personnel Gold Slot Package</fullName>
+                <default>false</default>
+                <label>Express Personnel Gold Slot Package</label>
+            </value>
+            <value>
+                <fullName>Express Personnel Platinum Enterprise Package</fullName>
+                <default>false</default>
+                <label>Express Personnel Platinum Enterprise Package</label>
+            </value>
+            <value>
+                <fullName>Express Personnel Platinum Posting Package</fullName>
+                <default>false</default>
+                <label>Express Personnel Platinum Posting Package</label>
+            </value>
+            <value>
+                <fullName>Express Personnel Platinum Slot Package</fullName>
+                <default>false</default>
+                <label>Express Personnel Platinum Slot Package</label>
+            </value>
+            <value>
+                <fullName>Express Personnel Starter Package</fullName>
+                <default>false</default>
+                <label>Express Personnel Starter Package</label>
+            </value>
+            <value>
+                <fullName>External Job Wrapping</fullName>
+                <default>false</default>
+                <label>External Job Wrapping</label>
+            </value>
+            <value>
+                <fullName>Free India Jobs Bundle</fullName>
+                <default>false</default>
+                <label>Free India Jobs Bundle</label>
+            </value>
+            <value>
+                <fullName>Healthcare 20 Job Trial Offer</fullName>
+                <default>false</default>
+                <label>Healthcare 20 Job Trial Offer</label>
+            </value>
+            <value>
+                <fullName>Healthcare 3 Job Trial Offer</fullName>
+                <default>false</default>
+                <label>Healthcare 3 Job Trial Offer</label>
+            </value>
+            <value>
+                <fullName>Healthcare 50 Job Trial Offer</fullName>
+                <default>false</default>
+                <label>Healthcare 50 Job Trial Offer</label>
+            </value>
+            <value>
+                <fullName>HK Insurance 12m Membership A</fullName>
+                <default>false</default>
+                <label>HK Insurance 12m Membership A</label>
+            </value>
+            <value>
+                <fullName>HK Insurance 12m Membership B</fullName>
+                <default>false</default>
+                <label>HK Insurance 12m Membership B</label>
+            </value>
+            <value>
+                <fullName>HK Insurance 12m Membership F</fullName>
+                <default>false</default>
+                <label>HK Insurance 12m Membership F</label>
+            </value>
+            <value>
+                <fullName>HK Insurance 6m Membership C</fullName>
+                <default>false</default>
+                <label>HK Insurance 6m Membership C</label>
+            </value>
+            <value>
+                <fullName>IN Email Inventory Offer</fullName>
+                <default>false</default>
+                <label>IN Email Inventory Offer</label>
+            </value>
+            <value>
+                <fullName>International Starter Pack--NA</fullName>
+                <default>false</default>
+                <label>International Starter Pack--NA</label>
+            </value>
+            <value>
+                <fullName>ITW Monster Complete Jobs Bundle</fullName>
+                <default>false</default>
+                <label>ITW Monster Complete Jobs Bundle</label>
+            </value>
+            <value>
+                <fullName>Jack In the Box Single Job Bundle</fullName>
+                <default>false</default>
+                <label>Jack In the Box Single Job Bundle</label>
+            </value>
+            <value>
+                <fullName>Job Postings</fullName>
+                <default>false</default>
+                <label>Job Postings</label>
+            </value>
+            <value>
+                <fullName>Job Postings-Monster Standard Slot Trial</fullName>
+                <default>false</default>
+                <label>Job Postings-Monster Standard Slot Trial</label>
+            </value>
+            <value>
+                <fullName>Job Search Results Logo</fullName>
+                <default>false</default>
+                <label>Job Search Results Logo</label>
+            </value>
+            <value>
+                <fullName>Kununu Profile</fullName>
+                <default>false</default>
+                <label>Kununu Profile</label>
+            </value>
+            <value>
+                <fullName>Kyocera Copystar Power Resume Bundle</fullName>
+                <default>false</default>
+                <label>Kyocera Copystar Power Resume Bundle</label>
+            </value>
+            <value>
+                <fullName>Link Staffing Power Search Offer</fullName>
+                <default>false</default>
+                <label>Link Staffing Power Search Offer</label>
+            </value>
+            <value>
+                <fullName>Logo on Job Postings</fullName>
+                <default>false</default>
+                <label>Logo on Job Postings</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 1</fullName>
+                <default>false</default>
+                <label>MCS-SMB 1</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 1000-2499</fullName>
+                <default>false</default>
+                <label>MCS-SMB 1000-2499</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 100-199</fullName>
+                <default>false</default>
+                <label>MCS-SMB 100-199</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 1-49</fullName>
+                <default>false</default>
+                <label>MCS-SMB 1-49</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 2</fullName>
+                <default>false</default>
+                <label>MCS-SMB 2</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 200-499</fullName>
+                <default>false</default>
+                <label>MCS-SMB 200-499</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 3</fullName>
+                <default>false</default>
+                <label>MCS-SMB 3</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 4</fullName>
+                <default>false</default>
+                <label>MCS-SMB 4</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 5</fullName>
+                <default>false</default>
+                <label>MCS-SMB 5</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 500-999</fullName>
+                <default>false</default>
+                <label>MCS-SMB 500-999</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 50-99</fullName>
+                <default>false</default>
+                <label>MCS-SMB 50-99</label>
+            </value>
+            <value>
+                <fullName>MCS-SMB 6</fullName>
+                <default>false</default>
+                <label>MCS-SMB 6</label>
+            </value>
+            <value>
+                <fullName>Media: BIA Sponsorship</fullName>
+                <default>false</default>
+                <label>Media: BIA Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Media: Billing Monster Lead Generation</fullName>
+                <default>false</default>
+                <label>Media: Billing Monster Lead Generation</label>
+            </value>
+            <value>
+                <fullName>Media: Career Ad Network</fullName>
+                <default>false</default>
+                <label>Media: Career Ad Network</label>
+            </value>
+            <value>
+                <fullName>Media: Career Ad Network Agency BIA Billing</fullName>
+                <default>false</default>
+                <label>Media: Career Ad Network Agency BIA Billing</label>
+            </value>
+            <value>
+                <fullName>Media: Career Ad Network Agency BIA Provisioning</fullName>
+                <default>false</default>
+                <label>Media: Career Ad Network Agency BIA Provisioning</label>
+            </value>
+            <value>
+                <fullName>Media: Career Ad Network - Emerging Workforce</fullName>
+                <default>false</default>
+                <label>Media: Career Ad Network - Emerging Workforce</label>
+            </value>
+            <value>
+                <fullName>Media: Career Site Solutions</fullName>
+                <default>false</default>
+                <label>Media: Career Site Solutions</label>
+            </value>
+            <value>
+                <fullName>Media: Communities</fullName>
+                <default>false</default>
+                <label>Media: Communities</label>
+            </value>
+            <value>
+                <fullName>Media: Communities - Non-Monster Sites</fullName>
+                <default>false</default>
+                <label>Media: Communities - Non-Monster Sites</label>
+            </value>
+            <value>
+                <fullName>Media: Consulting Services</fullName>
+                <default>false</default>
+                <label>Media: Consulting Services</label>
+            </value>
+            <value>
+                <fullName>Media:Cost Per Lead (CPL)</fullName>
+                <default>false</default>
+                <label>Media:Cost Per Lead (CPL)</label>
+            </value>
+            <value>
+                <fullName>Media: Creative Services</fullName>
+                <default>false</default>
+                <label>Media: Creative Services</label>
+            </value>
+            <value>
+                <fullName>Media: Custom Content Article-US</fullName>
+                <default>false</default>
+                <label>Media: Custom Content Article-US</label>
+            </value>
+            <value>
+                <fullName>Media: Custom Social Job Ad</fullName>
+                <default>false</default>
+                <label>Media: Custom Social Job Ad</label>
+            </value>
+            <value>
+                <fullName>Media: Diversity Asian MBA and Life Bundle</fullName>
+                <default>false</default>
+                <label>Media: Diversity Asian MBA and Life Bundle</label>
+            </value>
+            <value>
+                <fullName>Media: Diversity Brand Extension Package</fullName>
+                <default>false</default>
+                <label>Media: Diversity Brand Extension Package</label>
+            </value>
+            <value>
+                <fullName>Media: Diversity HBCU Exposure Package</fullName>
+                <default>false</default>
+                <label>Media: Diversity HBCU Exposure Package</label>
+            </value>
+            <value>
+                <fullName>Media: Diversity Sponsorship</fullName>
+                <default>false</default>
+                <label>Media: Diversity Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Media: Diversity Welcome Package</fullName>
+                <default>false</default>
+                <label>Media: Diversity Welcome Package</label>
+            </value>
+            <value>
+                <fullName>Media: EDM-Mailers</fullName>
+                <default>false</default>
+                <label>Media: EDM-Mailers</label>
+            </value>
+            <value>
+                <fullName>Media: Emerging Workforce</fullName>
+                <default>false</default>
+                <label>Media: Emerging Workforce</label>
+            </value>
+            <value>
+                <fullName>Media: Facebook Ads</fullName>
+                <default>false</default>
+                <label>Media: Facebook Ads</label>
+            </value>
+            <value>
+                <fullName>Media: Facebook Custom Tab</fullName>
+                <default>false</default>
+                <label>Media: Facebook Custom Tab</label>
+            </value>
+            <value>
+                <fullName>Media: Facebook Job Feed</fullName>
+                <default>false</default>
+                <label>Media: Facebook Job Feed</label>
+            </value>
+            <value>
+                <fullName>Media: FastWeb</fullName>
+                <default>false</default>
+                <label>Media: FastWeb</label>
+            </value>
+            <value>
+                <fullName>Media: Google Search Marketing</fullName>
+                <default>false</default>
+                <label>Media: Google Search Marketing</label>
+            </value>
+            <value>
+                <fullName>Media: Interest Capture</fullName>
+                <default>false</default>
+                <label>Media: Interest Capture</label>
+            </value>
+            <value>
+                <fullName>Media: International Newsletters</fullName>
+                <default>false</default>
+                <label>Media: International Newsletters</label>
+            </value>
+            <value>
+                <fullName>Media:Job Alert Banner-Mailers</fullName>
+                <default>false</default>
+                <label>Media:Job Alert Banner-Mailers</label>
+            </value>
+            <value>
+                <fullName>Media: Job Poster</fullName>
+                <default>false</default>
+                <label>Media: Job Poster</label>
+            </value>
+            <value>
+                <fullName>Media: Military</fullName>
+                <default>false</default>
+                <label>Media: Military</label>
+            </value>
+            <value>
+                <fullName>Media: Military.com Offline Events</fullName>
+                <default>false</default>
+                <label>Media: Military.com Offline Events</label>
+            </value>
+            <value>
+                <fullName>Media: Military - Custom</fullName>
+                <default>false</default>
+                <label>Media: Military - Custom</label>
+            </value>
+            <value>
+                <fullName>Media: Military Featured Employer Branding</fullName>
+                <default>false</default>
+                <label>Media: Military Featured Employer Branding</label>
+            </value>
+            <value>
+                <fullName>Media: Military Newsletters and Emails</fullName>
+                <default>false</default>
+                <label>Media: Military Newsletters and Emails</label>
+            </value>
+            <value>
+                <fullName>Media: Military Offline Events</fullName>
+                <default>false</default>
+                <label>Media: Military Offline Events</label>
+            </value>
+            <value>
+                <fullName>Media: Military Packages</fullName>
+                <default>false</default>
+                <label>Media: Military Packages</label>
+            </value>
+            <value>
+                <fullName>Media: Military Premium</fullName>
+                <default>false</default>
+                <label>Media: Military Premium</label>
+            </value>
+            <value>
+                <fullName>Media: Military Recruitment Media</fullName>
+                <default>false</default>
+                <label>Media: Military Recruitment Media</label>
+            </value>
+            <value>
+                <fullName>Media: Military Skills Translator</fullName>
+                <default>false</default>
+                <label>Media: Military Skills Translator</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Audience Extension</fullName>
+                <default>false</default>
+                <label>Media: Monster Audience Extension</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Audience Network- US</fullName>
+                <default>false</default>
+                <label>Media: Monster Audience Network- US</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Audience Sponsorship</fullName>
+                <default>false</default>
+                <label>Media: Monster Audience Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Career Video Ad</fullName>
+                <default>false</default>
+                <label>Media: Monster Career Video Ad</label>
+            </value>
+            <value>
+                <fullName>Media: Monster College</fullName>
+                <default>false</default>
+                <label>Media: Monster College</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Diversity</fullName>
+                <default>false</default>
+                <label>Media: Monster Diversity</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Homepage Brandscape</fullName>
+                <default>false</default>
+                <label>Media: Monster Homepage Brandscape</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Performance Media</fullName>
+                <default>false</default>
+                <label>Media: Monster Performance Media</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Sidekick 300x250</fullName>
+                <default>false</default>
+                <label>Media: Monster Sidekick 300x250</label>
+            </value>
+            <value>
+                <fullName>Media: Monster Talent Gateway</fullName>
+                <default>false</default>
+                <label>Media: Monster Talent Gateway</label>
+            </value>
+            <value>
+                <fullName>Media: Niche Sponsorship</fullName>
+                <default>false</default>
+                <label>Media: Niche Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Media: Partner Sites</fullName>
+                <default>false</default>
+                <label>Media: Partner Sites</label>
+            </value>
+            <value>
+                <fullName>Media: Performance Ad</fullName>
+                <default>false</default>
+                <label>Media: Performance Ad</label>
+            </value>
+            <value>
+                <fullName>Media: ROS Banner</fullName>
+                <default>false</default>
+                <label>Media: ROS Banner</label>
+            </value>
+            <value>
+                <fullName>Media: SMS Service</fullName>
+                <default>false</default>
+                <label>Media: SMS Service</label>
+            </value>
+            <value>
+                <fullName>Media: Social Job Ad-Non Monster Bundle</fullName>
+                <default>false</default>
+                <label>Media: Social Job Ad-Non Monster Bundle</label>
+            </value>
+            <value>
+                <fullName>Media: Social Job Ads</fullName>
+                <default>false</default>
+                <label>Media: Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>Media: Standalone Ad</fullName>
+                <default>false</default>
+                <label>Media: Standalone Ad</label>
+            </value>
+            <value>
+                <fullName>Media: TargetMail</fullName>
+                <default>false</default>
+                <label>Media: TargetMail</label>
+            </value>
+            <value>
+                <fullName>Media: Veteran Landing Pages</fullName>
+                <default>false</default>
+                <label>Media: Veteran Landing Pages</label>
+            </value>
+            <value>
+                <fullName>Media: Veteran Talent Portal - MST</fullName>
+                <default>false</default>
+                <label>Media: Veteran Talent Portal - MST</label>
+            </value>
+            <value>
+                <fullName>Mid Market Job Bundle</fullName>
+                <default>false</default>
+                <label>Mid Market Job Bundle</label>
+            </value>
+            <value>
+                <fullName>Mid Market Premium 3 Month Bundle</fullName>
+                <default>false</default>
+                <label>Mid Market Premium 3 Month Bundle</label>
+            </value>
+            <value>
+                <fullName>Mid Market Premium Annual Bundle</fullName>
+                <default>false</default>
+                <label>Mid Market Premium Annual Bundle</label>
+            </value>
+            <value>
+                <fullName>Mid Market Slot Bundle</fullName>
+                <default>false</default>
+                <label>Mid Market Slot Bundle</label>
+            </value>
+            <value>
+                <fullName>Mid Market Starter Job Bundle</fullName>
+                <default>false</default>
+                <label>Mid Market Starter Job Bundle</label>
+            </value>
+            <value>
+                <fullName>Mid Market Starter Slot Bundle</fullName>
+                <default>false</default>
+                <label>Mid Market Starter Slot Bundle</label>
+            </value>
+            <value>
+                <fullName>Military Personality Assessment</fullName>
+                <default>false</default>
+                <label>Military Personality Assessment</label>
+            </value>
+            <value>
+                <fullName>Military Skills Translator Bundle</fullName>
+                <default>false</default>
+                <label>Military Skills Translator Bundle</label>
+            </value>
+            <value>
+                <fullName>Military Skills Translator Solution</fullName>
+                <default>false</default>
+                <label>Military Skills Translator Solution</label>
+            </value>
+            <value>
+                <fullName>Monster Ad Bolding</fullName>
+                <default>false</default>
+                <label>Monster Ad Bolding</label>
+            </value>
+            <value>
+                <fullName>Monster Ad Logo</fullName>
+                <default>false</default>
+                <label>Monster Ad Logo</label>
+            </value>
+            <value>
+                <fullName>Monster Ad Refresh</fullName>
+                <default>false</default>
+                <label>Monster Ad Refresh</label>
+            </value>
+            <value>
+                <fullName>Monster Ads Agency Posted</fullName>
+                <default>false</default>
+                <label>Monster Ads Agency Posted</label>
+            </value>
+            <value>
+                <fullName>Monster Ads Alma Media Messaging</fullName>
+                <default>false</default>
+                <label>Monster Ads Alma Media Messaging</label>
+            </value>
+            <value>
+                <fullName>Monster Ads Alma Media Non Monster Sites</fullName>
+                <default>false</default>
+                <label>Monster Ads Alma Media Non Monster Sites</label>
+            </value>
+            <value>
+                <fullName>Monster Ads - Contract Priced - Any Location</fullName>
+                <default>false</default>
+                <label>Monster Ads - Contract Priced - Any Location</label>
+            </value>
+            <value>
+                <fullName>Monster Ads Unlimited</fullName>
+                <default>false</default>
+                <label>Monster Ads Unlimited</label>
+            </value>
+            <value>
+                <fullName>Monster Ads Unlimited - Veteran</fullName>
+                <default>false</default>
+                <label>Monster Ads Unlimited - Veteran</label>
+            </value>
+            <value>
+                <fullName>Monster Basic Wrapping</fullName>
+                <default>false</default>
+                <label>Monster Basic Wrapping</label>
+            </value>
+            <value>
+                <fullName>Monster Career Ad Network® Direct</fullName>
+                <default>false</default>
+                <label>Monster Career Ad Network® Direct</label>
+            </value>
+            <value>
+                <fullName>Monster Career Site One Year Bundle</fullName>
+                <default>false</default>
+                <label>Monster Career Site One Year Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Career Site-SMB</fullName>
+                <default>false</default>
+                <label>Monster Career Site-SMB</label>
+            </value>
+            <value>
+                <fullName>Monster Career Site-Staffing</fullName>
+                <default>false</default>
+                <label>Monster Career Site-Staffing</label>
+            </value>
+            <value>
+                <fullName>Monster Career Site Two Year Bundle</fullName>
+                <default>false</default>
+                <label>Monster Career Site Two Year Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Classic Search - Seat License</fullName>
+                <default>false</default>
+                <label>Monster Classic Search - Seat License</label>
+            </value>
+            <value>
+                <fullName>Monster Cloud Search Enterprise Bundle-US</fullName>
+                <default>false</default>
+                <label>Monster Cloud Search Enterprise Bundle-US</label>
+            </value>
+            <value>
+                <fullName>Monster Cloud Search - Hosting</fullName>
+                <default>false</default>
+                <label>Monster Cloud Search - Hosting</label>
+            </value>
+            <value>
+                <fullName>Monster Cloud Search SMB Bundle-US</fullName>
+                <default>false</default>
+                <label>Monster Cloud Search SMB Bundle-US</label>
+            </value>
+            <value>
+                <fullName>Monster Cloud Search - Upload</fullName>
+                <default>false</default>
+                <label>Monster Cloud Search - Upload</label>
+            </value>
+            <value>
+                <fullName>Monster Cloud Search - Users</fullName>
+                <default>false</default>
+                <label>Monster Cloud Search - Users</label>
+            </value>
+            <value>
+                <fullName>Monster Complete Ads Bundle</fullName>
+                <default>false</default>
+                <label>Monster Complete Ads Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Complete All Jobs</fullName>
+                <default>false</default>
+                <label>Monster Complete All Jobs</label>
+            </value>
+            <value>
+                <fullName>Monster Complete Classic Bundle</fullName>
+                <default>false</default>
+                <label>Monster Complete Classic Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Complete Job Ad</fullName>
+                <default>false</default>
+                <label>Monster Complete Job Ad</label>
+            </value>
+            <value>
+                <fullName>Monster Complete Power Bundle</fullName>
+                <default>false</default>
+                <label>Monster Complete Power Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Complete QuickSource Bundle</fullName>
+                <default>false</default>
+                <label>Monster Complete QuickSource Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Complete Standard Slot</fullName>
+                <default>false</default>
+                <label>Monster Complete Standard Slot</label>
+            </value>
+            <value>
+                <fullName>Monster Complete with Veteran CAN Bundle</fullName>
+                <default>false</default>
+                <label>Monster Complete with Veteran CAN Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Diversity Job Slot Subscription</fullName>
+                <default>false</default>
+                <label>Monster Diversity Job Slot Subscription</label>
+            </value>
+            <value>
+                <fullName>Monster Enhanced Wrapping</fullName>
+                <default>false</default>
+                <label>Monster Enhanced Wrapping</label>
+            </value>
+            <value>
+                <fullName>Monster Job Ad</fullName>
+                <default>false</default>
+                <label>Monster Job Ad</label>
+            </value>
+            <value>
+                <fullName>Monster Job Ad with Diversity and Veterans Reach</fullName>
+                <default>false</default>
+                <label>Monster Job Ad with Diversity and Veterans Reach</label>
+            </value>
+            <value>
+                <fullName>Monster Job Slot Subscription</fullName>
+                <default>false</default>
+                <label>Monster Job Slot Subscription</label>
+            </value>
+            <value>
+                <fullName>Monster Job Template</fullName>
+                <default>false</default>
+                <label>Monster Job Template</label>
+            </value>
+            <value>
+                <fullName>Monster Middle East &amp; Africa Resume License</fullName>
+                <default>false</default>
+                <label>Monster Middle East &amp; Africa Resume License</label>
+            </value>
+            <value>
+                <fullName>Monster Mirror</fullName>
+                <default>false</default>
+                <label>Monster Mirror</label>
+            </value>
+            <value>
+                <fullName>Monster Newspaper</fullName>
+                <default>false</default>
+                <label>Monster Newspaper</label>
+            </value>
+            <value>
+                <fullName>Monster Newspaper Posting--Boston</fullName>
+                <default>false</default>
+                <label>Monster Newspaper Posting--Boston</label>
+            </value>
+            <value>
+                <fullName>Monster Pay Per Click Job Ad</fullName>
+                <default>false</default>
+                <label>Monster Pay Per Click Job Ad</label>
+            </value>
+            <value>
+                <fullName>Monster Pay Per Click Job Ad-Commitment</fullName>
+                <default>false</default>
+                <label>Monster Pay Per Click Job Ad-Commitment</label>
+            </value>
+            <value>
+                <fullName>Monster Pay Per Click Job Ad-Partner</fullName>
+                <default>false</default>
+                <label>Monster Pay Per Click Job Ad-Partner</label>
+            </value>
+            <value>
+                <fullName>Monster Pay Per Click Job Ad-Prepaid</fullName>
+                <default>false</default>
+                <label>Monster Pay Per Click Job Ad-Prepaid</label>
+            </value>
+            <value>
+                <fullName>Monster PayRight Powered by PayFactors</fullName>
+                <default>false</default>
+                <label>Monster PayRight Powered by PayFactors</label>
+            </value>
+            <value>
+                <fullName>Monster PayRight Powered by PayFactors Trial</fullName>
+                <default>false</default>
+                <label>Monster PayRight Powered by PayFactors Trial</label>
+            </value>
+            <value>
+                <fullName>Monster Power CV Search - Seat License</fullName>
+                <default>false</default>
+                <label>Monster Power CV Search - Seat License</label>
+            </value>
+            <value>
+                <fullName>Monster Power Enterprise Resume Search</fullName>
+                <default>false</default>
+                <label>Monster Power Enterprise Resume Search</label>
+            </value>
+            <value>
+                <fullName>Monster Power Resume Search - Seat License</fullName>
+                <default>false</default>
+                <label>Monster Power Resume Search - Seat License</label>
+            </value>
+            <value>
+                <fullName>Monster Premium Job Ad</fullName>
+                <default>false</default>
+                <label>Monster Premium Job Ad</label>
+            </value>
+            <value>
+                <fullName>Monster Premium Job Ad-Bill in Arrears-Billing</fullName>
+                <default>false</default>
+                <label>Monster Premium Job Ad-Bill in Arrears-Billing</label>
+            </value>
+            <value>
+                <fullName>Monster Premium Job Ad-Bill in Arrears-Provisioning</fullName>
+                <default>false</default>
+                <label>Monster Premium Job Ad-Bill in Arrears-Provisioning</label>
+            </value>
+            <value>
+                <fullName>Monster Premium Job Ad-EU</fullName>
+                <default>false</default>
+                <label>Monster Premium Job Ad-EU</label>
+            </value>
+            <value>
+                <fullName>Monster Premium Job Ad with Diversity and Veterans Reach</fullName>
+                <default>false</default>
+                <label>Monster Premium Job Ad with Diversity and Veterans Reach</label>
+            </value>
+            <value>
+                <fullName>Monster Premium Sourcing</fullName>
+                <default>false</default>
+                <label>Monster Premium Sourcing</label>
+            </value>
+            <value>
+                <fullName>Monster Premium Support</fullName>
+                <default>false</default>
+                <label>Monster Premium Support</label>
+            </value>
+            <value>
+                <fullName>Monster Professional Services</fullName>
+                <default>false</default>
+                <label>Monster Professional Services</label>
+            </value>
+            <value>
+                <fullName>Monster Recruitment Services</fullName>
+                <default>false</default>
+                <label>Monster Recruitment Services</label>
+            </value>
+            <value>
+                <fullName>Monster Resume Data Solutions</fullName>
+                <default>false</default>
+                <label>Monster Resume Data Solutions</label>
+            </value>
+            <value>
+                <fullName>Monster Resume Data Solutions - Records Volume</fullName>
+                <default>false</default>
+                <label>Monster Resume Data Solutions - Records Volume</label>
+            </value>
+            <value>
+                <fullName>Monster Resume Data Solutions - Setup</fullName>
+                <default>false</default>
+                <label>Monster Resume Data Solutions - Setup</label>
+            </value>
+            <value>
+                <fullName>Monster Search Demo</fullName>
+                <default>false</default>
+                <label>Monster Search Demo</label>
+            </value>
+            <value>
+                <fullName>Monster Search-Partner</fullName>
+                <default>false</default>
+                <label>Monster Search-Partner</label>
+            </value>
+            <value>
+                <fullName>Monster Search - Partner User Based</fullName>
+                <default>false</default>
+                <label>Monster Search - Partner User Based</label>
+            </value>
+            <value>
+                <fullName>Monster Search Trial - Seat Based</fullName>
+                <default>false</default>
+                <label>Monster Search Trial - Seat Based</label>
+            </value>
+            <value>
+                <fullName>Monster Search - User Based</fullName>
+                <default>false</default>
+                <label>Monster Search - User Based</label>
+            </value>
+            <value>
+                <fullName>Monster Search - View Based</fullName>
+                <default>false</default>
+                <label>Monster Search - View Based</label>
+            </value>
+            <value>
+                <fullName>Monster Search - View Based - BIA Billing</fullName>
+                <default>false</default>
+                <label>Monster Search - View Based - BIA Billing</label>
+            </value>
+            <value>
+                <fullName>Monster Search - View Based - BIA Provisioning</fullName>
+                <default>false</default>
+                <label>Monster Search - View Based - BIA Provisioning</label>
+            </value>
+            <value>
+                <fullName>Monster Single Job Ads</fullName>
+                <default>false</default>
+                <label>Monster Single Job Ads</label>
+            </value>
+            <value>
+                <fullName>Monster Social Brand Ads</fullName>
+                <default>false</default>
+                <label>Monster Social Brand Ads</label>
+            </value>
+            <value>
+                <fullName>Monster Staffing Suite</fullName>
+                <default>false</default>
+                <label>Monster Staffing Suite</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - 3 Days</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - 3 Days</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad-BIA-Billing</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad-BIA-Billing</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - BIA - Billing - Diversity</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - BIA - Billing - Diversity</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - BIA - Billing - Veteran</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - BIA - Billing - Veteran</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad-BIA-Provisioning</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad-BIA-Provisioning</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad-BIA-Provisioning-Diversity</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad-BIA-Provisioning-Diversity</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - BIA - Provisioning - Veterans</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - BIA - Provisioning - Veterans</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - Bridge - Provisioning</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - Bridge - Provisioning</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - Diversity</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - Diversity</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - Diversity Posted</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - Diversity Posted</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - NAP</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - NAP</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - NAP -ECOMM</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - NAP -ECOMM</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad Newspaper Partner Upsell</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad Newspaper Partner Upsell</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad – Short Term Contract Duration</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad – Short Term Contract Duration</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad - Veteran</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad - Veteran</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Ad with Diversity Reach</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Ad with Diversity Reach</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Slot</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Slot</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Slot - Diversity</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Slot - Diversity</label>
+            </value>
+            <value>
+                <fullName>Monster Standard Job Slot - Veteran</fullName>
+                <default>false</default>
+                <label>Monster Standard Job Slot - Veteran</label>
+            </value>
+            <value>
+                <fullName>Monster Super Search</fullName>
+                <default>false</default>
+                <label>Monster Super Search</label>
+            </value>
+            <value>
+                <fullName>Monster Super Search-Full Service</fullName>
+                <default>false</default>
+                <label>Monster Super Search-Full Service</label>
+            </value>
+            <value>
+                <fullName>Monster Super Search Subscription</fullName>
+                <default>false</default>
+                <label>Monster Super Search Subscription</label>
+            </value>
+            <value>
+                <fullName>Monster Super Search Trial</fullName>
+                <default>false</default>
+                <label>Monster Super Search Trial</label>
+            </value>
+            <value>
+                <fullName>Monster Talent CRM</fullName>
+                <default>false</default>
+                <label>Monster Talent CRM</label>
+            </value>
+            <value>
+                <fullName>Monster Talent CRM Trial</fullName>
+                <default>false</default>
+                <label>Monster Talent CRM Trial</label>
+            </value>
+            <value>
+                <fullName>Monster Talent Fusion</fullName>
+                <default>false</default>
+                <label>Monster Talent Fusion</label>
+            </value>
+            <value>
+                <fullName>Monster Talent Management</fullName>
+                <default>false</default>
+                <label>Monster Talent Management</label>
+            </value>
+            <value>
+                <fullName>Monster Talent Management-Addons</fullName>
+                <default>false</default>
+                <label>Monster Talent Management-Addons</label>
+            </value>
+            <value>
+                <fullName>Monster Talent Management-Implementation</fullName>
+                <default>false</default>
+                <label>Monster Talent Management-Implementation</label>
+            </value>
+            <value>
+                <fullName>Monster Talent Management-Subscription</fullName>
+                <default>false</default>
+                <label>Monster Talent Management-Subscription</label>
+            </value>
+            <value>
+                <fullName>Monster Twitter Cards</fullName>
+                <default>false</default>
+                <label>Monster Twitter Cards</label>
+            </value>
+            <value>
+                <fullName>Monster Veteran Job Slot Subscription</fullName>
+                <default>false</default>
+                <label>Monster Veteran Job Slot Subscription</label>
+            </value>
+            <value>
+                <fullName>Monster Video Creative</fullName>
+                <default>false</default>
+                <label>Monster Video Creative</label>
+            </value>
+            <value>
+                <fullName>Monster Video Job</fullName>
+                <default>false</default>
+                <label>Monster Video Job</label>
+            </value>
+            <value>
+                <fullName>Monster Video Production and Hosting Bundle</fullName>
+                <default>false</default>
+                <label>Monster Video Production and Hosting Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Video Production and Hosting Combo Bundle</fullName>
+                <default>false</default>
+                <label>Monster Video Production and Hosting Combo Bundle</label>
+            </value>
+            <value>
+                <fullName>Monster Widget</fullName>
+                <default>false</default>
+                <label>Monster Widget</label>
+            </value>
+            <value>
+                <fullName>MPS Implementation</fullName>
+                <default>false</default>
+                <label>MPS Implementation</label>
+            </value>
+            <value>
+                <fullName>MPS Integration</fullName>
+                <default>false</default>
+                <label>MPS Integration</label>
+            </value>
+            <value>
+                <fullName>MRI Complete Enterprise Package</fullName>
+                <default>false</default>
+                <label>MRI Complete Enterprise Package</label>
+            </value>
+            <value>
+                <fullName>MRI Complete Package</fullName>
+                <default>false</default>
+                <label>MRI Complete Package</label>
+            </value>
+            <value>
+                <fullName>MRI Complete Platinum Package</fullName>
+                <default>false</default>
+                <label>MRI Complete Platinum Package</label>
+            </value>
+            <value>
+                <fullName>MRI Complete Plus Package</fullName>
+                <default>false</default>
+                <label>MRI Complete Plus Package</label>
+            </value>
+            <value>
+                <fullName>myproduct-acc1</fullName>
+                <default>false</default>
+                <label>myproduct-acc1</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Complete</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Complete</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Complete with CAN 1</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Complete with CAN 1</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Complete with CAN 2</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Complete with CAN 2</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Complete with CAN 3</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Complete with CAN 3</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Complete with CAN and EJB</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Complete with CAN and EJB</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Complete with CAN and PRS 1</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Complete with CAN and PRS 1</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Complete with PRS</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Complete with PRS</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Job Slot</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Job Slot</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Job Slot with CAN</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Job Slot with CAN</label>
+            </value>
+            <value>
+                <fullName>Newspaper Bundle Single Job with CAN</fullName>
+                <default>false</default>
+                <label>Newspaper Bundle Single Job with CAN</label>
+            </value>
+            <value>
+                <fullName>Newspaper Counter Correction up to 100</fullName>
+                <default>false</default>
+                <label>Newspaper Counter Correction up to 100</label>
+            </value>
+            <value>
+                <fullName>New York Life PRS Annual National Bundle</fullName>
+                <default>false</default>
+                <label>New York Life PRS Annual National Bundle</label>
+            </value>
+            <value>
+                <fullName>New York Life PRS Annual Radius Bundle</fullName>
+                <default>false</default>
+                <label>New York Life PRS Annual Radius Bundle</label>
+            </value>
+            <value>
+                <fullName>Northwest Mutual PRS Bundle</fullName>
+                <default>false</default>
+                <label>Northwest Mutual PRS Bundle</label>
+            </value>
+            <value>
+                <fullName>NY Life Pilot</fullName>
+                <default>false</default>
+                <label>NY Life Pilot</label>
+            </value>
+            <value>
+                <fullName>NY Life Premier Package</fullName>
+                <default>false</default>
+                <label>NY Life Premier Package</label>
+            </value>
+            <value>
+                <fullName>NY Life Premier Package without CAN</fullName>
+                <default>false</default>
+                <label>NY Life Premier Package without CAN</label>
+            </value>
+            <value>
+                <fullName>OFCCP Reporting Bundle</fullName>
+                <default>false</default>
+                <label>OFCCP Reporting Bundle</label>
+            </value>
+            <value>
+                <fullName>OFCCP Report - One Time</fullName>
+                <default>false</default>
+                <label>OFCCP Report - One Time</label>
+            </value>
+            <value>
+                <fullName>OFCCP Report - Opt in and Data Retention</fullName>
+                <default>false</default>
+                <label>OFCCP Report - Opt in and Data Retention</label>
+            </value>
+            <value>
+                <fullName>OFCCP Report - Subscription</fullName>
+                <default>false</default>
+                <label>OFCCP Report - Subscription</label>
+            </value>
+            <value>
+                <fullName>Premium Resume Search</fullName>
+                <default>false</default>
+                <label>Premium Resume Search</label>
+            </value>
+            <value>
+                <fullName>Promotional Offer</fullName>
+                <default>false</default>
+                <label>Promotional Offer</label>
+            </value>
+            <value>
+                <fullName>PRS Power UP Promotion-US</fullName>
+                <default>false</default>
+                <label>PRS Power UP Promotion-US</label>
+            </value>
+            <value>
+                <fullName>PRS Two-Week Trial Offer</fullName>
+                <default>false</default>
+                <label>PRS Two-Week Trial Offer</label>
+            </value>
+            <value>
+                <fullName>Publicis Power Resume Bundle</fullName>
+                <default>false</default>
+                <label>Publicis Power Resume Bundle</label>
+            </value>
+            <value>
+                <fullName>Quick Connect</fullName>
+                <default>false</default>
+                <label>Quick Connect</label>
+            </value>
+            <value>
+                <fullName>Resume Search--Power Enterprise Bundle</fullName>
+                <default>false</default>
+                <label>Resume Search--Power Enterprise Bundle</label>
+            </value>
+            <value>
+                <fullName>Search Integration</fullName>
+                <default>false</default>
+                <label>Search Integration</label>
+            </value>
+            <value>
+                <fullName>Short Message Service</fullName>
+                <default>false</default>
+                <label>Short Message Service</label>
+            </value>
+            <value>
+                <fullName>Small Business Entry Bundle</fullName>
+                <default>false</default>
+                <label>Small Business Entry Bundle</label>
+            </value>
+            <value>
+                <fullName>Small Business Premium 3 Month Bundle</fullName>
+                <default>false</default>
+                <label>Small Business Premium 3 Month Bundle</label>
+            </value>
+            <value>
+                <fullName>Small Business Premium Annual Bundle</fullName>
+                <default>false</default>
+                <label>Small Business Premium Annual Bundle</label>
+            </value>
+            <value>
+                <fullName>Small Business Premium Bundle</fullName>
+                <default>false</default>
+                <label>Small Business Premium Bundle</label>
+            </value>
+            <value>
+                <fullName>SMB Power Posting Bundle</fullName>
+                <default>false</default>
+                <label>SMB Power Posting Bundle</label>
+            </value>
+            <value>
+                <fullName>Social Job Ads</fullName>
+                <default>false</default>
+                <label>Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>Staffing Branch Bronze Package</fullName>
+                <default>false</default>
+                <label>Staffing Branch Bronze Package</label>
+            </value>
+            <value>
+                <fullName>Staffing Branch Silver Package</fullName>
+                <default>false</default>
+                <label>Staffing Branch Silver Package</label>
+            </value>
+            <value>
+                <fullName>Staffing Enterprise Bundle</fullName>
+                <default>false</default>
+                <label>Staffing Enterprise Bundle</label>
+            </value>
+            <value>
+                <fullName>Staffing Entry Bundle</fullName>
+                <default>false</default>
+                <label>Staffing Entry Bundle</label>
+            </value>
+            <value>
+                <fullName>Staffing Professional Bundle</fullName>
+                <default>false</default>
+                <label>Staffing Professional Bundle</label>
+            </value>
+            <value>
+                <fullName>Staffing Value Bundle</fullName>
+                <default>false</default>
+                <label>Staffing Value Bundle</label>
+            </value>
+            <value>
+                <fullName>TalentBin by Monster</fullName>
+                <default>false</default>
+                <label>TalentBin by Monster</label>
+            </value>
+            <value>
+                <fullName>Talent CRM-US Subscription</fullName>
+                <default>false</default>
+                <label>Talent CRM-US Subscription</label>
+            </value>
+            <value>
+                <fullName>Target Mailers</fullName>
+                <default>false</default>
+                <label>Target Mailers</label>
+            </value>
+            <value>
+                <fullName>testing</fullName>
+                <default>false</default>
+                <label>testing</label>
+            </value>
+            <value>
+                <fullName>Text Recruit</fullName>
+                <default>false</default>
+                <label>Text Recruit</label>
+            </value>
+            <value>
+                <fullName>Text Recruit Add On</fullName>
+                <default>false</default>
+                <label>Text Recruit Add On</label>
+            </value>
+            <value>
+                <fullName>Trial-Job Postings</fullName>
+                <default>false</default>
+                <label>Trial-Job Postings</label>
+            </value>
+            <value>
+                <fullName>Trial-Resume Search</fullName>
+                <default>false</default>
+                <label>Trial-Resume Search</label>
+            </value>
+            <value>
+                <fullName>Twitter Single Card Subscription</fullName>
+                <default>false</default>
+                <label>Twitter Single Card Subscription</label>
+            </value>
+            <value>
+                <fullName>US-GSW -Low</fullName>
+                <default>false</default>
+                <label>US-GSW -Low</label>
+            </value>
+            <value>
+                <fullName>US GSW -Medium</fullName>
+                <default>false</default>
+                <label>US GSW -Medium</label>
+            </value>
+            <value>
+                <fullName>Veteran Annual Jobs Subscription - Enterprise</fullName>
+                <default>false</default>
+                <label>Veteran Annual Jobs Subscription - Enterprise</label>
+            </value>
+            <value>
+                <fullName>Veteran Annual Job Subscription - SMB</fullName>
+                <default>false</default>
+                <label>Veteran Annual Job Subscription - SMB</label>
+            </value>
+            <value>
+                <fullName>Veteran Posting with CAN Bundle</fullName>
+                <default>false</default>
+                <label>Veteran Posting with CAN Bundle</label>
+            </value>
+            <value>
+                <fullName>Virtual Career Fair</fullName>
+                <default>false</default>
+                <label>Virtual Career Fair</label>
+            </value>
+            <value>
+                <fullName>Walk-in-Pro Event</fullName>
+                <default>false</default>
+                <label>Walk-in-Pro Event</label>
+            </value>
+            <value>
+                <fullName>Wanted Analytics</fullName>
+                <default>false</default>
+                <label>Wanted Analytics</label>
+            </value>
+            <value>
+                <fullName>YMCA Monster Complete Jobs Bundle</fullName>
+                <default>false</default>
+                <label>YMCA Monster Complete Jobs Bundle</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

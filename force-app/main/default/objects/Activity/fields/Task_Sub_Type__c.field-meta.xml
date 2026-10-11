@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Task_Sub_Type__c</fullName>
+    <label>Task Sub-Type</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Task_Type_Sales__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Scope Discussion</fullName>
+                <default>false</default>
+                <label>Scope Discussion</label>
+            </value>
+            <value>
+                <fullName>Proposal Discussion</fullName>
+                <default>false</default>
+                <label>Proposal Discussion</label>
+            </value>
+            <value>
+                <fullName>Negotiations &amp; closures</fullName>
+                <default>false</default>
+                <label>Negotiations &amp; closures</label>
+            </value>
+            <value>
+                <fullName>Follow-up before lockdown</fullName>
+                <default>false</default>
+                <label>Follow-up before lockdown</label>
+            </value>
+            <value>
+                <fullName>To Follow-up Post Lockdown</fullName>
+                <default>false</default>
+                <label>To Follow-up Post Lockdown</label>
+            </value>
+            <value>
+                <fullName>Disinterested due to COVID-19</fullName>
+                <default>false</default>
+                <label>Disinterested due to COVID-19</label>
+            </value>
+            <value>
+                <fullName>Unwilling to buy Monster, Using Competition</fullName>
+                <default>false</default>
+                <label>Unwilling to buy Monster, Using Competition</label>
+            </value>
+            <value>
+                <fullName>Very Low Potential account /No requirement for job portal</fullName>
+                <default>false</default>
+                <label>Very Low Potential account /No requirement for job portal</label>
+            </value>
+            <value>
+                <fullName>Introduction/Cold Call</fullName>
+                <default>false</default>
+                <label>Introduction/Cold Call</label>
+            </value>
+            <value>
+                <fullName>Right Person to be contacted</fullName>
+                <default>false</default>
+                <label>Right Person to be contacted</label>
+            </value>
+            <value>
+                <fullName>Follow-up</fullName>
+                <default>false</default>
+                <label>Follow-up</label>
+            </value>
+            <value>
+                <fullName>Service Call</fullName>
+                <default>false</default>
+                <label>Service Call</label>
+            </value>
+            <value>
+                <fullName>Courtesy Call</fullName>
+                <default>false</default>
+                <label>Courtesy Call</label>
+            </value>
+            <value>
+                <fullName>Hold/Extension</fullName>
+                <default>false</default>
+                <label>Hold/Extension</label>
+            </value>
+            <value>
+                <fullName>Inactive in the business/Shut Shop</fullName>
+                <default>false</default>
+                <label>Inactive in the business/Shut Shop</label>
+            </value>
+            <value>
+                <fullName>Wrong number</fullName>
+                <default>false</default>
+                <label>Wrong number</label>
+            </value>
+            <value>
+                <fullName>Did not pick up the call</fullName>
+                <default>false</default>
+                <label>Did not pick up the call</label>
+            </value>
+            <value>
+                <fullName>Switched off</fullName>
+                <default>false</default>
+                <label>Switched off</label>
+            </value>
+            <value>
+                <fullName>Payment</fullName>
+                <default>false</default>
+                <label>Payment</label>
+            </value>
+            <value>
+                <fullName>Mapping</fullName>
+                <default>false</default>
+                <label>Mapping</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Agreement Restructure</controllingFieldValue>
+            <valueName>Hold/Extension</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not Connect</controllingFieldValue>
+            <valueName>Wrong number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not Connect</controllingFieldValue>
+            <valueName>Did not pick up the call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not Connect</controllingFieldValue>
+            <valueName>Switched off</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Payment Follow-up</controllingFieldValue>
+            <valueName>Payment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Scope Discussion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Proposal Discussion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Negotiations &amp; closures</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>Follow-up before lockdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Prospect</controllingFieldValue>
+            <valueName>To Follow-up Post Lockdown</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service/ Courtesy Call</controllingFieldValue>
+            <valueName>Service Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Service/ Courtesy Call</controllingFieldValue>
+            <valueName>Courtesy Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspect/Uninterested</controllingFieldValue>
+            <valueName>Disinterested due to COVID-19</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspect/Uninterested</controllingFieldValue>
+            <valueName>Unwilling to buy Monster, Using Competition</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspect/Uninterested</controllingFieldValue>
+            <valueName>Very Low Potential account /No requirement for job portal</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspect/Uninterested</controllingFieldValue>
+            <valueName>Introduction/Cold Call</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspect/Uninterested</controllingFieldValue>
+            <valueName>Right Person to be contacted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Suspect/Uninterested</controllingFieldValue>
+            <valueName>Follow-up</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Invalid Account</controllingFieldValue>
+            <valueName>Inactive in the business/Shut Shop</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Mapping</controllingFieldValue>
+            <valueName>Mapping</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

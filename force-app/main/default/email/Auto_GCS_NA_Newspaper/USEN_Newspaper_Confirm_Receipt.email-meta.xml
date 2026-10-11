@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>USEN: Newspaper - Confirm Receipt</name>
+    <style>none</style>
+    <subject>Confirmation Receipt - Case #: {!Case.CaseNumber} {!Case.Thread_Id}</subject>
+    <textOnly>Thank you for contacting Monster Newspaper Customer Support. This automated response is to inform you that we have received your email. Emails are addressed as they are received. Please allow 24 hours for processing and reference the Case Number if follow up on this request is needed.
+
+If you need more immediate assistance please contact us at 1-800-MONSTER (1-800-666-7837) ext NEWS (6397).
+
+Your email is important to us and we thank you for using Monster.
+
+Regards,
+Monster Customer Service
+
+Case Thread ID: {!Case.Thread_Id}
+
+---- Original Message ----
+{!Case.Description}
+---------------------------------</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

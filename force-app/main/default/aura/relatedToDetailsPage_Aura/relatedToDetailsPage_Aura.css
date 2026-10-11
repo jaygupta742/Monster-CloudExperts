@@ -1,0 +1,25 @@
+.THIS {}
+
+.THIS.table_head:hover {
+    background-color: white;
+}
+
+.THIS .data-container {
+    padding: 5px 10px;
+    border-bottom: 1px solid #ccc;
+    transition: box-shadow 0.3s ease;
+    min-height: 40px;
+}
+
+.THIS .data-container:hover {
+    box-shadow: 0 2px 4px rgba(131, 103, 215, 0.5); /* Shadow on hover */
+}
+  
+.THIS .Revamp-Section {
+    background-color: #8367d7;
+    color: white;
+}
+
+.THIS .Revamp-Warning-Text {
+    color: rgb(227, 157, 26);
+}

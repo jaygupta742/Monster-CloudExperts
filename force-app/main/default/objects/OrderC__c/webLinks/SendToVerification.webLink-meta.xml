@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SendToVerification</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Send To Verification</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+
+var qry= sforce.connection.query(&quot;SELECT id,name,Order__c,Order__r.Account__r.id from Order_Line_Item__c where Order__c=&apos;{!OrderC__c.Id}&apos;&quot;);
+
+
+var xcd= sforce.connection.query(&quot;SELECT id,name,Created_For_Account__c,Order_Custom__c from Xcode__c where Created_For_Account__c=&apos;{!OrderC__c.Acct_SF_Id__c}&apos;&quot;);
+
+//Added By Vimal Srivastava to prevent Verified/Closed/Negated/Rejected order TCS Jan 11 2018
+if(  &quot;{!OrderC__c.OrderStatus__c}&quot; == &quot;Verified&quot; || &quot;{!OrderC__c.OrderStatus__c}&quot; == &quot;Closed&quot; || &quot;{!OrderC__c.OrderStatus__c}&quot; == &quot;Negated&quot; || &quot;{!OrderC__c.OrderStatus__c}&quot; == &quot;Rejected&quot;){
+alert(&quot;Order is alreay in Verified/Closed/Negated/Rejected status can not be sent to varification.&quot;);
+}
+
+else{
+
+if(qry.size == 0){
+alert(&quot;An Error has occurred. Please make sure that there is at least one Order line item&quot;);
+
+}
+
+else{
+
+if(xcd.size == 0){
+alert(&apos;Error: XCode is required on (all) Order Line Item(s).&apos;); 
+}
+else{
+alert(&quot;verified successfully&quot;);
+var newRecords = []; 
+var c = new sforce.SObject(&quot;OrderC__c&quot;);
+c.ID = &apos;{!OrderC__c.Id}&apos;;
+c.OrderStatus__c = &quot;Verified&quot;;
+
+newRecords.push(c); 
+var  result = sforce.connection.update(newRecords); 
+
+var oid=&apos;{!OrderC__c.Id}&apos;;
+var ord =sforce.apex.execute(&quot;CaptureOrderVfDateTime&quot;,&quot;ORderVerfiCatcher&quot;,{Ids:oid});
+window.location.reload(); 
+}
+}
+
+}</url>
+</WebLink>

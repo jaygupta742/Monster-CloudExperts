@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Promote_Account</fullName>
+    <availability>online</availability>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Promote Account</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/13.0/apex.js&quot;)}
+
+
+var con = sforce.connection.query( &quot;SELECT id FROM Contact WHERE accountid = &apos;{!Account.Id}&apos;&quot;); 
+//*var add1 = sforce.connection.query( &quot;SELECT id FROM Address1__c WHERE Account__c = &apos;{!Account.Id}&apos;&quot;);*/
+
+var records = con.getArray(&quot;records&quot;); 
+var cCount = records.length;
+
+/*var records = add1.getArray(&quot;records&quot;);
+var aCount = records.length;*/
+
+
+
+if(cCount &lt;=0 ){
+alert(&apos;There should be atleast 1 contact&apos;);
+}else{
+try{ 
+sforce.apex.execute(&quot;AccountPromotionRequest&quot;,&quot;sendmail&quot;,{ii:&quot;{!Account.Id}&quot;}); 
+}catch(error){ Alert(&apos;An Error has Occurred. Error: &apos; + error); 
+}
+location.reload(true); 
+alert(&quot;Email sent successfully!!!!!!!&quot;); 
+}</url>
+</WebLink>

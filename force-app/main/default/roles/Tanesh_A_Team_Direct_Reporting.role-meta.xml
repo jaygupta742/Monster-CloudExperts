@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Shree Vidya (Seeker Team Direct Reporting)</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Shree Vidya (Seeker Team Direct Reporting)</name>
+    <opportunityAccessLevel>Read</opportunityAccessLevel>
+    <parentRole>Tanesh_A_Under_Pranay</parentRole>
+</Role>

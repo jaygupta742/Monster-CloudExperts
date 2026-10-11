@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ApprovalTypeRequired__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( AND(Total_Discount__c &gt;=(3/10),Total_Discount__c &lt;(4/10), CONTAINS(Owner:User.UserRole.Name, &quot;Rep&quot;)), &quot;One Level&quot;,
+IF( AND(Total_Discount__c &gt;=(4/10),CONTAINS(Owner:User.UserRole.Name, &quot;Rep&quot;)), &quot;Two Levels&quot;,
+IF( AND(Total_Discount__c &gt;=(4/10),CONTAINS(Owner:User.UserRole.Name, &quot;Manager&quot;)),&quot;One Level&quot;,&quot;None Required&quot;)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Approval Type Required</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

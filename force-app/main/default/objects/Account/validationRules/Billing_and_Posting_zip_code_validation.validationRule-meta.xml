@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Billing_and_Posting_zip_code_validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+Integration__c = false,
+Marketing_Lead__c = false,
+Case_Accounts__c =false,
+Person_Account__c =false,
+ISPICKVAL(BillCountry__c,&quot;India&quot;),
+ISPICKVAL(PostCountry__c ,&quot;India&quot;),
+
+OR(NOT(REGEX(BillingPostalCode,&quot;\\d{6}&quot;)),NOT(REGEX(ShippingPostalCode,&quot;\\d{6}&quot;)))
+
+)</errorConditionFormula>
+    <errorMessage>Please enter Billing and Shipping Postal code of 6 digits</errorMessage>
+</ValidationRule>

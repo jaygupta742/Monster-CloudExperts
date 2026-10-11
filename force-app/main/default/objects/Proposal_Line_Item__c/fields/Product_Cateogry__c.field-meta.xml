@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Cateogry__c</fullName>
+    <label>Product Cateogry</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Job Posting Add-On</fullName>
+                <default>false</default>
+                <label>Job Posting Add-On</label>
+            </value>
+            <value>
+                <fullName>Job Posting Standard</fullName>
+                <default>false</default>
+                <label>Job Posting Standard</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>TargetMail/eMail</fullName>
+                <default>false</default>
+                <label>TargetMail/eMail</label>
+            </value>
+            <value>
+                <fullName>Other Solutions</fullName>
+                <default>false</default>
+                <label>Other Solutions</label>
+            </value>
+            <value>
+                <fullName>Monster Professional Services</fullName>
+                <default>false</default>
+                <label>Monster Professional Services</label>
+            </value>
+            <value>
+                <fullName>Cust Srvcs/Dev Various</fullName>
+                <default>false</default>
+                <label>Cust Srvcs/Dev Various</label>
+            </value>
+            <value>
+                <fullName>Sourcing Solutions</fullName>
+                <default>false</default>
+                <label>Sourcing Solutions</label>
+            </value>
+            <value>
+                <fullName>Branding Solutions</fullName>
+                <default>false</default>
+                <label>Branding Solutions</label>
+            </value>
+            <value>
+                <fullName>Classic Resume Search</fullName>
+                <default>false</default>
+                <label>Classic Resume Search</label>
+            </value>
+            <value>
+                <fullName>Media Product Various</fullName>
+                <default>false</default>
+                <label>Media Product Various</label>
+            </value>
+            <value>
+                <fullName>Employer Visibility</fullName>
+                <default>false</default>
+                <label>Employer Visibility</label>
+            </value>
+            <value>
+                <fullName>Jobs2Web</fullName>
+                <default>false</default>
+                <label>Jobs2Web</label>
+            </value>
+            <value>
+                <fullName>Career Ad Network (CAN)</fullName>
+                <default>false</default>
+                <label>Career Ad Network (CAN)</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Software Solutions</fullName>
+                <default>false</default>
+                <label>Software Solutions</label>
+            </value>
+            <value>
+                <fullName>Job Posting Slot</fullName>
+                <default>false</default>
+                <label>Job Posting Slot</label>
+            </value>
+            <value>
+                <fullName>Job Posting Performance</fullName>
+                <default>false</default>
+                <label>Job Posting Performance</label>
+            </value>
+            <value>
+                <fullName>Job Posting Social</fullName>
+                <default>false</default>
+                <label>Job Posting Social</label>
+            </value>
+            <value>
+                <fullName>Other Media</fullName>
+                <default>false</default>
+                <label>Other Media</label>
+            </value>
+            <value>
+                <fullName>Talent Resume Search</fullName>
+                <default>false</default>
+                <label>Talent Resume Search</label>
+            </value>
+            <value>
+                <fullName>Virtual Career Fair</fullName>
+                <default>false</default>
+                <label>Virtual Career Fair</label>
+            </value>
+            <value>
+                <fullName>Power Resume Search</fullName>
+                <default>false</default>
+                <label>Power Resume Search</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,10 @@
+<apex:component >
+
+  <apex:attribute required="true" name="value" type="string" description="repeat"/>
+ 
+<apex:stylesheet value="{!$Resource.PageNo}"/>
+ <div class="{!value}" width="100">
+  <apex:componentBody />
+ </div> 
+
+</apex:component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Sequence__c</fullName>
+    <label>Finance Order Sequence</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>T-420576</fullName>
+                <default>false</default>
+                <label>T-420576</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

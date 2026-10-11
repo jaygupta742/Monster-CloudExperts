@@ -1,0 +1,12 @@
+Hi Team, 
+
+I would request you to promote an account. 
+
+Please click the following link to get more information.
+
+https://ap5.salesforce.com/{!Account.Id}
+
+Regards
+{!User.FirstName} {!User.LastName},
+{!User.Title},
+{!User.Location1__c}

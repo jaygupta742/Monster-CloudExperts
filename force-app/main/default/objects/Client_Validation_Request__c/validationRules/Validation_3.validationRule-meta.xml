@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validation_3</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ INCLUDES( ID_Proof__c ,&quot;Ration Card&quot;) ,
+ISBLANK(   Ration_ID__c  ),isblank(Ration_Card_Name__c)
+)</errorConditionFormula>
+    <errorDisplayField>Ration_ID__c</errorDisplayField>
+    <errorMessage>Enter your Ration ID Number</errorMessage>
+</ValidationRule>

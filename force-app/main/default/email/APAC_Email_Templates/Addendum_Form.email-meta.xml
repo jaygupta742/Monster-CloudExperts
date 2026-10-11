@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Addendum Form</name>
+    <style>freeForm</style>
+    <subject>{!Order__c.Account__c} Addendum form for {!delete__c.Name}</subject>
+    <textOnly>This email is to be used for the purpose of sending signed addendum form to Collections team for changes in the payment terms for an existing customer.
+
+Details of Customer
+Account Name: {!Order__c.Account__c}
+Order Number:  {!delete__c.Name}
+Sales Channel: {!Order__c.MAPP_Archive_Posting_Sales_Channel__c}
+Account Sales Rep: {!Order__c.MAPP_Archive_Posting_Sales_Rep__c}
+
+Please provide the following information:
+New Payment Terms:
+Reason for Addendum:
+
+Note: For quick processing, please ensure the signed addendum form and approval email is attached on the respective Orders &gt; Attachment view in Karma as explained in the process document.
+
+
+Regards,</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

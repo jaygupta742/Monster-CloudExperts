@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User_List_Apttus__c</fullName>
+    <label>User List Apttus</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Healthcare Access Group</fullName>
+                <default>false</default>
+                <label>Healthcare Access Group</label>
+            </value>
+            <value>
+                <fullName>Telemarketing Access Group</fullName>
+                <default>false</default>
+                <label>Telemarketing Access Group</label>
+            </value>
+            <value>
+                <fullName>CR Access Group</fullName>
+                <default>false</default>
+                <label>CR Access Group</label>
+            </value>
+            <value>
+                <fullName>Extended SeeMore Sales Team</fullName>
+                <default>false</default>
+                <label>Extended SeeMore Sales Team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

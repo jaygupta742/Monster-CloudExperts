@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Name_And_Last_Name_Capital</fullName>
+    <active>false</active>
+    <description>First name and Last name should be start with capital letter.</description>
+    <errorConditionFormula>OR (
+   NOT(BEGINS( FirstName , UPPER(LEFT(FirstName, 1) ))), 
+   NOT(BEGINS( LastName ,  UPPER(LEFT(LastName, 1)  )))
+   )</errorConditionFormula>
+    <errorMessage>First Name And Last Name Should Be Capital.</errorMessage>
+</ValidationRule>

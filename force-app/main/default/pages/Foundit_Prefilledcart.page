@@ -1,0 +1,411 @@
+<apex:page renderAs="pdf" showHeader="false" standardController="QuotesN__c" extensions="Foundit_Prefilledcart">
+    <c:PDFHeaderFooterRunning value="header">
+        <apex:image value="{!$Resource.FoundIt_Logo}" width="130" height="40"/>
+    </c:PDFHeaderFooterRunning>
+    
+    <!------- Footer Section ------------>
+    <c:PDFRunningFooter value="footer">
+        <apex:stylesheet value="{!$Resource.PageNo}"/>
+        <div style="text-align : right;">
+            <br/>{!qp.name} 
+            {!YEAR(TODAY())}{!MONTH(TODAY())}{!DAY(TODAY())}
+        </div>
+    </c:PDFRunningFooter>
+    
+    <!------------------- Content Details  -------------------------->
+    <div style="font-size:14px;margin-right:30px;margin-left:30px;">
+        <table width="90%" border="1px" cellspacing ="0" style="font-size:14px;margin-right:30px;margin-left:30px;" >
+            <tr><th style="background-color:#800080;color:#FFFFFF;" colspan="2"> Prefilled Cart Data</th></tr>
+            <tr>
+                <td width="50%">Name of the Customer</td>
+                <td>{!qp.Contact__r.Name}</td>
+            </tr>
+            <tr>
+                <td width="50%">Designation</td>
+                <td>{!qp.Contact__r.Title}</td>
+            </tr>
+            <tr>
+                <td width="50%">Company Name</td>
+                <td>{!qp.Account__r.name}</td>
+            </tr>
+            <tr> 
+            </tr>
+            <tr>
+                <td width="50%">Quote #</td>
+                <td>{!qp.name}</td>
+            </tr>
+            <tr>
+                <td width="50%">Xcode</td>
+                <td></td>
+            </tr>
+            <tr>
+            </tr>
+            <tr>
+                <td width="50%">Industry</td>
+                <td>{!qp.Account__r.APAC_Industry__c}</td>
+            </tr>
+            <tr>
+                <td width="50%">Email</td>
+                <td>{!qp.Contact__r.Email}</td>
+            </tr>
+            <tr>
+                <td width="50%">Phone Number</td>
+                <td>{!qp.Contact__r.Phone}</td>
+            </tr>
+            <tr>
+                <td width="50%">Mobile Number</td>
+                <td>{!qp.Contact__r.MobilePhone}</td>
+            </tr>
+            <tr>
+                <td width="50%">Address</td>
+                <td>{!qp.Posting_Street__c}</td>
+            </tr>
+            <tr>
+                <td width="50%">City, State, Pin Code</td>
+                <td>{!qp.Posting_City__c} {!qp.Posting_State__c} {!qp.Posting_Pin_Code__c }</td>
+            </tr>
+            <tr>
+                <td width="50%">Country</td>
+                <td>{!qp.Posting_Country__c}</td>
+            </tr>
+            <tr>
+                <td width="50%">GST ID</td>
+                <td>{!qp.Account__r.GST_ID__c}</td>
+            </tr>
+        </table>
+        <br/>
+        
+        <!------------------------------------------------   Line Item   ----------------------------------------------->
+        
+        <apex:variable value="{!1}" var="Slno"/>
+        <table  border="1 solid" cellspacing ="0" cellpadding="3" width="90%" style=" font-size:13px;margin-left:35px;margin-right:35px;page-break-inside:avoid; ">
+            <tr style="font-size:14px;color:#FFFFFF;page-break-inside:avoid;">
+                <th bgcolor="#800080" width="8%" style="text-align:center">Item #</th>
+                <th bgcolor="#800080" width="28%" style="text-align:left"> Product <br/></th>
+                <th bgcolor="#800080" width="13%" style="text-align:center">QTY <br/></th>
+                <th bgcolor="#800080" width="21%" style="text-align:center">Product start date </th>
+                <th bgcolor="#800080" width="20%" style="text-align:center">Product end date </th>
+            </tr>
+            <apex:variable value="{!1}" var="Slno"/>
+            <apex:repeat value="{!pli}" var="r">
+                <tr style="font-size:14px;color:black;margin-top:25px;" width="90%">
+                    <td style="text-align:center">
+                        <div style="margin-top:1px;">
+                            <apex:outputText value="{!Floor(Slno)}"/> 
+                            <apex:variable var="Slno" value="{!Slno + 1}"/> 
+                        </div>  
+                    </td>
+                    <td style="text-align:left">
+                        <div style="margin-top:10px;">
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '1'}">
+                                {!r.Product_Name__c}<br/>
+                                {!r.SKU_Type__c}<br/>
+                                {!r.Product_Country__c}<br/>
+                                Add Desc: {!r.Comment__c}<br/>   
+                                {!r.Product__r.Text__c}<br/>                                                                  
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '2'}">
+                                {!r.Product__r.Product_Name__c}<br/>
+                                Country:  {!r.Product__r.Product_Country__c}<br/>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '3'}">
+                                {!r.Product__r.Product_Name__c}<br/>
+                                Industry: {!r.Product__r.DB_Type_Industry__c}<br/>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText>  
+                                {!r.Product__r.Name}<br/>
+                                Add Desc: {!r.Comment__c}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '4'}">
+                                {!r.Product__r.Product_Name__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText> 
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '5'}">
+                                {!r.Product__r.Product_Name__c}<br/>
+                                Country: {!r.Product__r.Product_Country__c}<br/>
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '6'}">
+                                {!r.Product__r.Product_Name__c}<br/>
+                                Country: {!r.Product__r.Product_Country__c}<br/>
+                                Industry: {!r.Product__r.DB_Type_Industry__c}<br/>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText>  
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '7'}">
+                                {!r.Product__r.Product_Name__c}<br/>
+                                {!r.Product__r.Name}<br/>
+                                Add Desc: {!r.Comment__c}
+                            </apex:outputPanel>
+                            
+                            <apex:outputPanel rendered="{!r.Product__r.Classification__c == '8'}">
+                                {!r.Product_Name__c}<br/>
+                                Industry: {!r.Product_Industry__c}<br/>
+                                <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c!= 'S1' && r.Product_Geo_Scope__c!= 'S2')}">
+                                    Scope: {!r.Product_Geo_Scope__c}<br/>
+                                </apex:outputPanel>
+                                <apex:outputPanel rendered="{!(r.Product_Geo_Scope__c== 'S1' || r.Product_Geo_Scope__c== 'S2')}">
+                                    Scope:   {!r.Product__r.Location__c}<br/>
+                                </apex:outputPanel>
+                                {!r.Product__r.Tenure_Months__c}<br/>
+                                <apex:outputText rendered="{!NOT(ISBLANK(r.Product__r.Text__c))}">
+                                    {!r.Product__r.Text__c}<br/>
+                                </apex:outputText>                           
+                                {!r.Product__r.Name}<br/>
+                            </apex:outputPanel>
+                            
+                            
+                        </div>
+                        <br/>
+                    </td>
+                    <td style="text-align:center">
+                        {!r.Quantity_Unit__c}
+                    </td>
+                    <td style="text-align:center">
+                        {!DAY(r.Start_Date__c)}/{!MONTH(r.Start_Date__c)}/{!YEAR(r.Start_Date__c)}
+                    </td>
+                    <td style="text-align:center">
+                        {!DAY(r.End_Date__c)}/{!MONTH(r.End_Date__c)}/{!YEAR(r.End_Date__c)}
+                    </td>
+                </tr>
+            </apex:repeat> 
+        </table>
+        
+        <apex:outputPanel rendered="{!showAccessories == 'true'}">
+            <div style="page-break-inside:avoid;">
+                <div style="font-size:13px; page-break-inside:avoid; padding: 10px 35px;">
+                    <b>SERVICES</b> 
+                    <table border="1 solid" cellspacing ="0" cellpadding="3" width="100%" style="page-break-inside:avoid; padding-top: 10px;">
+                        <thead>
+                            <tr style="font-size:14px; color:#FFFFFF;page-break-inside:avoid;">
+                                <th bgcolor="#800080" width="8%" style="text-align:center">Item #</th>
+                                <th bgcolor="#800080" width="20%" style="text-align:left">Services</th>
+                                <th bgcolor="#800080" width="15%" style="text-align:center">Country</th>
+                                <th bgcolor="#800080" width="12%" style="text-align:center">Quantity</th>
+                                <th bgcolor="#800080" width="15%" style="text-align:center">Quota</th>
+                                <th bgcolor="#800080" width="15%" style="text-align:center">Start Date</th>
+                                <th bgcolor="#800080" width="15%" style="text-align:center">End Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <apex:variable value="{!1}" var="slno"></apex:variable>
+                            <apex:repeat value="{!wraplist}" var="item">
+                                <tr>
+                                    <td style="text-align:center">
+                                        <div style="margin-top:1px;">
+                                            {!item.srno}
+                                        </div>
+                                    </td>
+                                    <td style="text-align:left">{!item.service.Top_Ups__r.name}</td>
+                                    <td style="text-align:center">{!item.service.Product__r.Product_Country__c}</td>
+                                    <td style="text-align:center">{!item.service.Quantity_Unit__c}</td>
+                                    <td style="text-align:center">{!item.service.Top_Ups__r.Inventory_Quota_Tenure__c}</td>
+                                    <td style="text-align:center">
+                                        <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                            <apex:param value="{!item.service.Start_Date__c}" /> 
+                                        </apex:outputText>
+                                    </td>
+                                    <td style="text-align:center">
+                                        <apex:outputText value="{0,date,dd/MM/yyy}"> 
+                                            <apex:param value="{!item.service.End_Date__c}" /> 
+                                        </apex:outputText>
+                                    </td>
+                                </tr>
+                            </apex:repeat>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </apex:outputPanel>
+        
+        <!-- ------------------------------------------------ Guideline Start Here -------------------------------------- -->    
+        <apex:outputPanel rendered="{!showGuideLine}">
+            <div style="margin-left:35px; margin-right:30px; font-color:black;"> 
+                <apex:outputField value="{!guidelines.GuideLine_Details__c}"/>
+            </div>
+        </apex:outputPanel>
+        
+        <apex:outputPanel rendered="{!showguidelinetick}">
+            <div style="margin-left:35px; margin-right:30px; font-color:black;"> 
+                <apex:outputField value="{!guidelinestick.GuideLine_Details__c}"/>
+            </div>
+        </apex:outputPanel>
+        
+        <!--  ----------------------------------------------- Guideline End Here --------------------------------------------- -->
+        
+        <br/>
+        <br/>
+        <table border="1 solid" style="margin-rigt:30px;margin-left:30px;page-break-inside:avoid;" cellspacing="0" width="90%">
+            <tr>
+                <td width="50%">Value of Services</td>
+                <td>
+                    <!-- <apex:outputField value="{!qp.Gross_Total1__c}"/>-->
+                   
+                    
+                    
+                        <apex:outputPanel rendered="{!qp.CurrencyISOCode == 'INR'}">
+                            {!qp.CurrencyISOCode} {!Quote_Value}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!qp.CurrencyISOCode != 'INR'}">
+                            {!qp.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!qp.Quote_Value__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td><br/><br/>
+                </td>
+                <td>{!qp.Tax_Type__c} @ {!qp.Tax__c }% <br/>  
+                    <!--  <apex:outputField value="{!qp.Tax_Amount__c}"/>-->
+                   
+                    
+                    <apex:outputPanel rendered="{!qp.CurrencyISOCode == 'INR'}">
+                            {!qp.CurrencyISOCode} {!Tax_Amount}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!qp.CurrencyISOCode != 'INR'}">
+                            {!qp.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!qp.Tax_Amount__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Total Invoice value (including tax)</td>
+                <td> 
+                    <!-- <apex:outputField value="{!qp.Net_Total__c}"/>-->
+                   
+                    
+                     <apex:outputPanel rendered="{!qp.CurrencyISOCode == 'INR'}">
+                             {!qp.CurrencyISOCode} {!Net_Total}
+                        </apex:outputPanel>
+                        
+                        <apex:outputPanel rendered="{!qp.CurrencyISOCode != 'INR'}">
+                            {!qp.CurrencyISOCode} &nbsp;
+                            <apex:outputText value="{0,number,###,###,###.##}">
+                                <apex:param value="{!qp.Net_Total__c}" />
+                            </apex:outputText>
+                        </apex:outputPanel>
+                    
+                </td>
+            </tr>
+            
+            <tr>
+                <td>Order Type</td>
+                <td>{!qp.Order_Type__c}</td>
+            </tr>
+            
+            <tr>
+                <td>Sales Executive Name</td>
+                <td>{!qp.Owner.name}</td>
+            </tr>
+            
+            <tr>
+                <td>Sales Executive Email</td>
+                <td>{!qp.Owner.Email}</td>
+            </tr>
+            
+            <tr>
+                <td>Branch Address:</td>
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'India' && qp.Tax__c   == 0.00,true,false)}">
+                    <td>
+                        Wing B, 6th Floor, Smartworks, Aurobindo Galaxy, Plot No 01, Sy. No 83/1, TSIIC, HITECH City, Raidurg, Hyderabad,
+                        Telangana, 500081, India
+                    </td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'India' && qp.Tax__c   != 0.00,true,false)}">
+                    <td>
+                        Wing B, 6th Floor, Smartworks, Aurobindo Galaxy, Plot No 01, Sy. No 83/1, TSIIC, HITECH City, Raidurg, Hyderabad,
+                        Telangana, 500081, India
+                    </td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Hong Kong',true,false)}">
+                    <td> 16/F, Sun Life Tower, The Gateway, Harbour City, Tsim Sha Tsui, Kowloon, Hong Kong </td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Malaysia',true,false)}">
+                    <td>Level 8, KYM Tower, Jalan PJU 7/6 Mutiara Damansara, 47800 Petaling Jaya, Selangor, Malaysia. </td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Philippines',true,false)}">
+                    <td>31st Floor, Yuchengco Tower, RCBC Plaza, 6819 Ayala Avenue, Makati City, Metro Manila, Zip – 1227, Philippines</td>
+                    
+                </apex:outputText>
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Saudi Arabia',true,false)}">
+                    <td>Office No. 18, 3669 Imam Abdullah Ibn Saudi ibn Abdulaziz Rd, Ishbiliyah, Riyadh. Kingdom of Saudi Arabia</td>
+                </apex:outputText>
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Singapore',true,false)}">
+                    <td>100 Beach Road, #27-08/13 Shaw Tower, Singapore 189702, Singapore</td>
+                </apex:outputText>
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'United Arab Emirates',true,false)}">
+                    <!---<td>Millenium Tower, Office 801, Khalid Al Attar Hotel &amp; Office Tower, Plot No. 335-349, Sheik Zayed Road, Dubai, UAE</td>-->
+                    <td>Office No. 2203, 22nd Floor, Al Shafar Tower 1, Barsha Heights, TECOM, Dubai. PO Box 49360</td>
+                </apex:outputText>
+            </tr>
+            
+            <tr>
+                <td>GST ID</td>
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'India',true,false)}">
+                    <td>36AACCM3695G1ZA</td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Hong Kong',true,false)}">
+                    <td></td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Malaysia',true,false)}">
+                    <td></td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Philippines',true,false)}">
+                    <td></td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Saudi Arabia',true,false)}">
+                    <td></td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'Singapore',true,false)}">
+                    <td></td>
+                </apex:outputText>
+                
+                <apex:outputText rendered="{!IF(qp.Selling_Country__c == 'United Arab Emirates',true,false)}">
+                    <td></td>
+                </apex:outputText>
+            </tr>
+            
+            <tr>
+                <td>Sales Managers Name</td>
+                <td>{!userDetail.Manager.Name }</td>
+            </tr>
+        </table>
+        <p align="justify" style="font-size:14px;margin-right:30px;margin-left:30px;">It is the responsibility of the Purchaser to provide valid TAX ID relevant for credit of Goods &amp; Services Tax under applicable acts and rules thereof.</p>
+    </div>
+</apex:page>

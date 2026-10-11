@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Decall 2 (no logo yet)</name>
+    <style>none</style>
+    <subject>Decall 2 (no logo yet)</subject>
+    <textOnly>Betreffzeile: Monster - Ihr Logo in der Suchergebnisliste [Vorgang: xxxxxx-xxxxxx]
+Sales in cc
+
+Sehr geehrte/r  ANREDE
+
+auf meine E-Mail vom XXX(Datum) bezüglich Ihres Suchergebnislogos habe ich bisher noch keine Antwort von Ihnen erhalten. Eventuell hat Sie diese Nachricht nicht erreicht?
+
+Um ein Logo zu Ihren Anzeigen beifügen zu können, benötigen wir noch eine Vorlage. Bitte senden Sie mir eine un-animierte GIF-Datei des gewünschten Logos in den Größen 72x22 oder 72x54 Pixel per E-Mail, und ich werde es umgehend für Sie anpassen und hochladen.
+
+Da ich für dieses Logo Ihr persönlicher Ansprechpartner bin, können Sie mich diesbezüglich natürlich jederzeit per E-Mail oder auch per Telefon kontaktieren. 
+
+Ich bedanke mich im Voraus bei Ihnen und freue mich auf Ihre Antwort mit dem Logo.
+
+Mit freundlichen Grüßen,
+SIGNATUR</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

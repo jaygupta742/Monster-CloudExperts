@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Quote</fullName>
+    <availability>online</availability>
+    <description>This button is used in Opp related list to create CVR</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>New Quote/Proposal</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)} 
+var op = new sforce.SObject(&quot;Opportunity__c&quot;); 
+         op.ID =&apos;{!Opportunity__c.Id}&apos;;
+									
+	var AccountId =&apos;{!Opportunity__c.AccountId__c}&apos;;								
+					//alert(&apos;Account Id&apos;+AccountId);
+
+
+
+var ac = new sforce.SObject(&quot;Account&quot;);
+var cccc =sforce.connection.query(&quot;SELECT id,Name,RegistrationNumber__c,GST_ID__c,PAN__c from account Where ID=&apos;&quot;+AccountId+&quot;&apos;&quot;);
+var cc = cccc.getArray(&quot;records&quot;);
+if(cc[0].RegistrationNumber__c != null ||cc[0].GST_ID__c !=null||cc[0].PAN__c != &apos;&apos; ||cc[0].Name!= null){
+var regcin = cc[0].RegistrationNumber__c;
+var gst = cc[0].GST_ID__c;
+var pan = cc[0].PAN__c;
+var regcomname = cc[0].Name;
+}
+
+
+
+
+var con =  new sforce.SObject(&quot;Contact&quot;);
+
+var records = sforce.connection.query(&quot;SELECT id,name,Phone,Email,PrimarySalesContact__c from contact Where Account.ID = &apos;&quot;+AccountId+&quot;&apos;AND PrimarySalesContact__c=True &quot;);
+
+var ko = records.getArray(&quot;records&quot;);
+
+var conid = ko[0].id;
+var conam = ko[0].Name;
+var contel = ko[0].Phone;
+var conemail = ko[0].Email;
+
+
+
+
+
+
+					
+					
+var ClientValidation =sforce.connection.query(&quot;Select Id,Name,Account__c,Account__r.Name,Account__r.ClientValidationCheck__c,Account__r.AccountStatus__c,Stage__c,Status__c From Client_Validation_Request__c where Account__c = &apos;&quot; +AccountId+ &quot;&apos;order by CreatedDate desc limit 1&quot;); 
+	
+	     	var recs = ClientValidation.getArray(&quot;records&quot;);
+						//alert(&apos;ClientValidation Size&apos;+recs.length);
+						
+				
+			if(recs.length ==0){
+			      alert(&apos;For creating quote account should be validated by collection team please create validation request.&apos;);
+var url =&quot;/a1C/e?RecordType=0127F000000SNV3&amp;CF00N7F00000QpMHa={!Opportunity__c.Account__c}&amp;CF00N7F00000QpMHa_lkid={!Opportunity__c.AccountId__c}&amp;CF00N7F00000QpMHk=&quot;+conam+&quot;&amp;00N7F00000QpMHc=&quot;+regcin+&quot;&amp;00N7F00000QpMI6=&quot;+regcomname+&quot;&amp;00N7F00000QpMHo=&quot;+gst+&quot;&amp;00N7F00000QpMHz=&quot;+pan+&quot;&amp;00N7F00000QpMHj=&quot;+conemail+&quot;&amp;00N7F00000QpMIC=&quot;+contel+&quot;&amp;retURL={!Opportunity__c.Id}&quot;;
+
+
+
+
+
+ window.location.href = url ;
+	 		}
+				
+		else if(recs.length&gt;0)
+				{
+				/* for(var i=0;i&lt;recs.length;i++)
+					{*/
+					   //alert(&apos;Stage&apos;+recs[0].Stage__c);
+				    if(recs[0].Stage__c != &apos;Closed&apos;)
+								{
+				        alert(&apos;You have validation request: &apos;+recs[0].Name +&apos; with stage &apos;+recs[0].Stage__c);
+								}
+								
+				   //	alert(&apos;Condition&apos;);
+								//alert(&apos;Account Status&apos; + recs[0].Account__r.AccountStatus__c + &apos;Account Box&apos;+ recs[0].Account__r.ClientValidationCheck__c);
+								
+						
+							else if(recs[0].Account__r.ClientValidationCheck__c == &apos;false&apos; &amp;&amp; recs[0].Stage__c == &apos;Closed&apos; &amp;&amp; recs[0].Status__c == &apos;Approved&apos;)
+								{
+								  //alert(&apos;Condition00000&apos;);
+								  var QuoteUrl=&quot;/a17/e?CF00N7F00000QM2Ej={!Opportunity__c.Name}&amp;CF00N7F00000QM2Ej_lkid={!Opportunity__c.Id}&amp;CF00N7F00000QM2Ci={!Opportunity__c.Account__c}&amp;CF00N7F00000QM2Ci_lkid={!Opportunity__c.AccountId__c}&amp;RecordType=0127F000000mhAt&amp;00N7F00000QM2Ce={!Opportunity__c.OpportunityType__c}&quot;;
+										window.location.href = QuoteUrl ;
+								}
+									//alert(&apos;Condition 2111&apos;);
+								
+									else if(recs[0].Account__r.AccountStatus__c == &apos;Lapsed Customer&apos; &amp;&amp; recs[0].Account__r.ClientValidationCheck__c == &apos;true&apos; &amp;&amp; recs[0].Stage__c == &apos;Closed&apos;)
+								{
+								  alert(&apos;For creating quote account should be validated by collection team please create validation request.&apos;);
+								  var url1 =&quot;/a1C/e?RecordType=0127F000000SNV3&amp;CF00N7F00000QpMHa={!Opportunity__c.Account__c}&amp;CF00N7F00000QpMHa_lkid={!Opportunity__c.AccountId__c}&amp;CF00N7F00000QpMHk=&quot;+conam+&quot;&quot;;
+				      window.location.href = url1 ;
+								}
+								
+			/* }*/
+				}</url>
+</WebLink>

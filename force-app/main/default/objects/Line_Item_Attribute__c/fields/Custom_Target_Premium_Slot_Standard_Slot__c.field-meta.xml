@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Custom_Target_Premium_Slot_Standard_Slot__c</fullName>
+    <label>Slot Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Slot Upsell</fullName>
+                <default>false</default>
+                <label>Slot Upsell</label>
+            </value>
+            <value>
+                <fullName>Custom Target</fullName>
+                <default>false</default>
+                <label>Custom Target</label>
+            </value>
+            <value>
+                <fullName>Premium Slot</fullName>
+                <default>false</default>
+                <label>Premium Slot</label>
+            </value>
+            <value>
+                <fullName>Standard Slot</fullName>
+                <default>false</default>
+                <label>Standard Slot</label>
+            </value>
+            <value>
+                <fullName>Target Slot</fullName>
+                <default>false</default>
+                <label>Target Slot</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

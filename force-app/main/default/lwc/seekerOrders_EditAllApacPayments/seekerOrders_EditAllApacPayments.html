@@ -1,0 +1,113 @@
+<template>
+    <div class="slds-modal__header">
+        <h1 class="slds-modal__title slds-hyphenate">Edit All APAC Payments</h1>
+    </div>
+    <div class="slds-modal__content slds-var-p-around_medium">
+        <div style="text-align: right;">
+            <div>
+                <span class="slds-text-color_destructive">*</span> = Required Information
+            </div>
+            <div>
+                <p class="slds-text-heading_small slds-text-color_destructive" if:true={OrderDetails}>
+                    <span class="slds-var-p-right_x-small">Net Total </span>
+                    <lightning-formatted-number value={OrderDetails.Net_Total__c} format-style="currency" currency-code={OrderDetails.CurrencyIsoCode}></lightning-formatted-number>
+                </p>
+            </div>
+        </div>
+        <div class="slds-scrollable_y" style="max-height: 400px;">
+            <lightning-record-edit-form object-api-name="APAC_Payment_Seeker__c" density="comfy">
+                <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="RevampTableHead" scope="col" style="width: 5%;">
+                                <div class="slds-truncate" title="SL No">#</div>
+                            </th>
+                            <th class="RevampTableHead" scope="col" style="width: 15%;">
+                                <div class="slds-truncate" title="Payment Name">Payment Name</div>
+                            </th>
+                            <th class="RevampTableHead" scope="col" style="width: 15%;">
+                                <div class="slds-truncate" title="Payment Type">
+                                    <span class="slds-text-color_destructive slds-var-m-around_xx-small">*</span>
+                                    Payment Type
+                                </div>
+                            </th>
+                            <th class="RevampTableHead" scope="col" style="width: 15%;">
+                                <div class="slds-truncate" title="Due Date">
+                                    <span class="slds-text-color_destructive slds-var-m-around_xx-small">*</span>
+                                    Due Date
+                                </div>
+                            </th>
+                            <th class="RevampTableHead" scope="col" style="width: 10%;">
+                                <div class="slds-truncate" title="Payment Amount">
+                                    <span class="slds-text-color_destructive slds-var-m-around_xxx-small">*</span>
+                                    Payment Amount
+                                </div>
+                            </th>
+                            <th class="RevampTableHead" scope="col" style="width: 15%;">
+                                <div class="slds-truncate" title="Payment Received Amount">
+                                    Payment Received Amount
+                                </div>
+                            </th>
+                            <th class="RevampTableHead" scope="col" style="width: 15%;">
+                                <div class="slds-truncate" title="Payment Date">
+                                    Payment Date
+                                </div>
+                            </th>
+                            <th class="RevampTableHead" scope="col" style="width: 10%;">
+                                <div class="slds-truncate" title="Action">Action</div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <template for:each={PaymentItems} for:item="item" for:index="index">
+                            <tr class="slds-hint-parent" key={item.Id}>
+                                <td data-label="Serial No">
+                                    <div class="slds-truncate" title={item.SLNo}>{item.SLNo}</div>
+                                </td>
+                                <td data-label="Payment Name">
+                                    <div class="slds-truncate" title={item.Name}>
+                                        <lightning-formatted-url value={item.DetailsLink} label={item.Name} tooltip="Click here to open the APAC Payment" target="_blank"></lightning-formatted-url>
+                                    </div>
+                                </td>
+                                <td data-label="Close Date">
+                                    <div class="slds-truncate" title={item.Payment_Type__c}>
+                                        <lightning-input-field field-name="Payment_Type__c" variant="label-hidden" value={item.Payment_Type__c} data-index={index} onchange={HandleChangePaymentItems}></lightning-input-field>
+                                    </div>
+                                </td>
+                                <td data-label="Prospecting">
+                                    <div class="slds-truncate" title={item.Due_Date__c}>
+                                        <lightning-input-field field-name="Due_Date__c" variant="label-hidden" value={item.Due_Date__c} data-index={index} onchange={HandleChangePaymentItems}></lightning-input-field>
+                                    </div>
+                                </td>
+                                <td data-label="Confidence">
+                                    <div class="slds-truncate" title={item.Payment_Amount__c}>
+                                        <lightning-input-field field-name="Payment_Amount__c" variant="label-hidden" value={item.Payment_Amount__c} data-index={index} onchange={HandleChangePaymentItems}></lightning-input-field>
+                                    </div>
+                                </td>
+                                <td data-label="Confidence">
+                                    <div class="slds-truncate" title={item.Payment_Received_Amount__c}>
+                                        <lightning-input-field field-name="Payment_Received_Amount__c" variant="label-hidden" value={item.Payment_Received_Amount__c} data-index={index} onchange={HandleChangePaymentItems}></lightning-input-field>
+                                    </div>
+                                </td>
+                                <td data-label="Confidence">
+                                    <div class="slds-truncate" title={item.Payment_Date__c}>
+                                        <lightning-input-field field-name="Payment_Date__c" variant="label-hidden" value={item.Payment_Date__c} data-index={index} onchange={HandleChangePaymentItems}></lightning-input-field>
+                                    </div>
+                                </td>
+                                <td data-label="Amount">
+                                    <div class="slds-truncate" title="Delete this apac payment">
+                                        <lightning-button label="Delete" variant="destructive" data-index={index} onclick={HandleDeleteItem}></lightning-button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </template>
+                    </tbody>
+                </table>
+            </lightning-record-edit-form>
+        </div>
+    </div>
+    <div class="slds-modal__footer">
+        <lightning-button label="Cancel" class="slds-var-p-horizontal_small" onclick={HandleClosePage}></lightning-button>
+        <lightning-button label="Save" variant="brand" onclick={HandleSavePaymentItems} disabled={PageProperty.Flag_SavePage}></lightning-button>
+    </div>
+</template>

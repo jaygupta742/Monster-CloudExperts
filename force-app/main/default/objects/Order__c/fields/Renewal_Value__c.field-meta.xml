@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Renewal_Value__c</fullName>
+    <inlineHelpText>Roll Up &quot;Gross Total&quot; for all Order Line Item where &quot;Base&quot; is true.</inlineHelpText>
+    <label>Renewal Value</label>
+    <summarizedField>Order_Item__c.Gross_Total1__c</summarizedField>
+    <summaryFilterItems>
+        <field>Order_Item__c.Base__c</field>
+        <operation>equals</operation>
+        <value>True</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Order_Item__c.Order__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

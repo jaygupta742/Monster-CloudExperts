@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RecordingURL_mandate_for_Demo_Task_type</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+$Profile.Name == &apos;Monster - Sales&apos;,
+ISPICKVAL( Task_Type__c , &apos;Demo 2.0&apos;) ,
+ISBLANK( recording_url__c )
+)</errorConditionFormula>
+    <errorDisplayField>recording_url__c</errorDisplayField>
+    <errorMessage>Please mention the Recording URL for Task Type Demo 2.0 .</errorMessage>
+</ValidationRule>

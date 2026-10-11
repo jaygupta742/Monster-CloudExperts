@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PositionSalesChannel__c</fullName>
+    <label>Position Sales Channel</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Client Relations</fullName>
+                <default>false</default>
+                <label>Client Relations</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Enterprise Business</fullName>
+                <default>false</default>
+                <label>Enterprise Business</label>
+            </value>
+            <value>
+                <fullName>Fieldsales.HK</fullName>
+                <default>false</default>
+                <label>Fieldsales.HK</label>
+            </value>
+            <value>
+                <fullName>Fieldsales.ME</fullName>
+                <default>false</default>
+                <label>Fieldsales.ME</label>
+            </value>
+            <value>
+                <fullName>Fieldsales.MY</fullName>
+                <default>false</default>
+                <label>Fieldsales.MY</label>
+            </value>
+            <value>
+                <fullName>Fieldsales.PH</fullName>
+                <default>false</default>
+                <label>Fieldsales.PH</label>
+            </value>
+            <value>
+                <fullName>Fieldsales.SG</fullName>
+                <default>false</default>
+                <label>Fieldsales.SG</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Lead Mgmt</fullName>
+                <default>false</default>
+                <label>Lead Mgmt</label>
+            </value>
+            <value>
+                <fullName>Management</fullName>
+                <default>false</default>
+                <label>Management</label>
+            </value>
+            <value>
+                <fullName>Media Works</fullName>
+                <default>false</default>
+                <label>Media Works</label>
+            </value>
+            <value>
+                <fullName>Sales Support</fullName>
+                <default>false</default>
+                <label>Sales Support</label>
+            </value>
+            <value>
+                <fullName>Seeker Business</fullName>
+                <default>false</default>
+                <label>Seeker Business</label>
+            </value>
+            <value>
+                <fullName>SMB Business</fullName>
+                <default>false</default>
+                <label>SMB Business</label>
+            </value>
+            <value>
+                <fullName>Surplus</fullName>
+                <default>false</default>
+                <label>Surplus</label>
+            </value>
+            <value>
+                <fullName>Telesales-India</fullName>
+                <default>false</default>
+                <label>Telesales-India</label>
+            </value>
+            <value>
+                <fullName>Telesales-ME</fullName>
+                <default>false</default>
+                <label>Telesales-ME</label>
+            </value>
+            <value>
+                <fullName>Telesales-SEA</fullName>
+                <default>false</default>
+                <label>Telesales-SEA</label>
+            </value>
+            <value>
+                <fullName>Business &amp; Strategy</fullName>
+                <default>false</default>
+                <label>Business &amp; Strategy</label>
+            </value>
+            <value>
+                <fullName>EA</fullName>
+                <default>false</default>
+                <label>EA</label>
+            </value>
+            <value>
+                <fullName>HK-FS</fullName>
+                <default>false</default>
+                <label>HK-FS</label>
+            </value>
+            <value>
+                <fullName>IN-TS</fullName>
+                <default>false</default>
+                <label>IN-TS</label>
+            </value>
+            <value>
+                <fullName>ME-FS</fullName>
+                <default>false</default>
+                <label>ME-FS</label>
+            </value>
+            <value>
+                <fullName>ME-TS</fullName>
+                <default>false</default>
+                <label>ME-TS</label>
+            </value>
+            <value>
+                <fullName>MMW</fullName>
+                <default>false</default>
+                <label>fBS</label>
+            </value>
+            <value>
+                <fullName>MY-FS</fullName>
+                <default>false</default>
+                <label>MY-FS</label>
+            </value>
+            <value>
+                <fullName>PH-FS</fullName>
+                <default>false</default>
+                <label>PH-FS</label>
+            </value>
+            <value>
+                <fullName>SEA-TS</fullName>
+                <default>false</default>
+                <label>SEA-TS</label>
+            </value>
+            <value>
+                <fullName>Seeker</fullName>
+                <default>false</default>
+                <label>Seeker</label>
+            </value>
+            <value>
+                <fullName>SG-FS</fullName>
+                <default>false</default>
+                <label>SG-FS</label>
+            </value>
+            <value>
+                <fullName>SMB</fullName>
+                <default>false</default>
+                <label>SMB</label>
+            </value>
+            <value>
+                <fullName>ZUNO</fullName>
+                <default>false</default>
+                <label>ZUNO</label>
+            </value>
+            <value>
+                <fullName>CEO</fullName>
+                <default>false</default>
+                <label>CEO</label>
+            </value>
+            <value>
+                <fullName>Assisted Search</fullName>
+                <default>false</default>
+                <label>Assisted Search</label>
+            </value>
+            <value>
+                <fullName>CR</fullName>
+                <default>false</default>
+                <label>CR</label>
+            </value>
+            <value>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+                <label>Lead Management</label>
+            </value>
+            <value>
+                <fullName>Seeker-Ed Sales</fullName>
+                <default>false</default>
+                <label>Seeker-Ed Sales</label>
+            </value>
+            <value>
+                <fullName>Duplicate</fullName>
+                <default>false</default>
+                <label>Duplicate</label>
+            </value>
+            <value>
+                <fullName>Growth</fullName>
+                <default>false</default>
+                <label>Growth</label>
+            </value>
+            <value>
+                <fullName>Seeker-Certification Sales</fullName>
+                <default>false</default>
+                <label>Seeker-Certification Sales</label>
+            </value>
+            <value>
+                <fullName>Business Head</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Head</label>
+            </value>
+            <value>
+                <fullName>Business Head-IND</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Head-IND</label>
+            </value>
+            <value>
+                <fullName>Business Head-ME</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Head-ME</label>
+            </value>
+            <value>
+                <fullName>Business Head-SEA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Business Head-SEA</label>
+            </value>
+            <value>
+                <fullName>Cloud Support</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Cloud Support</label>
+            </value>
+            <value>
+                <fullName>Consumer.in</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consumer.in</label>
+            </value>
+            <value>
+                <fullName>Consumer.sg</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consumer.sg</label>
+            </value>
+            <value>
+                <fullName>ECOMM</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>ECOMM</label>
+            </value>
+            <value>
+                <fullName>Fieldsales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Fraud Channel</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Fraud Channel</label>
+            </value>
+            <value>
+                <fullName>Government Solutions</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Government Solutions</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>New Products</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Products</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>Partner</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partner</label>
+            </value>
+            <value>
+                <fullName>Partner.hj</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partner.hj</label>
+            </value>
+            <value>
+                <fullName>Telesales</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telesales</label>
+            </value>
+            <value>
+                <fullName>Telesales.IN</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telesales.IN</label>
+            </value>
+            <value>
+                <fullName>Telesales.ME</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telesales.ME</label>
+            </value>
+            <value>
+                <fullName>Telesales.SEA</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telesales.SEA</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>consumer.me</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>consumer.me</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

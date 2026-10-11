@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Old_Created_By__c</fullName>
+    <externalId>false</externalId>
+    <formula>/*IF(Old_Created_User__c == NULL, 
+HYPERLINK(&quot;/&quot; &amp;  CreatedBy.Id ,   CreatedBy.FirstName &amp;&quot; &quot;&amp;  CreatedBy.LastName &amp;&quot; &quot;) */
+			/*			&amp;&quot;,&quot;&amp;  ( TEXT(  DAY(DATEVALUE( CreatedDate )))&amp;&quot;/&quot;&amp; TEXT(MONTH(DATEVALUE(CreatedDate ) )  ) &amp;&quot;/&quot;&amp; TEXT(YEAR(DATEVALUE(CreatedDate ) )  ) ) &amp;&quot; &quot;&amp;(IF( 
+OR( 
+VALUE( MID( TEXT( CreatedDate+ (5.5/24)), 12, 2 ) ) = 0, 
+VALUE( MID( TEXT( CreatedDate+ (5.5/24) ), 12, 2 ) ) = 12 
+), 
+&quot;12&quot;, 
+TEXT( VALUE( MID( TEXT( CreatedDate+ (5.5/24) ), 12, 2 ) ) 
+- 
+IF( 
+VALUE( MID( TEXT( CreatedDate+ (5.5/24)), 12, 2 ) ) &lt; 12, 
+0, 
+12 
+) 
+) 
+) 
+&amp; &quot;:&quot; &amp;
+MID( TEXT( CreatedDate+ (5.5/24) ), 15, 2 ) 
+&amp; &quot; &quot; &amp; 
+IF( 
+VALUE( MID( TEXT( CreatedDate+ (5.5 /24)), 12, 2 ) ) &lt; 12, 
+&quot;AM&quot;, 
+&quot;PM&quot; 
+)),  */
+HYPERLINK(&quot;/&quot; &amp;  Old_Created_User__r.Id ,  Old_Created_User__r.First_Name__c   &amp;&quot; &quot;&amp;  Old_Created_User__r.Name &amp;&quot;&quot;)
+/*  &amp;&quot;,&quot;&amp;  ( TEXT(  DAY(DATEVALUE(Old_Created_Date__c)))&amp;&quot;/&quot;&amp; TEXT(MONTH(DATEVALUE(Old_Created_Date__c) )  ) &amp;&quot;/&quot;&amp; TEXT(YEAR(DATEVALUE(Old_Created_Date__c) )  ) ) &amp;&quot; &quot;&amp;IF( 
+OR( 
+VALUE( MID( TEXT( Old_Created_Date__c+ (5.5/24)), 12, 2 ) ) = 0, 
+VALUE( MID( TEXT( Old_Created_Date__c+ (5.5/24) ), 12, 2 ) ) = 12 
+), 
+&quot;12&quot;, 
+TEXT( VALUE( MID( TEXT( Old_Created_Date__c+ (5.5/24) ), 12, 2 ) ) 
+- 
+IF( 
+VALUE( MID( TEXT( Old_Created_Date__c+ (5.5/24)), 12, 2 ) ) &lt; 12, 
+0, 
+12 
+) 
+) 
+) 
+&amp; &quot;:&quot; &amp;
+MID( TEXT( Old_Created_Date__c+ (5.5/24) ), 15, 2 ) 
+&amp; &quot; &quot; &amp; 
+IF( 
+VALUE( MID( TEXT( Old_Created_Date__c+ (5.5 /24)), 12, 2 ) ) &lt; 12, 
+&quot;AM&quot;, 
+&quot;PM&quot; 
+)) */</formula>
+    <label>Old Created By</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

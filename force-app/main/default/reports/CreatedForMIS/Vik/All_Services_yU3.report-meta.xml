@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>TopUps__c$Id</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$Product__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$PID__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$Product_Channel__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$Name</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>TopUps__c$Quantity__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$Inventory_Quota_Tenure__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$Product_Name__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$SKU_Type__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$Product_SKU_Code__c</field>
+    </columns>
+    <columns>
+        <field>TopUps__c$channel_sku_code_bin_currency__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>All Services</description>
+    <format>Tabular</format>
+    <name>All Services</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Services__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>TopUps__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

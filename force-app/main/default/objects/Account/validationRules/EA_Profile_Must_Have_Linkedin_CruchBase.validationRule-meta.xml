@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EA_Profile_Must_Have_Linkedin_CruchBase</fullName>
+    <active>false</active>
+    <description>ERROR WILL BE GIVEN WHEN BELOW CONDITION WILL SATISFY
+1.When a new account will be insert
+2.When any of the field is blank linkedin, website or crunchb
+2.When the user channel will be enterprise channel like EA , ME FS
+3.When the user is not a admin</description>
+    <errorConditionFormula>AND(
+
+ ISNEW() ,
+
+OR(ISBLANK( Linkedin__c ) ,ISBLANK(  Crunchbase__c ),ISBLANK(  Website )),
+
+
+
+OR(ISPICKVAL($User.Channel__c , &apos;ME FS&apos;) , ISPICKVAL($User.Channel__c , &apos;EA&apos;),ISPICKVAL($User.Channel__c , &apos;SG FS&apos;),ISPICKVAL($User.Channel__c , &apos;MY FS&apos;),ISPICKVAL($User.Channel__c , &apos;PH FS&apos;),ISPICKVAL($User.Channel__c , &apos;HK FS&apos;)) ,
+
+
+
+$User.Profile_Name__c &lt;&gt; &apos;System Administrator&apos; ,
+
+$User.Profile_Name__c  &lt;&gt; &apos;System Admin&apos;
+
+
+)</errorConditionFormula>
+    <errorMessage>Please Enter Linkedin ,Crunchbase ,Website !!!</errorMessage>
+</ValidationRule>

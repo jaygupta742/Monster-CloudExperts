@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Type__c</fullName>
+    <label>Quote Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+                <label>New Customer</label>
+            </value>
+            <value>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+                <label>Lapsed</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Upsell</fullName>
+                <default>false</default>
+                <label>Upsell</label>
+            </value>
+            <value>
+                <fullName>Slippage</fullName>
+                <default>false</default>
+                <label>Slippage</label>
+            </value>
+            <value>
+                <fullName>Free Trial</fullName>
+                <default>false</default>
+                <label>Free Trial</label>
+            </value>
+            <value>
+                <fullName>Ecom</fullName>
+                <default>false</default>
+                <label>Ecom</label>
+            </value>
+            <value>
+                <fullName>Recontract</fullName>
+                <default>false</default>
+                <label>Recontract</label>
+            </value>
+            <value>
+                <fullName>Conversion/Swap</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conversion/Swap</label>
+            </value>
+            <value>
+                <fullName>Ecom-Rep</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ecom-Rep</label>
+            </value>
+            <value>
+                <fullName>Lapsed Revival</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lapsed Revival</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Service Pre/PostPone</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Service Pre/PostPone</label>
+            </value>
+            <value>
+                <fullName>Upgrade</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Upgrade</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

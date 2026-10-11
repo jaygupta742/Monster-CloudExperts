@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Account Teaming Form APAC</name>
+    <style>freeForm</style>
+    <subject>Account Teaming Form: {!Opportunity.OwnerFullName} for {!Opportunity.Account}</subject>
+    <textOnly>To ensure that your request is processed correctly, please DO NOT change the subject line of this message. Sales reps should submit this template to their manager. Manager should forward approved requests to the below mailbox.
+
+India Telesales ACQ Users - SFrequesttsacq@monsterindia.com
+
+India Telesales RET Users - SFrequestretenstion@monsterindia.com
+
+India Fieldsales Users - SFrequestfieldsales@monsterindia.com
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Account ID: {!Opportunity__c.Opp_AccountID__c}
+
+
+Account Name: {!Opportunity__c.Account__c}
+
+
+
+Oppty ID: {!Opportunity__c.Name}
+
+
+
+Oppty Primary Rep: {!Opportunity.OwnerFullName}
+
+Primary Sales Channel: {!Opportunity__c.Sales_Channel__c}
+
+Account Status: {!Opportunity__c.Account_Status__c}
+
+Expected Sales Amount: {!Opportunity__c.Expected_Revenue__c}
+
+Est. Close Date: {!Opportunity__c.Close_Date__c}
+
+
+
+Forecasted: {!Opportunity.ForecastCategoryName}
+
+
+
+Oppty Secondary Rep: (Please fill this field)
+
+
+
+
+Type of Teaming: (Please select from the following options or enter Other)
+
+
+
+
+___ Intra Channel
+
+
+
+___ Inter Channel - Two SMB Channels
+
+
+
+___ SMB and KA
+
+
+
+___ Other: ______________________
+
+
+
+
+Primary Rep share/split (%):
+
+
+
+Secondary Rep share/split (%):
+
+
+
+
+Reason for Team up:
+
+
+
+
+Prerequisites as attachments:
+
+Both business heads approval emails mentioning Account Name, Account ID and percentage share.
+
+
+
+Note:
+
+
+
+Team up will be valid for 30 days only, post which accounts will be de-team up.</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sales_Channel__c</fullName>
+    <label>Sales Channel</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ECOMM</fullName>
+                <default>false</default>
+                <label>ECOMM</label>
+            </value>
+            <value>
+                <fullName>Fieldsales</fullName>
+                <default>false</default>
+                <label>Fieldsales</label>
+            </value>
+            <value>
+                <fullName>Telesales</fullName>
+                <default>false</default>
+                <label>Telesales</label>
+            </value>
+            <value>
+                <fullName>Archive - SEA</fullName>
+                <default>false</default>
+                <label>Archive - SEA</label>
+            </value>
+            <value>
+                <fullName>Archive - IN</fullName>
+                <default>false</default>
+                <label>Archive - IN</label>
+            </value>
+            <value>
+                <fullName>Archive - ME</fullName>
+                <default>false</default>
+                <label>Archive - ME</label>
+            </value>
+            <value>
+                <fullName>Nurture - ME</fullName>
+                <default>false</default>
+                <label>Nurture - ME</label>
+            </value>
+            <value>
+                <fullName>Nurture - SG</fullName>
+                <default>false</default>
+                <label>Nurture - SG</label>
+            </value>
+            <value>
+                <fullName>Nurture - IN</fullName>
+                <default>false</default>
+                <label>Nurture - IN</label>
+            </value>
+            <value>
+                <fullName>Nurture - MY</fullName>
+                <default>false</default>
+                <label>Nurture - MY</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

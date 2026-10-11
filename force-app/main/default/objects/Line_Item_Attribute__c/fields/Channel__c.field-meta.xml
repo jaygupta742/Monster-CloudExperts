@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Channel__c</fullName>
+    <label>Channel</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Active Duty Insider</fullName>
+                <default>false</default>
+                <label>Active Duty Insider</label>
+            </value>
+            <value>
+                <fullName>Careers and Transition</fullName>
+                <default>false</default>
+                <label>Careers and Transition</label>
+            </value>
+            <value>
+                <fullName>Daily News Brief - Early Brief</fullName>
+                <default>false</default>
+                <label>Daily News Brief - Early Brief</label>
+            </value>
+            <value>
+                <fullName>Deals &amp; Discounts</fullName>
+                <default>false</default>
+                <label>Deals &amp; Discounts</label>
+            </value>
+            <value>
+                <fullName>Education</fullName>
+                <default>false</default>
+                <label>Education</label>
+            </value>
+            <value>
+                <fullName>Family &amp; Spouse</fullName>
+                <default>false</default>
+                <label>Family &amp; Spouse</label>
+            </value>
+            <value>
+                <fullName>Finance</fullName>
+                <default>false</default>
+                <label>Finance</label>
+            </value>
+            <value>
+                <fullName>Military Report</fullName>
+                <default>false</default>
+                <label>Military Report</label>
+            </value>
+            <value>
+                <fullName>Procurement - DOD Buzz</fullName>
+                <default>false</default>
+                <label>Procurement - DOD Buzz</label>
+            </value>
+            <value>
+                <fullName>Recruiting</fullName>
+                <default>false</default>
+                <label>Recruiting</label>
+            </value>
+            <value>
+                <fullName>Solo Email</fullName>
+                <default>false</default>
+                <label>Solo Email</label>
+            </value>
+            <value>
+                <fullName>Veterans Insider</fullName>
+                <default>false</default>
+                <label>Veterans Insider</label>
+            </value>
+            <value>
+                <fullName>Select One</fullName>
+                <default>false</default>
+                <label>Select One</label>
+            </value>
+            <value>
+                <fullName>None</fullName>
+                <default>false</default>
+                <label>None</label>
+            </value>
+            <value>
+                <fullName>Czech</fullName>
+                <default>false</default>
+                <label>Czech</label>
+            </value>
+            <value>
+                <fullName>Dutch</fullName>
+                <default>false</default>
+                <label>Dutch</label>
+            </value>
+            <value>
+                <fullName>English</fullName>
+                <default>false</default>
+                <label>English</label>
+            </value>
+            <value>
+                <fullName>French</fullName>
+                <default>false</default>
+                <label>French</label>
+            </value>
+            <value>
+                <fullName>Italian</fullName>
+                <default>false</default>
+                <label>Italian</label>
+            </value>
+            <value>
+                <fullName>Military/Veterans Report</fullName>
+                <default>false</default>
+                <label>Military/Veterans Report</label>
+            </value>
+            <value>
+                <fullName>Spanish</fullName>
+                <default>false</default>
+                <label>Spanish</label>
+            </value>
+            <value>
+                <fullName>Swedish</fullName>
+                <default>false</default>
+                <label>Swedish</label>
+            </value>
+            <value>
+                <fullName>1</fullName>
+                <default>false</default>
+                <label>1</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

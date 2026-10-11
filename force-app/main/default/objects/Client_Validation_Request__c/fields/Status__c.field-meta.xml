@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <label>Status</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Open</fullName>
+                <default>false</default>
+                <label>Open</label>
+            </value>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Preapproved</fullName>
+                <default>false</default>
+                <label>Preapproved</label>
+            </value>
+            <value>
+                <fullName>Field Visit</fullName>
+                <default>false</default>
+                <label>Field Visit</label>
+            </value>
+            <value>
+                <fullName>Field Visit Unsuccessful</fullName>
+                <default>false</default>
+                <label>Field Visit Unsuccessful</label>
+            </value>
+            <value>
+                <fullName>Linked with Existing CRM Account</fullName>
+                <default>false</default>
+                <label>Linked with Existing CRM Account</label>
+            </value>
+            <value>
+                <fullName>Duplicate Request</fullName>
+                <default>false</default>
+                <label>Duplicate Request</label>
+            </value>
+            <value>
+                <fullName>Invalid Proof or documents</fullName>
+                <default>false</default>
+                <label>Invalid Proof or documents</label>
+            </value>
+            <value>
+                <fullName>Incomplete Form</fullName>
+                <default>false</default>
+                <label>Incomplete Form</label>
+            </value>
+            <value>
+                <fullName>Incomplete documentation</fullName>
+                <default>false</default>
+                <label>Incomplete documentation</label>
+            </value>
+            <value>
+                <fullName>Missing doucmentation</fullName>
+                <default>false</default>
+                <label>Missing doucmentation</label>
+            </value>
+            <value>
+                <fullName>Incorrect Information Provided</fullName>
+                <default>false</default>
+                <label>Incorrect Information Provided</label>
+            </value>
+            <value>
+                <fullName>Acceptance criteria not met</fullName>
+                <default>false</default>
+                <label>Acceptance criteria not met</label>
+            </value>
+            <value>
+                <fullName>Terminated</fullName>
+                <default>false</default>
+                <label>Terminated</label>
+            </value>
+            <value>
+                <fullName>Invalid Request</fullName>
+                <default>false</default>
+                <label>Invalid Request</label>
+            </value>
+            <value>
+                <fullName>Missing Information</fullName>
+                <default>false</default>
+                <label>Missing Information</label>
+            </value>
+            <value>
+                <fullName>Invalid template</fullName>
+                <default>false</default>
+                <label>Invalid template</label>
+            </value>
+            <value>
+                <fullName>Inconsistency/Clarifciation required</fullName>
+                <default>false</default>
+                <label>Inconsistency/Clarifciation required</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

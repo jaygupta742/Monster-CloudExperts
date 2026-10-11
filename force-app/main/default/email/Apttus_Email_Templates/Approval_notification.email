@@ -1,0 +1,11 @@
+This email is to inform you that the following Quote/Proposal {!Apttus_Proposal__Proposal__c.Name} has been approved
+
+Proposal:   {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Proposal_Name__c}
+
+Account: {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Account__c}
+
+Please click on the following link to review the details
+
+{!Apttus_Proposal__Proposal__c.Link}
+
+Thanks

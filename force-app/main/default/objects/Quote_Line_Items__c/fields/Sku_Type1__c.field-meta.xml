@@ -1,0 +1,529 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sku_Type1__c</fullName>
+    <label>Sku Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>0-3 Years-IT</fullName>
+                <default>false</default>
+                <label>0-3 Years-IT</label>
+            </value>
+            <value>
+                <fullName>0-3 Years-IT &amp; NON IT</fullName>
+                <default>false</default>
+                <label>0-3 Years-IT &amp; NON IT</label>
+            </value>
+            <value>
+                <fullName>0-3 Years-NON IT</fullName>
+                <default>false</default>
+                <label>0-3 Years-NON IT</label>
+            </value>
+            <value>
+                <fullName>10000 Excel</fullName>
+                <default>false</default>
+                <label>10000 Excel</label>
+            </value>
+            <value>
+                <fullName>100K Mailers</fullName>
+                <default>false</default>
+                <label>100K Mailers</label>
+            </value>
+            <value>
+                <fullName>250K Mailers</fullName>
+                <default>false</default>
+                <label>250K Mailers</label>
+            </value>
+            <value>
+                <fullName>3-7 Years-IT</fullName>
+                <default>false</default>
+                <label>3-7 Years-IT</label>
+            </value>
+            <value>
+                <fullName>3-7 Years-IT &amp; NON IT</fullName>
+                <default>false</default>
+                <label>3-7 Years-IT &amp; NON IT</label>
+            </value>
+            <value>
+                <fullName>3-7 Years-NON IT</fullName>
+                <default>false</default>
+                <label>3-7 Years-NON IT</label>
+            </value>
+            <value>
+                <fullName>50000 Mailers</fullName>
+                <default>false</default>
+                <label>50000 Mailers</label>
+            </value>
+            <value>
+                <fullName>50K Mailers</fullName>
+                <default>false</default>
+                <label>50K Mailers</label>
+            </value>
+            <value>
+                <fullName>7+ Years-IT</fullName>
+                <default>false</default>
+                <label>7+ Years-IT</label>
+            </value>
+            <value>
+                <fullName>7+ Years-IT &amp; NON IT</fullName>
+                <default>false</default>
+                <label>7+ Years-IT &amp; NON IT</label>
+            </value>
+            <value>
+                <fullName>7+ Years-NON IT</fullName>
+                <default>false</default>
+                <label>7+ Years-NON IT</label>
+            </value>
+            <value>
+                <fullName>Access-x</fullName>
+                <default>false</default>
+                <label>Access-x</label>
+            </value>
+            <value>
+                <fullName>Access-x/2</fullName>
+                <default>false</default>
+                <label>Access-x/2</label>
+            </value>
+            <value>
+                <fullName>Auditorium</fullName>
+                <default>false</default>
+                <label>Auditorium</label>
+            </value>
+            <value>
+                <fullName>Banner</fullName>
+                <default>false</default>
+                <label>Banner</label>
+            </value>
+            <value>
+                <fullName>Booth</fullName>
+                <default>false</default>
+                <label>Booth</label>
+            </value>
+            <value>
+                <fullName>Bundle-Promo</fullName>
+                <default>false</default>
+                <label>Bundle-Promo</label>
+            </value>
+            <value>
+                <fullName>Bundle-x</fullName>
+                <default>false</default>
+                <label>Bundle-x</label>
+            </value>
+            <value>
+                <fullName>Bundle-x/2</fullName>
+                <default>false</default>
+                <label>Bundle-x/2</label>
+            </value>
+            <value>
+                <fullName>Chatbot</fullName>
+                <default>false</default>
+                <label>Chatbot</label>
+            </value>
+            <value>
+                <fullName>Corporate Profile</fullName>
+                <default>false</default>
+                <label>Corporate Profile</label>
+            </value>
+            <value>
+                <fullName>Custom-INTL-FreeTrial</fullName>
+                <default>false</default>
+                <label>Custom-INTL-FreeTrial</label>
+            </value>
+            <value>
+                <fullName>Custom-INTL-Sponsership</fullName>
+                <default>false</default>
+                <label>Custom-INTL-Sponsership</label>
+            </value>
+            <value>
+                <fullName>Custom Job Template</fullName>
+                <default>false</default>
+                <label>Custom Job Template</label>
+            </value>
+            <value>
+                <fullName>Custom Other</fullName>
+                <default>false</default>
+                <label>Custom Other</label>
+            </value>
+            <value>
+                <fullName>CV 10K</fullName>
+                <default>false</default>
+                <label>CV 10K</label>
+            </value>
+            <value>
+                <fullName>CV Views</fullName>
+                <default>false</default>
+                <label>CV Views</label>
+            </value>
+            <value>
+                <fullName>Excel Download</fullName>
+                <default>false</default>
+                <label>Excel Download</label>
+            </value>
+            <value>
+                <fullName>Excel View</fullName>
+                <default>false</default>
+                <label>Excel View</label>
+            </value>
+            <value>
+                <fullName>Intelli JP 60 D</fullName>
+                <default>false</default>
+                <label>Intelli JP 60 D</label>
+            </value>
+            <value>
+                <fullName>Inventory Login</fullName>
+                <default>false</default>
+                <label>Inventory Login</label>
+            </value>
+            <value>
+                <fullName>JP</fullName>
+                <default>false</default>
+                <label>JP</label>
+            </value>
+            <value>
+                <fullName>Key Word Advertisement</fullName>
+                <default>false</default>
+                <label>Key Word Advertisement</label>
+            </value>
+            <value>
+                <fullName>Logo</fullName>
+                <default>false</default>
+                <label>Logo</label>
+            </value>
+            <value>
+                <fullName>Logo on Job Postings</fullName>
+                <default>false</default>
+                <label>Logo on Job Postings</label>
+            </value>
+            <value>
+                <fullName>Mailers</fullName>
+                <default>false</default>
+                <label>Mailers</label>
+            </value>
+            <value>
+                <fullName>Mailers-CPM</fullName>
+                <default>false</default>
+                <label>Mailers-CPM</label>
+            </value>
+            <value>
+                <fullName>Per View</fullName>
+                <default>false</default>
+                <label>Per View</label>
+            </value>
+            <value>
+                <fullName>Power JP 60 D</fullName>
+                <default>false</default>
+                <label>Power JP 60 D</label>
+            </value>
+            <value>
+                <fullName>Power Login</fullName>
+                <default>false</default>
+                <label>Power Login</label>
+            </value>
+            <value>
+                <fullName>PPI</fullName>
+                <default>false</default>
+                <label>PPI</label>
+            </value>
+            <value>
+                <fullName>PPJ</fullName>
+                <default>false</default>
+                <label>PPJ</label>
+            </value>
+            <value>
+                <fullName>PPO</fullName>
+                <default>false</default>
+                <label>PPO</label>
+            </value>
+            <value>
+                <fullName>Quinton Basic</fullName>
+                <default>false</default>
+                <label>Quinton Basic</label>
+            </value>
+            <value>
+                <fullName>Quinton Executive</fullName>
+                <default>false</default>
+                <label>Quinton Executive</label>
+            </value>
+            <value>
+                <fullName>Quinton Pro</fullName>
+                <default>false</default>
+                <label>Quinton Pro</label>
+            </value>
+            <value>
+                <fullName>Short Message Service</fullName>
+                <default>false</default>
+                <label>Short Message Service</label>
+            </value>
+            <value>
+                <fullName>Social Job Ads</fullName>
+                <default>false</default>
+                <label>Social Job Ads</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Standard</fullName>
+                <default>false</default>
+                <label>Standard</label>
+            </value>
+            <value>
+                <fullName>Standerd</fullName>
+                <default>false</default>
+                <label>Standerd</label>
+            </value>
+            <value>
+                <fullName>Suggestion Box</fullName>
+                <default>false</default>
+                <label>Suggestion Box</label>
+            </value>
+            <value>
+                <fullName>Target Mailers (Employer)</fullName>
+                <default>false</default>
+                <label>Target Mailers (Employer)</label>
+            </value>
+            <value>
+                <fullName>Target Mailers-CPC</fullName>
+                <default>false</default>
+                <label>Target Mailers-CPC</label>
+            </value>
+            <value>
+                <fullName>Target Mailers-CPL</fullName>
+                <default>false</default>
+                <label>Target Mailers-CPL</label>
+            </value>
+            <value>
+                <fullName>Target Mailers-CPM</fullName>
+                <default>false</default>
+                <label>Target Mailers-CPM</label>
+            </value>
+            <value>
+                <fullName>Text Link</fullName>
+                <default>false</default>
+                <label>Text Link</label>
+            </value>
+            <value>
+                <fullName>To be derived</fullName>
+                <default>false</default>
+                <label>To be derived</label>
+            </value>
+            <value>
+                <fullName>Trial-Job Postings</fullName>
+                <default>false</default>
+                <label>Trial-Job Postings</label>
+            </value>
+            <value>
+                <fullName>Trial-Master</fullName>
+                <default>false</default>
+                <label>Trial-Master</label>
+            </value>
+            <value>
+                <fullName>Trial-User Login</fullName>
+                <default>false</default>
+                <label>Trial-User Login</label>
+            </value>
+            <value>
+                <fullName>User Login</fullName>
+                <default>false</default>
+                <label>User Login</label>
+            </value>
+            <value>
+                <fullName>Views</fullName>
+                <default>false</default>
+                <label>Views</label>
+            </value>
+            <value>
+                <fullName>1,000 Views</fullName>
+                <default>false</default>
+                <label>1,000 Views</label>
+            </value>
+            <value>
+                <fullName>1,000,000 Views</fullName>
+                <default>false</default>
+                <label>1,000,000 Views</label>
+            </value>
+            <value>
+                <fullName>10,000 Views</fullName>
+                <default>false</default>
+                <label>10,000 Views</label>
+            </value>
+            <value>
+                <fullName>100 Views</fullName>
+                <default>false</default>
+                <label>100 Views</label>
+            </value>
+            <value>
+                <fullName>100,000 Views</fullName>
+                <default>false</default>
+                <label>100,000 Views</label>
+            </value>
+            <value>
+                <fullName>14-Days Auto-Refresh (A/R)</fullName>
+                <default>false</default>
+                <label>14-Days Auto-Refresh (A/R)</label>
+            </value>
+            <value>
+                <fullName>150,000 Views</fullName>
+                <default>false</default>
+                <label>150,000 Views</label>
+            </value>
+            <value>
+                <fullName>2,000 Views</fullName>
+                <default>false</default>
+                <label>2,000 Views</label>
+            </value>
+            <value>
+                <fullName>2,500,000 Views</fullName>
+                <default>false</default>
+                <label>2,500,000 Views</label>
+            </value>
+            <value>
+                <fullName>20,000 Views</fullName>
+                <default>false</default>
+                <label>20,000 Views</label>
+            </value>
+            <value>
+                <fullName>250,000 Views</fullName>
+                <default>false</default>
+                <label>250,000 Views</label>
+            </value>
+            <value>
+                <fullName>30 Days Auto-Refresh (A/R)</fullName>
+                <default>false</default>
+                <label>30 Days Auto-Refresh (A/R)</label>
+            </value>
+            <value>
+                <fullName>30,000 Views</fullName>
+                <default>false</default>
+                <label>30,000 Views</label>
+            </value>
+            <value>
+                <fullName>5,000 Views</fullName>
+                <default>false</default>
+                <label>5,000 Views</label>
+            </value>
+            <value>
+                <fullName>50,000 Views</fullName>
+                <default>false</default>
+                <label>50,000 Views</label>
+            </value>
+            <value>
+                <fullName>500 Views</fullName>
+                <default>false</default>
+                <label>500 Views</label>
+            </value>
+            <value>
+                <fullName>500,000 Views</fullName>
+                <default>false</default>
+                <label>500,000 Views</label>
+            </value>
+            <value>
+                <fullName>75,000 Views</fullName>
+                <default>false</default>
+                <label>75,000 Views</label>
+            </value>
+            <value>
+                <fullName>Custom</fullName>
+                <default>false</default>
+                <label>Custom</label>
+            </value>
+            <value>
+                <fullName>No-Refresh</fullName>
+                <default>false</default>
+                <label>No-Refresh</label>
+            </value>
+            <value>
+                <fullName>Special Offer</fullName>
+                <default>false</default>
+                <label>Special Offer</label>
+            </value>
+            <value>
+                <fullName>Unlimited</fullName>
+                <default>false</default>
+                <label>Unlimited</label>
+            </value>
+            <value>
+                <fullName>CPM</fullName>
+                <default>false</default>
+                <label>CPM</label>
+            </value>
+            <value>
+                <fullName>CPC</fullName>
+                <default>false</default>
+                <label>CPC</label>
+            </value>
+            <value>
+                <fullName>CPL</fullName>
+                <default>false</default>
+                <label>CPL</label>
+            </value>
+            <value>
+                <fullName>Specific</fullName>
+                <default>false</default>
+                <label>Specific</label>
+            </value>
+            <value>
+                <fullName>Koyo Beta</fullName>
+                <default>false</default>
+                <label>Koyo Beta</label>
+            </value>
+            <value>
+                <fullName>Skillyst</fullName>
+                <default>false</default>
+                <label>Skillyst</label>
+            </value>
+            <value>
+                <fullName>MBA</fullName>
+                <default>false</default>
+                <label>MBA</label>
+            </value>
+            <value>
+                <fullName>Basic - 3M</fullName>
+                <default>false</default>
+                <label>Basic - 3M</label>
+            </value>
+            <value>
+                <fullName>Basic - 12M</fullName>
+                <default>false</default>
+                <label>Basic - 12M</label>
+            </value>
+            <value>
+                <fullName>Non-IT - 3M</fullName>
+                <default>false</default>
+                <label>Non-IT - 3M</label>
+            </value>
+            <value>
+                <fullName>Non-IT - 12M</fullName>
+                <default>false</default>
+                <label>Non-IT - 12M</label>
+            </value>
+            <value>
+                <fullName>Advanced - 3M</fullName>
+                <default>false</default>
+                <label>Advanced - 3M</label>
+            </value>
+            <value>
+                <fullName>Advanced - 12M</fullName>
+                <default>false</default>
+                <label>Advanced - 12M</label>
+            </value>
+            <value>
+                <fullName>Enterprise - 3M</fullName>
+                <default>false</default>
+                <label>Enterprise - 3M</label>
+            </value>
+            <value>
+                <fullName>Enterprise -12M</fullName>
+                <default>false</default>
+                <label>Enterprise -12M</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

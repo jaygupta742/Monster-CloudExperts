@@ -1,0 +1,1040 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SubIssue__c</fullName>
+    <inlineHelpText>sub issue dynamically related to the issue field</inlineHelpText>
+    <label>Sub Issue</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Issue__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Sent WL</fullName>
+                <default>false</default>
+                <label>Sent WL</label>
+            </value>
+            <value>
+                <fullName>Excel Download</fullName>
+                <default>false</default>
+                <label>Excel Download</label>
+            </value>
+            <value>
+                <fullName>Search Assistance</fullName>
+                <default>false</default>
+                <label>Search Assistance</label>
+            </value>
+            <value>
+                <fullName>Datedness</fullName>
+                <default>false</default>
+                <label>Datedness</label>
+            </value>
+            <value>
+                <fullName>Profile Quality</fullName>
+                <default>false</default>
+                <label>Profile Quality</label>
+            </value>
+            <value>
+                <fullName>Profile Quantity</fullName>
+                <default>false</default>
+                <label>Profile Quantity</label>
+            </value>
+            <value>
+                <fullName>Technical issue</fullName>
+                <default>false</default>
+                <label>Technical issue</label>
+            </value>
+            <value>
+                <fullName>PC Credit Request</fullName>
+                <default>false</default>
+                <label>PC Credit Request</label>
+            </value>
+            <value>
+                <fullName>search Relevance</fullName>
+                <default>false</default>
+                <label>search Relevance</label>
+            </value>
+            <value>
+                <fullName>Low Responses</fullName>
+                <default>false</default>
+                <label>Low Responses</label>
+            </value>
+            <value>
+                <fullName>Irrelevant Response</fullName>
+                <default>false</default>
+                <label>Irrelevant Response</label>
+            </value>
+            <value>
+                <fullName>Exposure</fullName>
+                <default>false</default>
+                <label>Exposure</label>
+            </value>
+            <value>
+                <fullName>Monster Social Job</fullName>
+                <default>false</default>
+                <label>Monster Social Job</label>
+            </value>
+            <value>
+                <fullName>Posting Assistance</fullName>
+                <default>false</default>
+                <label>Posting Assistance</label>
+            </value>
+            <value>
+                <fullName>Scraped Jobs</fullName>
+                <default>false</default>
+                <label>Scraped Jobs</label>
+            </value>
+            <value>
+                <fullName>OC Credit Request</fullName>
+                <default>false</default>
+                <label>OC Credit Request</label>
+            </value>
+            <value>
+                <fullName>Mass mailing Assistance</fullName>
+                <default>false</default>
+                <label>Mass mailing Assistance</label>
+            </value>
+            <value>
+                <fullName>Whatsapp</fullName>
+                <default>false</default>
+                <label>Whatsapp</label>
+            </value>
+            <value>
+                <fullName>Site Issue</fullName>
+                <default>false</default>
+                <label>Site Issue</label>
+            </value>
+            <value>
+                <fullName>Site down</fullName>
+                <default>false</default>
+                <label>Site down</label>
+            </value>
+            <value>
+                <fullName>Zero Usage - Audit</fullName>
+                <default>false</default>
+                <label>Zero Usage - Audit</label>
+            </value>
+            <value>
+                <fullName>RDA</fullName>
+                <default>false</default>
+                <label>RDA</label>
+            </value>
+            <value>
+                <fullName>Filters</fullName>
+                <default>false</default>
+                <label>Filters</label>
+            </value>
+            <value>
+                <fullName>Jop posting</fullName>
+                <default>false</default>
+                <label>Jop posting</label>
+            </value>
+            <value>
+                <fullName>Folder Management</fullName>
+                <default>false</default>
+                <label>Folder Management</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Others</fullName>
+                <default>false</default>
+                <label>Others</label>
+            </value>
+            <value>
+                <fullName>Daily Limits exhausted</fullName>
+                <default>false</default>
+                <label>Daily Limits exhausted</label>
+            </value>
+            <value>
+                <fullName>Monthly Limits Exhausted</fullName>
+                <default>false</default>
+                <label>Monthly Limits Exhausted</label>
+            </value>
+            <value>
+                <fullName>Total Limits Exhausted</fullName>
+                <default>false</default>
+                <label>Total Limits Exhausted</label>
+            </value>
+            <value>
+                <fullName>Increase Request</fullName>
+                <default>false</default>
+                <label>Increase Request</label>
+            </value>
+            <value>
+                <fullName>Login issue</fullName>
+                <default>false</default>
+                <label>Login issue</label>
+            </value>
+            <value>
+                <fullName>Usage Report</fullName>
+                <default>false</default>
+                <label>Usage Report</label>
+            </value>
+            <value>
+                <fullName>Free Trail</fullName>
+                <default>false</default>
+                <label>Free Trail</label>
+            </value>
+            <value>
+                <fullName>Sent Login credentials</fullName>
+                <default>false</default>
+                <label>Sent Login credentials</label>
+            </value>
+            <value>
+                <fullName>Update Users</fullName>
+                <default>false</default>
+                <label>Update Users</label>
+            </value>
+            <value>
+                <fullName>User Creation</fullName>
+                <default>false</default>
+                <label>User Creation</label>
+            </value>
+            <value>
+                <fullName>User name Change</fullName>
+                <default>false</default>
+                <label>User name Change</label>
+            </value>
+            <value>
+                <fullName>Other Employer Issues</fullName>
+                <default>false</default>
+                <label>Other Employer Issues</label>
+            </value>
+            <value>
+                <fullName>Order Status</fullName>
+                <default>false</default>
+                <label>Order Status</label>
+            </value>
+            <value>
+                <fullName>Pending KYC</fullName>
+                <default>false</default>
+                <label>Pending KYC</label>
+            </value>
+            <value>
+                <fullName>Booking Team</fullName>
+                <default>false</default>
+                <label>Booking Team</label>
+            </value>
+            <value>
+                <fullName>Activation team Action</fullName>
+                <default>false</default>
+                <label>Activation team Action</label>
+            </value>
+            <value>
+                <fullName>Platfrom</fullName>
+                <default>false</default>
+                <label>Platfrom</label>
+            </value>
+            <value>
+                <fullName>Outreach</fullName>
+                <default>false</default>
+                <label>Outreach</label>
+            </value>
+            <value>
+                <fullName>Account settings</fullName>
+                <default>false</default>
+                <label>Account settings</label>
+            </value>
+            <value>
+                <fullName>Not Required</fullName>
+                <default>false</default>
+                <label>Not Required</label>
+            </value>
+            <value>
+                <fullName>foundit Hub</fullName>
+                <default>false</default>
+                <label>foundit Hub</label>
+            </value>
+            <value>
+                <fullName>Training Request</fullName>
+                <default>false</default>
+                <label>Training Request</label>
+            </value>
+            <value>
+                <fullName>Profile Datedness</fullName>
+                <default>false</default>
+                <label>Profile Datedness</label>
+            </value>
+            <value>
+                <fullName>Profile Relevance</fullName>
+                <default>false</default>
+                <label>Profile Relevance</label>
+            </value>
+            <value>
+                <fullName>Salary Mismtach</fullName>
+                <default>false</default>
+                <label>Salary Mismtach</label>
+            </value>
+            <value>
+                <fullName>NP  Mismatch</fullName>
+                <default>false</default>
+                <label>NP  Mismatch</label>
+            </value>
+            <value>
+                <fullName>JP - Quantity</fullName>
+                <default>false</default>
+                <label>JP - Quantity</label>
+            </value>
+            <value>
+                <fullName>JP- Quality</fullName>
+                <default>false</default>
+                <label>JP- Quality</label>
+            </value>
+            <value>
+                <fullName>Incorrect Contact number</fullName>
+                <default>false</default>
+                <label>Incorrect Contact number</label>
+            </value>
+            <value>
+                <fullName>Refund</fullName>
+                <default>false</default>
+                <label>Refund</label>
+            </value>
+            <value>
+                <fullName>Cancellation</fullName>
+                <default>false</default>
+                <label>Cancellation</label>
+            </value>
+            <value>
+                <fullName>Compliance</fullName>
+                <default>false</default>
+                <label>Compliance</label>
+            </value>
+            <value>
+                <fullName>Only Cced in email</fullName>
+                <default>false</default>
+                <label>Only Cced in email</label>
+            </value>
+            <value>
+                <fullName>Collections</fullName>
+                <default>false</default>
+                <label>Collections</label>
+            </value>
+            <value>
+                <fullName>Sales Team</fullName>
+                <default>false</default>
+                <label>Sales Team</label>
+            </value>
+            <value>
+                <fullName>Additional support activities</fullName>
+                <default>false</default>
+                <label>Additional support activities</label>
+            </value>
+            <value>
+                <fullName>A/C Disabled</fullName>
+                <default>false</default>
+                <label>A/C Disabled</label>
+            </value>
+            <value>
+                <fullName>Job posting - Employer</fullName>
+                <default>false</default>
+                <label>Job posting - Employer</label>
+            </value>
+            <value>
+                <fullName>Employer Fraud Enquiry</fullName>
+                <default>false</default>
+                <label>Employer Fraud Enquiry</label>
+            </value>
+            <value>
+                <fullName>Fraud Report</fullName>
+                <default>false</default>
+                <label>Fraud Report</label>
+            </value>
+            <value>
+                <fullName>Resume Upload -New</fullName>
+                <default>false</default>
+                <label>Resume Upload -New</label>
+            </value>
+            <value>
+                <fullName>Seeker Account (Update/deactivate etc)</fullName>
+                <default>false</default>
+                <label>Seeker Account (Update/deactivate etc)</label>
+            </value>
+            <value>
+                <fullName>Phishing email</fullName>
+                <default>false</default>
+                <label>Phishing email</label>
+            </value>
+            <value>
+                <fullName>Seeker Account / Services Enquiry / unsubscribe promotional</fullName>
+                <default>false</default>
+                <label>Seeker Account / Services Enquiry / unsubscribe promotional</label>
+            </value>
+            <value>
+                <fullName>Career Booster</fullName>
+                <default>false</default>
+                <label>Career Booster</label>
+            </value>
+            <value>
+                <fullName>Featured Profile</fullName>
+                <default>false</default>
+                <label>Featured Profile</label>
+            </value>
+            <value>
+                <fullName>Profile Highlighter</fullName>
+                <default>false</default>
+                <label>Profile Highlighter</label>
+            </value>
+            <value>
+                <fullName>Resume Writing</fullName>
+                <default>false</default>
+                <label>Resume Writing</label>
+            </value>
+            <value>
+                <fullName>Cover letter</fullName>
+                <default>false</default>
+                <label>Cover letter</label>
+            </value>
+            <value>
+                <fullName>LinkedIn Makeover</fullName>
+                <default>false</default>
+                <label>LinkedIn Makeover</label>
+            </value>
+            <value>
+                <fullName>Mock Interview</fullName>
+                <default>false</default>
+                <label>Mock Interview</label>
+            </value>
+            <value>
+                <fullName>Resume Bulider</fullName>
+                <default>false</default>
+                <label>Resume Bulider</label>
+            </value>
+            <value>
+                <fullName>Call Back Request</fullName>
+                <default>false</default>
+                <label>Call Back Request</label>
+            </value>
+            <value>
+                <fullName>Wrong Commitment</fullName>
+                <default>false</default>
+                <label>Wrong Commitment</label>
+            </value>
+            <value>
+                <fullName>No Response</fullName>
+                <default>false</default>
+                <label>No Response</label>
+            </value>
+            <value>
+                <fullName>Account related</fullName>
+                <default>false</default>
+                <label>Account related</label>
+            </value>
+            <value>
+                <fullName>Account Delete</fullName>
+                <default>false</default>
+                <label>Account Delete</label>
+            </value>
+            <value>
+                <fullName>Email Id Change</fullName>
+                <default>false</default>
+                <label>Email Id Change</label>
+            </value>
+            <value>
+                <fullName>Email Verify</fullName>
+                <default>false</default>
+                <label>Email Verify</label>
+            </value>
+            <value>
+                <fullName>Mob Verify</fullName>
+                <default>false</default>
+                <label>Mob Verify</label>
+            </value>
+            <value>
+                <fullName>Zero order</fullName>
+                <default>false</default>
+                <label>Zero order</label>
+            </value>
+            <value>
+                <fullName>Paid In Inr For Overseas Services</fullName>
+                <default>false</default>
+                <label>Paid In Inr For Overseas Services</label>
+            </value>
+            <value>
+                <fullName>Extension Of The Services</fullName>
+                <default>false</default>
+                <label>Extension Of The Services</label>
+            </value>
+            <value>
+                <fullName>Change in services</fullName>
+                <default>false</default>
+                <label>Change in services</label>
+            </value>
+            <value>
+                <fullName>cced in vendor mail</fullName>
+                <default>false</default>
+                <label>cced in vendor mail</label>
+            </value>
+            <value>
+                <fullName>Follow Up Mails</fullName>
+                <default>false</default>
+                <label>Follow Up Mails</label>
+            </value>
+            <value>
+                <fullName>Employer</fullName>
+                <default>false</default>
+                <label>Employer</label>
+            </value>
+            <value>
+                <fullName>Jobseeker</fullName>
+                <default>false</default>
+                <label>Jobseeker</label>
+            </value>
+            <value>
+                <fullName>Delete Profile</fullName>
+                <default>false</default>
+                <label>Delete Profile</label>
+            </value>
+            <value>
+                <fullName>Recruiter Seeking Money</fullName>
+                <default>false</default>
+                <label>Recruiter Seeking Money</label>
+            </value>
+            <value>
+                <fullName>Paid Money Towards Job</fullName>
+                <default>false</default>
+                <label>Paid Money Towards Job</label>
+            </value>
+            <value>
+                <fullName>Fraud Enquiry</fullName>
+                <default>false</default>
+                <label>Fraud Enquiry</label>
+            </value>
+            <value>
+                <fullName>Login Otp Issue</fullName>
+                <default>false</default>
+                <label>Login Otp Issue</label>
+            </value>
+            <value>
+                <fullName>Verification Otp Issue</fullName>
+                <default>false</default>
+                <label>Verification Otp Issue</label>
+            </value>
+            <value>
+                <fullName>Account Reactivation</fullName>
+                <default>false</default>
+                <label>Account Reactivation</label>
+            </value>
+            <value>
+                <fullName>Skills/Location</fullName>
+                <default>false</default>
+                <label>Skills/Location</label>
+            </value>
+            <value>
+                <fullName>Education/Institute</fullName>
+                <default>false</default>
+                <label>Education/Institute</label>
+            </value>
+            <value>
+                <fullName>Auto Update Issue</fullName>
+                <default>false</default>
+                <label>Auto Update Issue</label>
+            </value>
+            <value>
+                <fullName>Reset Password</fullName>
+                <default>false</default>
+                <label>Reset Password</label>
+            </value>
+            <value>
+                <fullName>Irrelevant Jobs</fullName>
+                <default>false</default>
+                <label>Irrelevant Jobs</label>
+            </value>
+            <value>
+                <fullName>Communication Mails After Deletion</fullName>
+                <default>false</default>
+                <label>Communication Mails After Deletion</label>
+            </value>
+            <value>
+                <fullName>Job Search</fullName>
+                <default>false</default>
+                <label>Job Search</label>
+            </value>
+            <value>
+                <fullName>Bugs</fullName>
+                <default>false</default>
+                <label>Bugs</label>
+            </value>
+            <value>
+                <fullName>Promotional Mail/Alert</fullName>
+                <default>false</default>
+                <label>Promotional Mail/Alert</label>
+            </value>
+            <value>
+                <fullName>SR Authentication</fullName>
+                <default>false</default>
+                <label>SR Authentication</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Job Search</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Bugs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>Promotional Mail/Alert</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <valueName>SR Authentication</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site</controllingFieldValue>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <controllingFieldValue>Outreach</controllingFieldValue>
+            <controllingFieldValue>Inventory Releated / Limits</controllingFieldValue>
+            <valueName>Technical issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site</controllingFieldValue>
+            <valueName>Site Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site</controllingFieldValue>
+            <valueName>Site down</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Site</controllingFieldValue>
+            <valueName>Zero Usage - Audit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <controllingFieldValue>Feature Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>FRAUD OFFERS</controllingFieldValue>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <controllingFieldValue>Resume Upload -New</controllingFieldValue>
+            <valueName>Others</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <valueName>Login issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <valueName>Usage Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <valueName>Free Trail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <valueName>Sent Login credentials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <valueName>Update Users</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <valueName>User Creation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <valueName>User name Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Related Information</controllingFieldValue>
+            <valueName>Other Employer Issues</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Misc. –Others</controllingFieldValue>
+            <valueName>Job posting - Employer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Misc. –Others</controllingFieldValue>
+            <valueName>Employer Fraud Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Misc. –Others</controllingFieldValue>
+            <valueName>Fraud Report</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Misc. –Others</controllingFieldValue>
+            <valueName>Resume Upload -New</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Misc. –Others</controllingFieldValue>
+            <valueName>Seeker Account (Update/deactivate etc)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Misc. –Others</controllingFieldValue>
+            <valueName>Phishing email</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Compliance Misc. –Others</controllingFieldValue>
+            <valueName>Seeker Account / Services Enquiry / unsubscribe promotional</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inbound Welcome Letter</controllingFieldValue>
+            <valueName>Sent WL</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <valueName>Excel Download</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <valueName>Search Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <valueName>Datedness</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>Profile Quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>Profile Quantity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <valueName>PC Credit Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Database</controllingFieldValue>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>search Relevance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Job posting</controllingFieldValue>
+            <controllingFieldValue>Outreach</controllingFieldValue>
+            <valueName>Low Responses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Job posting</controllingFieldValue>
+            <valueName>Irrelevant Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Job posting</controllingFieldValue>
+            <valueName>Exposure</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Job posting</controllingFieldValue>
+            <valueName>Monster Social Job</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Job posting</controllingFieldValue>
+            <valueName>Posting Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Job posting</controllingFieldValue>
+            <valueName>Scraped Jobs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Job posting</controllingFieldValue>
+            <valueName>OC Credit Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outreach</controllingFieldValue>
+            <valueName>Mass mailing Assistance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Outreach</controllingFieldValue>
+            <valueName>Whatsapp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>RDA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Enhancement Request</controllingFieldValue>
+            <valueName>Filters</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Enhancement Request</controllingFieldValue>
+            <valueName>Jop posting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Enhancement Request</controllingFieldValue>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Folder Management</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Feature Enhancement Request</controllingFieldValue>
+            <valueName>Reports</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inventory Releated / Limits</controllingFieldValue>
+            <valueName>Daily Limits exhausted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inventory Releated / Limits</controllingFieldValue>
+            <valueName>Monthly Limits Exhausted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inventory Releated / Limits</controllingFieldValue>
+            <valueName>Total Limits Exhausted</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Inventory Releated / Limits</controllingFieldValue>
+            <valueName>Increase Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Activation /Ecomm Orders</controllingFieldValue>
+            <valueName>Order Status</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Activation /Ecomm Orders</controllingFieldValue>
+            <valueName>Pending KYC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Activation /Ecomm Orders</controllingFieldValue>
+            <valueName>Booking Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Account Activation /Ecomm Orders</controllingFieldValue>
+            <valueName>Activation team Action</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Collections/Payment/Invoice</controllingFieldValue>
+            <valueName>A/C Disabled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Platfrom</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Outreach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Account settings</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Not Required</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>foundit Hub</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Training</controllingFieldValue>
+            <valueName>Training Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>Profile Relevance</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>Salary Mismtach</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>NP  Mismatch</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>JP - Quantity</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>JP- Quality</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>Incorrect Contact number</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>Refund</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>VOC / Escalation</controllingFieldValue>
+            <valueName>Cancellation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Renewal</controllingFieldValue>
+            <valueName>Additional support activities</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Career Booster</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Featured Profile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Profile Highlighter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Resume Writing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Cover letter</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>LinkedIn Makeover</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Mock Interview</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Inquiry</controllingFieldValue>
+            <controllingFieldValue>Escalations</controllingFieldValue>
+            <controllingFieldValue>Refund</controllingFieldValue>
+            <valueName>Resume Bulider</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LEAD</controllingFieldValue>
+            <valueName>Employer</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>LEAD</controllingFieldValue>
+            <valueName>Jobseeker</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Delete A/C</controllingFieldValue>
+            <valueName>Delete Profile</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fraud Report</controllingFieldValue>
+            <valueName>Sales Team</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fraud Report</controllingFieldValue>
+            <valueName>Call Back Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fraud Report</controllingFieldValue>
+            <valueName>Wrong Commitment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Fraud Report</controllingFieldValue>
+            <valueName>No Response</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRAUD OFFERS</controllingFieldValue>
+            <valueName>Recruiter Seeking Money</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRAUD OFFERS</controllingFieldValue>
+            <valueName>Paid Money Towards Job</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>FRAUD OFFERS</controllingFieldValue>
+            <valueName>Fraud Enquiry</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Phishing email</controllingFieldValue>
+            <valueName>cced in vendor mail</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Phishing email</controllingFieldValue>
+            <valueName>Follow Up Mails</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OTP ISSUE</controllingFieldValue>
+            <valueName>Login Otp Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>OTP ISSUE</controllingFieldValue>
+            <valueName>Verification Otp Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escalation</controllingFieldValue>
+            <valueName>Irrelevant Jobs</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Escalation</controllingFieldValue>
+            <valueName>Communication Mails After Deletion</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <controllingFieldValue>Resume Upload -New</controllingFieldValue>
+            <valueName>Email Id Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <valueName>Account Reactivation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <valueName>Skills/Location</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <valueName>Education/Institute</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <valueName>Auto Update Issue</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>REGULAR SEEKER QUERY</controllingFieldValue>
+            <valueName>Reset Password</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resume Upload -New</controllingFieldValue>
+            <valueName>Account related</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resume Upload -New</controllingFieldValue>
+            <valueName>Account Delete</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resume Upload -New</controllingFieldValue>
+            <valueName>Email Verify</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Resume Upload -New</controllingFieldValue>
+            <valueName>Mob Verify</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Account (Update/deactivate etc)</controllingFieldValue>
+            <valueName>Zero order</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Account (Update/deactivate etc)</controllingFieldValue>
+            <valueName>Paid In Inr For Overseas Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Account (Update/deactivate etc)</controllingFieldValue>
+            <valueName>Extension Of The Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Seeker Account (Update/deactivate etc)</controllingFieldValue>
+            <valueName>Change in services</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

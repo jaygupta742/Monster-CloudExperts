@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Interested__c</fullName>
+    <label>Product Interested</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>RDA</fullName>
+                <default>false</default>
+                <label>RDA</label>
+            </value>
+            <value>
+                <fullName>JP</fullName>
+                <default>false</default>
+                <label>JP</label>
+            </value>
+            <value>
+                <fullName>Skillyst</fullName>
+                <default>false</default>
+                <label>Skillyst</label>
+            </value>
+            <value>
+                <fullName>Sprynt</fullName>
+                <default>false</default>
+                <label>Sprynt</label>
+            </value>
+            <value>
+                <fullName>FBS</fullName>
+                <default>false</default>
+                <label>FBS</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

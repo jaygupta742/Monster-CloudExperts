@@ -1,0 +1,16 @@
+Hi Sir,
+
+A Credit Request is generated with the Order Number as {!Credit_Request__c.Order_Custom__c},
+
+Detailed information about Credit Request are as follows :
+
+Account                                    -{!Credit_Request__c.Account__c}
+Credit Reason                          - {!Credit_Request__c.Credit_Reason__c}
+Credit Type                               - {!Credit_Request__c.Credit_Type__c}
+
+Credit Comments                     - {!Credit_Request__c.Credit_Comments__c}
+Credit Amount to be reversed  -{!Credit_Request__c.Credit_Amount__c}
+
+
+Thanks and Regards,
+{!Credit_Request__c.OwnerFullName}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>APAC_Seeker_All_cases</fullName>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>If_Others__c</columns>
+    <columns>Subject__c</columns>
+    <columns>Email__c</columns>
+    <columns>Received_To__c</columns>
+    <columns>Case_Arrived_Time__c</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IsKeyword__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>APAC Seeker – All cases</label>
+</ListView>

@@ -1,0 +1,64 @@
+<apex:page standardController="apttus_proposal_proposal__c" extensions="editallPayment" sidebar="fales" lightningStylesheets="true">
+   <apex:pagemessages ></apex:pagemessages>
+  <apex:sectionHeader title="Payment Schedules Edit" subtitle="Edit Payment Schedules"/>
+  <apex:form id="abc">
+  <apex:pageblock id="PB" >
+  <apex:variable value="{!0}" var="rowNumber" />
+  <apex:pageBlockTable value="{!so}" var="pss">
+   
+  <apex:column headerValue="No." style="width:20px; text-align:center;" >
+                                         <apex:outputText value="{0}" style="text-align:center;"> 
+                                             <apex:param value="{!rowNumber+1}" /> 
+                                           </apex:outputText>
+         </apex:column>
+         <apex:column headerValue="Name">
+             <apex:outputField value="{!pss.name}"/>
+         </apex:column>
+         <apex:column headerValue="Quote/Proposals">
+             <apex:outputField value="{!pss.Proposal__c}"/>
+         </apex:column>
+         <apex:column headerValue="Payment Type">
+             <apex:inputField value="{!pss.APAC_Payment_Type__c}"/>
+         </apex:column>
+          <apex:column headerValue="Due Date">
+             <apex:inputField value="{!pss.Due_Date__c}"/>
+         </apex:column> 
+         <apex:column headerValue="Amount">
+             <apex:inputField value="{!pss.Payment_Amount__c}" required="true"/>
+         </apex:column>
+         <apex:column headerValue="TDS Amount">
+             <apex:inputField value="{!pss.TDS_Amount_c__c }" required="true"/>
+         </apex:column>
+          <!---added by yam-->
+      <apex:column headerValue="Revised Due Date">
+             <apex:inputField value="{!pss.Revised_Due_Date__c }"/>
+         </apex:column>
+      <!---added till here---->
+         <apex:column headerValue="Payment Received Amount">
+             <apex:inputField value="{!pss.Payment_Received_Amount__c }" />
+         </apex:column>
+         <apex:column headerValue="TDS Payment Amount">
+             <apex:inputField value="{!pss.TDS_Payment_Amount__c }" />
+         </apex:column>
+         <apex:column headerValue="Payment Date">
+             <apex:inputField value="{!pss.Payment_Date__c }" />
+         </apex:column>
+         <apex:column headerValue="Finance Reference">
+             <apex:inputField value="{!pss.Finance_Reference__c }" />
+         </apex:column>
+       <apex:column headerValue="Action">
+                                          <apex:commandButton value="Delete" onclick="if (!confirm('Do you want to proceed?')) return false;" action="{!removeLine}" reRender="PB,abc" immediate="true">
+                                                 <apex:param name="p" value="{!rowNumber}" assignTo="{!numberOfRowToRemove}"/>
+                                          </apex:commandButton>
+                                          <apex:variable var="rowNumber" value="{!rowNumber+1}"/>     
+                                  </apex:column>  
+                                  
+     </apex:pageBlockTable> 
+       <apex:pageblockButtons >
+           <apex:commandButton value="Add Rows" action="{!Addrows}" immediate="true" reRender="abc"/>
+           <apex:commandButton action="{!savemethod}" value="Save"  disabled="{!IF(so.size>0,false,true)}"/>
+          <apex:commandButton action="{!Cancel}" value="Cancel"/>
+       </apex:pageblockButtons>   
+  </apex:pageblock>
+  </apex:form>
+</apex:page>

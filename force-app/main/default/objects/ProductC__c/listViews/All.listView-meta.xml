@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Product_Type__c</columns>
+    <columns>Product_Name__c</columns>
+    <columns>NAME</columns>
+    <columns>SKU_Type__c</columns>
+    <columns>Product_Description__c</columns>
+    <columns>Unit_List_Price_Value__c</columns>
+    <columns>UOM__c</columns>
+    <columns>Bin__c</columns>
+    <columns>Product_Country__c</columns>
+    <columns>Channel__c</columns>
+    <columns>DB_Type_Industry__c</columns>
+    <columns>Price_Master__c</columns>
+    <columns>Tenure_Months__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Product_Name__c</field>
+        <operation>equals</operation>
+        <value>Resume Database Access</value>
+    </filters>
+    <filters>
+        <field>Product_Country__c</field>
+        <operation>equals</operation>
+        <value>Philippines</value>
+    </filters>
+    <filters>
+        <field>Channel__c</field>
+        <operation>equals</operation>
+        <value>SMB</value>
+    </filters>
+    <label>01. All Products</label>
+</ListView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Deal__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(
+NOT(ISBLANK(Days_Between__c)),
+IF(Days_Between__c == 0, &quot;SY&quot;, &quot;MY &quot; &amp; TEXT(Days_Between__c)),
+&quot;&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <inlineHelpText>SY =If Days Between Start and End Date is less than One Year ,
+MY=If Days Between Start and End Date is More than One Year</inlineHelpText>
+    <label>Deal</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

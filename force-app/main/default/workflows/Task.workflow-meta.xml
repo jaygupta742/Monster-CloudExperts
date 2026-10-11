@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Product_Pitch_Closed_email</fullName>
+        <ccEmails>subhadeepdas2199@gmail.com</ccEmails>
+        <description>Product Pitch Closed email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Product_Pitch_Status_Update</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email</fullName>
+        <ccEmails>subhadeepdas2199@gmail.com</ccEmails>
+        <description>Send Email</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Product_Pitch_Status_Update</template>
+    </alerts>
+    <alerts>
+        <fullName>Send_Email_Again</fullName>
+        <ccEmails>subhadeepdas2199@gmail.com</ccEmails>
+        <description>Send Email Again</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Product_Pitch_Status_Update</template>
+    </alerts>
+    <alerts>
+        <fullName>TASK_VALUE_HAS_CHANGED</fullName>
+        <ccEmails>subhadeepdas2199@gmail.com</ccEmails>
+        <description>TASK VALUE HAS CHANGED</description>
+        <protected>false</protected>
+        <recipients>
+            <type>creator</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Product_Pitch_Status_Update</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>fieldupdate</fullName>
+        <field>CompletionDate__c</field>
+        <formula>(Today()+0)</formula>
+        <name>fieldupdate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Product Pitch Email Alerts</fullName>
+        <actions>
+            <name>Send_Email</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <formula>AND(
+    ISPICKVAL( Product_Pitch_Feedback_Status__c ,&apos;Pending&apos;),
+    
+    (CreatedBy.X18DigitUserId__c !=  Owner:User.X18DigitUserId__c ),
+ 
+     ( CreatedBy.X18DigitProfileId__c == &apos;00e7F000000uSSiQAM&apos;)
+
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Product pitch email alerts Status WIP</fullName>
+        <actions>
+            <name>Send_Email_Again</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Product_Pitch_Feedback_Status__c</field>
+            <operation>equals</operation>
+            <value>Work in Progress</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Product pitch email alerts status closed</fullName>
+        <actions>
+            <name>Product_Pitch_Closed_email</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Product_Pitch_Feedback_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>TASK VALUE CHNAGE MAIL</fullName>
+        <actions>
+            <name>TASK_VALUE_HAS_CHANGED</name>
+            <type>Alert</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Task.Product_Pitch_Feedback_Status__c</field>
+            <operation>equals</operation>
+            <value>Work in Progress</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Product_Pitch_Feedback_Status__c</field>
+            <operation>equals</operation>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Task.Product_Pitch_Feedback_Status__c</field>
+            <operation>equals</operation>
+            <value>Pending</value>
+        </criteriaItems>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>task completetion date</fullName>
+        <actions>
+            <name>fieldupdate</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <criteriaItems>
+            <field>Task.Status</field>
+            <operation>equals</operation>
+            <value>Completed</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

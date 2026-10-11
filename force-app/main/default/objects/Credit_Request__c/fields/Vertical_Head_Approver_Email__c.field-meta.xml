@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Vertical_Head_Approver_Email__c</fullName>
+    <label>Vertical Head Approver Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Vertical_Head_Approver_Name__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>abilash.nair@monster.com.hk</fullName>
+                <default>false</default>
+                <label>abilash.nair@monster.com.hk</label>
+            </value>
+            <value>
+                <fullName>akash.jain@monsterindia.com</fullName>
+                <default>false</default>
+                <label>akash.jain@monsterindia.com</label>
+            </value>
+            <value>
+                <fullName>anurag.arora@monsterindia.com</fullName>
+                <default>false</default>
+                <label>anurag.arora@monsterindia.com</label>
+            </value>
+            <value>
+                <fullName>deepank.jain@monster.com.ph</fullName>
+                <default>false</default>
+                <label>deepank.jain@monster.com.ph</label>
+            </value>
+            <value>
+                <fullName>elaine.fortescue@monster.com.my</fullName>
+                <default>false</default>
+                <label>elaine.fortescue@monster.com.my</label>
+            </value>
+            <value>
+                <fullName>mahesh.iyer@monsterindia.com</fullName>
+                <default>false</default>
+                <label>mahesh.iyer@monsterindia.com</label>
+            </value>
+            <value>
+                <fullName>nilesh.ghai@monster.com.ph</fullName>
+                <default>false</default>
+                <label>nilesh.ghai@monster.com.ph</label>
+            </value>
+            <value>
+                <fullName>randeep.bhatia@monsterindia.com</fullName>
+                <default>false</default>
+                <label>randeep.bhatia@monsterindia.com</label>
+            </value>
+            <value>
+                <fullName>vikram.bhaskar@monsterindia.com</fullName>
+                <default>false</default>
+                <label>vikram.bhaskar@monsterindia.com</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Abilash Nair</controllingFieldValue>
+            <valueName>abilash.nair@monster.com.hk</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Akash Jain</controllingFieldValue>
+            <valueName>akash.jain@monsterindia.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Anurag Arora</controllingFieldValue>
+            <valueName>anurag.arora@monsterindia.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Deepank Jain</controllingFieldValue>
+            <valueName>deepank.jain@monster.com.ph</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Elaine Fortescue</controllingFieldValue>
+            <valueName>elaine.fortescue@monster.com.my</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Mahesh Iyer</controllingFieldValue>
+            <valueName>mahesh.iyer@monsterindia.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Nilesh Ghai</controllingFieldValue>
+            <valueName>nilesh.ghai@monster.com.ph</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Randeep Bhatia</controllingFieldValue>
+            <valueName>randeep.bhatia@monsterindia.com</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Vikram Bhaskar</controllingFieldValue>
+            <valueName>vikram.bhaskar@monsterindia.com</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

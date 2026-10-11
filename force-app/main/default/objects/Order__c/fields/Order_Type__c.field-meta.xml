@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Order_Type__c</fullName>
+    <label>Order Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New Customer</fullName>
+                <default>false</default>
+                <label>New Customer</label>
+            </value>
+            <value>
+                <fullName>Lapsed</fullName>
+                <default>false</default>
+                <label>Lapsed</label>
+            </value>
+            <value>
+                <fullName>Renewal</fullName>
+                <default>false</default>
+                <label>Renewal</label>
+            </value>
+            <value>
+                <fullName>Upsell</fullName>
+                <default>false</default>
+                <label>Upsell</label>
+            </value>
+            <value>
+                <fullName>Slippage</fullName>
+                <default>false</default>
+                <label>Slippage</label>
+            </value>
+            <value>
+                <fullName>Free Trial</fullName>
+                <default>false</default>
+                <label>Free Trial</label>
+            </value>
+            <value>
+                <fullName>Ecom</fullName>
+                <default>false</default>
+                <label>Ecom</label>
+            </value>
+            <value>
+                <fullName>Seeker TS</fullName>
+                <default>false</default>
+                <label>Seeker TS</label>
+            </value>
+            <value>
+                <fullName>Recontract</fullName>
+                <default>false</default>
+                <label>Recontract</label>
+            </value>
+            <value>
+                <fullName>Adjustment</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Adjustment</label>
+            </value>
+            <value>
+                <fullName>Barter Deal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Barter Deal</label>
+            </value>
+            <value>
+                <fullName>Bridge Deal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Bridge Deal</label>
+            </value>
+            <value>
+                <fullName>CPA Upsell</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>CPA Upsell</label>
+            </value>
+            <value>
+                <fullName>Consumer Posting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Consumer Posting</label>
+            </value>
+            <value>
+                <fullName>Conversion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conversion</label>
+            </value>
+            <value>
+                <fullName>Conversion/Swap</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Conversion/Swap</label>
+            </value>
+            <value>
+                <fullName>Ecom-Rep</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Ecom-Rep</label>
+            </value>
+            <value>
+                <fullName>International</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>International</label>
+            </value>
+            <value>
+                <fullName>Intro Offer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Intro Offer</label>
+            </value>
+            <value>
+                <fullName>Lapsed Customer</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lapsed Customer</label>
+            </value>
+            <value>
+                <fullName>Lapsed Revival</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Lapsed Revival</label>
+            </value>
+            <value>
+                <fullName>Late Renewal</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Late Renewal</label>
+            </value>
+            <value>
+                <fullName>Make Good</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Make Good</label>
+            </value>
+            <value>
+                <fullName>Manual Conversion</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Manual Conversion</label>
+            </value>
+            <value>
+                <fullName>Marketing Campaign</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Marketing Campaign</label>
+            </value>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>New Revenue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>New Revenue</label>
+            </value>
+            <value>
+                <fullName>Non-Revenue</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Non-Revenue</label>
+            </value>
+            <value>
+                <fullName>Order Correction</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Order Correction</label>
+            </value>
+            <value>
+                <fullName>Partner Feed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Partner Feed</label>
+            </value>
+            <value>
+                <fullName>Quote</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Quote</label>
+            </value>
+            <value>
+                <fullName>Re-Bill</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Re-Bill</label>
+            </value>
+            <value>
+                <fullName>Renewal Upgrade</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Renewal Upgrade</label>
+            </value>
+            <value>
+                <fullName>Renewal with Upsell</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Renewal with Upsell</label>
+            </value>
+            <value>
+                <fullName>Service Pre/PostPone</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Service Pre/PostPone</label>
+            </value>
+            <value>
+                <fullName>Single Job Posting</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Single Job Posting</label>
+            </value>
+            <value>
+                <fullName>Starterpack</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Starterpack</label>
+            </value>
+            <value>
+                <fullName>Telemarketing EU</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Telemarketing EU</label>
+            </value>
+            <value>
+                <fullName>Transfer Order</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Transfer Order</label>
+            </value>
+            <value>
+                <fullName>Trial</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Trial</label>
+            </value>
+            <value>
+                <fullName>Upsell/Addendum</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Upsell/Addendum</label>
+            </value>
+            <value>
+                <fullName>Usage Billing</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Usage Billing</label>
+            </value>
+            <value>
+                <fullName>Winback</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Winback</label>
+            </value>
+            <value>
+                <fullName>Yahoo Media</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Yahoo Media</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

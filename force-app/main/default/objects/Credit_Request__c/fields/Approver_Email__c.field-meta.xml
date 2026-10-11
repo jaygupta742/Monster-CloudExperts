@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Approver_Email__c</fullName>
+    <label>Approver Email</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>vikram.bhaskar@monsterindia.com</fullName>
+                <default>false</default>
+                <label>vikram.bhaskar@monsterindia.com</label>
+            </value>
+            <value>
+                <fullName>srinivas.tadepally@monsterindia.com</fullName>
+                <default>false</default>
+                <label>srinivas.tadepally@monsterindia.com</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

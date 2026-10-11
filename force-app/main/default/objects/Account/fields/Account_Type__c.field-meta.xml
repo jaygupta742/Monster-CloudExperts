@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Type__c</fullName>
+    <label>Account Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>APAC_Industry__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>IT</fullName>
+                <default>false</default>
+                <label>IT</label>
+            </value>
+            <value>
+                <fullName>NIT</fullName>
+                <default>false</default>
+                <label>NIT</label>
+            </value>
+            <value>
+                <fullName>PA</fullName>
+                <default>false</default>
+                <label>PA</label>
+            </value>
+            <value>
+                <fullName>Corporate</fullName>
+                <default>false</default>
+                <label>Corporate</label>
+            </value>
+            <value>
+                <fullName>Freelancer</fullName>
+                <default>false</default>
+                <label>Freelancer</label>
+            </value>
+            <value>
+                <fullName>Proprietor</fullName>
+                <default>false</default>
+                <label>Proprietor</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Telecommunications</controllingFieldValue>
+            <controllingFieldValue>Trading</controllingFieldValue>
+            <controllingFieldValue>Utilities</controllingFieldValue>
+            <controllingFieldValue>Automobile &amp; Ancillaries</controllingFieldValue>
+            <controllingFieldValue>Business Services</controllingFieldValue>
+            <controllingFieldValue>Chemicals, Metals, Mining</controllingFieldValue>
+            <controllingFieldValue>Electronic &amp; Communication equipment</controllingFieldValue>
+            <controllingFieldValue>Aviation &amp; Aerospace</controllingFieldValue>
+            <controllingFieldValue>BFSI</controllingFieldValue>
+            <controllingFieldValue>Energy, Oil &amp; Gas</controllingFieldValue>
+            <controllingFieldValue>Environment</controllingFieldValue>
+            <controllingFieldValue>Education</controllingFieldValue>
+            <controllingFieldValue>Hotels, Travel &amp; Tourism</controllingFieldValue>
+            <controllingFieldValue>FMCG &amp; Consumer Durables</controllingFieldValue>
+            <controllingFieldValue>Healthcare &amp; Pharma</controllingFieldValue>
+            <controllingFieldValue>Export and Import</controllingFieldValue>
+            <controllingFieldValue>Agriculture</controllingFieldValue>
+            <controllingFieldValue>Apparel</controllingFieldValue>
+            <controllingFieldValue>BPO/KPO</controllingFieldValue>
+            <controllingFieldValue>Construction &amp; Engineering</controllingFieldValue>
+            <controllingFieldValue>Media &amp; Entertainment</controllingFieldValue>
+            <controllingFieldValue>Food &amp; Beverage</controllingFieldValue>
+            <controllingFieldValue>Government</controllingFieldValue>
+            <controllingFieldValue>Transportation &amp; Shipping</controllingFieldValue>
+            <controllingFieldValue>Machinery</controllingFieldValue>
+            <controllingFieldValue>Manufacturing</controllingFieldValue>
+            <controllingFieldValue>Marine Services</controllingFieldValue>
+            <controllingFieldValue>Not For Profit</controllingFieldValue>
+            <controllingFieldValue>Others</controllingFieldValue>
+            <controllingFieldValue>Real Estate</controllingFieldValue>
+            <controllingFieldValue>Recreation</controllingFieldValue>
+            <controllingFieldValue>Retail</controllingFieldValue>
+            <valueName>NIT</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>HR, Staffing &amp; Placement Agencies</controllingFieldValue>
+            <valueName>PA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>IT/Computer Software</controllingFieldValue>
+            <controllingFieldValue>IT Services</controllingFieldValue>
+            <controllingFieldValue>Internet</controllingFieldValue>
+            <controllingFieldValue>IT/Computer Hardware &amp; Peripherals</controllingFieldValue>
+            <controllingFieldValue>Semi Conductor</controllingFieldValue>
+            <valueName>IT</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

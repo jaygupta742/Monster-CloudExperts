@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <description>Email2case Template General Confirmation NA US</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>E2C NA EMP – Confirmation Receipt 52716</name>
+    <style>none</style>
+    <subject>Confirmation Receipt - {!Case.Subject} - Case #: {!Case.CaseNumber}</subject>
+    <textOnly>Thank you for contacting Monster Customer Service. This is an automated response to inform you that we have received your message. You should receive a response to your inquiry or comment within 1-2 business days.
+
+If you need more immediate assistance please contact us at 1-800-MONSTER (1-800-666-7837).
+
+Our Customer Service Hours are Monday through Friday 8:30AM to 6PM EST.
+
+Your email is important to us and we thank you for using Monster!
+
+Regards,
+Monster Customer Service
+
+Case Thread ID: {!Case.Thread_Id} ---- Original Message ----
+{!Case.Description}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

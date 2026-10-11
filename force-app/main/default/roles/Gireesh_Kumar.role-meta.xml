@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>None</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Gireesh Kumar(Underc Rajender)</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Enterprise_Business_Under_Suraj</parentRole>
+</Role>

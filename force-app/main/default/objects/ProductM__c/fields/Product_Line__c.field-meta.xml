@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Product_Line__c</fullName>
+    <description>product lines will trigger the inventory to be sent</description>
+    <label>Product Line</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>ATS</fullName>
+                <default>false</default>
+                <label>ATS</label>
+            </value>
+            <value>
+                <fullName>AUTOMATED SOLUTIONS</fullName>
+                <default>false</default>
+                <label>AUTOMATED SOLUTIONS</label>
+            </value>
+            <value>
+                <fullName>Banner-Button</fullName>
+                <default>false</default>
+                <label>Banner-Button</label>
+            </value>
+            <value>
+                <fullName>Banner-Button--Inventory</fullName>
+                <default>false</default>
+                <label>Banner-Button--Inventory</label>
+            </value>
+            <value>
+                <fullName>BRANDED PRODUCTS</fullName>
+                <default>false</default>
+                <label>BRANDED PRODUCTS</label>
+            </value>
+            <value>
+                <fullName>CAMPUS</fullName>
+                <default>false</default>
+                <label>CAMPUS</label>
+            </value>
+            <value>
+                <fullName>CSH</fullName>
+                <default>false</default>
+                <label>CSH</label>
+            </value>
+            <value>
+                <fullName>D4C Print</fullName>
+                <default>false</default>
+                <label>D4C Print</label>
+            </value>
+            <value>
+                <fullName>Email Push</fullName>
+                <default>false</default>
+                <label>Email Push</label>
+            </value>
+            <value>
+                <fullName>Job Accessories</fullName>
+                <default>false</default>
+                <label>Job Accessories</label>
+            </value>
+            <value>
+                <fullName>Job Accessories--Inventory</fullName>
+                <default>false</default>
+                <label>Job Accessories--Inventory</label>
+            </value>
+            <value>
+                <fullName>JOB PACK</fullName>
+                <default>false</default>
+                <label>JOB PACK</label>
+            </value>
+            <value>
+                <fullName>JOB PACK--NO INVENTORY</fullName>
+                <default>false</default>
+                <label>JOB PACK--NO INVENTORY</label>
+            </value>
+            <value>
+                <fullName>Monster Media</fullName>
+                <default>false</default>
+                <label>Monster Media</label>
+            </value>
+            <value>
+                <fullName>MTS</fullName>
+                <default>false</default>
+                <label>MTS</label>
+            </value>
+            <value>
+                <fullName>Newsletter</fullName>
+                <default>false</default>
+                <label>Newsletter</label>
+            </value>
+            <value>
+                <fullName>OTHER</fullName>
+                <default>false</default>
+                <label>OTHER</label>
+            </value>
+            <value>
+                <fullName>Other-Services</fullName>
+                <default>false</default>
+                <label>Other-Services</label>
+            </value>
+            <value>
+                <fullName>Pay Per Lead</fullName>
+                <default>false</default>
+                <label>Pay Per Lead</label>
+            </value>
+            <value>
+                <fullName>PROFILE</fullName>
+                <default>false</default>
+                <label>PROFILE</label>
+            </value>
+            <value>
+                <fullName>QUOTE BUNDLE</fullName>
+                <default>false</default>
+                <label>QUOTE BUNDLE</label>
+            </value>
+            <value>
+                <fullName>RESPONSE MANAGEMENT</fullName>
+                <default>false</default>
+                <label>RESPONSE MANAGEMENT</label>
+            </value>
+            <value>
+                <fullName>RESUME</fullName>
+                <default>false</default>
+                <label>RESUME</label>
+            </value>
+            <value>
+                <fullName>Resume Accessories</fullName>
+                <default>false</default>
+                <label>Resume Accessories</label>
+            </value>
+            <value>
+                <fullName>RESUME--SEG</fullName>
+                <default>false</default>
+                <label>RESUME--SEG</label>
+            </value>
+            <value>
+                <fullName>RESUME--SEG ECOMM</fullName>
+                <default>false</default>
+                <label>RESUME--SEG ECOMM</label>
+            </value>
+            <value>
+                <fullName>SERVICES</fullName>
+                <default>false</default>
+                <label>SERVICES</label>
+            </value>
+            <value>
+                <fullName>SINGLE JOBS</fullName>
+                <default>false</default>
+                <label>SINGLE JOBS</label>
+            </value>
+            <value>
+                <fullName>Sourcing Services</fullName>
+                <default>false</default>
+                <label>Sourcing Services</label>
+            </value>
+            <value>
+                <fullName>Sourcing Solutions</fullName>
+                <default>false</default>
+                <label>Sourcing Solutions</label>
+            </value>
+            <value>
+                <fullName>Sponsorship</fullName>
+                <default>false</default>
+                <label>Sponsorship</label>
+            </value>
+            <value>
+                <fullName>Subscriptions</fullName>
+                <default>false</default>
+                <label>Subscriptions</label>
+            </value>
+            <value>
+                <fullName>TRAINING</fullName>
+                <default>false</default>
+                <label>TRAINING</label>
+            </value>
+            <value>
+                <fullName>VCF</fullName>
+                <default>false</default>
+                <label>VCF</label>
+            </value>
+            <value>
+                <fullName>VISIBILITY</fullName>
+                <default>false</default>
+                <label>VISIBILITY</label>
+            </value>
+            <value>
+                <fullName>Shared Revenue</fullName>
+                <default>false</default>
+                <label>Shared Revenue</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

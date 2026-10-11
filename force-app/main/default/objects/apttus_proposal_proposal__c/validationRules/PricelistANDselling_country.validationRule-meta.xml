@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PricelistANDselling_country</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(PriceList__r.Name=&apos;AED&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;United Arab Emirates&apos;)))
+||
+AND(PriceList__r.Name=&apos;HKD&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;Hong Kong&apos;)))
+||
+AND(PriceList__r.Name=&apos;INR&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;India&apos;)))
+||
+AND(PriceList__r.Name=&apos;MYR&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;Malaysia&apos;)))
+||
+
+AND(PriceList__r.Name=&apos;PHP&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;Philippines&apos;)))
+
+||
+
+AND(PriceList__r.Name=&apos;SGD&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;Singapore&apos;)))
+||
+
+AND(PriceList__r.Name=&apos;THB&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;Thailand&apos;)))
+||
+AND(PriceList__r.Name=&apos;USD&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;India&apos;)) ,AND(PriceList__r.Name=&apos;USD&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;United Arab Emirates&apos;))
+,AND(PriceList__r.Name=&apos;USD&apos;,NOT(ISPICKVAL(Selling_Country__c, &apos;Saudi Arabia&apos;))
+
+  ) ))</errorConditionFormula>
+    <errorDisplayField>Selling_Country__c</errorDisplayField>
+    <errorMessage>Please Select your Selling Country As per your Price List</errorMessage>
+</ValidationRule>

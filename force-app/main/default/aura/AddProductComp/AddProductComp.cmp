@@ -1,0 +1,754 @@
+<!--
+Last Modified By: Pranil Ganvir
+Last Modified Date : 07-07-23
+Modified the table columns as per sequence -p name,sku type,p disc,p country,p geo scop,p industry,tenn,bin,price 
+-->
+<!--Description: Add Product Component and Add Accessories Component-->
+<aura:component controller="AddProductcomponent" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global">
+    <aura:attribute name="productList" type="Product__c[]"/>
+    <aura:attribute name="selectedProductList" type="Product__c[]"/>
+    <aura:attribute name="oppInstance" type="Opportunity__c"/>
+    <aura:attribute name="sel" type="boolean" />
+    <aura:attribute name="enddate11" type="date" />
+    <aura:attribute name="todays" type="date" />
+    <aura:attribute name="previous" type="date" />
+    <aura:attribute name="zero" type="integer" default ="0"/>
+    <aura:attribute name="sel1" type="boolean" />
+    <aura:attribute name="nex" type="boolean" default="false"/>
+    <aura:attribute name="nex1" type="boolean" default="false"/>
+    <aura:attribute name="nex2" type="boolean" default="false"/>
+    <aura:attribute name="oppliWrapList" type="Object"/>
+    <aura:attribute name="oppliWrapList1" type="Object"/>
+    <aura:attribute name="oppliWrapper" type="Object"/>
+    <aura:attribute name="oppliWrapper1" type="Object"/>
+    
+    <aura:attribute name="allData" type="Object"/>
+    <aura:attribute name="allDatas" type="Object"/>
+    <aura:attribute name="proceedItem" type="Object"/>
+    <aura:attribute name="usrObj" type="SObject"/>
+    <aura:attribute name="proceedAcc" type="Object"/>
+    <aura:attribute name="showFirstpage" type="boolean" />
+    <aura:attribute name="category" type="string" />
+    <aura:attribute name="channel" type="string" />
+    <aura:attribute name="ptype" type="string" />
+    <aura:attribute name="index" type="string"  />
+    <aura:attribute name="oppTenure" type="string"  />
+    
+    <aura:attribute name="quoteupsell" type="Object"/>
+    <aura:attribute name="oppupsell" type="Object"/>
+    
+    <aura:attribute name="type" type="string" />
+    <aura:attribute name="ACCcategory" type="string" />
+    <aura:attribute name="ACCtype" type="string" />
+    <aura:attribute name="accesstype" type="string" />
+    <aura:attribute name="principal" type="string" />
+    <aura:attribute name="ACCprincipal" type="string" />
+    <aura:attribute name="objCategory" type="List"  />
+    <aura:attribute name="ptypes" type="List"  />
+    
+    <aura:attribute name="objchannel" type="List"  />
+    <aura:attribute name="objskutype" type="List"  />
+    <aura:attribute name="objptype" type="List"  />
+    <aura:attribute name="skutype" type="string" />
+    <aura:attribute name="objPrincipal" type="List"  />
+    <aura:attribute name="objType" type="List"  />
+    <aura:attribute name="lstSize" type="Integer"  />
+    <aura:attribute name="text1" type="string" default=""/>
+    <aura:attribute name="text2" type="string" default=""/>
+    <aura:attribute name="text8" type="string" default=""/>
+    <lightning:notificationsLibrary aura:id="notifLib"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}"/>
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}"/>
+    <aura:attribute name="Spinner" type="boolean" default="false"/>
+    <aura:attribute name="numb" type="Integer" Default="1"/>
+    
+    <aura:attribute name="accountStatus" type="String" />
+    
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 120rem;
+        }
+        .modal-body{
+        height : 100px !important;
+        max-height: 100px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        
+        }
+    </aura:html>
+    
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    
+    <aura:if isTrue="{!v.accountStatus == 'Lead' || v.accountStatus == 'Unpromoted'}">
+        <h1 class="slds-section__title slds-theme_shade Revamp-Section" 
+            style="text-align: center; background-color: #2E86C1; color: white; height: 50px; padding: 20px; display: flex; align-items: center; justify-content: center;font-size: 24px;">
+            Product Can't Be Added For Account status Lead and Unpromoted !!!
+            <br/>
+        </h1>
+        
+        <div class="slds-modal__footer" style="display: flex; justify-content: center;">
+            <lightning:button aura:id="CancelButton" label="Cancel" onclick="{!c.HandleCancelPage}"></lightning:button>
+        </div>
+        
+        <aura:set attribute="else">            
+            <aura:if isTrue="{!v.showFirstpage==true}">
+                <span style="margin-left:5px;margin-right:5px;width:80%;">
+                    <div style="margin-left:200px;width:80%;text-align:center;"> 
+                        <div style="color:#2E86C1;display:flex;width:100%" class="row">
+                            <aura:if isTrue="{!v.oppInstance.OPLI_Count__c!=0}">
+                                <div class="column" style="text-align:center;width:20%;margin-left:10px;" onchange="{!c.changevalue5}">
+                                    <lightning:select value="{!v.ptype}" label="Product Type" required="true">
+                                        <option value="None" label="None" ></option>
+                                        <aura:iteration items="{!v.objptype}" var="item">
+                                            <option value="{!item}" label="{!item}" ></option>
+                                        </aura:iteration>
+                                    </lightning:select>
+                                </div>      
+                            </aura:if>
+                            <div class="column" style="text-align:center;width:20%;margin-left:10px;" onchange="{!c.changevalue}">
+                                <lightning:select value="{!v.category}" label="Product Name" required="true">
+                                    <option value="None" label="None" ></option>
+                                    <aura:iteration items="{!v.objCategory}" var="item">
+                                        <option value="{!item}" label="{!item}" ></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            <div class="column" style="text-align:center;width:20%;margin-left:10px;" onchange="{!c.changevalue2}">
+                                <lightning:select value="{!v.skutype}" label="Sku Type" required="true">
+                                    <option value="None" label="None" ></option>
+                                    <aura:iteration items="{!v.objskutype}" var="item">
+                                        <option value="{!item}" label="{!item}" ></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            
+                            <div class="column" style="float:left;width:20%;margin-left:10px;">
+                                <lightning:select value="{!v.type}" label="Product Country" required="true">
+                                    <option value="None" label="None" ></option>
+                                    <aura:iteration items="{!v.objType}" var="item">
+                                        <option value="{!item}" label="{!item}" ></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            <div class="column" style="float:left;width:20%;margin-left:10px;">
+                                <lightning:select value="{!v.principal}" label="Product Tenure" >
+                                    <option value="None" label="None" ></option>
+                                    <aura:iteration items="{!v.objPrincipal}" var="item">
+                                        <option value="{!item}" label="{!item}" ></option>
+                                    </aura:iteration>
+                                </lightning:select>
+                            </div>
+                            
+                            <div style="float:left;width:25%;margin-left:40px;margin-top:20px;">
+                                <lightning:button aura:id="button" class="button" label="" onclick="{!c.doFilter}" iconName="utility:search" variant="brand"/>  
+                            </div>
+                            
+                        </div>
+                    </div>
+                </span>
+                
+                <div class="slds-table--header-fixed_container">
+                    <div class="slds-scrollable" style="height:550Px;width:100%">
+                        
+                        <table width="100%" class="slds-table slds-table_cell-buffer slds-table_header-hidden" style="table-layout:fixed;padding:20px;font-size:12px;width:100%;color:#9999ff;" id="example">
+                            <thead>    
+                                <tr class="slds-line-height_reset">
+                                    <th class="" scope="col" style="width:3%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                                        <div class="slds-truncate" title="checkbox">
+                                            <ui:inputCheckbox text="" value="{!v.sel}" change="{!c.selectAllCheckbox}"/>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col" style="width: 9%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd">
+                                        <div class="slds-truncate" title="Product Name">
+                                            <b>Product Name</b>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;">
+                                        <div class="slds-truncate" title="Product Category">
+                                            <b>SKU Type</b>
+                                        </div>
+                                    </th> 
+                                    <th class="" scope="col" style="width:15%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;overflow-wrap: break-word;">
+                                        <div class="slds-truncate" title="Product Description">
+                                            <b>Product Description</b>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;">
+                                        <div class="slds-truncate" title="Product Category">
+                                            <b>Product <br/> Country</b>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;">
+                                        <div class="slds-truncate" title="Product Category">
+                                            <b>Product Geo<br/> Scope</b>
+                                        </div>
+                                    </th>
+                                    <aura:if isTrue="{!v.oppInstance.Opportunity_Type__c!='Upsell'}">
+                                        <aura:if isTrue="{!v.ptype=='Upsell'}">
+                                            <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;text-align:center;">
+                                                <div class="slds-truncate" title="Product Category">
+                                                    <b>Opp Line Item</b>
+                                                </div>
+                                            </th>
+                                        </aura:if>
+                                    </aura:if>
+                                    <aura:if isTrue="{!v.oppInstance.Opportunity_Type__c=='Upsell'}">
+                                        <aura:if isTrue="{!v.ptype=='Upsell'}">
+                                            <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;text-align:center;">
+                                                <div class="slds-truncate" title="Product Category">
+                                                    <b>Quote Line Item</b>
+                                                </div>
+                                            </th>
+                                        </aura:if>
+                                    </aura:if>
+                                    
+                                    <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center">
+                                        <div class="slds-truncate" title="Product Industry">
+                                            <b>Product<br/> Industry</b>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center">
+                                        <div class="slds-truncate" title="Tenure">
+                                            <b>Tenure<br/> (Months)</b>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;">
+                                        <div class="slds-truncate" title="UOM">
+                                            <b>BIN</b>
+                                        </div>
+                                    </th>
+                                    <th class="" scope="col" style="width: 6%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;">
+                                        <div class="slds-truncate" title="UOM">
+                                            <b>Price</b>
+                                        </div>
+                                    </th>
+                                    
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <aura:iteration items="{!v.oppliWrapList}" var="cusProd" indexVar="index">
+                                    <tr width="100%">
+                                        <td class="dataCell " style="width: 5rem;border:0.5px solid #dddddd;width:6%;">
+                                            <ui:inputCheckbox text="{!cusProd.opli.Product__c}" value="{!cusProd.ckb}" />
+                                        </td>
+                                        <td class="dataCell " style="width: 15rem;border:0.5px solid #dddddd;text-align:left;overflow-wrap: break-word;">
+                                            {!cusProd.prodName}
+                                        </td>
+                                        <td class="dataCell " style="width: 8rem;border:0.5px solid #dddddd;text-align:center;">
+                                            {!cusProd.skutype}
+                                        </td>
+                                        <td class="dataCell " style="width: 8rem;border:0.5px solid #dddddd;overflow-wrap: break-word;text-align:left;">
+                                            {!cusProd.prodesc}
+                                        </td>
+                                        <td class="dataCell " style="width: 8rem;border:0.5px solid #dddddd;text-align:center;">
+                                            {!cusProd.proocountry}
+                                        </td>
+                                        <td class="dataCell " style="width: 8rem;border:0.5px solid #dddddd;text-align:center;">
+                                            <aura:if isTrue="{!v.ptype != 'Upsell'}">
+                                                {!cusProd.progeo}
+                                                <aura:set attribute="else">
+                                                    Calculated<br/>Upon Save
+                                                </aura:set>
+                                            </aura:if>
+                                        </td>
+                                        <aura:if isTrue="{!v.oppInstance.Opportunity_Type__c!='Upsell'}">
+                                            <aura:if isTrue="{!v.ptype=='Upsell'}">
+                                                <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                                                    <lightning:select value="{!cusProd.opli.OPLI__c}"  label="{!index}" variant="label-hidden" onchange="{!c.calloplii1}">
+                                                        <option value="None" label="None" ></option>
+                                                        <aura:iteration items="{!v.oppliWrapper1}" var="item" >
+                                                            <option value="{!item.recordid}" label="{!item.name}" ></option>
+                                                        </aura:iteration>
+                                                    </lightning:select> 
+                                                </td>
+                                            </aura:if>
+                                        </aura:if>
+                                        <aura:if isTrue="{!v.oppInstance.Opportunity_Type__c=='Upsell'}">
+                                            <aura:if isTrue="{!v.ptype=='Upsell'}">
+                                                <td style="border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                                                    <lightning:select value="{!cusProd.opli.OpliId__c}" label="{!index}" variant="label-hidden" onchange="{!c.callopli}">
+                                                        <option value="None" label="None" ></option>
+                                                        <aura:iteration items="{!v.oppliWrapper}" var="item" >
+                                                            <option value="{!item.recordid}" label="{!item.name}" ></option>
+                                                        </aura:iteration>
+                                                    </lightning:select>
+                                                </td> 
+                                            </aura:if>
+                                        </aura:if>                                
+                                        
+                                        <td class="dataCell " style="width: 8rem;border:0.5px solid #dddddd;text-align:center;">
+                                            <aura:if isTrue="{!v.ptype=='Upsell'}">
+                                                Calculated <br/>Upon Save..
+                                                <aura:set attribute="else">
+                                                    {!cusProd.dbindustry}
+                                                </aura:set>
+                                            </aura:if>
+                                        </td>
+                                        
+                                        <td class="dataCell " style="width: 8rem;border:0.5px solid #dddddd;text-align:center;">
+                                            <aura:if isTrue="{!v.ptype != 'Upsell'}">
+                                                {!cusProd.prodtenure}
+                                                <aura:set attribute="else">
+                                                    Calculated <br/>Upon Save..
+                                                </aura:set>
+                                            </aura:if>
+                                        </td>
+                                        
+                                        <td class="dataCell " style="width: 8rem;border:0.5px solid #dddddd;text-align:center;">
+                                            {!cusProd.bin}
+                                        </td>
+                                        
+                                        <td style="border:0.5px solid #dddddd;text-align:center;padding-top:10px;padding-bottom:10px;">
+                                            <aura:if isTrue="{!cusProd.opli.Unit_Price__c!=null}">
+                                                {!cusProd.opli.Unit_Price__c}
+                                                <aura:set attribute="else">
+                                                    Calculated<br/>Upon Save
+                                                </aura:set>
+                                            </aura:if>
+                                        </td>                                
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                            
+                        </table>
+                    </div>
+                </div>
+                <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+                    <lightning:button aura:id="button" class="button" label="Next" onclick="{!c.showNext}" variant="brand"/>
+                </div> 
+                
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!v.nex==false}">  
+                        <h1 style="text-align:center;background-color:#8467D7;color:white;font-size:20px;">Selected Products</h1>
+                        <div class="slds-table--header-fixed_container" >
+                            <div class="slds-scrollable_x" style="min-height:100Px;width:120%;">
+                                <lightning:recordEditForm objectApiName="Opp_Line_Item__c">
+                                    <table width="100%" style="table-layout:fixed;padding:20px;font-size:12px;width:120%;"  class="slds-table slds-table_bordered slds-table_cell-buffer" >
+                                        
+                                        <thead>
+                                            <tr>
+                                                <th style="width:18%;border-bottom:1px solid #F5F5F5;text-align:left;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Product Name</b>
+                                                </th>
+                                                
+                                                <th style="width:16%;border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;text-align:center;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Start Date</b>
+                                                </th>
+                                                <th style="width:16%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>End Date</b>
+                                                </th>
+                                                <th style="width:12%;border-bottom:1px solid #F5F5F5;padding-top:10px;text-align:center;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Comments</b>
+                                                </th>
+                                                
+                                                <aura:if isTrue="{!v.category == 'TPS' || v.category == 'Sprynt'}">
+  
+                                                    <th class="" scope="col" style="width: 8%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;text-align:center;">
+                                                        <div class="slds-truncate" title="Product Category">
+                                                            <b>TPO %</b>
+                                                            
+                                                        </div>
+                                                    </th>
+                                                </aura:if>
+                                                
+                                                <aura:if isTrue="{!v.category == 'TPS' || v.category == 'Sprynt'}">
+
+                                                    <th class="" scope="col" style="width: 11%;background-color:#8467D7;color:white;padding-top:12px;padding-bottom:12px;border:0.5px solid #dddddd;text-align:center;text-align:center;">
+                                                        <div class="slds-truncate" title="Product Category">
+                                                            <b>CTC</b>
+                                                        </div>
+                                                    </th>
+                                                </aura:if>
+                                                <th style="width:13%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>SKU Code</b>
+                                                </th>
+                                                <th style="width:7%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>% of <br/>Master<br/> Login</b>
+                                                </th>
+                                                
+                                                <th style="width:12%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Unit Price</b>
+                                                </th>
+                                                <th style="width:9%;border-bottom:1px solid #F5F5F5;padding-top:10px;text-align:center;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Quantity</b>
+                                                </th>
+                                                <th style="width:9%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>BIN</b>
+                                                </th>
+                                                <!--    <th style="width:10%;border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                    <b>Actual<br/> Discount <br/>cap%</b>
+                </th>  
+                     <th style="width:10%;border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                         <b>Actual <br/>Discount<br/> cap<br/> Amount</b>
+                </th>  -->
+                                                <th style="width:10%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Adjustment<br/> Type</b>
+                                                </th>
+                                                
+                                                <th style="width:13%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Adjustment<br/> Value</b>
+                                                </th>
+                                                
+                                                <th style="width:9%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Discount Cap <br/>Amount</b>
+                                                </th>
+                                                
+                                                <th style="width:9%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Base<br/>Total</b>
+                                                </th>
+                                                <th style="width:9%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Discount<br/>Amount</b>
+                                                </th>
+                                                <th style="width:13%;border-bottom:1px solid #F5F5F5;text-align:center;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#8467D7;color:white;">
+                                                    <b>Gross<br/> Total</b>
+                                                </th>
+                                                
+                                                
+                                            </tr>
+                                            
+                                            <aura:iteration items="{!v.proceedItem}" var="cusProd" indexVar="index">
+                                                <tr>
+                                                    <td style="border:0.5px solid #dddddd;padding-top:10px;text-align:left;padding-bottom:10px;margin-left:0px;">
+                                                        {!cusProd.prodName}
+                                                    </td>
+                                                    <td  style="width:20%;text-align:center;border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                                                        <lightning:inputField fieldName="Start_Date__c" variant="label-hidden" class="{!index}" value="{!cusProd.opli.Start_Date__c}"  style="width:100%" onchange="{!c.stdate}"  />
+                                                    </td>
+                                                    <td  style="width:20%;text-align:center;border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                                                        <!-- <lightning:input type="date" variant="label-hidden" name="{!index}" value="{!cusProd.opli.End_Date__c}"  style="width:100%" onchange="{!c.endate}"/> -->
+                                                        <!--   <lightning:input type="date" variant="label-hidden" name="{!index}" value="{!cusProd.opli.End_Date__c}"  style="width:100%"  disabled="{!v.ptype != 'Upsell' || cusProd.Product_Name != 'Custom Product'}" onchange="{!c.endatevalidate}"/>-->
+                                                        <aura:if isTrue="{!and(cusProd.Product_Name != 'Custom Product', cusProd.Product_Name != 'Recontract')}">
+                                                            <lightning:input type="date" variant="label-hidden" name="{!index}" value="{!cusProd.opli.End_Date__c}"  style="width:100%"  disabled="{!v.ptype!='Upsell'}" onchange="{!c.endatevalidate}"/>
+                                                        </aura:if>
+                                                        <aura:if isTrue="{!or(cusProd.Product_Name == 'Custom Product', cusProd.Product_Name == 'Recontract')}">
+                                                            <lightning:input type="date" variant="label-hidden" name="{!index}" value="{!cusProd.opli.End_Date__c}"  style="width:100%"   onchange="{!c.endatevalidate}"/>
+                                                        </aura:if>
+                                                        
+                                                    </td> 
+                                                    <td  style="width:20%;text-align:center;border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                                                        <lightning:inputField fieldName="Comment__c" variant="label-hidden" value="{!cusProd.opli.Comment__c}"  style="width:100%"  />
+                                                    </td>
+                                                    
+                                                    <aura:if isTrue="{!v.category == 'TPS' || v.category == 'Sprynt'}">
+                                                        <td  style="width:20%;text-align:center;border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                                                            <lightning:input type="number" value="{!cusProd.tpo}" step=".01" style="width:90%;text-align:left;"/> 
+                                                        </td>
+                                                    </aura:if>
+                                                    
+                                                    <aura:if isTrue="{!v.category == 'TPS' || v.category == 'Sprynt'}">
+                                                        <td  style="width:20%;text-align:center;border:0.5px solid #dddddd;padding-top:10px;padding-bottom:10px;">
+                                                            <lightning:input type="number" value="{!cusProd.opli.CTC__c}" label="{!index}" variant="label-hidden" style="width:90%;text-align:left;" disabled="false" onchange="{!c.ctcvalidate}"/>
+                                                        </td>
+                                                    </aura:if>
+                                                    
+                                                    <td style="border:0.5px solid #dddddd;padding-top:10px;text-align:center;padding-bottom:10px;margin-left:0px;">
+                                                        {!cusProd.sku}
+                                                    </td>
+                                                    <td style="border:0.5px solid #dddddd;padding-top:10px;text-align:center;padding-bottom:10px;margin-left:0px;">
+                                                        {!cusProd.Masterlogin}
+                                                    </td>
+                                                    
+                                                    <aura:if isTrue="{!cusProd.opli.Unit_Price__c!=null}">
+                                                        <td style="border:0.5px solid #dddddd;text-align:center;padding-top:10px;padding-bottom:10px;">
+                                                            <lightning:input type="number" value="{!cusProd.opli.Unit_Price__c}" style="width:90%;text-align:left;" disabled="{!cusProd.opli.Sku_Type1__c != 'Custom'}" />
+                                                        </td>
+                                                    </aura:if>
+                                                    
+                                                    <aura:if isTrue="{!cusProd.opli.Unit_Price__c == null}">
+                                                        <td style="border:0.5px solid #dddddd;text-align:center;padding-top:10px;padding-bottom:10px;">
+                                                            Calculated<br/>Upon Save<br/>Based on<br/>% of Master<br/>Login                     
+                                                        </td>
+                                                    </aura:if>
+                                                    
+                                                    <td style="border:0.5px solid #dddddd; padding: 10px;">
+                                                        <lightning:input type="number" aura:id="fieldToValidate" messageWhenValueMissing="Quantity is Mandatory"  value="{!cusProd.opli.Quantity_Unit__c}" required="true" Default="{!v.numb}" onchange="{!c.validateqty}" disabled=""/>
+                                                    </td>
+                                                    <td style="border:0.5px solid #dddddd;padding-top:10px;text-align:center;padding-bottom:10px;">
+                                                        {!cusProd.bin}
+                                                    </td>
+                                                    <td style="border:0.5px solid #dddddd;padding-top:10px;text-align:center;padding-bottom:10px;width:20%">
+                                                        <lightning:select value="{!cusProd.opli.Discount_Type__c}" onchange="{!c.checkdiscount}" aura:id="DiscountType">
+                                                            <option value="%" label="%" />
+                                                            <option value="Amount" label="Amount" />
+                                                            <option value="Price Override" label="Price Override" />
+                                                            <option value="Base Price Override" label="Base Price Override" />
+                                                        </lightning:select>
+                                                    </td>
+                                                    <td  style="width:20%;border:0.5px solid #dddddd;padding-top:10px;text-align:center;padding-bottom:10px;">
+                                                        <lightning:input type="number" value="{!cusProd.opli.Discount_Value__c}" style="width:100%;" onchange="{!c.checkdiscount}" step=".01" aura:id="DiscountValue"/>
+                                                    </td>
+                                                    <td style="border:0.5px solid #dddddd;text-align:center;padding-top:10px;padding-bottom:10px;">
+                                                        <lightning:formattedNumber value="{!cusProd.opli.Quantity_Unit__c * cusProd.disamt}" maximumFractionDigits="2"/>
+                                                        <!-- {!cusProd.opli.Base_Total__c} -->
+                                                    </td>
+                                                    <td style="border:0.5px solid #dddddd;text-align:center;padding-top:10px;padding-bottom:10px;">
+                                                        <lightning:formattedNumber value="{!cusProd.opli.Base_Total__c}" maximumFractionDigits="2"/>
+                                                        <!-- {!cusProd.opli.Base_Total__c} -->
+                                                    </td>
+                                                    <td style="border:0.5px solid #dddddd;padding-top:10px;text-align:center;padding-bottom:10px;">
+                                                        <lightning:formattedNumber value="{!cusProd.opli.Discount_Amount_1__c}" maximumFractionDigits="2"/>
+                                                        <!--  {!cusProd.opli.Discount_Amount_1__c} -->
+                                                    </td>
+                                                    
+                                                    <td style="border:0.5px solid #dddddd;padding-top:10px;text-align:center;padding-bottom:10px;">
+                                                        <lightning:formattedNumber  value="{!cusProd.opli.Gross_Total__c}" />
+                                                        <!--{!cusProd.opli.Gross_Total__c} -->
+                                                    </td>                                            
+                                                    
+                                                    
+                                                    
+                                                </tr>
+                                            </aura:iteration>
+                                            
+                                        </thead>
+                                        
+                                    </table>
+                                </lightning:recordEditForm>
+                            </div>
+                        </div>
+                        <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+                            <lightning:button aura:id="button" class="button" label="Save" onclick="{!c.saveOn}" variant="brand"/>
+                            <!-- <lightning:button aura:id="button" class="button" label="Save and Add Accessories" onclick="{!c.access}" variant="brand"/>-->
+                        </div>
+                        <aura:set attribute="else"><span></span>
+                            <aura:if isTrue="{!v.nex1==false}">
+                                <div style="color:#2E86C1;display:flex;width:100%" class="row">
+                                    <div class="column" style="float:left;width:20%;margin-left:10px;">
+                                        <lightning:input
+                                                         aura:id="enter-search"
+                                                         name="enter-search"
+                                                         label="Accessories Name"
+                                                         type="search"
+                                                         value="{!v.text2}"
+                                                         placeholder="Search Accessories"
+                                                         />
+                                    </div>
+                                    <div class="column" style="float:left;width:20%;margin-left:10px;">
+                                        <lightning:select value="{!v.accesstype}" label="Accessories Type" >
+                                            <option value="None" label="None" ></option>
+                                            
+                                            
+                                            <option value="Selected Product Accessories" label="Selected Product Accessories" ></option>
+                                            
+                                        </lightning:select>
+                                    </div>
+                                    <div class="column" style="float:left;width:20%;margin-left:10px;">
+                                        <lightning:select value="{!v.ACCprincipal}" label="Principal" >
+                                            <option value="None" label="None" ></option>
+                                            <aura:iteration items="{!v.objPrincipal}" var="item">
+                                                <option value="{!item}" label="{!item}" ></option>
+                                                
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+                                    <div class="column" style="float:left;width:20%;margin-left:10px;">
+                                        <lightning:select value="{!v.ACCtype}" label="Type" >
+                                            <option value="None" label="None" ></option>
+                                            <aura:iteration items="{!v.objType}" var="item">
+                                                <option value="{!item}" label="{!item}" ></option>
+                                                
+                                            </aura:iteration>
+                                        </lightning:select>
+                                        
+                                    </div>
+                                    <div class="column" style="text-align:center;width:25%;margin-left:10px;">
+                                        <lightning:select value="{!v.ACCcategory}" label="Category">
+                                            <option value="None" label="None" ></option>
+                                            
+                                            <aura:iteration items="{!v.objCategory}" var="item">
+                                                <option value="{!item}" label="{!item}" ></option>
+                                                
+                                            </aura:iteration>
+                                        </lightning:select>
+                                    </div>
+                                    <div style="float:left;width:20%;margin-left:40px;margin-top:24px;">
+                                        <lightning:button aura:id="button" class="button" label="" onclick="{!c.onChangeColor}" iconName="utility:search" variant="brand"/>
+                                    </div>
+                                    
+                                </div>
+                                <div class="slds-table--header-fixed_container">
+                                    <div class="slds-scrollable" style="height:550Px;width:100%">
+                                        
+                                        <table class="slds-table slds-table_cell-buffer slds-table_header-hidden" style="table-layout:fixed;padding:20px;font-size:12px;width:100%;color:#9999ff;" id="example" >
+                                            <thead>    
+                                                <tr class="slds-line-height_reset">
+                                                    <th class="" scope="col" style="width:2%;background-color:#2E86C1;color:white;padding-top:12px;padding-bottom:12px;">
+                                                        <div class="slds-truncate" title="checkbox">   
+                                                            <ui:inputCheckbox text="" value="{!v.sel1}" change="{!c.selectAllCheckbox1}"/>
+                                                        </div>
+                                                    </th>
+                                                    <th class="" scope="col" style="width:6%;background-color:#2E86C1;color:white;padding-top:12px;padding-bottom:12px;">
+                                                        <div class="slds-truncate" title="Accessories Name">
+                                                            <b>Top Up Name</b>
+                                                        </div>
+                                                    </th>
+                                                    <th class="" scope="col" style="width:6%;background-color:#2E86C1;color:white;padding-top:12px;padding-bottom:12px;">
+                                                        <div class="slds-truncate" title="Product Name">
+                                                            <b>Product Name</b>
+                                                        </div>
+                                                    </th>
+                                                    <th class="" scope="col" style="width:6%;background-color:#2E86C1;color:white;padding-top:12px;padding-bottom:12px;">
+                                                        <div class="slds-truncate" title="Category">
+                                                            <b>Category</b>
+                                                        </div>
+                                                    </th>
+                                                    <th class="" scope="col" style="width:6%;background-color:#2E86C1;color:white;padding-top:12px;padding-bottom:12px;">
+                                                        <div class="slds-truncate" title="Principal">
+                                                            <b>Principal</b>
+                                                        </div>
+                                                    </th>
+                                                    <th class="" scope="col" style="width:6%;background-color:#2E86C1;color:white;padding-top:12px;padding-bottom:12px;">
+                                                        <div class="slds-truncate" title="Type">
+                                                            <b>Type</b>
+                                                        </div>
+                                                    </th>
+                                                    <th class="" scope="col" style="width:6%;background-color:#2E86C1;color:white;padding-top:12px;padding-bottom:12px;">
+                                                        <div class="slds-truncate" title="Unit Price">
+                                                            <b>Unit Price</b>
+                                                        </div>
+                                                    </th>  
+                                                    
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <aura:iteration items="{!v.oppliWrapList1}" var="cusProd" indexVar="index">
+                                                    <tr width="100%">
+                                                        <td class="dataCell" style="width: 8rem;">
+                                                            <ui:inputCheckbox text="{!cusProd.opli.Product__c}" value="{!cusProd.ckb}" />
+                                                        </td>
+                                                        <td class="dataCell" style="width: 8rem;">
+                                                            {!cusProd.prodName}
+                                                        </td>
+                                                        <td class="dataCell" style="width: 8rem;">
+                                                            {!cusProd.prodDesc}
+                                                        </td>
+                                                        <td class="dataCell" style="width: 8rem;">
+                                                            {!cusProd.category}
+                                                        </td>
+                                                        <td class="dataCell " style="width: 8rem;">
+                                                            {!cusProd.principal}
+                                                        </td>
+                                                        <td class="dataCell " style="width: 8rem;">
+                                                            {!cusProd.typeProd}
+                                                        </td>
+                                                        <td class="dataCell " style="width: 8rem;">
+                                                            {!cusProd.opli.Rate__c}
+                                                        </td>    
+                                                        
+                                                    </tr>
+                                                </aura:iteration>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+                                    <lightning:button aura:id="button" class="button" label="Add More" onclick="{!c.addmore1}" variant="brand"/>
+                                    <lightning:button aura:id="button" class="button" label="Next" onclick="{!c.NextOn}" variant="brand"/>
+                                </div>
+                                <aura:set attribute="else"><span></span>
+                                    <h1 style="text-align:center;background-color:#2E86C1;color:white;font-size:20px;">Selected Accessories</h1>
+                                    <div class="slds-table--header-fixed_container">
+                                        <div class="slds-scrollable" style="height:550Px;width:100%">
+                                            <table width="100%" style="table-layout:fixed;padding:20px;font-size:12px;width:100%;"  class="slds-table slds-table_bordered slds-table_cell-buffer" >
+                                                
+                                                <thead>
+                                                    <tr>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>Accessories Name</b>
+                                                        </th>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>Product Name</b>
+                                                        </th>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>Category</b>
+                                                        </th>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>Unit Price</b>
+                                                        </th>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>Quantity</b>
+                                                        </th>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>Discount Type</b>
+                                                        </th>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>Discount Value</b>
+                                                        </th>
+                                                        <th style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;margin-left:10px;background-color:#2E86C1;color:white;">
+                                                            <b>GST %</b>
+                                                        </th>
+                                                    </tr>
+                                                    
+                                                    <aura:iteration items="{!v.proceedAcc}" var="cusProd" indexVar="index">
+                                                        <tr>
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                {!cusProd.prodName}
+                                                            </td>
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                {!cusProd.prodDesc}
+                                                            </td>
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                {!cusProd.category}
+                                                            </td>
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                {!cusProd.opli.Rate__c}
+                                                            </td>
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                <lightning:input type="number" value="{!cusProd.opli.Qty__c}" style="width:40%;" Default ="1"/>
+                                                            </td> 
+                                                            
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                <lightning:select value="{!cusProd.opli.Discount_Type__c}" label="" > 
+                                                                    <option value="%" label="%" ></option>
+                                                                    <option value="Amount" label="Amount" ></option>
+                                                                </lightning:select>
+                                                            </td>
+
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                <lightning:input type="number" value="{!cusProd.opli.Discount_Value__c}" style="width:40%;" />
+                                                            </td>
+                                                            <td style="border-bottom:1px solid #F5F5F5;padding-top:10px;padding-bottom:10px;">
+                                                                {!cusProd.gst}
+                                                            </td>
+                                                        </tr>
+                                                    </aura:iteration>
+                                                </thead>   
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+                                        <lightning:button aura:id="button" class="button" label="Save" onclick="{!c.SAVEWITHACC}" variant="brand"/>
+                                    </div>                                    
+                                </aura:set>
+                            </aura:if>
+                        </aura:set>
+                    </aura:if>
+                </aura:set>
+            </aura:if>
+        </aura:set>
+    </aura:if>
+</aura:component>

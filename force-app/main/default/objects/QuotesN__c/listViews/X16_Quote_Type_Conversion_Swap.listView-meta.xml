@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X16_Quote_Type_Conversion_Swap</fullName>
+    <columns>NAME</columns>
+    <columns>Active__c</columns>
+    <columns>Account__c</columns>
+    <columns>Opportunities__c</columns>
+    <columns>Price_Master__c</columns>
+    <columns>Quote_Type__c</columns>
+    <columns>Quote_Value_Converted__c</columns>
+    <columns>Base_Total1__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Approval_Status_Overall__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Quote_Type__c</field>
+        <operation>equals</operation>
+        <value>Conversion/Swap</value>
+    </filters>
+    <label>16. Quote Type - Conversion/Swap</label>
+</ListView>

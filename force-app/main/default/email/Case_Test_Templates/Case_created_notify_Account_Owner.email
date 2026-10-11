@@ -1,0 +1,23 @@
+FYI, 
+
+Case number {!Case.CaseNumber} was created for {!Case.Account} . 
+
+Date Opened: {!Case.CreatedDate} 
+Case Owner: {!Case.OwnerFullName} 
+Severity: {!Case.Priority} 
+Issue: {!Case.Subject}
+Account: {!Case.Account} 
+Customer #: 
+Customer First Name: 
+Customer Last Name: 
+Phone: 
+Email:  
+Comments / Reason for notification: {!Case.Description} 
+
+
+Regards, 
+
+Customer Support 
+Global Customer Services 
+
+Note: Please do not reply. This message was generated automatically

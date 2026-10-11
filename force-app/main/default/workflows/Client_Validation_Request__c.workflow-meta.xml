@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Final_Approved</fullName>
+        <ccEmails>kyc@monsterindia.com</ccEmails>
+        <description>Final Approved</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <recipients>
+            <recipient>geetanjali.upadhyay@foundit.ai</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Compliance_Letters_Compliance/Template_For_client</template>
+    </alerts>
+    <alerts>
+        <fullName>Final_Rejected</fullName>
+        <description>Final Rejected</description>
+        <protected>false</protected>
+        <recipients>
+            <type>owner</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>Compliance_Letters_Compliance/Rejected_Email_for_Client</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Change_Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Approved</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Change Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Record_Type</fullName>
+        <field>RecordTypeId</field>
+        <lookupValue>Default</lookupValue>
+        <lookupValueType>RecordType</lookupValueType>
+        <name>Record Type</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Requesteddate</fullName>
+        <field>Request_Date__c</field>
+        <formula>NOW()</formula>
+        <name>Requesteddate</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Validatedbymanager</fullName>
+        <field>CVR_Validated_by_Manager__c</field>
+        <literalValue>1</literalValue>
+        <name>Validatedbymanager</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>reference_null</fullName>
+        <field>Reference__c</field>
+        <name>reference null</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+</Workflow>

@@ -1,0 +1,24 @@
+Dear {!Tracker__c.OwnerFullName}, 
+
+Greetings from Cloud Experts Service team. 
+
+Your Tracker {!Tracker__c.Name}  needs more input from you.
+
+Please find the details required below:
+
+Department: {!Tracker__c.Department__c} 
+Related Object: {!Tracker__c.Related_Object__c} 
+Resolution : {!Tracker__c.Resolution__c} 
+Time Frame: {!Tracker__c.Time_Frame__c} 
+Developer Name: 
+Developer Mobile: {!Tracker__c.Developer_Mobile__c} 
+Remarks: {!Tracker__c.Remarks__c}
+
+
+For Further Details you can reach us at {!Tracker__c.Developer_Mobile__c} (  {!Tracker__c.Developer_Name__c})
+
+Thank you for your patience.
+
+Best Regards, 
+Cloud Experts Team
+Email:crm@cloudexpertsindia.com

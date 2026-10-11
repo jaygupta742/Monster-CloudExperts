@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Monster_Read_Only_RT</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>Contact_Table</compactLayoutAssignment>
+    <label>Monster Read Only RT</label>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>3rd Party</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Abandoned Cart</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Advertising %28Media%2C Newspaper%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CS Buying Signal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campus Hiring</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Click To Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitor</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dun and Bradstreet</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ECOMM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EDM</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ETC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>EU Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Event %28Trade Show%2C PRW%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>External Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>GCS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>INFO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inbound Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Follow - up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Let Us call you Ecomm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Let us call you</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lists %28DNB%2C others%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lusha</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>MO-IN-CollegeSales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Cloud</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Newspaper</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Campaigns %28UNICA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PayRight-Inbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Proactive GCS Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Enquiry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Program Follow - up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prospect List %28Purchased%2C Scored%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Public Relations</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reactive GCS Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recruiter Profile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rep Generated</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>RightNow</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rozgar Duniya</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SMS</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Internal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Seminar - Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Job Ads</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Social Media%28Facebook%2CTwitter%2CInstagram%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Start Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TeleMarketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tollfree</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Web to Lead</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Name</picklist>
+        <values>
+            <fullName>Dr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mr%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mrs%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ms%2E</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Prof%2E</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

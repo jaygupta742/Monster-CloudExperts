@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_IN_TS_Opportunity_With_Arun_Karra</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Share IN TS Opportunity With Arun Karra</label>
+        <sharedTo>
+            <group>Arun_Karra</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Owner_Channel__c</field>
+            <operation>equals</operation>
+            <value>IN TS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Share_Opportunity_EA_SMB</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Share Opportunity (EA &amp; SMB) with Channel Head</description>
+        <label>Share Opportunity(EA &amp; SMB)</label>
+        <sharedTo>
+            <group>EA_SMB_Channel_Head</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Owner_Channel__c</field>
+            <operation>equals</operation>
+            <value>EA,SMB</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

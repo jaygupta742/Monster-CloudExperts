@@ -1,0 +1,7 @@
+<p>Dear Team,</p>
+
+<p>Please process Client Validation Request : <a>{!Client_Validation_Request__c.Name}</a>.</p>
+
+
+<p>Thanks,</p>
+{!Client_Validation_Request__c.OwnerFullName}

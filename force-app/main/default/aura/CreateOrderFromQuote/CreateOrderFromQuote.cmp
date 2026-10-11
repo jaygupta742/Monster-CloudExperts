@@ -1,0 +1,296 @@
+<aura:component controller="CreateOrderFromQuote" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+    <aura:attribute name="orderObj" type="Order__c" />
+    <aura:attribute name="orderLineItems" type="Order_Item__c[]"/>
+    <aura:attribute name="OAccessories" type="Order_Item_Services__c[]"/>
+    <aura:attribute name="showFirstpage" type="boolean" />
+    <aura:attribute name="ren" type="boolean" />
+    <aura:attribute name="quoteObj" type="QuotesN__c" />
+    <aura:attribute name="pro" type="string" />
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow1}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 120rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        
+        }
+    </aura:html>
+    <!-- <aura:if isTrue="{!OR(AND(OR(AND(OR(v.quoteObj.Quote_Type__c=='Free Trial',v.quoteObj.Quote_Type__c=='Ecom'),v.pro=='Monster - Service/CR'),v.quoteObj.Quote_Type__c!='Free Trial'),v.pro=='Monster - Finance'),v.pro=='System Admin')}"> -->
+    <div class="slds-table--header-fixed_container">
+        <div style="text-align:center;background-color:#2E86C1;color:white; height: 40px; margin: 5px 10px; padding: 7px; border-radius: 5px;">
+            <h1 class="slds-page-header__title slds-truncate">Order Details</h1>
+        </div>
+        <div style="min-height:550Px;width:100%">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-scrollable" style="table-layout:fixed;width:100%;font-size:12px;overflow:scroll;" cellpadding="0">
+                
+                <lightning:card title="">
+                    
+                    
+                    <lightning:recordEditForm objectApiName="Order__c">
+                        
+                        <div class="slds-grid slds-wrap" style="margin : 5px 20px; border : 1px solid #C1C1C1; border-radius: 5px; padding: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                            
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Account__c" value="{!v.orderObj.Account__c}" disabled = "true"/>
+                            </div>
+                            
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Contact__c" value="{!v.orderObj.Contact__c}" disabled = "true"/>
+                                
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Price_Master__c" value="{!v.orderObj.Price_Master__c}" disabled = "true"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Opportunities__c" value="{!v.orderObj.Opportunities__c}" disabled = "true"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Quotes__c" value="{!v.orderObj.Quotes__c}" disabled = "true"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Xcode__c" value="{!v.orderObj.Xcode__c}"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Order_Type__c" value="{!v.orderObj.Order_Type__c}"  required = "true"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Order_Status__c" value="{!v.orderObj.Order_Status__c}"/>
+                            </div>
+                            
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Order_Date__c" value="{!v.orderObj.Order_Date__c}"/>
+                            </div>
+                            
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Verified_By__c" value="{!v.orderObj.Verified_By__c}"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Verified_Date__c" value="{!v.orderObj.Verified_Date__c}" />
+                            </div>
+                            
+                            
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Order_Comment__c" value="{!v.orderObj.Order_Comment__c}"/>
+                            </div>
+                            
+                            <!--<div class="slds-col slds-size_6-of-12">
+                <lightning:inputField fieldName="Mode_Terms_Of_Payment__c" value="{!v.quoteObj.Mode_Terms_Of_Payment__c}" onchange="{!c.chngValue}"/>
+               </div>
+               
+            <aura:renderIf isTrue="{!v.ren==true}">
+                <div class="slds-col slds-size_6-of-12">
+                <lightning:inputField fieldName="Mode_Terms_Of_Payment_Others__c" value="{!v.quoteObj.Mode_Terms_Of_Payment_Others__c}"/>
+                </div>
+                
+            </aura:renderIf>-->
+                            
+                        </div>
+                        
+                    </lightning:recordEditForm><br/>
+                    
+                    <aura:if isTrue="{!v.showFirstpage==true}">
+                        <h1 style="text-align:center;color:green;font-size:24px;">Order Line Items</h1>
+                        <br/>
+                        <div style="margin: 5px 20px; border: 1px solid #C1C1C1; border-radius: 5px; padding: 5px;">
+                            
+                            
+                            <lightning:recordEditForm objectApiName="Order_Item__c">
+                                <thead>
+                                    <tr class="slds-text-title_caps" style="height: 35px;">
+                                        
+                                        <th scope="col" style="width:5%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                            <div class="slds-truncate">S.No</div>
+                                        </th>
+                                        
+                                        <th scope="col" style="width:12%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                            <div class="slds-truncate" title="Opp Line Item">QULI No.</div>
+                                        </th>
+                                        
+                                        <th scope="col" style="width:12%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                            <div class="slds-truncate" title="Product Name">Product Name</div>
+                                        </th>
+                                        
+                                        <th scope="col" style="width:10%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                            <div class="slds-truncate" title="Quantity">Quantity</div>
+                                        </th>
+                                        
+                                        <th scope="col" style="width:10%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                            <div class="slds-truncate" title="Unit Rate">Unit Rate</div>
+                                        </th>
+                                        
+                                        
+                                        
+                                        <th scope="col" style="width:10%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                            <div class="slds-truncate" title="Discount Type">Discount Type</div>
+                                        </th>
+                                        
+                                        <th scope="col" style="width:10%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                            <div class="slds-truncate" title="Discount Value">Discount Value</div>
+                                        </th>
+                                        
+                                        
+                                        
+                                        <!--  <th scope="col" style="width:5%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                        <div class="slds-truncate" title="Delete">Delete</div>
+                                    </th> -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <aura:iteration items="{!v.orderLineItems}" var="ContactInstance" indexVar="rowIndex">
+                                        <tr class="slds-text-title_caps" style="height:10px;width:100%;font-size:12px;">
+                                            <td style="width:5%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;"> 
+                                                {!rowIndex + 1}
+                                            </td>
+                                            <td style="width:12%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                <lightning:inputField fieldName="Quote_Line_Items__c" variant="label-hidden" value="{!ContactInstance.Quote_Line_Items__c}" disabled="true" />
+                                            </td>
+                                            <td style="width:12%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                <lightning:inputField fieldName="Product__c" variant="label-hidden" value="{!ContactInstance.Product__c}" disabled="true" />
+                                            </td>
+                                            <td style="width:10%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                <lightning:inputField fieldName="Quantity__c" variant="label-hidden" value="{!ContactInstance.Quantity__c}" required="true" disabled="true"/>
+                                            </td> 
+                                            <td style="width:10%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                <!--<lightning:inputField fieldName="Unit_Rate__c" variant="label-hidden" value="{!ContactInstance.Unit_Rate__c}" required="true" /> -->
+                                                {!ContactInstance.Unit_Price__c}
+                                            </td>
+                                            
+                                            <td style="width:10%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                <lightning:inputField fieldName="Adjustment_Type__c" variant="label-hidden" value="{!ContactInstance.Adjustment_Type__c}" required="true" disabled="true"/>
+                                            </td>
+                                            
+                                            <td style="width:10%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                <lightning:inputField fieldName="Adjustment_Value__c" variant="label-hidden" value="{!ContactInstance.Adjustment_Value__c}" required="true" disabled="true" />
+                                            </td>
+                                            
+                                            <!--    <td style="width:5%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                            <a onclick="{!c.removeDeletedRow}" data-value="{!rowIndex}">
+                                                <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                                                <span class="slds-assistive-text">Delete Icon</span>
+                                            </a>
+                                        </td> -->
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </lightning:recordEditForm>
+                        </div>
+                        <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+                            <!-- <lightning:button aura:id="button" class="button" label="Next" onclick="{!c.showNext}" variant="brand"/>-->
+                            <lightning:button aura:id="disablebuttonid" class="button" label="Save" onclick="{!c.saveOn}" variant="brand"/>
+                            
+                        </div> 
+                        <aura:set attribute="else">
+                            <h1 style="text-align:center;color:green;font-size:24px;">Order Items Services</h1>
+                            <div style="margin: 5px 20px; border: 1px solid #C1C1C1; border-radius: 5px; padding: 5px;">
+                                <lightning:recordEditForm objectApiName="Order_Item_Services__c">
+                                    <thead>
+                                        <tr class="slds-text-title_caps" style="height: 35px;">
+                                            
+                                            <th scope="col" style="width:5%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                                <div class="slds-truncate">S.No</div>
+                                            </th>
+                                            
+                                            <th scope="col" style="width:15%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                                <div class="slds-truncate" title="Top Up Name">Service Name</div>
+                                            </th>
+                                            
+                                            <th scope="col" style="width:15%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                                <div class="slds-truncate" title="Product Name">Product Name</div>
+                                            </th>
+                                            
+                                            <th scope="col" style="width:10%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                                <div class="slds-truncate" title="Quantity">Quantity</div>
+                                            </th>
+                                            
+                                            <th scope="col" style="width:10%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                                <div class="slds-truncate" title="Unit Rate">Unit Rate</div>
+                                            </th>
+                                            
+                                            
+                                            
+                                            <th scope="col" style="width:10%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                                <div class="slds-truncate" title="Inventory Quota Tenure">Inventory Quota Tenure </div>
+                                            </th>
+                                            
+                                            <th scope="col" style="width:5%;font-size:12px;background-color:#2E86C1;color:white; text-align: center; border: 1px solid #C1C1C1;">
+                                                <div class="slds-truncate" title="Delete"></div>
+                                            </th> 
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!v.OAccessories}" var="ContactInstance" indexVar="rowIndex">
+                                            <tr class="slds-text-title_caps" style="height:10px;width:100%;font-size:12px;">
+                                                <td style="width:5%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;"> 
+                                                    {!rowIndex + 1}
+                                                </td>
+                                                <td style="width:15%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                    <!--
+                                                <lightning:inputField fieldName="Service_Name__c" variant="label-hidden" value="{!ContactInstance.Service_Name__c}" disabled="true" />
+            -->
+                                                    <lightning:formattedUrl value="{!'/'+ContactInstance.ois.Services__c}" tooltip="View Service" label="{!ContactInstance.sname}" target="_blank" />
+                                                </td>
+                                                <td style="width:15%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                    <!--
+                                                <lightning:inputField fieldName="Product_Name__c" variant="label-hidden" value="{!ContactInstance.Product_Name__c}" disabled="true" />
+            -->
+                                                    <lightning:formattedUrl value="{!'/'+ContactInstance.ois.Product__c}" tooltip="View Product" label="{!ContactInstance.pname}" target="_blank" />
+                                                </td>
+                                                <td style="width:10%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                    <lightning:inputField fieldName="Quantity__c" variant="label-hidden" value="{!ContactInstance.ois.Quantity__c}" required="true" disabled="true"/>
+                                                </td>
+                                                
+                                                <td style="width:10%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                    {!ContactInstance.ois.Unit_Price__c}
+                                                </td>
+                                                <td style="width:10%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                    {!ContactInstance.iqt}
+                                                </td>
+                                                
+                                                <td style="width:5%;font-size:12px; text-align: center; border: 1px solid #C1C1C1;">
+                                                    <a onclick="{!c.removeDeletedRow1}" data-value="{!rowIndex}">
+                                                        <lightning:icon variant="error" iconName="utility:delete" class="slds-icon slds-icon_small" size="small" alternativeText="icon"/>
+                                                        <span class="slds-assistive-text">Delete Icon</span>
+                                                    </a>
+                                                </td>  
+                                            </tr>
+                                        </aura:iteration>
+                                    </tbody>
+                                </lightning:recordEditForm>
+                            </div>
+                            <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+                                <lightning:button aura:id="buttonBack" class="button" label="Back" onclick="{!c.goBack}" variant="brand"/>
+                                <lightning:button aura:id="disablebuttonid" class="button" label="Save" onclick="{!c.saveOn}" variant="brand"/>
+                                
+                            </div> 
+                        </aura:set>     
+                    </aura:if>
+                </lightning:card>
+            </table>
+        </div>
+    </div>
+    <!-- <aura:set attribute="else">
+                    <div style="text-align:center;font-size:20px;font-weight:bold;height:100px;padding-top:30px;">You Dont have Permission For Sending Order!!. </div>
+            </aura:set>
+    </aura:if> -->
+</aura:component>

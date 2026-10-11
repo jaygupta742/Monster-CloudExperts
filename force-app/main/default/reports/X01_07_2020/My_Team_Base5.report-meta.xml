@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.AccountID__c</field>
+    </columns>
+    <columns>
+        <field>ADDRESS1_STATE</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>Account.AccountStatus__c</field>
+    </columns>
+    <columns>
+        <field>Account.Lead_Source1__c</field>
+    </columns>
+    <columns>
+        <field>Account.First_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.Email__c</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Category__c</field>
+    </columns>
+    <columns>
+        <field>Account.Last_Activity_Created_Date__c</field>
+    </columns>
+    <currency>INR</currency>
+    <description>Manager accounts</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Account_Owner__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Nagesh,Mudhiraj Kiran,Pruthvi Raj Reddy,Akella Aravind Kumar,Katta Bhargavi,Jetty Manith,Bokka Divya,Puja Kumari</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Category__c</column>
+            <columnToColumn>false</columnToColumn>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Mark for Deletion,Duplicate,Category-A,Category-B,Category-C,Shut Shop,Subsidiary of ____,Subsidiary of,Child,Merged,Unable to connect</value>
+        </criteriaItems>
+    </filter>
+    <format>Tabular</format>
+    <name>My Team Base</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <showGrandTotal>true</showGrandTotal>
+    <showSubTotals>true</showSubTotals>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

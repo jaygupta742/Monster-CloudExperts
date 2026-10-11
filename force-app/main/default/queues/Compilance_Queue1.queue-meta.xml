@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesIncludeBosses>true</doesIncludeBosses>
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Compilance Queue</name>
+    <queueMembers>
+        <users>
+            <user>bhagyasri.kandli@monsterindia.com</user>
+            <user>zubin.thomas-wnmg@force.com</user>
+            <user>david.franklin1@monsterindia.com</user>
+            <user>neeraj.agarwal1@monsterindia.com</user>
+            <user>rajender.yadav0023@foundit.ai</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Compliance__c</sobjectType>
+    </queueSobject>
+</Queue>

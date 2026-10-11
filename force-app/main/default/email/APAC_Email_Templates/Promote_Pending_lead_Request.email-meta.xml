@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>false</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Promote Pending lead Request</name>
+    <style>freeForm</style>
+    <subject>{!Account.SalesChannel__c} Promote Pending Lead - {!Account.Name}</subject>
+    <textOnly>Send Email To:
+India Telesales ACQ Users - MO-IN-Karma Request TS ACQ
+India Telesales RET Users - MO-IN-Karma Request TS RET
+India Fieldsales Users - MO-IN-Karma Request Fieldsales
+Gulf Users - MO-ME-Karma Request
+SEA Users - MO-SEA-Karma Request
+
+Subject: Promote Pending Lead : {!Account.Name}
+
+To ensure that your request is processed correctly, please DO NOT change the subject line of this message
+
+Please do not delete any fields when filling out template.
+
+Please enter the following, all the fields are mandatory to process this request:
+Pending Lead Name - {!Account.Name}
+Pending Lead Sales Channel -{!Account.SalesChannel__c}
+Pending Lead Sales Rep - {!Account.Primary_Sales_Rep__c}
+Pending Lead Sales Rep Job Type - {!User.Job_Type__c}
+Pending Lead Sales Rep Supporting Country - {!User.Location__c}
+
+Pending Lead Sales Rep Job Type - {!User.Job_Type__c}
+
+Reason for Urgent Promotion Request:</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

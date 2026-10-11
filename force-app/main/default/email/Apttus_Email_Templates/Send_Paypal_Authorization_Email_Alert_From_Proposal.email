@@ -1,0 +1,11 @@
+<img src="https://monster--dev--c.cs21.content.force.com/servlet/servlet.ImageServer?id=015q0000000T4BR&oid=00Dq0000000BLIl&lastMod=1438155982000" align="left" width="220" >
+<br/><br/><br/>
+Hi {!Apttus_Proposal__Proposal__c.BillContact__c},
+<br /><br />
+<b>Account Name : </b> {!Apttus_Proposal__Proposal__c.Apttus_Proposal__Account__c}<br />
+<b>Proposal ID : </b> {!Apttus_Proposal__Proposal__c.Name} <br />
+<b>Quote Type : </b>{!Apttus_Proposal__Proposal__c.APTS_Quote_Type__c}<br />
+<b>Proposal Amount  : </b> {!Apttus_Proposal__Proposal__c.Net_Total__c}<br />
+<br />
+Please click the link below to pay by credit card:<br />
+<a href="{!Apttus_Proposal__Proposal__c.PaypalURL__c}">Paypal URL</a>

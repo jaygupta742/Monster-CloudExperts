@@ -1,0 +1,59 @@
+<template>
+    <div class="slds-modal__content">
+        <div class="container slds-var-p-around_medium">
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade revamp-theme">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Approval Summary">Approval Summary</span>
+                </h3>
+                <div class="slds-section__content slds-p-horizontal_small">
+                    <lightning-layout multiple-rows="true">
+                        <template for:each={ApprovalRequired} for:item="item" for:index="index">
+                            <lightning-layout-item key={item.id} size="12" class="slds-var-p-around_xx-small"
+                                large-device-size="3" medimum-device-size="3" small-device-size="12">
+                                <div class="slds-box slds-box_xx-small">
+                                    <p class="slds-text-align_center slds-text-color_destructive">{item.label}</p>
+                                    <p class="slds-text-align_center" style="font-size: 10px; color: #777777;">
+                                        {item.description}</p>
+                                </div>
+                            </lightning-layout-item>
+                        </template>
+                    </lightning-layout>
+                </div>
+            </div>
+
+            <div class="slds-section slds-is-open">
+                <h3 class="slds-section__title slds-theme_shade revamp-theme">
+                    <span class="slds-truncate slds-p-horizontal_small" title="Approver Details">Approver Details</span>
+                </h3>
+                <div class="slds-section__content slds-p-horizontal_small">
+                    <div class="slds-text-align_right">
+                        <h1 class="slds-text-heading_medium">{LvlApprovalRequired}</h1>
+                        <span class="slds-text-color_error">* Level of Approval Required</span>
+                    </div>
+                    <div class="slds-section__content slds-var-m-horizontal_small" style="overflow: scroll;">
+                        <table class="slds-table slds-table_cell-buffer slds-table_bordered slds-table_col-bordered">
+                            <thead>
+                                <tr data-id="approvers-header" class="slds-line-height_reset">
+                                    <template for:each={Approvers} for:item="item" for:index="index">
+                                        <th key={item} class="" scope="col">
+                                            <div class="slds-truncate" title="Approvers">Approvers</div>
+                                        </th>
+                                    </template>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="slds-hint-parent">
+                                    <template for:each={Approvers} for:item="item" for:index="index">
+                                        <td key={item} data-label={item}>
+                                            <div class="slds-truncate" title={item}>{item}</div>
+                                        </td>
+                                    </template>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

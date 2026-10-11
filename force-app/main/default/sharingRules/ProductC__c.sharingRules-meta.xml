@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>Share_Product_for_IN_TS_Channel</fullName>
+        <accessLevel>Edit</accessLevel>
+        <description>Sharing Rules to share product for IN TS channel</description>
+        <label>Share Product for IN TS Channel</label>
+        <sharedTo>
+            <group>User_channel_IN_TS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>IN-TS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>USER_HK_FS_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>USER HK-FS Group</label>
+        <sharedTo>
+            <group>User_chanle_HKFS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>HK-FS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_EA_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User EA Group</label>
+        <sharedTo>
+            <group>User_chanle_EA_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>EA</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_FBS_Gruop</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User FBS Gruop</label>
+        <sharedTo>
+            <group>User_chanle_FBS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>fBS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_ME_FS_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User ME-FS Group</label>
+        <sharedTo>
+            <group>User_chanle_ME_FS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>ME-FS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_ME_TS_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User ME-TS Group</label>
+        <sharedTo>
+            <group>User_chanle_ME_TS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>ME-TS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_MY_FS_Gruop</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User MY-FS Gruop</label>
+        <sharedTo>
+            <group>User_chanle_MY_FS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>MY-FS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_PH_FS_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User PH-FS Group</label>
+        <sharedTo>
+            <group>User_chanle_PH_FS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>PH-FS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_SEA_TS_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User SEA-TS Group</label>
+        <sharedTo>
+            <group>User_chanle_SEA_TS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>SEA-TS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_SEEKER_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User SEEKER Group</label>
+        <sharedTo>
+            <group>User_chanle_Seeker_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>Seeker</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_SG_FS_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User SG-FS Group</label>
+        <sharedTo>
+            <group>User_chanle_SG_FS_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>SG-FS</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_SMB_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User SMB Group</label>
+        <sharedTo>
+            <group>User_chanle_SMB_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>SMB</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_Seeker_B2B_Group</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User Seeker-B2B Group</label>
+        <sharedTo>
+            <group>User_chanle_Seeker_B2B_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>Seeker - B2B</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>User_Seeker_Ed_Sales</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>User Seeker-Ed Sales</label>
+        <sharedTo>
+            <group>User_chanle_Seeker_Ed_Sales_Group</group>
+        </sharedTo>
+        <criteriaItems>
+            <field>Channel__c</field>
+            <operation>equals</operation>
+            <value>Seeker-Ed Sales</value>
+        </criteriaItems>
+        <includeRecordsOwnedByAll>true</includeRecordsOwnedByAll>
+    </sharingCriteriaRules>
+</SharingRules>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>S-337373: RN Email Templates</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>CAFR: General – Receipt Confirmation</name>
+    <style>none</style>
+    <subject>Confirmation Receipt {!Case.Thread_Id}</subject>
+    <textOnly>Merci de contacter le service clientèle Monster. Cette réponse automatique est pour vous informer que nous avons reçu votre e-mail. Vous devriez recevoir une réponse à votre question ou commentaire dans 1-2 jours ouvrables.
+Votre e-mail est importante pour nous et nous vous remercions pour l&apos;aide monstre.
+Cordialement,
+Monster Global Customer Services</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

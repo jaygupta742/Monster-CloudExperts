@@ -1,0 +1,55 @@
+<!--
+  @Component Name     : LightningActivity.cmp
+  @Description        : 
+  @Author             : phUser@phDomain.com
+  @Group              : 
+  @Last Modified By   : phUser@phDomain.com
+  @Last Modified On   : 2/3/2019, 11:41:18 AM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    18/2/2019, 5:09:24 PM   phUser@phDomain.com     Initial Version
+-->
+<aura:component controller="AccountStatforStatus" implements="force:lightningQuickActionWithoutHeader,force:appHostable,flexipage:availableForAllPageTypes" >
+    
+    <aura:attribute name="accountRecordId" type="Id" />
+    <aura:attribute name="conId" type="Id" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="selectedVal" type="String" />
+    <aura:attribute name="picklistValues" type="Object" />
+  
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h4 class="title slds-text-heading--medium" >Choose Suspect/Prospect</h4>
+    </div>
+        
+        <!-- MODAL BODY / INPUT FORM -->    
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative" aura:id="modalbody" id="modalbody">
+        <lightning:select value="{!v.selectedVal}" name="selectSP" aura:id="selectSP" label="Suspect/Prospect" required="true" >
+            <option value="" >--Choose One--</option>
+            <aura:iteration items="{!v.picklistValues}" var="sp">
+                <option value="{!sp}" text="{!sp}"></option>
+            </aura:iteration>
+        </lightning:select>
+        </div>   <!-- End of Modal Content -->  
+        <!-- MODAL FOOTER -->
+		<div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="forceChangeRecordTypeFooter">
+				<lightning:button variant="brand" label="Update" onclick="{! c.updateAccount }"/>
+                <ui:button class="slds-button slds-button_brand" label="Cancel" press="{! c.accept}" /> 
+            </div>
+        </div>
+        <aura:html tag="style">
+            .cuf-content {
+                padding: 0 0rem !important;
+            }
+            .slds-p-around--medium {
+                padding: 0rem !important;
+            }       
+            .slds-modal__content{
+                overflow-y:hidden !important;
+                height:unset !important;
+                max-height:unset !important;
+            }
+        </aura:html>
+</aura:component>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>No logo found</name>
+    <style>none</style>
+    <subject>No logo found</subject>
+    <textOnly>Betreffzeile: Monster - Ihr Logo in der Suchergebnisliste [Vorgang: xxxxxx-xxxxxx]
+
+
+Sehr geehrte/r  ANREDE
+
+vielen Dank für Ihre Bestellung bei Monster.
+
+Ihr gebuchtes Paket enthält das Produkt „Logo in der Suchergebnisliste“, das ich Ihnen gerne in Ihrem Account zur Verfügung stellen möchte.
+
+Könnten Sie mir dafür bitte eine un-animierte GIF-Datei des gewünschten Logos in den Größen 72x22 oder 72x54 Pixel per E-Mail schicken, indem Sie entweder dieser E-Mail antworten, oder es an GlobalCustomerServices@monster.de, mit AGENTNAME im Betreff, schicken? Geben Sie dabei bitte auch Ihre Vorgangsnummer [Vorgang: xxxxxx-xxxxxx].
+
+Sie können mich diesbezüglich natürlich jederzeit per E-Mail oder auch per Telefon kontaktieren. 
+
+Ich bedanke mich im Voraus bei Ihnen und freue mich auf Ihre Antwort mit dem Logo.
+
+Vielen Dank und mit freundlichen Grüßen,
+SIGNATUR</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

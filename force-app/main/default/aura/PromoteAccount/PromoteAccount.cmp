@@ -1,0 +1,51 @@
+<aura:component implements="force:lightningQuickActionWithoutHeader,force:hasRecordId" controller="AddressAndContactCheck">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="error" type="String" default="Process"/>
+    <div class="modal-header slds-modal__header slds-size_1-of-1">
+        <h4 class="title slds-text-heading--medium" >Promote Account</h4>
+    </div>
+        
+        <!-- MODAL BODY / INPUT FORM -->    
+    <div class="slds-modal__content slds-p-around--x-small slds-align_absolute-center slds-size_1-of-1 slds-is-relative" aura:id="modalbody" id="modalbody">
+        <aura:if isTrue="{!v.error == 'Success'}">
+            <div class="slds-scrollable slds-p-around_medium slds-text-heading_small" id="modal-content-id-1">
+                <p style="height: 108px; word-wrap: break-word;">Please update address in account and create one primary contact </p>
+                <br/>
+            </div>
+        <aura:set attribute="else">
+            <aura:if isTrue="{!v.error != 'Process'}">
+            <div class="slds-scrollable slds-p-around_medium slds-text-heading_small" id="modal-content-id-1">
+                <p style="height: 108px; word-wrap: break-word;">Email Sent Successfully</p>
+            <br/>
+            </div>
+            <aura:set attribute="else">
+                    <div class="slds-scrollable slds-p-around_medium slds-text-heading_small" id="modal-content-id-1">
+                            <p style="height: 108px; word-wrap: break-word;">Processing.....</p>
+                        <br/>
+                    </div>
+            </aura:set>
+            </aura:if>
+        </aura:set>
+        </aura:if>
+        </div>   <!-- End of Modal Content -->  
+        <!-- MODAL FOOTER -->
+		<div class="modal-footer slds-modal__footer slds-size_1-of-1">
+            <div class="forceChangeRecordTypeFooter">
+                <ui:button class="slds-button slds-button_brand" label="Ok" press="{! c.accept}" /> 
+            </div>
+        </div>
+        <aura:html tag="style">
+            .cuf-content {
+                padding: 0 0rem !important;
+            }
+            .slds-p-around--medium {
+                padding: 0rem !important;
+            }       
+            .slds-modal__content{
+                overflow-y:hidden !important;
+                height:unset !important;
+                max-height:unset !important;
+            }
+        </aura:html>
+</aura:component>

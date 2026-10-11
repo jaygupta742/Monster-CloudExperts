@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Credit_status_and_Reason</fullName>
+    <active>true</active>
+    <description>When the account credit status is selected as the &apos;OnHoldFinance&apos; or &apos;Suspended&apos;
+reason is mandatory</description>
+    <errorConditionFormula>AND( 
+OR( 
+( $Profile.Id =&apos;00e7F000000uSSj&apos;),
+($Profile.Id =&apos;00e7F000000uSSi&apos;)
+),
+
+OR( ISPICKVAL( CreditStatus__c ,&apos;On Hold - Finance&apos;),
+ISPICKVAL( CreditStatus__c ,&apos;Suspend&apos;),ISPICKVAL(CreditStatus__c ,&apos;On Hold - Compliance&apos;))
+,
+
+ISBLANK(TEXT( Reasons_Picklist__c ))
+)</errorConditionFormula>
+    <errorDisplayField>Reasons_Picklist__c</errorDisplayField>
+    <errorMessage>Please select the reason when the credit status is On-Hold Finance,Suspend,On Hold - Compliance</errorMessage>
+</ValidationRule>

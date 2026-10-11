@@ -1,0 +1,27 @@
+<template>
+    <div if:true={isQuoteObject} style="background-color: #FFFFFF; border-radius: 5px; width: 100%;" class="slds-var-p-around_small">
+        <lightning-layout multiple-rows="true" if:true={Quote}>
+            <lightning-layout-item size="12" large-device-size="2" medium-device-size="2" small-device-size="12">
+                <div class="slds-size_2-of-2 slds-var-p-bottom_x-small">
+                    <p style="font-size: 9pt;">Quote Type</p>
+                    <p class="slds-truncate"> {Quote.Quote_Type__c} </p>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" large-device-size="3" medium-device-size="3" small-device-size="12">
+                <div class="slds-size_2-of-2 slds-var-p-bottom_x-small">
+                    <p style="font-size: 9pt;">Account Name</p>
+                    <p class="slds-truncate">
+                        <a href={AccountURL} style="font-size: 14px;">{Account.Name}</a>
+                    </p>
+                </div>
+            </lightning-layout-item>
+            <lightning-layout-item size="12" large-device-size="2" medium-device-size="2" small-device-size="12">
+                <div class="slds-size_2-of-2 slds-var-p-bottom_x-small">
+                    <p style="font-size: 9pt;">Channel</p>
+                    <p class="slds-truncate"> {Quote.Owner_Channel__c} </p>
+                </div>
+            </lightning-layout-item>
+        </lightning-layout>
+        <p class="slds-text-color_error slds-text-body_small" data-id="error-text" hidden></p>
+    </div>
+</template>

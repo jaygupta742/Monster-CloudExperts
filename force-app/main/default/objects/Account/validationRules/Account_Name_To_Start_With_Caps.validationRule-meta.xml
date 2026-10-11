@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Account_Name_To_Start_With_Caps</fullName>
+    <active>false</active>
+    <description>Account Name To Start With Caps</description>
+    <errorConditionFormula>OR 
+( 
+ISNEW() &amp;&amp; (
+
+NOT(BEGINS(  Name , UPPER(LEFT( Name , 1) )))
+
+/*IF( Case_Accounts__c == False,IF( NOT(RecordTypeId == &apos;0127F000000mhAV&apos;) &amp;&amp; NOT(RecordTypeId == &apos;0127F000000mhAT&apos;), NOT(BEGINS(Name , UPPER(LEFT( Name , 1) ))), FALSE), false) */
+
+)
+, 
+DATEVALUE(CreatedDate)&gt;=DATEVALUE(&quot;2018-07-01&quot;) &amp;&amp; 
+( 
+
+NOT(BEGINS(  Name , UPPER(LEFT( Name , 1) )))
+
+/*IF( Case_Accounts__c == False,IF( NOT(RecordTypeId == &apos;0127F000000mhAV&apos;) &amp;&amp; NOT(RecordTypeId == &apos;0127F000000mhAT&apos;), NOT(BEGINS(Name , UPPER(LEFT( Name , 1) ))), FALSE), false) */
+
+)
+)</errorConditionFormula>
+    <errorDisplayField>Size_of_Account__c</errorDisplayField>
+    <errorMessage>Account Name To Start With Caps</errorMessage>
+</ValidationRule>

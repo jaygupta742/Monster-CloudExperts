@@ -1,0 +1,225 @@
+<apex:page renderAs="pdf">
+<apex:form >
+<c:PDFHeaderFooter type="header" > 
+
+<div style="width:50px height:100px;color:gray">
+<apex:image url="{!URLFOR($Resource.Monster_Logo)}" width="200px" />
+<br/>
+<span >
+Plot No.1024 &amp; 1024/1, Road No 45,<br/>
+Jubilee Hills, Hyderabad 500033, India
+</span>
+</div>
+
+<apex:stylesheet value="{!$Resource.Repeat1}"/> 
+</c:PDFHeaderFooter>
+<c:PDFHeaderFooter type="footer" > 
+<apex:stylesheet value="{!$Resource.Repeat1}"/> 
+NOTED AND ACCEPTED:
+</c:PDFHeaderFooter> 
+
+
+<br/>
+<div style="font-size:13px;">
+<center><B style="font-size:11px">SERVICE AGREEMENT</B></center>
+<p align="justify">
+This SERVICE AGREEMENT is made and entered into this 22/8/2016 date/month/year Mumbai, Maharashtra at Place. ("AGREEMENT") BY AND BETWEEN 
+Monster.com India Private Limited  a company incorporated under the [Indian]  Companies Act, 1956, having its registered office at Plot Np. 1024 &amp; 1024/1,
+Road No. 45, Jubilee Hills, Hyderabad – 500 033, India (hereinafter referred to as 'Monster', which expression shall, unless repugnant to the context or
+meaning thereof, mean and include its successors and assigns) of the FIRST PART; AND Globeop Financial Services Technologies India Private Limited
+organized under the Indian Laws having its principal place of business at 5th floor, Building 16, Interface, Malad (West) Mumbai, Maharashtra 400064 India
+(hereinafter referred to as 'Member', which expression shall, unless repugnant to the context or meaning thereof, mean and include its successors and
+permitted assigns) of the SECOND PART. (Monster and Member are hereinafter collectively referred to as "the Parties" and severally as "Party")
+</p>
+
+<p align="justify">WHEREAS Monster is inter alia in the business of e-recruitment solutions and is responsible for the functioning of its websites www.monsterindia.com,<b style="font-size:130%">Error! Bookmark not defined.</b>
+, www.rozgarduniya.com and www.monstercollege.in and Member is in the business of ‘Education Provider’
+and is desirous of taking service from Monster as described here under to facilitate Monster’s online recruitment solution online for opportunity to registered
+users (“users”) at Monstercollege.in,on the terms agreed and contained herein;</p>
+<p align="justify">
+    NOW, THEREFORE, IN CONSIDERATION OF THE PROMISES AND THE MUTUAL COVENANTS, AGREEMENT HEREINAFTER SET FORTH, THE PARTIES
+    INTENDING TO BE LEGALLY BOUND, HEREBY AGREE AS FOLLOWS: 
+    
+</p>
+<p>
+<B style="font-size:12px">1. SERVICE DETAILS &amp; TERM </B>
+<br/>
+The details of the service that Member has agreed to take from Monster are as follows ("Service"):<br/><br/>
+
+<table border="1" width="100%" cellspacing="0">
+    <tr>
+        <td>Member Name:</td>
+        <td>Globeop Financial Services Technologies India Private Limited</td>
+    </tr>
+    <tr>
+        <td>Service:</td>
+        <td>Access to <b>www.monstercollege.in</b> portal (free of cost) “<b>Monstercollege.in Platform Access – FOC</b>"</td>
+    </tr>
+    <tr>
+        <td>Quote No:</td>
+        <td>Q-04897479</td>
+    </tr>
+    <tr>
+        <td>Start Date :</td>
+        <td>23/8/2016</td>
+    </tr>
+    <tr>
+        <td>End Date :</td>
+        <td>21/8/2017</td>
+    </tr>
+
+</table>
+</p>
+<p >
+   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a) Monster shall provide to Member 1 Practice Test for 1 Stream. The stream will be selected by the Member at its end subject &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;to the approval of
+                     Monster.<br/>
+   &nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; b) Member shall provide the details of its authorised representative (“TPO”) to Monster for the Service operation. Monster will &nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;provide the login 
+      details to TPO after execution of this Agreement. TPO shall be responsible for the Member’s Candidates  &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/Students login with
+      Monstercollege.in. <br/>
+   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c) The Service provided for the period mentioned above without any financial consideration to the Member. Member agrees to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; bear any obligations
+     on taxation for free service.    
+</p>
+
+<p >
+<B style="font-size:12px">2. IMPLEMENTATION AND TRAINING :</B>
+<br/>
+(a) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Training on Monstercollege.in subscribed Service, wherever applicable, will be provided by concerned authorized staff of &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;the Monster. <br/>
+(b)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monster may either through its officials or authorized representative formally visit the Member's office premises for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; implementation and / or for 
+                    any other purpose.
+</p>
+
+<B style="font-size:12px">3. MONSTER’S OBLIGATION:</B>  <!-- align="left" -->
+
+<p align="justify">
+    
+      a) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  To provide online customized platform to the Member on www.monstercollege.in (website) and to assist Member for online &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;recruitment solution of 
+  registered users, as per Service subscribed. Enhance visibility of the Member as a brand on &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Monstercollege.in platform and Placement Process
+ Management including 24*7 online display of profiles to attract &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;companies; and providing access to its website www.monstercollege.in who have 
+ subscribed for the website services.<br/>
+
+      b)  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Provide informative articles and content delivered through platform and to improve chances of users employability and to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; conduct mock practice 
+           tests as per Industry specification along with comprehensive performance report of the users. This &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shall help the Member to identify skill gaps of 
+          the users and take proactive measures. Monster does not guarantee or offer &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; any warranty for any response from any employer or recruitment 
+           consultants to Member after the Services commenced  by<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monster under this Agreement. Monster neither guarantees nor offers any warranty
+         about the credentials of the prospective &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; employer/organisation, which would receive the information and subsequently contact the Member 
+          and/or candidates.<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monster reserves its right to reject any insertion or information/data provided by the Member in the Monstercollege.in &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; without  
+          assigning any reason, Breach any provision of this Agreement by the Member may lead to discontinuance of &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;subscribed service by Monster and 
+          /or pursue all other available remedies under applicable laws. 
+        
+</p>
+
+
+<B style="font-size:14px">4. MEMBER’S OBLIGATION:</B>
+<p align="left">
+    (a)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member shall provide Monster the name of its authorized representative (TPO) who shall serve as single point of contact<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; with Monster and ensure
+        submission of Candidates / users’ data online on Monster’s website i.e. www.monstercollege.in for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; registration within 20 days of signing of this
+       Agreement.<br/>
+     (b) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Verification of the users’ data by TPO of Member. Users’ data shall include education qualification, roll number, branch and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; name. Inability of
+        Member to register and verify the users’ data shall not entitle the users in availing the services under &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this Agreement. Member shall be solely 
+     representative of Member shall be responsible for incorporating the users’<br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; data on the Monster website and make changes from time to time in
+          responsible for the submission of any wrong,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; incomplete or incorrect users’ data or profile in the Monstercollege.in website and the authorized
+         representative of Member &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shall be responsible for incorporating the users’ data on the Monster website and make changes from time to time in 
+           the event &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of any change in the users data and profile. <br/>
+        (c) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The Member shall be responsible for appropriate use of the Services subscribed under this Agreement and Member agrees to &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; appropriate the subscribed Services as per the terms and conditions stipulated for the Services on Monster College Website &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and shall not offer to the
+          candidate(s) and / or users of such subscribed services at a price more than the price as stipulated by &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Monster for the Career Services on the 
+           relevant Monster website. <br/>
+        (d) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member shall be solely responsible for the Monster College Services appropriated by it under this Agreement to users and /  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or candidates. 
+            &nbsp; Member further undertakes that the Services subscribed by it under this Agreement is solely for the purpose &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; of its proper appropriation to the 
+             users and/or candidates and not for its commercial use / purpose. <br/>
+            (e)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; By posting user data (“User Content”) to Monstercollege.in OR any Monster Site, User / Candidate and Member<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; automatically grant, and
+                represent and warrant that they have the right to grant, to Monster an irrevocable, perpetual,<br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; non-exclusive, fully paid, worldwide license to use, 
+              copy, perform, display, and distribute such User Content and to prepare &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; derivative works of, or incorporate into other works, such User Content,
+               and to grant and authorize sublicenses thereof. <br/>
+           (f)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; No unauthorised / fraudulent use of user content : Member shall ensure the usage of content for lawful purposes and only for &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; the purposes as
+              permitted under the scope of this Agreement. Promotion of any illegal activity or marketing of products and &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; other service purposes or spamming
+                of the content by it except for the facilitation of services under this Agreement are also &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; prohibited. Monster shall have the sole right to decide as
+             to what constitute as a breach of these requirements by Member.<br/> 
+        (g)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Member (college /institute) undertakes and warrants that the Mobile No. of the candidates provided/uploaded by it//Monster &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; to Monster’s 
+           website ( www.monstercollege.in) for communicating them for the career/tests related <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; information/communication is verified by Member (college 
+         /institute) before submission and is correct and Member (college  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /institute) further warrants that the candidates have consented to use their
+           Mobile No. provided/uploaded by it to Monster’s &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; website ( www.monstercollege.in) for communicating them through SMS by Monster and/or its 
+         service providers for the &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; career/tests related information/communication. In the event of any complaint at the end of candidates with respect to 
+          DND &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; and other issues, Member (college /institute) shall provide all the relevant details desired by Monster for resolving any such &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; issues. 
+                            
+ </p>
+ 
+ 
+ <B style="font-size:12px;text-align:left">5. TERMS OF AGREEMENT: </B>
+ <p  align="justify">
+     This Agreement is between your Institution or company or organization (“You”) and Monster.com India Pvt. Ltd. (“Monster”) and governs use of the
+Monster website or websites in which services are subscribed under this Agreement (each a “Site” and, together, the “Sites”). This agreement shall
+continue and be effective till the validity period of the product and services subscribed by you. If you breach any provision of this Agreement, Monster may
+(i) discontinue Your service and/or (ii) pursue all other available remedies to protect it. Any postponement of services covered under the scope of the
+Service Agreement shall be at the sole discretion of Monster. In such events the Term of the agreement shall be deemed to have amended accordingly. If
+You (including any or Your employees or consultants) are found to share passwords with any third Party, Monster may revoke all login &amp; passwords
+deactivate your account. You agree to notify Monster promptly after the departure of any person to whom a password was provided &amp; failure of your
+notification in this regard Monster reserves the right to cancel such password or issue a new password in lieu thereof. Monster reserves the right to
+periodically change the issued passwords. You agree not to resell and/or share any of the products and services subscribed by You from Monster.
+You agree to comply with all the applicable laws., including but not limited to the laws relating to contracts, labour and employment laws, data privacy laws,
+cyber laws and law relating to intellectual property. <br/>
+Navigation/Search Engines: Notwithstanding anything to the contrary contained herein, You shall not use or attempt to use, and shall cause each party 
+under your control not to use or attempt to use, any engine, software, tool, agent or other device or mechanism (including without limitation browsers,
+spiders, avatars or intelligent agents) to navigate or search any Site other than the search engine and search agents available on such Site. The contents of 
+the website (including without limitation all job postings and all resumes), and all elements, which are a part of the foregoing, and all intellectual and other
+proprietary rights therein, are the property of Monster. Neither you nor any of your employees shall do anything, which would in any way damage, injure or 
+impair the validity of Monster’s rights in the contents of the web Site. To the extent permitted by law Monster makes no warranties, express or implied, 
+including the warranties of merchantability, fitness for a particular purpose, or non-infringement with respect to its services or any site, or results of use 
+thereof and all warranties and conditions, express or implied are hereby excluded.<br/>
+
+
+You agree to indemnify Monster, its officers, directors, employees and agents, from and against any claims, actions or demands, arising or resulting from 
+Your breach of this Agreement or from Your provision of any material to any Site, including but not limited to claims of breach of third party intellectual 
+property rights. Neither party will be liable to the other party (nor to any person claiming rights derived from the other party's rights) for incidental, indirect,
+consequential, special, punitive or exemplary damages of any kind - including lost revenues or profits, loss of business or loss of data - arising out of this 
+agreement, regardless of whether the party liable or allegedly liable was advised, had other reason to know, or in fact knew of the possibility thereof. Your 
+use of the Monstercollege.in Site is subject to the Terms of Use, and / or Terms and Conditions of the website available from such web Site's homepage as 
+may be amended from time to time. <br/>
+
+
+This Agreement (i) constitutes the entire Agreement between the parties with respect to the subject matter hereof and supersedes any previous oral or 
+written arrangements or understandings relating thereto as well as any purchase orders not supplied by Monster that have been or may from time to time 
+be submitted by you, (ii) may be signed in counterparts, (iii) shall be governed by the laws of India. (iv) may not be amended, terminated or waived orally,
+and (v) may not be assigned, in whole or in part, directly or indirectly, by operation law or otherwise, by you and only comes into existence when signed by 
+You and Monster. Monster will be entitled to assign all or any of its rights and obligations hereunder. Any terms of this Agreement that may be invalid shall 
+not affect the validity of enforcement of the remaining valid terms of this Agreement. The terms and conditions of this Agreement may not be amended 
+without the affirmative written consent of Monster.com India Pvt. Ltd. Any Extension/ Up-gradation / renewal of the Services of the Member after the date 
+of expiry of this Agreement shall be given effect only after executing a fresh / renewal Agreement between Monster and Member on mutually agreed terms. 
+Every Dispute, difference or question which may at any time arise between the parties hereto or any person claiming under them, touching or arising out of
+or in respect of this agreement or the subject matter thereof shall be referred to the Sole Arbitrator nominated by the First Part, the award passed by the
+Arbitrator shall be final and binding on the parties hereto. The venue of Arbitration shall be Hyderabad. All and any disputes shall be subject to the exclusive 
+jurisdiction of the Courts at Hyderabad, India.
+
+</p>
+ 
+ <p > 
+     IN WITNESS WHEREOF, the Parties have caused this Agreement to be executed by their duly authorised representatives in one or more counterparts, each 
+      of which shall constitute an original effective as of the day and year set forth above.
+ </p>
+
+<table width="100%" style="font-size:13px">
+    <tr>
+        <th><h4>SIGNED ON BEHALF OF THE MEMBER: </h4></th>
+        <th><h4>SIGNED ON BEHALF OF MONSTER:</h4></th>
+    </tr>
+    <tr>
+        <td>Name :</td>
+        <td>Name :</td>
+    </tr>
+    <tr>
+        <td>Designation</td>
+        <td>Designation</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>Email</td>
+    </tr>
+    <tr>
+        <td>Phone</td>
+        <td>Phone</td>
+    </tr>
+</table>
+</div>
+</apex:form>
+
+        
+</apex:page>

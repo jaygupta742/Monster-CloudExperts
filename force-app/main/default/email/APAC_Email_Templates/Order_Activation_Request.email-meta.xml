@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Order Activation Request</name>
+    <style>freeForm</style>
+    <subject>{!OrderC__c.Account__c} Activation form for {!OrderC__c.Name}({!OrderC__c.Order_Priority__c})</subject>
+    <textOnly>send Email to: activation@monsterindia.com
+
+Please activate the services.
+
+Earliest Product Start Date - {!OrderC__c.EarliestProductStartDate__c}
+
+Account Name - {!OrderC__c.Account__c}
+
+Account ID - {!OrderC__c.Account_ID__c}
+
+Order Number - {!OrderC__c.Name}
+
+Sales Channel - {!OrderC__c.Sales_Channel__c}
+
+Sales Credit-{!OrderC__c.Gross_Total__c}
+
+Account Sales Rep - {!OrderC__c.PrimarySalesRepName__c}
+
+Order Type- {!OrderC__c.Order_Type__c}
+
+Comments- {!OrderC__c.Comments__c}
+
+Quote Channal - {!OrderC__c.Quote_Proposal_Channal__c}
+
+
+
+
+
+Customer Contact Information:
+Name -  {!OrderC__c.Posting_Contact__c}
+
+Email - {!OrderC__c.PostingContactEmail__c}
+
+Phone - {!OrderC__c.PostingContactPhone__c}
+
+
+
+
+
+
+Regards,
+
+Team Finance</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

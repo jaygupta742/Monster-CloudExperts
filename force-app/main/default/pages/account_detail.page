@@ -1,0 +1,3 @@
+<apex:page StandardController="Account" tabStyle="Account" sidebar="true" lightningStylesheets="true">
+    <apex:detail inlineEdit="{!IF((Account.Lead_Account_Status__c != 'Active' && Account.Lead_Account_Status__c != '')||($User.ProfileId == '00e7F000000uSSlQAM'),true,false)}" relatedList="true"/>
+</apex:page>

@@ -1,0 +1,88 @@
+<aura:component controller="reversaldebtrequestnew" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionwithoutheader" access="global" >
+ <aura:attribute name="orderObj" type="Reversal_Bad_Debt_Requests__c" />
+   
+    <aura:attribute name="showFirstpage" type="boolean" />
+    <aura:attribute name="ren" type="boolean" />
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow}"/>
+    <aura:handler name="DeleteRowEvt" event="c:DeleteRowEvt" action="{!c.removeDeletedRow1}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    
+    <aura:html tag="style">
+        .slds-modal__container{
+        height : 100%;
+        width: 100%;
+        max-width: 120rem;
+        }
+        .modal-body{
+        height : 400px !important;
+        max-height: 550px !important;
+        }
+        .cuf-content {
+        padding: 0 0rem !important;
+        }
+        .slds-p-around--medium {
+        padding: 0rem !important;
+        }       
+        .slds-modal__content{
+        overflow-y:0rem !important;
+        height:unset !important;
+        max-height:unset !important;
+        }
+        html{
+        background-color: white;
+        
+        }
+    </aura:html>
+    <div class="slds-table--header-fixed_container">
+        <div style="text-align:center;background-color:#2E86C1;color:white; height: 40px; margin: 5px 10px; padding: 7px; border-radius: 5px;">
+            <h1 class="slds-page-header__title slds-truncate">Reversal/Bad Debt Requests Details</h1>
+        </div>
+        <div style="min-height:550Px;width:100%">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-scrollable" style="table-layout:fixed;width:100%;font-size:12px;overflow:scroll;" cellpadding="0">
+                
+                <lightning:card title="">
+                    
+                    
+                    <lightning:recordEditForm objectApiName="Reversal_Bad_Debt_Requests__c">
+                        
+                        <div class="slds-grid slds-wrap" style="margin : 5px 20px; border : 1px solid #C1C1C1; border-radius: 5px; padding: 5px; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Order__c" value="{!v.orderObj.Order__c}" disabled="true"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Order_Date__c" value="{!v.orderObj.Order_Date__c}" disabled="true"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Account__c" value="{!v.orderObj.Account__c}" disabled="true"/>
+                            </div>
+                             <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Reversal_Amount__c" value="{!v.orderObj.Reversal_Amount__c}" required="true"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Reversal_Bad_Debt_Reason__c" value="{!v.orderObj.Reversal_Bad_Debt_Reason__c}" required="true"/>
+                                
+                            </div>
+                           
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Reversal_Bad_Debt_Comment__c" value="{!v.orderObj.Reversal_Bad_Debt_Comment__c}"/>
+                            </div>
+                            <div class="slds-col slds-size_6-of-12">
+                                <lightning:inputField fieldName="Reversal_Bad_Debt_Type__c" value="{!v.orderObj.Reversal_Bad_Debt_Type__c}" required="true"/>
+                            </div>
+                           
+                            
+                        </div>
+                        
+                    </lightning:recordEditForm><br/>
+                    
+                   
+                </lightning:card>
+            </table>
+        </div>
+         <div class="slds-docked-form-footer" style="text-align:center;background-color:white;">
+                                <lightning:button aura:id="buttonBack" class="button" label="Back" onclick="{!c.goBack}" variant="brand"/>
+                                <lightning:button aura:id="button" class="button" label="Save" onclick="{!c.saveOn}" variant="brand"/>
+                                
+                            </div>
+    </div>	
+</aura:component>

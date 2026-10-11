@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Old_Last_Modified_User__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Old Last Modified User</label>
+    <referenceTo>User__c</referenceTo>
+    <relationshipLabel>Email Messages (Old Last Modified User)</relationshipLabel>
+    <relationshipName>Email_Messages1</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

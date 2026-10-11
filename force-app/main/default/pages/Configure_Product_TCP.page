@@ -1,0 +1,40 @@
+<apex:page controller="Add_product1" action="{!Configure_Product_Attribute}" showHeader="false"  lightningStylesheets="true">
+    <apex:form >
+    <apex:pageMessages id="rr"></apex:pageMessages>
+    <!--<apex:inputText value="{!Amount}"/><apex:commandButton value="Gencod" action="{!Add_to_cart}"/>
+   {!pbkey}-->
+  
+        <apex:pageBlock id="re" title="Configure Product" > 
+        <!--Debug : TCP {!debug}--------Product Attribute : {!paid}----- Quantity : {!quantity}-------- Product : {!toselect}-->
+        <apex:outputText rendered="{!cshow}">{!currencytype}:{!amount}</apex:outputText>
+        <apex:pageblockButtons location="top">
+         <apex:commandButton action="{!canceling}" value="Cancel" />
+        <apex:commandButton action="{!Add_to_cart}" value="Add to Cart" disabled="{!(!cshow)}"/>
+        <apex:commandButton action="{!Get_Price_TCP}" value="Get Price" disabled="{!price}" reRender="re,rr"/>
+        <apex:commandButton action="{!Configure_Product_Attribute}" value="Reset"  reRender="re,rr"/>
+        
+        </apex:pageblockButtons>
+             <center>
+             <apex:PageBlockSection >
+             <apex:inputText value="{!quantity}" label="Quantity"/>
+             <apex:inputField value="{!h.Product_Name__c}"/>
+             <apex:inputField value="{!h.Product_Details__c}"/>
+             <apex:inputtext value="{!amount1}" label="Rate as per Price List"  required="true"/>
+             </apex:PageBlockSection>
+             <br/><br/>
+             <Table>
+                    <apex:repeat value="{!law}" var="v">
+                        <tr><td>{!v.sol}</td>
+                        <td><apex:selectList value="{!v.socv}" size="1" disabled="{!v.show}">
+                            <apex:selectOptions value="{!v.sov}"/>
+                            <apex:actionSupport action="{!chk}" event="onchange" />
+                        </apex:selectList></td></tr>
+                    </apex:repeat>
+                </Table>
+                
+                
+                </center>
+                
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

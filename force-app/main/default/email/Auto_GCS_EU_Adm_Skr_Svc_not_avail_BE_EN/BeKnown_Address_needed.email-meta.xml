@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>BeKnown Address needed</name>
+    <style>none</style>
+    <subject>BeKnown Address needed</subject>
+    <textOnly>Sehr geehrte/r Anrede,
+
+vielen Dank für Ihre Rückmeldung &lt;und das nette Gespräch!&gt;
+
+Damit ich Ihr BeKnown-Unternehmensprofil für Sie erstellen kann, benötige ich noch die E-Mail- Adresse, die auf Facebook mit der BeKnown-Anwendung verknüpft ist. 
+
+Dieses BeKnown-Unternehmensprofil verknüpfen wir dann direkt mit Ihren Monster-Arbeitgeberdaten. Die Stellenanzeigen, die Sie auf Monster online gestellt haben, werden damit kostenfrei in Ihrem BeKnown-Unternehmensprofil veröffentlicht. Über das Jobs Tab in Ihrem BeKnown-Unternehmensprofil können Sie zusätzlich Ihre Monster-Stellenanzeigen kostenfrei auch in Ihrem Arbeitgeberprofil auf Facebook (Chronik) veröffentlichen.
+
+Wenn Sie Fragen zu diesem Auftrag haben, bitte ich Sie, die Auftragsnummer, die Sie in der Betreffzeile dieser Nachricht finden, anzugeben, oder einfach auf diese E-Mail zu antworten. 
+
+Vielen Dank und einen schönen restlichen Tag wünsche ich Ihnen!
+
+Mit freundlichen Grüßen 
+INSERT RELEVANTE SIGNATUR</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

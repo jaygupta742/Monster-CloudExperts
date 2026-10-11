@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reference__c</fullName>
+    <label>Reference</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Validated</fullName>
+                <default>false</default>
+                <label>Validated</label>
+            </value>
+            <value>
+                <fullName>Unvalidated</fullName>
+                <default>false</default>
+                <label>Unvalidated</label>
+            </value>
+            <value>
+                <fullName>Revoked</fullName>
+                <default>false</default>
+                <label>Revoked</label>
+            </value>
+            <value>
+                <fullName>Revalidated</fullName>
+                <default>false</default>
+                <label>Revalidated</label>
+            </value>
+            <value>
+                <fullName>KYC-Validated</fullName>
+                <default>false</default>
+                <label>KYC-Validated</label>
+            </value>
+            <value>
+                <fullName>New Validated</fullName>
+                <default>false</default>
+                <label>New Validated</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quote_Priority__c</fullName>
+    <description>This field is created to Assign priority as per the start date</description>
+    <externalId>false</externalId>
+    <formula>IF(Start_Date__c &lt; TODAY() ,&apos;Priority-High&apos;,
+			IF(Start_Date__c == TODAY()+0, &apos;Priority-High&apos;, 
+						IF(Start_Date__c == TODAY()+1, &apos;Priority - 1&apos;, 
+									IF(Start_Date__c == TODAY()+2, &apos;Priority - 1&apos;,
+												IF(Start_Date__c == TODAY()+3, &apos;Priority - 2&apos;,
+															IF(Start_Date__c == TODAY()+4, &apos;Priority - 2&apos;,&apos;Priority--Normal&apos;))))) )</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Quote-Priority</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

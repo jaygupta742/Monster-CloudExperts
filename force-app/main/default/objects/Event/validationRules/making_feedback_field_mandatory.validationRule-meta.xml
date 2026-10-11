@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>making_feedback_field_mandatory</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+ISPICKVAL(EventStatus__c,&quot;Completed&quot;) || ISPICKVAL(EventStatus__c,&quot;Lost&quot;) || ISPICKVAL(EventStatus__c,&quot;Cancelled&quot;),
+ISBLANK(TEXT( Feedback__c )),$Profile.Id =&apos;00e7F000000uSSh&apos;)</errorConditionFormula>
+    <errorDisplayField>Feedback__c</errorDisplayField>
+    <errorMessage>Please enter feedback.</errorMessage>
+</ValidationRule>

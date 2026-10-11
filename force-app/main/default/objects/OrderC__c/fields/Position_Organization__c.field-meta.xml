@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Position_Organization__c</fullName>
+    <label>Position Organization</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Agency</fullName>
+                <default>false</default>
+                <label>Agency</label>
+            </value>
+            <value>
+                <fullName>Canada</fullName>
+                <default>false</default>
+                <label>Canada</label>
+            </value>
+            <value>
+                <fullName>Digital/SMB</fullName>
+                <default>false</default>
+                <label>Digital/SMB</label>
+            </value>
+            <value>
+                <fullName>ECOMM</fullName>
+                <default>false</default>
+                <label>ECOMM</label>
+            </value>
+            <value>
+                <fullName>Enterprise</fullName>
+                <default>false</default>
+                <label>Enterprise</label>
+            </value>
+            <value>
+                <fullName>Healthcare</fullName>
+                <default>false</default>
+                <label>Healthcare</label>
+            </value>
+            <value>
+                <fullName>IAF</fullName>
+                <default>false</default>
+                <label>IAF</label>
+            </value>
+            <value>
+                <fullName>Major Accounts</fullName>
+                <default>false</default>
+                <label>Major Accounts</label>
+            </value>
+            <value>
+                <fullName>MGS</fullName>
+                <default>false</default>
+                <label>MGS</label>
+            </value>
+            <value>
+                <fullName>Mid Market</fullName>
+                <default>false</default>
+                <label>Mid Market</label>
+            </value>
+            <value>
+                <fullName>Newspapers</fullName>
+                <default>false</default>
+                <label>Newspapers</label>
+            </value>
+            <value>
+                <fullName>Non Quota Bearing</fullName>
+                <default>false</default>
+                <label>Non Quota Bearing</label>
+            </value>
+            <value>
+                <fullName>PPC</fullName>
+                <default>false</default>
+                <label>PPC</label>
+            </value>
+            <value>
+                <fullName>PSE</fullName>
+                <default>false</default>
+                <label>PSE</label>
+            </value>
+            <value>
+                <fullName>Quota Bearing</fullName>
+                <default>false</default>
+                <label>Quota Bearing</label>
+            </value>
+            <value>
+                <fullName>SMB</fullName>
+                <default>false</default>
+                <label>SMB</label>
+            </value>
+            <value>
+                <fullName>Staffing</fullName>
+                <default>false</default>
+                <label>Staffing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

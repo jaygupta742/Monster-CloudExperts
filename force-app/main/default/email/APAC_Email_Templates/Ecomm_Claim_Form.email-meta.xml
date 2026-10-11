@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>No_Logo_Header_White_Letterhead</letterhead>
+    <name>Ecomm Claim Form</name>
+    <style>freeForm</style>
+    <subject>Ecomm Claim Form for {!Opportunity.Account}</subject>
+    <textOnly>------------------------------------------------------------------------
+To ensure that your request is processed correctly, please DO NOT change the subject line of this message. Sales reps should submit this template to the Ecomm Team.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+Karma Account ID:  {!Account.AccountID__c}
+
+Karma Account Name: {!Opportunity.Account}
+
+Oppty ID: {!Opportunity.OpportunityID__c}
+
+Status: {!Opportunity.Status__c}
+
+Created Date: {!Opportunity.CreatedDate}
+
+Oppty Primary Rep: {!Opportunity.OwnerFirstName} {!Opportunity.OwnerLastName}
+
+Oppty Primary Rep Manager: {!Opportunity.PrimaryRepManager__c}
+
+Primary Sales Channel: {!Account.SalesChannel__c}
+
+Comments: {!Opportunity.Description}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

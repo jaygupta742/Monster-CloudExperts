@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ecomm</fullName>
+    <columns>NAME</columns>
+    <columns>APTS_Quote_Type__c</columns>
+    <columns>Old_Created_Date__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>APTS_Quote_Type__c</field>
+        <operation>equals</operation>
+        <value>Ecom-Rep,Ecom</value>
+    </filters>
+    <label>Ecomm</label>
+</ListView>

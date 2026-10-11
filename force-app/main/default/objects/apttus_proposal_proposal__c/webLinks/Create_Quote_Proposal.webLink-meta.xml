@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Create_Quote_Proposal</fullName>
+    <availability>online</availability>
+    <description>This button is used in Account object  related list
+@rj</description>
+    <displayType>massActionButton</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Create Quote/Proposal</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)} 
+var returnUrl=&apos;&apos;;
+if(&apos;{!Account.Active__c}&apos; == &apos;0&apos;){
+alert( &quot;Account have negative status,so you cannot update any quote in this stage&quot; )
+returnUrl = &apos;&apos;;
+}
+else{
+
+ returnUrl = &quot;/a17/e?CF00N7F00000QM2Ci={!Account.Name}&amp;CF00N7F00000QM2Ci_lkid={!Account.Id}&amp;RecordType=0127F000000mhAt&quot;;
+}
+window.location.href = returnUrl;</url>
+</WebLink>
